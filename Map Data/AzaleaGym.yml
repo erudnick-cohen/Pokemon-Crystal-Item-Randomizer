@@ -1,0 +1,87 @@
+Location:
+    -
+        Name: Azalea Gym
+        FileName: AzaleaGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: 
+            - Slowpoke Well Floor 1
+            - Azalea Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Bugsy TM
+                FileName: AzaleaGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Azalea Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_FURY_CUTTER
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM49_FURY_CUTTER
+                        iftrue .GotFuryCutter
+                        setevent EVENT_BEAT_TWINS_AMY_AND_MAY
+                        setevent EVENT_BEAT_BUG_CATCHER_BENNY
+                        setevent EVENT_BEAT_BUG_CATCHER_AL
+                        setevent EVENT_BEAT_BUG_CATCHER_JOSH
+                        writetext BugsyText_HiveBadgeSpeech
+                        buttonsound
+                        ITEMLINE
+                        iffalse .NoRoomForFuryCutter
+                        setevent EVENT_GOT_TM49_FURY_CUTTER
+                        writetext BugsyText_FuryCutterSpeech
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    BugsyText_FuryCutterSpeech:
+                        text "TM49 contains"
+                        line "ITEMNAME."
+
+                        para "If you don't miss,"
+                        line "it gets stronger"
+                        cont "every turn."
+
+                        para "The longer your"
+                        line "battle goes, the"
+                        cont "better it gets."
+
+                        para "Isn't that great?"
+                        line "I discovered it!"
+                        done
+                TrainerList: 
+                Sublocations:
+
+            -
+                Name: Azalea Gym Trainers
+                FileName: AzaleaGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Azalea Town
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 7
+                TrainerList: 
+                        - BUG_CATCHER 5
+                        - BUG_CATCHER 6
+                        - BUG_CATCHER 7
+                        - TWINS 1
+                        - TWINS 4
+                        - BUGSY 1        

@@ -1,0 +1,48 @@
+Location:
+    -
+        Name: Route 33
+        FileName: Route33.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Union Cave
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 33
+        FileName: Route33.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Azalea Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 33 actual
+        FileName: Route33.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: ROUTE_33
+        LocationReqs: Route 33
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 6
+        TrainerList: 
+            - HIKER 1
+        Sublocations:        

@@ -1,0 +1,173 @@
+Location:
+    -
+        Name: Sprout Tower
+        FileName: SproutTower1f.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Sprout Tower Parlyz Heal
+                FileName: SproutTower1f.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Sprout Tower
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PARLYZ_HEAL
+                Code: |
+                    SproutTower1FParlyzHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Sprout Tower X Accuracy
+                FileName: SproutTower2f.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Sprout Tower
+                FlagReqs:
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_ACCURACY
+                Code: |
+                    SproutTower2FXAccuracy:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Sprout Tower Potion
+                FileName: SproutTower3f.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Sprout Tower
+                FlagReqs:
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    SproutTower3FPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Sprout Tower Escape Rope
+                FileName: SproutTower3f.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Sprout Tower
+                FlagReqs:
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ESCAPE_ROPE
+                Code: |
+                    SproutTower3FPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Sprout Tower Sage Li
+                FileName: SproutTower3f.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Sprout Tower
+                FlagReqs:
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ESCAPE_ROPE
+                Code: |
+                    SageLiScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_HM05_FLASH
+                        iftrue UnknownScript_0x1849d1
+                        writetext SageLiSeenText
+                        waitbutton
+                        closetext
+                        winlosstext SageLiBeatenText, 0
+                        loadtrainer SAGE, LI
+                        startbattle
+                        reloadmapafterbattle
+                        opentext
+                        writetext UnknownText_0x184cc2
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM05_FLASH
+                        setevent EVENT_BEAT_SAGE_LI
+                        writetext UnknownText_0x184d13
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x184cc2:
+                        text "You and your #-"
+                        line "MON should have"
+
+                        para "no problem using"
+                        line "this move."
+
+                        para "Take this ITEMNAME"
+                        line "HM."
+                        done
+
+                    UnknownText_0x184d13:
+                        text "ITEMNAME illuminates"
+                        line "even the darkest"
+                        cont "of all places."
+
+                        para "But to use it out"
+                        line "of battle, you"
+
+                        para "need the BADGE"
+                        line "from VIOLET's GYM."
+                        done
+                        
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Sprout Tower Trainers and Pokemon
+                FileName: SproutTower1f.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                    - SPROUT_TOWER_2F
+                    - SPROUT_TOWER_3F
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 4
+                TrainerList: 
+                    - SAGE 2
+                    - SAGE 1
+                    - SAGE 7     
+                    - SAGE 3
+                    - SAGE 8
+                    - SAGE 4
+                    - SAGE 9

@@ -1,0 +1,347 @@
+Location:
+    -
+        Name: Ilex Forest Back Entrance
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 34
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Back Entrance
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ilex Forest Front Entrance
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Front Entrance
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Azalea Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Front Entrance
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ilex Forest Back Entrance
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Front 
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: ILEX_FOREST
+        LocationReqs: Ilex Forest Front Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Cut HM
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Front 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    IlexForestCharcoalMasterScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_HM01_CUT
+                        iftrue .AlreadyGotCut
+                        writetext Text_CharcoalMasterIntro
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM01_CUT
+                        writetext Text_CharcoalMasterOutro
+                        waitbutton
+                        closetext
+                        setevent EVENT_ILEX_FOREST_FARFETCHD
+                        setevent EVENT_ILEX_FOREST_APPRENTICE
+                        setevent EVENT_ILEX_FOREST_CHARCOAL_MASTER
+                        clearevent EVENT_CHARCOAL_KILN_FARFETCH_D
+                        clearevent EVENT_CHARCOAL_KILN_APPRENTICE
+                        clearevent EVENT_CHARCOAL_KILN_BOSS
+                        end
+                Text: |
+                    Text_CharcoalMasterOutro:
+                        text "That's the ITEMNAME HM."
+                        line "Teach that to a"
+
+                        para "#MON to clear"
+                        line "small trees."
+
+                        para "Of course, you"
+                        line "have to have the"
+
+                        para "GYM BADGE from"
+                        line "AZALEA to use it."
+                        done
+                TrainerList: 
+                Sublocations:           
+            -
+                Name: Cut HM
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Front 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    IlexForestCharcoalMasterScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_HM01_CUT
+                        iftrue .AlreadyGotCut
+                        writetext Text_CharcoalMasterIntro
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM01_CUT
+                        writetext Text_CharcoalMasterOutro
+                        waitbutton
+                        closetext
+                        setevent EVENT_ILEX_FOREST_FARFETCHD
+                        setevent EVENT_ILEX_FOREST_APPRENTICE
+                        setevent EVENT_ILEX_FOREST_CHARCOAL_MASTER
+                        clearevent EVENT_CHARCOAL_KILN_FARFETCH_D
+                        clearevent EVENT_CHARCOAL_KILN_APPRENTICE
+                        clearevent EVENT_CHARCOAL_KILN_BOSS
+                        end
+                Text: |
+                    Text_CharcoalMasterOutro:
+                        text "That's the ITEMNAME."
+                        line "Teach that to a"
+
+                        para "#MON to clear"
+                        line "small trees."
+
+                        para "Of course, you"
+                        line "have to have the"
+
+                        para "GYM BADGE from"
+                        line "AZALEA to use it."
+                        done
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ilex Forest Revive
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Front 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: REVIVE
+                ReachableReqs:
+                Code: |
+                    IlexForestRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+    -
+        Name: Ilex Forest Back 
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: ILEX_FOREST
+        LocationReqs: Ilex Forest Back Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList: 
+            - BUG_CATCHER 19
+        Sublocations:
+            -
+                Name: Ilex Forest X Attack
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Back 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: X_ATTACK
+                ReachableReqs:
+                Code: |
+                    IlexForestXAttack:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Ilex Forest Antidote
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Back 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: ANTIDOTE
+                ReachableReqs:
+                Code: |
+                    IlexForestAntidote:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Ilex Forest Ether
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Back 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: ETHER
+                ReachableReqs:
+                Code: |
+                    IlexForestEther:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Headbutt
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Back 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: TM_HEADBUTT
+                ReachableReqs:
+                Code: |
+                    IlexForestHeadbuttGuyScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_TM02_HEADBUTT
+                        iftrue .AlreadyGotHeadbutt
+                        writetext Text_HeadbuttIntro
+                        buttonsound
+                        ITEMLINE 
+                        iffalse .BagFull
+                        setevent EVENT_GOT_TM02_HEADBUTT
+                    .AlreadyGotHeadbutt:
+                        writetext Text_HeadbuttOutro
+                        waitbutton
+                    .BagFull:
+                        closetext
+                        end
+                Text: |
+                    Text_HeadbuttIntro:
+                        text "What am I doing?"
+
+                        para "I'm shaking trees"
+                        line "using ITEMNAME."
+
+                        para "It's fun. Here,"
+                        line "you try it too!"
+                        done
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Sweet Scent
+                FileName: Route34IlexForestGate.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ilex Forest Back 
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: TM_SWEET_SCENT
+                ReachableReqs:
+                Code: |
+                    TeacherScript_0x62d63:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_FOREST_IS_RESTLESS
+                        iftrue UnknownScript_0x62d84
+                        checkevent EVENT_GOT_TM12_SWEET_SCENT
+                        iftrue UnknownScript_0x62d7e
+                        writetext UnknownText_0x62d9d
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x62d82
+                        setevent EVENT_GOT_TM12_SWEET_SCENT
+                    UnknownScript_0x62d7e:
+                        writetext UnknownText_0x62df6
+                        waitbutton
+                    UnknownScript_0x62d82:
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x62df6:
+                        text "It's ITEMNAME."
+
+                        para "Use it wherever"
+                        line "#MON appear."
+
+                        para "#MON will be"
+                        line "enticed by it."
+                        done
+                TrainerList: 
+                Sublocations:   

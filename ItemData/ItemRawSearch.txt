@@ -1,0 +1,771 @@
+Search "itemball" (392 hits in 89 files)
+  F:\Gaming\Mods\pokecrystal-altered\constants\map_constants.asm (1 hit)
+	Line 662: 	const PERSONTYPE_ITEMBALL
+  F:\Gaming\Mods\pokecrystal-altered\constants\script_constants.asm (1 hit)
+	Line 44: 	const PLAYEREVENT_ITEMBALL
+  F:\Gaming\Mods\pokecrystal-altered\engine\events.asm (4 hits)
+	Line 621: 	dbw PERSONTYPE_ITEMBALL, .itemball
+	Line 621: 	dbw PERSONTYPE_ITEMBALL, .itemball
+	Line 642: .itemball ; 96a12
+	Line 652: 	ld a, PLAYEREVENT_ITEMBALL
+  F:\Gaming\Mods\pokecrystal-altered\engine\events.o (1 hit)
+	Line 1: RGB5‡
+  F:\Gaming\Mods\pokecrystal-altered\engine\pack.asm (4 hits)
+	Line 78: 	call .ItemBallsKey_LoadSubmenu
+	Line 106: 	call .ItemBallsKey_LoadSubmenu
+	Line 239: 	call .ItemBallsKey_LoadSubmenu
+	Line 242: .ItemBallsKey_LoadSubmenu: ; 101c5 (4:41c5)
+  F:\Gaming\Mods\pokecrystal-altered\macros\map.asm (1 hit)
+	Line 174: itemball: MACRO
+  F:\Gaming\Mods\pokecrystal-altered\main.asm (1 hit)
+	Line 398: INCLUDE "event/itemball.asm"
+  F:\Gaming\Mods\pokecrystal-altered\main.o (19 hits)
+	Line 140: 
+	Line 165: 
+	Line 165: 
+	Line 165: 
+	Line 165: 
+	Line 2119: 
+	Line 3470: 
+	Line 3470: 
+	Line 3470: 
+	Line 3470: 
+	Line 3470: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+	Line 3471: 
+  F:\Gaming\Mods\pokecrystal-altered\maps\BurnedTower1F.asm (2 hits)
+	Line 147: 	itemball HP_UP
+	Line 323: 	person_event SPRITE_POKE_BALL, 2, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, BurnedTower1FHPUp, EVENT_BURNED_TOWER_1F_HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\BurnedTowerB1F.asm (2 hits)
+	Line 127: 	itemball TM_ENDURE
+	Line 272: 	person_event SPRITE_POKE_BALL, 4, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, BurnedTowerB1FTMEndure, EVENT_BURNED_TOWER_B1F_TM_ENDURE
+  F:\Gaming\Mods\pokecrystal-altered\maps\DarkCaveBlackthornEntrance.asm (4 hits)
+	Line 31: 	itemball REVIVE
+	Line 34: 	itemball TM_SNORE
+	Line 82: 	person_event SPRITE_POKE_BALL, 24, 21, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceRevive, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
+	Line 83: 	person_event SPRITE_POKE_BALL, 22, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveBlackthornEntranceTMSnore, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_TM_SNORE
+  F:\Gaming\Mods\pokecrystal-altered\maps\DarkCaveVioletEntrance.asm (8 hits)
+	Line 19: 	itemball POTION
+	Line 22: 	itemball FULL_HEAL
+	Line 25: 	itemball HYPER_POTION
+	Line 28: 	itemball DIRE_HIT
+	Line 56: 	person_event SPRITE_POKE_BALL, 8, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveVioletEntrancePotion, EVENT_DARK_CAVE_VIOLET_ENTRANCE_POTION
+	Line 61: 	person_event SPRITE_POKE_BALL, 22, 36, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveVioletEntranceFullHeal, EVENT_DARK_CAVE_VIOLET_ENTRANCE_FULL_HEAL
+	Line 62: 	person_event SPRITE_POKE_BALL, 9, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveVioletEntranceHyperPotion, EVENT_DARK_CAVE_VIOLET_ENTRANCE_HYPER_POTION
+	Line 63: 	person_event SPRITE_POKE_BALL, 28, 30, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DarkCaveVioletEntranceDireHit, EVENT_DARK_CAVE_VIOLET_ENTRANCE_DIRE_HIT
+  F:\Gaming\Mods\pokecrystal-altered\maps\DragonsDenB1F.asm (4 hits)
+	Line 185: 	itemball CALCIUM
+	Line 188: 	itemball MAX_ELIXER
+	Line 443: 	person_event SPRITE_POKE_BALL, 4, 30, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
+	Line 444: 	person_event SPRITE_POKE_BALL, 20, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixer, EVENT_DRAGONS_DEN_B1F_MAX_ELIXER
+  F:\Gaming\Mods\pokecrystal-altered\maps\FightingDojo.asm (2 hits)
+	Line 22: 	itemball FOCUS_BAND
+	Line 65: 	person_event SPRITE_POKE_BALL, 1, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, FightingDojoFocusBand, EVENT_PICKED_UP_FOCUS_BAND
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodDeptStoreB1F.asm (8 hits)
+	Line 71: 	itemball ETHER
+	Line 74: 	itemball AMULET_COIN
+	Line 77: 	itemball BURN_HEAL
+	Line 80: 	itemball ULTRA_BALL
+	Line 134: 	person_event SPRITE_POKE_BALL, 15, 10, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, GoldenrodDeptStoreB1FEther, EVENT_GOLDENROD_DEPT_STORE_B1F_ETHER
+	Line 135: 	person_event SPRITE_POKE_BALL, 2, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, GoldenrodDeptStoreB1FAmuletCoin, EVENT_GOLDENROD_DEPT_STORE_B1F_AMULET_COIN
+	Line 136: 	person_event SPRITE_POKE_BALL, 3, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, GoldenrodDeptStoreB1FBurnHeal, EVENT_GOLDENROD_DEPT_STORE_B1F_BURN_HEAL
+	Line 137: 	person_event SPRITE_POKE_BALL, 15, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, GoldenrodDeptStoreB1FUltraBall, EVENT_GOLDENROD_DEPT_STORE_B1F_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\IcePath1F.asm (6 hits)
+	Line 14: 	itemball HM_WATERFALL
+	Line 17: 	itemball PP_UP
+	Line 20: 	itemball PROTEIN
+	Line 41: 	person_event SPRITE_POKE_BALL, 7, 31, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL
+	Line 42: 	person_event SPRITE_POKE_BALL, 23, 32, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
+	Line 43: 	person_event SPRITE_POKE_BALL, 9, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePath1FProtein, EVENT_ICE_PATH_1F_PROTEIN
+  F:\Gaming\Mods\pokecrystal-altered\maps\IcePathB1F.asm (2 hits)
+	Line 73: 	itemball IRON
+	Line 113: 	person_event SPRITE_POKE_BALL, 35, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePathB1FIron, EVENT_ICE_PATH_B1F_IRON
+  F:\Gaming\Mods\pokecrystal-altered\maps\IcePathB2FBlackthornSide.asm (2 hits)
+	Line 12: 	itemball TM_REST
+	Line 36: 	person_event SPRITE_POKE_BALL, 16, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideTMRest, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_TM_REST
+  F:\Gaming\Mods\pokecrystal-altered\maps\IcePathB2FMahoganySide.asm (4 hits)
+	Line 20: 	itemball FULL_HEAL
+	Line 23: 	itemball MAX_POTION
+	Line 60: 	person_event SPRITE_POKE_BALL, 9, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePathB2FMahoganySideFullHeal, EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_FULL_HEAL
+	Line 61: 	person_event SPRITE_POKE_BALL, 2, 0, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePathB2FMahoganySideMaxPotion, EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_MAX_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\IcePathB3F.asm (2 hits)
+	Line 13: 	itemball NEVERMELTICE
+	Line 35: 	person_event SPRITE_POKE_BALL, 7, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IcePathB3FNevermeltice, EVENT_ICE_PATH_B3F_NEVERMELTICE
+  F:\Gaming\Mods\pokecrystal-altered\maps\IlexForest.asm (8 hits)
+	Line 408: 	itemball REVIVE
+	Line 411: 	itemball X_ATTACK
+	Line 414: 	itemball ANTIDOTE
+	Line 417: 	itemball ETHER
+	Line 972: 	person_event SPRITE_POKE_BALL, 32, 20, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IlexForestRevive, EVENT_ILEX_FOREST_REVIVE
+	Line 976: 	person_event SPRITE_POKE_BALL, 17, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IlexForestXAttack, EVENT_ILEX_FOREST_X_ATTACK
+	Line 977: 	person_event SPRITE_POKE_BALL, 7, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IlexForestAntidote, EVENT_ILEX_FOREST_ANTIDOTE
+	Line 978: 	person_event SPRITE_POKE_BALL, 1, 27, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, IlexForestEther, EVENT_ILEX_FOREST_ETHER
+  F:\Gaming\Mods\pokecrystal-altered\maps\LakeofRage.asm (4 hits)
+	Line 234: 	itemball ELIXER
+	Line 237: 	itemball TM_DETECT
+	Line 536: 	person_event SPRITE_POKE_BALL, 10, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, LakeofRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
+	Line 537: 	person_event SPRITE_POKE_BALL, 2, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, LakeofRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT
+  F:\Gaming\Mods\pokecrystal-altered\maps\MountMortar1FInside.asm (14 hits)
+	Line 46: 	itemball ESCAPE_ROPE
+	Line 49: 	itemball MAX_REVIVE
+	Line 52: 	itemball HYPER_POTION
+	Line 55: 	itemball MAX_POTION
+	Line 58: 	itemball NUGGET
+	Line 61: 	itemball IRON
+	Line 64: 	itemball ULTRA_BALL
+	Line 143: 	person_event SPRITE_POKE_BALL, 38, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideEscapeRope, EVENT_MOUNT_MORTAR_1F_INSIDE_ESCAPE_ROPE
+	Line 144: 	person_event SPRITE_POKE_BALL, 10, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideMaxRevive, EVENT_MOUNT_MORTAR_1F_INSIDE_MAX_REVIVE
+	Line 145: 	person_event SPRITE_POKE_BALL, 27, 10, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideHyperPotion, EVENT_MOUNT_MORTAR_1F_INSIDE_HYPER_POTION
+	Line 146: 	person_event SPRITE_POKE_BALL, 20, 22, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideMaxPotion, EVENT_MOUNT_MORTAR_1F_INSIDE_MAX_POTION
+	Line 147: 	person_event SPRITE_POKE_BALL, 19, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideNugget, EVENT_MOUNT_MORTAR_1F_INSIDE_NUGGET
+	Line 150: 	person_event SPRITE_POKE_BALL, 16, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideIron, EVENT_MOUNT_MORTAR_1F_INSIDE_IRON
+	Line 151: 	person_event SPRITE_POKE_BALL, 17, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FInsideUltraBall, EVENT_MOUNT_MORTAR_1F_INSIDE_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\MountMortar1FOutside.asm (4 hits)
+	Line 13: 	itemball ETHER
+	Line 16: 	itemball REVIVE
+	Line 47: 	person_event SPRITE_POKE_BALL, 15, 13, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FOutsideEther, EVENT_MOUNT_MORTAR_1F_OUTSIDE_ETHER
+	Line 48: 	person_event SPRITE_POKE_BALL, 18, 31, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar1FOutsideRevive, EVENT_MOUNT_MORTAR_1F_OUTSIDE_REVIVE
+  F:\Gaming\Mods\pokecrystal-altered\maps\MountMortar2FInside.asm (12 hits)
+	Line 29: 	itemball MAX_POTION
+	Line 32: 	itemball RARE_CANDY
+	Line 35: 	itemball TM_DEFENSE_CURL
+	Line 38: 	itemball DRAGON_SCALE
+	Line 41: 	itemball ELIXER
+	Line 44: 	itemball ESCAPE_ROPE
+	Line 88: 	person_event SPRITE_POKE_BALL, 22, 28, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideMaxPotion, EVENT_MOUNT_MORTAR_2F_INSIDE_MAX_POTION
+	Line 89: 	person_event SPRITE_POKE_BALL, 33, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideRareCandy, EVENT_MOUNT_MORTAR_2F_INSIDE_RARE_CANDY
+	Line 90: 	person_event SPRITE_POKE_BALL, 17, 19, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideTMDefenseCurl, EVENT_MOUNT_MORTAR_2F_INSIDE_TM_DEFENSE_CURL
+	Line 91: 	person_event SPRITE_POKE_BALL, 5, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideDragonScale, EVENT_MOUNT_MORTAR_2F_INSIDE_DRAGON_SCALE
+	Line 92: 	person_event SPRITE_POKE_BALL, 11, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideElixer, EVENT_MOUNT_MORTAR_2F_INSIDE_ELIXER
+	Line 93: 	person_event SPRITE_POKE_BALL, 5, 28, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortar2FInsideEscapeRope, EVENT_MOUNT_MORTAR_2F_INSIDE_ESCAPE_ROPE
+  F:\Gaming\Mods\pokecrystal-altered\maps\MountMortarB1F.asm (10 hits)
+	Line 60: 	itemball HYPER_POTION
+	Line 63: 	itemball CARBOS
+	Line 66: 	itemball FULL_RESTORE
+	Line 69: 	itemball MAX_ETHER
+	Line 72: 	itemball PP_UP
+	Line 156: 	person_event SPRITE_POKE_BALL, 12, 29, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortarB1FHyperPotion, EVENT_MOUNT_MORTAR_B1F_HYPER_POTION
+	Line 157: 	person_event SPRITE_POKE_BALL, 16, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortarB1FCarbos, EVENT_MOUNT_MORTAR_B1F_CARBOS
+	Line 160: 	person_event SPRITE_POKE_BALL, 24, 34, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortarB1FFullRestore, EVENT_MOUNT_MORTAR_B1F_FULL_RESTORE
+	Line 161: 	person_event SPRITE_POKE_BALL, 3, 32, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortarB1FMaxEther, EVENT_MOUNT_MORTAR_B1F_MAX_ETHER
+	Line 162: 	person_event SPRITE_POKE_BALL, 26, 21, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, MountMortarB1FPPUp, EVENT_MOUNT_MORTAR_B1F_PP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\NationalPark.asm (4 hits)
+	Line 302: 	itemball PARLYZ_HEAL
+	Line 305: 	itemball TM_DIG
+	Line 551: 	person_event SPRITE_POKE_BALL, 12, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, NationalParkParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
+	Line 553: 	person_event SPRITE_POKE_BALL, 43, 1, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, NationalParkTMDig, EVENT_NATIONAL_PARK_TM_DIG
+  F:\Gaming\Mods\pokecrystal-altered\maps\NationalParkBugContest.asm (4 hits)
+	Line 112: 	itemball PARLYZ_HEAL
+	Line 115: 	itemball TM_DIG
+	Line 257: 	person_event SPRITE_POKE_BALL, 12, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, NationalParkBugContestParlyzHeal, EVENT_NATIONAL_PARK_PARLYZ_HEAL
+	Line 258: 	person_event SPRITE_POKE_BALL, 43, 1, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, NationalParkBugContestTMDig, EVENT_NATIONAL_PARK_TM_DIG
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineLighthouse3F.asm (2 hits)
+	Line 48: 	itemball ETHER
+	Line 142: 	person_event SPRITE_POKE_BALL, 2, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, OlivineLighthouse3FEther, EVENT_OLIVINE_LIGHTHOUSE_3F_ETHER
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineLighthouse5F.asm (6 hits)
+	Line 38: 	itemball RARE_CANDY
+	Line 41: 	itemball SUPER_REPEL
+	Line 44: 	itemball TM_SWAGGER
+	Line 119: 	person_event SPRITE_POKE_BALL, 12, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, OlivineLighthouse5FRareCandy, EVENT_OLIVINE_LIGHTHOUSE_5F_RARE_CANDY
+	Line 120: 	person_event SPRITE_POKE_BALL, 15, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, OlivineLighthouse5FSuperRepel, EVENT_OLIVINE_LIGHTHOUSE_5F_SUPER_REPEL
+	Line 121: 	person_event SPRITE_POKE_BALL, 13, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, OlivineLighthouse5FTMSwagger, EVENT_OLIVINE_LIGHTHOUSE_5F_TM_SWAGGER
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineLighthouse6F.asm (2 hits)
+	Line 131: 	itemball SUPER_POTION
+	Line 280: 	person_event SPRITE_POKE_BALL, 4, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, OlivineLighthouse6FSuperPotion, EVENT_OLIVINE_LIGHTHOUSE_6F_SUPER_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\RadioTower5F.asm (2 hits)
+	Line 147: 	itemball ULTRA_BALL
+	Line 453: 	person_event SPRITE_POKE_BALL, 5, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RadioTower5FUltraBall, EVENT_RADIO_TOWER_5F_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\RockTunnel1F.asm (4 hits)
+	Line 13: 	itemball ELIXER
+	Line 16: 	itemball TM_STEEL_WING
+	Line 49: 	person_event SPRITE_POKE_BALL, 18, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RockTunnel1FElixer, EVENT_ROCK_TUNNEL_1F_ELIXER
+	Line 50: 	person_event SPRITE_POKE_BALL, 15, 10, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RockTunnel1FTMSteelWing, EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING
+  F:\Gaming\Mods\pokecrystal-altered\maps\RockTunnelB1F.asm (6 hits)
+	Line 14: 	itemball IRON
+	Line 17: 	itemball PP_UP
+	Line 20: 	itemball REVIVE
+	Line 46: 	person_event SPRITE_POKE_BALL, 25, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RockTunnelB1FIron, EVENT_ROCK_TUNNEL_B1F_IRON
+	Line 47: 	person_event SPRITE_POKE_BALL, 17, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RockTunnelB1FPPUp, EVENT_ROCK_TUNNEL_B1F_PP_UP
+	Line 48: 	person_event SPRITE_POKE_BALL, 2, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RockTunnelB1FRevive, EVENT_ROCK_TUNNEL_B1F_REVIVE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route12.asm (4 hits)
+	Line 67: 	itemball CALCIUM
+	Line 70: 	itemball NUGGET
+	Line 193: 	person_event SPRITE_POKE_BALL, 43, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route12Calcium, EVENT_ROUTE_12_CALCIUM
+	Line 194: 	person_event SPRITE_POKE_BALL, 51, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route12Nugget, EVENT_ROUTE_12_NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route15.asm (2 hits)
+	Line 87: 	itemball PP_UP
+	Line 228: 	person_event SPRITE_POKE_BALL, 5, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route15PPUp, EVENT_ROUTE_15_PP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route2.asm (8 hits)
+	Line 58: 	itemball DIRE_HIT
+	Line 61: 	itemball MAX_POTION
+	Line 64: 	itemball CARBOS
+	Line 67: 	itemball ELIXER
+	Line 178: 	person_event SPRITE_POKE_BALL, 29, 0, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route2DireHit, EVENT_ROUTE_2_DIRE_HIT
+	Line 179: 	person_event SPRITE_POKE_BALL, 23, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route2MaxPotion, EVENT_ROUTE_2_MAX_POTION
+	Line 180: 	person_event SPRITE_POKE_BALL, 2, 19, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS
+	Line 181: 	person_event SPRITE_POKE_BALL, 50, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route2Elixer, EVENT_ROUTE_2_ELIXER
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route25.asm (2 hits)
+	Line 193: 	itemball PROTEIN
+	Line 465: 	person_event SPRITE_POKE_BALL, 4, 32, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route25Protein, EVENT_ROUTE_25_PROTEIN
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route26.asm (2 hits)
+	Line 255: 	itemball MAX_ELIXER
+	Line 441: 	person_event SPRITE_POKE_BALL, 15, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route26MaxElixer, EVENT_ROUTE_26_MAX_ELIXER
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route27.asm (4 hits)
+	Line 307: 	itemball TM_SOLARBEAM
+	Line 310: 	itemball RARE_CANDY
+	Line 499: 	person_event SPRITE_POKE_BALL, 12, 60, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route27TMSolarbeam, EVENT_ROUTE_27_TM_SOLARBEAM
+	Line 500: 	person_event SPRITE_POKE_BALL, 12, 53, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route27RareCandy, EVENT_ROUTE_27_RARE_CANDY
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route29.asm (2 hits)
+	Line 220: 	itemball POTION
+	Line 450: 	person_event SPRITE_POKE_BALL, 2, 48, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route30.asm (2 hits)
+	Line 242: 	itemball ANTIDOTE
+	Line 442: 	person_event SPRITE_POKE_BALL, 35, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route30Antidote, EVENT_ROUTE_30_ANTIDOTE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route31.asm (4 hits)
+	Line 267: 	itemball POTION
+	Line 270: 	itemball POKE_BALL
+	Line 447: 	person_event SPRITE_POKE_BALL, 5, 29, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route31Potion, EVENT_ROUTE_31_POTION
+	Line 448: 	person_event SPRITE_POKE_BALL, 15, 19, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route31PokeBall, EVENT_ROUTE_31_POKE_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route32.asm (4 hits)
+	Line 496: 	itemball GREAT_BALL
+	Line 499: 	itemball REPEL
+	Line 975: 	person_event SPRITE_POKE_BALL, 53, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route32GreatBall, EVENT_ROUTE_32_GREAT_BALL
+	Line 978: 	person_event SPRITE_POKE_BALL, 30, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route32Repel, EVENT_ROUTE_32_REPEL
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route34.asm (2 hits)
+	Line 491: 	itemball NUGGET
+	Line 805: 	person_event SPRITE_POKE_BALL, 30, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route34Nugget, EVENT_ROUTE_34_NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route35.asm (2 hits)
+	Line 274: 	itemball TM_ROLLOUT
+	Line 495: 	person_event SPRITE_POKE_BALL, 16, 13, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route35TMRollout, EVENT_ROUTE_35_TM_ROLLOUT
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route4.asm (2 hits)
+	Line 51: 	itemball HP_UP
+	Line 145: 	person_event SPRITE_POKE_BALL, 3, 26, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route42.asm (4 hits)
+	Line 202: 	itemball ULTRA_BALL
+	Line 205: 	itemball SUPER_POTION
+	Line 356: 	person_event SPRITE_POKE_BALL, 4, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route42UltraBall, EVENT_ROUTE_42_ULTRA_BALL
+	Line 357: 	person_event SPRITE_POKE_BALL, 8, 33, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route42SuperPotion, EVENT_ROUTE_42_SUPER_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route43.asm (2 hits)
+	Line 328: 	itemball MAX_ETHER
+	Line 536: 	person_event SPRITE_POKE_BALL, 32, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route43MaxEther, EVENT_ROUTE_43_MAX_ETHER
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route44.asm (6 hits)
+	Line 312: 	itemball MAX_REVIVE
+	Line 315: 	itemball ULTRA_BALL
+	Line 318: 	itemball MAX_REPEL
+	Line 537: 	person_event SPRITE_POKE_BALL, 8, 30, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route44MaxRevive, EVENT_ROUTE_44_MAX_REVIVE
+	Line 538: 	person_event SPRITE_POKE_BALL, 4, 45, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route44UltraBall, EVENT_ROUTE_44_ULTRA_BALL
+	Line 539: 	person_event SPRITE_POKE_BALL, 9, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route44MaxRepel, EVENT_ROUTE_44_MAX_REPEL
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route45.asm (8 hits)
+	Line 303: 	itemball NUGGET
+	Line 306: 	itemball REVIVE
+	Line 309: 	itemball ELIXER
+	Line 312: 	itemball MAX_POTION
+	Line 561: 	person_event SPRITE_POKE_BALL, 51, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route45Nugget, EVENT_ROUTE_45_NUGGET
+	Line 562: 	person_event SPRITE_POKE_BALL, 66, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route45Revive, EVENT_ROUTE_45_REVIVE
+	Line 563: 	person_event SPRITE_POKE_BALL, 20, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route45Elixer, EVENT_ROUTE_45_ELIXER
+	Line 564: 	person_event SPRITE_POKE_BALL, 33, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route45MaxPotion, EVENT_ROUTE_45_MAX_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route46.asm (2 hits)
+	Line 165: 	itemball X_SPEED
+	Line 277: 	person_event SPRITE_POKE_BALL, 15, 1, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route46XSpeed, EVENT_ROUTE_46_X_SPEED
+  F:\Gaming\Mods\pokecrystal-altered\maps\RuinsofAlphAerodactylItemRoom.asm (8 hits)
+	Line 15: 	itemball GOLD_BERRY
+	Line 18: 	itemball MOON_STONE
+	Line 21: 	itemball HEAL_POWDER
+	Line 24: 	itemball ENERGY_ROOT
+	Line 56: 	person_event SPRITE_POKE_BALL, 6, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphAerodactylItemRoomGoldBerry, EVENT_PICKED_UP_GOLD_BERRY_FROM_AERODACTYL_ITEM_ROOM
+	Line 57: 	person_event SPRITE_POKE_BALL, 6, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphAerodactylItemRoomMoonStone, EVENT_PICKED_UP_MOON_STONE_FROM_AERODACTYL_ITEM_ROOM
+	Line 58: 	person_event SPRITE_POKE_BALL, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphAerodactylItemRoomHealPowder, EVENT_PICKED_UP_HEAL_POWDER_FROM_AERODACTYL_ITEM_ROOM
+	Line 59: 	person_event SPRITE_POKE_BALL, 4, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphAerodactylItemRoomEnergyRoot, EVENT_PICKED_UP_ENERGY_ROOT_FROM_AERODACTYL_ITEM_ROOM
+  F:\Gaming\Mods\pokecrystal-altered\maps\RuinsofAlphHoOhItemRoom.asm (8 hits)
+	Line 15: 	itemball GOLD_BERRY
+	Line 18: 	itemball MYSTERYBERRY
+	Line 21: 	itemball REVIVAL_HERB
+	Line 24: 	itemball CHARCOAL
+	Line 56: 	person_event SPRITE_POKE_BALL, 6, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphHoOhItemRoomGoldBerry, EVENT_PICKED_UP_GOLD_BERRY_FROM_HO_OH_ITEM_ROOM
+	Line 57: 	person_event SPRITE_POKE_BALL, 6, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphHoOhItemRoomMysteryberry, EVENT_PICKED_UP_MYSTERYBERRY_FROM_HO_OH_ITEM_ROOM
+	Line 58: 	person_event SPRITE_POKE_BALL, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphHoOhItemRoomRevivalHerb, EVENT_PICKED_UP_REVIVAL_HERB_FROM_HO_OH_ITEM_ROOM
+	Line 59: 	person_event SPRITE_POKE_BALL, 4, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphHoOhItemRoomCharcoal, EVENT_PICKED_UP_CHARCOAL_FROM_HO_OH_ITEM_ROOM
+  F:\Gaming\Mods\pokecrystal-altered\maps\RuinsofAlphKabutoItemRoom.asm (8 hits)
+	Line 15: 	itemball BERRY
+	Line 18: 	itemball PSNCUREBERRY
+	Line 21: 	itemball HEAL_POWDER
+	Line 24: 	itemball ENERGYPOWDER
+	Line 56: 	person_event SPRITE_POKE_BALL, 6, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphKabutoItemRoomBerry, EVENT_PICKED_UP_BERRY_FROM_KABUTO_ITEM_ROOM
+	Line 57: 	person_event SPRITE_POKE_BALL, 6, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphKabutoItemRoomPsncureberry, EVENT_PICKED_UP_PSNCUREBERRY_FROM_KABUTO_ITEM_ROOM
+	Line 58: 	person_event SPRITE_POKE_BALL, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphKabutoItemRoomHealPowder, EVENT_PICKED_UP_HEAL_POWDER_FROM_KABUTO_ITEM_ROOM
+	Line 59: 	person_event SPRITE_POKE_BALL, 4, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphKabutoItemRoomEnergypowder, EVENT_PICKED_UP_ENERGYPOWDER_FROM_KABUTO_ITEM_ROOM
+  F:\Gaming\Mods\pokecrystal-altered\maps\RuinsofAlphOmanyteItemRoom.asm (8 hits)
+	Line 15: 	itemball MYSTERYBERRY
+	Line 18: 	itemball MYSTIC_WATER
+	Line 21: 	itemball STARDUST
+	Line 24: 	itemball STAR_PIECE
+	Line 56: 	person_event SPRITE_POKE_BALL, 6, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphOmanyteItemRoomMysteryberry, EVENT_PICKED_UP_MYSTERYBERRY_FROM_OMANYTE_ITEM_ROOM
+	Line 57: 	person_event SPRITE_POKE_BALL, 6, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphOmanyteItemRoomMysticWater, EVENT_PICKED_UP_MYSTIC_WATER_FROM_OMANYTE_ITEM_ROOM
+	Line 58: 	person_event SPRITE_POKE_BALL, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphOmanyteItemRoomStardust, EVENT_PICKED_UP_STARDUST_FROM_OMANYTE_ITEM_ROOM
+	Line 59: 	person_event SPRITE_POKE_BALL, 4, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, RuinsofAlphOmanyteItemRoomStarPiece, EVENT_PICKED_UP_STAR_PIECE_FROM_OMANYTE_ITEM_ROOM
+  F:\Gaming\Mods\pokecrystal-altered\maps\SilverCaveItemRooms.asm (4 hits)
+	Line 13: 	itemball MAX_REVIVE
+	Line 16: 	itemball FULL_RESTORE
+	Line 35: 	person_event SPRITE_POKE_BALL, 3, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_MAX_REVIVE
+	Line 36: 	person_event SPRITE_POKE_BALL, 11, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
+  F:\Gaming\Mods\pokecrystal-altered\maps\SilverCaveRoom1.asm (8 hits)
+	Line 15: 	itemball MAX_ELIXER
+	Line 18: 	itemball PROTEIN
+	Line 21: 	itemball ESCAPE_ROPE
+	Line 24: 	itemball ULTRA_BALL
+	Line 53: 	person_event SPRITE_POKE_BALL, 9, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom1MaxElixer, EVENT_SILVER_CAVE_ROOM_1_MAX_ELIXER
+	Line 54: 	person_event SPRITE_POKE_BALL, 29, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom1Protein, EVENT_SILVER_CAVE_ROOM_1_PROTEIN
+	Line 55: 	person_event SPRITE_POKE_BALL, 30, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom1EscapeRope, EVENT_SILVER_CAVE_ROOM_1_ESCAPE_ROPE
+	Line 56: 	person_event SPRITE_POKE_BALL, 18, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom1UltraBall, EVENT_SILVER_CAVE_ROOM_1_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\SilverCaveRoom2.asm (6 hits)
+	Line 14: 	itemball CALCIUM
+	Line 17: 	itemball ULTRA_BALL
+	Line 20: 	itemball PP_UP
+	Line 46: 	person_event SPRITE_POKE_BALL, 10, 24, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom2Calcium, EVENT_SILVER_CAVE_ROOM_2_CALCIUM
+	Line 47: 	person_event SPRITE_POKE_BALL, 24, 22, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom2UltraBall, EVENT_SILVER_CAVE_ROOM_2_ULTRA_BALL
+	Line 48: 	person_event SPRITE_POKE_BALL, 20, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SilverCaveRoom2PPUp, EVENT_SILVER_CAVE_ROOM_2_PP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\SlowpokeWellB1F.asm (2 hits)
+	Line 127: 	itemball SUPER_POTION
+	Line 348: 	person_event SPRITE_POKE_BALL, 3, 10, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SlowpokeWellB1FSuperPotion, EVENT_SLOWPOKE_WELL_B1F_SUPER_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\SlowpokeWellB2F.asm (2 hits)
+	Line 33: 	itemball TM_RAIN_DANCE
+	Line 81: 	person_event SPRITE_POKE_BALL, 5, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SlowpokeWellB2FTMRainDance, EVENT_SLOWPOKE_WELL_B2F_TM_RAIN_DANCE
+  F:\Gaming\Mods\pokecrystal-altered\maps\SproutTower1F.asm (2 hits)
+	Line 40: 	itemball PARLYZ_HEAL
+	Line 132: 	person_event SPRITE_POKE_BALL, 7, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SproutTower1FParlyzHeal, EVENT_SPROUT_TOWER1F_PARLYZ_HEAL
+  F:\Gaming\Mods\pokecrystal-altered\maps\SproutTower2F.asm (2 hits)
+	Line 39: 	itemball X_ACCURACY
+	Line 109: 	person_event SPRITE_POKE_BALL, 1, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SproutTower2FXAccuracy, EVENT_SPROUT_TOWER2F_X_ACCURACY
+  F:\Gaming\Mods\pokecrystal-altered\maps\SproutTower3F.asm (4 hits)
+	Line 137: 	itemball POTION
+	Line 140: 	itemball ESCAPE_ROPE
+	Line 361: 	person_event SPRITE_POKE_BALL, 14, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SproutTower3FPotion, EVENT_SPROUT_TOWER_3F_POTION
+	Line 362: 	person_event SPRITE_POKE_BALL, 1, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, SproutTower3FEscapeRope, EVENT_SPROUT_TOWER_3F_ESCAPE_ROPE
+  F:\Gaming\Mods\pokecrystal-altered\maps\TeamRocketBaseB1F.asm (6 hits)
+	Line 539: 	itemball HYPER_POTION
+	Line 542: 	itemball NUGGET
+	Line 545: 	itemball GUARD_SPEC
+	Line 800: 	person_event SPRITE_POKE_BALL, 6, 27, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB1FHyperPotion, EVENT_TEAM_ROCKET_BASE_B1F_HYPER_POTION
+	Line 801: 	person_event SPRITE_POKE_BALL, 15, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB1FNugget, EVENT_TEAM_ROCKET_BASE_B1F_NUGGET
+	Line 802: 	person_event SPRITE_POKE_BALL, 12, 21, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB1FGuardSpec, EVENT_TEAM_ROCKET_BASE_B1F_GUARD_SPEC
+  F:\Gaming\Mods\pokecrystal-altered\maps\TeamRocketBaseB2F.asm (2 hits)
+	Line 363: 	itemball TM_THIEF
+	Line 984: 	person_event SPRITE_POKE_BALL, 10, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB2FTMThief, EVENT_TEAM_ROCKET_BASE_B2F_TM_THIEF
+  F:\Gaming\Mods\pokecrystal-altered\maps\TeamRocketBaseB3F.asm (10 hits)
+	Line 214: 	itemball PROTEIN
+	Line 217: 	itemball X_SPECIAL
+	Line 220: 	itemball FULL_HEAL
+	Line 223: 	itemball ICE_HEAL
+	Line 226: 	itemball ULTRA_BALL
+	Line 615: 	person_event SPRITE_POKE_BALL, 12, 1, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB3FProtein, EVENT_TEAM_ROCKET_BASE_B3F_PROTEIN
+	Line 616: 	person_event SPRITE_POKE_BALL, 12, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB3FXSpecial, EVENT_TEAM_ROCKET_BASE_B3F_X_SPECIAL
+	Line 617: 	person_event SPRITE_POKE_BALL, 9, 28, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB3FFullHeal, EVENT_TEAM_ROCKET_BASE_B3F_FULL_HEAL
+	Line 618: 	person_event SPRITE_POKE_BALL, 2, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB3FIceHeal, EVENT_TEAM_ROCKET_BASE_B3F_ICE_HEAL
+	Line 619: 	person_event SPRITE_POKE_BALL, 10, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TeamRocketBaseB3FUltraBall, EVENT_TEAM_ROCKET_BASE_B3F_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower3F.asm (2 hits)
+	Line 12: 	itemball FULL_HEAL
+	Line 31: 	person_event SPRITE_POKE_BALL, 14, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower3FFullHeal, EVENT_TIN_TOWER_3F_FULL_HEAL
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower4F.asm (6 hits)
+	Line 14: 	itemball ULTRA_BALL
+	Line 17: 	itemball PP_UP
+	Line 20: 	itemball ESCAPE_ROPE
+	Line 46: 	person_event SPRITE_POKE_BALL, 10, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower4FUltraBall, EVENT_TIN_TOWER_4F_ULTRA_BALL
+	Line 47: 	person_event SPRITE_POKE_BALL, 14, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower4FPPUp, EVENT_TIN_TOWER_4F_PP_UP
+	Line 48: 	person_event SPRITE_POKE_BALL, 12, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower4FEscapeRope, EVENT_TIN_TOWER_4F_ESCAPE_ROPE
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower5F.asm (2 hits)
+	Line 12: 	itemball RARE_CANDY
+	Line 43: 	person_event SPRITE_POKE_BALL, 9, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower5FRareCandy, EVENT_TIN_TOWER_5F_RARE_CANDY
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower6F.asm (2 hits)
+	Line 12: 	itemball MAX_POTION
+	Line 31: 	person_event SPRITE_POKE_BALL, 8, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower6FMaxPotion, EVENT_TIN_TOWER_6F_MAX_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower7F.asm (2 hits)
+	Line 12: 	itemball MAX_REVIVE
+	Line 34: 	person_event SPRITE_POKE_BALL, 1, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower7FMaxRevive, EVENT_TIN_TOWER_7F_MAX_REVIVE
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower8F.asm (6 hits)
+	Line 14: 	itemball NUGGET
+	Line 17: 	itemball MAX_ELIXER
+	Line 20: 	itemball FULL_RESTORE
+	Line 43: 	person_event SPRITE_POKE_BALL, 13, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower8FNugget, EVENT_TIN_TOWER_8F_NUGGET
+	Line 44: 	person_event SPRITE_POKE_BALL, 6, 11, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower8FMaxElixer, EVENT_TIN_TOWER_8F_MAX_ELIXER
+	Line 45: 	person_event SPRITE_POKE_BALL, 1, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower8FFullRestore, EVENT_TIN_TOWER_8F_FULL_RESTORE
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower9F.asm (2 hits)
+	Line 12: 	itemball HP_UP
+	Line 44: 	person_event SPRITE_POKE_BALL, 1, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TinTower9FHPUp, EVENT_TIN_TOWER_9F_HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\TohjoFalls.asm (2 hits)
+	Line 12: 	itemball MOON_STONE
+	Line 31: 	person_event SPRITE_POKE_BALL, 6, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, TohjoFallsMoonStone, EVENT_TOHJO_FALLS_MOON_STONE
+  F:\Gaming\Mods\pokecrystal-altered\maps\UndergroundPathSwitchRoomEntrances.asm (4 hits)
+	Line 632: 	itemball SMOKE_BALL
+	Line 635: 	itemball FULL_HEAL
+	Line 979: 	person_event SPRITE_POKE_BALL, 12, 1, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UndergroundPathSwitchRoomEntrancesSmokeBall, EVENT_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES_SMOKE_BALL
+	Line 980: 	person_event SPRITE_POKE_BALL, 9, 14, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UndergroundPathSwitchRoomEntrancesFullHeal, EVENT_UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES_FULL_HEAL
+  F:\Gaming\Mods\pokecrystal-altered\maps\UndergroundWarehouse.asm (6 hits)
+	Line 95: 	itemball MAX_ETHER
+	Line 98: 	itemball TM_SLEEP_TALK
+	Line 101: 	itemball ULTRA_BALL
+	Line 238: 	person_event SPRITE_POKE_BALL, 15, 18, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UndergroundWarehouseMaxEther, EVENT_UNDERGROUND_WAREHOUSE_MAX_ETHER
+	Line 239: 	person_event SPRITE_POKE_BALL, 9, 13, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UndergroundWarehouseTMSleepTalk, EVENT_UNDERGROUND_WAREHOUSE_TM_SLEEP_TALK
+	Line 240: 	person_event SPRITE_POKE_BALL, 1, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UndergroundWarehouseUltraBall, EVENT_UNDERGROUND_WAREHOUSE_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\UnionCave1F.asm (8 hits)
+	Line 75: 	itemball GREAT_BALL
+	Line 78: 	itemball X_ATTACK
+	Line 81: 	itemball POTION
+	Line 84: 	itemball AWAKENING
+	Line 226: 	person_event SPRITE_POKE_BALL, 21, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCave1FGreatBall, EVENT_UNION_CAVE_1F_GREAT_BALL
+	Line 227: 	person_event SPRITE_POKE_BALL, 2, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCave1FXAttack, EVENT_UNION_CAVE_1F_X_ATTACK
+	Line 228: 	person_event SPRITE_POKE_BALL, 17, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCave1FPotion, EVENT_UNION_CAVE_1F_POTION
+	Line 229: 	person_event SPRITE_POKE_BALL, 33, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCave1FAwakening, EVENT_UNION_CAVE_1F_AWAKENING
+  F:\Gaming\Mods\pokecrystal-altered\maps\UnionCaveB1F.asm (4 hits)
+	Line 62: 	itemball TM_SWIFT
+	Line 65: 	itemball X_DEFEND
+	Line 179: 	person_event SPRITE_POKE_BALL, 16, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCaveB1FTMSwift, EVENT_UNION_CAVE_B1F_TM_SWIFT
+	Line 181: 	person_event SPRITE_POKE_BALL, 23, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCaveB1FXDefend, EVENT_UNION_CAVE_B1F_X_DEFEND
+  F:\Gaming\Mods\pokecrystal-altered\maps\UnionCaveB2F.asm (4 hits)
+	Line 77: 	itemball ELIXER
+	Line 80: 	itemball HYPER_POTION
+	Line 166: 	person_event SPRITE_POKE_BALL, 2, 16, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCaveB2FElixer, EVENT_UNION_CAVE_B2F_ELIXER
+	Line 167: 	person_event SPRITE_POKE_BALL, 19, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, UnionCaveB2FHyperPotion, EVENT_UNION_CAVE_B2F_HYPER_POTION
+  F:\Gaming\Mods\pokecrystal-altered\maps\VictoryRoad.asm (10 hits)
+	Line 102: 	itemball TM_EARTHQUAKE
+	Line 105: 	itemball MAX_REVIVE
+	Line 108: 	itemball FULL_RESTORE
+	Line 111: 	itemball FULL_HEAL
+	Line 114: 	itemball HP_UP
+	Line 275: 	person_event SPRITE_POKE_BALL, 28, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
+	Line 276: 	person_event SPRITE_POKE_BALL, 48, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE
+	Line 277: 	person_event SPRITE_POKE_BALL, 29, 18, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
+	Line 278: 	person_event SPRITE_POKE_BALL, 48, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
+	Line 279: 	person_event SPRITE_POKE_BALL, 38, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\VioletCity.asm (4 hits)
+	Line 94: 	itemball PP_UP
+	Line 97: 	itemball RARE_CANDY
+	Line 320: 	person_event SPRITE_POKE_BALL, 1, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VioletCityPPUp, EVENT_VIOLET_CITY_PP_UP
+	Line 321: 	person_event SPRITE_POKE_BALL, 5, 35, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, VioletCityRareCandy, EVENT_VIOLET_CITY_RARE_CANDY
+  F:\Gaming\Mods\pokecrystal-altered\maps\WarehouseEntrance.asm (2 hits)
+	Line 411: 	itemball COIN_CASE
+	Line 687: 	person_event SPRITE_POKE_BALL, 25, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WarehouseEntranceCoinCase, EVENT_WAREHOUSE_ENTRANCE_COIN_CASE
+  F:\Gaming\Mods\pokecrystal-altered\maps\WhirlIslandB1F.asm (10 hits)
+	Line 17: 	itemball FULL_RESTORE
+	Line 20: 	itemball CARBOS
+	Line 23: 	itemball CALCIUM
+	Line 26: 	itemball NUGGET
+	Line 29: 	itemball ESCAPE_ROPE
+	Line 73: 	person_event SPRITE_POKE_BALL, 13, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB1FFullRestore, EVENT_WHIRL_ISLAND_B1F_FULL_RESTORE
+	Line 74: 	person_event SPRITE_POKE_BALL, 18, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB1FCarbos, EVENT_WHIRL_ISLAND_B1F_CARBOS
+	Line 75: 	person_event SPRITE_POKE_BALL, 23, 33, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB1FCalcium, EVENT_WHIRL_ISLAND_B1F_CALCIUM
+	Line 76: 	person_event SPRITE_POKE_BALL, 8, 17, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB1FNugget, EVENT_WHIRL_ISLAND_B1F_NUGGET
+	Line 77: 	person_event SPRITE_POKE_BALL, 26, 19, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB1FEscapeRope, EVENT_WHIRL_ISLAND_B1F_ESCAPE_ROPE
+  F:\Gaming\Mods\pokecrystal-altered\maps\WhirlIslandB2F.asm (6 hits)
+	Line 14: 	itemball FULL_RESTORE
+	Line 17: 	itemball MAX_REVIVE
+	Line 20: 	itemball MAX_ELIXER
+	Line 41: 	person_event SPRITE_POKE_BALL, 11, 10, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB2FFullRestore, EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE
+	Line 42: 	person_event SPRITE_POKE_BALL, 4, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB2FMaxRevive, EVENT_WHIRL_ISLAND_B2F_MAX_REVIVE
+	Line 43: 	person_event SPRITE_POKE_BALL, 12, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandB2FMaxElixer, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXER
+  F:\Gaming\Mods\pokecrystal-altered\maps\WhirlIslandNE.asm (2 hits)
+	Line 12: 	itemball ULTRA_BALL
+	Line 32: 	person_event SPRITE_POKE_BALL, 11, 11, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandNEUltraBall, EVENT_WHIRL_ISLAND_NE_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\WhirlIslandSW.asm (2 hits)
+	Line 12: 	itemball ULTRA_BALL
+	Line 34: 	person_event SPRITE_POKE_BALL, 2, 15, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, WhirlIslandSWUltraBall, EVENT_WHIRL_ISLAND_SW_ULTRA_BALL
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.map (2 hits)
+	Line 2545:            $41C5 = Pack.ItemBallsKey_LoadSubmenu
+	Line 13445:            $6A12 = TryObjectEvent.itemball
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.sym (2 hits)
+	Line 9735: 04:41C5 Pack.ItemBallsKey_LoadSubmenu
+	Line 20852: 25:6A12 TryObjectEvent.itemball
+Search "verbosegiveitem" (142 hits in 86 files)
+  F:\Gaming\Mods\pokecrystal-altered\engine\events.o (2 hits)
+	Line 26: 
+	Line 26: 
+  F:\Gaming\Mods\pokecrystal-altered\engine\scripting.asm (4 hits)
+	Line 227: 	dw Script_verbosegiveitem            ; 9e
+	Line 228: 	dw Script_verbosegiveitem2           ; 9f
+	Line 524: Script_verbosegiveitem:
+	Line 563: Script_verbosegiveitem2:
+  F:\Gaming\Mods\pokecrystal-altered\engine\std_scripts.asm (4 hits)
+	Line 330: 	verbosegiveitem BERRY
+	Line 389: 	verbosegiveitem SUN_STONE
+	Line 398: 	verbosegiveitem EVERSTONE
+	Line 407: 	verbosegiveitem GOLD_BERRY
+  F:\Gaming\Mods\pokecrystal-altered\macros\event.asm (6 hits)
+	Line 987: 	enum verbosegiveitem_command
+	Line 988: verbosegiveitem: macro
+	Line 989: 	db verbosegiveitem_command
+	Line 998: 	enum verbosegiveitem2_command
+	Line 999: verbosegiveitem2: macro
+	Line 1000: 	db verbosegiveitem2_command
+  F:\Gaming\Mods\pokecrystal-altered\maps\AzaleaGym.asm (1 hit)
+	Line 46: 	verbosegiveitem TM_FURY_CUTTER
+  F:\Gaming\Mods\pokecrystal-altered\maps\AzaleaTown.asm (1 hit)
+	Line 172: 	verbosegiveitem GS_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\BillsHouse.asm (5 hits)
+	Line 123: 	verbosegiveitem EVERSTONE
+	Line 134: 	verbosegiveitem LEAF_STONE
+	Line 145: 	verbosegiveitem WATER_STONE
+	Line 156: 	verbosegiveitem FIRE_STONE
+	Line 165: 	verbosegiveitem THUNDERSTONE
+  F:\Gaming\Mods\pokecrystal-altered\maps\BlackthornCity.asm (1 hit)
+	Line 107: 	verbosegiveitem SPELL_TAG
+  F:\Gaming\Mods\pokecrystal-altered\maps\CeladonGym.asm (1 hit)
+	Line 43: 	verbosegiveitem TM_GIGA_DRAIN
+  F:\Gaming\Mods\pokecrystal-altered\maps\CeladonMansionRoofHouse.asm (1 hit)
+	Line 28: 	verbosegiveitem TM_CURSE
+  F:\Gaming\Mods\pokecrystal-altered\maps\CharcoalKiln.asm (1 hit)
+	Line 52: 	verbosegiveitem CHARCOAL
+  F:\Gaming\Mods\pokecrystal-altered\maps\CherrygroveCity.asm (1 hit)
+	Line 222: 	verbosegiveitem MYSTIC_WATER
+  F:\Gaming\Mods\pokecrystal-altered\maps\CianwoodCity.asm (1 hit)
+	Line 106: 	verbosegiveitem HM_FLY
+  F:\Gaming\Mods\pokecrystal-altered\maps\CianwoodGym.asm (1 hit)
+	Line 63: 	verbosegiveitem TM_DYNAMICPUNCH
+  F:\Gaming\Mods\pokecrystal-altered\maps\CopycatsHouse2F.asm (1 hit)
+	Line 127: 	verbosegiveitem PASS
+  F:\Gaming\Mods\pokecrystal-altered\maps\DanceTheatre.asm (1 hit)
+	Line 110: 	verbosegiveitem HM_SURF
+  F:\Gaming\Mods\pokecrystal-altered\maps\DarkCaveBlackthornEntrance.asm (1 hit)
+	Line 20: 	verbosegiveitem BLACKGLASSES
+  F:\Gaming\Mods\pokecrystal-altered\maps\EcruteakGym.asm (1 hit)
+	Line 60: 	verbosegiveitem TM_SHADOW_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\EcruteakItemfinderHouse.asm (1 hit)
+	Line 22: 	verbosegiveitem ITEMFINDER
+  F:\Gaming\Mods\pokecrystal-altered\maps\ElmsLab.asm (4 hits)
+	Line 390: 	verbosegiveitem EVERSTONE
+	Line 408: 	verbosegiveitem MASTER_BALL
+	Line 420: 	verbosegiveitem S_S_TICKET
+	Line 483: 	verbosegiveitem MASTER_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\FastShipCabins_SE_SSE_CaptainsCabin.asm (2 hits)
+	Line 103: 	verbosegiveitem METAL_COAT
+	Line 122: 	verbosegiveitem METAL_COAT
+  F:\Gaming\Mods\pokecrystal-altered\maps\FuchsiaGym.asm (1 hit)
+	Line 53: 	verbosegiveitem TM_TOXIC
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodDeptStore5F.asm (2 hits)
+	Line 81: 	verbosegiveitem TM_RETURN
+	Line 96: 	verbosegiveitem TM_FRUSTRATION
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodFlowerShop.asm (1 hit)
+	Line 27: 	verbosegiveitem SQUIRTBOTTLE
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodGym.asm (1 hit)
+	Line 71: 	verbosegiveitem TM_ATTRACT
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodPokeCenter1F.asm (3 hits)
+	Line 37: 	verbosegiveitem GS_BALL
+	Line 69: 	verbosegiveitem GS_BALL
+	Line 102: 	verbosegiveitem REVIVE
+  F:\Gaming\Mods\pokecrystal-altered\maps\IlexForest.asm (2 hits)
+	Line 357: 	verbosegiveitem HM_CUT
+	Line 383: 	verbosegiveitem TM_HEADBUTT
+  F:\Gaming\Mods\pokecrystal-altered\maps\KurtsHouse.asm (8 hits)
+	Line 76: 	verbosegiveitem LURE_BALL
+	Line 202: 	verbosegiveitem2 LEVEL_BALL, VAR_KURT_APRICORNS
+	Line 212: 	verbosegiveitem2 LURE_BALL, VAR_KURT_APRICORNS
+	Line 222: 	verbosegiveitem2 MOON_BALL, VAR_KURT_APRICORNS
+	Line 232: 	verbosegiveitem2 FRIEND_BALL, VAR_KURT_APRICORNS
+	Line 242: 	verbosegiveitem2 FAST_BALL, VAR_KURT_APRICORNS
+	Line 252: 	verbosegiveitem2 HEAVY_BALL, VAR_KURT_APRICORNS
+	Line 262: 	verbosegiveitem2 LOVE_BALL, VAR_KURT_APRICORNS
+  F:\Gaming\Mods\pokecrystal-altered\maps\LakeofRage.asm (1 hit)
+	Line 212: 	verbosegiveitem BLACKBELT
+  F:\Gaming\Mods\pokecrystal-altered\maps\LakeofRageHiddenPowerHouse.asm (1 hit)
+	Line 18: 	verbosegiveitem TM_HIDDEN_POWER
+  F:\Gaming\Mods\pokecrystal-altered\maps\LakeofRageMagikarpHouse.asm (1 hit)
+	Line 56: 	verbosegiveitem ELIXER
+  F:\Gaming\Mods\pokecrystal-altered\maps\MahoganyGym.asm (1 hit)
+	Line 47: 	verbosegiveitem TM_ICY_WIND
+  F:\Gaming\Mods\pokecrystal-altered\maps\MrPokemonsHouse.asm (1 hit)
+	Line 76: 	verbosegiveitem EXP_SHARE
+  F:\Gaming\Mods\pokecrystal-altered\maps\MrPsychicsHouse.asm (1 hit)
+	Line 18: 	verbosegiveitem TM_PSYCHIC
+  F:\Gaming\Mods\pokecrystal-altered\maps\NationalPark.asm (2 hits)
+	Line 37: 	verbosegiveitem QUICK_CLAW
+	Line 235: 	verbosegiveitem NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineCafe.asm (1 hit)
+	Line 20: 	verbosegiveitem HM_STRENGTH
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineGoodRodHouse.asm (1 hit)
+	Line 21: 	verbosegiveitem GOOD_ROD
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineGym.asm (1 hit)
+	Line 37: 	verbosegiveitem TM_IRON_TAIL
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineLighthouse2F.asm (2 hits)
+	Line 101: 	verbosegiveitem PROTEIN
+	Line 113: 	verbosegiveitem PROTEIN
+  F:\Gaming\Mods\pokecrystal-altered\maps\PewterCity.asm (1 hit)
+	Line 35: 	verbosegiveitem SILVER_WING
+  F:\Gaming\Mods\pokecrystal-altered\maps\PokemonFanClub.asm (1 hit)
+	Line 31: 	verbosegiveitem RARE_CANDY
+  F:\Gaming\Mods\pokecrystal-altered\maps\PowerPlant.asm (1 hit)
+	Line 178: 	verbosegiveitem TM_ZAP_CANNON
+  F:\Gaming\Mods\pokecrystal-altered\maps\RadioTower2F.asm (1 hit)
+	Line 167: 	verbosegiveitem BLUE_CARD
+  F:\Gaming\Mods\pokecrystal-altered\maps\RadioTower3F.asm (1 hit)
+	Line 73: 	verbosegiveitem TM_SUNNY_DAY
+  F:\Gaming\Mods\pokecrystal-altered\maps\RadioTower4F.asm (1 hit)
+	Line 35: 	verbosegiveitem PINK_BOW
+  F:\Gaming\Mods\pokecrystal-altered\maps\RadioTower5F.asm (2 hits)
+	Line 50: 	verbosegiveitem BASEMENT_KEY
+	Line 127: 	verbosegiveitem CLEAR_BELL
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route12SuperRodHouse.asm (1 hit)
+	Line 21: 	verbosegiveitem SUPER_ROD
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route25.asm (1 hit)
+	Line 169: 	verbosegiveitem NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route27.asm (1 hit)
+	Line 133: 	verbosegiveitem STAR_PIECE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route27SandstormHouse.asm (1 hit)
+	Line 25: 	verbosegiveitem TM_SANDSTORM
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route28FamousSpeechHouse.asm (1 hit)
+	Line 25: 	verbosegiveitem TM_STEEL_WING
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route29.asm (1 hit)
+	Line 189: 	verbosegiveitem PINK_BOW
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route2NuggetSpeechHouse.asm (1 hit)
+	Line 18: 	verbosegiveitem NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route30.asm (2 hits)
+	Line 133: 	verbosegiveitem HP_UP
+	Line 145: 	verbosegiveitem HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route30BerrySpeechHouse.asm (1 hit)
+	Line 18: 	verbosegiveitem MYSTERY_EGG
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route31.asm (5 hits)
+	Line 132: 	verbosegiveitem BERRY
+	Line 136: 	verbosegiveitem PSNCUREBERRY
+	Line 140: 	verbosegiveitem PRZCUREBERRY
+	Line 144: 	verbosegiveitem BITTER_BERRY
+	Line 213: 	verbosegiveitem TM_NIGHTMARE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route32.asm (3 hits)
+	Line 76: 	verbosegiveitem MIRACLE_SEED
+	Line 117: 	verbosegiveitem TM_ROAR
+	Line 474: 	verbosegiveitem POISON_BARB
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route32PokeCenter1F.asm (1 hit)
+	Line 26: 	verbosegiveitem OLD_ROD
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route34.asm (2 hits)
+	Line 311: 	verbosegiveitem LEAF_STONE
+	Line 468: 	verbosegiveitem SOFT_SAND
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route34IlexForestGate.asm (1 hit)
+	Line 57: 	verbosegiveitem TM_SWEET_SCENT
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route35Goldenrodgate.asm (1 hit)
+	Line 57: 	verbosegiveitem HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route36.asm (3 hits)
+	Line 148: 	verbosegiveitem TM_ROCK_SMASH
+	Line 267: 	verbosegiveitem FIRE_STONE
+	Line 338: 	verbosegiveitem HARD_STONE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route36NationalParkgate.asm (4 hits)
+	Line 258: 	verbosegiveitem SUN_STONE
+	Line 267: 	verbosegiveitem EVERSTONE
+	Line 276: 	verbosegiveitem GOLD_BERRY
+	Line 285: 	verbosegiveitem BERRY
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route37.asm (1 hit)
+	Line 86: 	verbosegiveitem MAGNET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route38.asm (1 hit)
+	Line 132: 	verbosegiveitem THUNDERSTONE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route39.asm (1 hit)
+	Line 61: 	verbosegiveitem NUGGET
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route39Farmhouse.asm (1 hit)
+	Line 83: 	verbosegiveitem TM_SNORE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route40.asm (1 hit)
+	Line 113: 	verbosegiveitem SHARP_BEAK
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route42.asm (1 hit)
+	Line 122: 	verbosegiveitem WATER_STONE
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route43.asm (1 hit)
+	Line 264: 	verbosegiveitem PINK_BOW
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route43Gate.asm (1 hit)
+	Line 121: 	verbosegiveitem TM_SLUDGE_BOMB
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route44.asm (5 hits)
+	Line 89: 	verbosegiveitem CARBOS
+	Line 101: 	verbosegiveitem CARBOS
+	Line 239: 	verbosegiveitem ULTRA_BALL
+	Line 244: 	verbosegiveitem GREAT_BALL
+	Line 249: 	verbosegiveitem POKE_BALL
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route45.asm (3 hits)
+	Line 61: 	verbosegiveitem PP_UP
+	Line 217: 	verbosegiveitem IRON
+	Line 229: 	verbosegiveitem IRON
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route46.asm (2 hits)
+	Line 95: 	verbosegiveitem CALCIUM
+	Line 107: 	verbosegiveitem CALCIUM
+  F:\Gaming\Mods\pokecrystal-altered\maps\Route5CleanseTagSpeechHouse.asm (1 hit)
+	Line 19: 	verbosegiveitem CLEANSE_TAG
+  F:\Gaming\Mods\pokecrystal-altered\maps\SilphCo1F.asm (1 hit)
+	Line 22: 	verbosegiveitem UP_GRADE
+  F:\Gaming\Mods\pokecrystal-altered\maps\SlowpokeWellB2F.asm (1 hit)
+	Line 19: 	verbosegiveitem KINGS_ROCK
+  F:\Gaming\Mods\pokecrystal-altered\maps\SproutTower3F.asm (1 hit)
+	Line 83: 	verbosegiveitem HM_FLASH
+  F:\Gaming\Mods\pokecrystal-altered\maps\TeamRocketBaseB2F.asm (1 hit)
+	Line 295: 	verbosegiveitem HM_WHIRLPOOL
+  F:\Gaming\Mods\pokecrystal-altered\maps\TinTower1F.asm (1 hit)
+	Line 204: 	verbosegiveitem RAINBOW_WING
+  F:\Gaming\Mods\pokecrystal-altered\maps\UndergroundWarehouse.asm (1 hit)
+	Line 81: 	verbosegiveitem CARD_KEY
+  F:\Gaming\Mods\pokecrystal-altered\maps\VermilionCity.asm (1 hit)
+	Line 96: 	verbosegiveitem HP_UP
+  F:\Gaming\Mods\pokecrystal-altered\maps\VioletGym.asm (1 hit)
+	Line 43: 	verbosegiveitem TM_MUD_SLAP
+  F:\Gaming\Mods\pokecrystal-altered\maps\ViridianCity.asm (1 hit)
+	Line 61: 	verbosegiveitem TM_DREAM_EATER
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.map (2 hits)
+	Line 13658:            $6F60 = Script_verbosegiveitem
+	Line 13659:            $6F8E = Script_verbosegiveitem2
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.sym (2 hits)
+	Line 20932: 25:6F60 Script_verbosegiveitem
+	Line 20937: 25:6F8E Script_verbosegiveitem2
+Search "GymStatue_CityGymText" (6 hits in 5 files)
+  F:\Gaming\Mods\pokecrystal-altered\engine\std_scripts.asm (2 hits)
+	Line 1763: 	farwritetext GymStatue_CityGymText
+	Line 1771: 	farwritetext GymStatue_CityGymText
+  F:\Gaming\Mods\pokecrystal-altered\main.o (1 hit)
+	Line 1246: 
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.map (1 hit)
+	Line 32084:            $474E = GymStatue_CityGymText
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.sym (1 hit)
+	Line 39116: 6C:474E GymStatue_CityGymText
+  F:\Gaming\Mods\pokecrystal-altered\text\stdtext.asm (1 hit)
+	Line 281: GymStatue_CityGymText:
+Search "gymstatue1" (26 hits in 21 files)
+  F:\Gaming\Mods\pokecrystal-altered\constants\std_constants.asm (1 hit)
+	Line 47: 	enum gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\engine\std_scripts.asm (2 hits)
+	Line 47: 	dba GymStatue1Script
+	Line 1760: GymStatue1Script:
+  F:\Gaming\Mods\pokecrystal-altered\main.o (1 hit)
+	Line 1182: 
+  F:\Gaming\Mods\pokecrystal-altered\maps\AzaleaGym.asm (1 hit)
+	Line 147: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\BlackthornGym1F.asm (1 hit)
+	Line 149: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\CeladonGym.asm (1 hit)
+	Line 110: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\CeruleanGym.asm (3 hits)
+	Line 143: CeruleanGymStatue1:
+	Line 164: 	jumpstd gymstatue1
+	Line 383: 	signpost 13, 2, SIGNPOST_READ, CeruleanGymStatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\CianwoodGym.asm (1 hit)
+	Line 139: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\EcruteakGym.asm (1 hit)
+	Line 165: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\FuchsiaGym.asm (1 hit)
+	Line 217: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\GoldenrodGym.asm (1 hit)
+	Line 174: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\MahoganyGym.asm (1 hit)
+	Line 147: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\OlivineGym.asm (1 hit)
+	Line 92: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\PewterGym.asm (1 hit)
+	Line 73: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\SaffronGym.asm (1 hit)
+	Line 112: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\VermilionGym.asm (1 hit)
+	Line 102: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\VioletGym.asm (1 hit)
+	Line 110: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps\ViridianGym.asm (1 hit)
+	Line 60: 	jumpstd gymstatue1
+  F:\Gaming\Mods\pokecrystal-altered\maps.o (1 hit)
+	Line 1230: 
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.map (2 hits)
+	Line 15842:            $4DA0 = GymStatue1Script
+	Line 27968:            $44B9 = CeruleanGymStatue1
+  F:\Gaming\Mods\pokecrystal-altered\pokecrystal.sym (2 hits)
+	Line 23396: 2F:4DA0 GymStatue1Script
+	Line 35058: 62:44B9 CeruleanGymStatue1

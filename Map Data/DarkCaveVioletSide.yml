@@ -1,0 +1,134 @@
+Location:
+    -
+        Name: Dark Cave Violet Entrance
+        FileName: DarkCaveVioletEntrance.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: DARK_CAVE_VIOLET_ENTRANCE
+        LocationReqs: Route 31
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Dark Cave Violet Entrance
+        FileName: DarkCaveVioletEntrance.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: DARK_CAVE_VIOLET_ENTRANCE
+        LocationReqs: Dark Cave Blackthorn
+        FlagReqs:
+            - Zephyr Badge
+        ItemReqs:
+            - Rock Smash
+            - Flash
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:        
+    -
+        Name: Dark Cave Violet
+        FileName: DarkCaveVioletEntrance.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: DARK_CAVE_VIOLET_ENTRANCE
+        LocationReqs: Dark Cave Violet Entrance
+        FlagReqs:
+            - Goldenrod City
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations: 
+             -
+                Name: Dark Cave Violet Potion
+                FileName: DarkCaveVioletEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Violet
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    DarkCaveVioletEntrancePotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:         
+             -
+                Name: Dark Cave Violet Dire Hit
+                FileName: DarkCaveVioletEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Violet
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Rock Smash
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: DIRE_HIT
+                Code: |
+                    DarkCaveVioletEntranceDireHit:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:         
+             -
+                Name: Dark Cave Violet Hyper Potion
+                FileName: DarkCaveVioletEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Violet
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Rock Smash
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: DIRE_HIT
+                Code: |
+                    DarkCaveVioletEntranceHyperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:        
+             -
+                Name: Dark Cave Violet Full Heal
+                FileName: DarkCaveVioletEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Violet
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Rock Smash
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    DarkCaveVioletEntranceFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:  
+                

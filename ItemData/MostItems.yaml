@@ -1,0 +1,891 @@
+- GameName: HP_UP
+  Name: HP_UP
+  output: itemball HP_UP
+- GameName: TM_ENDURE
+  Name: TM_ENDURE
+  output: itemball TM_ENDURE
+- GameName: REVIVE
+  Name: REVIVE
+  output: itemball REVIVE
+- GameName: TM_SNORE
+  Name: TM_SNORE
+  output: itemball TM_SNORE
+- GameName: POTION
+  Name: POTION
+  output: itemball POTION
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: HYPER_POTION
+  Name: HYPER_POTION
+  output: itemball HYPER_POTION
+- GameName: DIRE_HIT
+  Name: DIRE_HIT
+  output: itemball DIRE_HIT
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: itemball CALCIUM
+- GameName: MAX_ELIXER
+  Name: MAX_ELIXER
+  output: itemball MAX_ELIXER
+- GameName: FOCUS_BAND
+  Name: FOCUS_BAND
+  output: itemball FOCUS_BAND
+- GameName: ETHER
+  Name: ETHER
+  output: itemball ETHER
+- GameName: AMULET_COIN
+  Name: AMULET_COIN
+  output: itemball AMULET_COIN
+- GameName: BURN_HEAL
+  Name: BURN_HEAL
+  output: itemball BURN_HEAL
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: HM_WATERFALL
+  Name: HM_WATERFALL
+  output: itemball HM_WATERFALL
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: itemball PROTEIN
+- GameName: IRON
+  Name: IRON
+  output: itemball IRON
+- GameName: TM_REST
+  Name: TM_REST
+  output: itemball TM_REST
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: NEVERMELTICE
+  Name: NEVERMELTICE
+  output: itemball NEVERMELTICE
+- GameName: REVIVE
+  Name: REVIVE
+  output: itemball REVIVE
+- GameName: X_ATTACK
+  Name: X_ATTACK
+  output: itemball X_ATTACK
+- GameName: ANTIDOTE
+  Name: ANTIDOTE
+  output: itemball ANTIDOTE
+- GameName: ETHER
+  Name: ETHER
+  output: itemball ETHER
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: TM_DETECT
+  Name: TM_DETECT
+  output: itemball TM_DETECT
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: HYPER_POTION
+  Name: HYPER_POTION
+  output: itemball HYPER_POTION
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: IRON
+  Name: IRON
+  output: itemball IRON
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: ETHER
+  Name: ETHER
+  output: itemball ETHER
+- GameName: REVIVE
+  Name: REVIVE
+  output: itemball REVIVE
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: itemball RARE_CANDY
+- GameName: TM_DEFENSE_CURL
+  Name: TM_DEFENSE_CURL
+  output: itemball TM_DEFENSE_CURL
+- GameName: DRAGON_SCALE
+  Name: DRAGON_SCALE
+  output: itemball DRAGON_SCALE
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: HYPER_POTION
+  Name: HYPER_POTION
+  output: itemball HYPER_POTION
+- GameName: CARBOS
+  Name: CARBOS
+  output: itemball CARBOS
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: MAX_ETHER
+  Name: MAX_ETHER
+  output: itemball MAX_ETHER
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: PARLYZ_HEAL
+  Name: PARLYZ_HEAL
+  output: itemball PARLYZ_HEAL
+- GameName: TM_DIG
+  Name: TM_DIG
+  output: itemball TM_DIG
+- GameName: PARLYZ_HEAL
+  Name: PARLYZ_HEAL
+  output: itemball PARLYZ_HEAL
+- GameName: TM_DIG
+  Name: TM_DIG
+  output: itemball TM_DIG
+- GameName: ETHER
+  Name: ETHER
+  output: itemball ETHER
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: itemball RARE_CANDY
+- GameName: SUPER_REPEL
+  Name: SUPER_REPEL
+  output: itemball SUPER_REPEL
+- GameName: TM_SWAGGER
+  Name: TM_SWAGGER
+  output: itemball TM_SWAGGER
+- GameName: SUPER_POTION
+  Name: SUPER_POTION
+  output: itemball SUPER_POTION
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: TM_STEEL_WING
+  Name: TM_STEEL_WING
+  output: itemball TM_STEEL_WING
+- GameName: IRON
+  Name: IRON
+  output: itemball IRON
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: REVIVE
+  Name: REVIVE
+  output: itemball REVIVE
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: itemball CALCIUM
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: DIRE_HIT
+  Name: DIRE_HIT
+  output: itemball DIRE_HIT
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: CARBOS
+  Name: CARBOS
+  output: itemball CARBOS
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: itemball PROTEIN
+- GameName: MAX_ELIXER
+  Name: MAX_ELIXER
+  output: itemball MAX_ELIXER
+- GameName: TM_SOLARBEAM
+  Name: TM_SOLARBEAM
+  output: itemball TM_SOLARBEAM
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: itemball RARE_CANDY
+- GameName: POTION
+  Name: POTION
+  output: itemball POTION
+- GameName: ANTIDOTE
+  Name: ANTIDOTE
+  output: itemball ANTIDOTE
+- GameName: POTION
+  Name: POTION
+  output: itemball POTION
+- GameName: POKE_BALL
+  Name: POKE_BALL
+  output: itemball POKE_BALL
+- GameName: GREAT_BALL
+  Name: GREAT_BALL
+  output: itemball GREAT_BALL
+- GameName: REPEL
+  Name: REPEL
+  output: itemball REPEL
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: TM_ROLLOUT
+  Name: TM_ROLLOUT
+  output: itemball TM_ROLLOUT
+- GameName: HP_UP
+  Name: HP_UP
+  output: itemball HP_UP
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: SUPER_POTION
+  Name: SUPER_POTION
+  output: itemball SUPER_POTION
+- GameName: MAX_ETHER
+  Name: MAX_ETHER
+  output: itemball MAX_ETHER
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: MAX_REPEL
+  Name: MAX_REPEL
+  output: itemball MAX_REPEL
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: REVIVE
+  Name: REVIVE
+  output: itemball REVIVE
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: X_SPEED
+  Name: X_SPEED
+  output: itemball X_SPEED
+- GameName: GOLD_BERRY
+  Name: GOLD_BERRY
+  output: itemball GOLD_BERRY
+- GameName: MOON_STONE
+  Name: MOON_STONE
+  output: itemball MOON_STONE
+- GameName: HEAL_POWDER
+  Name: HEAL_POWDER
+  output: itemball HEAL_POWDER
+- GameName: ENERGY_ROOT
+  Name: ENERGY_ROOT
+  output: itemball ENERGY_ROOT
+- GameName: GOLD_BERRY
+  Name: GOLD_BERRY
+  output: itemball GOLD_BERRY
+- GameName: MYSTERYBERRY
+  Name: MYSTERYBERRY
+  output: itemball MYSTERYBERRY
+- GameName: REVIVAL_HERB
+  Name: REVIVAL_HERB
+  output: itemball REVIVAL_HERB
+- GameName: CHARCOAL
+  Name: CHARCOAL
+  output: itemball CHARCOAL
+- GameName: BERRY
+  Name: BERRY
+  output: itemball BERRY
+- GameName: PSNCUREBERRY
+  Name: PSNCUREBERRY
+  output: itemball PSNCUREBERRY
+- GameName: HEAL_POWDER
+  Name: HEAL_POWDER
+  output: itemball HEAL_POWDER
+- GameName: ENERGYPOWDER
+  Name: ENERGYPOWDER
+  output: itemball ENERGYPOWDER
+- GameName: MYSTERYBERRY
+  Name: MYSTERYBERRY
+  output: itemball MYSTERYBERRY
+- GameName: MYSTIC_WATER
+  Name: MYSTIC_WATER
+  output: itemball MYSTIC_WATER
+- GameName: STARDUST
+  Name: STARDUST
+  output: itemball STARDUST
+- GameName: STAR_PIECE
+  Name: STAR_PIECE
+  output: itemball STAR_PIECE
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: MAX_ELIXER
+  Name: MAX_ELIXER
+  output: itemball MAX_ELIXER
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: itemball PROTEIN
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: itemball CALCIUM
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: SUPER_POTION
+  Name: SUPER_POTION
+  output: itemball SUPER_POTION
+- GameName: TM_RAIN_DANCE
+  Name: TM_RAIN_DANCE
+  output: itemball TM_RAIN_DANCE
+- GameName: PARLYZ_HEAL
+  Name: PARLYZ_HEAL
+  output: itemball PARLYZ_HEAL
+- GameName: X_ACCURACY
+  Name: X_ACCURACY
+  output: itemball X_ACCURACY
+- GameName: POTION
+  Name: POTION
+  output: itemball POTION
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: HYPER_POTION
+  Name: HYPER_POTION
+  output: itemball HYPER_POTION
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: GUARD_SPEC
+  Name: GUARD_SPEC
+  output: itemball GUARD_SPEC
+- GameName: TM_THIEF
+  Name: TM_THIEF
+  output: itemball TM_THIEF
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: itemball PROTEIN
+- GameName: X_SPECIAL
+  Name: X_SPECIAL
+  output: itemball X_SPECIAL
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: ICE_HEAL
+  Name: ICE_HEAL
+  output: itemball ICE_HEAL
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: itemball RARE_CANDY
+- GameName: MAX_POTION
+  Name: MAX_POTION
+  output: itemball MAX_POTION
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: MAX_ELIXER
+  Name: MAX_ELIXER
+  output: itemball MAX_ELIXER
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: HP_UP
+  Name: HP_UP
+  output: itemball HP_UP
+- GameName: MOON_STONE
+  Name: MOON_STONE
+  output: itemball MOON_STONE
+- GameName: SMOKE_BALL
+  Name: SMOKE_BALL
+  output: itemball SMOKE_BALL
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: MAX_ETHER
+  Name: MAX_ETHER
+  output: itemball MAX_ETHER
+- GameName: TM_SLEEP_TALK
+  Name: TM_SLEEP_TALK
+  output: itemball TM_SLEEP_TALK
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: GREAT_BALL
+  Name: GREAT_BALL
+  output: itemball GREAT_BALL
+- GameName: X_ATTACK
+  Name: X_ATTACK
+  output: itemball X_ATTACK
+- GameName: POTION
+  Name: POTION
+  output: itemball POTION
+- GameName: AWAKENING
+  Name: AWAKENING
+  output: itemball AWAKENING
+- GameName: TM_SWIFT
+  Name: TM_SWIFT
+  output: itemball TM_SWIFT
+- GameName: X_DEFEND
+  Name: X_DEFEND
+  output: itemball X_DEFEND
+- GameName: ELIXER
+  Name: ELIXER
+  output: itemball ELIXER
+- GameName: HYPER_POTION
+  Name: HYPER_POTION
+  output: itemball HYPER_POTION
+- GameName: TM_EARTHQUAKE
+  Name: TM_EARTHQUAKE
+  output: itemball TM_EARTHQUAKE
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: FULL_HEAL
+  Name: FULL_HEAL
+  output: itemball FULL_HEAL
+- GameName: HP_UP
+  Name: HP_UP
+  output: itemball HP_UP
+- GameName: PP_UP
+  Name: PP_UP
+  output: itemball PP_UP
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: itemball RARE_CANDY
+- GameName: COIN_CASE
+  Name: COIN_CASE
+  output: itemball COIN_CASE
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: CARBOS
+  Name: CARBOS
+  output: itemball CARBOS
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: itemball CALCIUM
+- GameName: NUGGET
+  Name: NUGGET
+  output: itemball NUGGET
+- GameName: ESCAPE_ROPE
+  Name: ESCAPE_ROPE
+  output: itemball ESCAPE_ROPE
+- GameName: FULL_RESTORE
+  Name: FULL_RESTORE
+  output: itemball FULL_RESTORE
+- GameName: MAX_REVIVE
+  Name: MAX_REVIVE
+  output: itemball MAX_REVIVE
+- GameName: MAX_ELIXER
+  Name: MAX_ELIXER
+  output: itemball MAX_ELIXER
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: itemball ULTRA_BALL
+- GameName: BERRY
+  Name: BERRY
+  output: verbosegiveitem BERRY
+- GameName: SUN_STONE
+  Name: SUN_STONE
+  output: verbosegiveitem SUN_STONE
+- GameName: EVERSTONE
+  Name: EVERSTONE
+  output: verbosegiveitem EVERSTONE
+- GameName: GOLD_BERRY
+  Name: GOLD_BERRY
+  output: verbosegiveitem GOLD_BERRY
+- GameName: TM_FURY_CUTTER
+  Name: TM_FURY_CUTTER
+  output: verbosegiveitem TM_FURY_CUTTER
+- GameName: GS_BALL
+  Name: GS_BALL
+  output: verbosegiveitem GS_BALL
+- GameName: EVERSTONE
+  Name: EVERSTONE
+  output: verbosegiveitem EVERSTONE
+- GameName: LEAF_STONE
+  Name: LEAF_STONE
+  output: verbosegiveitem LEAF_STONE
+- GameName: WATER_STONE
+  Name: WATER_STONE
+  output: verbosegiveitem WATER_STONE
+- GameName: FIRE_STONE
+  Name: FIRE_STONE
+  output: verbosegiveitem FIRE_STONE
+- GameName: THUNDERSTONE
+  Name: THUNDERSTONE
+  output: verbosegiveitem THUNDERSTONE
+- GameName: SPELL_TAG
+  Name: SPELL_TAG
+  output: verbosegiveitem SPELL_TAG
+- GameName: TM_GIGA_DRAIN
+  Name: TM_GIGA_DRAIN
+  output: verbosegiveitem TM_GIGA_DRAIN
+- GameName: TM_CURSE
+  Name: TM_CURSE
+  output: verbosegiveitem TM_CURSE
+- GameName: CHARCOAL
+  Name: CHARCOAL
+  output: verbosegiveitem CHARCOAL
+- GameName: MYSTIC_WATER
+  Name: MYSTIC_WATER
+  output: verbosegiveitem MYSTIC_WATER
+- GameName: HM_FLY
+  Name: HM_FLY
+  output: verbosegiveitem HM_FLY
+- GameName: TM_DYNAMICPUNCH
+  Name: TM_DYNAMICPUNCH
+  output: verbosegiveitem TM_DYNAMICPUNCH
+- GameName: PASS
+  Name: PASS
+  output: verbosegiveitem PASS
+- GameName: HM_SURF
+  Name: HM_SURF
+  output: verbosegiveitem HM_SURF
+- GameName: BLACKGLASSES
+  Name: BLACKGLASSES
+  output: verbosegiveitem BLACKGLASSES
+- GameName: TM_SHADOW_BALL
+  Name: TM_SHADOW_BALL
+  output: verbosegiveitem TM_SHADOW_BALL
+- GameName: ITEMFINDER
+  Name: ITEMFINDER
+  output: verbosegiveitem ITEMFINDER
+- GameName: EVERSTONE
+  Name: EVERSTONE
+  output: verbosegiveitem EVERSTONE
+- GameName: MASTER_BALL
+  Name: MASTER_BALL
+  output: verbosegiveitem MASTER_BALL
+- GameName: S_S_TICKET
+  Name: S_S_TICKET
+  output: verbosegiveitem S_S_TICKET
+- GameName: MASTER_BALL
+  Name: MASTER_BALL
+  output: verbosegiveitem MASTER_BALL
+- GameName: METAL_COAT
+  Name: METAL_COAT
+  output: verbosegiveitem METAL_COAT
+- GameName: METAL_COAT
+  Name: METAL_COAT
+  output: verbosegiveitem METAL_COAT
+- GameName: TM_TOXIC
+  Name: TM_TOXIC
+  output: verbosegiveitem TM_TOXIC
+- GameName: TM_RETURN
+  Name: TM_RETURN
+  output: verbosegiveitem TM_RETURN
+- GameName: TM_FRUSTRATION
+  Name: TM_FRUSTRATION
+  output: verbosegiveitem TM_FRUSTRATION
+- GameName: SQUIRTBOTTLE
+  Name: SQUIRTBOTTLE
+  output: verbosegiveitem SQUIRTBOTTLE
+- GameName: TM_ATTRACT
+  Name: TM_ATTRACT
+  output: verbosegiveitem TM_ATTRACT
+- GameName: GS_BALL
+  Name: GS_BALL
+  output: verbosegiveitem GS_BALL
+- GameName: GS_BALL
+  Name: GS_BALL
+  output: verbosegiveitem GS_BALL
+- GameName: REVIVE
+  Name: REVIVE
+  output: verbosegiveitem REVIVE
+- GameName: HM_CUT
+  Name: HM_CUT
+  output: verbosegiveitem HM_CUT
+- GameName: TM_HEADBUTT
+  Name: TM_HEADBUTT
+  output: verbosegiveitem TM_HEADBUTT
+- GameName: LURE_BALL
+  Name: LURE_BALL
+  output: verbosegiveitem LURE_BALL
+- GameName: BLACKBELT
+  Name: BLACKBELT
+  output: verbosegiveitem BLACKBELT
+- GameName: TM_HIDDEN_POWER
+  Name: TM_HIDDEN_POWER
+  output: verbosegiveitem TM_HIDDEN_POWER
+- GameName: ELIXER
+  Name: ELIXER
+  output: verbosegiveitem ELIXER
+- GameName: TM_ICY_WIND
+  Name: TM_ICY_WIND
+  output: verbosegiveitem TM_ICY_WIND
+- GameName: EXP_SHARE
+  Name: EXP_SHARE
+  output: verbosegiveitem EXP_SHARE
+- GameName: TM_PSYCHIC
+  Name: TM_PSYCHIC
+  output: verbosegiveitem TM_PSYCHIC
+- GameName: QUICK_CLAW
+  Name: QUICK_CLAW
+  output: verbosegiveitem QUICK_CLAW
+- GameName: NUGGET
+  Name: NUGGET
+  output: verbosegiveitem NUGGET
+- GameName: HM_STRENGTH
+  Name: HM_STRENGTH
+  output: verbosegiveitem HM_STRENGTH
+- GameName: GOOD_ROD
+  Name: GOOD_ROD
+  output: verbosegiveitem GOOD_ROD
+- GameName: TM_IRON_TAIL
+  Name: TM_IRON_TAIL
+  output: verbosegiveitem TM_IRON_TAIL
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: verbosegiveitem PROTEIN
+- GameName: PROTEIN
+  Name: PROTEIN
+  output: verbosegiveitem PROTEIN
+- GameName: SILVER_WING
+  Name: SILVER_WING
+  output: verbosegiveitem SILVER_WING
+- GameName: RARE_CANDY
+  Name: RARE_CANDY
+  output: verbosegiveitem RARE_CANDY
+- GameName: TM_ZAP_CANNON
+  Name: TM_ZAP_CANNON
+  output: verbosegiveitem TM_ZAP_CANNON
+- GameName: BLUE_CARD
+  Name: BLUE_CARD
+  output: verbosegiveitem BLUE_CARD
+- GameName: TM_SUNNY_DAY
+  Name: TM_SUNNY_DAY
+  output: verbosegiveitem TM_SUNNY_DAY
+- GameName: PINK_BOW
+  Name: PINK_BOW
+  output: verbosegiveitem PINK_BOW
+- GameName: BASEMENT_KEY
+  Name: BASEMENT_KEY
+  output: verbosegiveitem BASEMENT_KEY
+- GameName: CLEAR_BELL
+  Name: CLEAR_BELL
+  output: verbosegiveitem CLEAR_BELL
+- GameName: SUPER_ROD
+  Name: SUPER_ROD
+  output: verbosegiveitem SUPER_ROD
+- GameName: NUGGET
+  Name: NUGGET
+  output: verbosegiveitem NUGGET
+- GameName: STAR_PIECE
+  Name: STAR_PIECE
+  output: verbosegiveitem STAR_PIECE
+- GameName: TM_SANDSTORM
+  Name: TM_SANDSTORM
+  output: verbosegiveitem TM_SANDSTORM
+- GameName: TM_STEEL_WING
+  Name: TM_STEEL_WING
+  output: verbosegiveitem TM_STEEL_WING
+- GameName: PINK_BOW
+  Name: PINK_BOW
+  output: verbosegiveitem PINK_BOW
+- GameName: NUGGET
+  Name: NUGGET
+  output: verbosegiveitem NUGGET
+- GameName: HP_UP
+  Name: HP_UP
+  output: verbosegiveitem HP_UP
+- GameName: HP_UP
+  Name: HP_UP
+  output: verbosegiveitem HP_UP
+- GameName: MYSTERY_EGG
+  Name: MYSTERY_EGG
+  output: verbosegiveitem MYSTERY_EGG
+- GameName: BERRY
+  Name: BERRY
+  output: verbosegiveitem BERRY
+- GameName: PSNCUREBERRY
+  Name: PSNCUREBERRY
+  output: verbosegiveitem PSNCUREBERRY
+- GameName: PRZCUREBERRY
+  Name: PRZCUREBERRY
+  output: verbosegiveitem PRZCUREBERRY
+- GameName: BITTER_BERRY
+  Name: BITTER_BERRY
+  output: verbosegiveitem BITTER_BERRY
+- GameName: TM_NIGHTMARE
+  Name: TM_NIGHTMARE
+  output: verbosegiveitem TM_NIGHTMARE
+- GameName: MIRACLE_SEED
+  Name: MIRACLE_SEED
+  output: verbosegiveitem MIRACLE_SEED
+- GameName: TM_ROAR
+  Name: TM_ROAR
+  output: verbosegiveitem TM_ROAR
+- GameName: POISON_BARB
+  Name: POISON_BARB
+  output: verbosegiveitem POISON_BARB
+- GameName: OLD_ROD
+  Name: OLD_ROD
+  output: verbosegiveitem OLD_ROD
+- GameName: LEAF_STONE
+  Name: LEAF_STONE
+  output: verbosegiveitem LEAF_STONE
+- GameName: SOFT_SAND
+  Name: SOFT_SAND
+  output: verbosegiveitem SOFT_SAND
+- GameName: TM_SWEET_SCENT
+  Name: TM_SWEET_SCENT
+  output: verbosegiveitem TM_SWEET_SCENT
+- GameName: HP_UP
+  Name: HP_UP
+  output: verbosegiveitem HP_UP
+- GameName: TM_ROCK_SMASH
+  Name: TM_ROCK_SMASH
+  output: verbosegiveitem TM_ROCK_SMASH
+- GameName: FIRE_STONE
+  Name: FIRE_STONE
+  output: verbosegiveitem FIRE_STONE
+- GameName: HARD_STONE
+  Name: HARD_STONE
+  output: verbosegiveitem HARD_STONE
+- GameName: SUN_STONE
+  Name: SUN_STONE
+  output: verbosegiveitem SUN_STONE
+- GameName: EVERSTONE
+  Name: EVERSTONE
+  output: verbosegiveitem EVERSTONE
+- GameName: GOLD_BERRY
+  Name: GOLD_BERRY
+  output: verbosegiveitem GOLD_BERRY
+- GameName: BERRY
+  Name: BERRY
+  output: verbosegiveitem BERRY
+- GameName: MAGNET
+  Name: MAGNET
+  output: verbosegiveitem MAGNET
+- GameName: THUNDERSTONE
+  Name: THUNDERSTONE
+  output: verbosegiveitem THUNDERSTONE
+- GameName: NUGGET
+  Name: NUGGET
+  output: verbosegiveitem NUGGET
+- GameName: TM_SNORE
+  Name: TM_SNORE
+  output: verbosegiveitem TM_SNORE
+- GameName: SHARP_BEAK
+  Name: SHARP_BEAK
+  output: verbosegiveitem SHARP_BEAK
+- GameName: WATER_STONE
+  Name: WATER_STONE
+  output: verbosegiveitem WATER_STONE
+- GameName: PINK_BOW
+  Name: PINK_BOW
+  output: verbosegiveitem PINK_BOW
+- GameName: TM_SLUDGE_BOMB
+  Name: TM_SLUDGE_BOMB
+  output: verbosegiveitem TM_SLUDGE_BOMB
+- GameName: CARBOS
+  Name: CARBOS
+  output: verbosegiveitem CARBOS
+- GameName: CARBOS
+  Name: CARBOS
+  output: verbosegiveitem CARBOS
+- GameName: ULTRA_BALL
+  Name: ULTRA_BALL
+  output: verbosegiveitem ULTRA_BALL
+- GameName: GREAT_BALL
+  Name: GREAT_BALL
+  output: verbosegiveitem GREAT_BALL
+- GameName: POKE_BALL
+  Name: POKE_BALL
+  output: verbosegiveitem POKE_BALL
+- GameName: PP_UP
+  Name: PP_UP
+  output: verbosegiveitem PP_UP
+- GameName: IRON
+  Name: IRON
+  output: verbosegiveitem IRON
+- GameName: IRON
+  Name: IRON
+  output: verbosegiveitem IRON
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: verbosegiveitem CALCIUM
+- GameName: CALCIUM
+  Name: CALCIUM
+  output: verbosegiveitem CALCIUM
+- GameName: CLEANSE_TAG
+  Name: CLEANSE_TAG
+  output: verbosegiveitem CLEANSE_TAG
+- GameName: UP_GRADE
+  Name: UP_GRADE
+  output: verbosegiveitem UP_GRADE
+- GameName: KINGS_ROCK
+  Name: KINGS_ROCK
+  output: verbosegiveitem KINGS_ROCK
+- GameName: HM_FLASH
+  Name: HM_FLASH
+  output: verbosegiveitem HM_FLASH
+- GameName: HM_WHIRLPOOL
+  Name: HM_WHIRLPOOL
+  output: verbosegiveitem HM_WHIRLPOOL
+- GameName: RAINBOW_WING
+  Name: RAINBOW_WING
+  output: verbosegiveitem RAINBOW_WING
+- GameName: CARD_KEY
+  Name: CARD_KEY
+  output: verbosegiveitem CARD_KEY
+- GameName: HP_UP
+  Name: HP_UP
+  output: verbosegiveitem HP_UP
+- GameName: TM_MUD_SLAP
+  Name: TM_MUD_SLAP
+  output: verbosegiveitem TM_MUD_SLAP
+- GameName: TM_DREAM_EATER
+  Name: TM_DREAM_EATER
+  output: verbosegiveitem TM_DREAM_EATER

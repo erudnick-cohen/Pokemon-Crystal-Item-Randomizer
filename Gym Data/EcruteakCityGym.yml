@@ -1,0 +1,48 @@
+Location:
+    -
+        Name: Ecruteak City Gym Badge
+        FileName: EcruteakGym.asm
+        LocationReqs: Ecruteak Gym
+        Type: Gym
+        HasPKMN: No
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock: Surf
+        InfeasibleBadges:
+        NormalBadge: Fog Badge
+        BadgeLine: |
+            MortyScript_0x99d58:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_MORTY
+                iftrue .FightDone
+                writetext UnknownText_0x99e65
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x9a00a, 0
+                loadtrainer MORTY, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_MORTY
+                opentext
+                writetext UnknownText_0x9a043
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                checkcode VAR_BADGES
+                scall EcruteakGymTriggerRockets
+                domaptrigger ECRUTEAK_HOUSE, $1
+                setevent EVENT_RANG_CLEAR_BELL_1
+                setevent EVENT_RANG_CLEAR_BELL_2
+        Code:
+        Text:
+            -
+                File: EcruteakGym.asm
+                Text: |        
+                    UnknownText_0x9a043:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

@@ -1,0 +1,75 @@
+Location:  
+    -
+        Name: Burned Tower
+        FileName: BurnedTower1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: BURNED_TOWER_1F
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+            - RIVAL1 7
+            - RIVAL1 8
+            - RIVAL1 9
+        Sublocations:
+            -
+                Name: Burned Tower Rock Smash Item
+                FileName: BurnedTower1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: BURNED_TOWER_1F
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                ItemReqs: 
+                    - Rock Smash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HP_UP
+                Code: |
+                    BurnedTower1FHPUp:
+                        ITEMLINE
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+    -
+        Name: Burned Tower Basement
+        FileName: BurnedTowerB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: BURNED_TOWER_B1F
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+            -
+                Name: Burned Tower Strength Item
+                FileName: BurnedTowerB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: BURNED_TOWER_B1F
+                LocationReqs: Ecruteak City
+                FlagReqs: 
+                    - Plain Badge
+                ItemReqs:
+                    - Strength
+                NormalItem: TM_ENDURE
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+        

@@ -1,0 +1,10 @@
+Items:
+    -
+        Name: Pokedex
+        GameName: ENGINE_POKEDEX
+        Output: |
+                	setflag ENGINE_POKEDEX
+                    text "<PLAYER> received"
+                    line "#DEX!"
+                    done
+        

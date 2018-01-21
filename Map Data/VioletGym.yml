@@ -1,0 +1,91 @@
+Location:
+    -
+        Name: Violet Gym
+        FileName: VioletGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Falkner TM
+                FileName: VioletGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_MUD_SLAP
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM31_MUD_SLAP
+                        iftrue .SpeechAfterTM
+                        setevent EVENT_BEAT_BIRD_KEEPER_ROD
+                        setevent EVENT_BEAT_BIRD_KEEPER_ABE
+                        domaptrigger ELMS_LAB, $2
+                        specialphonecall SPECIALCALL_ASSISTANT
+                        writetext UnknownText_0x685c8
+                        buttonsound
+                        ITEMLINE
+                        iffalse .NoRoomForMudSlap
+                        setevent EVENT_GOT_TM31_MUD_SLAP
+                        writetext UnknownText_0x68648
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x68648:
+                        text "By using a TM, a"
+                        line "#MON will"
+
+                        para "instantly learn a"
+                        line "new move."
+
+                        para "Think before you"
+                        line "act--a TM can be"
+                        cont "used only once."
+
+                        para "TM31 contains"
+                        line "ITEMNAME."
+
+                        para "It reduces the"
+                        line "enemy's accuracy"
+
+                        para "while it causes"
+                        line "damage."
+
+                        para "In other words, it"
+                        line "is both defensive"
+                        cont "and offensive."
+                        done
+                TrainerList: 
+                Sublocations:
+
+            -
+                Name: Violet Gym Trainers
+                FileName: VioletGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 4
+                TrainerList: 
+                        - BIRD_KEEPER 1                              
+                        - BIRD_KEEPER 2
+                        - FALKNER 1                                 

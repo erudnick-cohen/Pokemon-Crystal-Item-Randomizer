@@ -1,0 +1,79 @@
+Location:
+    -
+        Name: Ecruteak Gym
+        FileName: EcruteakGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Morty TM
+                FileName: EcruteakGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ecruteak Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_SHADOW_BALL
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM30_SHADOW_BALL
+                        iftrue UnknownScript_0x99db1
+                        setevent EVENT_BEAT_SAGE_JEFFREY
+                        setevent EVENT_BEAT_SAGE_PING
+                        setevent EVENT_BEAT_MEDIUM_MARTHA
+                        setevent EVENT_BEAT_MEDIUM_GRACE
+                        writetext UnknownText_0x9a059
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x99db5
+                        setevent EVENT_GOT_TM30_SHADOW_BALL
+                        writetext UnknownText_0x9a0ec
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x9a0ec:
+                        text "It's ITEMNAME."
+                        line "It causes damage"
+
+                        para "and may reduce"
+                        line "SPCL.DEF."
+
+                        para "Use it if it"
+                        line "appeals to you."
+                        done
+                TrainerList: 
+                Sublocations:
+
+            -
+                Name: Ecruteak Gym Trainers
+                FileName: EcruteakGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 14
+                TrainerList: 
+                        - SAGE 5
+                        - SAGE 6
+                        - MEDIUM 1
+                        - MEDIUM 2
+                        - MORTY 1        

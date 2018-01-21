@@ -1,0 +1,130 @@
+Location:
+    -
+        Name: National Park Entrance
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 35
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: National Park Entrance
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 36 Goldenrod Side
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: National Park
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: National Park Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 12
+        TrainerList: 
+            - POKEFANM 1
+            - POKEFAMF 1
+            - SCHOOLBOY 1
+            - LASS 4
+        Sublocations:        
+            -
+                Name: National Park Quick Claw
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: QUICK_CLAW
+                Code: |
+                    TeacherScript_0x5c008:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_QUICK_CLAW
+                        iftrue UnknownScript_0x5c01d
+                        writetext UnknownText_0x5c265
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x5c021
+                        setevent EVENT_GOT_QUICK_CLAW
+                    UnknownScript_0x5c01d:
+                        writetext UnknownText_0x5c30d
+                        waitbutton
+                    UnknownScript_0x5c021:
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x5c30d:
+                        text "Let a #MON hold"
+                        line "that ITEMNAME."
+
+                        para "Sometimes it will"
+                        line "strike first"
+                        cont "during battle."
+                        done
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Dig TM
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_DIG
+                Code: |
+                    NationalParkTMDig:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:            
+            -
+                Name: National Park Parlyz Heal
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PARLYZ_HEAL
+                Code: |
+                    NationalParkParlyzHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:          
+        
+        
+        

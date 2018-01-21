@@ -1,0 +1,57 @@
+Location:
+    -
+            Name: Route 46 upper
+            FileName: Route46.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList: 
+            LocationReqs: Route 45
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList: 
+            Sublocations:
+    -
+            Name: Route 46 upper
+            FileName: Route46.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList: 
+            LocationReqs: Dark Cave Violet
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+                - Rock Smash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList: 
+            Sublocations:
+    -
+            Name: Route 46 upper actual
+            FileName: Route46.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList: 
+            LocationReqs: 
+                - Route 46 upper
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_SPEED
+            Code: |
+                Route46XSpeed:
+                    ITEMLINE
+            Text:
+            AREALV: 13
+            TrainerList:
+                - CAMPER 11
+                - PICNICKER 10
+                - HIKER 11                                
+            Sublocations:

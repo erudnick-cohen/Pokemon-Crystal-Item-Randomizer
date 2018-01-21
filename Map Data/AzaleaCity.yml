@@ -1,0 +1,122 @@
+Location:  
+    -
+        Name: Azalea Town entrance
+        FileName: AzaleaTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 33
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Azalea Town entrance
+        FileName: AzaleaTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ilex Forest Front
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Azalea Town
+        FileName: AzaleaTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Azalea Town entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Azalea Town Rival Battle
+                FileName: AzaleaTown.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Azalea Town
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: 
+                Text:
+                AREALV: 6
+                TrainerList: 
+                    - RIVAL1 4
+                    - RIVAL1 5
+                    - RIVAL1 6
+                Sublocations:
+            -
+                Name: Kurt's Lure Ball
+                FileName: KurtsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Slowpoke Well Floor 1
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: LURE_BALL
+                Code: |
+                    .ClearedSlowpokeWell:
+                        writetext UnknownText_0x18e615
+                        buttonsound
+                        ITEMLINE
+                        iffalse .NoRoomForBall
+                        setevent EVENT_KURT_GAVE_YOU_LURE_BALL
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Charcoal Kiln
+                FileName: CharcoalKiln.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Front
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CHARCOAL
+                Code: |
+                    .Thanks:
+                        writetext CharcoalKilnApprenticeText2
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN
+                        closetext
+                        end
+                Text: |
+                    CharcoalKilnApprenticeText2:
+                        text "I'm sorry--I for-"
+                        line "got to thank you."
+
+                        para "This is ITEMNAME"
+                        line "that I made."
+
+                        para "Fire-type #MON"
+                        line "would be happy to"
+                        cont "hold that."
+                        done
+                TrainerList: 
+                Sublocations:

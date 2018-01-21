@@ -1,0 +1,117 @@
+Location:
+    -
+        Name: Route 34 Entrance
+        FileName: Route34.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ilex Forest Back
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 34 Entrance
+        FileName: Route34.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations: 
+    -
+        Name: Route 34 
+        FileName: Route34.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: ROUTE_34
+        LocationReqs: Route 34 Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 10
+        TrainerList: 
+            - YOUNGSTER 5
+            - POKEFANM 7
+            - PICKNICKER 2
+            - YOUNGSTER 6
+            - OFFICER 1
+            - CAMPER 2
+        Sublocations:
+            -
+                Name: Soft Sand
+                FileName: Route34.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList: ROUTE_34
+                LocationReqs: Route 34
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SOFT_SAND
+                Code: |
+                    .Script:
+                        end_if_just_battled
+                        opentext
+                        checkevent EVENT_GOT_SOFT_SAND_FROM_KATE
+                        iftrue .GotSoftSand
+                        writetext CooltrainerfKateOfferSoftSandText
+                        buttonsound
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_SOFT_SAND_FROM_KATE
+                    .GotSoftSand:
+                        writetext CooltrainerfKateAfterText
+                        waitbutton
+                    .BagFull:
+                        closetext
+                        end
+                Text:
+                AREALV: 15
+                TrainerList: 
+                    - COOLTRAINERF 5
+                    - COOLTRAINERF 6
+                    - COOLTRAINERF 17
+                Sublocations:
+            -
+                Name: Route 34 Nugget
+                FileName: Route34.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList: ROUTE_34
+                LocationReqs: Route 34
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: NUGGET
+                Code: |
+                    Route34Nugget:
+                        ITEMLINE
+                Text:
+                AREALV:
+                TrainerList: 
+                Sublocations:       
+        
+        
+        
+        
+        

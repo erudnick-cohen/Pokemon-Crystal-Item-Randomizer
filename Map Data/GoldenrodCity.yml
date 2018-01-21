@@ -1,0 +1,194 @@
+Location:
+    -
+        Name: Goldenrod Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 34
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Goldenrod Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 35
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations: 
+    -
+        Name: Goldenrod City
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Goldenrod Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:         
+            -
+                Name: Bike
+                FileName: GoldenrodBikeShop.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BICYCLE
+                Code: |
+                    ClerkScript_0x54750:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_BICYCLE
+                        iftrue UnknownScript_0x54775
+                        writetext UnknownText_0x54787
+                        yesorno
+                        iffalse UnknownScript_0x5477b
+                        writetext UnknownText_0x547f8
+                        buttonsound
+                        waitsfx
+                        ITEMLINE
+                        writetext UnknownText_0x54848
+                        playsound SFX_KEY_ITEM
+                        waitsfx
+                        itemnotify
+                        setflag ENGINE_BIKE_SHOP_CALL_ENABLED
+                        setevent EVENT_GOT_BICYCLE
+                    UnknownScript_0x54775:
+                        writetext UnknownText_0x5485f
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x54787:
+                        text "…sigh… I moved"
+                        line "here, but I can't"
+
+                        para "sell my ITEMNAMES."
+                        line "Why is that?"
+
+                        para "Could you ride a"
+                        line "ITEMNAME and adver-"
+                        cont "tise for me?"
+                        done
+                        
+                    UnknownText_0x547f8:
+                        text "Really? Great!"
+
+                        para "Give me your name"
+                        line "and phone number,"
+
+                        para "and I'll loan you"
+                        line "a ITEMNAME."
+                        done
+
+                    UnknownText_0x54848:
+                        text "<PLAYER> borrowed a"
+                        line "ITEMNAME."
+                        done
+
+                    UnknownText_0x5485f:
+                        text "My ITEMNAMES are"
+                        line "first-rate! You"
+
+                        para "can ride them"
+                        line "anywhere."
+                        done
+
+                    UnknownText_0x54898:
+                        text "…sigh… Oh, for"
+                        line "the kindness of"
+                        cont "people…"
+                        done
+
+                    ; possibly unused
+                    UnknownText_0x548c0:
+                        text "Just released!"
+
+                        para "First-rate compact"
+                        line "ITEMNAMES!"
+                        done
+
+                    UnknownText_0x548ed:
+                        text "It's a shiny new"
+                        line "ITEMNAME!"
+                        done
+                        
+                TrainerList: 
+                Sublocations:         
+            -
+                Name: Goldenrod City Flower Shop
+                FileName: GoldenrodFlowerShop.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Plain Badge
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    CODE NEEDS MODDING IN MAPS FIRST
+                Text: |
+                    UnknownText_0x554c2:
+                        text "Oh, you're better"
+                        line "than WHITNEY…"
+
+                        para "You'll be OK,"
+                        line "then. Here's the"
+                        cont "ITEMNAME!"
+                        done
+                TrainerList: 
+                Sublocations:        
+            -
+                Name: Kenya Gate Item
+                FileName: GoldenrodCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet: 
+                    - Kenya Obtained
+                ReachableReqs:
+                NormalItem: HP_UP
+                Code: |
+                    .questcomplete
+                        writetext UnknownText_0x69f8b
+                        buttonsound
+                        ITEMLINE 
+                        iffalse .bagfull
+                        setevent EVENT_GOT_HP_UP_FROM_RANDY
+                    .gothpup
+                        writetext UnknownText_0x69fd9
+                        waitbutton
+                    .bagfull
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:      
+            

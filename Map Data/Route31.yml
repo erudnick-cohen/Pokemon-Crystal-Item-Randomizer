@@ -1,0 +1,118 @@
+Location:
+    -
+        Name: Route 31
+        FileName: Route31.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_31
+        LocationReqs: Route 30
+        FlagReqs: Gave Elm Egg
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Route 31 Potion
+                FileName: Route31.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Route_31
+                LocationReqs: Route 31
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    Route31Potion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+            -
+                Name: Route 31 Pokeball
+                FileName: Route31.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Route_31
+                LocationReqs: Route 31
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: POKE_BALL
+                ReachableReqs:
+                Code: |
+                    Route31PokeBall:
+                        ITEMLINE
+                Text:
+                TrainerList:
+            -
+                Name: Route 31 Kenya Item
+                FileName: Route31.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Route_31
+                LocationReqs: Route 31
+                FlagReqs: Kenya Obtained
+                ItemReqs:
+                FlagsSet: Kenya Traded
+                ReachableReqs:
+                NormalItem: TM_NIGHTMARE
+                Code: |
+                    .TryGiveKenya:
+                        writetext Text_Route31SleepyManGotMail
+                        buttonsound
+                        checkpokeitem ReceivedSpearowMailText
+                        if_equal $0, .WrongMail
+                        if_equal $2, .Refused
+                        if_equal $3, .NoMail
+                        if_equal $4, .LastMon
+                        writetext Text_Route31HandOverMailMon
+                        buttonsound
+                        writetext Text_Route31ReadingMail
+                        buttonsound
+                        setevent EVENT_GAVE_KENYA
+                        ITEMLINE
+                        iffalse .NoRoomForItems
+                        setevent EVENT_GOT_TM50_NIGHTMARE
+                    .DescribeNightmare:
+                        writetext Text_Route31DescribeNightmare
+                        waitbutton
+                    .NoRoomForItems:
+                        closetext
+                        end
+                Text: |
+                    Text_Route31DescribeNightmare:
+                        text "ITEMNAME is NIGHTMARE."
+
+                        para "It's a wicked move"
+                        line "that steadily cuts"
+
+                        para "the HP of a sleep-"
+                        line "ing enemy."
+
+                        para "Ooooh…"
+                        line "That's scary…"
+
+                        para "I don't want to"
+                        line "have bad dreams."
+                        done
+                TrainerList:            
+            -
+                Name: Route 31 Trainers
+                FileName: Route31.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: Route_31
+                LocationReqs: Route 31
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 3
+                TrainerList:
+                    - BUG_CATCHER 4                     

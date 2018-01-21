@@ -1,0 +1,139 @@
+Location:  
+    -
+        Name: Route 36 via Violet
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_36
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 36 Goldenrod Side
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: National Park
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 36 Goldenrod Side
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 36 Sudowoodo Junction
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 36 via Goldenrod
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_36
+        LocationReqs: Route 36 Goldenrod Side
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 12
+        TrainerList:
+            - PSYCHIC_T 7
+            - SCHOOLBOY 11
+        Sublocations:
+    -
+        Name: Route 36 Sudowoodo Junction
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 36 via Violet
+        FlagReqs:
+        ItemReqs: 
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:   
+    -
+        Name: Route 36 Sudowoodo Junction
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 36 via Goldenrod
+        FlagReqs:
+        ItemReqs: 
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 36 Rock Smash Item
+        FileName: Route36.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+            - Route 36 Sudowoodo Junction
+        FlagReqs:
+        ItemReqs:
+        FlagsSet: 
+            - Rock Smash Purchaseable
+        ReachableReqs:
+        Code: |
+            .ClearedSudowoodo:
+                writetext RockSmashGuyText2
+                buttonsound
+                ITEMLINE
+                iffalse .NoRoomForTM
+                setevent EVENT_GOT_TM08_ROCK_SMASH
+            .AlreadyGotRockSmash:
+                writetext RockSmashGuyText3
+                waitbutton
+            .NoRoomForTM:
+                closetext
+                end
+        Text: |
+            RockSmashGuyText3:
+                text "That happens to be"
+                line "ITEMNAME."
+
+                para "You can shatter"
+                line "rocks with just a"
+
+                para "single well-aimed"
+                line "smack."
+
+                para "If any rocks are"
+                line "in your way, just"
+                cont "smash 'em up!"
+                done
+        TrainerList: 
+        Sublocations:          

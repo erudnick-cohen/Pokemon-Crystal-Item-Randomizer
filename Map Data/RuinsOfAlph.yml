@@ -1,0 +1,201 @@
+Location:
+    -
+        Name: Ruins of Alph
+        FileName: 
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Ruins of Alph Trainers
+                FileName: 
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 2
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 18
+                TrainerList:
+                    - SUPER_NERD 1
+                    - PSYCHIC_T 1
+                Sublocations:
+            -
+                Name: Ruins of Alph Rope Chamber 1
+                FileName: RuinsofAlphKabutoItemRoom.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: BERRY
+                ReachableReqs:
+                Code: |
+                    RuinsofAlphKabutoItemRoomBerry:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ruins of Alph Rope Chamber 2
+                FileName: RuinsofAlphKabutoItemRoom.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: PSNCUREBERRY
+                ReachableReqs:
+                Code: |
+                    RuinsofAlphKabutoItemRoomPsncureberry:
+                        itemball PSNCUREBERRY
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ruins of Alph Rope Chamber 3
+                FileName: RuinsofAlphKabutoItemRoom.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: HEAL_POWDER
+                ReachableReqs:
+                Code: |
+                    RuinsofAlphKabutoItemRoomHealPowder:
+                        ITEMLINE
+
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ruins of Alph Rope Chamber 4
+                FileName: RuinsofAlphKabutoItemRoom.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                NormalItem: ENERGYPOWDER
+                ReachableReqs:
+                Code: |
+                    RuinsofAlphKabutoItemRoomEnergypowder:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ruins of Alph Light Chamber
+                FileName: 
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs: 
+                    - Fog Badge
+                    - Zephyr Badge
+                ItemReqs: 
+                    - Surf
+                    - Flash
+                FlagsSet:
+                NormalItem: 
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+                    -
+                        Name: Ruins of Alph Light Chamber 1
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Light Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: GOLD_BERRY
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphAerodactylItemRoomGoldBerry:
+                                ITEMLINE 
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Light Chamber 2
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Light Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: HEAL_POWDER
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphAerodactylItemRoomHealPowder:
+                                ITEMLINE 
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Light Chamber 3
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Light Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: ENERGY_ROOT
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphAerodactylItemRoomEnergyRoot:
+                                ITEMLINE 
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Light Chamber 4
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Light Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: MOON_STONE
+                        ReachableReqs:
+                        Text:
+                        Code: |
+                            RuinsofAlphAerodactylItemRoomMoonStone:
+                                ITEMLINE 
+                        TrainerList: 
+                        Sublocations:                    

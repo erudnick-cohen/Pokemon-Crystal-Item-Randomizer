@@ -1,0 +1,108 @@
+Location:  
+    -
+        Name: Ecruteak City
+        FileName: EcruteakCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 37
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+            -    
+                Name: Dance Theatre
+                FileName: DanceTheatre.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    UnknownScript_0x99505:
+                        writetext UnknownText_0x9991a
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM03_SURF
+                        writetext UnknownText_0x9999b
+                        waitbutton
+                        closetext
+                        end                
+                Text: |
+                    UnknownText_0x9999b:
+                        text "That's ITEMNAME."
+
+                        para "It's a move that"
+                        line "lets #MON swim"
+                        cont "across water."
+                        done
+                AREALV: 13       
+                TrainerList:
+                    - KIMONO_GIRL 2
+                    - KIMONO_GIRL 3
+                    - KIMONO_GIRL 4
+                    - KIMONO_GIRL 5
+                    - KIMONO_GIRL 6
+                Sublocations:
+            -
+                Name: Itemfinder House
+                FileName: EcruteakItemfinderHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ITEMFINDER
+                Code: |
+                    CooltrainerMScript_0x9a5fb:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_ITEMFINDER
+                        iftrue UnknownScript_0x9a614
+                        writetext UnknownText_0x9a63c
+                        yesorno
+                        iffalse UnknownScript_0x9a61a
+                        writetext UnknownText_0x9a6b5
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_ITEMFINDER
+
+                Text: |
+                    UnknownText_0x9a70e:
+                        text "There are many"
+                        line "items lying about"
+
+                        para "that aren't ob-"
+                        line "vious."
+
+                        para "Use ITEMNAME to"
+                        line "check if there is"
+
+                        para "an item on the"
+                        line "ground near you."
+
+                        para "It doesn't show"
+                        line "the exact spot,"
+
+                        para "so you'll have to"
+                        line "look yourself."
+
+                        para "Oh yeah--I heard"
+                        line "there are items"
+
+                        para "in ECRUTEAK's"
+                        line "BURNED TOWER."
+                        done                
+                TrainerList:
+                Sublocations:
+        

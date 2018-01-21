@@ -1,0 +1,26 @@
+Items:
+    -
+        Name: Mystery Egg
+        GameName: MYSTERY_EGG
+        Output: |
+                itemball MYSTERY_EGG
+    -
+        Name: Squirtbottle
+        GameName: SQUIRTBOTTLE
+        Output: |
+                itemball SQUIRTBOTTLE 
+    -
+        Name: Surf
+        GameName: HM_SURF
+        Output: |
+                itemball HM_SURF                 
+    -
+        Name: Rock Smash
+        GameName: TM_ROCK_SMASH
+        Output: |
+                itemball TM_ROCK_SMASH  
+    -
+        Name: Flash
+        GameName: HM_FLASH
+        Output: |
+                itemball HM_FLASH      

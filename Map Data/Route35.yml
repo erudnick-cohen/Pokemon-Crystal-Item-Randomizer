@@ -1,0 +1,75 @@
+Location:
+    -
+        Name: Route 35 Entrance
+        FileName: Route35.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 35 Entrance
+        FileName: Route35.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: National Park
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 12
+        TrainerList: 
+            - CAMPER 4
+            - CAMPER 3
+            - PICKNICKER 4
+            - PICKNICKER 3
+            - JUGGLER 1
+            - FIREBREATHER 6
+            - OFFICER 2
+            - BUG CATCHER 13
+            - BIRD_KEEPER 3
+        Sublocations:        
+    -
+        Name: Route 35
+        FileName: Route35.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: ROUTE_35
+        LocationReqs: Route 35 Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:        
+            -
+                Name: Rollout TM
+                FileName: Route35.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 35
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_ROLLOUT
+                Code: |
+                    Route35TMRollout:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:           
+        

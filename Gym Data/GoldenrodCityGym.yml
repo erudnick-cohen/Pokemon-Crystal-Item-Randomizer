@@ -1,0 +1,57 @@
+Location:
+    -
+        Name: Goldenrod City Gym
+        FileName: GoldenrodGym.asm
+        LocationReqs: Goldenrod Gym
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock: Strength
+        InfeasibleBadges:
+        NormalBadge: Plain Badge
+        BadgeLine: |
+            FalknerScript_0x683c2:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_FALKNER
+                iftrue .FightDone
+                writetext UnknownText_0x68473
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x6854a, 0
+                loadtrainer FALKNER, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_FALKNER
+                opentext
+                writetext UnknownText_0x685af
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                checkcode VAR_BADGES
+                scall VioletGymTriggerRockets
+        Code: |
+                REQUIRES MODDING THE BASE MAP FILE
+        Text:
+            -
+                File: GoldenrodGym.asm
+                Text: |        
+                    UnknownText_0x54222:
+                        text "…Sniff…"
+
+                        para "What? What do you"
+                        line "want? A BADGE?"
+
+                        para "Oh, right."
+                        line "I forgot. Here's"
+                        cont "BADGENAME."
+                        done
+
+                    UnknownText_0x54273:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

@@ -1,0 +1,54 @@
+Location:
+    -
+        Name: Violet City
+        FileName: VioletCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 31
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Violet City Rare Candy
+                FileName: VioletCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs: 
+                    - Fog Badge
+                ItemReqs: 
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    VioletCityRareCandy:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Violet City PP UP
+                FileName: VioletCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Violet City
+                FlagReqs: 
+                    - Fog Badge
+                ItemReqs: 
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    VioletCityPPUp:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:          

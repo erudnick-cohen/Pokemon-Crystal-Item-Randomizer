@@ -1,0 +1,45 @@
+Location:
+    -
+        Name: Azalea Town Gym Badge
+        FileName: AzaleaGym.asm
+        LocationReqs: Azalea Gym
+        Type: Gym
+        HasPKMN: No
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock: Cut
+        InfeasibleBadges:
+        NormalBadge: Hive Badge
+        BadgeLine: |
+            BugsyScript:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_BUGSY
+                iftrue .FightDone
+                writetext BugsyText_INeverLose
+                waitbutton
+                closetext
+                winlosstext BugsyText_ResearchIncomplete, 0
+                loadtrainer BUGSY, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_BUGSY
+                opentext
+                writetext Text_ReceivedHiveBadge
+                playsound SFX_GET_BADGE
+                waitsfx
+                BADGELINE
+                checkcode VAR_BADGES
+                scall AzaleaGymTriggerRockets
+        Code:
+        Text:
+            -
+                File: EcruteakGym.asm
+                Text: |        
+                    Text_ReceivedHiveBadge:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

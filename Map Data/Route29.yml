@@ -1,0 +1,32 @@
+Location:
+    -
+        Name: Route 29
+        FileName: Route29.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_29
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Route 29 Potion
+                FileName: Route29.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 29
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList: 
+                Code: |
+                     Route29Potion:
+                        ITEMLINE                 

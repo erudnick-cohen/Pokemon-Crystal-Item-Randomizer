@@ -1,0 +1,292 @@
+Location:
+    -
+        Name: Union Cave
+        FileName: UnionCave1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: UNION_CAVE_1F
+        LocationReqs: Route 32
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Union Cave
+        FileName: UnionCave1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: UNION_CAVE_1F
+        LocationReqs: Route 33
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -    
+        Name: Union Cave Floor 1
+        FileName: UnionCave1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: UNION_CAVE_1F
+        LocationReqs: Union Cave
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+                -    
+                    Name: Union Cave Floor 1 Trainers
+                    FileName: UnionCave1F.asm
+                    Type: Map
+                    HasPKMN: No
+                    WildTableList: 
+                    LocationReqs: Union Cave
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV:
+                    TrainerList:
+                        - HIKER 18
+                        - HIKER 2
+                        - POKEMANIAC 1
+                        - FIREBREATHER 5
+                        - FIREBREATHER 7
+                    Sublocations:
+                -    
+                    Name: Union Cave Floor 1 X Attack
+                    FileName: UnionCave1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList: 
+                    LocationReqs: Union Cave
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: X_ATTACK
+                    Code: |
+                        UnionCave1FXAttack:
+                            ITEMLINE
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+                -    
+                    Name: Union Cave Floor 1 Great Ball
+                    FileName: UnionCave1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList: 
+                    LocationReqs: Union Cave
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: GREAT_BALL
+                    Code: |
+                        UnionCave1FGreatBall:
+                            ITEMLINE
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+                -    
+                    Name: Union Cave Floor 1 Potion
+                    FileName: UnionCave1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList: 
+                    LocationReqs: Union Cave
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: POTION
+                    Code: |
+                        UnionCave1FPotion:
+                            ITEMLINE
+                    Text:
+                    TrainerList: 
+                    Sublocations:        
+                -    
+                    Name: Union Cave Floor 1 Awakening
+                    FileName: UnionCave1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList: 
+                    LocationReqs: Union Cave
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: AWAKENING
+                    Code: |
+                        UnionCave1FAwakening:
+                            ITEMLINE
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+    -    
+        Name: Union Cave Floor 2
+        FileName: UnionCaveB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: UNION_CAVE_B1F
+        LocationReqs: Union Cave Floor 1
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList: 
+        Sublocations:     
+            -    
+                Name: Union Cave Floor 2 trainers
+                FileName: UnionCaveB1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 2
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: 
+                Text:
+                AREALV: 25
+                TrainerList: 
+                    - HIKER 4
+                    - HIKER 3
+                    - POKEMANIAC 3
+                    - POKEMANIAC 2
+                Sublocations:            
+            -    
+                Name: Union Cave Floor 2 Swift
+                FileName: UnionCave1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_SWIFT
+                Code: |
+                    UnionCaveB1FTMSwift:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -    
+                Name: Union Cave Floor 2 X Defend
+                FileName: UnionCave1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_DEFEND
+                Code: |
+                    UnionCaveB1FXDefend:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+    -    
+        Name: Union Cave Floor 3
+        FileName: UnionCaveB2F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: UNION_CAVE_B2F
+        LocationReqs: Union Cave Floor 1
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList: 
+        Sublocations:   
+            -    
+                Name: Union Cave Floor 3 Trainers
+                FileName: UnionCaveB2F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 3
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: 
+                Text:
+                AREALV: 25
+                TrainerList: 
+                    - COOLTRAINERM 1
+                    - COOLTRAINERF 1
+                    - COOLTRAINERF 15
+                Sublocations:        
+            -    
+                Name: Union Cave Floor 3 Elixir
+                FileName: UnionCaveB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 3
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    UnionCaveB2FElixer:
+                        ITEMLINE
+                Text:
+                NormalItem: ELIXER
+                TrainerList: 
+                Sublocations:                   
+            -    
+                Name: Union Cave Floor 3 Hyper Potion
+                FileName: UnionCaveB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Union Cave Floor 3
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    UnionCaveB2FHyperPotion:
+                        ITEMLINE
+                Text:
+                NormalItem: HYPER_POTION
+                TrainerList: 
+                Sublocations:                  

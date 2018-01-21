@@ -1,0 +1,315 @@
+Location:
+    -
+        Name: Route 30
+        FileName: Route30.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_30
+        LocationReqs: Cherrygrove City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                    Name: Route 30 Antidote
+                    FileName: Route30.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Route 30
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: ANTIDOTE
+                    Code: |
+                        Route30Antidote:
+                            itemball ANTIDOTE
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+            -
+                    Name: Route 30 Berry Man
+                    FileName: Route30BerrySpeechHouse.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Route 30
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: BERRY
+                    Code: |
+                        PokefanMScript_0x196d64:
+                            faceplayer
+                            opentext
+                            checkevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
+                            iftrue UnknownScript_0x196d79
+                            writetext UnknownText_0x196d82
+                            buttonsound
+                            ITEMLINE
+                            iffalse UnknownScript_0x196d7d
+                            setevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
+                        UnknownScript_0x196d79:
+                            writetext UnknownText_0x196dec
+                            waitbutton
+                        UnknownScript_0x196d7d:
+                            closetext
+                            end
+                    Text: |
+                        UnknownText_0x196d82:
+                            text "You know, #MON"
+                            line "eat BERRIES."
+
+                            para "Well, my #MON"
+                            line "got healthier by"
+                            cont "eating a ITEMNAME."
+
+                            para "Here. I'll share"
+                            line "one with you!"
+                            done
+                    TrainerList: 
+                    Sublocations:
+            -
+                    Name: Mr. Pokemon's Egg
+                    FileName: MrPokemonsHouse.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Route 30
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet: Mr. Pokemon Visited
+                    ReachableReqs:
+                    Code: |
+                        .MrPokemonEvent:
+                            showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
+                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                            opentext
+                            writetext MrPokemonIntroText1
+                            waitbutton
+                            closetext
+                            applymovement PLAYER, MrPokemonsHouse_PlayerWalksToMrPokemon
+                            opentext
+                            writetext MrPokemonIntroText2
+                            buttonsound
+                            waitsfx
+                            giveitem BERRY
+                            writetext MrPokemonsHouse_GotEggText
+                            playsound SFX_KEY_ITEM
+                            waitsfx
+                            itemnotify
+                            setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+                            blackoutmod CHERRYGROVE_CITY
+                            writetext MrPokemonIntroText3
+                            buttonsound
+                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
+                            writetext MrPokemonIntroText4
+                            buttonsound
+                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                            spriteface MRPOKEMONSHOUSE_OAK, LEFT
+                            writetext MrPokemonIntroText5
+                            waitbutton
+                            closetext
+                            jump MrPokemonsHouse_OakScript
+                    Text: |
+                        text "<PLAYER> received"
+                        line "ITEMNAME."
+                        done                    
+                        TrainerList: 
+                    Sublocations:
+            -
+                    Name: Oak Pokedex
+                    FileName: MrPokemonsHouse.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Route 30
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet: Mr. Pokemon Visited
+                    ReachableReqs:
+                    Code: |
+                        MrPokemonsHouse_OakScript:
+                            playmusic MUSIC_PROF_OAK
+                            applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToPlayer
+                            spriteface PLAYER, RIGHT
+                            opentext
+                            writetext MrPokemonsHouse_OakText1
+                            buttonsound
+                            waitsfx
+                            writetext MrPokemonsHouse_GetDexText
+                            playsound SFX_ITEM
+                            waitsfx
+                            ITEMLINE
+                            writetext MrPokemonsHouse_OakText2
+                            waitbutton
+                            closetext
+                            spriteface PLAYER, DOWN
+                            applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
+                            playsound SFX_EXIT_BUILDING
+                            disappear MRPOKEMONSHOUSE_OAK
+                            waitsfx
+                            special RestartMapMusic
+                            pause 15
+                            spriteface PLAYER, UP
+                            opentext
+                            writetext MrPokemonsHouse_MrPokemonHealText
+                            waitbutton
+                            closetext
+                            special Special_FadeBlackQuickly
+                            special Special_ReloadSpritesNoPalettes
+                            playmusic MUSIC_HEAL
+                            special TrainerRankings_Healings
+                            special HealParty
+                            pause 60
+                            special Special_FadeInQuickly
+                            special RestartMapMusic
+                            opentext
+                            writetext MrPokemonText_ImDependingOnYou
+                            waitbutton
+                            closetext
+                            setevent EVENT_RIVAL_NEW_BARK_TOWN
+                            setevent EVENT_KRISS_HOUSE_1F_NEIGHBOR
+                            clearevent EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
+                            dotrigger $1
+                            domaptrigger CHERRYGROVE_CITY, $1
+                            domaptrigger ELMS_LAB, $3
+                            specialphonecall SPECIALCALL_ROBBED
+                            clearevent EVENT_COP_IN_ELMS_LAB
+                            checkevent EVENT_GOT_TOTODILE_FROM_ELM
+                            iftrue .RivalTakesChikorita
+                            checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+                            iftrue .RivalTakesCyndaquil
+                            setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+                            end
+                    Text: |
+                        MrPokemonsHouse_OakText1:
+                            text "OAK: Aha! So"
+                            line "you're <PLAY_G>!"
+
+                            para "I'm OAK! A #MON"
+                            line "researcher."
+
+                            para "I was just visit-"
+                            line "ing my old friend"
+                            cont "MR.#MON."
+
+                            para "I heard you were"
+                            line "running an errand"
+
+                            para "for PROF.ELM, so I"
+                            line "waited here."
+
+                            para "Oh! What's this?"
+                            line "A rare #MON!"
+
+                            para "Let's see…"
+
+                            para "Hm, I see!"
+
+                            para "I understand why"
+                            line "PROF.ELM gave you"
+
+                            para "a #MON for this"
+                            line "errand."
+
+                            para "To researchers"
+                            line "like PROF.ELM and"
+
+                            para "I, #MON are our"
+                            line "friends."
+
+                            para "He saw that you"
+                            line "would treat your"
+
+                            para "#MON with love"
+                            line "and care."
+
+                            para "…Ah!"
+
+                            para "You seem to be"
+                            line "dependable."
+
+                            para "How would you like"
+                            line "to help me out?"
+
+                            para "See? This is the"
+                            line "latest version of"
+                            cont "ITEMNAME."
+
+                            para "It automatically"
+                            line "records data on"
+
+                            para "#MON you've"
+                            line "seen or caught."
+
+                            para "It's a hi-tech"
+                            line "encyclopedia!"
+                            done
+                            
+                    TrainerList: 
+                    Sublocations:
+            -
+                    Name: Mr. Pokemon's EXP Share
+                    FileName: MrPokemonsHouse.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Route 30
+                    FlagReqs: Gave Elm Egg
+                    ItemReqs: Red Scale
+                    FlagsSet: 
+                    ReachableReqs:
+                    NormalItem: EXP_SHARE
+                    Code: |
+                        .RedScale:
+                            writetext MrPokemonText_GimmeTheScale
+                            yesorno
+                            iffalse .refused
+                            ITEMLINE
+                            iffalse .full
+                            takeitem RED_SCALE
+                            jump .AlwaysNewDiscoveries
+                    Text: |
+                        MrPokemonText_GimmeTheScale:
+                            text "Hm? That SCALE!"
+                            line "What's that?"
+                            cont "A red GYARADOS?"
+
+                            para "That's rare! "
+                            line "I, I want it…"
+
+                            para "<PLAY_G>, would you"
+                            line "care to trade it?"
+
+                            para "I can offer this"
+                            line "ITEMNAME I got"
+                            cont "from PROF.OAK."
+                            done
+                    TrainerList: 
+                    Sublocations:                                
+            -
+                Name: Route 30 towards Route 31
+                FileName: Route30.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 30
+                FlagReqs: Gave Elm Egg
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 2
+                TrainerList: 
+                    - YOUNGSTER 1
+                    - YOUNGSTER 2
+                    - BUG_CATCHER 1                           
+                Sublocations:
