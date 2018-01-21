@@ -41,6 +41,7 @@ Location:
         LocationReqs: Dark Cave Violet Entrance
         FlagReqs:
             - Goldenrod City
+            - Rock Smash Purchaseable
         ItemReqs:
         FlagsSet:
         ReachableReqs:
