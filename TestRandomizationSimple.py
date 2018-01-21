@@ -4,7 +4,7 @@ import RandomizeItems
 
 trashItems = LocationData.trashList;
 trashItems.append('Pokedex')
-progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Rock Smash', 'Cut']
+progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut']
 Zephyr = Badge.Badge()
 Zephyr.isTrash = False
 Zephyr.Name = 'Zephyr Badge'

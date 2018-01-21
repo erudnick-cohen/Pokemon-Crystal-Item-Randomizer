@@ -13,12 +13,12 @@ Items:
         Name: Surf
         GameName: HM_SURF
         Output: |
-                itemball HM_SURF                 
+                itemball HM_SURF
     -
-        Name: Rock Smash
-        GameName: TM_ROCK_SMASH
+        Name: Cut
+        GameName: HM_CUT
         Output: |
-                itemball TM_ROCK_SMASH  
+                itemball HM_CUT                 
     -
         Name: Flash
         GameName: HM_FLASH

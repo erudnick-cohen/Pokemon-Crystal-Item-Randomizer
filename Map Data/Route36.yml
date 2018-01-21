@@ -107,6 +107,7 @@ Location:
         FlagsSet: 
             - Rock Smash Purchaseable
         ReachableReqs:
+        NormalItem: TM_ROCK_SMASH
         Code: |
             .ClearedSudowoodo:
                 writetext RockSmashGuyText2
