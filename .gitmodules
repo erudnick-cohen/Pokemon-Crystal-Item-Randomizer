@@ -1,0 +1,3 @@
+[submodule "Game Files/pokecrystal"]
+	path = Game Files/pokecrystal
+	url = https://github.com/erudnick-cohen/pokecrystal
