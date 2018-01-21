@@ -14,28 +14,21 @@ Location:
         InfeasibleBadges:
         NormalBadge: Plain Badge
         BadgeLine: |
-            FalknerScript_0x683c2:
-                faceplayer
-                opentext
-                checkevent EVENT_BEAT_FALKNER
-                iftrue .FightDone
-                writetext UnknownText_0x68473
-                waitbutton
-                closetext
-                winlosstext UnknownText_0x6854a, 0
-                loadtrainer FALKNER, 1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_FALKNER
-                opentext
-                writetext UnknownText_0x685af
+            .StoppedCrying:
+                checkevent EVENT_GOT_TM45_ATTRACT
+                iftrue UnknownScript_0x54077
+                checkflag BADGELINE
+                iftrue UnknownScript_0x54064
+                writetext UnknownText_0x54222
+                buttonsound
+                waitsfx
+                writetext UnknownText_0x54273
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall VioletGymTriggerRockets
-        Code: |
-                REQUIRES MODDING THE BASE MAP FILE
+                scall GoldenrodGymTriggerRockets
+        Code:
         Text:
             -
                 File: GoldenrodGym.asm

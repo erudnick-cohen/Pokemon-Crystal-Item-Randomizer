@@ -31,7 +31,7 @@ Location:
                 writetext Text_ReceivedHiveBadge
                 playsound SFX_GET_BADGE
                 waitsfx
-                BADGELINE
+                setflag BADGELINE
                 checkcode VAR_BADGES
                 scall AzaleaGymTriggerRockets
         Code:
