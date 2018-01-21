@@ -150,7 +150,25 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    CODE NEEDS MODDING IN MAPS FIRST
+                    FlowerShopTeacherScript:
+                        checkevent EVENT_GOT_SQUIRTBOTTLE
+                        iftrue .GotSquirtbottle
+                        checkevent EVENT_MET_FLORIA
+                        iffalse .HaventMetFloria
+                        checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
+                        iffalse .Lalala
+                        checkflag ENGINE_PLAINBADGE
+                        iffalse .NoPlainBadge
+                        faceplayer
+                        opentext
+                        writetext UnknownText_0x554c2
+                        buttonsound
+                        verbosegiveitem SQUIRTBOTTLE
+                        setevent EVENT_GOT_SQUIRTBOTTLE
+                        closetext
+                        setevent EVENT_FLORIA_AT_SUDOWOODO
+                        clearevent EVENT_FLORIA_AT_FLOWER_SHOP
+                        end
                 Text: |
                     UnknownText_0x554c2:
                         text "Oh, you're better"
