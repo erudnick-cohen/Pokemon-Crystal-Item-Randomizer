@@ -3,6 +3,7 @@ import Items
 import re
 import os
 import time
+import yaml
 
 def ResetRom():
 	try:
@@ -93,8 +94,6 @@ def WriteBadgeToRom(location):
 			newtext = newtext.replace("    ","\t")
 			#find the text we need to replace
 			textregexstr = re.escape(i['Text'].replace("    ","\t")).replace("BADGENAME",".+")
-			print(newtext)
-			print(textregexstr)
 			oldtext = re.findall(textregexstr,filecode)[0]
 			newfile = newfile.replace(oldtext,newtext)
 			newfilestream = open("RandomizerRom/maps/"+i["File"],'w')
@@ -127,3 +126,35 @@ def WriteItemLocations(locations):
 			WriteLocationToRom(i,codeLookup,textLookup)
 		elif i.isGym():
 			WriteBadgeToRom(i)
+			
+def WriteTrainerLevels(locationDict, distDict):
+	#load up the trainer data
+	yamlfile = open("TrainerData/Trainers.yaml")
+	yamltext = yamlfile.read()
+	
+	#load up the trainer file
+	trainerfile = open("RandomizerRom/data/trainers/parties.asm")
+	newfile = trainerfile.read()
+	#loop through locations
+	trainerData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.Trainers is not None:
+				for j in location.Trainers:
+					print('Writing '+j+" at "+location.Name)
+					trainer = trainerData[j]
+					newcode = trainer['Code']
+					for k in trainer['Pokemon']:
+						pokemon = k['Pokemon']
+						level = k['Level']
+						newlevel = level-location.AreaLevel+distDict[i]
+						newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+					newfile = newfile.replace(trainer['Code'],newcode)
+	newfilestream = open("RandomizerRom/data/trainers/parties.asm",'w')
+	newfilestream.seek(0)
+	newfilestream.write(newfile)
+	newfilestream.truncate()
+	newfilestream.flush()
+	#os.fsync(newfilestream.fileno())
+	newfilestream.close()

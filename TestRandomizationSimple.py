@@ -22,3 +22,4 @@ result = RandomizeItems.RandomizeItems('Route 32',LocationData.LocationList,prog
 print(result[1])
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())
+RandomizerRom.WriteTrainerLevels(result[0], result[2])
