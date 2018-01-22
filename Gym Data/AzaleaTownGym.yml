@@ -37,7 +37,7 @@ Location:
         Code:
         Text:
             -
-                File: EcruteakGym.asm
+                File: AzaleaGym.asm
                 Text: |        
                     Text_ReceivedHiveBadge:
                         text "<PLAYER> received"
