@@ -38,7 +38,7 @@ Location:
                             waitbutton
                             closetext
                             setscene $2
-                            end                
+                            end
             -
                 Name: Elm's Theft Occurs
                 FileName: ElmsLab.asm
@@ -87,7 +87,7 @@ Location:
                         para "Give it to a #-"
                         line "MON you don't want"
                         cont "to evolve."
-                        done    
+                        done
                 TrainerList: 
                 Code: |
                     ElmGiveEverstoneScript:

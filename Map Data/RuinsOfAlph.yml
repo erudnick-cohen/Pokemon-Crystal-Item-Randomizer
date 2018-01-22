@@ -47,7 +47,7 @@ Location:
                 NormalItem: BERRY
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomBerry:
+                    RuinsOfAlphKabutoItemRoomBerry:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -65,8 +65,8 @@ Location:
                 NormalItem: PSNCUREBERRY
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomPsncureberry:
-                        itemball PSNCUREBERRY
+                    RuinsOfAlphKabutoItemRoomPsncureberry:
+                        ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
@@ -83,7 +83,7 @@ Location:
                 NormalItem: HEAL_POWDER
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomHealPowder:
+                    RuinsOfAlphKabutoItemRoomHealPowder:
                         ITEMLINE
 
                 Text:
@@ -102,7 +102,7 @@ Location:
                 NormalItem: ENERGYPOWDER
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomEnergypowder:
+                    RuinsOfAlphKabutoItemRoomEnergypowder:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -140,7 +140,7 @@ Location:
                         NormalItem: GOLD_BERRY
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomGoldBerry:
+                            RuinsOfAlphAerodactylItemRoomGoldBerry:
                                 ITEMLINE 
                         Text:
                         TrainerList: 
@@ -158,7 +158,7 @@ Location:
                         NormalItem: HEAL_POWDER
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomHealPowder:
+                            RuinsOfAlphAerodactylItemRoomHealPowder:
                                 ITEMLINE 
                         Text:
                         TrainerList: 
@@ -176,7 +176,7 @@ Location:
                         NormalItem: ENERGY_ROOT
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomEnergyRoot:
+                            RuinsOfAlphAerodactylItemRoomEnergyRoot:
                                 ITEMLINE 
                         Text:
                         TrainerList: 
@@ -195,7 +195,7 @@ Location:
                         ReachableReqs:
                         Text:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomMoonStone:
+                            RuinsOfAlphAerodactylItemRoomMoonStone:
                                 ITEMLINE 
                         TrainerList: 
                         Sublocations:                    

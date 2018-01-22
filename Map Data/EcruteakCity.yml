@@ -26,17 +26,17 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UnknownScript_0x99505:
-                        writetext UnknownText_0x9991a
+                    .GetSurf:
+                        writetext SurfGuyLikeADanceText
                         buttonsound
                         ITEMLINE
                         setevent EVENT_GOT_HM03_SURF
-                        writetext UnknownText_0x9999b
+                        writetext SurfGuySurfExplanationText
                         waitbutton
                         closetext
-                        end                
+                        end
                 Text: |
-                    UnknownText_0x9999b:
+                    SurfGuySurfExplanationText:
                         text "That's ITEMNAME."
 
                         para "It's a move that"
@@ -64,21 +64,21 @@ Location:
                 ReachableReqs:
                 NormalItem: ITEMFINDER
                 Code: |
-                    CooltrainerMScript_0x9a5fb:
+                    EcruteakItemfinderGuy:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_ITEMFINDER
-                        iftrue UnknownScript_0x9a614
-                        writetext UnknownText_0x9a63c
+                        iftrue .itemfinder
+                        writetext EcruteakItemfinderAdventureText
                         yesorno
-                        iffalse UnknownScript_0x9a61a
-                        writetext UnknownText_0x9a6b5
+                        iffalse .no
+                        writetext EcruteakItemfinderTrueSpiritText
                         buttonsound
                         ITEMLINE
                         setevent EVENT_GOT_ITEMFINDER
 
                 Text: |
-                    UnknownText_0x9a70e:
+                    ItemfinderExplanationText:
                         text "There are many"
                         line "items lying about"
 
@@ -102,7 +102,7 @@ Location:
 
                         para "in ECRUTEAK's"
                         line "BURNED TOWER."
-                        done                
+                        done
                 TrainerList:
                 Sublocations:
         
