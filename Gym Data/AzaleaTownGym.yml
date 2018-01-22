@@ -33,7 +33,7 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall AzaleaGymTriggerRockets
+                scall AzaleaGymActivateRockets
         Code:
         Text:
             -

@@ -33,7 +33,7 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall VioletGymTriggerRockets
+                scall VioletGymActivateRockets
         Code:
         Text:
             -
@@ -42,7 +42,7 @@ Location:
                     UnknownText_0x6854a:
                         text "…Darn! My dad's"
                         line "cherished bird"
-                        cont "#MON…"
+                        cont "#MON..."
 
                         para "All right."
                         line "Take this."

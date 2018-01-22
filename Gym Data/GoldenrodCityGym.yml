@@ -27,7 +27,7 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall GoldenrodGymTriggerRockets
+                scall GoldenrodGymActivateRockets
         Code:
         Text:
             -
