@@ -1,11 +1,11 @@
 import re
 import yaml
 #open and parse the file
-trainerfile = open("trainers.asm")
+trainerfile = open("../RandomizerRom/data/trainers/parties.asm")
 trainerstext = trainerfile.read()
 
 #define the regex for parsing trainers (fix below the word fix to inlcude ampersands)
-restring = '(; (\S+) \((\d+)\)\s+db \"([A-Z_& ?]+)@\"\s+db (\S+) ; (\S+)\s+; party\s+(?:db \d+, [A-Z_]+(?:, [A-Z]+)?\s+(?:db (?:[A-Z_]|0)+\s+){0,4}\s+)+\s+db [$]ff ; end)'
+restring = '(; (\S+) \((\d+)\)\s+db \"([A-Z_& ?]+)@\"\s+db (\S+)\s+; party\s+(?:db \d+, [A-Z_]+(?:, [A-Z]+)?\s+(?:db (?:[A-Z_]|0)+\s+){0,4}\s+)+\s+db [$]ff ; end)'
 regex = re.compile(restring)
 results = regex.findall(trainerstext)
 
