@@ -99,7 +99,7 @@ Location:
                             writetext MrPokemonIntroText2
                             buttonsound
                             waitsfx
-                            giveitem BERRY
+                            ITEMLINE
                             writetext MrPokemonsHouse_GotEggText
                             playsound SFX_KEY_ITEM
                             waitsfx
@@ -118,10 +118,11 @@ Location:
                             closetext
                             jump MrPokemonsHouse_OakScript
                     Text: |
-                        text "<PLAYER> received"
-                        line "ITEMNAME."
-                        done                    
-                        TrainerList: 
+                        MrPokemonsHouse_GotEggText:
+                            text "<PLAYER> received"
+                            line "ITEMNAME."
+                            done
+                    TrainerList: 
                     Sublocations:
             -
                     Name: Mr. Pokemon's EXP Share

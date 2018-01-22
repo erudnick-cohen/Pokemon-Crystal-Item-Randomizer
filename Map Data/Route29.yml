@@ -28,5 +28,5 @@ Location:
                 Text:
                 TrainerList: 
                 Code: |
-                     Route29Potion:
-                        ITEMLINE                 
+                    Route29Potion:
+                        ITEMLINE

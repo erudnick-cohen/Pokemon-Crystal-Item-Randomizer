@@ -37,46 +37,7 @@ Location:
                             writetext AideText_AlwaysBusy
                             waitbutton
                             closetext
-                            dotrigger $2
-                            end
-            -
-                Name: ElmAide2
-                FileName: ElmsLab.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Elm's Lab
-                FlagReqs: 
-                    - Mr. Pokemon Visited
-                ItemReqs:
-                    - Mystery Egg
-                FlagsSet: Gave Elm Egg
-                ReachableReqs:
-                NormalItem: POKE_BALL
-                Text: |
-                    AideText_ExplainBalls:
-                        text "To add to your"
-                        line "#DEX, you have"
-                        cont "to catch #MON."
-                    
-                        para "Throw ITEMNAMES"
-                        line "at wild #MON"
-                        cont "to get them."
-                        done          
-                TrainerList: 
-                Code: |
-                        AideScript_GiveYouBalls:
-                            opentext
-                            writetext AideText_GiveYouBalls
-                            buttonsound
-                            itemtotext POKE_BALL, $1
-                            scall AideScript_ReceiveTheBalls
-                            giveitem POKE_BALL, 5
-                            writetext AideText_ExplainBalls
-                            buttonsound
-                            itemnotify
-                            closetext
-                            dotrigger $2
+                            setscene $2
                             end
             -             
                 Name: Elm's Everstone
