@@ -38,7 +38,23 @@ Location:
                             waitbutton
                             closetext
                             setscene $2
-                            end
+                            end                
+            -
+                Name: Elm's Theft Occurs
+                FileName: ElmsLab.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Gave Elm Egg
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
             -             
                 Name: Elm's Everstone
                 FileName: ElmsLab.asm

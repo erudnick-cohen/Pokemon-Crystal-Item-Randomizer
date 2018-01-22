@@ -43,7 +43,7 @@ Location:
         Code:
         Text:
         TrainerList: 
-        Sublocations:         
+        Sublocations:
             -
                 Name: Bike
                 FileName: GoldenrodBikeShop.asm
@@ -208,5 +208,22 @@ Location:
                         end
                 Text:
                 TrainerList: 
-                Sublocations:      
+                Sublocations:
+            -
+                Name: Goldenrod City Buy Rock Smash
+                FileName: GoldenrodCity.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Goldenrod City
+                FlagReqs: 
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                FlagsSet:
+                    - Rock Smash
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
             
