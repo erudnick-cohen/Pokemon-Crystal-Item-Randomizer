@@ -31,12 +31,12 @@ Location:
         TrainerList: 
             - CAMPER 4
             - CAMPER 3
-            - PICKNICKER 4
-            - PICKNICKER 3
+            - PICNICKER 4
+            - PICNICKER 3
             - JUGGLER 1
             - FIREBREATHER 6
             - OFFICER 2
-            - BUG CATCHER 13
+            - BUG_CATCHER 13
             - BIRD_KEEPER 3
         Sublocations:        
     -

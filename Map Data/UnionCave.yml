@@ -57,7 +57,7 @@ Location:
                     ReachableReqs:
                     Code:
                     Text:
-                    AREALV:
+                    AREALV: 4
                     TrainerList:
                         - HIKER 18
                         - HIKER 2

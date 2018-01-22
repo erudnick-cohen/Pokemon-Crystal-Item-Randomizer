@@ -203,7 +203,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        AREALV:
+        AREALV: 7
         TrainerList: 
             - BUG_CATCHER 19
         Sublocations:

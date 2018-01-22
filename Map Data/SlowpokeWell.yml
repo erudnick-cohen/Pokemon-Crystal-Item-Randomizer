@@ -14,10 +14,10 @@ Location:
         Text:
         AREALV: 6
         TrainerList:
-            - GRUNTF1
-            - GRUNTM1
-            - GRUNTM2
-            - GRUNTM29
+            - GRUNTF 1
+            - GRUNTM 1
+            - GRUNTM 2
+            - GRUNTM 29
         Sublocations:
             - 
                 Name: Slowpoke Well Floor 1 Super Potion
