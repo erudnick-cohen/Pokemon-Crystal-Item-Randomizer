@@ -47,7 +47,9 @@ Location:
                 WildTableList:
                 LocationReqs:
                 FlagReqs:
+                    - Mr. Pokemon Visited
                 ItemReqs:
+                    - Mystery Egg
                 FlagsSet:
                     - Gave Elm Egg
                 ReachableReqs:

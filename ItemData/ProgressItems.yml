@@ -8,7 +8,7 @@ Items:
         Name: Squirtbottle
         GameName: SQUIRTBOTTLE
         Output: |
-                itemball SQUIRTBOTTLE 
+                itemball SQUIRTBOTTLE
     -
         Name: Surf
         GameName: HM_SURF
@@ -18,9 +18,9 @@ Items:
         Name: Cut
         GameName: HM_CUT
         Output: |
-                itemball HM_CUT                 
+                itemball HM_CUT
     -
         Name: Flash
         GameName: HM_FLASH
         Output: |
-                itemball HM_FLASH      
+                itemball HM_FLASH

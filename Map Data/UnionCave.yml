@@ -178,7 +178,7 @@ Location:
                 Sublocations:            
             -    
                 Name: Union Cave Floor 2 Swift
-                FileName: UnionCave1F.asm
+                FileName: UnionCaveB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -196,7 +196,7 @@ Location:
                 Sublocations:
             -    
                 Name: Union Cave Floor 2 X Defend
-                FileName: UnionCave1F.asm
+                FileName: UnionCaveB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 

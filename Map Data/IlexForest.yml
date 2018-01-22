@@ -281,7 +281,7 @@ Location:
                         iftrue .AlreadyGotHeadbutt
                         writetext Text_HeadbuttIntro
                         buttonsound
-                        ITEMLINE 
+                        ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM02_HEADBUTT
                     .AlreadyGotHeadbutt:

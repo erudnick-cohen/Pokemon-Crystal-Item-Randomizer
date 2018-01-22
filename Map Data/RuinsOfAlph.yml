@@ -141,7 +141,7 @@ Location:
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomGoldBerry:
-                                ITEMLINE 
+                                ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
@@ -159,7 +159,7 @@ Location:
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomHealPowder:
-                                ITEMLINE 
+                                ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
@@ -177,7 +177,7 @@ Location:
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomEnergyRoot:
-                                ITEMLINE 
+                                ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
@@ -196,6 +196,6 @@ Location:
                         Text:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomMoonStone:
-                                ITEMLINE 
+                                ITEMLINE
                         TrainerList: 
                         Sublocations:                    
