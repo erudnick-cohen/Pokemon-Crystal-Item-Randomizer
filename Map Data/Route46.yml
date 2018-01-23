@@ -45,6 +45,7 @@ Location:
             FlagsSet:
             ReachableReqs:
             NormalItem: X_SPEED
+            IsBall: Yes
             Code: |
                 Route46XSpeed:
                     ITEMLINE

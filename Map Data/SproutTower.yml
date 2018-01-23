@@ -26,6 +26,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PARLYZ_HEAL
+                IsBall: Yes
                 Code: |
                     SproutTower1FParlyzHeal:
                         ITEMLINE
@@ -44,6 +45,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: X_ACCURACY
+                IsBall: Yes
                 Code: |
                     SproutTower2FXAccuracy:
                         ITEMLINE
@@ -62,6 +64,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: POTION
+                IsBall: Yes
                 Code: |
                     SproutTower3FPotion:
                         ITEMLINE
@@ -80,6 +83,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: ESCAPE_ROPE
+                IsBall: Yes
                 Code: |
                     SproutTower3FPotion:
                         ITEMLINE
@@ -97,7 +101,6 @@ Location:
                 ItemReqs: 
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: ESCAPE_ROPE
                 Code: |
                     SageLiScript:
                         faceplayer

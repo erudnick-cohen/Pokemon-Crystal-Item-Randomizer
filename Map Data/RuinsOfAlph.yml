@@ -45,6 +45,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: BERRY
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     RuinsOfAlphKabutoItemRoomBerry:
@@ -63,6 +64,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: PSNCUREBERRY
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     RuinsOfAlphKabutoItemRoomPsncureberry:
@@ -81,6 +83,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: HEAL_POWDER
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     RuinsOfAlphKabutoItemRoomHealPowder:
@@ -100,6 +103,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ENERGYPOWDER
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     RuinsOfAlphKabutoItemRoomEnergypowder:
@@ -138,6 +142,7 @@ Location:
                         ItemReqs:
                         FlagsSet:
                         NormalItem: GOLD_BERRY
+                        IsBall: Yes
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomGoldBerry:
@@ -156,6 +161,7 @@ Location:
                         ItemReqs:
                         FlagsSet:
                         NormalItem: HEAL_POWDER
+                        IsBall: Yes
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomHealPowder:
@@ -174,6 +180,7 @@ Location:
                         ItemReqs:
                         FlagsSet:
                         NormalItem: ENERGY_ROOT
+                        IsBall: Yes
                         ReachableReqs:
                         Code: |
                             RuinsOfAlphAerodactylItemRoomEnergyRoot:
@@ -192,6 +199,7 @@ Location:
                         ItemReqs:
                         FlagsSet:
                         NormalItem: MOON_STONE
+                        IsBall: Yes
                         ReachableReqs:
                         Text:
                         Code: |

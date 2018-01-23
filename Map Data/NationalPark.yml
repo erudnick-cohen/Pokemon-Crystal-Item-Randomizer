@@ -101,6 +101,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_DIG
+                IsBall: Yes
                 Code: |
                     NationalParkTMDig:
                         ITEMLINE
@@ -119,6 +120,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PARLYZ_HEAL
+                IsBall: Yes
                 Code: |
                     NationalParkParlyzHeal:
                         ITEMLINE

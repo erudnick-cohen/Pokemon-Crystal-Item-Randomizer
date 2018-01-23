@@ -31,6 +31,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: SUPER_POTION
+                IsBall: Yes
                 Code: |
                     SlowpokeWellB1FSuperPotion:
                         itemball SUPER_POTION
@@ -124,6 +125,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_RAIN_DANCE
+                IsBall: Yes
                 Code: |
                     SlowpokeWellB2FTMRainDance:
                         ITEMLINE

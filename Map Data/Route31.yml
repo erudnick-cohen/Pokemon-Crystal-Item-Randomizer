@@ -26,6 +26,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: POTION
+                IsBall: Yes
                 Code: |
                     Route31Potion:
                         ITEMLINE
@@ -43,6 +44,7 @@ Location:
                 FlagsSet:
                 NormalItem: POKE_BALL
                 ReachableReqs:
+                IsBall: Yes
                 Code: |
                     Route31PokeBall:
                         ITEMLINE

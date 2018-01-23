@@ -63,6 +63,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: POTION
+                IsBall: Yes
                 Code: |
                     DarkCaveVioletEntrancePotion:
                         ITEMLINE
@@ -84,6 +85,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: DIRE_HIT
+                IsBall: Yes
                 Code: |
                     DarkCaveVioletEntranceDireHit:
                         ITEMLINE
@@ -104,7 +106,8 @@ Location:
                     - Flash
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: DIRE_HIT
+                NormalItem: HYPER_POTION
+                IsBall: Yes
                 Code: |
                     DarkCaveVioletEntranceHyperPotion:
                         ITEMLINE
@@ -126,6 +129,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: FULL_HEAL
+                IsBall: Yes
                 Code: |
                     DarkCaveVioletEntranceFullHeal:
                         ITEMLINE

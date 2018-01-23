@@ -26,6 +26,7 @@ Location:
                     FlagsSet:
                     ReachableReqs:
                     NormalItem: ANTIDOTE
+                    IsBall: Yes
                     Code: |
                         Route30Antidote:
                             ITEMLINE

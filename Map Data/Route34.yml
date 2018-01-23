@@ -103,6 +103,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: NUGGET
+                IsBall: Yes
                 Code: |
                     Route34Nugget:
                         ITEMLINE

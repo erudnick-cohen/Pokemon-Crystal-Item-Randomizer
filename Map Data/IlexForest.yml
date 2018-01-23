@@ -218,6 +218,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: X_ATTACK
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     IlexForestXAttack:
@@ -236,6 +237,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ANTIDOTE
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     IlexForestAntidote:
@@ -254,6 +256,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ETHER
+                IsBall: Yes
                 ReachableReqs:
                 Code: |
                     IlexForestEther:

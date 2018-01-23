@@ -11,6 +11,10 @@ class Location:
 			self.NormalItem = yamlTree["NormalItem"]
 		else:
 			self.NormalItem = None
+		if("IsBall" in yamlTree):
+			self.IsBall = yamlTree["IsBall"]
+		else:
+			self.IsBall = False
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem
 		self.HasPKMN = yamlTree["HasPKMN"]

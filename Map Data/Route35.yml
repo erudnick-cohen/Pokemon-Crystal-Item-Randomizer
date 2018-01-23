@@ -66,6 +66,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_ROLLOUT
+                IsBall: Yes
                 Code: |
                     Route35TMRollout:
                         ITEMLINE

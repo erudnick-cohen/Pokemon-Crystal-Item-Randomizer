@@ -146,6 +146,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: GREAT_BALL
+                IsBall: Yes
                 Code: |
                     Route32GreatBall:
                         ITEMLINE
@@ -167,6 +168,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REPEL
+                IsBall: Yes
                 Code: |
                     Route32Repel:
                         ITEMLINE

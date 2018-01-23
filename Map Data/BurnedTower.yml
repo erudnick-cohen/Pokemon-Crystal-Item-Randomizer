@@ -31,6 +31,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: HP_UP
+                IsBall: Yes
                 Code: |
                     BurnedTower1FHPUp:
                         ITEMLINE
@@ -65,9 +66,12 @@ Location:
                 ItemReqs:
                     - Strength
                 NormalItem: TM_ENDURE
+                IsBall: Yes
                 FlagsSet:
                 ReachableReqs:
-                Code:
+                Code: |
+                    BurnedTowerB1FTMEndure:
+                        ITEMLINE
                 Text:
                 TrainerList:
                 Sublocations:

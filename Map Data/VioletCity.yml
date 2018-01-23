@@ -27,6 +27,8 @@ Location:
                     - Surf
                 FlagsSet:
                 ReachableReqs:
+                NormalItem: RARE_CANDY
+                IsBall: Yes
                 Code: |
                     VioletCityRareCandy:
                         ITEMLINE
@@ -47,6 +49,8 @@ Location:
                     - Surf
                 FlagsSet:
                 ReachableReqs:
+                NormalItem: PP_UP
+                IsBall: Yes
                 Code: |
                     VioletCityPPUp:
                         ITEMLINE

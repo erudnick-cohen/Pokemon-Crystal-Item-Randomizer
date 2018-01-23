@@ -77,6 +77,7 @@ Location:
                     FlagsSet:
                     ReachableReqs:
                     NormalItem: X_ATTACK
+                    IsBall: Yes
                     Code: |
                         UnionCave1FXAttack:
                             ITEMLINE
@@ -95,6 +96,7 @@ Location:
                     FlagsSet:
                     ReachableReqs:
                     NormalItem: GREAT_BALL
+                    IsBall: Yes
                     Code: |
                         UnionCave1FGreatBall:
                             ITEMLINE
@@ -113,6 +115,7 @@ Location:
                     FlagsSet:
                     ReachableReqs:
                     NormalItem: POTION
+                    IsBall: Yes
                     Code: |
                         UnionCave1FPotion:
                             ITEMLINE
@@ -131,6 +134,7 @@ Location:
                     FlagsSet:
                     ReachableReqs:
                     NormalItem: AWAKENING
+                    IsBall: Yes
                     Code: |
                         UnionCave1FAwakening:
                             ITEMLINE
@@ -188,6 +192,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_SWIFT
+                IsBall: Yes
                 Code: |
                     UnionCaveB1FTMSwift:
                         ITEMLINE
@@ -206,6 +211,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: X_DEFEND
+                IsBall: Yes
                 Code: |
                     UnionCaveB1FXDefend:
                         ITEMLINE
@@ -268,6 +274,7 @@ Location:
                         ITEMLINE
                 Text:
                 NormalItem: ELIXER
+                IsBall: Yes
                 TrainerList: 
                 Sublocations:                   
             -    
@@ -288,5 +295,6 @@ Location:
                         ITEMLINE
                 Text:
                 NormalItem: HYPER_POTION
+                IsBall: Yes
                 TrainerList: 
                 Sublocations:                  

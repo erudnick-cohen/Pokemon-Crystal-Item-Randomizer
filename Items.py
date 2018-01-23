@@ -19,9 +19,12 @@ def makeItemCodeDict():
 			itemCodeDict[i["Name"]] = i["Output"]
 		
 	#define lookup function
-	def lookupItem(item):
+	def lookupItem(item,isBall):
 		if item not in itemCodeDict:
-			return "verbosegiveitem "+item
+			if(isBall):
+				return "itemball "+item
+			else:
+				return "verbosegiveitem "+item
 		else:
 			return itemCodeDict[item]
 	return lookupItem
