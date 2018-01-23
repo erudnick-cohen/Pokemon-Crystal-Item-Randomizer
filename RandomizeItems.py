@@ -171,7 +171,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 						#Pick a random location with trash and put the item there
 						place = random.choice(trashSpots)
 						trashItems.append(place.item)
-						place.item = item
+						place.item = j
 						trashSpots.remove(place)
 						state[j] = True
 						stateDist[j] = place.distance
