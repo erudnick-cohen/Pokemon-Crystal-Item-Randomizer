@@ -28,7 +28,7 @@ Location:
                     NormalItem: ANTIDOTE
                     Code: |
                         Route30Antidote:
-                            itemball ANTIDOTE
+                            ITEMLINE
                     Text:
                     TrainerList: 
                     Sublocations:
