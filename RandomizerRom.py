@@ -15,14 +15,13 @@ def ResetRom():
 
 def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	print("Writing "+location.Name+" which contains "+location.item)
-	
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
 	
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
-	newcode = location.Code.replace("ITEMLINE",itemScriptLookup(location.item))
+	newcode = location.Code.replace("ITEMLINE",itemScriptLookup(location.item,location.IsBall))
 	#switch spaces to tabs.....
 	newcode = newcode.replace("    ","\t")
 
@@ -79,7 +78,7 @@ def WriteBadgeToRom(location):
 	newfilestream.write(newfile)
 	newfilestream.truncate()
 	newfilestream.flush()
-	#os.fsync(newfilestream.fileno())
+	os.fsync(newfilestream.fileno())
 	newfilestream.close()
 	
 	newtext = ""
@@ -114,7 +113,7 @@ def WriteBadgeToRom(location):
 	newfilestream.write(newfile)
 	newfilestream.truncate()
 	newfilestream.flush()
-	#os.fsync(newfilestream.fileno())
+	os.fsync(newfilestream.fileno())
 	newfilestream.close()
 	
 	
@@ -156,5 +155,5 @@ def WriteTrainerLevels(locationDict, distDict):
 	newfilestream.write(newfile)
 	newfilestream.truncate()
 	newfilestream.flush()
-	#os.fsync(newfilestream.fileno())
+	os.fsync(newfilestream.fileno())
 	newfilestream.close()
