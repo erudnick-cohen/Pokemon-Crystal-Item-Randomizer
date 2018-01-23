@@ -85,7 +85,7 @@ Location:
                 NormalItem: ESCAPE_ROPE
                 IsBall: Yes
                 Code: |
-                    SproutTower3FPotion:
+                    SproutTower3FEscapeRope:
                         ITEMLINE
                 Text:
                 TrainerList: 
