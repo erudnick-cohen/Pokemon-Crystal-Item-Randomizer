@@ -21,7 +21,7 @@ def makeItemCodeDict():
 	#define lookup function
 	def lookupItem(item):
 		if item not in itemCodeDict:
-			return "itemball "+item
+			return "verbosegiveitem "+item
 		else:
 			return itemCodeDict[item]
 	return lookupItem

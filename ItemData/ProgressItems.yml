@@ -3,24 +3,24 @@ Items:
         Name: Mystery Egg
         GameName: MYSTERY_EGG
         Output: |
-                itemball MYSTERY_EGG
+                verbosegiveitem MYSTERY_EGG
     -
         Name: Squirtbottle
         GameName: SQUIRTBOTTLE
         Output: |
-                itemball SQUIRTBOTTLE
+                verbosegiveitem SQUIRTBOTTLE
     -
         Name: Surf
         GameName: HM_SURF
         Output: |
-                itemball HM_SURF
+                verbosegiveitem HM_SURF
     -
         Name: Cut
         GameName: HM_CUT
         Output: |
-                itemball HM_CUT
+                verbosegiveitem HM_CUT
     -
         Name: Flash
         GameName: HM_FLASH
         Output: |
-                itemball HM_FLASH
+                verbosegiveitem HM_FLASH
