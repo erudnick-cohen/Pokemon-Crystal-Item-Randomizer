@@ -1,0 +1,72 @@
+Location:
+    -
+        Name: Route 43
+        FileName: Route43.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_43
+        LocationReqs: Mahogany Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 17
+        TrainerList: 
+            - CAMPER 19
+            - PICNICKER 20
+            - FISHER 6
+            - POKEMANIAC 7
+            - POKEMANIAC 6
+            - POKEMANIAC 5
+        Sublocations:
+    -
+        Name: Route 43 Max Ether
+        FileName: Route43.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList: Route_43
+        LocationReqs: Route 43
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        Code: |
+            Route43MaxEther:
+                itemball MAX_ETHER
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Sludge Bomb TM
+        FileName: Route43Gate.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList: Route_43
+        LocationReqs: Route 43
+        FlagReqs:
+            - Mahogany Rockets Defeated
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: |
+            OfficerScript_GuardWithSludgeBomb:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_TM36_SLUDGE_BOMB
+                iftrue .GotSludgeBomb
+                writetext OfficerText_FoundTM
+                buttonsound
+                ITEMLINE
+                iffalse .NoRoomForSludgeBomb
+                setevent EVENT_GOT_TM36_SLUDGE_BOMB
+                closetext
+                end
+        Text:
+        TrainerList: 
+        Sublocations:
+
+        
+        

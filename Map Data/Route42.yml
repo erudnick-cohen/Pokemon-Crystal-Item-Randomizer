@@ -1,0 +1,109 @@
+Location:
+    -
+        Name: Route 42
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Route 42 Ultra Ball
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 42
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: Yes
+                Code: |
+                    Route42UltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 42 middle island super potion
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 42
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    Route42SuperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+                -
+                    Name: Route 42 end
+                    FileName: Route42.asm
+                    Type: Map
+                    HasPKMN: No
+                    WildTableList: Route_42
+                    LocationReqs: Route 42
+                    FlagReqs:
+                        - Fog Badge
+                    ItemReqs:
+                        - Surf
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+                -
+                    Name: Route 42 end
+                    FileName: Route42.asm
+                    Type: Map
+                    HasPKMN: No
+                    WildTableList: Route_42
+                    LocationReqs: Route 42
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    TrainerList: 
+                    Sublocations:
+                -
+                    Name: Route 42 Mahogany Side
+                    FileName: Route42.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList: Route_42
+                    LocationReqs: Route 42 end
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 16
+                    TrainerList:
+                        - FISHER 7
+                        - POKEMANIAC 4
+                        - HIKER 6
+                    Sublocations:
+                

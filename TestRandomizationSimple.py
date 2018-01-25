@@ -4,7 +4,7 @@ import RandomizeItems
 import RandomizerRom
 
 trashItems = LocationData.trashList;
-progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion']
+progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale']
 Zephyr = Badge.Badge()
 Zephyr.isTrash = False
 Zephyr.Name = 'Zephyr Badge'

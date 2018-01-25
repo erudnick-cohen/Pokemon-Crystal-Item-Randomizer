@@ -1,0 +1,163 @@
+Location:
+    -
+        Name: Lake Of Rage
+        FileName: LakeOfRage.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Lake_Of_Rage
+        LocationReqs: Route 43
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Lake Of Rage Trainers
+                FileName: LakeOfRage.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: Lake_Of_Rage
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Mahogany Rockets Defeated
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 17
+                TrainerList: 
+                    - COOLTRAINERM 2
+                    - FISHER 9
+                    - FISHER 8
+                    - COOLTRAINERF 2
+                Sublocations:
+            -
+                Name: Red Scale
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Lake_Of_Rage
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    UnknownScript_0x7007a:
+                        reloadmapafterbattle
+                        opentext
+                        ITEMLINE
+                        waitsfx
+                        writetext UnknownText_0x703df
+                        playsound SFX_ITEM
+                        waitsfx
+                        itemnotify
+                        closetext
+                        setscene $0
+                        appear LAKEOFRAGE_LANCE
+                        end
+                Text: |
+                    UnknownText_0x703df:
+                        text "<PLAYER> obtained a"
+                        line "ITEMNAME."
+                        done
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Lake Of Rage Elixer
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Lake_Of_Rage
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ELIXER
+                Code: |
+                    LakeOfRageElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Detect TM
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Lake_Of_Rage
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_DETECT
+                Code: |
+                    LakeOfRageTMDetect:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Hidden Power
+                FileName: LakeOfRageHiddenPowerHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: Lake_Of_Rage
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_HIDDEN_POWER
+                Code: |
+                    HiddenPowerGuy:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_TM10_HIDDEN_POWER
+                        iftrue .AlreadyGotItem
+                        writetext HiddenPowerGuyText1
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_TM10_HIDDEN_POWER
+                        writetext HiddenPowerGuyText2
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    HiddenPowerGuyText2:
+                        text "Do you see it? It"
+                        line "is ITEMNAME!"
+
+                        para "It draws out the"
+                        line "power of #MON"
+                        cont "for attacking."
+
+                        para "Remember this: its"
+                        line "type and power de-"
+                        cont "pend on the #-"
+                        cont "MON using it."
+                        done
+                TrainerList: 
+                Sublocations:
+
+                
+                
+                
