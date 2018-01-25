@@ -37,6 +37,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 		print(spoiler)
 		#track if we're stuck
 		stuck = True
+		#shuffle the list of active locations to prevent any possible biases	
+		random.shuffle(activeLoc)
 		#update the list of reachable locations and sublocations
 		for i in activeLoc:
 			#can we get to this location?
