@@ -20,7 +20,7 @@ Location:
                 Name: Bugsy TM
                 FileName: AzaleaGym.asm
                 Type: Item
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Azalea Gym
                 FlagReqs:
@@ -77,7 +77,7 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                AREALV: 7
+                AREALV: 6
                 TrainerList: 
                         - BUG_CATCHER 5
                         - BUG_CATCHER 6

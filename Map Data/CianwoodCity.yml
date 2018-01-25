@@ -1,0 +1,133 @@
+Location:  
+    -
+        Name: Cianwood City
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 41
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 16
+        TrainerList:
+            - MYSTICALMAN 1
+        Sublocations:
+            -
+                Name: Secret Potion Man
+                FileName: CianwoodPharmacy.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 41
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    CianwoodPharmacist:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+                        iftrue .Mart
+                        checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
+                        iffalse .Mart
+                        writetext PharmacistGiveSecretpotionText
+                        buttonsound
+                        ITEMLINE
+                        writetext ReceivedSecretpotionText
+                        playsound SFX_KEY_ITEM
+                        waitsfx
+                        itemnotify
+                        setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+                        writetext PharmacistDescribeSecretpotionText
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    ReceivedSecretpotionText:
+                        text "<PLAYER> received"
+                        line "ITEMNAME."
+                        done
+
+                    PharmacistDescribeSecretpotionText:
+                        text "My ITEMNAME is"
+                        line "a tad too strong."
+
+                        para "I only offer it in"
+                        line "an emergency."
+                        done
+                TrainerList:
+                Sublocations:
+            -
+                Name: Chuck's Wife
+                FileName: CianwoodCity.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Chuck TM
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HM_FLY
+                Code: |
+                    .BeatChuck:
+                        writetext ChucksWifeGiveHMText
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_HM02_FLY
+                        writetext ChucksWifeFlySpeechText
+                        buttonsound
+                Text: |
+                    ChucksWifeEasierToFlyText:
+                        text "You crossed the"
+                        line "sea to get here?"
+
+                        para "That must have"
+                        line "been hard."
+
+                        para "It would be much"
+                        line "easier if your"
+
+                        para "#MON knew how"
+                        line "to ITEMNAME..."
+                        done
+
+                    ChucksWifeBeatChuckText:
+                        text "But you can't use"
+                        line "FLY without this"
+                        cont "city's GYM BADGE."
+
+                        para "If you beat the"
+                        line "GYM LEADER here,"
+                        cont "come see me."
+
+                        para "I'll have a nice"
+                        line "gift for you."
+                        done
+
+                    ChucksWifeGiveHMText:
+                        text "That's CIANWOOD's"
+                        line "GYM BADGE!"
+
+                        para "Then you should"
+                        line "take this ITEMNAME."
+                        done
+
+                    ChucksWifeFlySpeechText:
+                        text "Teach ITEMNAME to your"
+                        line "#MON."
+
+                        para "You will be able"
+                        line "to ITEMNAME instantly"
+
+                        para "to anywhere you "
+                        line "have visited."
+                        done
+                TrainerList:
+                Sublocations:

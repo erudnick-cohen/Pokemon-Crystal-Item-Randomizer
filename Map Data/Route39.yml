@@ -1,0 +1,22 @@
+Location:  
+    -
+        Name: Route 39
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_39
+        LocationReqs: Route 38
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 16
+        TrainerList:
+            - PSYCHIC_T 6
+            - POKEFANM 10
+            - POKEFANF 2
+            - SAILOR 1
+            - POKEFANF 6
+        Sublocations:

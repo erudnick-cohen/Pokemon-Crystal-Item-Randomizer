@@ -1,0 +1,67 @@
+Location:
+    -
+        Name: Olivine Gym
+        FileName: OlivineGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Jasmine TM
+                FileName: OlivineGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Olivine Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_IRON_TAIL
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM23_IRON_TAIL
+                        iftrue .GotIronTail
+                        writetext Jasmine_BadgeSpeech
+                        buttonsound
+                        ITEMLINE
+                        iffalse .NoRoomForIronTail
+                        setevent EVENT_GOT_TM23_IRON_TAIL
+                        writetext Jasmine_IronTailSpeech
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    Jasmine_IronTailSpeech:
+                        text "…You could use"
+                        line "that TM to teach"
+                        cont "ITEMNAME."
+                        done
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Olivine Gym Trainers
+                FileName: OlivineGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Olivine City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 20
+                TrainerList: 
+                        - JASMINE 1
+
+

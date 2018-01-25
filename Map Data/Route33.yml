@@ -33,7 +33,7 @@ Location:
         Name: Route 33 actual
         FileName: Route33.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList: ROUTE_33
         LocationReqs: Route 33
         FlagReqs:
@@ -42,7 +42,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        AREALV: 6
+        AREALV: 7
         TrainerList: 
             - HIKER 1
         Sublocations:        

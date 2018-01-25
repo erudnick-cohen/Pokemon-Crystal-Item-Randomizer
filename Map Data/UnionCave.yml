@@ -173,7 +173,7 @@ Location:
                 ReachableReqs:
                 Code: 
                 Text:
-                AREALV: 25
+                AREALV: 22
                 TrainerList: 
                     - HIKER 4
                     - HIKER 3
@@ -250,7 +250,7 @@ Location:
                 ReachableReqs:
                 Code: 
                 Text:
-                AREALV: 25
+                AREALV: 22
                 TrainerList: 
                     - COOLTRAINERM 1
                     - COOLTRAINERF 1

@@ -1,0 +1,29 @@
+Location:  
+    -
+        Name: Route 41
+        FileName: Route41.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_41
+        LocationReqs: Route 40
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 15
+        TrainerList:
+            - SWIMMERM 5
+            - SWIMMERM 6
+            - SWIMMERM 7
+            - SWIMMERM 4
+            - SWIMMERM 8
+            - SWIMMERF 6
+            - SWIMMERF 5
+            - SWIMMERF 7
+            - SWIMMERF 3
+            - SWIMMERF 4
+        Sublocations:

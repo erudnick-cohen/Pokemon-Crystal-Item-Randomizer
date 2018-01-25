@@ -1,0 +1,85 @@
+Location:  
+    -
+        Name: Olivine City
+        FileName: OlivineCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 39
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+            -
+                Name: Strength HM
+                FileName: OlivineCafe.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Olivine City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    SailorScript_0x9c8c1:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_HM04_STRENGTH
+                        iftrue UnknownScript_0x9c8d3
+                        writetext UnknownText_0x9c8df
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM04_STRENGTH
+                Text: |
+                    UnknownText_0x9c8df:
+                        text "Hah! Your #MON"
+                        line "sure look like"
+                        cont "lightweights!"
+
+                        para "They don't have"
+                        line "the power to move"
+                        cont "boulders aside."
+
+                        para "Here, use this"
+                        line "and teach them"
+                        cont "ITEMNAME!"
+                        done
+                TrainerList:
+                Sublocations:
+            -
+                Name: Fishing Guru
+                FileName: OlivineGoodRodHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Olivine City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: GOOD_ROD
+                Code: |
+                    GoodRodGuru:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_GOOD_ROD
+                        iftrue .AlreadyGotItem
+                        writetext OfferGoodRodText
+                        yesorno
+                        iffalse .DontWantIt
+                        writetext GiveGoodRodText
+                        buttonsound
+                        ITEMLINE
+                        writetext GaveGoodRodText
+                        waitbutton
+                        closetext
+                        setevent EVENT_GOT_GOOD_ROD
+                        end
+                Text:
+                TrainerList:
+                Sublocations:

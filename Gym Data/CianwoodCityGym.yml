@@ -1,0 +1,69 @@
+Location:
+    -
+        Name: Cianwood City Gym Badge
+        FileName: CianwoodGym.asm
+        LocationReqs: Cianwood Gym
+        Type: Gym
+        HasPKMN: No
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Storm Badge
+        BadgeLine: |
+            ChuckScript_0x9d60f:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_CHUCK
+                iftrue .FightDone
+                writetext ChuckIntroText1
+                waitbutton
+                closetext
+                spriteface CIANWOODGYM_CHUCK, RIGHT
+                opentext
+                writetext ChuckIntroText2
+                waitbutton
+                closetext
+                applymovement CIANWOODGYM_BOULDER1, CianwoodGymMovement_ChuckChucksBoulder
+                playsound SFX_STRENGTH
+                earthquake 80
+                disappear CIANWOODGYM_BOULDER1
+                pause 30
+                faceplayer
+                opentext
+                writetext ChuckIntroText3
+                waitbutton
+                closetext
+                winlosstext ChuckLossText, 0
+                loadtrainer CHUCK, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_CHUCK
+                opentext
+                writetext GetStormBadgeText
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                checkcode VAR_BADGES
+                scall CianwoodGymActivateRockets
+        Code:
+        Text:
+            -
+                File: CianwoodGym.asm
+                Text: |        
+                    ChuckLossText:
+                        text "Wha? Huh?"
+                        line "I lost?"
+
+                        para "How about that!"
+                        line "You're worthy of"
+                        cont "BADGENAME!"
+                        done
+
+                    GetStormBadgeText:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

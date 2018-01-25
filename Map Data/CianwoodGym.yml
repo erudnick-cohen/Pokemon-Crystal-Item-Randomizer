@@ -1,0 +1,95 @@
+Location:
+    -
+        Name: Cianwood Gym
+        FileName: CianwoodGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Cianwood City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Chuck TM
+                FileName: CianwoodGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Cianwood Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_DYNAMICPUNCH
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM01_DYNAMICPUNCH
+                        iftrue .AlreadyGotTM
+                        setevent EVENT_BEAT_BLACKBELT_YOSHI
+                        setevent EVENT_BEAT_BLACKBELT_LAO
+                        setevent EVENT_BEAT_BLACKBELT_NOB
+                        setevent EVENT_BEAT_BLACKBELT_LUNG
+                        writetext ChuckExplainBadgeText
+                        buttonsound
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_TM01_DYNAMICPUNCH
+                        writetext ChuckExplainTMText
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    ChuckExplainTMText:
+                        text "That is ITEMNAME-"
+                        line "PUNCH."
+
+                        para "It doesn't always"
+                        line "hit, but when it"
+
+                        para "does, it causes"
+                        line "confusion!"
+                        done
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Cianwood Gym Trainers Before Boulders
+                FileName: CianwoodGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Cianwood City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 17
+                TrainerList: 
+                        - BLACKBELT_T 2
+                        - BLACKBELT_T 4
+                        - BLACKBELT_T 5
+            -
+                Name: Cianwood Gym Trainers After Boulders
+                FileName: CianwoodGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Cianwood City
+                FlagReqs:
+                    - Plain Badge
+                ItemReqs:
+                    - Strength
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 17
+                TrainerList: 
+                        - BLACKBELT_T 7
+                        - CHUCK 1

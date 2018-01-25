@@ -18,7 +18,7 @@ Location:
                 Name: Falkner TM
                 FileName: VioletGym.asm
                 Type: Item
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Violet Gym
                 FlagReqs:
