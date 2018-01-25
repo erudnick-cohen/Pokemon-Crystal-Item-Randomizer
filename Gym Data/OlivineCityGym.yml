@@ -2,7 +2,7 @@ Location:
     -
         Name: Olivine City Gym Badge
         FileName: OlivineGym.asm
-        LocationReqs: Olivine Gym
+        LocationReqs: Olivine Gym Trainers
         Type: Gym
         HasPKMN: No
         WildTableList:

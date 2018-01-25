@@ -25,7 +25,8 @@ Mineral.isTrash = True
 Mineral.Name = 'Mineral Badge'
 BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral}
 result = RandomizeItems.RandomizeItems('Route 32',LocationData.LocationList,progressItems,trashItems,BadgeDict)
-print(result[1])
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())
 RandomizerRom.WriteTrainerLevels(result[0], result[2])
+print(result[2])
+print(result[1])
