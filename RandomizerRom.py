@@ -147,7 +147,7 @@ def WriteTrainerLevels(locationDict, distDict):
 					for k in trainer['Pokemon']:
 						pokemon = k['Pokemon']
 						level = k['Level']
-						newlevel = level-location.AreaLevel+distDict[i]
+						newlevel = max(level-location.AreaLevel+distDict[i], 2)
 						newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
 					newfile = newfile.replace(trainer['Code'],newcode)
 	newfilestream = open("RandomizerRom/data/trainers/parties.asm",'w')
