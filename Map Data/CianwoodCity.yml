@@ -24,6 +24,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 41
                 FlagReqs:
+                    - Lighthouse
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
