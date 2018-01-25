@@ -182,6 +182,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                IsBall: Yes
                 NormalItem: REVIVE
                 ReachableReqs:
                 Code: |
