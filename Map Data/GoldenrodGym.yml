@@ -18,7 +18,7 @@ Location:
                 Name: Whitney TM
                 FileName: GoldenrodGym.asm
                 Type: Item
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Goldenrod Gym
                 FlagReqs:

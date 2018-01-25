@@ -18,7 +18,7 @@ Location:
                 Name: Chuck TM
                 FileName: CianwoodGym.asm
                 Type: Item
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Cianwood Gym
                 FlagReqs:

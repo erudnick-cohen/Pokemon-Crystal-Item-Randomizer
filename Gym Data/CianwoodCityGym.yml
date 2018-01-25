@@ -2,7 +2,7 @@ Location:
     -
         Name: Cianwood City Gym Badge
         FileName: CianwoodGym.asm
-        LocationReqs: Cianwood Gym
+        LocationReqs: Cianwood Gym Trainers After Boulders
         Type: Gym
         HasPKMN: No
         WildTableList:

@@ -2,7 +2,7 @@ Location:
     -
         Name: Azalea Town Gym Badge
         FileName: AzaleaGym.asm
-        LocationReqs: Azalea Gym
+        LocationReqs: Azalea Gym Trainers
         Type: Gym
         HasPKMN: No
         WildTableList:

@@ -2,7 +2,7 @@ Location:
     -
         Name: Violet City Gym Badge
         FileName: VioletGym.asm
-        LocationReqs: Violet Gym
+        LocationReqs: Violet Gym Trainers
         HasPKMN: No
         Type: Gym
         WildTableList:

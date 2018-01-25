@@ -2,7 +2,7 @@ Location:
     -
         Name: Goldenrod City Gym
         FileName: GoldenrodGym.asm
-        LocationReqs: Goldenrod Gym
+        LocationReqs: Goldenrod Gym Trainers
         HasPKMN: No
         Type: Gym
         WildTableList:

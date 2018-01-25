@@ -2,7 +2,7 @@ Location:
     -
         Name: Ecruteak City Gym Badge
         FileName: EcruteakGym.asm
-        LocationReqs: Ecruteak Gym
+        LocationReqs: Ecruteak Gym Trainers
         Type: Gym
         HasPKMN: No
         WildTableList:
