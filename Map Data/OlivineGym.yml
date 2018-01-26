@@ -8,6 +8,7 @@ Location:
         LocationReqs: Olivine City
         FlagReqs:
         ItemReqs:
+            - Secret Potion
         FlagsSet:
         ReachableReqs:
         Code:

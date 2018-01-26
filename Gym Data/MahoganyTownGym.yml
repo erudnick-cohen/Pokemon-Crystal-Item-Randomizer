@@ -1,0 +1,45 @@
+Location:
+    -
+        Name: Mahogany Town Gym Badge
+        FileName: MahoganyGym.asm
+        LocationReqs: Mahogany Gym Trainers
+        Type: Gym
+        HasPKMN: No
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock: Whirlpool
+        InfeasibleBadges:
+        NormalBadge: Glacier Badge
+        BadgeLine: |
+            PryceScript_0x199a9e:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_PRYCE
+                iftrue .FightDone
+                writetext PryceText_Intro
+                waitbutton
+                closetext
+                winlosstext PryceText_Impressed, 0
+                loadtrainer PRYCE, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_PRYCE
+                opentext
+                writetext Text_ReceivedGlacierBadge
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                checkcode VAR_BADGES
+                scall MahoganyGymActivateRockets
+        Code:
+        Text:
+            -
+                File: MahoganyGym.asm
+                Text: |        
+                    Text_ReceivedGlacierBadge:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

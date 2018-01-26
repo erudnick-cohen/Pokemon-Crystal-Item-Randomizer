@@ -4,7 +4,7 @@ import RandomizeItems
 import RandomizerRom
 
 trashItems = LocationData.trashList;
-progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale']
+progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool']
 Zephyr = Badge.Badge()
 Zephyr.isTrash = False
 Zephyr.Name = 'Zephyr Badge'
@@ -23,7 +23,10 @@ Storm.Name = 'Storm Badge'
 Mineral = Badge.Badge()
 Mineral.isTrash = True
 Mineral.Name = 'Mineral Badge'
-BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral}
+Glacier = Badge.Badge()
+Glacier.isTrash = False
+Glacier.Name = 'Glacier Badge'
+BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier}
 result = RandomizeItems.RandomizeItems('Route 32',LocationData.LocationList,progressItems,trashItems,BadgeDict)
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())

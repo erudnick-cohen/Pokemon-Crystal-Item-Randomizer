@@ -1,0 +1,83 @@
+Location:
+    -
+        Name: Mahogany Gym
+        FileName: MahoganyGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Mahogany Town
+        FlagReqs:
+            - Mahogany Rockets Defeated
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Pryce TM
+                FileName: MahoganyGym.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Mahogany Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_ICY_WINDD
+                Code: |
+                    .FightDone:
+                        checkevent EVENT_GOT_TM16_ICY_WIND
+                        iftrue PryceScript_Defeat
+                        setevent EVENT_BEAT_SKIER_ROXANNE
+                        setevent EVENT_BEAT_SKIER_CLARISSA
+                        setevent EVENT_BEAT_BOARDER_RONALD
+                        setevent EVENT_BEAT_BOARDER_BRAD
+                        setevent EVENT_BEAT_BOARDER_DOUGLAS
+                        writetext PryceText_GlacierBadgeSpeech
+                        buttonsound
+                        ITEMLINE
+                        iffalse MahoganyGym_NoRoomForIcyWind
+                        setevent EVENT_GOT_TM16_ICY_WIND
+                        writetext PryceText_IcyWindSpeech
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    PryceText_IcyWindSpeech:
+                        text "That TM contains"
+                        line "ITEMNAME."
+
+                        para "It inflicts damage"
+                        line "and lowers speed."
+
+                        para "It demonstrates"
+                        line "the harshness of"
+                        cont "winter."
+                        done
+                TrainerList: 
+                Sublocations:
+
+            -
+                Name: Mahogany Gym Trainers
+                FileName: MahoganyGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Mahogany Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 18
+                TrainerList: 
+                        - SKIER 1
+                        - SKIER 2
+                        - BOARDER 1
+                        - BOARDER 2
+                        - BOARDER 3
+                        - PRYCE 1        

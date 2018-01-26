@@ -1,0 +1,324 @@
+Location:
+    -
+        Name: Rocket Base
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Red Scale Dropped
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Rocket Base 1F
+                FileName: TeamRocketBaseB1F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 16
+                TrainerList: 
+                    - GRUNTM 16
+                    - GRUNTM 20
+                    - GRUNTM 21
+                    - SCIENTIST 3
+                Sublocations:
+                    -
+                        Name: Rocket Base 1F Hyper Potion
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: HYPER_POTION
+                        Code: |
+                            TeamRocketBaseB1FHyperPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 1F Nugget
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: NUGGET
+                        Code: |
+                            TeamRocketBaseB1FNugget:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 1F Guard Spec
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: GUARD_SPEC
+                        Code: |
+                            TeamRocketBaseB1FGuardSpec:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            -
+                Name: Rocket Base 2F
+                FileName: TeamRocketBaseB2F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base 1F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 17
+                TrainerList: 
+                    - GRUNTM 18
+                    - GRUNTM 19
+                    - GRUNTM 17
+                Sublocations:
+                    -
+                        Name: Rocket Base 2F Thief TM
+                        FileName: TeamRocketBaseB2F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 2F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: TM_THIEF
+                        Code: |
+                            TeamRocketBaseB2FTMThief:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            -
+                Name: Rocket Base 3F
+                FileName: TeamRocketBaseB3F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base 2F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 18
+                TrainerList: 
+                    - GRUNTF 5
+                    - GRUNTM 9
+                    - EXECUTIVEM 4
+                    - SCIENTIST 1
+                    - SCIENTIST 2
+                Sublocations:
+                    -
+                        Name: Rocket Base 3F Protein
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: PROTEIN
+                        Code: |
+                            TeamRocketBaseB3FProtein:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 3F X Special
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: X_SPECIAL
+                        Code: |
+                            TeamRocketBaseB3FXSpecial:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 3F Full Heal
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: FULL_HEAL
+                        Code: |
+                            TeamRocketBaseB3FFullHeal:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 3F Ice Heal
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ICE_HEAL
+                        Code: |
+                            TeamRocketBaseB3FIceHeal:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base 3F Ultra Ball
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ULTRA_BALL
+                        Code: |
+                            TeamRocketBaseB3FUltraBall:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            -
+                Name: Rocket Base Whirlpool
+                FileName: TeamRocketBaseB2F.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base 3F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Mahogany Rockets Defeated
+                ReachableReqs:
+                Code: |
+                    UnknownScript_0x6d184:
+                        moveobject TEAMROCKETBASEB2F_LANCE, $12, $6
+                        appear TEAMROCKETBASEB2F_LANCE
+                        applymovement TEAMROCKETBASEB2F_LANCE, MovementData_0x6d27a
+                        spriteface PLAYER, RIGHT
+                        opentext
+                        writetext UnknownText_0x6d809
+                        buttonsound
+                        ITEMLINE
+                        setevent EVENT_GOT_HM06_WHIRLPOOL
+                        writetext UnknownText_0x6d8f8
+                        waitbutton
+                        closetext
+                        spriteface TEAMROCKETBASEB2F_LANCE, DOWN
+                        opentext
+                        writetext UnknownText_0x6d994
+                        waitbutton
+                        closetext
+                        spriteface PLAYER, DOWN
+                        applymovement TEAMROCKETBASEB2F_LANCE, MovementData_0x6d283
+                        disappear TEAMROCKETBASEB2F_LANCE
+                        setevent EVENT_CLEARED_ROCKET_HIDEOUT
+                        clearflag ENGINE_ROCKET_SIGNAL_ON_CH20
+                        setevent EVENT_ROUTE_43_GATE_ROCKETS
+                        setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
+                        setscene $3
+                        clearevent EVENT_LAKE_OF_RAGE_CIVILIANS
+                        setevent EVENT_TURNED_OFF_SECURITY_CAMERAS
+                        setevent EVENT_SECURITY_CAMERA_1
+                        setevent EVENT_SECURITY_CAMERA_2
+                        setevent EVENT_SECURITY_CAMERA_3
+                        setevent EVENT_SECURITY_CAMERA_4
+                        setevent EVENT_SECURITY_CAMERA_5
+                        end
+                Text: |
+                    UnknownText_0x6d8e6:
+                        text "<PLAYER> received"
+                        line "ITEMNAME."
+                        done
+
+                    UnknownText_0x6d8f8:
+                        text "That's ITEMNAME."
+                        line "Teach it to a"
+
+                        para "#MON to get"
+                        line "across wild water."
+
+                        para "But keep this in"
+                        line "mind."
+
+                        para "You can use that"
+                        line "out of battle only"
+
+                        para "with the BADGE"
+                        line "from MAHOGANY GYM."
+                        done
+                AREALV: 18
+                TrainerList: 
+                    - EXECUTIVEF 2
+                Sublocations:
+
+
+
+                        

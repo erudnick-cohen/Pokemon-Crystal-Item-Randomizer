@@ -1,0 +1,244 @@
+Location:
+    -
+        Name: Whirl Islands
+        FileName: WhirlIslandCave.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - WHIRL_ISLAND_CAVE
+            - WHIRL_ISLAND_NE
+            - WHIRL_ISLAND_SW
+            - WHIRL_ISLAND_NW
+            - WHIRL_ISLAND_SE
+            - WHIRL_ISLAND_B1F
+            - WHIRL_ISLAND_B2F
+            - WHIRL_ISLAND_LUGIA_CHAMBER
+        LocationReqs: Route 41
+        FlagReqs:
+            - Glacier Badge
+        ItemReqs:
+            - Whirlpool
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Whirl Islands B1 Full Restore
+                FileName: WhirlIslandB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: FULL_RESTORE
+                Code: |
+                    WhirlIslandB1FFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands Carbos
+                FileName: WhirlIslandB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: CARBOS
+                Code: |
+                    WhirlIslandB1FCarbos:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands Calcium
+                FileName: WhirlIslandB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: CALCIUM
+                Code: |
+                    WhirlIslandB1FCalcium:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands Nugget
+                FileName: WhirlIslandB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: NUGGET
+                Code: |
+                    WhirlIslandB1FNugget:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands Escape Rope
+                FileName: WhirlIslandB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ESCAPE_ROPE
+                Code: |
+                    WhirlIslandB1FEscapeRope:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands B2 Full Restore
+                FileName: WhirlIslandB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: FULL_RESTORE
+                Code: |
+                    WhirlIslandB2FFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands B2 Max Revive
+                FileName: WhirlIslandB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_REVIVE
+                Code: |
+                    WhirlIslandB2FMaxRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands B2 Max Elixer
+                FileName: WhirlIslandB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_ELIXER
+                Code: |
+                    WhirlIslandB2FMaxElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands NE Ultra Ball
+                FileName: WhirlIslandNE.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ULTRA_BALL
+                Code: |
+                    WhirlIslandNEUltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Whirl Islands SW Ultra Ball
+                FileName: WhirlIslandSW.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Whirl Islands
+                FlagReqs:
+                    - Glacier Badge
+                ItemReqs:
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ULTRA_BALL
+                Code: |
+                    WhirlIslandSWUltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+
+
+
+
+
+
+
+                

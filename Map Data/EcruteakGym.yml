@@ -18,7 +18,7 @@ Location:
                 Name: Morty TM
                 FileName: EcruteakGym.asm
                 Type: Item
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Ecruteak Gym
                 FlagReqs:
