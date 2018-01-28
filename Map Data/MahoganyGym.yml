@@ -26,7 +26,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: TM_ICY_WINDD
+                NormalItem: TM_ICY_WIND
                 Code: |
                     .FightDone:
                         checkevent EVENT_GOT_TM16_ICY_WIND
