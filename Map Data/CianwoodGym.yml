@@ -22,7 +22,9 @@ Location:
                 WildTableList: 
                 LocationReqs: Cianwood Gym
                 FlagReqs:
+                    - Plain Badge
                 ItemReqs:
+                    - Strength
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
