@@ -109,7 +109,6 @@ Location:
                     .Finish:
                         closetext
                         end
-
                 Text: |
                     Text_RoarIntro:
                         text "WROOOOAR!"
@@ -129,7 +128,6 @@ Location:
                         para "EVEN #MON RUN"
                         line "FROM A GOOD ITEMNAME!"
                         done
-
                 TrainerList: 
                 Sublocations:
             -
