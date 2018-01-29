@@ -1,20 +1,21 @@
 BEAUTY 1:
   Class: BEAUTY
   Code: "; BEAUTY (1)\n\tdb \"VICTORIA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 9, SENTRET\n\tdb 13, SENTRET\n\tdb 17, SENTRET\n\n\tdb $ff ; end"
+    db 2, SENTRET\n\tdb 6, SENTRET\n\tdb 10, SENTRET\n\n\tdb $ff ; end"
   Name: VICTORIA
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 9
+    Level: 2
+    Moves:
+    - '2'
+    Pokemon: SENTRET
+  - Item: null
+    Level: 6
     Moves: []
     Pokemon: SENTRET
   - Item: null
-    Level: 13
-    Moves: []
-    Pokemon: SENTRET
-  - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: SENTRET
   Type: TRAINERTYPE_NORMAL
@@ -101,14 +102,14 @@ BEAUTY 15:
 BEAUTY 16:
   Class: BEAUTY
   Code: "; BEAUTY (16)\n\tdb \"VALERIE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 17, HOPPIP\n\t\tdb SYNTHESIS\n\t\tdb TAIL_WHIP\n\t\tdb TACKLE\n\t\tdb POISONPOWDER\n\
-    \n\tdb 17, SKIPLOOM\n\t\tdb SYNTHESIS\n\t\tdb TAIL_WHIP\n\t\tdb TACKLE\n\t\tdb\
+    \tdb 7, HOPPIP\n\t\tdb SYNTHESIS\n\t\tdb TAIL_WHIP\n\t\tdb TACKLE\n\t\tdb POISONPOWDER\n\
+    \n\tdb 7, SKIPLOOM\n\t\tdb SYNTHESIS\n\t\tdb TAIL_WHIP\n\t\tdb TACKLE\n\t\tdb\
     \ STUN_SPORE\n\n\tdb $ff ; end"
   Name: VALERIE
   Number: '16'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 7
     Moves:
     - SYNTHESIS
     - TAIL_WHIP
@@ -116,7 +117,7 @@ BEAUTY 16:
     - POISONPOWDER
     Pokemon: HOPPIP
   - Item: null
-    Level: 17
+    Level: 7
     Moves:
     - SYNTHESIS
     - TAIL_WHIP
@@ -127,26 +128,26 @@ BEAUTY 16:
 BEAUTY 17:
   Class: BEAUTY
   Code: "; BEAUTY (17)\n\tdb \"OLIVIA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, CORSOLA\n\n\tdb $ff ; end"
+    db 9, CORSOLA\n\n\tdb $ff ; end"
   Name: OLIVIA
   Number: '17'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 9
     Moves: []
     Pokemon: CORSOLA
   Type: TRAINERTYPE_NORMAL
 BEAUTY 2:
   Class: BEAUTY
   Code: "; BEAUTY (2)\n\tdb \"SAMANTHA@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 16, MEOWTH\n\t\tdb SCRATCH\n\t\tdb GROWL\n\t\tdb BITE\n\t\tdb PAY_DAY\n\n\
-    \tdb 16, MEOWTH\n\t\tdb SCRATCH\n\t\tdb GROWL\n\t\tdb BITE\n\t\tdb SLASH\n\n\t\
-    db $ff ; end"
+    \tdb 9, MEOWTH\n\t\tdb SCRATCH\n\t\tdb GROWL\n\t\tdb BITE\n\t\tdb PAY_DAY\n\n\t\
+    db 9, MEOWTH\n\t\tdb SCRATCH\n\t\tdb GROWL\n\t\tdb BITE\n\t\tdb SLASH\n\n\tdb\
+    \ $ff ; end"
   Name: SAMANTHA
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 9
     Moves:
     - SCRATCH
     - GROWL
@@ -154,7 +155,7 @@ BEAUTY 2:
     - PAY_DAY
     Pokemon: MEOWTH
   - Item: null
-    Level: 16
+    Level: 9
     Moves:
     - SCRATCH
     - GROWL
@@ -207,7 +208,8 @@ BEAUTY 6:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: VILEPLUME
   - Item: null
     Level: 34
@@ -267,15 +269,18 @@ BIKER 1:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 BIKER 2:
@@ -287,15 +292,18 @@ BIKER 2:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 BIKER 3:
@@ -308,15 +316,18 @@ BIKER 3:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 30
@@ -408,7 +419,8 @@ BIKER 9:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 30
@@ -448,7 +460,8 @@ BIRD_KEEPER 10:
     Pokemon: DODUO
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DODUO
   - Item: null
     Level: 32
@@ -482,20 +495,20 @@ BIRD_KEEPER 12:
 BIRD_KEEPER 13:
   Class: BIRD_KEEPER
   Code: "; BIRD_KEEPER (13)\n\tdb \"PETER@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 6, PIDGEY\n\tdb 6, PIDGEY\n\tdb 8, SPEAROW\n\n\tdb $ff ; end"
+    \tdb 7, PIDGEY\n\tdb 7, PIDGEY\n\tdb 9, SPEAROW\n\n\tdb $ff ; end"
   Name: PETER
   Number: '13'
   Pokemon:
   - Item: null
-    Level: 6
+    Level: 7
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 6
+    Level: 7
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 8
+    Level: 9
     Moves: []
     Pokemon: SPEAROW
   Type: TRAINERTYPE_NORMAL
@@ -613,85 +626,85 @@ BIRD_KEEPER 2:
 BIRD_KEEPER 3:
   Class: BIRD_KEEPER
   Code: "; BIRD_KEEPER (3)\n\tdb \"BRYAN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 12, PIDGEY\n\tdb 14, PIDGEOTTO\n\n\tdb $ff ; end"
+    \tdb 5, PIDGEY\n\tdb 7, PIDGEOTTO\n\n\tdb $ff ; end"
   Name: BRYAN
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 5
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: PIDGEOTTO
   Type: TRAINERTYPE_NORMAL
 BIRD_KEEPER 4:
   Class: BIRD_KEEPER
   Code: "; BIRD_KEEPER (4)\n\tdb \"THEO@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, PIDGEY\n\tdb 15, PIDGEY\n\tdb 19, PIDGEY\n\tdb 15, PIDGEY\n\tdb 15, PIDGEY\n\
+    \tdb 8, PIDGEY\n\tdb 6, PIDGEY\n\tdb 10, PIDGEY\n\tdb 6, PIDGEY\n\tdb 6, PIDGEY\n\
     \n\tdb $ff ; end"
   Name: THEO
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 15
+    Level: 6
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 15
+    Level: 6
     Moves: []
     Pokemon: PIDGEY
   - Item: null
-    Level: 15
+    Level: 6
     Moves: []
     Pokemon: PIDGEY
   Type: TRAINERTYPE_NORMAL
 BIRD_KEEPER 5:
   Class: BIRD_KEEPER
   Code: "; BIRD_KEEPER (5)\n\tdb \"TOBY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 15, DODUO\n\tdb 16, DODUO\n\tdb 17, DODUO\n\n\tdb $ff ; end"
+    \tdb 5, DODUO\n\tdb 6, DODUO\n\tdb 7, DODUO\n\n\tdb $ff ; end"
   Name: TOBY
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 15
+    Level: 5
     Moves: []
     Pokemon: DODUO
   - Item: null
-    Level: 16
+    Level: 6
     Moves: []
     Pokemon: DODUO
   - Item: null
-    Level: 17
+    Level: 7
     Moves: []
     Pokemon: DODUO
   Type: TRAINERTYPE_NORMAL
 BIRD_KEEPER 6:
   Class: BIRD_KEEPER
   Code: "; BIRD_KEEPER (6)\n\tdb \"DENIS@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 18, SPEAROW\n\tdb 20, FEAROW\n\tdb 18, SPEAROW\n\n\tdb $ff ; end"
+    \tdb 9, SPEAROW\n\tdb 11, FEAROW\n\tdb 9, SPEAROW\n\n\tdb $ff ; end"
   Name: DENIS
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: SPEAROW
   - Item: null
-    Level: 20
+    Level: 11
     Moves: []
     Pokemon: FEAROW
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: SPEAROW
   Type: TRAINERTYPE_NORMAL
@@ -704,11 +717,13 @@ BIRD_KEEPER 7:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIDGEOTTO
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIDGEOTTO
   Type: TRAINERTYPE_NORMAL
 BIRD_KEEPER 8:
@@ -736,7 +751,8 @@ BIRD_KEEPER 9:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: FEAROW
   - Item: null
     Level: 35
@@ -753,7 +769,8 @@ BLACKBELT_T 1:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ONIX
   - Item: null
     Level: 30
@@ -761,7 +778,8 @@ BLACKBELT_T 1:
     Pokemon: HITMONLEE
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ONIX
   - Item: null
     Level: 32
@@ -771,13 +789,13 @@ BLACKBELT_T 1:
 BLACKBELT_T 2:
   Class: BLACKBELT_T
   Code: "; BLACKBELT_T (2)\n\tdb \"YOSHI@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 27, HITMONLEE\n\t\tdb DOUBLE_KICK\n\t\tdb MEDITATE\n\t\tdb JUMP_KICK\n\t\
+    \n\tdb 19, HITMONLEE\n\t\tdb DOUBLE_KICK\n\t\tdb MEDITATE\n\t\tdb JUMP_KICK\n\t\
     \tdb FOCUS_ENERGY\n\n\tdb $ff ; end"
   Name: YOSHI
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 27
+    Level: 19
     Moves:
     - DOUBLE_KICK
     - MEDITATE
@@ -832,13 +850,13 @@ BLACKBELT_T 3:
 BLACKBELT_T 4:
   Class: BLACKBELT_T
   Code: "; BLACKBELT_T (4)\n\tdb \"LAO@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 27, HITMONCHAN\n\t\tdb COMET_PUNCH\n\t\tdb THUNDERPUNCH\n\t\tdb ICE_PUNCH\n\
+    \tdb 19, HITMONCHAN\n\t\tdb COMET_PUNCH\n\t\tdb THUNDERPUNCH\n\t\tdb ICE_PUNCH\n\
     \t\tdb FIRE_PUNCH\n\n\tdb $ff ; end"
   Name: LAO
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 27
+    Level: 19
     Moves:
     - COMET_PUNCH
     - THUNDERPUNCH
@@ -849,14 +867,14 @@ BLACKBELT_T 4:
 BLACKBELT_T 5:
   Class: BLACKBELT_T
   Code: "; BLACKBELT_T (5)\n\tdb \"NOB@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 25, MACHOP\n\t\tdb LEER\n\t\tdb FOCUS_ENERGY\n\t\tdb KARATE_CHOP\n\t\tdb\
-    \ SEISMIC_TOSS\n\n\tdb 25, MACHOKE\n\t\tdb LEER\n\t\tdb KARATE_CHOP\n\t\tdb SEISMIC_TOSS\n\
+    \tdb 17, MACHOP\n\t\tdb LEER\n\t\tdb FOCUS_ENERGY\n\t\tdb KARATE_CHOP\n\t\tdb\
+    \ SEISMIC_TOSS\n\n\tdb 17, MACHOKE\n\t\tdb LEER\n\t\tdb KARATE_CHOP\n\t\tdb SEISMIC_TOSS\n\
     \t\tdb ROCK_SLIDE\n\n\tdb $ff ; end"
   Name: NOB
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 25
+    Level: 17
     Moves:
     - LEER
     - FOCUS_ENERGY
@@ -864,7 +882,7 @@ BLACKBELT_T 5:
     - SEISMIC_TOSS
     Pokemon: MACHOP
   - Item: null
-    Level: 25
+    Level: 17
     Moves:
     - LEER
     - KARATE_CHOP
@@ -891,20 +909,20 @@ BLACKBELT_T 6:
 BLACKBELT_T 7:
   Class: BLACKBELT_T
   Code: "; BLACKBELT_T (7)\n\tdb \"LUNG@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 23, MANKEY\n\tdb 23, MANKEY\n\tdb 25, PRIMEAPE\n\n\tdb $ff ; end"
+    \tdb 16, MANKEY\n\tdb 16, MANKEY\n\tdb 18, PRIMEAPE\n\n\tdb $ff ; end"
   Name: LUNG
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 16
     Moves: []
     Pokemon: MANKEY
   - Item: null
-    Level: 23
+    Level: 16
     Moves: []
     Pokemon: MANKEY
   - Item: null
-    Level: 25
+    Level: 18
     Moves: []
     Pokemon: PRIMEAPE
   Type: TRAINERTYPE_NORMAL
@@ -917,7 +935,8 @@ BLACKBELT_T 8:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOKE
   Type: TRAINERTYPE_NORMAL
 BLACKBELT_T 9:
@@ -1040,57 +1059,65 @@ BLUE 1:
 BOARDER 1:
   Class: BOARDER
   Code: "; BOARDER (1)\n\tdb \"RONALD@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 24, SEEL\n\tdb 25, DEWGONG\n\tdb 24, SEEL\n\n\tdb $ff ; end"
+    db 20, SEEL\n\tdb 21, DEWGONG\n\tdb 20, SEEL\n\n\tdb $ff ; end"
   Name: RONALD
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 24
-    Moves: []
+    Level: 20
+    Moves:
+    - '2'
     Pokemon: SEEL
   - Item: null
-    Level: 25
-    Moves: []
+    Level: 21
+    Moves:
+    - '2'
     Pokemon: DEWGONG
   - Item: null
-    Level: 24
-    Moves: []
+    Level: 20
+    Moves:
+    - '2'
     Pokemon: SEEL
   Type: TRAINERTYPE_NORMAL
 BOARDER 2:
   Class: BOARDER
   Code: "; BOARDER (2)\n\tdb \"BRAD@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 26, SWINUB\n\tdb 26, SWINUB\n\n\tdb $ff ; end"
+    \ 22, SWINUB\n\tdb 22, SWINUB\n\n\tdb $ff ; end"
   Name: BRAD
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 26
-    Moves: []
+    Level: 22
+    Moves:
+    - '22'
     Pokemon: SWINUB
   - Item: null
-    Level: 26
-    Moves: []
+    Level: 22
+    Moves:
+    - '22'
     Pokemon: SWINUB
   Type: TRAINERTYPE_NORMAL
 BOARDER 3:
   Class: BOARDER
   Code: "; BOARDER (3)\n\tdb \"DOUGLAS@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 24, SHELLDER\n\tdb 25, CLOYSTER\n\tdb 24, SHELLDER\n\n\tdb $ff ; end"
+    db 20, SHELLDER\n\tdb 21, CLOYSTER\n\tdb 20, SHELLDER\n\n\tdb $ff ; end"
   Name: DOUGLAS
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 24
-    Moves: []
+    Level: 20
+    Moves:
+    - '2'
     Pokemon: SHELLDER
   - Item: null
-    Level: 25
-    Moves: []
+    Level: 21
+    Moves:
+    - '2'
     Pokemon: CLOYSTER
   - Item: null
-    Level: 24
-    Moves: []
+    Level: 20
+    Moves:
+    - '2'
     Pokemon: SHELLDER
   Type: TRAINERTYPE_NORMAL
 BROCK 1:
@@ -1202,29 +1229,29 @@ BRUNO 1:
 BUGSY 1:
   Class: BUGSY
   Code: "; BUGSY (1)\n\tdb \"BUGSY@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 14, METAPOD\n\t\tdb TACKLE\n\t\tdb STRING_SHOT\n\t\tdb HARDEN\n\t\tdb 0\n\n\t\
-    db 14, KAKUNA\n\t\tdb POISON_STING\n\t\tdb STRING_SHOT\n\t\tdb HARDEN\n\t\tdb\
-    \ 0\n\n\tdb 16, SCYTHER\n\t\tdb QUICK_ATTACK\n\t\tdb LEER\n\t\tdb FURY_CUTTER\n\
+    \ 13, METAPOD\n\t\tdb TACKLE\n\t\tdb STRING_SHOT\n\t\tdb HARDEN\n\t\tdb 0\n\n\t\
+    db 13, KAKUNA\n\t\tdb POISON_STING\n\t\tdb STRING_SHOT\n\t\tdb HARDEN\n\t\tdb\
+    \ 0\n\n\tdb 15, SCYTHER\n\t\tdb QUICK_ATTACK\n\t\tdb LEER\n\t\tdb FURY_CUTTER\n\
     \t\tdb 0\n\n\tdb $ff ; end"
   Name: BUGSY
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 14
+    Level: 13
     Moves:
     - TACKLE
     - STRING_SHOT
     - HARDEN
     Pokemon: METAPOD
   - Item: null
-    Level: 14
+    Level: 13
     Moves:
     - POISON_STING
     - STRING_SHOT
     - HARDEN
     Pokemon: KAKUNA
   - Item: null
-    Level: 16
+    Level: 15
     Moves:
     - QUICK_ATTACK
     - LEER
@@ -1312,12 +1339,12 @@ BUG_CATCHER 12:
 BUG_CATCHER 13:
   Class: BUG_CATCHER
   Code: "; BUG_CATCHER (13)\n\tdb \"ARNIE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 19, VENONAT\n\n\tdb $ff ; end"
+    \tdb 12, VENONAT\n\n\tdb $ff ; end"
   Name: ARNIE
   Number: '13'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: VENONAT
   Type: TRAINERTYPE_NORMAL
@@ -1332,6 +1359,7 @@ BUG_CATCHER 14:
   - Item: null
     Level: 28
     Moves:
+    - '2'
     - DISABLE
     - SUPERSONIC
     - CONFUSION
@@ -1353,6 +1381,7 @@ BUG_CATCHER 15:
   - Item: null
     Level: 24
     Moves:
+    - '2'
     - CONFUSION
     - POISONPOWDER
     - SUPERSONIC
@@ -1361,6 +1390,7 @@ BUG_CATCHER 15:
   - Item: null
     Level: 24
     Moves:
+    - '2'
     - CONFUSION
     - STUN_SPORE
     - SUPERSONIC
@@ -1369,6 +1399,7 @@ BUG_CATCHER 15:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - FURY_ATTACK
     - FOCUS_ENERGY
     - TWINEEDLE
@@ -1377,6 +1408,7 @@ BUG_CATCHER 15:
   - Item: null
     Level: 24
     Moves:
+    - '2'
     - CONFUSION
     - SLEEP_POWDER
     - SUPERSONIC
@@ -1464,16 +1496,16 @@ BUG_CATCHER 18:
 BUG_CATCHER 19:
   Class: BUG_CATCHER
   Code: "; BUG_CATCHER (19)\n\tdb \"WAYNE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 8, LEDYBA\n\tdb 10, PARAS\n\n\tdb $ff ; end"
+    \tdb 9, LEDYBA\n\tdb 11, PARAS\n\n\tdb $ff ; end"
   Name: WAYNE
   Number: '19'
   Pokemon:
   - Item: null
-    Level: 8
+    Level: 9
     Moves: []
     Pokemon: LEDYBA
   - Item: null
-    Level: 10
+    Level: 11
     Moves: []
     Pokemon: PARAS
   Type: TRAINERTYPE_NORMAL
@@ -1523,11 +1555,13 @@ BUG_CATCHER 4:
   Pokemon:
   - Item: null
     Level: 2
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CATERPIE
   - Item: null
     Level: 2
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CATERPIE
   - Item: null
     Level: 3
@@ -1535,54 +1569,55 @@ BUG_CATCHER 4:
     Pokemon: WEEDLE
   - Item: null
     Level: 2
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CATERPIE
   Type: TRAINERTYPE_NORMAL
 BUG_CATCHER 5:
   Class: BUG_CATCHER
   Code: "; BUG_CATCHER (5)\n\tdb \"BENNY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 7, WEEDLE\n\tdb 9, KAKUNA\n\tdb 12, BEEDRILL\n\n\tdb $ff ; end"
+    \tdb 6, WEEDLE\n\tdb 8, KAKUNA\n\tdb 11, BEEDRILL\n\n\tdb $ff ; end"
   Name: BENNY
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 7
+    Level: 6
     Moves: []
     Pokemon: WEEDLE
   - Item: null
-    Level: 9
+    Level: 8
     Moves: []
     Pokemon: KAKUNA
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: BEEDRILL
   Type: TRAINERTYPE_NORMAL
 BUG_CATCHER 6:
   Class: BUG_CATCHER
   Code: "; BUG_CATCHER (6)\n\tdb \"AL@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 12, CATERPIE\n\tdb 12, WEEDLE\n\n\tdb $ff ; end"
+    db 11, CATERPIE\n\tdb 11, WEEDLE\n\n\tdb $ff ; end"
   Name: AL
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: CATERPIE
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: WEEDLE
   Type: TRAINERTYPE_NORMAL
 BUG_CATCHER 7:
   Class: BUG_CATCHER
   Code: "; BUG_CATCHER (7)\n\tdb \"JOSH@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 13, PARAS\n\n\tdb $ff ; end"
+    \tdb 12, PARAS\n\n\tdb $ff ; end"
   Name: JOSH
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 13
+    Level: 12
     Moves: []
     Pokemon: PARAS
   Type: TRAINERTYPE_NORMAL
@@ -1623,15 +1658,18 @@ BURGLAR 1:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGMAR
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 BURGLAR 2:
@@ -1646,6 +1684,7 @@ BURGLAR 2:
   - Item: null
     Level: 26
     Moves:
+    - '2'
     - ROAR
     - EMBER
     - LEER
@@ -1654,6 +1693,7 @@ BURGLAR 2:
   - Item: null
     Level: 24
     Moves:
+    - '2'
     - TACKLE
     - SMOG
     - SLUDGE
@@ -1670,15 +1710,18 @@ BURGLAR 3:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGMAR
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 30
@@ -1748,12 +1791,12 @@ CAL 3:
 CAMPER 1:
   Class: CAMPER
   Code: "; CAMPER (1)\n\tdb \"ROLAND@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 9, NIDORAN_M\n\n\tdb $ff ; end"
+    db 10, NIDORAN_M\n\n\tdb $ff ; end"
   Name: ROLAND
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 9
+    Level: 10
     Moves: []
     Pokemon: NIDORAN_M
   Type: TRAINERTYPE_NORMAL
@@ -1772,12 +1815,12 @@ CAMPER 10:
 CAMPER 11:
   Class: CAMPER
   Code: "; CAMPER (11)\n\tdb \"TED@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 17, MANKEY\n\n\tdb $ff ; end"
+    \ 13, MANKEY\n\n\tdb $ff ; end"
   Name: TED
   Number: '11'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 13
     Moves: []
     Pokemon: MANKEY
   Type: TRAINERTYPE_NORMAL
@@ -1798,7 +1841,8 @@ CAMPER 12:
     Pokemon: GEODUDE
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PSYDUCK
   Type: TRAINERTYPE_NORMAL
 CAMPER 13:
@@ -1810,15 +1854,18 @@ CAMPER 13:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GEODUDE
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GEODUDE
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PSYDUCK
   Type: TRAINERTYPE_NORMAL
 CAMPER 14:
@@ -1936,32 +1983,32 @@ CAMPER 18:
 CAMPER 19:
   Class: CAMPER
   Code: "; CAMPER (19)\n\tdb \"SPENCER@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 17, SANDSHREW\n\tdb 17, SANDSLASH\n\tdb 19, ZUBAT\n\n\tdb $ff ; end"
+    db 8, SANDSHREW\n\tdb 8, SANDSLASH\n\tdb 10, ZUBAT\n\n\tdb $ff ; end"
   Name: SPENCER
   Number: '19'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: SANDSHREW
   - Item: null
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: SANDSLASH
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: ZUBAT
   Type: TRAINERTYPE_NORMAL
 CAMPER 2:
   Class: CAMPER
   Code: "; CAMPER (2)\n\tdb \"TODD@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 14, PSYDUCK\n\n\tdb $ff ; end"
+    \ 11, PSYDUCK\n\n\tdb $ff ; end"
   Name: TODD
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 14
+    Level: 11
     Moves: []
     Pokemon: PSYDUCK
   Type: TRAINERTYPE_NORMAL
@@ -2057,36 +2104,36 @@ CAMPER 22:
 CAMPER 3:
   Class: CAMPER
   Code: "; CAMPER (3)\n\tdb \"IVAN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 10, DIGLETT\n\tdb 10, ZUBAT\n\tdb 14, DIGLETT\n\n\tdb $ff ; end"
+    \ 3, DIGLETT\n\tdb 3, ZUBAT\n\tdb 7, DIGLETT\n\n\tdb $ff ; end"
   Name: IVAN
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 10
+    Level: 3
     Moves: []
     Pokemon: DIGLETT
   - Item: null
-    Level: 10
+    Level: 3
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: DIGLETT
   Type: TRAINERTYPE_NORMAL
 CAMPER 4:
   Class: CAMPER
   Code: "; CAMPER (4)\n\tdb \"ELLIOT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 13, SANDSHREW\n\tdb 15, MARILL\n\n\tdb $ff ; end"
+    db 6, SANDSHREW\n\tdb 8, MARILL\n\n\tdb $ff ; end"
   Name: ELLIOT
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 13
+    Level: 6
     Moves: []
     Pokemon: SANDSHREW
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: MARILL
   Type: TRAINERTYPE_NORMAL
@@ -2143,11 +2190,13 @@ CAMPER 8:
     Pokemon: DUGTRIO
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PRIMEAPE
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: POLIWRATH
   Type: TRAINERTYPE_NORMAL
 CAMPER 9:
@@ -2228,23 +2277,25 @@ CHAMPION 1:
 CHUCK 1:
   Class: CHUCK
   Code: "; CHUCK (1)\n\tdb \"CHUCK@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 27, PRIMEAPE\n\t\tdb LEER\n\t\tdb RAGE\n\t\tdb KARATE_CHOP\n\t\tdb FURY_SWIPES\n\
-    \n\tdb 30, POLIWRATH\n\t\tdb HYPNOSIS\n\t\tdb MIND_READER\n\t\tdb SURF\n\t\tdb\
+    \ 20, PRIMEAPE\n\t\tdb LEER\n\t\tdb RAGE\n\t\tdb KARATE_CHOP\n\t\tdb FURY_SWIPES\n\
+    \n\tdb 23, POLIWRATH\n\t\tdb HYPNOSIS\n\t\tdb MIND_READER\n\t\tdb SURF\n\t\tdb\
     \ DYNAMICPUNCH\n\n\tdb $ff ; end"
   Name: CHUCK
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 27
+    Level: 20
     Moves:
+    - '2'
     - LEER
     - RAGE
     - KARATE_CHOP
     - FURY_SWIPES
     Pokemon: PRIMEAPE
   - Item: null
-    Level: 30
+    Level: 23
     Moves:
+    - '2'
     - HYPNOSIS
     - MIND_READER
     - SURF
@@ -2298,25 +2349,25 @@ CLAIR 1:
 COOLTRAINERF 1:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (1)\n\tdb \"GWEN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 26, EEVEE\n\tdb 22, FLAREON\n\tdb 22, VAPOREON\n\tdb 22, JOLTEON\n\n\tdb\
-    \ $ff ; end"
+    \tdb 11, EEVEE\n\tdb 7, FLAREON\n\tdb 7, VAPOREON\n\tdb 7, JOLTEON\n\n\tdb $ff\
+    \ ; end"
   Name: GWEN
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 26
+    Level: 11
     Moves: []
     Pokemon: EEVEE
   - Item: null
-    Level: 22
+    Level: 7
     Moves: []
     Pokemon: FLAREON
   - Item: null
-    Level: 22
+    Level: 7
     Moves: []
     Pokemon: VAPOREON
   - Item: null
-    Level: 22
+    Level: 7
     Moves: []
     Pokemon: JOLTEON
   Type: TRAINERTYPE_NORMAL
@@ -2431,12 +2482,12 @@ COOLTRAINERF 14:
 COOLTRAINERF 15:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (15)\n\tdb \"EMMA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 28, POLIWHIRL\n\n\tdb $ff ; end"
+    \tdb 13, POLIWHIRL\n\n\tdb $ff ; end"
   Name: EMMA
   Number: '15'
   Pokemon:
   - Item: null
-    Level: 28
+    Level: 13
     Moves: []
     Pokemon: POLIWHIRL
   Type: TRAINERTYPE_NORMAL
@@ -2452,6 +2503,7 @@ COOLTRAINERF 16:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - CONFUSION
     - SLEEP_POWDER
     - WHIRLWIND
@@ -2460,6 +2512,7 @@ COOLTRAINERF 16:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - ABSORB
     - STUN_SPORE
     - ACID
@@ -2469,16 +2522,16 @@ COOLTRAINERF 16:
 COOLTRAINERF 17:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (17)\n\tdb \"JENN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 24, STARYU\n\tdb 26, STARMIE\n\n\tdb $ff ; end"
+    \tdb 17, STARYU\n\tdb 19, STARMIE\n\n\tdb $ff ; end"
   Name: JENN
   Number: '17'
   Pokemon:
   - Item: null
-    Level: 24
+    Level: 17
     Moves: []
     Pokemon: STARYU
   - Item: null
-    Level: 26
+    Level: 19
     Moves: []
     Pokemon: STARMIE
   Type: TRAINERTYPE_NORMAL
@@ -2505,23 +2558,25 @@ COOLTRAINERF 19:
 COOLTRAINERF 2:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (2)\n\tdb \"LOIS@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 25, SKIPLOOM\n\t\tdb SYNTHESIS\n\t\tdb POISONPOWDER\n\t\tdb MEGA_DRAIN\n\
-    \t\tdb LEECH_SEED\n\n\tdb 25, NINETALES\n\t\tdb EMBER\n\t\tdb QUICK_ATTACK\n\t\
+    \n\tdb 20, SKIPLOOM\n\t\tdb SYNTHESIS\n\t\tdb POISONPOWDER\n\t\tdb MEGA_DRAIN\n\
+    \t\tdb LEECH_SEED\n\n\tdb 20, NINETALES\n\t\tdb EMBER\n\t\tdb QUICK_ATTACK\n\t\
     \tdb CONFUSE_RAY\n\t\tdb SAFEGUARD\n\n\tdb $ff ; end"
   Name: LOIS
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 25
+    Level: 20
     Moves:
+    - '2'
     - SYNTHESIS
     - POISONPOWDER
     - MEGA_DRAIN
     - LEECH_SEED
     Pokemon: SKIPLOOM
   - Item: null
-    Level: 25
+    Level: 20
     Moves:
+    - '2'
     - EMBER
     - QUICK_ATTACK
     - CONFUSE_RAY
@@ -2594,32 +2649,33 @@ COOLTRAINERF 4:
 COOLTRAINERF 5:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (5)\n\tdb \"KATE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 26, SHELLDER\n\tdb 28, CLOYSTER\n\n\tdb $ff ; end"
+    \tdb 19, SHELLDER\n\tdb 21, CLOYSTER\n\n\tdb $ff ; end"
   Name: KATE
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 26
+    Level: 19
     Moves: []
     Pokemon: SHELLDER
   - Item: null
-    Level: 28
-    Moves: []
+    Level: 21
+    Moves:
+    - '2'
     Pokemon: CLOYSTER
   Type: TRAINERTYPE_NORMAL
 COOLTRAINERF 6:
   Class: COOLTRAINERF
   Code: "; COOLTRAINERF (6)\n\tdb \"IRENE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 22, GOLDEEN\n\tdb 24, SEAKING\n\n\tdb $ff ; end"
+    \tdb 15, GOLDEEN\n\tdb 17, SEAKING\n\n\tdb $ff ; end"
   Name: IRENE
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: GOLDEEN
   - Item: null
-    Level: 24
+    Level: 17
     Moves: []
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
@@ -2632,15 +2688,18 @@ COOLTRAINERF 7:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MARILL
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: WARTORTLE
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: WARTORTLE
   Type: TRAINERTYPE_NORMAL
 COOLTRAINERF 8:
@@ -2689,15 +2748,15 @@ COOLTRAINERF 9:
 COOLTRAINERM 1:
   Class: COOLTRAINERM
   Code: "; COOLTRAINERM (1)\n\tdb \"NICK@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 26, CHARMANDER\n\t\tdb EMBER\n\t\tdb SMOKESCREEN\n\t\tdb RAGE\n\t\tdb SCARY_FACE\n\
-    \n\tdb 26, SQUIRTLE\n\t\tdb WITHDRAW\n\t\tdb WATER_GUN\n\t\tdb BITE\n\t\tdb CURSE\n\
-    \n\tdb 26, BULBASAUR\n\t\tdb LEECH_SEED\n\t\tdb POISONPOWDER\n\t\tdb SLEEP_POWDER\n\
+    \n\tdb 11, CHARMANDER\n\t\tdb EMBER\n\t\tdb SMOKESCREEN\n\t\tdb RAGE\n\t\tdb SCARY_FACE\n\
+    \n\tdb 11, SQUIRTLE\n\t\tdb WITHDRAW\n\t\tdb WATER_GUN\n\t\tdb BITE\n\t\tdb CURSE\n\
+    \n\tdb 11, BULBASAUR\n\t\tdb LEECH_SEED\n\t\tdb POISONPOWDER\n\t\tdb SLEEP_POWDER\n\
     \t\tdb RAZOR_LEAF\n\n\tdb $ff ; end"
   Name: NICK
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 26
+    Level: 11
     Moves:
     - EMBER
     - SMOKESCREEN
@@ -2705,7 +2764,7 @@ COOLTRAINERM 1:
     - SCARY_FACE
     Pokemon: CHARMANDER
   - Item: null
-    Level: 26
+    Level: 11
     Moves:
     - WITHDRAW
     - WATER_GUN
@@ -2713,7 +2772,7 @@ COOLTRAINERM 1:
     - CURSE
     Pokemon: SQUIRTLE
   - Item: null
-    Level: 26
+    Level: 11
     Moves:
     - LEECH_SEED
     - POISONPOWDER
@@ -2939,6 +2998,7 @@ COOLTRAINERM 19:
   - Item: null
     Level: 27
     Moves:
+    - '2'
     - EMBER
     - SMOKESCREEN
     - RAGE
@@ -2948,20 +3008,20 @@ COOLTRAINERM 19:
 COOLTRAINERM 2:
   Class: COOLTRAINERM
   Code: "; COOLTRAINERM (2)\n\tdb \"AARON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 24, IVYSAUR\n\tdb 24, CHARMELEON\n\tdb 24, WARTORTLE\n\n\tdb $ff ; end"
+    \tdb 19, IVYSAUR\n\tdb 19, CHARMELEON\n\tdb 19, WARTORTLE\n\n\tdb $ff ; end"
   Name: AARON
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 24
+    Level: 19
     Moves: []
     Pokemon: IVYSAUR
   - Item: null
-    Level: 24
+    Level: 19
     Moves: []
     Pokemon: CHARMELEON
   - Item: null
-    Level: 24
+    Level: 19
     Moves: []
     Pokemon: WARTORTLE
   Type: TRAINERTYPE_NORMAL
@@ -3077,6 +3137,7 @@ COOLTRAINERM 8:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - SAND_ATTACK
     - QUICK_ATTACK
     - WHIRLWIND
@@ -3085,6 +3146,7 @@ COOLTRAINERM 8:
   - Item: null
     Level: 27
     Moves:
+    - '2'
     - THUNDERPUNCH
     - LIGHT_SCREEN
     - SWIFT
@@ -3199,15 +3261,15 @@ EXECUTIVEF 1:
 EXECUTIVEF 2:
   Class: EXECUTIVEF
   Code: "; EXECUTIVEF (2)\n\tdb \"EXECUTIVE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 23, ARBOK\n\t\tdb WRAP\n\t\tdb LEER\n\t\tdb POISON_STING\n\t\tdb BITE\n\
-    \n\tdb 23, GLOOM\n\t\tdb ABSORB\n\t\tdb SWEET_SCENT\n\t\tdb SLEEP_POWDER\n\t\t\
-    db ACID\n\n\tdb 25, MURKROW\n\t\tdb PECK\n\t\tdb PURSUIT\n\t\tdb HAZE\n\t\tdb\
+    \n\tdb 17, ARBOK\n\t\tdb WRAP\n\t\tdb LEER\n\t\tdb POISON_STING\n\t\tdb BITE\n\
+    \n\tdb 17, GLOOM\n\t\tdb ABSORB\n\t\tdb SWEET_SCENT\n\t\tdb SLEEP_POWDER\n\t\t\
+    db ACID\n\n\tdb 19, MURKROW\n\t\tdb PECK\n\t\tdb PURSUIT\n\t\tdb HAZE\n\t\tdb\
     \ 0\n\n\tdb $ff ; end"
   Name: EXECUTIVE
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 17
     Moves:
     - WRAP
     - LEER
@@ -3215,7 +3277,7 @@ EXECUTIVEF 2:
     - BITE
     Pokemon: ARBOK
   - Item: null
-    Level: 23
+    Level: 17
     Moves:
     - ABSORB
     - SWEET_SCENT
@@ -3223,7 +3285,7 @@ EXECUTIVEF 2:
     - ACID
     Pokemon: GLOOM
   - Item: null
-    Level: 25
+    Level: 19
     Moves:
     - PECK
     - PURSUIT
@@ -3347,20 +3409,20 @@ EXECUTIVEM 3:
 EXECUTIVEM 4:
   Class: EXECUTIVEM
   Code: "; EXECUTIVEM (4)\n\tdb \"EXECUTIVE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 22, ZUBAT\n\tdb 24, RATICATE\n\tdb 22, KOFFING\n\n\tdb $ff ; end"
+    \tdb 15, ZUBAT\n\tdb 17, RATICATE\n\tdb 15, KOFFING\n\n\tdb $ff ; end"
   Name: EXECUTIVE
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 24
+    Level: 17
     Moves: []
     Pokemon: RATICATE
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
@@ -3396,7 +3458,8 @@ FIREBREATHER 1:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGMAR
   - Item: null
     Level: 32
@@ -3404,7 +3467,8 @@ FIREBREATHER 1:
     Pokemon: WEEZING
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGMAR
   Type: TRAINERTYPE_NORMAL
 FIREBREATHER 2:
@@ -3474,16 +3538,16 @@ FIREBREATHER 5:
 FIREBREATHER 6:
   Class: FIREBREATHER
   Code: "; FIREBREATHER (6)\n\tdb \"WALT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 11, MAGMAR\n\tdb 13, MAGMAR\n\n\tdb $ff ; end"
+    \tdb 4, MAGMAR\n\tdb 6, MAGMAR\n\n\tdb $ff ; end"
   Name: WALT
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 11
+    Level: 4
     Moves: []
     Pokemon: MAGMAR
   - Item: null
-    Level: 13
+    Level: 6
     Moves: []
     Pokemon: MAGMAR
   Type: TRAINERTYPE_NORMAL
@@ -3508,7 +3572,8 @@ FIREBREATHER 8:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 31
@@ -3516,31 +3581,32 @@ FIREBREATHER 8:
     Pokemon: FLAREON
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 FISHER 1:
   Class: FISHER
   Code: "; FISHER (1)\n\tdb \"JUSTIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 5, MAGIKARP\n\tdb 5, MAGIKARP\n\tdb 15, MAGIKARP\n\tdb 5, MAGIKARP\n\n\tdb\
+    db 6, MAGIKARP\n\tdb 6, MAGIKARP\n\tdb 16, MAGIKARP\n\tdb 6, MAGIKARP\n\n\tdb\
     \ $ff ; end"
   Name: JUSTIN
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 5
+    Level: 6
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 5
+    Level: 6
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 15
+    Level: 16
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 5
+    Level: 6
     Moves: []
     Pokemon: MAGIKARP
   Type: TRAINERTYPE_NORMAL
@@ -3553,15 +3619,18 @@ FISHER 10:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLDEEN
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLDEEN
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
 FISHER 11:
@@ -3576,6 +3645,7 @@ FISHER 11:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - LOCK_ON
     - PSYBEAM
     - AURORA_BEAM
@@ -3584,6 +3654,7 @@ FISHER 11:
   - Item: null
     Level: 25
     Moves:
+    - '2'
     - LOCK_ON
     - PSYBEAM
     - AURORA_BEAM
@@ -3600,19 +3671,23 @@ FISHER 12:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SHELLDER
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: OCTILLERY
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: REMORAID
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CLOYSTER
   Type: TRAINERTYPE_NORMAL
 FISHER 13:
@@ -3641,11 +3716,13 @@ FISHER 14:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGIKARP
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGIKARP
   - Item: null
     Level: 31
@@ -3713,7 +3790,8 @@ FISHER 18:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: QWILFISH
   Type: TRAINERTYPE_NORMAL
 FISHER 19:
@@ -3739,12 +3817,12 @@ FISHER 19:
 FISHER 2:
   Class: FISHER
   Code: "; FISHER (2)\n\tdb \"RALPH@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 10, GOLDEEN\n\n\tdb $ff ; end"
+    \ 11, GOLDEEN\n\n\tdb $ff ; end"
   Name: RALPH
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 10
+    Level: 11
     Moves: []
     Pokemon: GOLDEEN
   Type: TRAINERTYPE_NORMAL
@@ -3757,11 +3835,13 @@ FISHER 20:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLDEEN
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLDEEN
   - Item: null
     Level: 32
@@ -3921,7 +4001,8 @@ FISHER 4:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   - Item: null
     Level: 31
@@ -3935,106 +4016,109 @@ FISHER 4:
 FISHER 5:
   Class: FISHER
   Code: "; FISHER (5)\n\tdb \"HENRY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 8, POLIWAG\n\tdb 8, POLIWAG\n\n\tdb $ff ; end"
+    \ 9, POLIWAG\n\tdb 9, POLIWAG\n\n\tdb $ff ; end"
   Name: HENRY
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 8
+    Level: 9
     Moves: []
     Pokemon: POLIWAG
   - Item: null
-    Level: 8
+    Level: 9
     Moves: []
     Pokemon: POLIWAG
   Type: TRAINERTYPE_NORMAL
 FISHER 6:
   Class: FISHER
   Code: "; FISHER (6)\n\tdb \"MARVIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 10, MAGIKARP\n\tdb 10, GYARADOS\n\tdb 15, MAGIKARP\n\tdb 15, GYARADOS\n\n\t\
-    db $ff ; end"
+    db 2, MAGIKARP\n\tdb 2, GYARADOS\n\tdb 6, MAGIKARP\n\tdb 6, GYARADOS\n\n\tdb $ff\
+    \ ; end"
   Name: MARVIN
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 10
-    Moves: []
+    Level: 2
+    Moves:
+    - '2'
     Pokemon: MAGIKARP
   - Item: null
-    Level: 10
-    Moves: []
+    Level: 2
+    Moves:
+    - '2'
     Pokemon: GYARADOS
   - Item: null
-    Level: 15
+    Level: 6
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 15
+    Level: 6
     Moves: []
     Pokemon: GYARADOS
   Type: TRAINERTYPE_NORMAL
 FISHER 7:
   Class: FISHER
   Code: "; FISHER (7)\n\tdb \"TULLY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 18, QWILFISH\n\n\tdb $ff ; end"
+    \ 9, QWILFISH\n\n\tdb $ff ; end"
   Name: TULLY
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: QWILFISH
   Type: TRAINERTYPE_NORMAL
 FISHER 8:
   Class: FISHER
   Code: "; FISHER (8)\n\tdb \"ANDRE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 27, GYARADOS\n\n\tdb $ff ; end"
+    \ 22, GYARADOS\n\n\tdb $ff ; end"
   Name: ANDRE
   Number: '8'
   Pokemon:
   - Item: null
-    Level: 27
-    Moves: []
+    Level: 22
+    Moves:
+    - '22'
     Pokemon: GYARADOS
   Type: TRAINERTYPE_NORMAL
 FISHER 9:
   Class: FISHER
   Code: "; FISHER (9)\n\tdb \"RAYMOND@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 22, MAGIKARP\n\tdb 22, MAGIKARP\n\tdb 22, MAGIKARP\n\tdb 22, MAGIKARP\n\n\t\
+    db 17, MAGIKARP\n\tdb 17, MAGIKARP\n\tdb 17, MAGIKARP\n\tdb 17, MAGIKARP\n\n\t\
     db $ff ; end"
   Name: RAYMOND
   Number: '9'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 17
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 22
+    Level: 17
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 22
+    Level: 17
     Moves: []
     Pokemon: MAGIKARP
   - Item: null
-    Level: 22
+    Level: 17
     Moves: []
     Pokemon: MAGIKARP
   Type: TRAINERTYPE_NORMAL
 GENTLEMAN 1:
   Class: GENTLEMAN
   Code: "; GENTLEMAN (1)\n\tdb \"PRESTON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 18, GROWLITHE\n\tdb 18, GROWLITHE\n\n\tdb $ff ; end"
+    \tdb 9, GROWLITHE\n\tdb 9, GROWLITHE\n\n\tdb $ff ; end"
   Name: PRESTON
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: GROWLITHE
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: GROWLITHE
   Type: TRAINERTYPE_NORMAL
@@ -4075,18 +4159,19 @@ GENTLEMAN 4:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PONYTA
   Type: TRAINERTYPE_NORMAL
 GENTLEMAN 5:
   Class: GENTLEMAN
   Code: "; GENTLEMAN (5)\n\tdb \"ALFRED@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 20, NOCTOWL\n\n\tdb $ff ; end"
+    \tdb 11, NOCTOWL\n\n\tdb $ff ; end"
   Name: ALFRED
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 11
     Moves: []
     Pokemon: NOCTOWL
   Type: TRAINERTYPE_NORMAL
@@ -4115,7 +4200,8 @@ GRUNTF 2:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ARBOK
   Type: TRAINERTYPE_NORMAL
 GRUNTF 3:
@@ -4127,11 +4213,13 @@ GRUNTF 3:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GLOOM
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GLOOM
   Type: TRAINERTYPE_NORMAL
 GRUNTF 4:
@@ -4143,32 +4231,36 @@ GRUNTF 4:
   Pokemon:
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: EKANS
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ODDISH
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: EKANS
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GLOOM
   Type: TRAINERTYPE_NORMAL
 GRUNTF 5:
   Class: GRUNTF
   Code: "; GRUNTF (5)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
-    db 18, EKANS\n\t\tdb WRAP\n\t\tdb LEER\n\t\tdb POISON_STING\n\t\tdb BITE\n\n\t\
-    db 18, GLOOM\n\t\tdb ABSORB\n\t\tdb SWEET_SCENT\n\t\tdb STUN_SPORE\n\t\tdb SLEEP_POWDER\n\
+    db 11, EKANS\n\t\tdb WRAP\n\t\tdb LEER\n\t\tdb POISON_STING\n\t\tdb BITE\n\n\t\
+    db 11, GLOOM\n\t\tdb ABSORB\n\t\tdb SWEET_SCENT\n\t\tdb STUN_SPORE\n\t\tdb SLEEP_POWDER\n\
     \n\tdb $ff ; end"
   Name: GRUNT
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - WRAP
     - LEER
@@ -4176,7 +4268,7 @@ GRUNTF 5:
     - BITE
     Pokemon: EKANS
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - ABSORB
     - SWEET_SCENT
@@ -4205,15 +4297,18 @@ GRUNTM 10:
   Pokemon:
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: ZUBAT
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLBAT
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: GRIMER
   Type: TRAINERTYPE_NORMAL
 GRUNTM 11:
@@ -4225,15 +4320,18 @@ GRUNTM 11:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MUK
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 12:
@@ -4257,7 +4355,8 @@ GRUNTM 13:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 14:
@@ -4269,11 +4368,13 @@ GRUNTM 14:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATICATE
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLBAT
   Type: TRAINERTYPE_NORMAL
 GRUNTM 15:
@@ -4285,83 +4386,85 @@ GRUNTM 15:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRIMER
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: WEEZING
   Type: TRAINERTYPE_NORMAL
 GRUNTM 16:
   Class: GRUNTM
   Code: "; GRUNTM (16)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 16, RATTATA\n\tdb 16, RATTATA\n\tdb 16, RATTATA\n\tdb 16, RATTATA\n\n\tdb $ff\
-    \ ; end"
+    db 9, RATTATA\n\tdb 9, RATTATA\n\tdb 9, RATTATA\n\tdb 9, RATTATA\n\n\tdb $ff ;\
+    \ end"
   Name: GRUNT
   Number: '16'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: RATTATA
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: RATTATA
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: RATTATA
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 17:
   Class: GRUNTM
   Code: "; GRUNTM (17)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 18, GOLBAT\n\n\tdb $ff ; end"
+    db 11, GOLBAT\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '17'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves: []
     Pokemon: GOLBAT
   Type: TRAINERTYPE_NORMAL
 GRUNTM 18:
   Class: GRUNTM
   Code: "; GRUNTM (18)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 17, RATTATA\n\tdb 17, ZUBAT\n\tdb 17, RATTATA\n\n\tdb $ff ; end"
+    db 10, RATTATA\n\tdb 10, ZUBAT\n\tdb 10, RATTATA\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '18'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: RATTATA
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 19:
   Class: GRUNTM
   Code: "; GRUNTM (19)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 18, VENONAT\n\tdb 18, VENONAT\n\n\tdb $ff ; end"
+    db 11, VENONAT\n\tdb 11, VENONAT\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '19'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves: []
     Pokemon: VENONAT
   - Item: null
-    Level: 18
+    Level: 11
     Moves: []
     Pokemon: VENONAT
   Type: TRAINERTYPE_NORMAL
@@ -4388,36 +4491,36 @@ GRUNTM 2:
 GRUNTM 20:
   Class: GRUNTM
   Code: "; GRUNTM (20)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 17, DROWZEE\n\tdb 19, ZUBAT\n\n\tdb $ff ; end"
+    db 10, DROWZEE\n\tdb 12, ZUBAT\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '20'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: DROWZEE
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: ZUBAT
   Type: TRAINERTYPE_NORMAL
 GRUNTM 21:
   Class: GRUNTM
   Code: "; GRUNTM (21)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 16, ZUBAT\n\tdb 17, GRIMER\n\tdb 18, RATTATA\n\n\tdb $ff ; end"
+    db 9, ZUBAT\n\tdb 10, GRIMER\n\tdb 11, RATTATA\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '21'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: GRIMER
   - Item: null
-    Level: 18
+    Level: 11
     Moves: []
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
@@ -4454,11 +4557,13 @@ GRUNTM 24:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 GRUNTM 25:
@@ -4470,11 +4575,13 @@ GRUNTM 25:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MUK
   Type: TRAINERTYPE_NORMAL
 GRUNTM 26:
@@ -4502,7 +4609,8 @@ GRUNTM 27:
   Pokemon:
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: ZUBAT
   Type: TRAINERTYPE_NORMAL
 GRUNTM 28:
@@ -4542,11 +4650,13 @@ GRUNTM 3:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATICATE
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATICATE
   Type: TRAINERTYPE_NORMAL
 GRUNTM 30:
@@ -4558,11 +4668,13 @@ GRUNTM 30:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLBAT
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLBAT
   - Item: null
     Level: 30
@@ -4590,15 +4702,18 @@ GRUNTM 4:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRIMER
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRIMER
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MUK
   Type: TRAINERTYPE_NORMAL
 GRUNTM 5:
@@ -4611,23 +4726,28 @@ GRUNTM 5:
   Pokemon:
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 6:
@@ -4639,11 +4759,13 @@ GRUNTM 6:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ZUBAT
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ZUBAT
   Type: TRAINERTYPE_NORMAL
 GRUNTM 7:
@@ -4656,19 +4778,23 @@ GRUNTM 7:
   Pokemon:
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KOFFING
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRIMER
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ZUBAT
   - Item: null
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RATTATA
   Type: TRAINERTYPE_NORMAL
 GRUNTM 8:
@@ -4680,22 +4806,23 @@ GRUNTM 8:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: WEEZING
   Type: TRAINERTYPE_NORMAL
 GRUNTM 9:
   Class: GRUNTM
   Code: "; GRUNTM (9)\n\tdb \"GRUNT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 24, RATICATE\n\tdb 26, KOFFING\n\n\tdb $ff ; end"
+    \ 17, RATICATE\n\tdb 19, KOFFING\n\n\tdb $ff ; end"
   Name: GRUNT
   Number: '9'
   Pokemon:
   - Item: null
-    Level: 24
+    Level: 17
     Moves: []
     Pokemon: RATICATE
   - Item: null
-    Level: 26
+    Level: 19
     Moves: []
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
@@ -4721,7 +4848,8 @@ GUITARIST 2:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 33
@@ -4739,16 +4867,16 @@ GUITARIST 2:
 HIKER 1:
   Class: HIKER
   Code: "; HIKER (1)\n\tdb \"ANTHONY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 16, GEODUDE\n\tdb 18, MACHAMP\n\n\tdb $ff ; end"
+    db 14, GEODUDE\n\tdb 16, MACHAMP\n\n\tdb $ff ; end"
   Name: ANTHONY
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 14
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 18
+    Level: 16
     Moves: []
     Pokemon: MACHAMP
   Type: TRAINERTYPE_NORMAL
@@ -4764,6 +4892,7 @@ HIKER 10:
   - Item: null
     Level: 27
     Moves:
+    - '2'
     - MAGNITUDE
     - DIG
     - SAND_ATTACK
@@ -4772,6 +4901,7 @@ HIKER 10:
   - Item: null
     Level: 27
     Moves:
+    - '2'
     - MAGNITUDE
     - DIG
     - SAND_ATTACK
@@ -4781,29 +4911,29 @@ HIKER 10:
 HIKER 11:
   Class: HIKER
   Code: "; HIKER (11)\n\tdb \"BAILEY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 13, GEODUDE\n\tdb 13, GEODUDE\n\tdb 13, GEODUDE\n\tdb 13, GEODUDE\n\tdb 13,\
-    \ GEODUDE\n\n\tdb $ff ; end"
+    db 9, GEODUDE\n\tdb 9, GEODUDE\n\tdb 9, GEODUDE\n\tdb 9, GEODUDE\n\tdb 9, GEODUDE\n\
+    \n\tdb $ff ; end"
   Name: BAILEY
   Number: '11'
   Pokemon:
   - Item: null
-    Level: 13
+    Level: 9
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 13
+    Level: 9
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 13
+    Level: 9
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 13
+    Level: 9
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 13
+    Level: 9
     Moves: []
     Pokemon: GEODUDE
   Type: TRAINERTYPE_NORMAL
@@ -4816,15 +4946,18 @@ HIKER 12:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOKE
   Type: TRAINERTYPE_NORMAL
 HIKER 13:
@@ -4889,11 +5022,13 @@ HIKER 16:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SANDSLASH
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   - Item: null
     Level: 31
@@ -4901,7 +5036,8 @@ HIKER 16:
     Pokemon: GOLEM
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   Type: TRAINERTYPE_NORMAL
 HIKER 17:
@@ -4992,7 +5128,8 @@ HIKER 20:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: ONIX
   Type: TRAINERTYPE_NORMAL
 HIKER 21:
@@ -5053,36 +5190,36 @@ HIKER 22:
 HIKER 3:
   Class: HIKER
   Code: "; HIKER (3)\n\tdb \"PHILLIP@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 23, GEODUDE\n\tdb 23, GEODUDE\n\tdb 23, GRAVELER\n\n\tdb $ff ; end"
+    db 8, GEODUDE\n\tdb 8, GEODUDE\n\tdb 8, GRAVELER\n\n\tdb $ff ; end"
   Name: PHILLIP
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 8
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 23
+    Level: 8
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 23
+    Level: 8
     Moves: []
     Pokemon: GRAVELER
   Type: TRAINERTYPE_NORMAL
 HIKER 4:
   Class: HIKER
   Code: "; HIKER (4)\n\tdb \"LEONARD@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 23, GEODUDE\n\tdb 25, MACHOP\n\n\tdb $ff ; end"
+    db 8, GEODUDE\n\tdb 10, MACHOP\n\n\tdb $ff ; end"
   Name: LEONARD
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 8
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 25
+    Level: 10
     Moves: []
     Pokemon: MACHOP
   Type: TRAINERTYPE_NORMAL
@@ -5105,20 +5242,20 @@ HIKER 5:
 HIKER 6:
   Class: HIKER
   Code: "; HIKER (6)\n\tdb \"BENJAMIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 14, DIGLETT\n\tdb 14, GEODUDE\n\tdb 16, DUGTRIO\n\n\tdb $ff ; end"
+    db 5, DIGLETT\n\tdb 5, GEODUDE\n\tdb 7, DUGTRIO\n\n\tdb $ff ; end"
   Name: BENJAMIN
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 14
+    Level: 5
     Moves: []
     Pokemon: DIGLETT
   - Item: null
-    Level: 14
+    Level: 5
     Moves: []
     Pokemon: GEODUDE
   - Item: null
-    Level: 16
+    Level: 7
     Moves: []
     Pokemon: DUGTRIO
   Type: TRAINERTYPE_NORMAL
@@ -5131,15 +5268,18 @@ HIKER 7:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOP
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOP
   Type: TRAINERTYPE_NORMAL
 HIKER 8:
@@ -5151,15 +5291,18 @@ HIKER 8:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GEODUDE
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GRAVELER
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLEM
   Type: TRAINERTYPE_NORMAL
 HIKER 9:
@@ -5234,15 +5377,15 @@ JANINE 1:
 JASMINE 1:
   Class: JASMINE
   Code: "; JASMINE (1)\n\tdb \"JASMINE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 30, MAGNEMITE\n\t\tdb THUNDERBOLT\n\t\tdb SUPERSONIC\n\t\tdb SONICBOOM\n\t\
-    \tdb THUNDER_WAVE\n\n\tdb 30, MAGNEMITE\n\t\tdb THUNDERBOLT\n\t\tdb SUPERSONIC\n\
-    \t\tdb SONICBOOM\n\t\tdb THUNDER_WAVE\n\n\tdb 35, STEELIX\n\t\tdb SCREECH\n\t\t\
+    \tdb 18, MAGNEMITE\n\t\tdb THUNDERBOLT\n\t\tdb SUPERSONIC\n\t\tdb SONICBOOM\n\t\
+    \tdb THUNDER_WAVE\n\n\tdb 18, MAGNEMITE\n\t\tdb THUNDERBOLT\n\t\tdb SUPERSONIC\n\
+    \t\tdb SONICBOOM\n\t\tdb THUNDER_WAVE\n\n\tdb 23, STEELIX\n\t\tdb SCREECH\n\t\t\
     db SUNNY_DAY\n\t\tdb ROCK_THROW\n\t\tdb IRON_TAIL\n\n\tdb $ff ; end"
   Name: JASMINE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 30
+    Level: 18
     Moves:
     - THUNDERBOLT
     - SUPERSONIC
@@ -5250,7 +5393,7 @@ JASMINE 1:
     - THUNDER_WAVE
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 30
+    Level: 18
     Moves:
     - THUNDERBOLT
     - SUPERSONIC
@@ -5258,8 +5401,9 @@ JASMINE 1:
     - THUNDER_WAVE
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 35
+    Level: 23
     Moves:
+    - '2'
     - SCREECH
     - SUNNY_DAY
     - ROCK_THROW
@@ -5269,25 +5413,27 @@ JASMINE 1:
 JUGGLER 1:
   Class: JUGGLER
   Code: "; JUGGLER (1)\n\tdb \"IRWIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 2, VOLTORB\n\tdb 6, VOLTORB\n\tdb 10, VOLTORB\n\tdb 14, VOLTORB\n\n\tdb $ff\
-    \ ; end"
+    db 2, VOLTORB\n\tdb 2, VOLTORB\n\tdb 3, VOLTORB\n\tdb 7, VOLTORB\n\n\tdb $ff ;\
+    \ end"
   Name: IRWIN
   Number: '1'
   Pokemon:
   - Item: null
     Level: 2
+    Moves:
+    - '2'
+    Pokemon: VOLTORB
+  - Item: null
+    Level: 2
+    Moves:
+    - '2'
+    Pokemon: VOLTORB
+  - Item: null
+    Level: 3
     Moves: []
     Pokemon: VOLTORB
   - Item: null
-    Level: 6
-    Moves: []
-    Pokemon: VOLTORB
-  - Item: null
-    Level: 10
-    Moves: []
-    Pokemon: VOLTORB
-  - Item: null
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: VOLTORB
   Type: TRAINERTYPE_NORMAL
@@ -5300,15 +5446,18 @@ JUGGLER 2:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MR__MIME
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGMAR
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOKE
   Type: TRAINERTYPE_NORMAL
 JUGGLER 3:
@@ -5375,11 +5524,13 @@ JUGGLER 5:
     Pokemon: VOLTORB
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: VOLTORB
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: VOLTORB
   - Item: null
     Level: 30
@@ -5400,11 +5551,13 @@ JUGGLER 6:
     Pokemon: VOLTORB
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: VOLTORB
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: VOLTORB
   - Item: null
     Level: 30
@@ -5473,11 +5626,13 @@ KIMONO_GIRL 1:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SKIPLOOM
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: VULPIX
   - Item: null
     Level: 18
@@ -5487,60 +5642,60 @@ KIMONO_GIRL 1:
 KIMONO_GIRL 2:
   Class: KIMONO_GIRL
   Code: "; KIMONO_GIRL (2)\n\tdb \"NAOKO@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, FLAREON\n\n\tdb $ff ; end"
+    \tdb 10, FLAREON\n\n\tdb $ff ; end"
   Name: NAOKO
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: FLAREON
   Type: TRAINERTYPE_NORMAL
 KIMONO_GIRL 3:
   Class: KIMONO_GIRL
   Code: "; KIMONO_GIRL (3)\n\tdb \"SAYO@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, ESPEON\n\n\tdb $ff ; end"
+    \tdb 10, ESPEON\n\n\tdb $ff ; end"
   Name: SAYO
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: ESPEON
   Type: TRAINERTYPE_NORMAL
 KIMONO_GIRL 4:
   Class: KIMONO_GIRL
   Code: "; KIMONO_GIRL (4)\n\tdb \"ZUKI@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, UMBREON\n\n\tdb $ff ; end"
+    \tdb 10, UMBREON\n\n\tdb $ff ; end"
   Name: ZUKI
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: UMBREON
   Type: TRAINERTYPE_NORMAL
 KIMONO_GIRL 5:
   Class: KIMONO_GIRL
   Code: "; KIMONO_GIRL (5)\n\tdb \"KUNI@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, VAPOREON\n\n\tdb $ff ; end"
+    \tdb 10, VAPOREON\n\n\tdb $ff ; end"
   Name: KUNI
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: VAPOREON
   Type: TRAINERTYPE_NORMAL
 KIMONO_GIRL 6:
   Class: KIMONO_GIRL
   Code: "; KIMONO_GIRL (6)\n\tdb \"MIKI@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 17, JOLTEON\n\n\tdb $ff ; end"
+    \tdb 10, JOLTEON\n\n\tdb $ff ; end"
   Name: MIKI
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: JOLTEON
   Type: TRAINERTYPE_NORMAL
@@ -5600,13 +5755,13 @@ KOGA 1:
 LASS 1:
   Class: LASS
   Code: "; LASS (1)\n\tdb \"CARRIE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 18, SNUBBULL\n\t\tdb SCARY_FACE\n\t\tdb CHARM\n\t\tdb BITE\n\t\tdb LICK\n\n\t\
+    \ 11, SNUBBULL\n\t\tdb SCARY_FACE\n\t\tdb CHARM\n\t\tdb BITE\n\t\tdb LICK\n\n\t\
     db $ff ; end"
   Name: CARRIE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - SCARY_FACE
     - CHARM
@@ -5617,14 +5772,14 @@ LASS 1:
 LASS 10:
   Class: LASS
   Code: "; LASS (10)\n\tdb \"DANA@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 18, FLAAFFY\n\t\tdb TACKLE\n\t\tdb GROWL\n\t\tdb THUNDERSHOCK\n\t\tdb THUNDER_WAVE\n\
-    \n\tdb 18, PSYDUCK\n\t\tdb SCRATCH\n\t\tdb TAIL_WHIP\n\t\tdb DISABLE\n\t\tdb CONFUSION\n\
+    \ 8, FLAAFFY\n\t\tdb TACKLE\n\t\tdb GROWL\n\t\tdb THUNDERSHOCK\n\t\tdb THUNDER_WAVE\n\
+    \n\tdb 8, PSYDUCK\n\t\tdb SCRATCH\n\t\tdb TAIL_WHIP\n\t\tdb DISABLE\n\t\tdb CONFUSION\n\
     \n\tdb $ff ; end"
   Name: DANA
   Number: '10'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 8
     Moves:
     - TACKLE
     - GROWL
@@ -5632,7 +5787,7 @@ LASS 10:
     - THUNDER_WAVE
     Pokemon: FLAAFFY
   - Item: null
-    Level: 18
+    Level: 8
     Moves:
     - SCRATCH
     - TAIL_WHIP
@@ -5659,12 +5814,12 @@ LASS 11:
 LASS 12:
   Class: LASS
   Code: "; LASS (12)\n\tdb \"CONNIE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 21, MARILL\n\n\tdb $ff ; end"
+    \ 12, MARILL\n\n\tdb $ff ; end"
   Name: CONNIE
   Number: '12'
   Pokemon:
   - Item: null
-    Level: 21
+    Level: 12
     Moves: []
     Pokemon: MARILL
   Type: TRAINERTYPE_NORMAL
@@ -5677,7 +5832,8 @@ LASS 13:
   Pokemon:
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MARILL
   Type: TRAINERTYPE_NORMAL
 LASS 14:
@@ -5692,6 +5848,7 @@ LASS 14:
   - Item: null
     Level: 21
     Moves:
+    - '2'
     - TACKLE
     - GROWL
     - THUNDERSHOCK
@@ -5700,6 +5857,7 @@ LASS 14:
   - Item: null
     Level: 21
     Moves:
+    - '2'
     - SCRATCH
     - TAIL_WHIP
     - DISABLE
@@ -5718,6 +5876,7 @@ LASS 15:
   - Item: null
     Level: 29
     Moves:
+    - '2'
     - SCRATCH
     - DISABLE
     - CONFUSION
@@ -5726,6 +5885,7 @@ LASS 15:
   - Item: null
     Level: 29
     Moves:
+    - '2'
     - TACKLE
     - THUNDERSHOCK
     - THUNDER_WAVE
@@ -5787,20 +5947,20 @@ LASS 17:
 LASS 2:
   Class: LASS
   Code: "; LASS (2)\n\tdb \"BRIDGET@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 15, JIGGLYPUFF\n\tdb 15, JIGGLYPUFF\n\tdb 15, JIGGLYPUFF\n\n\tdb $ff ; end"
+    \ 8, JIGGLYPUFF\n\tdb 8, JIGGLYPUFF\n\tdb 8, JIGGLYPUFF\n\n\tdb $ff ; end"
   Name: BRIDGET
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: JIGGLYPUFF
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: JIGGLYPUFF
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: JIGGLYPUFF
   Type: TRAINERTYPE_NORMAL
@@ -5826,17 +5986,17 @@ LASS 3:
   Type: TRAINERTYPE_NORMAL
 LASS 4:
   Class: LASS
-  Code: "; LASS (4)\n\tdb \"KRISE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 12,\
-    \ ODDISH\n\tdb 15, CUBONE\n\n\tdb $ff ; end"
+  Code: "; LASS (4)\n\tdb \"KRISE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 5,\
+    \ ODDISH\n\tdb 8, CUBONE\n\n\tdb $ff ; end"
   Name: KRISE
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 5
     Moves: []
     Pokemon: ODDISH
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: CUBONE
   Type: TRAINERTYPE_NORMAL
@@ -5849,7 +6009,8 @@ LASS 5:
   Pokemon:
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MARILL
   Type: TRAINERTYPE_NORMAL
 LASS 6:
@@ -5881,7 +6042,8 @@ LASS 7:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GLOOM
   - Item: null
     Level: 31
@@ -5901,11 +6063,13 @@ LASS 8:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PARAS
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PARAS
   - Item: null
     Level: 32
@@ -5935,36 +6099,36 @@ LASS 9:
 MEDIUM 1:
   Class: MEDIUM
   Code: "; MEDIUM (1)\n\tdb \"MARTHA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 18, GASTLY\n\tdb 20, HAUNTER\n\tdb 20, GASTLY\n\n\tdb $ff ; end"
+    db 10, GASTLY\n\tdb 12, HAUNTER\n\tdb 12, GASTLY\n\n\tdb $ff ; end"
   Name: MARTHA
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 10
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 20
+    Level: 12
     Moves: []
     Pokemon: HAUNTER
   - Item: null
-    Level: 20
+    Level: 12
     Moves: []
     Pokemon: GASTLY
   Type: TRAINERTYPE_NORMAL
 MEDIUM 2:
   Class: MEDIUM
   Code: "; MEDIUM (2)\n\tdb \"GRACE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 20, HAUNTER\n\tdb 20, HAUNTER\n\n\tdb $ff ; end"
+    \ 12, HAUNTER\n\tdb 12, HAUNTER\n\n\tdb $ff ; end"
   Name: GRACE
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 12
     Moves: []
     Pokemon: HAUNTER
   - Item: null
-    Level: 20
+    Level: 12
     Moves: []
     Pokemon: HAUNTER
   Type: TRAINERTYPE_NORMAL
@@ -5977,7 +6141,8 @@ MEDIUM 3:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: HAUNTER
   Type: TRAINERTYPE_NORMAL
 MEDIUM 4:
@@ -5989,7 +6154,8 @@ MEDIUM 4:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: HAUNTER
   Type: TRAINERTYPE_NORMAL
 MEDIUM 5:
@@ -6001,7 +6167,8 @@ MEDIUM 5:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: HAUNTER
   Type: TRAINERTYPE_NORMAL
 MEDIUM 6:
@@ -6083,16 +6250,16 @@ MISTY 1:
 MORTY 1:
   Class: MORTY
   Code: "; MORTY (1)\n\tdb \"MORTY@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 21, GASTLY\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\t\
-    db 21, HAUNTER\n\t\tdb HYPNOSIS\n\t\tdb MIMIC\n\t\tdb CURSE\n\t\tdb NIGHT_SHADE\n\
-    \n\tdb 25, GENGAR\n\t\tdb HYPNOSIS\n\t\tdb SHADOW_BALL\n\t\tdb MEAN_LOOK\n\t\t\
-    db DREAM_EATER\n\n\tdb 23, HAUNTER\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb MIMIC\n\
+    \ 13, GASTLY\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\t\
+    db 13, HAUNTER\n\t\tdb HYPNOSIS\n\t\tdb MIMIC\n\t\tdb CURSE\n\t\tdb NIGHT_SHADE\n\
+    \n\tdb 17, GENGAR\n\t\tdb HYPNOSIS\n\t\tdb SHADOW_BALL\n\t\tdb MEAN_LOOK\n\t\t\
+    db DREAM_EATER\n\n\tdb 15, HAUNTER\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb MIMIC\n\
     \t\tdb NIGHT_SHADE\n\n\tdb $ff ; end"
   Name: MORTY
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 21
+    Level: 13
     Moves:
     - LICK
     - SPITE
@@ -6100,7 +6267,7 @@ MORTY 1:
     - CURSE
     Pokemon: GASTLY
   - Item: null
-    Level: 21
+    Level: 13
     Moves:
     - HYPNOSIS
     - MIMIC
@@ -6108,7 +6275,7 @@ MORTY 1:
     - NIGHT_SHADE
     Pokemon: HAUNTER
   - Item: null
-    Level: 25
+    Level: 17
     Moves:
     - HYPNOSIS
     - SHADOW_BALL
@@ -6116,7 +6283,7 @@ MORTY 1:
     - DREAM_EATER
     Pokemon: GENGAR
   - Item: null
-    Level: 23
+    Level: 15
     Moves:
     - SPITE
     - MEAN_LOOK
@@ -6127,15 +6294,15 @@ MORTY 1:
 MYSTICALMAN 1:
   Class: MYSTICALMAN
   Code: "; MYSTICALMAN (1)\n\tdb \"EUSINE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 23, DROWZEE\n\t\tdb DREAM_EATER\n\t\tdb HYPNOSIS\n\t\tdb DISABLE\n\t\t\
-    db CONFUSION\n\n\tdb 23, HAUNTER\n\t\tdb LICK\n\t\tdb HYPNOSIS\n\t\tdb MEAN_LOOK\n\
-    \t\tdb CURSE\n\n\tdb 25, ELECTRODE\n\t\tdb SCREECH\n\t\tdb SONICBOOM\n\t\tdb THUNDER\n\
+    \n\tdb 15, DROWZEE\n\t\tdb DREAM_EATER\n\t\tdb HYPNOSIS\n\t\tdb DISABLE\n\t\t\
+    db CONFUSION\n\n\tdb 15, HAUNTER\n\t\tdb LICK\n\t\tdb HYPNOSIS\n\t\tdb MEAN_LOOK\n\
+    \t\tdb CURSE\n\n\tdb 17, ELECTRODE\n\t\tdb SCREECH\n\t\tdb SONICBOOM\n\t\tdb THUNDER\n\
     \t\tdb ROLLOUT\n\n\tdb $ff ; end"
   Name: EUSINE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 15
     Moves:
     - DREAM_EATER
     - HYPNOSIS
@@ -6143,7 +6310,7 @@ MYSTICALMAN 1:
     - CONFUSION
     Pokemon: DROWZEE
   - Item: null
-    Level: 23
+    Level: 15
     Moves:
     - LICK
     - HYPNOSIS
@@ -6151,7 +6318,7 @@ MYSTICALMAN 1:
     - CURSE
     Pokemon: HAUNTER
   - Item: null
-    Level: 25
+    Level: 17
     Moves:
     - SCREECH
     - SONICBOOM
@@ -6162,56 +6329,56 @@ MYSTICALMAN 1:
 OFFICER 1:
   Class: OFFICER
   Code: "; OFFICER (1)\n\tdb \"KEITH@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 17, GROWLITHE\n\n\tdb $ff ; end"
+    db 14, GROWLITHE\n\n\tdb $ff ; end"
   Name: KEITH
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 14
     Moves: []
     Pokemon: GROWLITHE
   Type: TRAINERTYPE_NORMAL
 OFFICER 2:
   Class: OFFICER
   Code: "; OFFICER (2)\n\tdb \"DIRK@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 14, GROWLITHE\n\tdb 14, GROWLITHE\n\n\tdb $ff ; end"
+    \ 7, GROWLITHE\n\tdb 7, GROWLITHE\n\n\tdb $ff ; end"
   Name: DIRK
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: GROWLITHE
   - Item: null
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: GROWLITHE
   Type: TRAINERTYPE_NORMAL
 PICNICKER 1:
   Class: PICNICKER
   Code: "; PICNICKER (1)\n\tdb \"LIZ@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 9, NIDORAN_F\n\n\tdb $ff ; end"
+    db 10, NIDORAN_F\n\n\tdb $ff ; end"
   Name: LIZ
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 9
+    Level: 10
     Moves: []
     Pokemon: NIDORAN_F
   Type: TRAINERTYPE_NORMAL
 PICNICKER 10:
   Class: PICNICKER
   Code: "; PICNICKER (10)\n\tdb \"ERIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 16, PONYTA\n\tdb 16, PONYTA\n\n\tdb $ff ; end"
+    db 12, PONYTA\n\tdb 12, PONYTA\n\n\tdb $ff ; end"
   Name: ERIN
   Number: '10'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 12
     Moves: []
     Pokemon: PONYTA
   - Item: null
-    Level: 16
+    Level: 12
     Moves: []
     Pokemon: PONYTA
   Type: TRAINERTYPE_NORMAL
@@ -6248,7 +6415,8 @@ PICNICKER 12:
     Pokemon: NIDORINO
   - Item: null
     Level: 21
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NIDOQUEEN
   Type: TRAINERTYPE_NORMAL
 PICNICKER 13:
@@ -6292,15 +6460,18 @@ PICNICKER 15:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SKIPLOOM
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SKIPLOOM
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: IVYSAUR
   Type: TRAINERTYPE_NORMAL
 PICNICKER 16:
@@ -6368,33 +6539,33 @@ PICNICKER 19:
 PICNICKER 2:
   Class: PICNICKER
   Code: "; PICNICKER (2)\n\tdb \"GINA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 9, HOPPIP\n\tdb 9, HOPPIP\n\tdb 12, BULBASAUR\n\n\tdb $ff ; end"
+    db 6, HOPPIP\n\tdb 6, HOPPIP\n\tdb 9, BULBASAUR\n\n\tdb $ff ; end"
   Name: GINA
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 9
+    Level: 6
+    Moves: []
+    Pokemon: HOPPIP
+  - Item: null
+    Level: 6
     Moves: []
     Pokemon: HOPPIP
   - Item: null
     Level: 9
-    Moves: []
-    Pokemon: HOPPIP
-  - Item: null
-    Level: 12
     Moves: []
     Pokemon: BULBASAUR
   Type: TRAINERTYPE_NORMAL
 PICNICKER 20:
   Class: PICNICKER
   Code: "; PICNICKER (20)\n\tdb \"TIFFANY@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
-    \n\tdb 20, CLEFAIRY\n\t\tdb ENCORE\n\t\tdb SING\n\t\tdb DOUBLESLAP\n\t\tdb MINIMIZE\n\
+    \n\tdb 11, CLEFAIRY\n\t\tdb ENCORE\n\t\tdb SING\n\t\tdb DOUBLESLAP\n\t\tdb MINIMIZE\n\
     \n\tdb $ff ; end"
   Name: TIFFANY
   Number: '20'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 11
     Moves:
     - ENCORE
     - SING
@@ -6446,15 +6617,18 @@ PICNICKER 22:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: WEEPINBELL
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NIDORINO
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NIDOQUEEN
   Type: TRAINERTYPE_NORMAL
 PICNICKER 23:
@@ -6567,13 +6741,13 @@ PICNICKER 26:
 PICNICKER 3:
   Class: PICNICKER
   Code: "; PICNICKER (3)\n\tdb \"BROOKE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 16, PIKACHU\n\t\tdb THUNDERSHOCK\n\t\tdb GROWL\n\t\tdb QUICK_ATTACK\n\t\t\
+    \tdb 9, PIKACHU\n\t\tdb THUNDERSHOCK\n\t\tdb GROWL\n\t\tdb QUICK_ATTACK\n\t\t\
     db DOUBLE_TEAM\n\n\tdb $ff ; end"
   Name: BROOKE
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 9
     Moves:
     - THUNDERSHOCK
     - GROWL
@@ -6584,12 +6758,12 @@ PICNICKER 3:
 PICNICKER 4:
   Class: PICNICKER
   Code: "; PICNICKER (4)\n\tdb \"KIM@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 15, VULPIX\n\n\tdb $ff ; end"
+    db 8, VULPIX\n\n\tdb $ff ; end"
   Name: KIM
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: VULPIX
   Type: TRAINERTYPE_NORMAL
@@ -6668,24 +6842,24 @@ PICNICKER 9:
 POKEFANF 1:
   Class: POKEFANF
   Code: "; POKEFANF (1)\n\tdb \"BEVERLY@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\t\
-    db 14, SNUBBULL, BERRY\n\n\tdb $ff ; end"
+    db 7, SNUBBULL, BERRY\n\n\tdb $ff ; end"
   Name: BEVERLY
   Number: '1'
   Pokemon:
   - Item: BERRY
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: SNUBBULL
   Type: TRAINERTYPE_ITEM
 POKEFANF 2:
   Class: POKEFANF
   Code: "; POKEFANF (2)\n\tdb \"RUTH@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\tdb\
-    \ 17, PIKACHU, BERRY\n\n\tdb $ff ; end"
+    \ 8, PIKACHU, BERRY\n\n\tdb $ff ; end"
   Name: RUTH
   Number: '2'
   Pokemon:
   - Item: BERRY
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: PIKACHU
   Type: TRAINERTYPE_ITEM
@@ -6723,58 +6897,63 @@ POKEFANF 5:
   Pokemon:
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SENTRET
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SENTRET
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SENTRET
   - Item: BERRY
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: FURRET
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SENTRET
   Type: TRAINERTYPE_ITEM
 POKEFANF 6:
   Class: POKEFANF
   Code: "; POKEFANF (6)\n\tdb \"JAIME@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\tdb\
-    \ 16, MEOWTH, BERRY\n\n\tdb $ff ; end"
+    \ 7, MEOWTH, BERRY\n\n\tdb $ff ; end"
   Name: JAIME
   Number: '6'
   Pokemon:
   - Item: BERRY
-    Level: 16
+    Level: 7
     Moves: []
     Pokemon: MEOWTH
   Type: TRAINERTYPE_ITEM
 POKEFANM 1:
   Class: POKEFANM
   Code: "; POKEFANM (1)\n\tdb \"WILLIAM@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\t\
-    db 14, RAICHU, BERRY\n\n\tdb $ff ; end"
+    db 7, RAICHU, BERRY\n\n\tdb $ff ; end"
   Name: WILLIAM
   Number: '1'
   Pokemon:
   - Item: BERRY
-    Level: 14
+    Level: 7
     Moves: []
     Pokemon: RAICHU
   Type: TRAINERTYPE_ITEM
 POKEFANM 10:
   Class: POKEFANM
   Code: "; POKEFANM (10)\n\tdb \"DEREK@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\t\
-    db 19, PIKACHU, BERRY\n\n\tdb $ff ; end"
+    db 10, PIKACHU, BERRY\n\n\tdb $ff ; end"
   Name: DEREK
   Number: '10'
   Pokemon:
   - Item: BERRY
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: PIKACHU
   Type: TRAINERTYPE_ITEM
@@ -6800,15 +6979,18 @@ POKEFANM 12:
   Pokemon:
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NIDOKING
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SLOWKING
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   Type: TRAINERTYPE_ITEM
 POKEFANM 13:
@@ -6870,27 +7052,33 @@ POKEFANM 4:
   Pokemon:
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   - Item: BERRY
     Level: 23
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIKACHU
   Type: TRAINERTYPE_ITEM
 POKEFANM 5:
@@ -6903,15 +7091,18 @@ POKEFANM 5:
   Pokemon:
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: BULBASAUR
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CHARMANDER
   - Item: BERRY
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SQUIRTLE
   Type: TRAINERTYPE_ITEM
 POKEFANM 6:
@@ -6929,12 +7120,12 @@ POKEFANM 6:
 POKEFANM 7:
   Class: POKEFANM
   Code: "; POKEFANM (7)\n\tdb \"BRANDON@\"\n\tdb TRAINERTYPE_ITEM\n\n\t; party\n\t\
-    db 13, SNUBBULL, BERRY\n\n\tdb $ff ; end"
+    db 10, SNUBBULL, BERRY\n\n\tdb $ff ; end"
   Name: BRANDON
   Number: '7'
   Pokemon:
   - Item: BERRY
-    Level: 13
+    Level: 10
     Moves: []
     Pokemon: SNUBBULL
   Type: TRAINERTYPE_ITEM
@@ -6948,15 +7139,18 @@ POKEFANM 8:
   Pokemon:
   - Item: BERRY
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MEOWTH
   - Item: BERRY
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MEOWTH
   - Item: BERRY
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MEOWTH
   Type: TRAINERTYPE_ITEM
 POKEFANM 9:
@@ -6983,6 +7177,21 @@ POKEMANIAC 1:
     Moves: []
     Pokemon: SLOWPOKE
   Type: TRAINERTYPE_NORMAL
+POKEMANIAC 10:
+  Class: POKEMANIAC
+  Code: "; POKEMANIAC (10)\n\tdb \"BRENT@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
+    \n\tdb 36, PORYGON\n\t\tdb RECOVER\n\t\tdb PSYCHIC_M\n\t\tdb CONVERSION2\n\t\t\
+    db TRI_ATTACK\n\n\tdb $ff ; end"
+  Name: BRENT
+  Number: '10'
+  Pokemon:
+  - Item: null
+    Level: 36
+    Moves:
+    - RECOVER
+    - PSYCHIC_M
+    Pokemon: PORYGON
+  Type: TRAINERTYPE_MOVES
 POKEMANIAC 11:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (11)\n\tdb \"ISSAC@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
@@ -7024,7 +7233,8 @@ POKEMANIAC 13:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: RHYHORN
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 14:
@@ -7063,80 +7273,80 @@ POKEMANIAC 15:
 POKEMANIAC 2:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (2)\n\tdb \"ANDREW@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 24, MAROWAK\n\tdb 24, MAROWAK\n\n\tdb $ff ; end"
+    \tdb 9, MAROWAK\n\tdb 9, MAROWAK\n\n\tdb $ff ; end"
   Name: ANDREW
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 24
+    Level: 9
     Moves: []
     Pokemon: MAROWAK
   - Item: null
-    Level: 24
+    Level: 9
     Moves: []
     Pokemon: MAROWAK
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 3:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (3)\n\tdb \"CALVIN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 26, KANGASKHAN\n\n\tdb $ff ; end"
+    \tdb 11, KANGASKHAN\n\n\tdb $ff ; end"
   Name: CALVIN
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 26
+    Level: 11
     Moves: []
     Pokemon: KANGASKHAN
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 4:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (4)\n\tdb \"SHANE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 16, NIDORINA\n\tdb 16, NIDORINO\n\n\tdb $ff ; end"
+    \tdb 7, NIDORINA\n\tdb 7, NIDORINO\n\n\tdb $ff ; end"
   Name: SHANE
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 7
     Moves: []
     Pokemon: NIDORINA
   - Item: null
-    Level: 16
+    Level: 7
     Moves: []
     Pokemon: NIDORINO
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 5:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (5)\n\tdb \"BEN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, SLOWBRO\n\n\tdb $ff ; end"
+    db 10, SLOWBRO\n\n\tdb $ff ; end"
   Name: BEN
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: SLOWBRO
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 6:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (6)\n\tdb \"BRENT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 19, LICKITUNG\n\n\tdb $ff ; end"
+    \tdb 10, LICKITUNG\n\n\tdb $ff ; end"
   Name: BRENT
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: LICKITUNG
   Type: TRAINERTYPE_NORMAL
 POKEMANIAC 7:
   Class: POKEMANIAC
   Code: "; POKEMANIAC (7)\n\tdb \"RON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, NIDOKING\n\n\tdb $ff ; end"
+    db 10, NIDOKING\n\n\tdb $ff ; end"
   Name: RON
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: NIDOKING
   Type: TRAINERTYPE_NORMAL
@@ -7165,38 +7375,42 @@ POKEMANIAC 9:
   Pokemon:
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: KANGASKHAN
   Type: TRAINERTYPE_NORMAL
 PRYCE 1:
   Class: PRYCE
   Code: "; PRYCE (1)\n\tdb \"PRYCE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 27, SEEL\n\t\tdb HEADBUTT\n\t\tdb ICY_WIND\n\t\tdb AURORA_BEAM\n\t\tdb REST\n\
-    \n\tdb 29, DEWGONG\n\t\tdb HEADBUTT\n\t\tdb ICY_WIND\n\t\tdb AURORA_BEAM\n\t\t\
-    db REST\n\n\tdb 31, PILOSWINE\n\t\tdb ICY_WIND\n\t\tdb FURY_ATTACK\n\t\tdb MIST\n\
+    \ 23, SEEL\n\t\tdb HEADBUTT\n\t\tdb ICY_WIND\n\t\tdb AURORA_BEAM\n\t\tdb REST\n\
+    \n\tdb 25, DEWGONG\n\t\tdb HEADBUTT\n\t\tdb ICY_WIND\n\t\tdb AURORA_BEAM\n\t\t\
+    db REST\n\n\tdb 27, PILOSWINE\n\t\tdb ICY_WIND\n\t\tdb FURY_ATTACK\n\t\tdb MIST\n\
     \t\tdb BLIZZARD\n\n\tdb $ff ; end"
   Name: PRYCE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 27
+    Level: 23
     Moves:
+    - '2'
     - HEADBUTT
     - ICY_WIND
     - AURORA_BEAM
     - REST
     Pokemon: SEEL
   - Item: null
-    Level: 29
+    Level: 25
     Moves:
+    - '2'
     - HEADBUTT
     - ICY_WIND
     - AURORA_BEAM
     - REST
     Pokemon: DEWGONG
   - Item: null
-    Level: 31
+    Level: 27
     Moves:
+    - '2'
     - ICY_WIND
     - FURY_ATTACK
     - MIST
@@ -7206,12 +7420,12 @@ PRYCE 1:
 PSYCHIC_T 1:
   Class: PSYCHIC_T
   Code: "; PSYCHIC_T (1)\n\tdb \"NATHAN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 26, GIRAFARIG\n\n\tdb $ff ; end"
+    \tdb 15, GIRAFARIG\n\n\tdb $ff ; end"
   Name: NATHAN
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 26
+    Level: 15
     Moves: []
     Pokemon: GIRAFARIG
   Type: TRAINERTYPE_NORMAL
@@ -7264,7 +7478,8 @@ PSYCHIC_T 12:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DROWZEE
   - Item: null
     Level: 33
@@ -7318,13 +7533,13 @@ PSYCHIC_T 4:
 PSYCHIC_T 5:
   Class: PSYCHIC_T
   Code: "; PSYCHIC_T (5)\n\tdb \"GREG@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
-    db 17, DROWZEE\n\t\tdb HYPNOSIS\n\t\tdb DISABLE\n\t\tdb DREAM_EATER\n\t\tdb 0\n\
+    db 9, DROWZEE\n\t\tdb HYPNOSIS\n\t\tdb DISABLE\n\t\tdb DREAM_EATER\n\t\tdb 0\n\
     \n\tdb $ff ; end"
   Name: GREG
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 9
     Moves:
     - HYPNOSIS
     - DISABLE
@@ -7334,21 +7549,21 @@ PSYCHIC_T 5:
 PSYCHIC_T 6:
   Class: PSYCHIC_T
   Code: "; PSYCHIC_T (6)\n\tdb \"NORMAN@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 17, SLOWPOKE\n\t\tdb TACKLE\n\t\tdb GROWL\n\t\tdb WATER_GUN\n\t\tdb 0\n\n\
-    \tdb 20, SLOWPOKE\n\t\tdb CURSE\n\t\tdb BODY_SLAM\n\t\tdb WATER_GUN\n\t\tdb CONFUSION\n\
+    \tdb 8, SLOWPOKE\n\t\tdb TACKLE\n\t\tdb GROWL\n\t\tdb WATER_GUN\n\t\tdb 0\n\n\t\
+    db 11, SLOWPOKE\n\t\tdb CURSE\n\t\tdb BODY_SLAM\n\t\tdb WATER_GUN\n\t\tdb CONFUSION\n\
     \n\tdb $ff ; end"
   Name: NORMAN
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 8
     Moves:
     - TACKLE
     - GROWL
     - WATER_GUN
     Pokemon: SLOWPOKE
   - Item: null
-    Level: 20
+    Level: 11
     Moves:
     - CURSE
     - BODY_SLAM
@@ -7359,26 +7574,26 @@ PSYCHIC_T 6:
 PSYCHIC_T 7:
   Class: PSYCHIC_T
   Code: "; PSYCHIC_T (7)\n\tdb \"MARK@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
-    db 13, ABRA\n\t\tdb TELEPORT\n\t\tdb FLASH\n\t\tdb 0\n\t\tdb 0\n\n\tdb 13, ABRA\n\
-    \t\tdb TELEPORT\n\t\tdb FLASH\n\t\tdb 0\n\t\tdb 0\n\n\tdb 15, KADABRA\n\t\tdb\
-    \ TELEPORT\n\t\tdb KINESIS\n\t\tdb CONFUSION\n\t\tdb 0\n\n\tdb $ff ; end"
+    db 5, ABRA\n\t\tdb TELEPORT\n\t\tdb FLASH\n\t\tdb 0\n\t\tdb 0\n\n\tdb 5, ABRA\n\
+    \t\tdb TELEPORT\n\t\tdb FLASH\n\t\tdb 0\n\t\tdb 0\n\n\tdb 7, KADABRA\n\t\tdb TELEPORT\n\
+    \t\tdb KINESIS\n\t\tdb CONFUSION\n\t\tdb 0\n\n\tdb $ff ; end"
   Name: MARK
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 13
+    Level: 5
     Moves:
     - TELEPORT
     - FLASH
     Pokemon: ABRA
   - Item: null
-    Level: 13
+    Level: 5
     Moves:
     - TELEPORT
     - FLASH
     Pokemon: ABRA
   - Item: null
-    Level: 15
+    Level: 7
     Moves:
     - TELEPORT
     - KINESIS
@@ -7397,6 +7612,7 @@ PSYCHIC_T 8:
   - Item: null
     Level: 24
     Moves:
+    - '2'
     - LEER
     - NIGHT_SHADE
     - FUTURE_SIGHT
@@ -7405,6 +7621,7 @@ PSYCHIC_T 8:
   - Item: null
     Level: 26
     Moves:
+    - '2'
     - DISABLE
     - PSYBEAM
     - RECOVER
@@ -7520,6 +7737,7 @@ RIVAL1 10:
   - Item: null
     Level: 28
     Moves:
+    - '2'
     - TACKLE
     - THUNDERSHOCK
     - SONICBOOM
@@ -7573,6 +7791,7 @@ RIVAL1 11:
   - Item: null
     Level: 28
     Moves:
+    - '2'
     - TACKLE
     - THUNDERSHOCK
     - SONICBOOM
@@ -7626,6 +7845,7 @@ RIVAL1 12:
   - Item: null
     Level: 28
     Moves:
+    - '2'
     - TACKLE
     - THUNDERSHOCK
     - SONICBOOM
@@ -7870,77 +8090,77 @@ RIVAL1 3:
   Type: TRAINERTYPE_NORMAL
 RIVAL1 4:
   Class: RIVAL1
-  Code: "; RIVAL1 (4)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 12,\
-    \ GASTLY\n\tdb 14, ZUBAT\n\tdb 16, BAYLEEF\n\n\tdb $ff ; end"
+  Code: "; RIVAL1 (4)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 11,\
+    \ GASTLY\n\tdb 13, ZUBAT\n\tdb 15, BAYLEEF\n\n\tdb $ff ; end"
   Name: '?'
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 14
+    Level: 13
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 16
+    Level: 15
     Moves: []
     Pokemon: BAYLEEF
   Type: TRAINERTYPE_NORMAL
 RIVAL1 5:
   Class: RIVAL1
-  Code: "; RIVAL1 (5)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 12,\
-    \ GASTLY\n\tdb 14, ZUBAT\n\tdb 16, QUILAVA\n\n\tdb $ff ; end"
+  Code: "; RIVAL1 (5)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 11,\
+    \ GASTLY\n\tdb 13, ZUBAT\n\tdb 15, QUILAVA\n\n\tdb $ff ; end"
   Name: '?'
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 14
+    Level: 13
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 16
+    Level: 15
     Moves: []
     Pokemon: QUILAVA
   Type: TRAINERTYPE_NORMAL
 RIVAL1 6:
   Class: RIVAL1
-  Code: "; RIVAL1 (6)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 12,\
-    \ GASTLY\n\tdb 14, ZUBAT\n\tdb 16, CROCONAW\n\n\tdb $ff ; end"
+  Code: "; RIVAL1 (6)\n\tdb \"?@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 11,\
+    \ GASTLY\n\tdb 13, ZUBAT\n\tdb 15, CROCONAW\n\n\tdb $ff ; end"
   Name: '?'
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 11
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 14
+    Level: 13
     Moves: []
     Pokemon: ZUBAT
   - Item: null
-    Level: 16
+    Level: 15
     Moves: []
     Pokemon: CROCONAW
   Type: TRAINERTYPE_NORMAL
 RIVAL1 7:
   Class: RIVAL1
-  Code: "; RIVAL1 (7)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 20,\
-    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 18,\
+  Code: "; RIVAL1 (7)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 13,\
+    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 11,\
     \ MAGNEMITE\n\t\tdb TACKLE\n\t\tdb THUNDERSHOCK\n\t\tdb SUPERSONIC\n\t\tdb SONICBOOM\n\
-    \n\tdb 20, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
-    \n\tdb 22, BAYLEEF\n\t\tdb GROWL\n\t\tdb REFLECT\n\t\tdb RAZOR_LEAF\n\t\tdb POISONPOWDER\n\
+    \n\tdb 13, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
+    \n\tdb 15, BAYLEEF\n\t\tdb GROWL\n\t\tdb REFLECT\n\t\tdb RAZOR_LEAF\n\t\tdb POISONPOWDER\n\
     \n\tdb $ff ; end"
   Name: '?'
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LICK
     - SPITE
@@ -7948,7 +8168,7 @@ RIVAL1 7:
     - CURSE
     Pokemon: HAUNTER
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - TACKLE
     - THUNDERSHOCK
@@ -7956,7 +8176,7 @@ RIVAL1 7:
     - SONICBOOM
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LEECH_LIFE
     - SUPERSONIC
@@ -7964,7 +8184,7 @@ RIVAL1 7:
     - CONFUSE_RAY
     Pokemon: ZUBAT
   - Item: null
-    Level: 22
+    Level: 15
     Moves:
     - GROWL
     - REFLECT
@@ -7974,17 +8194,17 @@ RIVAL1 7:
   Type: TRAINERTYPE_MOVES
 RIVAL1 8:
   Class: RIVAL1
-  Code: "; RIVAL1 (8)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 20,\
-    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 18,\
+  Code: "; RIVAL1 (8)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 13,\
+    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 11,\
     \ MAGNEMITE\n\t\tdb TACKLE\n\t\tdb THUNDERSHOCK\n\t\tdb SUPERSONIC\n\t\tdb SONICBOOM\n\
-    \n\tdb 20, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
-    \n\tdb 22, QUILAVA\n\t\tdb LEER\n\t\tdb SMOKESCREEN\n\t\tdb EMBER\n\t\tdb QUICK_ATTACK\n\
+    \n\tdb 13, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
+    \n\tdb 15, QUILAVA\n\t\tdb LEER\n\t\tdb SMOKESCREEN\n\t\tdb EMBER\n\t\tdb QUICK_ATTACK\n\
     \n\tdb $ff ; end"
   Name: '?'
   Number: '8'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LICK
     - SPITE
@@ -7992,7 +8212,7 @@ RIVAL1 8:
     - CURSE
     Pokemon: HAUNTER
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - TACKLE
     - THUNDERSHOCK
@@ -8000,7 +8220,7 @@ RIVAL1 8:
     - SONICBOOM
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LEECH_LIFE
     - SUPERSONIC
@@ -8008,7 +8228,7 @@ RIVAL1 8:
     - CONFUSE_RAY
     Pokemon: ZUBAT
   - Item: null
-    Level: 22
+    Level: 15
     Moves:
     - LEER
     - SMOKESCREEN
@@ -8018,17 +8238,17 @@ RIVAL1 8:
   Type: TRAINERTYPE_MOVES
 RIVAL1 9:
   Class: RIVAL1
-  Code: "; RIVAL1 (9)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 20,\
-    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 18,\
+  Code: "; RIVAL1 (9)\n\tdb \"?@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb 13,\
+    \ HAUNTER\n\t\tdb LICK\n\t\tdb SPITE\n\t\tdb MEAN_LOOK\n\t\tdb CURSE\n\n\tdb 11,\
     \ MAGNEMITE\n\t\tdb TACKLE\n\t\tdb THUNDERSHOCK\n\t\tdb SUPERSONIC\n\t\tdb SONICBOOM\n\
-    \n\tdb 20, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
-    \n\tdb 22, CROCONAW\n\t\tdb LEER\n\t\tdb RAGE\n\t\tdb WATER_GUN\n\t\tdb BITE\n\
+    \n\tdb 13, ZUBAT\n\t\tdb LEECH_LIFE\n\t\tdb SUPERSONIC\n\t\tdb BITE\n\t\tdb CONFUSE_RAY\n\
+    \n\tdb 15, CROCONAW\n\t\tdb LEER\n\t\tdb RAGE\n\t\tdb WATER_GUN\n\t\tdb BITE\n\
     \n\tdb $ff ; end"
   Name: '?'
   Number: '9'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LICK
     - SPITE
@@ -8036,7 +8256,7 @@ RIVAL1 9:
     - CURSE
     Pokemon: HAUNTER
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - TACKLE
     - THUNDERSHOCK
@@ -8044,7 +8264,7 @@ RIVAL1 9:
     - SONICBOOM
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - LEECH_LIFE
     - SUPERSONIC
@@ -8052,7 +8272,7 @@ RIVAL1 9:
     - CONFUSE_RAY
     Pokemon: ZUBAT
   - Item: null
-    Level: 22
+    Level: 15
     Moves:
     - LEER
     - RAGE
@@ -8588,41 +8808,41 @@ SAGE 4:
 SAGE 5:
   Class: SAGE
   Code: "; SAGE (5)\n\tdb \"JEFFREY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 22, HAUNTER\n\n\tdb $ff ; end"
+    \ 14, HAUNTER\n\n\tdb $ff ; end"
   Name: JEFFREY
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 14
     Moves: []
     Pokemon: HAUNTER
   Type: TRAINERTYPE_NORMAL
 SAGE 6:
   Class: SAGE
-  Code: "; SAGE (6)\n\tdb \"PING@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 16,\
-    \ GASTLY\n\tdb 16, GASTLY\n\tdb 16, GASTLY\n\tdb 16, GASTLY\n\tdb 16, GASTLY\n\
-    \n\tdb $ff ; end"
+  Code: "; SAGE (6)\n\tdb \"PING@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb 8,\
+    \ GASTLY\n\tdb 8, GASTLY\n\tdb 8, GASTLY\n\tdb 8, GASTLY\n\tdb 8, GASTLY\n\n\t\
+    db $ff ; end"
   Name: PING
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 8
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 16
+    Level: 8
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 16
+    Level: 8
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 16
+    Level: 8
     Moves: []
     Pokemon: GASTLY
   - Item: null
-    Level: 16
+    Level: 8
     Moves: []
     Pokemon: GASTLY
   Type: TRAINERTYPE_NORMAL
@@ -8681,32 +8901,32 @@ SAGE 9:
 SAILOR 1:
   Class: SAILOR
   Code: "; SAILOR (1)\n\tdb \"EUGENE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 17, POLIWHIRL\n\tdb 17, RATICATE\n\tdb 19, KRABBY\n\n\tdb $ff ; end"
+    db 8, POLIWHIRL\n\tdb 8, RATICATE\n\tdb 10, KRABBY\n\n\tdb $ff ; end"
   Name: EUGENE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: POLIWHIRL
   - Item: null
-    Level: 17
+    Level: 8
     Moves: []
     Pokemon: RATICATE
   - Item: null
-    Level: 19
+    Level: 10
     Moves: []
     Pokemon: KRABBY
   Type: TRAINERTYPE_NORMAL
 SAILOR 10:
   Class: SAILOR
   Code: "; SAILOR (10)\n\tdb \"HARRY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, WOOPER\n\n\tdb $ff ; end"
+    db 9, WOOPER\n\n\tdb $ff ; end"
   Name: HARRY
   Number: '10'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 9
     Moves: []
     Pokemon: WOOPER
   Type: TRAINERTYPE_NORMAL
@@ -8719,11 +8939,13 @@ SAILOR 11:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: POLIWHIRL
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: POLIWHIRL
   Type: TRAINERTYPE_NORMAL
 SAILOR 12:
@@ -8771,42 +8993,42 @@ SAILOR 13:
 SAILOR 2:
   Class: SAILOR
   Code: "; SAILOR (2)\n\tdb \"HUEY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\tdb\
-    \ 18, POLIWAG\n\tdb 18, POLIWHIRL\n\n\tdb $ff ; end"
+    \ 9, POLIWAG\n\tdb 9, POLIWHIRL\n\n\tdb $ff ; end"
   Name: HUEY
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: POLIWAG
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: POLIWHIRL
   Type: TRAINERTYPE_NORMAL
 SAILOR 3:
   Class: SAILOR
   Code: "; SAILOR (3)\n\tdb \"TERRELL@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, POLIWHIRL\n\n\tdb $ff ; end"
+    db 11, POLIWHIRL\n\n\tdb $ff ; end"
   Name: TERRELL
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 11
     Moves: []
     Pokemon: POLIWHIRL
   Type: TRAINERTYPE_NORMAL
 SAILOR 4:
   Class: SAILOR
   Code: "; SAILOR (4)\n\tdb \"KENT@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\tdb\
-    \ 18, KRABBY\n\t\tdb BUBBLE\n\t\tdb LEER\n\t\tdb VICEGRIP\n\t\tdb HARDEN\n\n\t\
-    db 20, KRABBY\n\t\tdb BUBBLEBEAM\n\t\tdb LEER\n\t\tdb VICEGRIP\n\t\tdb HARDEN\n\
+    \ 9, KRABBY\n\t\tdb BUBBLE\n\t\tdb LEER\n\t\tdb VICEGRIP\n\t\tdb HARDEN\n\n\t\
+    db 11, KRABBY\n\t\tdb BUBBLEBEAM\n\t\tdb LEER\n\t\tdb VICEGRIP\n\t\tdb HARDEN\n\
     \n\tdb $ff ; end"
   Name: KENT
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves:
     - BUBBLE
     - LEER
@@ -8814,7 +9036,7 @@ SAILOR 4:
     - HARDEN
     Pokemon: KRABBY
   - Item: null
-    Level: 20
+    Level: 11
     Moves:
     - BUBBLEBEAM
     - LEER
@@ -8825,20 +9047,20 @@ SAILOR 4:
 SAILOR 5:
   Class: SAILOR
   Code: "; SAILOR (5)\n\tdb \"ERNEST@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 18, MACHOP\n\tdb 18, MACHOP\n\tdb 18, POLIWHIRL\n\n\tdb $ff ; end"
+    db 9, MACHOP\n\tdb 9, MACHOP\n\tdb 9, POLIWHIRL\n\n\tdb $ff ; end"
   Name: ERNEST
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: MACHOP
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: MACHOP
   - Item: null
-    Level: 18
+    Level: 9
     Moves: []
     Pokemon: POLIWHIRL
   Type: TRAINERTYPE_NORMAL
@@ -8880,19 +9102,23 @@ SAILOR 8:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOP
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOP
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: POLIWRATH
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MACHOP
   Type: TRAINERTYPE_NORMAL
 SAILOR 9:
@@ -8912,51 +9138,54 @@ SAILOR 9:
     Pokemon: MACHOKE
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PSYDUCK
   Type: TRAINERTYPE_NORMAL
 SCHOOLBOY 1:
   Class: SCHOOLBOY
   Code: "; SCHOOLBOY (1)\n\tdb \"JACK@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 12, ODDISH\n\tdb 15, VOLTORB\n\n\tdb $ff ; end"
+    db 5, ODDISH\n\tdb 8, VOLTORB\n\n\tdb $ff ; end"
   Name: JACK
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 12
+    Level: 5
     Moves: []
     Pokemon: ODDISH
   - Item: null
-    Level: 15
+    Level: 8
     Moves: []
     Pokemon: VOLTORB
   Type: TRAINERTYPE_NORMAL
 SCHOOLBOY 10:
   Class: SCHOOLBOY
   Code: "; SCHOOLBOY (10)\n\tdb \"CHAD@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, MR__MIME\n\n\tdb $ff ; end"
+    db 9, MR__MIME\n\n\tdb $ff ; end"
   Name: CHAD
   Number: '10'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 9
     Moves: []
     Pokemon: MR__MIME
   Type: TRAINERTYPE_NORMAL
 SCHOOLBOY 11:
   Class: SCHOOLBOY
   Code: "; SCHOOLBOY (11)\n\tdb \"NATE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 32, LEDIAN\n\tdb 32, EXEGGUTOR\n\n\tdb $ff ; end"
+    db 24, LEDIAN\n\tdb 24, EXEGGUTOR\n\n\tdb $ff ; end"
   Name: NATE
   Number: '11'
   Pokemon:
   - Item: null
-    Level: 32
-    Moves: []
+    Level: 24
+    Moves:
+    - '2'
     Pokemon: LEDIAN
   - Item: null
-    Level: 32
-    Moves: []
+    Level: 24
+    Moves:
+    - '2'
     Pokemon: EXEGGUTOR
   Type: TRAINERTYPE_NORMAL
 SCHOOLBOY 12:
@@ -9000,7 +9229,8 @@ SCHOOLBOY 14:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GLOOM
   - Item: null
     Level: 31
@@ -9033,19 +9263,23 @@ SCHOOLBOY 16:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NATU
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: TANGELA
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: QUAGSIRE
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: YANMA
   Type: TRAINERTYPE_NORMAL
 SCHOOLBOY 17:
@@ -9073,7 +9307,8 @@ SCHOOLBOY 18:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MR__MIME
   - Item: null
     Level: 31
@@ -9110,11 +9345,13 @@ SCHOOLBOY 2:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: VOLTORB
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 31
@@ -9170,11 +9407,13 @@ SCHOOLBOY 21:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: NATU
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: TANGELA
   - Item: null
     Level: 30
@@ -9292,7 +9531,8 @@ SCHOOLBOY 4:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: BELLSPROUT
   - Item: null
     Level: 31
@@ -9377,15 +9617,18 @@ SCHOOLBOY 9:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PARAS
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PARAS
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: POLIWHIRL
   - Item: null
     Level: 35
@@ -9395,48 +9638,48 @@ SCHOOLBOY 9:
 SCIENTIST 1:
   Class: SCIENTIST
   Code: "; SCIENTIST (1)\n\tdb \"ROSS@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 22, KOFFING\n\tdb 22, KOFFING\n\n\tdb $ff ; end"
+    db 15, KOFFING\n\tdb 15, KOFFING\n\n\tdb $ff ; end"
   Name: ROSS
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: KOFFING
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 SCIENTIST 2:
   Class: SCIENTIST
   Code: "; SCIENTIST (2)\n\tdb \"MITCH@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 24, DITTO\n\n\tdb $ff ; end"
+    db 17, DITTO\n\n\tdb $ff ; end"
   Name: MITCH
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 24
+    Level: 17
     Moves: []
     Pokemon: DITTO
   Type: TRAINERTYPE_NORMAL
 SCIENTIST 3:
   Class: SCIENTIST
   Code: "; SCIENTIST (3)\n\tdb \"JED@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, MAGNEMITE\n\tdb 20, MAGNEMITE\n\tdb 20, MAGNEMITE\n\n\tdb $ff ; end"
+    db 13, MAGNEMITE\n\tdb 13, MAGNEMITE\n\tdb 13, MAGNEMITE\n\n\tdb $ff ; end"
   Name: JED
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: MAGNEMITE
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: MAGNEMITE
   Type: TRAINERTYPE_NORMAL
@@ -9449,50 +9692,69 @@ SCIENTIST 4:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   Type: TRAINERTYPE_NORMAL
+SCIENTIST 5:
+  Class: SCIENTIST
+  Code: "; SCIENTIST (5)\n\tdb \"RICH@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
+    db 30, PORYGON\n\t\tdb CONVERSION\n\t\tdb CONVERSION2\n\t\tdb RECOVER\n\t\tdb\
+    \ TRI_ATTACK\n\n\tdb $ff ; end"
+  Name: RICH
+  Number: '5'
+  Pokemon:
+  - Item: null
+    Level: 30
+    Moves:
+    - CONVERSION
+    Pokemon: PORYGON
+  Type: TRAINERTYPE_MOVES
 SKIER 1:
   Class: SKIER
   Code: "; SKIER (1)\n\tdb \"ROXANNE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 28, JYNX\n\n\tdb $ff ; end"
+    db 24, JYNX\n\n\tdb $ff ; end"
   Name: ROXANNE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 28
-    Moves: []
+    Level: 24
+    Moves:
+    - '2'
     Pokemon: JYNX
   Type: TRAINERTYPE_NORMAL
 SKIER 2:
   Class: SKIER
   Code: "; SKIER (2)\n\tdb \"CLARISSA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 28, DEWGONG\n\n\tdb $ff ; end"
+    db 24, DEWGONG\n\n\tdb $ff ; end"
   Name: CLARISSA
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 28
-    Moves: []
+    Level: 24
+    Moves:
+    - '2'
     Pokemon: DEWGONG
   Type: TRAINERTYPE_NORMAL
 SUPER_NERD 1:
   Class: SUPER_NERD
   Code: "; SUPER_NERD (1)\n\tdb \"STAN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, GRIMER\n\n\tdb $ff ; end"
+    db 9, GRIMER\n\n\tdb $ff ; end"
   Name: STAN
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 9
     Moves: []
     Pokemon: GRIMER
   Type: TRAINERTYPE_NORMAL
@@ -9530,17 +9792,34 @@ SUPER_NERD 11:
   Pokemon:
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 27
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   Type: TRAINERTYPE_NORMAL
+SUPER_NERD 12:
+  Class: SUPER_NERD
+  Code: "; SUPER_NERD (12)\n\tdb \"NORTON@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
+    \n\tdb 30, PORYGON\n\t\tdb CONVERSION\n\t\tdb CONVERSION2\n\t\tdb RECOVER\n\t\t\
+    db TRI_ATTACK\n\n\tdb $ff ; end"
+  Name: NORTON
+  Number: '12'
+  Pokemon:
+  - Item: null
+    Level: 30
+    Moves:
+    - CONVERSION
+    Pokemon: PORYGON
+  Type: TRAINERTYPE_MOVES
 SUPER_NERD 13:
   Class: SUPER_NERD
   Code: "; SUPER_NERD (13)\n\tdb \"HUGH@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
@@ -9600,15 +9879,18 @@ SUPER_NERD 3:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MAGNEMITE
   Type: TRAINERTYPE_NORMAL
 SUPER_NERD 4:
@@ -9620,11 +9902,13 @@ SUPER_NERD 4:
   Pokemon:
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: KOFFING
   - Item: null
     Level: 22
-    Moves: []
+    Moves:
+    - '22'
     Pokemon: KOFFING
   Type: TRAINERTYPE_NORMAL
 SUPER_NERD 5:
@@ -9636,7 +9920,8 @@ SUPER_NERD 5:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DITTO
   Type: TRAINERTYPE_NORMAL
 SUPER_NERD 6:
@@ -9710,12 +9995,12 @@ SUPER_NERD 9:
 SWIMMERF 1:
   Class: SWIMMERF
   Code: "; SWIMMERF (1)\n\tdb \"ELAINE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 21, STARYU\n\n\tdb $ff ; end"
+    db 11, STARYU\n\n\tdb $ff ; end"
   Name: ELAINE
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 21
+    Level: 11
     Moves: []
     Pokemon: STARYU
   Type: TRAINERTYPE_NORMAL
@@ -9728,7 +10013,8 @@ SWIMMERF 10:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 11:
@@ -9764,7 +10050,8 @@ SWIMMERF 13:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 14:
@@ -9776,11 +10063,13 @@ SWIMMERF 14:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MARILL
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: MARILL
   - Item: null
     Level: 32
@@ -9812,7 +10101,8 @@ SWIMMERF 16:
   Pokemon:
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 17:
@@ -9824,19 +10114,23 @@ SWIMMERF 17:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEEL
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEEL
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEEL
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DEWGONG
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 18:
@@ -9870,50 +10164,50 @@ SWIMMERF 19:
 SWIMMERF 2:
   Class: SWIMMERF
   Code: "; SWIMMERF (2)\n\tdb \"PAULA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 19, STARYU\n\tdb 19, SHELLDER\n\n\tdb $ff ; end"
+    db 9, STARYU\n\tdb 9, SHELLDER\n\n\tdb $ff ; end"
   Name: PAULA
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 19
+    Level: 9
     Moves: []
     Pokemon: STARYU
   - Item: null
-    Level: 19
+    Level: 9
     Moves: []
     Pokemon: SHELLDER
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 3:
   Class: SWIMMERF
   Code: "; SWIMMERF (3)\n\tdb \"KAYLEE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 18, GOLDEEN\n\tdb 20, GOLDEEN\n\tdb 20, SEAKING\n\n\tdb $ff ; end"
+    db 11, GOLDEEN\n\tdb 13, GOLDEEN\n\tdb 13, SEAKING\n\n\tdb $ff ; end"
   Name: KAYLEE
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves: []
     Pokemon: GOLDEEN
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: GOLDEEN
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: SEAKING
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 4:
   Class: SWIMMERF
   Code: "; SWIMMERF (4)\n\tdb \"SUSIE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
-    db 20, PSYDUCK\n\t\tdb SCRATCH\n\t\tdb TAIL_WHIP\n\t\tdb DISABLE\n\t\tdb CONFUSION\n\
-    \n\tdb 22, GOLDEEN\n\t\tdb PECK\n\t\tdb TAIL_WHIP\n\t\tdb SUPERSONIC\n\t\tdb HORN_ATTACK\n\
+    db 13, PSYDUCK\n\t\tdb SCRATCH\n\t\tdb TAIL_WHIP\n\t\tdb DISABLE\n\t\tdb CONFUSION\n\
+    \n\tdb 15, GOLDEEN\n\t\tdb PECK\n\t\tdb TAIL_WHIP\n\t\tdb SUPERSONIC\n\t\tdb HORN_ATTACK\n\
     \n\tdb $ff ; end"
   Name: SUSIE
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - SCRATCH
     - TAIL_WHIP
@@ -9921,7 +10215,7 @@ SWIMMERF 4:
     - CONFUSION
     Pokemon: PSYDUCK
   - Item: null
-    Level: 22
+    Level: 15
     Moves:
     - PECK
     - TAIL_WHIP
@@ -9932,42 +10226,42 @@ SWIMMERF 4:
 SWIMMERF 5:
   Class: SWIMMERF
   Code: "; SWIMMERF (5)\n\tdb \"DENISE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 22, SEEL\n\n\tdb $ff ; end"
+    db 15, SEEL\n\n\tdb $ff ; end"
   Name: DENISE
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 22
+    Level: 15
     Moves: []
     Pokemon: SEEL
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 6:
   Class: SWIMMERF
   Code: "; SWIMMERF (6)\n\tdb \"KARA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, STARYU\n\tdb 20, STARMIE\n\n\tdb $ff ; end"
+    db 13, STARYU\n\tdb 13, STARMIE\n\n\tdb $ff ; end"
   Name: KARA
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: STARYU
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: STARMIE
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 7:
   Class: SWIMMERF
   Code: "; SWIMMERF (7)\n\tdb \"WENDY@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\t\
-    db 21, HORSEA\n\t\tdb BUBBLE\n\t\tdb SMOKESCREEN\n\t\tdb LEER\n\t\tdb WATER_GUN\n\
-    \n\tdb 21, HORSEA\n\t\tdb DRAGON_RAGE\n\t\tdb SMOKESCREEN\n\t\tdb LEER\n\t\tdb\
+    db 14, HORSEA\n\t\tdb BUBBLE\n\t\tdb SMOKESCREEN\n\t\tdb LEER\n\t\tdb WATER_GUN\n\
+    \n\tdb 14, HORSEA\n\t\tdb DRAGON_RAGE\n\t\tdb SMOKESCREEN\n\t\tdb LEER\n\t\tdb\
     \ WATER_GUN\n\n\tdb $ff ; end"
   Name: WENDY
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 21
+    Level: 14
     Moves:
     - BUBBLE
     - SMOKESCREEN
@@ -9975,7 +10269,7 @@ SWIMMERF 7:
     - WATER_GUN
     Pokemon: HORSEA
   - Item: null
-    Level: 21
+    Level: 14
     Moves:
     - DRAGON_RAGE
     - SMOKESCREEN
@@ -9992,7 +10286,8 @@ SWIMMERF 8:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: JYNX
   Type: TRAINERTYPE_NORMAL
 SWIMMERF 9:
@@ -10004,7 +10299,8 @@ SWIMMERF 9:
   Pokemon:
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DEWGONG
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 1:
@@ -10032,11 +10328,13 @@ SWIMMERM 10:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PILOSWINE
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PILOSWINE
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 11:
@@ -10048,15 +10346,18 @@ SWIMMERM 11:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SHELLDER
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: CLOYSTER
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SHELLDER
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 12:
@@ -10076,7 +10377,8 @@ SWIMMERM 12:
     Pokemon: HORSEA
   - Item: null
     Level: 20
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEADRA
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 13:
@@ -10109,11 +10411,13 @@ SWIMMERM 14:
   Pokemon:
   - Item: null
     Level: 26
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEADRA
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: TENTACOOL
   - Item: null
     Level: 30
@@ -10121,7 +10425,8 @@ SWIMMERM 14:
     Pokemon: TENTACRUEL
   - Item: null
     Level: 28
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: GOLDEEN
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 15:
@@ -10181,11 +10486,13 @@ SWIMMERM 18:
   Pokemon:
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: QUAGSIRE
   - Item: null
     Level: 29
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: OCTILLERY
   - Item: null
     Level: 32
@@ -10215,16 +10522,16 @@ SWIMMERM 19:
 SWIMMERM 2:
   Class: SWIMMERM
   Code: "; SWIMMERM (2)\n\tdb \"SIMON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, TENTACOOL\n\tdb 20, TENTACOOL\n\n\tdb $ff ; end"
+    db 10, TENTACOOL\n\tdb 10, TENTACOOL\n\n\tdb $ff ; end"
   Name: SIMON
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 10
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 20
+    Level: 10
     Moves: []
     Pokemon: TENTACOOL
   Type: TRAINERTYPE_NORMAL
@@ -10271,113 +10578,113 @@ SWIMMERM 21:
 SWIMMERM 3:
   Class: SWIMMERM
   Code: "; SWIMMERM (3)\n\tdb \"RANDALL@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 18, SHELLDER\n\tdb 20, WARTORTLE\n\tdb 18, SHELLDER\n\n\tdb $ff ; end"
+    \tdb 8, SHELLDER\n\tdb 10, WARTORTLE\n\tdb 8, SHELLDER\n\n\tdb $ff ; end"
   Name: RANDALL
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 8
     Moves: []
     Pokemon: SHELLDER
   - Item: null
-    Level: 20
+    Level: 10
     Moves: []
     Pokemon: WARTORTLE
   - Item: null
-    Level: 18
+    Level: 8
     Moves: []
     Pokemon: SHELLDER
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 4:
   Class: SWIMMERM
   Code: "; SWIMMERM (4)\n\tdb \"CHARLIE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 21, SHELLDER\n\tdb 19, TENTACOOL\n\tdb 19, TENTACRUEL\n\n\tdb $ff ; end"
+    \tdb 14, SHELLDER\n\tdb 12, TENTACOOL\n\tdb 12, TENTACRUEL\n\n\tdb $ff ; end"
   Name: CHARLIE
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 21
+    Level: 14
     Moves: []
     Pokemon: SHELLDER
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: TENTACRUEL
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 5:
   Class: SWIMMERM
   Code: "; SWIMMERM (5)\n\tdb \"GEORGE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 16, TENTACOOL\n\tdb 17, TENTACOOL\n\tdb 16, TENTACOOL\n\tdb 19, STARYU\n\t\
-    db 17, TENTACOOL\n\tdb 19, REMORAID\n\n\tdb $ff ; end"
+    db 9, TENTACOOL\n\tdb 10, TENTACOOL\n\tdb 9, TENTACOOL\n\tdb 12, STARYU\n\tdb\
+    \ 10, TENTACOOL\n\tdb 12, REMORAID\n\n\tdb $ff ; end"
   Name: GEORGE
   Number: '5'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 16
+    Level: 9
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: STARYU
   - Item: null
-    Level: 17
+    Level: 10
     Moves: []
     Pokemon: TENTACOOL
   - Item: null
-    Level: 19
+    Level: 12
     Moves: []
     Pokemon: REMORAID
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 6:
   Class: SWIMMERM
   Code: "; SWIMMERM (6)\n\tdb \"BERKE@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 23, QWILFISH\n\n\tdb $ff ; end"
+    db 16, QWILFISH\n\n\tdb $ff ; end"
   Name: BERKE
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 16
     Moves: []
     Pokemon: QWILFISH
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 7:
   Class: SWIMMERM
   Code: "; SWIMMERM (7)\n\tdb \"KIRK@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 20, GYARADOS\n\tdb 20, GYARADOS\n\n\tdb $ff ; end"
+    db 13, GYARADOS\n\tdb 13, GYARADOS\n\n\tdb $ff ; end"
   Name: KIRK
   Number: '7'
   Pokemon:
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: GYARADOS
   - Item: null
-    Level: 20
+    Level: 13
     Moves: []
     Pokemon: GYARADOS
   Type: TRAINERTYPE_NORMAL
 SWIMMERM 8:
   Class: SWIMMERM
   Code: "; SWIMMERM (8)\n\tdb \"MATHEW@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 23, KRABBY\n\n\tdb $ff ; end"
+    db 16, KRABBY\n\n\tdb $ff ; end"
   Name: MATHEW
   Number: '8'
   Pokemon:
   - Item: null
-    Level: 23
+    Level: 16
     Moves: []
     Pokemon: KRABBY
   Type: TRAINERTYPE_NORMAL
@@ -10390,15 +10697,18 @@ SWIMMERM 9:
   Pokemon:
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEEL
   - Item: null
     Level: 25
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: DEWGONG
   - Item: null
     Level: 24
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: SEEL
   Type: TRAINERTYPE_NORMAL
 TEACHER 1:
@@ -10444,16 +10754,16 @@ TEACHER 3:
 TWINS 1:
   Class: TWINS
   Code: "; TWINS (1)\n\tdb \"AMY & MAY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 10, SPINARAK\n\tdb 10, LEDYBA\n\n\tdb $ff ; end"
+    db 9, SPINARAK\n\tdb 9, LEDYBA\n\n\tdb $ff ; end"
   Name: AMY & MAY
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 10
+    Level: 9
     Moves: []
     Pokemon: SPINARAK
   - Item: null
-    Level: 10
+    Level: 9
     Moves: []
     Pokemon: LEDYBA
   Type: TRAINERTYPE_NORMAL
@@ -10486,14 +10796,14 @@ TWINS 10:
 TWINS 2:
   Class: TWINS
   Code: "; TWINS (2)\n\tdb \"ANN & ANNE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 16, CLEFAIRY\n\t\tdb GROWL\n\t\tdb ENCORE\n\t\tdb DOUBLESLAP\n\t\tdb METRONOME\n\
-    \n\tdb 16, JIGGLYPUFF\n\t\tdb SING\n\t\tdb DEFENSE_CURL\n\t\tdb POUND\n\t\tdb\
-    \ DISABLE\n\n\tdb $ff ; end"
+    \tdb 8, CLEFAIRY\n\t\tdb GROWL\n\t\tdb ENCORE\n\t\tdb DOUBLESLAP\n\t\tdb METRONOME\n\
+    \n\tdb 8, JIGGLYPUFF\n\t\tdb SING\n\t\tdb DEFENSE_CURL\n\t\tdb POUND\n\t\tdb DISABLE\n\
+    \n\tdb $ff ; end"
   Name: ANN & ANNE
   Number: '2'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 8
     Moves:
     - GROWL
     - ENCORE
@@ -10501,7 +10811,7 @@ TWINS 2:
     - METRONOME
     Pokemon: CLEFAIRY
   - Item: null
-    Level: 16
+    Level: 8
     Moves:
     - SING
     - DEFENSE_CURL
@@ -10512,14 +10822,14 @@ TWINS 2:
 TWINS 3:
   Class: TWINS
   Code: "; TWINS (3)\n\tdb \"ANN & ANNE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 16, JIGGLYPUFF\n\t\tdb SING\n\t\tdb DEFENSE_CURL\n\t\tdb POUND\n\t\tdb DISABLE\n\
-    \n\tdb 16, CLEFAIRY\n\t\tdb GROWL\n\t\tdb ENCORE\n\t\tdb DOUBLESLAP\n\t\tdb METRONOME\n\
+    \tdb 8, JIGGLYPUFF\n\t\tdb SING\n\t\tdb DEFENSE_CURL\n\t\tdb POUND\n\t\tdb DISABLE\n\
+    \n\tdb 8, CLEFAIRY\n\t\tdb GROWL\n\t\tdb ENCORE\n\t\tdb DOUBLESLAP\n\t\tdb METRONOME\n\
     \n\tdb $ff ; end"
   Name: ANN & ANNE
   Number: '3'
   Pokemon:
   - Item: null
-    Level: 16
+    Level: 8
     Moves:
     - SING
     - DEFENSE_CURL
@@ -10527,7 +10837,7 @@ TWINS 3:
     - DISABLE
     Pokemon: JIGGLYPUFF
   - Item: null
-    Level: 16
+    Level: 8
     Moves:
     - GROWL
     - ENCORE
@@ -10538,16 +10848,16 @@ TWINS 3:
 TWINS 4:
   Class: TWINS
   Code: "; TWINS (4)\n\tdb \"AMY & MAY@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 10, LEDYBA\n\tdb 10, SPINARAK\n\n\tdb $ff ; end"
+    db 9, LEDYBA\n\tdb 9, SPINARAK\n\n\tdb $ff ; end"
   Name: AMY & MAY
   Number: '4'
   Pokemon:
   - Item: null
-    Level: 10
+    Level: 9
     Moves: []
     Pokemon: LEDYBA
   - Item: null
-    Level: 10
+    Level: 9
     Moves: []
     Pokemon: SPINARAK
   Type: TRAINERTYPE_NORMAL
@@ -10644,14 +10954,14 @@ TWINS 9:
 WHITNEY 1:
   Class: WHITNEY
   Code: "; WHITNEY (1)\n\tdb \"WHITNEY@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\n\
-    \tdb 18, CLEFAIRY\n\t\tdb DOUBLESLAP\n\t\tdb MIMIC\n\t\tdb ENCORE\n\t\tdb METRONOME\n\
-    \n\tdb 20, MILTANK\n\t\tdb ROLLOUT\n\t\tdb ATTRACT\n\t\tdb STOMP\n\t\tdb MILK_DRINK\n\
+    \tdb 11, CLEFAIRY\n\t\tdb DOUBLESLAP\n\t\tdb MIMIC\n\t\tdb ENCORE\n\t\tdb METRONOME\n\
+    \n\tdb 13, MILTANK\n\t\tdb ROLLOUT\n\t\tdb ATTRACT\n\t\tdb STOMP\n\t\tdb MILK_DRINK\n\
     \n\tdb $ff ; end"
   Name: WHITNEY
   Number: '1'
   Pokemon:
   - Item: null
-    Level: 18
+    Level: 11
     Moves:
     - DOUBLESLAP
     - MIMIC
@@ -10659,7 +10969,7 @@ WHITNEY 1:
     - METRONOME
     Pokemon: CLEFAIRY
   - Item: null
-    Level: 20
+    Level: 13
     Moves:
     - ROLLOUT
     - ATTRACT
@@ -10819,7 +11129,8 @@ YOUNGSTER 2:
   Pokemon:
   - Item: null
     Level: 2
-    Moves: []
+    Moves:
+    - '2'
     Pokemon: PIDGEY
   - Item: null
     Level: 4
@@ -10829,69 +11140,69 @@ YOUNGSTER 2:
 YOUNGSTER 3:
   Class: YOUNGSTER
   Code: "; YOUNGSTER (3)\n\tdb \"ALBERT@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 6, RATTATA\n\tdb 8, ZUBAT\n\n\tdb $ff ; end"
+    \tdb 7, RATTATA\n\tdb 9, ZUBAT\n\n\tdb $ff ; end"
   Name: ALBERT
   Number: '3'
-  Pokemon:
-  - Item: null
-    Level: 6
-    Moves: []
-    Pokemon: RATTATA
-  - Item: null
-    Level: 8
-    Moves: []
-    Pokemon: ZUBAT
-  Type: TRAINERTYPE_NORMAL
-YOUNGSTER 4:
-  Class: YOUNGSTER
-  Code: "; YOUNGSTER (4)\n\tdb \"GORDON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 10, WOOPER\n\n\tdb $ff ; end"
-  Name: GORDON
-  Number: '4'
-  Pokemon:
-  - Item: null
-    Level: 10
-    Moves: []
-    Pokemon: WOOPER
-  Type: TRAINERTYPE_NORMAL
-YOUNGSTER 5:
-  Class: YOUNGSTER
-  Code: "; YOUNGSTER (5)\n\tdb \"SAMUEL@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
-    \tdb 7, RATTATA\n\tdb 10, SANDSHREW\n\tdb 8, SPEAROW\n\tdb 8, SPEAROW\n\n\tdb\
-    \ $ff ; end"
-  Name: SAMUEL
-  Number: '5'
   Pokemon:
   - Item: null
     Level: 7
     Moves: []
     Pokemon: RATTATA
   - Item: null
-    Level: 10
+    Level: 9
+    Moves: []
+    Pokemon: ZUBAT
+  Type: TRAINERTYPE_NORMAL
+YOUNGSTER 4:
+  Class: YOUNGSTER
+  Code: "; YOUNGSTER (4)\n\tdb \"GORDON@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
+    \tdb 11, WOOPER\n\n\tdb $ff ; end"
+  Name: GORDON
+  Number: '4'
+  Pokemon:
+  - Item: null
+    Level: 11
+    Moves: []
+    Pokemon: WOOPER
+  Type: TRAINERTYPE_NORMAL
+YOUNGSTER 5:
+  Class: YOUNGSTER
+  Code: "; YOUNGSTER (5)\n\tdb \"SAMUEL@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\
+    \tdb 4, RATTATA\n\tdb 7, SANDSHREW\n\tdb 5, SPEAROW\n\tdb 5, SPEAROW\n\n\tdb $ff\
+    \ ; end"
+  Name: SAMUEL
+  Number: '5'
+  Pokemon:
+  - Item: null
+    Level: 4
+    Moves: []
+    Pokemon: RATTATA
+  - Item: null
+    Level: 7
     Moves: []
     Pokemon: SANDSHREW
   - Item: null
-    Level: 8
+    Level: 5
     Moves: []
     Pokemon: SPEAROW
   - Item: null
-    Level: 8
+    Level: 5
     Moves: []
     Pokemon: SPEAROW
   Type: TRAINERTYPE_NORMAL
 YOUNGSTER 6:
   Class: YOUNGSTER
   Code: "; YOUNGSTER (6)\n\tdb \"IAN@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\
-    db 10, MANKEY\n\tdb 12, DIGLETT\n\n\tdb $ff ; end"
+    db 7, MANKEY\n\tdb 9, DIGLETT\n\n\tdb $ff ; end"
   Name: IAN
   Number: '6'
   Pokemon:
   - Item: null
-    Level: 10
+    Level: 7
     Moves: []
     Pokemon: MANKEY
   - Item: null
-    Level: 12
+    Level: 9
     Moves: []
     Pokemon: DIGLETT
   Type: TRAINERTYPE_NORMAL
@@ -10918,6 +11229,7 @@ YOUNGSTER 8:
   - Item: null
     Level: 21
     Moves:
+    - '2'
     - TAIL_WHIP
     - QUICK_ATTACK
     - HYPER_FANG
