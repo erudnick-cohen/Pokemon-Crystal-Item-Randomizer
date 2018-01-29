@@ -1,0 +1,110 @@
+Location:
+    -
+        Name: Dark Cave Blackthorn
+        FileName: DarkCaveBlackthornEntrance.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: DARK_CAVE_BLACKTHORN_ENTRANCE
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations: 
+             -
+                Name: Dark Cave Blackthorn Revive
+                FileName: DarkCaveBlackthornEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Blackthorn
+                FlagReqs:
+                    - Zephyr Badge
+                    - Fog Badge
+                ItemReqs:
+                    - Flash
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                IsBall: Yes
+                Code: |
+                    DarkCaveBlackthornEntranceRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+             -
+                Name: Snore TM
+                FileName: DarkCaveBlackthornEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Blackthorn
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_SNORE
+                IsBall: Yes
+                Code: |
+                    DarkCaveBlackthornEntranceTMSnore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+
+             -
+                Name: Snore TM
+                FileName: DarkCaveBlackthornEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Blackthorn
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BLACKGLASSES
+                Code: |
+                    DarkCaveBlackthornEntrancePharmacistScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
+                        iftrue .GotBlackglasses
+                        writetext DarkCaveBlackthornEntrancePharmacistText1
+                        buttonsound
+                        ITEMLINE
+                        iffalse .PackFull
+                        setevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
+                Text: |
+                    DarkCaveBlackthornEntrancePharmacistText1:
+                        text "Whoa! You startled"
+                        line "me there!"
+
+                        para "I had my ITEMNAME-"
+                        line "GLASSES on, so I"
+
+                        para "didn't notice you"
+                        line "at all."
+
+                        para "What am I doing"
+                        line "here?"
+
+                        para "Hey, don't you"
+                        line "worry about it."
+
+                        para "I'll give you a"
+                        line "pair of ITEMNAME-"
+                        cont "GLASSES, so forget"
+                        cont "you saw me, OK?"
+                        done
+                TrainerList: 
+                Sublocations:

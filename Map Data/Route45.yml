@@ -1,0 +1,101 @@
+Location:
+    -
+        Name: Route 45
+        FileName: Route45.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_ 45
+        LocationReqs: Blackthorn City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 23
+        TrainerList: 
+            - HIKER 7
+            - HIKER 8
+            - HIKER 10
+            - HIKER 20
+            - CAMPER 22
+            - BLACKBELT_T 8
+            - COOLTRAINERM 8
+            - COOLTRAINERF 7
+        Sublocations:
+    -
+        Name: Route 45 Nugget
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: Yes
+        WildTableList: Route_ 45
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        NormalItem: NUGGET
+        Code: |
+            Route45Nugget:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 45 Revive
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: Yes
+        WildTableList: Route_ 45
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        NormalItem: REVIVE
+        Code: |
+            Route45Revive:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 45 Max Potion
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: Yes
+        WildTableList: Route_ 45
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        NormalItem: MAX_POTION
+        Code: |
+            Route45MaxPotion:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 45 Elixer
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: Yes
+        WildTableList: Route_ 45
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        NormalItem: ELIXER
+        Code: |
+            Route45Elixer:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:
