@@ -135,20 +135,20 @@ Location:
 
                         para "use of it than I"
                         line "can, <PLAY_G>!"
-                        done  
+                        done
                 TrainerList: 
                 Code: |
                     ElmGiveMasterBallScript:
                         writetext ElmGiveMasterBallText1
                         buttonsound
-                        verbosegiveitem MASTER_BALL
+                        ITEMLINE
                         iffalse .notdone
                         setevent EVENT_GOT_MASTER_BALL_FROM_ELM
                         writetext ElmGiveMasterBallText2
                         waitbutton
                     .notdone
                         closetext
-                        end 
+                        end
             -             
                 Name: SS Ticket
                 FileName: ElmsLab.asm
