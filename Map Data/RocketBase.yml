@@ -37,7 +37,7 @@ Location:
                     -
                         Name: Rocket Base 1F Hyper Potion
                         FileName: TeamRocketBaseB1F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 1F
@@ -56,7 +56,7 @@ Location:
                     -
                         Name: Rocket Base 1F Nugget
                         FileName: TeamRocketBaseB1F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 1F
@@ -75,7 +75,7 @@ Location:
                     -
                         Name: Rocket Base 1F Guard Spec
                         FileName: TeamRocketBaseB1F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 1F
@@ -113,7 +113,7 @@ Location:
                     -
                         Name: Rocket Base 2F Thief TM
                         FileName: TeamRocketBaseB2F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 2F
@@ -153,7 +153,7 @@ Location:
                     -
                         Name: Rocket Base 3F Protein
                         FileName: TeamRocketBaseB3F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 3F
@@ -172,7 +172,7 @@ Location:
                     -
                         Name: Rocket Base 3F X Special
                         FileName: TeamRocketBaseB3F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 3F
@@ -191,7 +191,7 @@ Location:
                     -
                         Name: Rocket Base 3F Full Heal
                         FileName: TeamRocketBaseB3F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 3F
@@ -210,7 +210,7 @@ Location:
                     -
                         Name: Rocket Base 3F Ice Heal
                         FileName: TeamRocketBaseB3F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 3F
@@ -229,7 +229,7 @@ Location:
                     -
                         Name: Rocket Base 3F Ultra Ball
                         FileName: TeamRocketBaseB3F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList:
                         LocationReqs: Rocket Base 3F
