@@ -1,0 +1,110 @@
+Location:
+    -
+        Name: Blackthorn Gym
+        FileName: BlackthornGym1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Blackthorn City
+        FlagReqs:
+            - Beat Team Rocket
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Clair TM
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Blackthorn Gym Trainers After Boulders
+                FlagReqs:
+                    - Plain Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Strength
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_DRAGONBREATH
+                Code: |
+                    DragonsDenB1F_ClairScene:
+                        appear DRAGONSDENB1F_CLAIR
+                        opentext
+                        writetext ClairText_Wait
+                        pause 30
+                        closetext
+                        showemote EMOTE_SHOCK, PLAYER, 15
+                        spriteface PLAYER, LEFT
+                        playmusic MUSIC_CLAIR
+                        applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
+                        opentext
+                        writetext ClairText_GiveDragonbreathDragonDen
+                        buttonsound
+                        ITEMLINE
+                        iffalse .BagFull
+                        itemtotext TM_DRAGONBREATH, $0
+                        writetext NotifyReceiveDragonbreath
+                        playsound SFX_ITEM
+                        waitsfx
+                        itemnotify
+                        setevent EVENT_GOT_TM24_DRAGONBREATH
+                        writetext ClairText_DescribeDragonbreathDragonDen
+                        buttonsound
+                        writetext ClairText_WhatsTheMatterDragonDen
+                        waitbutton
+                        closetext
+                        jump .FinishClair
+                Text: |
+                    NotifyReceiveDragonbreath:
+                        text "<PLAYER> received"
+                        line "ITEMNAME."
+                        done
+
+                    ClairText_DescribeDragonbreathDragonDen:
+                        text "That contains"
+                        line "ITEMNAME."
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Blackthorn Gym Trainers Before Boulders
+                FileName: BlackthornGym1F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Blackthorn City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 23
+                TrainerList: 
+                        - COOLTRAINERM 3
+                        - COOLTRAINERM 4
+                        - COOLTRAINERM 5
+                        - COOLTRAINERF 3
+            -
+                Name: Blackthorn Gym Trainers After Boulders
+                FileName: BlackthornGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Blackthorn City
+                FlagReqs:
+                    - Plain Badge
+                ItemReqs:
+                    - Strength
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 23
+                TrainerList: 
+                        - COOLTRAINERF 4
+                        - CLAIR 1

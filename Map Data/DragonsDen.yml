@@ -1,0 +1,78 @@
+Location:
+    -
+        Name: Dragons Den
+        FileName: BlackthornGym1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+            - Dragons_Den_1F
+            - Dragons_Den_B1F
+        LocationReqs: Clair TM
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 23
+        TrainerList: 
+            - COOLTRAINERF 21
+            - COOLTRAINERM 20
+            - TWINS 10
+            - TWINS 9
+        Sublocations:
+            -
+                Name: Dragons Den Max Elixer
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_ELIXER
+                Code: |
+                    DragonsDenB1FMaxElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dragons Den Calcium
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: CALCIUM
+                Code: |
+                    DragonsDenB1FCalcium:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+    -
+        Name: Dragons Den Shrine
+        FileName: DragonShrine.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Dragons Den
+        FlagReqs:
+            - Glacier Badge
+        ItemReqs:
+            - Whirlpool
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

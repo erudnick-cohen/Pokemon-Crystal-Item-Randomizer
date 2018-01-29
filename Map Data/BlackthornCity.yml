@@ -1,0 +1,16 @@
+Location:
+    -
+        Name: Blackthorn City
+        FileName: BlackthornCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ice Path Part 2
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

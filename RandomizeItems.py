@@ -26,8 +26,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 	reachable = {}
 	#define the set of active initial locations to consider
 	activeLoc = copy.copy(locationTree)
+	#define max distance of each badge
+	maxBadgeDist = 0
 	#define paranoia variable for if the search screws up and ACTUALLY gets stuck
 	stuckCount = 0
+	
 	
 	#begin search and assignment
 	goalReached = False
@@ -103,6 +106,17 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 						stateDist[badge] = i.distance
 						spoiler[badge] = i.Name
 					nBadges = nBadges+1
+					maxBadgeDist = max(maxBadgeDist,i.distance)
+					#set badge count based flags
+					if(nBadges == 7):
+						state['Rocket Invasion'] = True
+						stateDist['Rocket Invasion'] = maxBadgeDist
+					if(nBadges == 8):
+						state['8 Badges'] = True
+						stateDist['8 Badges'] = maxBadgeDist
+					if(nBadges == 16):
+						state['All Badges'] = True
+						stateDist['All Badges'] = maxBadgeDist
 		if(stuckCount == 4):
 			randomizerFailed = True
 		#check if we've become stuck
@@ -171,7 +185,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 						#item = next(x for x in progressItems if x == j)
 						progressItems.remove(j)
 						#Pick a random location with trash and put the item there
-						place = random.choice(trashSpots)
+						#This choice is slightly biased to be more likely to be a recent location
+						randspot = len(trashSpots) - random.randint(1,len(trashSpots))
+						place = random.choice(trashSpots[randspot:])
 						trashItems.append(place.item)
 						place.item = j
 						trashSpots.remove(place)

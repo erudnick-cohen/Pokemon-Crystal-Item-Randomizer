@@ -1,0 +1,82 @@
+Location:
+    -
+        Name: Route 44
+        FileName: Route44.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_44
+        LocationReqs: Mahogany Town
+        FlagReqs:
+            - Mahogany Rockets Defeated
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 22
+        TrainerList: 
+            - PSYCHIC_T 8
+            - FISHER 11
+            - FISHER 10
+            - COOLTRAINERF 16
+            - COOLTRAINERM 19
+            - POKEMANIAC 13
+            - BIRD_KEEPER 7
+        Sublocations:
+            -
+                Name: Route 44 Max Revive
+                FileName: Route44.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: Route_44
+                LocationReqs: Route 44
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_REVIVE
+                Code: |
+                    Route44MaxRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 44 Ultra Ball
+                FileName: Route44.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: Route_44
+                LocationReqs: Route 44
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ULTRA_BALL
+                Code: |
+                    Route44UltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 44 Max Repel
+                FileName: Route44.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: Route_44
+                LocationReqs: Route 44
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_REPEL
+                Code: |
+                    Route44MaxRepel:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
