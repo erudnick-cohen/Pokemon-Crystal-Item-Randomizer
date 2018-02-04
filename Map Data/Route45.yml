@@ -4,7 +4,7 @@ Location:
         FileName: Route45.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: Route_ 45
+        WildTableList: Route_45
         LocationReqs: Blackthorn City
         FlagReqs:
         ItemReqs:
@@ -28,7 +28,7 @@ Location:
         FileName: Route45.asm
         Type: Item
         HasPKMN: Yes
-        WildTableList: Route_ 45
+        WildTableList:
         LocationReqs: Route 45
         FlagReqs:
         ItemReqs:
@@ -47,7 +47,7 @@ Location:
         FileName: Route45.asm
         Type: Item
         HasPKMN: Yes
-        WildTableList: Route_45
+        WildTableList:
         LocationReqs: Route 45
         FlagReqs:
         ItemReqs:
@@ -66,7 +66,7 @@ Location:
         FileName: Route45.asm
         Type: Item
         HasPKMN: Yes
-        WildTableList: Route_ 45
+        WildTableList:
         LocationReqs: Route 45
         FlagReqs:
         ItemReqs:
@@ -85,7 +85,7 @@ Location:
         FileName: Route45.asm
         Type: Item
         HasPKMN: Yes
-        WildTableList: Route_ 45
+        WildTableList:
         LocationReqs: Route 45
         FlagReqs:
         ItemReqs:
