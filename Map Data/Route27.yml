@@ -1,0 +1,142 @@
+Location:
+    -
+        Name: Route 27
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+            - Route_27
+            - Tohjo_Falls
+        LocationReqs:
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Route 27 Rare Candy
+                FileName: Route27.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 27
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: RARE_CANDY
+                Code: |
+                    Route27RareCandy:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Tohjo Falls Moon Stone
+                FileName: TohjoFalls.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 27
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MOON_STONE
+                Code: |
+                    TohjoFallsMoonStone:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+    -
+        Name: Route 27 right side
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 27
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 27 right side
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 26
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Tohjo Falls Over the Waterfall
+        FileName: TohjoFalls.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 27 right side
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 28
+        TrainerList:
+            - COOLTRAINERF 11
+            - COOLTRAINERF 10
+            - COOLTRAINERM 11
+            - COOLTRAINERM 12
+            - PSYCHIC_T 10
+        Sublocations:
+            -
+                Name: Solar Beam TM
+                FileName: Route27.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tohjo Falls Over the Waterfall
+                FlagReqs:
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_SOLARBEAM
+                Code: |
+                    Route27TMSolarbeam:
+                        ITEMLINE
+                Text:
+                AREALV: 28
+                TrainerList: 
+                    - BIRD_KEEPER 12
+                Sublocations:

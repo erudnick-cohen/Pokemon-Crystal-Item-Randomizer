@@ -1,0 +1,74 @@
+Location:
+    -
+        Name: Route 26
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Route 27
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 26
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: League Gate
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 26 Max Elixer
+        FileName: Route26.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList: 
+            - Route_26
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: Yes
+        NormalItem: MAX_ELIXER
+        Code: |
+            Route26MaxElixer:
+                ITEMLINE
+        Text:
+        AREALV: 28
+        TrainerList: 
+            - COOLTRAINERF 9
+            - COOLTRAINERF 8
+            - COOLTRAINERM 10
+            - COOLTRAINERM 9
+            - PSYCHIC_T 9
+            - FISHER 21
+        Sublocations:
+    -
+        Name: League Gate
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 26
+        FlagReqs:
+            - 8 Badges
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

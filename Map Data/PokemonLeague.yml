@@ -1,0 +1,137 @@
+Location:
+    -
+        Name: Victory Road
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: League Gate
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - RIVAL1 13
+            - RIVAL1 14
+            - RIVAL1 15
+        Sublocations:
+            -
+                Name: Victory Road Max Revive
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Victory Road
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: MAX_REVIVE
+                Code: |
+                    VictoryRoadMaxRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Victory Road Full Restore
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Victory Road
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: FULL_RESTORE
+                Code: |
+                    VictoryRoadFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Victory Road Full Heal
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Victory Road
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: FULL_HEAL
+                Code: |
+                    VictoryRoadFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Victory Road HP Up
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Victory Road
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: HP_UP
+                Code: |
+                    VictoryRoadHPUp:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Earthquake TM
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Victory Road
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_EARTHQUAKE
+                Code: |
+                    VictoryRoadTMEarthquake:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+    -
+        Name: Elite Four
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Victory Road
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Became Champion
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - WILL 1
+            - KOGA 1
+            - BRUNO 1
+            - KAREN 1
+            - CHAMPION 1
+        Sublocations:
