@@ -1,0 +1,2033 @@
+BURNED_TOWER_1F:
+  Code: "map BURNED_TOWER_1F\n\tdb 4 percent, 4 percent, 4 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 13, RATTATA\n\tdb 14, KOFFING\n\tdb 15, RATTATA\n\
+    \tdb 14, ZUBAT\n\tdb 15, RATTATA\n\tdb 15, RATICATE\n\tdb 15, RATICATE\n\t; day\n\
+    \tdb 13, RATTATA\n\tdb 14, KOFFING\n\tdb 15, RATTATA\n\tdb 14, ZUBAT\n\tdb 15,\
+    \ RATTATA\n\tdb 15, RATICATE\n\tdb 15, RATICATE\n\t; nite\n\tdb 13, RATTATA\n\t\
+    db 14, KOFFING\n\tdb 15, RATTATA\n\tdb 14, ZUBAT\n\tdb 15, RATTATA\n\tdb 15, RATICATE\n\
+    \tdb 15, RATICATE\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: BURNED_TOWER_1F
+  Pokemon:
+    KOFFING:
+    - 14
+    RATICATE:
+    - 15
+    RATTATA:
+    - 13
+    - 15
+    ZUBAT:
+    - 14
+BURNED_TOWER_B1F:
+  Code: "map BURNED_TOWER_B1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 14, RATTATA\n\tdb 14, KOFFING\n\tdb 16, KOFFING\n\
+    \tdb 15, ZUBAT\n\tdb 12, KOFFING\n\tdb 16, KOFFING\n\tdb 16, WEEZING\n\t; day\n\
+    \tdb 14, RATTATA\n\tdb 14, KOFFING\n\tdb 16, KOFFING\n\tdb 15, ZUBAT\n\tdb 12,\
+    \ KOFFING\n\tdb 16, KOFFING\n\tdb 16, WEEZING\n\t; nite\n\tdb 14, RATTATA\n\t\
+    db 14, KOFFING\n\tdb 16, KOFFING\n\tdb 15, ZUBAT\n\tdb 12, KOFFING\n\tdb 16, KOFFING\n\
+    \tdb 16, WEEZING\n\n\t"
+  File: johto_grass.asm
+  Level: 12
+  Name: BURNED_TOWER_B1F
+  Pokemon:
+    KOFFING:
+    - 14
+    - 16
+    - 12
+    RATTATA:
+    - 14
+    WEEZING:
+    - 16
+    ZUBAT:
+    - 15
+DARK_CAVE_BLACKTHORN_ENTRANCE:
+  Code: "map DARK_CAVE_BLACKTHORN_ENTRANCE\n\tdb 4 percent, 4 percent, 4 percent ;\
+    \ encounter rates: morn/day/nite\n\t; morn\n\tdb 23, GEODUDE\n\tdb 23, ZUBAT\n\
+    \tdb 25, GRAVELER\n\tdb 25, URSARING\n\tdb 20, TEDDIURSA\n\tdb 23, GOLBAT\n\t\
+    db 23, GOLBAT\n\t; day\n\tdb 23, GEODUDE\n\tdb 23, ZUBAT\n\tdb 25, GRAVELER\n\t\
+    db 25, URSARING\n\tdb 30, URSARING\n\tdb 23, GOLBAT\n\tdb 23, GOLBAT\n\t; nite\n\
+    \tdb 23, GEODUDE\n\tdb 23, ZUBAT\n\tdb 25, GRAVELER\n\tdb 20, WOBBUFFET\n\tdb\
+    \ 25, WOBBUFFET\n\tdb 23, GOLBAT\n\tdb 23, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: DARK_CAVE_BLACKTHORN_ENTRANCE
+  Pokemon:
+    GEODUDE:
+    - 23
+    GOLBAT:
+    - 23
+    GRAVELER:
+    - 25
+    TEDDIURSA:
+    - 20
+    URSARING:
+    - 25
+    - 30
+    ZUBAT:
+    - 23
+DARK_CAVE_VIOLET_ENTRANCE:
+  Code: "map DARK_CAVE_VIOLET_ENTRANCE\n\tdb 4 percent, 4 percent, 4 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 3, GEODUDE\n\tdb 2, ZUBAT\n\tdb 2, GEODUDE\n\
+    \tdb 4, GEODUDE\n\tdb 2, TEDDIURSA\n\tdb 4, ZUBAT\n\tdb 4, DUNSPARCE\n\t; day\n\
+    \tdb 3, GEODUDE\n\tdb 2, ZUBAT\n\tdb 2, GEODUDE\n\tdb 4, GEODUDE\n\tdb 2, ZUBAT\n\
+    \tdb 4, ZUBAT\n\tdb 4, DUNSPARCE\n\t; nite\n\tdb 3, GEODUDE\n\tdb 2, ZUBAT\n\t\
+    db 2, GEODUDE\n\tdb 4, GEODUDE\n\tdb 2, ZUBAT\n\tdb 4, ZUBAT\n\tdb 4, DUNSPARCE\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 2
+  Name: DARK_CAVE_VIOLET_ENTRANCE
+  Pokemon:
+    DUNSPARCE:
+    - 4
+    GEODUDE:
+    - 3
+    - 2
+    - 4
+    TEDDIURSA:
+    - 2
+    ZUBAT:
+    - 2
+    - 4
+DIGLETTS_CAVE:
+  Code: "map DIGLETTS_CAVE\n\tdb 4 percent, 2 percent, 8 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 3, DIGLETT\n\tdb 6, DIGLETT\n\tdb 12, DIGLETT\n\
+    \tdb 24, DIGLETT\n\tdb 24, DUGTRIO\n\tdb 24, DUGTRIO\n\tdb 24, DUGTRIO\n\t; day\n\
+    \tdb 2, DIGLETT\n\tdb 4, DIGLETT\n\tdb 8, DIGLETT\n\tdb 16, DIGLETT\n\tdb 16,\
+    \ DUGTRIO\n\tdb 16, DUGTRIO\n\tdb 16, DUGTRIO\n\t; nite\n\tdb 4, DIGLETT\n\tdb\
+    \ 8, DIGLETT\n\tdb 16, DIGLETT\n\tdb 32, DIGLETT\n\tdb 32, DUGTRIO\n\tdb 32, DUGTRIO\n\
+    \tdb 32, DUGTRIO\n\n\t"
+  File: kanto_grass.asm
+  Level: 2
+  Name: DIGLETTS_CAVE
+  Pokemon:
+    DIGLETT:
+    - 3
+    - 6
+    - 12
+    - 24
+    - 2
+    - 4
+    - 8
+    - 16
+    DUGTRIO:
+    - 24
+    - 16
+ICE_PATH_1F:
+  Code: "map ICE_PATH_1F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 21, SWINUB\n\tdb 22, ZUBAT\n\tdb 22, GOLBAT\n\t\
+    db 23, SWINUB\n\tdb 24, GOLBAT\n\tdb 22, GOLBAT\n\tdb 22, GOLBAT\n\t; day\n\t\
+    db 21, SWINUB\n\tdb 22, ZUBAT\n\tdb 22, GOLBAT\n\tdb 23, SWINUB\n\tdb 24, GOLBAT\n\
+    \tdb 22, GOLBAT\n\tdb 22, GOLBAT\n\t; nite\n\tdb 21, DELIBIRD\n\tdb 22, ZUBAT\n\
+    \tdb 22, GOLBAT\n\tdb 23, DELIBIRD\n\tdb 24, GOLBAT\n\tdb 22, GOLBAT\n\tdb 22,\
+    \ GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 21
+  Name: ICE_PATH_1F
+  Pokemon:
+    GOLBAT:
+    - 22
+    - 24
+    SWINUB:
+    - 21
+    - 23
+    ZUBAT:
+    - 22
+ICE_PATH_B1F:
+  Code: "map ICE_PATH_B1F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, SWINUB\n\tdb 23, ZUBAT\n\tdb 23, GOLBAT\n\t\
+    db 24, SWINUB\n\tdb 25, GOLBAT\n\tdb 23, GOLBAT\n\tdb 22, JYNX\n\t; day\n\tdb\
+    \ 22, SWINUB\n\tdb 23, ZUBAT\n\tdb 23, GOLBAT\n\tdb 24, SWINUB\n\tdb 25, GOLBAT\n\
+    \tdb 23, GOLBAT\n\tdb 22, JYNX\n\t; nite\n\tdb 22, DELIBIRD\n\tdb 23, ZUBAT\n\t\
+    db 23, GOLBAT\n\tdb 24, DELIBIRD\n\tdb 25, GOLBAT\n\tdb 23, GOLBAT\n\tdb 22, SNEASEL\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: ICE_PATH_B1F
+  Pokemon:
+    GOLBAT:
+    - 23
+    - 25
+    JYNX:
+    - 22
+    SWINUB:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
+ICE_PATH_B2F_BLACKTHORN_SIDE:
+  Code: "map ICE_PATH_B2F_BLACKTHORN_SIDE\n\tdb 2 percent, 2 percent, 2 percent ;\
+    \ encounter rates: morn/day/nite\n\t; morn\n\tdb 23, SWINUB\n\tdb 24, ZUBAT\n\t\
+    db 24, GOLBAT\n\tdb 25, SWINUB\n\tdb 26, GOLBAT\n\tdb 22, JYNX\n\tdb 24, JYNX\n\
+    \t; day\n\tdb 23, SWINUB\n\tdb 24, ZUBAT\n\tdb 24, GOLBAT\n\tdb 25, SWINUB\n\t\
+    db 26, GOLBAT\n\tdb 22, JYNX\n\tdb 24, JYNX\n\t; nite\n\tdb 23, DELIBIRD\n\tdb\
+    \ 24, ZUBAT\n\tdb 24, GOLBAT\n\tdb 25, DELIBIRD\n\tdb 26, GOLBAT\n\tdb 22, SNEASEL\n\
+    \tdb 24, SNEASEL\n\n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: ICE_PATH_B2F_BLACKTHORN_SIDE
+  Pokemon:
+    GOLBAT:
+    - 24
+    - 26
+    JYNX:
+    - 22
+    - 24
+    SWINUB:
+    - 23
+    - 25
+    ZUBAT:
+    - 24
+ICE_PATH_B2F_MAHOGANY_SIDE:
+  Code: "map ICE_PATH_B2F_MAHOGANY_SIDE\n\tdb 2 percent, 2 percent, 2 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 23, SWINUB\n\tdb 24, ZUBAT\n\tdb 24, GOLBAT\n\
+    \tdb 25, SWINUB\n\tdb 26, GOLBAT\n\tdb 22, JYNX\n\tdb 24, JYNX\n\t; day\n\tdb\
+    \ 23, SWINUB\n\tdb 24, ZUBAT\n\tdb 24, GOLBAT\n\tdb 25, SWINUB\n\tdb 26, GOLBAT\n\
+    \tdb 22, JYNX\n\tdb 24, JYNX\n\t; nite\n\tdb 23, DELIBIRD\n\tdb 24, ZUBAT\n\t\
+    db 24, GOLBAT\n\tdb 25, DELIBIRD\n\tdb 26, GOLBAT\n\tdb 22, SNEASEL\n\tdb 24,\
+    \ SNEASEL\n\n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: ICE_PATH_B2F_MAHOGANY_SIDE
+  Pokemon:
+    GOLBAT:
+    - 24
+    - 26
+    JYNX:
+    - 22
+    - 24
+    SWINUB:
+    - 23
+    - 25
+    ZUBAT:
+    - 24
+ICE_PATH_B3F:
+  Code: "map ICE_PATH_B3F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 24, SWINUB\n\tdb 25, ZUBAT\n\tdb 25, GOLBAT\n\t\
+    db 26, SWINUB\n\tdb 22, JYNX\n\tdb 24, JYNX\n\tdb 26, JYNX\n\t; day\n\tdb 24,\
+    \ SWINUB\n\tdb 25, ZUBAT\n\tdb 25, GOLBAT\n\tdb 26, SWINUB\n\tdb 22, JYNX\n\t\
+    db 24, JYNX\n\tdb 26, JYNX\n\t; nite\n\tdb 24, DELIBIRD\n\tdb 25, ZUBAT\n\tdb\
+    \ 25, GOLBAT\n\tdb 26, DELIBIRD\n\tdb 22, SNEASEL\n\tdb 24, SNEASEL\n\tdb 26,\
+    \ SNEASEL\n\n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: ICE_PATH_B3F
+  Pokemon:
+    GOLBAT:
+    - 25
+    JYNX:
+    - 22
+    - 24
+    - 26
+    SWINUB:
+    - 24
+    - 26
+    ZUBAT:
+    - 25
+ILEX_FOREST:
+  Code: "map ILEX_FOREST\n\tdb 4 percent, 4 percent, 4 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 5, CATERPIE\n\tdb 5, WEEDLE\n\tdb 7, METAPOD\n\
+    \tdb 7, KAKUNA\n\tdb 7, PIDGEY\n\tdb 6, PARAS\n\tdb 6, PARAS\n\t; day\n\tdb 5,\
+    \ CATERPIE\n\tdb 5, WEEDLE\n\tdb 7, METAPOD\n\tdb 7, KAKUNA\n\tdb 7, PIDGEY\n\t\
+    db 6, PARAS\n\tdb 6, PARAS\n\t; nite\n\tdb 5, ODDISH\n\tdb 5, VENONAT\n\tdb 7,\
+    \ ODDISH\n\tdb 7, PSYDUCK\n\tdb 7, HOOTHOOT\n\tdb 6, PARAS\n\tdb 6, PARAS\n\n\t"
+  File: johto_grass.asm
+  Level: 5
+  Name: ILEX_FOREST
+  Pokemon:
+    CATERPIE:
+    - 5
+    KAKUNA:
+    - 7
+    METAPOD:
+    - 7
+    PARAS:
+    - 6
+    PIDGEY:
+    - 7
+    WEEDLE:
+    - 5
+MOUNT_MOON:
+  Code: "map MOUNT_MOON\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 6, ZUBAT\n\tdb 8, GEODUDE\n\tdb 8, SANDSHREW\n\tdb 12, PARAS\n\t\
+    db 10, GEODUDE\n\tdb 8, CLEFAIRY\n\tdb 8, CLEFAIRY\n\t; day\n\tdb 6, ZUBAT\n\t\
+    db 8, GEODUDE\n\tdb 8, SANDSHREW\n\tdb 12, PARAS\n\tdb 10, GEODUDE\n\tdb 8, CLEFAIRY\n\
+    \tdb 8, CLEFAIRY\n\t; nite\n\tdb 6, ZUBAT\n\tdb 8, GEODUDE\n\tdb 8, CLEFAIRY\n\
+    \tdb 12, PARAS\n\tdb 10, GEODUDE\n\tdb 12, CLEFAIRY\n\tdb 12, CLEFAIRY\n\n\t"
+  File: kanto_grass.asm
+  Level: 6
+  Name: MOUNT_MOON
+  Pokemon:
+    CLEFAIRY:
+    - 8
+    GEODUDE:
+    - 8
+    - 10
+    PARAS:
+    - 12
+    SANDSHREW:
+    - 8
+    ZUBAT:
+    - 6
+MOUNT_MORTAR_1F_INSIDE:
+  Code: "map MOUNT_MORTAR_1F_INSIDE\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 13, GEODUDE\n\tdb 14, RATTATA\n\tdb 15,\
+    \ MACHOP\n\tdb 14, RATICATE\n\tdb 15, ZUBAT\n\tdb 15, GOLBAT\n\tdb 15, GOLBAT\n\
+    \t; day\n\tdb 13, GEODUDE\n\tdb 14, RATTATA\n\tdb 15, MACHOP\n\tdb 14, RATICATE\n\
+    \tdb 15, ZUBAT\n\tdb 15, GOLBAT\n\tdb 15, GOLBAT\n\t; nite\n\tdb 13, GEODUDE\n\
+    \tdb 14, RATTATA\n\tdb 15, RATICATE\n\tdb 14, ZUBAT\n\tdb 15, MARILL\n\tdb 15,\
+    \ GOLBAT\n\tdb 15, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: MOUNT_MORTAR_1F_INSIDE
+  Pokemon:
+    GEODUDE:
+    - 13
+    GOLBAT:
+    - 15
+    MACHOP:
+    - 15
+    RATICATE:
+    - 14
+    RATTATA:
+    - 14
+    ZUBAT:
+    - 15
+MOUNT_MORTAR_1F_OUTSIDE:
+  Code: "map MOUNT_MORTAR_1F_OUTSIDE\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 14, RATTATA\n\tdb 13, ZUBAT\n\tdb 14, MACHOP\n\
+    \tdb 13, GOLBAT\n\tdb 14, GEODUDE\n\tdb 16, RATICATE\n\tdb 16, RATICATE\n\t; day\n\
+    \tdb 14, RATTATA\n\tdb 13, ZUBAT\n\tdb 14, MACHOP\n\tdb 13, GOLBAT\n\tdb 14, GEODUDE\n\
+    \tdb 16, RATICATE\n\tdb 16, RATICATE\n\t; nite\n\tdb 14, RATTATA\n\tdb 13, ZUBAT\n\
+    \tdb 14, MARILL\n\tdb 13, GOLBAT\n\tdb 14, GEODUDE\n\tdb 16, RATICATE\n\tdb 16,\
+    \ RATICATE\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: MOUNT_MORTAR_1F_OUTSIDE
+  Pokemon:
+    GEODUDE:
+    - 14
+    GOLBAT:
+    - 13
+    MACHOP:
+    - 14
+    RATICATE:
+    - 16
+    RATTATA:
+    - 14
+    ZUBAT:
+    - 13
+MOUNT_MORTAR_2F_INSIDE:
+  Code: "map MOUNT_MORTAR_2F_INSIDE\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 31, GRAVELER\n\tdb 32, MACHOKE\n\tdb 31,\
+    \ GEODUDE\n\tdb 30, RATICATE\n\tdb 28, MACHOP\n\tdb 30, GOLBAT\n\tdb 30, GOLBAT\n\
+    \t; day\n\tdb 31, GRAVELER\n\tdb 32, MACHOKE\n\tdb 31, GEODUDE\n\tdb 30, RATICATE\n\
+    \tdb 28, MACHOP\n\tdb 30, GOLBAT\n\tdb 30, GOLBAT\n\t; nite\n\tdb 31, GRAVELER\n\
+    \tdb 31, GEODUDE\n\tdb 30, RATICATE\n\tdb 30, GOLBAT\n\tdb 28, MARILL\n\tdb 32,\
+    \ GOLBAT\n\tdb 32, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 28
+  Name: MOUNT_MORTAR_2F_INSIDE
+  Pokemon:
+    GEODUDE:
+    - 31
+    GOLBAT:
+    - 30
+    GRAVELER:
+    - 31
+    MACHOKE:
+    - 32
+    MACHOP:
+    - 28
+    RATICATE:
+    - 30
+MOUNT_MORTAR_B1F:
+  Code: "map MOUNT_MORTAR_B1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 15, ZUBAT\n\tdb 17, ZUBAT\n\tdb 17, GOLBAT\n\t\
+    db 16, MACHOP\n\tdb 16, GEODUDE\n\tdb 18, RATICATE\n\tdb 18, RATICATE\n\t; day\n\
+    \tdb 15, ZUBAT\n\tdb 17, ZUBAT\n\tdb 17, GOLBAT\n\tdb 16, MACHOP\n\tdb 16, GEODUDE\n\
+    \tdb 18, RATICATE\n\tdb 18, RATICATE\n\t; nite\n\tdb 15, ZUBAT\n\tdb 17, ZUBAT\n\
+    \tdb 17, GOLBAT\n\tdb 16, MARILL\n\tdb 16, GEODUDE\n\tdb 18, RATICATE\n\tdb 18,\
+    \ RATICATE\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: MOUNT_MORTAR_B1F
+  Pokemon:
+    GEODUDE:
+    - 16
+    GOLBAT:
+    - 17
+    MACHOP:
+    - 16
+    RATICATE:
+    - 18
+    ZUBAT:
+    - 15
+    - 17
+NATIONAL_PARK:
+  Code: "map NATIONAL_PARK\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 12, NIDORAN_M\n\tdb 12, NIDORAN_F\n\tdb 14, LEDYBA\n\
+    \tdb 13, PIDGEY\n\tdb 10, CATERPIE\n\tdb 10, WEEDLE\n\tdb 10, WEEDLE\n\t; day\n\
+    \tdb 12, NIDORAN_F\n\tdb 12, NIDORAN_M\n\tdb 14, SUNKERN\n\tdb 13, PIDGEY\n\t\
+    db 10, CATERPIE\n\tdb 10, WEEDLE\n\tdb 10, WEEDLE\n\t; nite\n\tdb 12, PSYDUCK\n\
+    \tdb 13, HOOTHOOT\n\tdb 14, SPINARAK\n\tdb 15, HOOTHOOT\n\tdb 10, VENONAT\n\t\
+    db 12, VENONAT\n\tdb 12, VENONAT\n\n\t"
+  File: johto_grass.asm
+  Level: 10
+  Name: NATIONAL_PARK
+  Pokemon:
+    CATERPIE:
+    - 10
+    LEDYBA:
+    - 14
+    NIDORAN_F:
+    - 12
+    NIDORAN_M:
+    - 12
+    PIDGEY:
+    - 13
+    SUNKERN:
+    - 14
+    WEEDLE:
+    - 10
+ROCK_TUNNEL_1F:
+  Code: "map ROCK_TUNNEL_1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 10, CUBONE\n\tdb 11, GEODUDE\n\tdb 12, MACHOP\n\
+    \tdb 12, ZUBAT\n\tdb 15, MACHOKE\n\tdb 12, MAROWAK\n\tdb 12, MAROWAK\n\t; day\n\
+    \tdb 10, CUBONE\n\tdb 11, GEODUDE\n\tdb 12, MACHOP\n\tdb 12, ZUBAT\n\tdb 15, MACHOKE\n\
+    \tdb 12, MAROWAK\n\tdb 12, MAROWAK\n\t; nite\n\tdb 12, ZUBAT\n\tdb 11, GEODUDE\n\
+    \tdb 12, GEODUDE\n\tdb 17, HAUNTER\n\tdb 15, ZUBAT\n\tdb 15, ZUBAT\n\tdb 15, ZUBAT\n\
+    \n\t"
+  File: kanto_grass.asm
+  Level: 10
+  Name: ROCK_TUNNEL_1F
+  Pokemon:
+    CUBONE:
+    - 10
+    GEODUDE:
+    - 11
+    MACHOKE:
+    - 15
+    MACHOP:
+    - 12
+    MAROWAK:
+    - 12
+    ZUBAT:
+    - 12
+ROCK_TUNNEL_B1F:
+  Code: "map ROCK_TUNNEL_B1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 12, CUBONE\n\tdb 14, GEODUDE\n\tdb 16, ONIX\n\t\
+    db 12, ZUBAT\n\tdb 15, MAROWAK\n\tdb 15, KANGASKHAN\n\tdb 15, KANGASKHAN\n\t;\
+    \ day\n\tdb 12, CUBONE\n\tdb 14, GEODUDE\n\tdb 16, ONIX\n\tdb 12, ZUBAT\n\tdb\
+    \ 15, MAROWAK\n\tdb 15, KANGASKHAN\n\tdb 15, KANGASKHAN\n\t; nite\n\tdb 12, ZUBAT\n\
+    \tdb 14, GEODUDE\n\tdb 16, ONIX\n\tdb 15, ZUBAT\n\tdb 15, HAUNTER\n\tdb 15, GOLBAT\n\
+    \tdb 15, GOLBAT\n\n\t"
+  File: kanto_grass.asm
+  Level: 12
+  Name: ROCK_TUNNEL_B1F
+  Pokemon:
+    CUBONE:
+    - 12
+    GEODUDE:
+    - 14
+    KANGASKHAN:
+    - 15
+    MAROWAK:
+    - 15
+    ONIX:
+    - 16
+    ZUBAT:
+    - 12
+ROUTE_1:
+  Code: "map ROUTE_1\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 2, PIDGEY\n\tdb 2, RATTATA\n\tdb 3, SENTRET\n\tdb 3, PIDGEY\n\t\
+    db 6, FURRET\n\tdb 4, PIDGEY\n\tdb 4, PIDGEY\n\t; day\n\tdb 2, PIDGEY\n\tdb 2,\
+    \ RATTATA\n\tdb 3, SENTRET\n\tdb 3, PIDGEY\n\tdb 6, FURRET\n\tdb 4, PIDGEY\n\t\
+    db 4, PIDGEY\n\t; nite\n\tdb 2, HOOTHOOT\n\tdb 2, RATTATA\n\tdb 3, RATTATA\n\t\
+    db 3, HOOTHOOT\n\tdb 6, RATICATE\n\tdb 4, HOOTHOOT\n\tdb 4, HOOTHOOT\n\n\t"
+  File: kanto_grass.asm
+  Level: 2
+  Name: ROUTE_1
+  Pokemon:
+    FURRET:
+    - 6
+    PIDGEY:
+    - 2
+    - 3
+    - 4
+    RATTATA:
+    - 2
+    SENTRET:
+    - 3
+ROUTE_10_NORTH:
+  Code: "map ROUTE_10_NORTH\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 15, SPEAROW\n\tdb 17, VOLTORB\n\tdb 15, RATICATE\n\
+    \tdb 15, FEAROW\n\tdb 15, MAROWAK\n\tdb 16, ELECTABUZZ\n\tdb 16, ELECTABUZZ\n\t\
+    ; day\n\tdb 15, SPEAROW\n\tdb 17, VOLTORB\n\tdb 15, RATICATE\n\tdb 15, FEAROW\n\
+    \tdb 15, MAROWAK\n\tdb 18, ELECTABUZZ\n\tdb 18, ELECTABUZZ\n\t; nite\n\tdb 15,\
+    \ VENONAT\n\tdb 17, VOLTORB\n\tdb 15, RATICATE\n\tdb 15, VENOMOTH\n\tdb 15, ZUBAT\n\
+    \tdb 16, ELECTABUZZ\n\tdb 16, ELECTABUZZ\n\n\t"
+  File: kanto_grass.asm
+  Level: 15
+  Name: ROUTE_10_NORTH
+  Pokemon:
+    ELECTABUZZ:
+    - 16
+    - 18
+    FEAROW:
+    - 15
+    MAROWAK:
+    - 15
+    RATICATE:
+    - 15
+    SPEAROW:
+    - 15
+    VOLTORB:
+    - 17
+ROUTE_11:
+  Code: "map ROUTE_11\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 14, HOPPIP\n\tdb 13, RATICATE\n\tdb 15, MAGNEMITE\n\
+    \tdb 16, PIDGEOTTO\n\tdb 16, RATTATA\n\tdb 16, HOPPIP\n\tdb 16, HOPPIP\n\t; day\n\
+    \tdb 14, HOPPIP\n\tdb 13, RATICATE\n\tdb 15, MAGNEMITE\n\tdb 16, PIDGEOTTO\n\t\
+    db 16, RATTATA\n\tdb 16, HOPPIP\n\tdb 16, HOPPIP\n\t; nite\n\tdb 14, DROWZEE\n\
+    \tdb 13, MEOWTH\n\tdb 15, MAGNEMITE\n\tdb 16, NOCTOWL\n\tdb 16, RATICATE\n\tdb\
+    \ 16, HYPNO\n\tdb 16, HYPNO\n\n\t"
+  File: kanto_grass.asm
+  Level: 13
+  Name: ROUTE_11
+  Pokemon:
+    HOPPIP:
+    - 14
+    - 16
+    MAGNEMITE:
+    - 15
+    PIDGEOTTO:
+    - 16
+    RATICATE:
+    - 13
+    RATTATA:
+    - 16
+ROUTE_13:
+  Code: "map ROUTE_13\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 23, NIDORINO\n\tdb 23, NIDORINA\n\tdb 25, PIDGEOTTO\n\
+    \tdb 25, HOPPIP\n\tdb 27, HOPPIP\n\tdb 27, HOPPIP\n\tdb 25, CHANSEY\n\t; day\n\
+    \tdb 23, NIDORINO\n\tdb 23, NIDORINA\n\tdb 25, PIDGEOTTO\n\tdb 25, HOPPIP\n\t\
+    db 27, HOPPIP\n\tdb 27, HOPPIP\n\tdb 25, CHANSEY\n\t; nite\n\tdb 23, VENONAT\n\
+    \tdb 23, QUAGSIRE\n\tdb 25, NOCTOWL\n\tdb 25, VENOMOTH\n\tdb 25, QUAGSIRE\n\t\
+    db 25, QUAGSIRE\n\tdb 25, CHANSEY\n\n\t"
+  File: kanto_grass.asm
+  Level: 23
+  Name: ROUTE_13
+  Pokemon:
+    CHANSEY:
+    - 25
+    HOPPIP:
+    - 25
+    - 27
+    NIDORINA:
+    - 23
+    NIDORINO:
+    - 23
+    PIDGEOTTO:
+    - 25
+ROUTE_14:
+  Code: "map ROUTE_14\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 26, NIDORINO\n\tdb 26, NIDORINA\n\tdb 28, PIDGEOTTO\n\
+    \tdb 28, HOPPIP\n\tdb 30, SKIPLOOM\n\tdb 30, SKIPLOOM\n\tdb 28, CHANSEY\n\t; day\n\
+    \tdb 26, NIDORINO\n\tdb 26, NIDORINA\n\tdb 28, PIDGEOTTO\n\tdb 28, HOPPIP\n\t\
+    db 30, SKIPLOOM\n\tdb 30, SKIPLOOM\n\tdb 28, CHANSEY\n\t; nite\n\tdb 26, VENONAT\n\
+    \tdb 26, QUAGSIRE\n\tdb 28, NOCTOWL\n\tdb 28, VENOMOTH\n\tdb 28, QUAGSIRE\n\t\
+    db 28, QUAGSIRE\n\tdb 28, CHANSEY\n\n\t"
+  File: kanto_grass.asm
+  Level: 26
+  Name: ROUTE_14
+  Pokemon:
+    CHANSEY:
+    - 28
+    HOPPIP:
+    - 28
+    NIDORINA:
+    - 26
+    NIDORINO:
+    - 26
+    PIDGEOTTO:
+    - 28
+    SKIPLOOM:
+    - 30
+ROUTE_15:
+  Code: "map ROUTE_15\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 23, NIDORINO\n\tdb 23, NIDORINA\n\tdb 25, PIDGEOTTO\n\
+    \tdb 25, HOPPIP\n\tdb 27, HOPPIP\n\tdb 27, HOPPIP\n\tdb 25, CHANSEY\n\t; day\n\
+    \tdb 23, NIDORINO\n\tdb 23, NIDORINA\n\tdb 25, PIDGEOTTO\n\tdb 25, HOPPIP\n\t\
+    db 27, HOPPIP\n\tdb 27, HOPPIP\n\tdb 25, CHANSEY\n\t; nite\n\tdb 23, VENONAT\n\
+    \tdb 23, QUAGSIRE\n\tdb 25, NOCTOWL\n\tdb 25, VENOMOTH\n\tdb 25, QUAGSIRE\n\t\
+    db 25, QUAGSIRE\n\tdb 25, CHANSEY\n\n\t"
+  File: kanto_grass.asm
+  Level: 23
+  Name: ROUTE_15
+  Pokemon:
+    CHANSEY:
+    - 25
+    HOPPIP:
+    - 25
+    - 27
+    NIDORINA:
+    - 23
+    NIDORINO:
+    - 23
+    PIDGEOTTO:
+    - 25
+ROUTE_16:
+  Code: "map ROUTE_16\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 26, GRIMER\n\tdb 27, FEAROW\n\tdb 28, GRIMER\n\
+    \tdb 29, FEAROW\n\tdb 29, FEAROW\n\tdb 30, MUK\n\tdb 30, MUK\n\t; day\n\tdb 26,\
+    \ GRIMER\n\tdb 27, FEAROW\n\tdb 28, GRIMER\n\tdb 29, FEAROW\n\tdb 29, SLUGMA\n\
+    \tdb 30, MUK\n\tdb 30, MUK\n\t; nite\n\tdb 26, GRIMER\n\tdb 27, GRIMER\n\tdb 28,\
+    \ GRIMER\n\tdb 29, MURKROW\n\tdb 29, MURKROW\n\tdb 30, MUK\n\tdb 30, MUK\n\n\t"
+  File: kanto_grass.asm
+  Level: 26
+  Name: ROUTE_16
+  Pokemon:
+    FEAROW:
+    - 27
+    - 29
+    GRIMER:
+    - 26
+    - 28
+    MUK:
+    - 30
+    SLUGMA:
+    - 29
+ROUTE_17:
+  Code: "map ROUTE_17\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 30, FEAROW\n\tdb 29, GRIMER\n\tdb 31, GRIMER\n\
+    \tdb 32, FEAROW\n\tdb 33, GRIMER\n\tdb 33, MUK\n\tdb 33, MUK\n\t; day\n\tdb 30,\
+    \ FEAROW\n\tdb 29, SLUGMA\n\tdb 29, GRIMER\n\tdb 32, FEAROW\n\tdb 32, SLUGMA\n\
+    \tdb 33, MUK\n\tdb 33, MUK\n\t; nite\n\tdb 30, GRIMER\n\tdb 29, GRIMER\n\tdb 31,\
+    \ GRIMER\n\tdb 32, GRIMER\n\tdb 33, GRIMER\n\tdb 33, MUK\n\tdb 33, MUK\n\n\t"
+  File: kanto_grass.asm
+  Level: 29
+  Name: ROUTE_17
+  Pokemon:
+    FEAROW:
+    - 30
+    - 32
+    GRIMER:
+    - 29
+    - 31
+    - 33
+    MUK:
+    - 33
+    SLUGMA:
+    - 29
+    - 32
+ROUTE_18:
+  Code: "map ROUTE_18\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 26, GRIMER\n\tdb 27, FEAROW\n\tdb 28, GRIMER\n\
+    \tdb 29, FEAROW\n\tdb 29, FEAROW\n\tdb 30, MUK\n\tdb 30, MUK\n\t; day\n\tdb 26,\
+    \ GRIMER\n\tdb 27, FEAROW\n\tdb 28, GRIMER\n\tdb 29, FEAROW\n\tdb 29, SLUGMA\n\
+    \tdb 30, MUK\n\tdb 30, MUK\n\t; nite\n\tdb 26, GRIMER\n\tdb 27, GRIMER\n\tdb 28,\
+    \ GRIMER\n\tdb 29, GRIMER\n\tdb 29, GRIMER\n\tdb 30, MUK\n\tdb 30, MUK\n\n\t"
+  File: kanto_grass.asm
+  Level: 26
+  Name: ROUTE_18
+  Pokemon:
+    FEAROW:
+    - 27
+    - 29
+    GRIMER:
+    - 26
+    - 28
+    MUK:
+    - 30
+    SLUGMA:
+    - 29
+ROUTE_2:
+  Code: "map ROUTE_2\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 3, CATERPIE\n\tdb 3, LEDYBA\n\tdb 5, PIDGEY\n\tdb 7, BUTTERFREE\n\
+    \tdb 7, LEDIAN\n\tdb 4, PIKACHU\n\tdb 4, PIKACHU\n\t; day\n\tdb 3, CATERPIE\n\t\
+    db 3, PIDGEY\n\tdb 5, PIDGEY\n\tdb 7, BUTTERFREE\n\tdb 7, PIDGEOTTO\n\tdb 4, PIKACHU\n\
+    \tdb 4, PIKACHU\n\t; nite\n\tdb 3, HOOTHOOT\n\tdb 3, SPINARAK\n\tdb 5, HOOTHOOT\n\
+    \tdb 7, NOCTOWL\n\tdb 7, ARIADOS\n\tdb 4, NOCTOWL\n\tdb 4, NOCTOWL\n\n\t"
+  File: kanto_grass.asm
+  Level: 3
+  Name: ROUTE_2
+  Pokemon:
+    BUTTERFREE:
+    - 7
+    CATERPIE:
+    - 3
+    LEDIAN:
+    - 7
+    LEDYBA:
+    - 3
+    PIDGEOTTO:
+    - 7
+    PIDGEY:
+    - 5
+    - 3
+    PIKACHU:
+    - 4
+ROUTE_21:
+  Code: "map ROUTE_21\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 30, TANGELA\n\tdb 25, RATTATA\n\tdb 35, TANGELA\n\tdb 20, RATICATE\n\
+    \tdb 30, MR__MIME\n\tdb 28, MR__MIME\n\tdb 28, MR__MIME\n\t; day\n\tdb 30, TANGELA\n\
+    \tdb 25, RATTATA\n\tdb 35, TANGELA\n\tdb 20, RATICATE\n\tdb 28, MR__MIME\n\tdb\
+    \ 30, MR__MIME\n\tdb 30, MR__MIME\n\t; nite\n\tdb 30, TANGELA\n\tdb 25, RATTATA\n\
+    \tdb 35, TANGELA\n\tdb 20, RATICATE\n\tdb 30, TANGELA\n\tdb 28, TANGELA\n\tdb\
+    \ 28, TANGELA\n\n\t"
+  File: kanto_grass.asm
+  Level: 20
+  Name: ROUTE_21
+  Pokemon:
+    MR__MIME:
+    - 30
+    - 28
+    RATICATE:
+    - 20
+    RATTATA:
+    - 25
+    TANGELA:
+    - 30
+    - 35
+ROUTE_22:
+  Code: "map ROUTE_22\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 3, RATTATA\n\tdb 3, SPEAROW\n\tdb 5, SPEAROW\n\
+    \tdb 4, DODUO\n\tdb 6, PONYTA\n\tdb 7, FEAROW\n\tdb 7, FEAROW\n\t; day\n\tdb 3,\
+    \ RATTATA\n\tdb 3, SPEAROW\n\tdb 5, SPEAROW\n\tdb 4, DODUO\n\tdb 6, PONYTA\n\t\
+    db 7, FEAROW\n\tdb 7, FEAROW\n\t; nite\n\tdb 3, RATTATA\n\tdb 3, POLIWAG\n\tdb\
+    \ 5, RATTATA\n\tdb 4, POLIWAG\n\tdb 6, RATTATA\n\tdb 7, RATTATA\n\tdb 7, RATTATA\n\
+    \n\t"
+  File: kanto_grass.asm
+  Level: 3
+  Name: ROUTE_22
+  Pokemon:
+    DODUO:
+    - 4
+    FEAROW:
+    - 7
+    PONYTA:
+    - 6
+    RATTATA:
+    - 3
+    SPEAROW:
+    - 3
+    - 5
+ROUTE_24:
+  Code: "map ROUTE_24\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 8, CATERPIE\n\tdb 10, CATERPIE\n\tdb 12, METAPOD\n\
+    \tdb 12, ABRA\n\tdb 10, BELLSPROUT\n\tdb 14, BUTTERFREE\n\tdb 14, BUTTERFREE\n\
+    \t; day\n\tdb 8, CATERPIE\n\tdb 12, SUNKERN\n\tdb 10, CATERPIE\n\tdb 12, ABRA\n\
+    \tdb 10, BELLSPROUT\n\tdb 14, BUTTERFREE\n\tdb 14, BUTTERFREE\n\t; nite\n\tdb\
+    \ 10, VENONAT\n\tdb 10, ODDISH\n\tdb 12, ODDISH\n\tdb 12, ABRA\n\tdb 10, BELLSPROUT\n\
+    \tdb 14, GLOOM\n\tdb 14, GLOOM\n\n\t"
+  File: kanto_grass.asm
+  Level: 8
+  Name: ROUTE_24
+  Pokemon:
+    ABRA:
+    - 12
+    BELLSPROUT:
+    - 10
+    BUTTERFREE:
+    - 14
+    CATERPIE:
+    - 8
+    - 10
+    METAPOD:
+    - 12
+    SUNKERN:
+    - 12
+ROUTE_25:
+  Code: "map ROUTE_25\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 10, CATERPIE\n\tdb 10, PIDGEY\n\tdb 12, PIDGEOTTO\n\
+    \tdb 12, METAPOD\n\tdb 10, BELLSPROUT\n\tdb 14, BUTTERFREE\n\tdb 14, BUTTERFREE\n\
+    \t; day\n\tdb 10, CATERPIE\n\tdb 10, PIDGEY\n\tdb 12, PIDGEOTTO\n\tdb 12, METAPOD\n\
+    \tdb 10, BELLSPROUT\n\tdb 14, BUTTERFREE\n\tdb 14, BUTTERFREE\n\t; nite\n\tdb\
+    \ 10, ODDISH\n\tdb 10, HOOTHOOT\n\tdb 10, VENONAT\n\tdb 12, NOCTOWL\n\tdb 10,\
+    \ BELLSPROUT\n\tdb 14, NOCTOWL\n\tdb 14, NOCTOWL\n\n\t"
+  File: kanto_grass.asm
+  Level: 10
+  Name: ROUTE_25
+  Pokemon:
+    BELLSPROUT:
+    - 10
+    BUTTERFREE:
+    - 14
+    CATERPIE:
+    - 10
+    METAPOD:
+    - 12
+    PIDGEOTTO:
+    - 12
+    PIDGEY:
+    - 10
+ROUTE_26:
+  Code: "map ROUTE_26\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 28, DODUO\n\tdb 28, SANDSLASH\n\tdb 32, PONYTA\n\
+    \tdb 30, RATICATE\n\tdb 30, DODUO\n\tdb 30, ARBOK\n\tdb 30, ARBOK\n\t; day\n\t\
+    db 28, DODUO\n\tdb 28, SANDSLASH\n\tdb 32, PONYTA\n\tdb 30, RATICATE\n\tdb 30,\
+    \ DODUO\n\tdb 30, ARBOK\n\tdb 30, ARBOK\n\t; nite\n\tdb 28, NOCTOWL\n\tdb 28,\
+    \ RATICATE\n\tdb 32, NOCTOWL\n\tdb 30, RATICATE\n\tdb 30, QUAGSIRE\n\tdb 30, QUAGSIRE\n\
+    \tdb 30, QUAGSIRE\n\n\t"
+  File: kanto_grass.asm
+  Level: 28
+  Name: ROUTE_26
+  Pokemon:
+    ARBOK:
+    - 30
+    DODUO:
+    - 28
+    - 30
+    PONYTA:
+    - 32
+    RATICATE:
+    - 30
+    SANDSLASH:
+    - 28
+ROUTE_27:
+  Code: "map ROUTE_27\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 28, DODUO\n\tdb 28, ARBOK\n\tdb 30, RATICATE\n\
+    \tdb 30, DODUO\n\tdb 32, PONYTA\n\tdb 30, DODRIO\n\tdb 30, DODRIO\n\t; day\n\t\
+    db 28, DODUO\n\tdb 28, ARBOK\n\tdb 30, RATICATE\n\tdb 30, DODUO\n\tdb 32, PONYTA\n\
+    \tdb 30, DODRIO\n\tdb 30, DODRIO\n\t; nite\n\tdb 28, QUAGSIRE\n\tdb 28, NOCTOWL\n\
+    \tdb 30, RATICATE\n\tdb 30, QUAGSIRE\n\tdb 32, NOCTOWL\n\tdb 32, NOCTOWL\n\tdb\
+    \ 32, NOCTOWL\n\n\t"
+  File: kanto_grass.asm
+  Level: 28
+  Name: ROUTE_27
+  Pokemon:
+    ARBOK:
+    - 28
+    DODRIO:
+    - 30
+    DODUO:
+    - 28
+    - 30
+    PONYTA:
+    - 32
+    RATICATE:
+    - 30
+ROUTE_28:
+  Code: "map ROUTE_28\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 39, TANGELA\n\tdb 40, PONYTA\n\tdb 40, RAPIDASH\n\
+    \tdb 42, ARBOK\n\tdb 41, DODUO\n\tdb 43, DODRIO\n\tdb 43, DODRIO\n\t; day\n\t\
+    db 39, TANGELA\n\tdb 40, PONYTA\n\tdb 40, RAPIDASH\n\tdb 42, ARBOK\n\tdb 41, DODUO\n\
+    \tdb 43, DODRIO\n\tdb 43, DODRIO\n\t; nite\n\tdb 39, TANGELA\n\tdb 40, POLIWHIRL\n\
+    \tdb 40, GOLBAT\n\tdb 40, POLIWHIRL\n\tdb 42, GOLBAT\n\tdb 42, GOLBAT\n\tdb 42,\
+    \ GOLBAT\n\n\t"
+  File: kanto_grass.asm
+  Level: 39
+  Name: ROUTE_28
+  Pokemon:
+    ARBOK:
+    - 42
+    DODRIO:
+    - 43
+    DODUO:
+    - 41
+    PONYTA:
+    - 40
+    RAPIDASH:
+    - 40
+    TANGELA:
+    - 39
+ROUTE_29:
+  Code: "map ROUTE_29\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 2, PIDGEY\n\tdb 2, SENTRET\n\tdb 3, PIDGEY\n\t\
+    db 3, SENTRET\n\tdb 2, RATTATA\n\tdb 3, HOPPIP\n\tdb 3, HOPPIP\n\t; day\n\tdb\
+    \ 2, PIDGEY\n\tdb 2, SENTRET\n\tdb 3, PIDGEY\n\tdb 3, SENTRET\n\tdb 2, RATTATA\n\
+    \tdb 3, HOPPIP\n\tdb 3, HOPPIP\n\t; nite\n\tdb 2, HOOTHOOT\n\tdb 2, RATTATA\n\t\
+    db 3, HOOTHOOT\n\tdb 3, RATTATA\n\tdb 2, RATTATA\n\tdb 3, HOOTHOOT\n\tdb 3, HOOTHOOT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 2
+  Name: ROUTE_29
+  Pokemon:
+    HOPPIP:
+    - 3
+    PIDGEY:
+    - 2
+    - 3
+    RATTATA:
+    - 2
+    SENTRET:
+    - 2
+    - 3
+ROUTE_3:
+  Code: "map ROUTE_3\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 5, SPEAROW\n\tdb 5, RATTATA\n\tdb 8, EKANS\n\tdb 10, RATICATE\n\
+    \tdb 10, ARBOK\n\tdb 10, SANDSHREW\n\tdb 10, SANDSHREW\n\t; day\n\tdb 5, SPEAROW\n\
+    \tdb 5, RATTATA\n\tdb 8, EKANS\n\tdb 10, RATICATE\n\tdb 10, ARBOK\n\tdb 10, SANDSHREW\n\
+    \tdb 10, SANDSHREW\n\t; nite\n\tdb 5, RATTATA\n\tdb 10, RATTATA\n\tdb 10, RATICATE\n\
+    \tdb 6, ZUBAT\n\tdb 5, RATTATA\n\tdb 6, CLEFAIRY\n\tdb 6, CLEFAIRY\n\n\t"
+  File: kanto_grass.asm
+  Level: 5
+  Name: ROUTE_3
+  Pokemon:
+    ARBOK:
+    - 10
+    EKANS:
+    - 8
+    RATICATE:
+    - 10
+    RATTATA:
+    - 5
+    SANDSHREW:
+    - 10
+    SPEAROW:
+    - 5
+ROUTE_30:
+  Code: "map ROUTE_30\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 3, LEDYBA\n\tdb 3, CATERPIE\n\tdb 4, CATERPIE\n\
+    \tdb 4, PIDGEY\n\tdb 3, WEEDLE\n\tdb 4, HOPPIP\n\tdb 4, HOPPIP\n\t; day\n\tdb\
+    \ 3, PIDGEY\n\tdb 3, CATERPIE\n\tdb 4, CATERPIE\n\tdb 4, PIDGEY\n\tdb 3, WEEDLE\n\
+    \tdb 4, HOPPIP\n\tdb 4, HOPPIP\n\t; nite\n\tdb 3, SPINARAK\n\tdb 3, HOOTHOOT\n\
+    \tdb 4, POLIWAG\n\tdb 4, HOOTHOOT\n\tdb 3, ZUBAT\n\tdb 4, HOOTHOOT\n\tdb 4, HOOTHOOT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 3
+  Name: ROUTE_30
+  Pokemon:
+    CATERPIE:
+    - 3
+    - 4
+    HOPPIP:
+    - 4
+    LEDYBA:
+    - 3
+    PIDGEY:
+    - 4
+    - 3
+    WEEDLE:
+    - 3
+ROUTE_31:
+  Code: "map ROUTE_31\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 4, LEDYBA\n\tdb 4, CATERPIE\n\tdb 5, BELLSPROUT\n\
+    \tdb 5, PIDGEY\n\tdb 4, WEEDLE\n\tdb 5, HOPPIP\n\tdb 5, HOPPIP\n\t; day\n\tdb\
+    \ 4, PIDGEY\n\tdb 4, CATERPIE\n\tdb 5, BELLSPROUT\n\tdb 5, PIDGEY\n\tdb 4, WEEDLE\n\
+    \tdb 5, HOPPIP\n\tdb 5, HOPPIP\n\t; nite\n\tdb 4, SPINARAK\n\tdb 4, POLIWAG\n\t\
+    db 5, BELLSPROUT\n\tdb 5, HOOTHOOT\n\tdb 4, ZUBAT\n\tdb 5, GASTLY\n\tdb 5, GASTLY\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 4
+  Name: ROUTE_31
+  Pokemon:
+    BELLSPROUT:
+    - 5
+    CATERPIE:
+    - 4
+    HOPPIP:
+    - 5
+    LEDYBA:
+    - 4
+    PIDGEY:
+    - 5
+    - 4
+    WEEDLE:
+    - 4
+ROUTE_32:
+  Code: "map ROUTE_32\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 4, EKANS\n\tdb 5, RATTATA\n\tdb 7, BELLSPROUT\n\
+    \tdb 6, HOPPIP\n\tdb 7, PIDGEY\n\tdb 7, HOPPIP\n\tdb 7, HOPPIP\n\t; day\n\tdb\
+    \ 4, EKANS\n\tdb 5, RATTATA\n\tdb 7, BELLSPROUT\n\tdb 6, HOPPIP\n\tdb 7, PIDGEY\n\
+    \tdb 7, HOPPIP\n\tdb 7, HOPPIP\n\t; nite\n\tdb 4, WOOPER\n\tdb 5, RATTATA\n\t\
+    db 7, BELLSPROUT\n\tdb 6, ZUBAT\n\tdb 7, HOOTHOOT\n\tdb 7, GASTLY\n\tdb 7, GASTLY\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 4
+  Name: ROUTE_32
+  Pokemon:
+    BELLSPROUT:
+    - 7
+    EKANS:
+    - 4
+    HOPPIP:
+    - 6
+    - 7
+    PIDGEY:
+    - 7
+    RATTATA:
+    - 5
+ROUTE_33:
+  Code: "map ROUTE_33\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 6, RATTATA\n\tdb 6, SPEAROW\n\tdb 6, GEODUDE\n\
+    \tdb 6, HOPPIP\n\tdb 7, EKANS\n\tdb 7, HOPPIP\n\tdb 7, HOPPIP\n\t; day\n\tdb 6,\
+    \ RATTATA\n\tdb 6, SPEAROW\n\tdb 6, GEODUDE\n\tdb 6, HOPPIP\n\tdb 7, EKANS\n\t\
+    db 7, HOPPIP\n\tdb 7, HOPPIP\n\t; nite\n\tdb 6, RATTATA\n\tdb 6, ZUBAT\n\tdb 6,\
+    \ GEODUDE\n\tdb 6, ZUBAT\n\tdb 7, RATTATA\n\tdb 7, RATTATA\n\tdb 7, RATTATA\n\n\
+    \t"
+  File: johto_grass.asm
+  Level: 6
+  Name: ROUTE_33
+  Pokemon:
+    EKANS:
+    - 7
+    GEODUDE:
+    - 6
+    HOPPIP:
+    - 6
+    - 7
+    RATTATA:
+    - 6
+    SPEAROW:
+    - 6
+ROUTE_34:
+  Code: "map ROUTE_34\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 10, SNUBBULL\n\tdb 11, RATTATA\n\tdb 12, PIDGEY\n\
+    \tdb 10, ABRA\n\tdb 12, JIGGLYPUFF\n\tdb 10, DITTO\n\tdb 10, DITTO\n\t; day\n\t\
+    db 10, SNUBBULL\n\tdb 11, RATTATA\n\tdb 12, PIDGEY\n\tdb 10, ABRA\n\tdb 12, JIGGLYPUFF\n\
+    \tdb 10, DITTO\n\tdb 10, DITTO\n\t; nite\n\tdb 12, DROWZEE\n\tdb 11, RATTATA\n\
+    \tdb 12, HOOTHOOT\n\tdb 10, ABRA\n\tdb 12, JIGGLYPUFF\n\tdb 10, DITTO\n\tdb 10,\
+    \ DITTO\n\n\t"
+  File: johto_grass.asm
+  Level: 10
+  Name: ROUTE_34
+  Pokemon:
+    ABRA:
+    - 10
+    DITTO:
+    - 10
+    JIGGLYPUFF:
+    - 12
+    PIDGEY:
+    - 12
+    RATTATA:
+    - 11
+    SNUBBULL:
+    - 10
+ROUTE_35:
+  Code: "map ROUTE_35\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 12, SNUBBULL\n\tdb 14, PIDGEY\n\tdb 13, GROWLITHE\n\
+    \tdb 10, ABRA\n\tdb 12, JIGGLYPUFF\n\tdb 10, DITTO\n\tdb 12, YANMA\n\t; day\n\t\
+    db 12, SNUBBULL\n\tdb 14, PIDGEY\n\tdb 13, GROWLITHE\n\tdb 10, ABRA\n\tdb 12,\
+    \ JIGGLYPUFF\n\tdb 10, DITTO\n\tdb 12, YANMA\n\t; nite\n\tdb 12, DROWZEE\n\tdb\
+    \ 14, HOOTHOOT\n\tdb 13, PSYDUCK\n\tdb 10, ABRA\n\tdb 12, JIGGLYPUFF\n\tdb 10,\
+    \ DITTO\n\tdb 12, YANMA\n\n\t"
+  File: johto_grass.asm
+  Level: 10
+  Name: ROUTE_35
+  Pokemon:
+    ABRA:
+    - 10
+    DITTO:
+    - 10
+    GROWLITHE:
+    - 13
+    JIGGLYPUFF:
+    - 12
+    PIDGEY:
+    - 14
+    SNUBBULL:
+    - 12
+    YANMA:
+    - 12
+ROUTE_36:
+  Code: "map ROUTE_36\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 4, LEDYBA\n\tdb 4, PIDGEY\n\tdb 5, BELLSPROUT\n\
+    \tdb 5, GROWLITHE\n\tdb 5, PIDGEY\n\tdb 6, PIDGEY\n\tdb 6, PIDGEY\n\t; day\n\t\
+    db 4, PIDGEY\n\tdb 4, PIDGEY\n\tdb 5, BELLSPROUT\n\tdb 5, GROWLITHE\n\tdb 5, PIDGEY\n\
+    \tdb 6, PIDGEY\n\tdb 6, PIDGEY\n\t; nite\n\tdb 4, SPINARAK\n\tdb 4, HOOTHOOT\n\
+    \tdb 5, BELLSPROUT\n\tdb 5, HOOTHOOT\n\tdb 5, HOOTHOOT\n\tdb 5, GASTLY\n\tdb 5,\
+    \ GASTLY\n\n\t"
+  File: johto_grass.asm
+  Level: 4
+  Name: ROUTE_36
+  Pokemon:
+    BELLSPROUT:
+    - 5
+    GROWLITHE:
+    - 5
+    LEDYBA:
+    - 4
+    PIDGEY:
+    - 4
+    - 5
+    - 6
+ROUTE_37:
+  Code: "map ROUTE_37\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 13, LEDYBA\n\tdb 14, GROWLITHE\n\tdb 15, PIDGEY\n\
+    \tdb 16, GROWLITHE\n\tdb 15, PIDGEOTTO\n\tdb 15, LEDIAN\n\tdb 15, LEDIAN\n\t;\
+    \ day\n\tdb 13, PIDGEY\n\tdb 14, GROWLITHE\n\tdb 15, PIDGEY\n\tdb 16, GROWLITHE\n\
+    \tdb 15, PIDGEOTTO\n\tdb 15, PIDGEY\n\tdb 15, PIDGEY\n\t; nite\n\tdb 13, SPINARAK\n\
+    \tdb 14, STANTLER\n\tdb 15, HOOTHOOT\n\tdb 16, STANTLER\n\tdb 15, NOCTOWL\n\t\
+    db 15, ARIADOS\n\tdb 15, ARIADOS\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: ROUTE_37
+  Pokemon:
+    GROWLITHE:
+    - 14
+    - 16
+    LEDIAN:
+    - 15
+    LEDYBA:
+    - 13
+    PIDGEOTTO:
+    - 15
+    PIDGEY:
+    - 15
+    - 13
+ROUTE_38:
+  Code: "map ROUTE_38\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 16, RATTATA\n\tdb 16, RATICATE\n\tdb 16, MAGNEMITE\n\
+    \tdb 16, PIDGEOTTO\n\tdb 13, TAUROS\n\tdb 13, MILTANK\n\tdb 13, MILTANK\n\t; day\n\
+    \tdb 16, RATTATA\n\tdb 16, RATICATE\n\tdb 16, MAGNEMITE\n\tdb 16, PIDGEOTTO\n\t\
+    db 13, TAUROS\n\tdb 13, MILTANK\n\tdb 13, MILTANK\n\t; nite\n\tdb 16, MEOWTH\n\
+    \tdb 16, RATICATE\n\tdb 16, MAGNEMITE\n\tdb 16, NOCTOWL\n\tdb 16, MEOWTH\n\tdb\
+    \ 16, MEOWTH\n\tdb 16, MEOWTH\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: ROUTE_38
+  Pokemon:
+    MAGNEMITE:
+    - 16
+    MILTANK:
+    - 13
+    PIDGEOTTO:
+    - 16
+    RATICATE:
+    - 16
+    RATTATA:
+    - 16
+    TAUROS:
+    - 13
+ROUTE_39:
+  Code: "map ROUTE_39\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 16, RATTATA\n\tdb 16, RATICATE\n\tdb 16, MAGNEMITE\n\tdb 16, PIDGEOTTO\n\
+    \tdb 15, MILTANK\n\tdb 15, TAUROS\n\tdb 15, TAUROS\n\t; day\n\tdb 16, RATTATA\n\
+    \tdb 16, RATICATE\n\tdb 16, MAGNEMITE\n\tdb 16, PIDGEOTTO\n\tdb 15, MILTANK\n\t\
+    db 15, TAUROS\n\tdb 15, TAUROS\n\t; nite\n\tdb 16, MEOWTH\n\tdb 16, RATICATE\n\
+    \tdb 16, MAGNEMITE\n\tdb 16, NOCTOWL\n\tdb 18, MEOWTH\n\tdb 18, MEOWTH\n\tdb 18,\
+    \ MEOWTH\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: ROUTE_39
+  Pokemon:
+    MAGNEMITE:
+    - 16
+    MILTANK:
+    - 15
+    PIDGEOTTO:
+    - 16
+    RATICATE:
+    - 16
+    RATTATA:
+    - 16
+    TAUROS:
+    - 15
+ROUTE_4:
+  Code: "map ROUTE_4\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 5, SPEAROW\n\tdb 5, RATTATA\n\tdb 8, EKANS\n\tdb 10, RATICATE\n\
+    \tdb 10, ARBOK\n\tdb 10, SANDSHREW\n\tdb 10, SANDSHREW\n\t; day\n\tdb 5, SPEAROW\n\
+    \tdb 5, RATTATA\n\tdb 8, EKANS\n\tdb 10, RATICATE\n\tdb 10, ARBOK\n\tdb 10, SANDSHREW\n\
+    \tdb 10, SANDSHREW\n\t; nite\n\tdb 5, RATTATA\n\tdb 10, RATTATA\n\tdb 10, RATICATE\n\
+    \tdb 6, ZUBAT\n\tdb 5, RATTATA\n\tdb 6, CLEFAIRY\n\tdb 6, CLEFAIRY\n\n\t"
+  File: kanto_grass.asm
+  Level: 5
+  Name: ROUTE_4
+  Pokemon:
+    ARBOK:
+    - 10
+    EKANS:
+    - 8
+    RATICATE:
+    - 10
+    RATTATA:
+    - 5
+    SANDSHREW:
+    - 10
+    SPEAROW:
+    - 5
+ROUTE_42:
+  Code: "map ROUTE_42\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 13, EKANS\n\tdb 14, SPEAROW\n\tdb 15, RATTATA\n\
+    \tdb 16, RATICATE\n\tdb 15, ARBOK\n\tdb 16, FEAROW\n\tdb 16, FEAROW\n\t; day\n\
+    \tdb 13, EKANS\n\tdb 14, SPEAROW\n\tdb 15, RATTATA\n\tdb 16, RATICATE\n\tdb 15,\
+    \ ARBOK\n\tdb 16, FEAROW\n\tdb 16, FEAROW\n\t; nite\n\tdb 13, RATTATA\n\tdb 14,\
+    \ ZUBAT\n\tdb 15, RATICATE\n\tdb 16, GOLBAT\n\tdb 15, MARILL\n\tdb 16, GOLBAT\n\
+    \tdb 16, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 13
+  Name: ROUTE_42
+  Pokemon:
+    ARBOK:
+    - 15
+    EKANS:
+    - 13
+    FEAROW:
+    - 16
+    RATICATE:
+    - 16
+    RATTATA:
+    - 15
+    SPEAROW:
+    - 14
+ROUTE_43:
+  Code: "map ROUTE_43\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 15, SENTRET\n\tdb 16, PIDGEOTTO\n\tdb 16, FARFETCH_D\n\
+    \tdb 15, FURRET\n\tdb 17, RATICATE\n\tdb 17, FURRET\n\tdb 17, FURRET\n\t; day\n\
+    \tdb 15, SENTRET\n\tdb 16, PIDGEOTTO\n\tdb 16, FARFETCH_D\n\tdb 15, FURRET\n\t\
+    db 17, RATICATE\n\tdb 17, FURRET\n\tdb 17, FURRET\n\t; nite\n\tdb 15, VENONAT\n\
+    \tdb 16, NOCTOWL\n\tdb 16, RATICATE\n\tdb 17, VENONAT\n\tdb 17, RATICATE\n\tdb\
+    \ 17, VENOMOTH\n\tdb 17, VENOMOTH\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: ROUTE_43
+  Pokemon:
+    FARFETCH_D:
+    - 16
+    FURRET:
+    - 15
+    - 17
+    PIDGEOTTO:
+    - 16
+    RATICATE:
+    - 17
+    SENTRET:
+    - 15
+ROUTE_44:
+  Code: "map ROUTE_44\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 23, TANGELA\n\tdb 22, LICKITUNG\n\tdb 22, BELLSPROUT\n\
+    \tdb 24, WEEPINBELL\n\tdb 24, LICKITUNG\n\tdb 26, LICKITUNG\n\tdb 26, LICKITUNG\n\
+    \t; day\n\tdb 23, TANGELA\n\tdb 22, LICKITUNG\n\tdb 22, BELLSPROUT\n\tdb 24, WEEPINBELL\n\
+    \tdb 24, LICKITUNG\n\tdb 26, LICKITUNG\n\tdb 26, LICKITUNG\n\t; nite\n\tdb 23,\
+    \ TANGELA\n\tdb 22, POLIWAG\n\tdb 22, BELLSPROUT\n\tdb 24, WEEPINBELL\n\tdb 24,\
+    \ POLIWHIRL\n\tdb 26, POLIWHIRL\n\tdb 26, POLIWHIRL\n\n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: ROUTE_44
+  Pokemon:
+    BELLSPROUT:
+    - 22
+    LICKITUNG:
+    - 22
+    - 24
+    - 26
+    TANGELA:
+    - 23
+    WEEPINBELL:
+    - 24
+ROUTE_45:
+  Code: "map ROUTE_45\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 23, GEODUDE\n\tdb 23, GRAVELER\n\tdb 24, GLIGAR\n\
+    \tdb 25, DONPHAN\n\tdb 20, PHANPY\n\tdb 27, SKARMORY\n\tdb 27, SKARMORY\n\t; day\n\
+    \tdb 23, GEODUDE\n\tdb 23, GRAVELER\n\tdb 24, GLIGAR\n\tdb 25, DONPHAN\n\tdb 30,\
+    \ DONPHAN\n\tdb 27, SKARMORY\n\tdb 27, SKARMORY\n\t; nite\n\tdb 23, GEODUDE\n\t\
+    db 23, GRAVELER\n\tdb 24, GLIGAR\n\tdb 25, GRAVELER\n\tdb 27, GRAVELER\n\tdb 27,\
+    \ GRAVELER\n\tdb 27, GRAVELER\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: ROUTE_45
+  Pokemon:
+    DONPHAN:
+    - 25
+    - 30
+    GEODUDE:
+    - 23
+    GLIGAR:
+    - 24
+    GRAVELER:
+    - 23
+    PHANPY:
+    - 20
+    SKARMORY:
+    - 27
+ROUTE_46:
+  Code: "map ROUTE_46\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 2, GEODUDE\n\tdb 2, SPEAROW\n\tdb 3, GEODUDE\n\
+    \tdb 3, RATTATA\n\tdb 2, PHANPY\n\tdb 2, RATTATA\n\tdb 2, RATTATA\n\t; day\n\t\
+    db 2, GEODUDE\n\tdb 2, SPEAROW\n\tdb 3, GEODUDE\n\tdb 3, RATTATA\n\tdb 2, RATTATA\n\
+    \tdb 2, RATTATA\n\tdb 2, RATTATA\n\t; nite\n\tdb 2, GEODUDE\n\tdb 2, RATTATA\n\
+    \tdb 3, GEODUDE\n\tdb 3, RATTATA\n\tdb 2, RATTATA\n\tdb 2, RATTATA\n\tdb 2, RATTATA\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 2
+  Name: ROUTE_46
+  Pokemon:
+    GEODUDE:
+    - 2
+    - 3
+    PHANPY:
+    - 2
+    RATTATA:
+    - 3
+    - 2
+    SPEAROW:
+    - 2
+ROUTE_5:
+  Code: "map ROUTE_5\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 13, PIDGEY\n\tdb 13, SNUBBULL\n\tdb 15, PIDGEOTTO\n\tdb 12, ABRA\n\
+    \tdb 14, JIGGLYPUFF\n\tdb 14, ABRA\n\tdb 14, ABRA\n\t; day\n\tdb 13, PIDGEY\n\t\
+    db 13, SNUBBULL\n\tdb 15, PIDGEOTTO\n\tdb 12, ABRA\n\tdb 14, JIGGLYPUFF\n\tdb\
+    \ 14, ABRA\n\tdb 14, ABRA\n\t; nite\n\tdb 13, HOOTHOOT\n\tdb 13, MEOWTH\n\tdb\
+    \ 15, NOCTOWL\n\tdb 12, ABRA\n\tdb 14, JIGGLYPUFF\n\tdb 14, ABRA\n\tdb 14, ABRA\n\
+    \n\t"
+  File: kanto_grass.asm
+  Level: 12
+  Name: ROUTE_5
+  Pokemon:
+    ABRA:
+    - 12
+    - 14
+    JIGGLYPUFF:
+    - 14
+    PIDGEOTTO:
+    - 15
+    PIDGEY:
+    - 13
+    SNUBBULL:
+    - 13
+ROUTE_6:
+  Code: "map ROUTE_6\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 13, RATTATA\n\tdb 13, SNUBBULL\n\tdb 14, MAGNEMITE\n\tdb 15, RATICATE\n\
+    \tdb 12, JIGGLYPUFF\n\tdb 15, GRANBULL\n\tdb 15, GRANBULL\n\t; day\n\tdb 13, RATTATA\n\
+    \tdb 13, SNUBBULL\n\tdb 14, MAGNEMITE\n\tdb 15, RATICATE\n\tdb 12, JIGGLYPUFF\n\
+    \tdb 15, GRANBULL\n\tdb 15, GRANBULL\n\t; nite\n\tdb 13, MEOWTH\n\tdb 13, DROWZEE\n\
+    \tdb 14, MAGNEMITE\n\tdb 15, PSYDUCK\n\tdb 12, JIGGLYPUFF\n\tdb 15, RATICATE\n\
+    \tdb 15, RATICATE\n\n\t"
+  File: kanto_grass.asm
+  Level: 12
+  Name: ROUTE_6
+  Pokemon:
+    GRANBULL:
+    - 15
+    JIGGLYPUFF:
+    - 12
+    MAGNEMITE:
+    - 14
+    RATICATE:
+    - 15
+    RATTATA:
+    - 13
+    SNUBBULL:
+    - 13
+ROUTE_7:
+  Code: "map ROUTE_7\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 17, RATTATA\n\tdb 17, SPEAROW\n\tdb 18, SNUBBULL\n\tdb 18, RATICATE\n\
+    \tdb 18, JIGGLYPUFF\n\tdb 16, ABRA\n\tdb 16, ABRA\n\t; day\n\tdb 17, RATTATA\n\
+    \tdb 17, SPEAROW\n\tdb 18, SNUBBULL\n\tdb 18, RATICATE\n\tdb 18, JIGGLYPUFF\n\t\
+    db 16, ABRA\n\tdb 16, ABRA\n\t; nite\n\tdb 17, MEOWTH\n\tdb 17, MURKROW\n\tdb\
+    \ 18, HOUNDOUR\n\tdb 18, PERSIAN\n\tdb 18, JIGGLYPUFF\n\tdb 16, ABRA\n\tdb 16,\
+    \ ABRA\n\n\t"
+  File: kanto_grass.asm
+  Level: 16
+  Name: ROUTE_7
+  Pokemon:
+    ABRA:
+    - 16
+    JIGGLYPUFF:
+    - 18
+    RATICATE:
+    - 18
+    RATTATA:
+    - 17
+    SNUBBULL:
+    - 18
+    SPEAROW:
+    - 17
+ROUTE_8:
+  Code: "map ROUTE_8\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 17, SNUBBULL\n\tdb 19, PIDGEOTTO\n\tdb 16, ABRA\n\tdb 17, GROWLITHE\n\
+    \tdb 16, JIGGLYPUFF\n\tdb 18, KADABRA\n\tdb 18, KADABRA\n\t; day\n\tdb 17, SNUBBULL\n\
+    \tdb 19, PIDGEOTTO\n\tdb 16, ABRA\n\tdb 17, GROWLITHE\n\tdb 16, JIGGLYPUFF\n\t\
+    db 18, KADABRA\n\tdb 18, KADABRA\n\t; nite\n\tdb 17, MEOWTH\n\tdb 20, NOCTOWL\n\
+    \tdb 16, ABRA\n\tdb 17, HAUNTER\n\tdb 16, JIGGLYPUFF\n\tdb 18, KADABRA\n\tdb 18,\
+    \ KADABRA\n\n\t"
+  File: kanto_grass.asm
+  Level: 16
+  Name: ROUTE_8
+  Pokemon:
+    ABRA:
+    - 16
+    GROWLITHE:
+    - 17
+    JIGGLYPUFF:
+    - 16
+    KADABRA:
+    - 18
+    PIDGEOTTO:
+    - 19
+    SNUBBULL:
+    - 17
+ROUTE_9:
+  Code: "map ROUTE_9\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite\n\
+    \t; morn\n\tdb 15, RATTATA\n\tdb 15, SPEAROW\n\tdb 15, RATICATE\n\tdb 15, FEAROW\n\
+    \tdb 15, FEAROW\n\tdb 18, MAROWAK\n\tdb 18, MAROWAK\n\t; day\n\tdb 15, RATTATA\n\
+    \tdb 15, SPEAROW\n\tdb 15, RATICATE\n\tdb 15, FEAROW\n\tdb 15, FEAROW\n\tdb 18,\
+    \ MAROWAK\n\tdb 18, MAROWAK\n\t; nite\n\tdb 15, RATTATA\n\tdb 15, VENONAT\n\t\
+    db 15, RATICATE\n\tdb 15, VENOMOTH\n\tdb 15, ZUBAT\n\tdb 18, RATICATE\n\tdb 18,\
+    \ RATICATE\n\n\t"
+  File: kanto_grass.asm
+  Level: 15
+  Name: ROUTE_9
+  Pokemon:
+    FEAROW:
+    - 15
+    MAROWAK:
+    - 18
+    RATICATE:
+    - 15
+    RATTATA:
+    - 15
+    SPEAROW:
+    - 15
+RUINS_OF_ALPH_INNER_CHAMBER:
+  Code: "map RUINS_OF_ALPH_INNER_CHAMBER\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\
+    \tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\t; day\n\tdb 5, UNOWN\n\
+    \tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\t\
+    db 5, UNOWN\n\t; nite\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\
+    \tdb 5, UNOWN\n\tdb 5, UNOWN\n\tdb 5, UNOWN\n\n\t"
+  File: johto_grass.asm
+  Level: 5
+  Name: RUINS_OF_ALPH_INNER_CHAMBER
+  Pokemon:
+    UNOWN:
+    - 5
+RUINS_OF_ALPH_OUTSIDE:
+  Code: "map RUINS_OF_ALPH_OUTSIDE\n\tdb 4 percent, 4 percent, 4 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 20, NATU\n\tdb 22, NATU\n\tdb 18, NATU\n\
+    \tdb 24, NATU\n\tdb 20, SMEARGLE\n\tdb 22, SMEARGLE\n\tdb 22, SMEARGLE\n\t; day\n\
+    \tdb 20, NATU\n\tdb 22, NATU\n\tdb 18, NATU\n\tdb 24, NATU\n\tdb 20, SMEARGLE\n\
+    \tdb 22, SMEARGLE\n\tdb 22, SMEARGLE\n\t; nite\n\tdb 20, NATU\n\tdb 22, NATU\n\
+    \tdb 18, NATU\n\tdb 24, NATU\n\tdb 22, WOOPER\n\tdb 22, QUAGSIRE\n\tdb 22, QUAGSIRE\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 18
+  Name: RUINS_OF_ALPH_OUTSIDE
+  Pokemon:
+    NATU:
+    - 20
+    - 22
+    - 18
+    - 24
+    SMEARGLE:
+    - 20
+    - 22
+SILVER_CAVE_ITEM_ROOMS:
+  Code: "map SILVER_CAVE_ITEM_ROOMS\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 48, GOLBAT\n\tdb 46, GOLBAT\n\tdb 50, GOLBAT\n\
+    \tdb 46, PARASECT\n\tdb 48, PARASECT\n\tdb 50, PARASECT\n\tdb 52, PARASECT\n\t\
+    ; day\n\tdb 48, GOLBAT\n\tdb 46, GOLBAT\n\tdb 50, GOLBAT\n\tdb 46, PARASECT\n\t\
+    db 48, PARASECT\n\tdb 50, PARASECT\n\tdb 52, PARASECT\n\t; nite\n\tdb 45, MISDREAVUS\n\
+    \tdb 48, GOLBAT\n\tdb 50, GOLBAT\n\tdb 46, PARASECT\n\tdb 48, PARASECT\n\tdb 50,\
+    \ PARASECT\n\tdb 52, PARASECT\n\n\t"
+  File: johto_grass.asm
+  Level: 46
+  Name: SILVER_CAVE_ITEM_ROOMS
+  Pokemon:
+    GOLBAT:
+    - 48
+    - 46
+    - 50
+    PARASECT:
+    - 46
+    - 48
+    - 50
+    - 52
+SILVER_CAVE_OUTSIDE:
+  Code: "map SILVER_CAVE_OUTSIDE\n\tdb 10 percent, 10 percent, 10 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 41, TANGELA\n\tdb 42, PONYTA\n\tdb 42,\
+    \ ARBOK\n\tdb 44, RAPIDASH\n\tdb 41, DODUO\n\tdb 43, DODRIO\n\tdb 43, DODRIO\n\
+    \t; day\n\tdb 41, TANGELA\n\tdb 42, PONYTA\n\tdb 42, ARBOK\n\tdb 44, RAPIDASH\n\
+    \tdb 41, DODUO\n\tdb 43, DODRIO\n\tdb 43, DODRIO\n\t; nite\n\tdb 41, TANGELA\n\
+    \tdb 42, POLIWHIRL\n\tdb 42, GOLBAT\n\tdb 44, POLIWHIRL\n\tdb 40, GOLBAT\n\tdb\
+    \ 44, GOLBAT\n\tdb 44, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 41
+  Name: SILVER_CAVE_OUTSIDE
+  Pokemon:
+    ARBOK:
+    - 42
+    DODRIO:
+    - 43
+    DODUO:
+    - 41
+    PONYTA:
+    - 42
+    RAPIDASH:
+    - 44
+    TANGELA:
+    - 41
+SILVER_CAVE_ROOM_1:
+  Code: "map SILVER_CAVE_ROOM_1\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 43, GRAVELER\n\tdb 44, URSARING\n\tdb 42,\
+    \ ONIX\n\tdb 45, MAGMAR\n\tdb 45, GOLBAT\n\tdb 20, LARVITAR\n\tdb 15, LARVITAR\n\
+    \t; day\n\tdb 43, GRAVELER\n\tdb 44, URSARING\n\tdb 42, ONIX\n\tdb 45, MAGMAR\n\
+    \tdb 45, GOLBAT\n\tdb 20, LARVITAR\n\tdb 15, LARVITAR\n\t; nite\n\tdb 43, GRAVELER\n\
+    \tdb 44, GOLBAT\n\tdb 42, ONIX\n\tdb 42, GOLBAT\n\tdb 45, GOLDUCK\n\tdb 46, GOLBAT\n\
+    \tdb 46, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: SILVER_CAVE_ROOM_1
+  Pokemon:
+    GOLBAT:
+    - 45
+    GRAVELER:
+    - 43
+    LARVITAR:
+    - 20
+    - 15
+    MAGMAR:
+    - 45
+    ONIX:
+    - 42
+    URSARING:
+    - 44
+SILVER_CAVE_ROOM_2:
+  Code: "map SILVER_CAVE_ROOM_2\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 48, GOLBAT\n\tdb 48, MACHOKE\n\tdb 47,\
+    \ URSARING\n\tdb 46, PARASECT\n\tdb 48, PARASECT\n\tdb 15, LARVITAR\n\tdb 20,\
+    \ LARVITAR\n\t; day\n\tdb 48, GOLBAT\n\tdb 48, MACHOKE\n\tdb 47, URSARING\n\t\
+    db 46, PARASECT\n\tdb 48, PARASECT\n\tdb 15, LARVITAR\n\tdb 20, LARVITAR\n\t;\
+    \ nite\n\tdb 48, GOLBAT\n\tdb 48, GOLDUCK\n\tdb 46, GOLBAT\n\tdb 46, PARASECT\n\
+    \tdb 48, PARASECT\n\tdb 45, MISDREAVUS\n\tdb 45, MISDREAVUS\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: SILVER_CAVE_ROOM_2
+  Pokemon:
+    GOLBAT:
+    - 48
+    LARVITAR:
+    - 15
+    - 20
+    MACHOKE:
+    - 48
+    PARASECT:
+    - 46
+    - 48
+    URSARING:
+    - 47
+SILVER_CAVE_ROOM_3:
+  Code: "map SILVER_CAVE_ROOM_3\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 51, GOLBAT\n\tdb 48, ONIX\n\tdb 48, GRAVELER\n\
+    \tdb 50, URSARING\n\tdb 20, LARVITAR\n\tdb 15, LARVITAR\n\tdb 20, PUPITAR\n\t\
+    ; day\n\tdb 51, GOLBAT\n\tdb 48, ONIX\n\tdb 48, GRAVELER\n\tdb 50, URSARING\n\t\
+    db 20, LARVITAR\n\tdb 15, LARVITAR\n\tdb 20, PUPITAR\n\t; nite\n\tdb 51, GOLBAT\n\
+    \tdb 48, ONIX\n\tdb 48, GRAVELER\n\tdb 49, GOLBAT\n\tdb 45, GOLDUCK\n\tdb 53,\
+    \ GOLBAT\n\tdb 53, GOLBAT\n\n\t"
+  File: johto_grass.asm
+  Level: 15
+  Name: SILVER_CAVE_ROOM_3
+  Pokemon:
+    GOLBAT:
+    - 51
+    GRAVELER:
+    - 48
+    LARVITAR:
+    - 20
+    - 15
+    ONIX:
+    - 48
+    PUPITAR:
+    - 20
+    URSARING:
+    - 50
+SLOWPOKE_WELL_B1F:
+  Code: "map SLOWPOKE_WELL_B1F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 5, ZUBAT\n\tdb 6, ZUBAT\n\tdb 7, ZUBAT\n\tdb 6,\
+    \ SLOWPOKE\n\tdb 8, ZUBAT\n\tdb 8, SLOWPOKE\n\tdb 8, SLOWPOKE\n\t; day\n\tdb 5,\
+    \ ZUBAT\n\tdb 6, ZUBAT\n\tdb 7, ZUBAT\n\tdb 6, SLOWPOKE\n\tdb 8, ZUBAT\n\tdb 8,\
+    \ SLOWPOKE\n\tdb 8, SLOWPOKE\n\t; nite\n\tdb 5, ZUBAT\n\tdb 6, ZUBAT\n\tdb 7,\
+    \ ZUBAT\n\tdb 6, SLOWPOKE\n\tdb 8, ZUBAT\n\tdb 8, SLOWPOKE\n\tdb 8, SLOWPOKE\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 5
+  Name: SLOWPOKE_WELL_B1F
+  Pokemon:
+    SLOWPOKE:
+    - 6
+    - 8
+    ZUBAT:
+    - 5
+    - 6
+    - 7
+    - 8
+SLOWPOKE_WELL_B2F:
+  Code: "map SLOWPOKE_WELL_B2F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 21, ZUBAT\n\tdb 23, ZUBAT\n\tdb 19, ZUBAT\n\t\
+    db 21, SLOWPOKE\n\tdb 23, GOLBAT\n\tdb 23, SLOWPOKE\n\tdb 23, SLOWPOKE\n\t; day\n\
+    \tdb 21, ZUBAT\n\tdb 23, ZUBAT\n\tdb 19, ZUBAT\n\tdb 21, SLOWPOKE\n\tdb 23, GOLBAT\n\
+    \tdb 23, SLOWPOKE\n\tdb 23, SLOWPOKE\n\t; nite\n\tdb 21, ZUBAT\n\tdb 23, ZUBAT\n\
+    \tdb 19, ZUBAT\n\tdb 21, SLOWPOKE\n\tdb 23, GOLBAT\n\tdb 23, SLOWPOKE\n\tdb 23,\
+    \ SLOWPOKE\n\n\t"
+  File: johto_grass.asm
+  Level: 19
+  Name: SLOWPOKE_WELL_B2F
+  Pokemon:
+    GOLBAT:
+    - 23
+    SLOWPOKE:
+    - 21
+    - 23
+    ZUBAT:
+    - 21
+    - 23
+    - 19
+SPROUT_TOWER_2F:
+  Code: "map SPROUT_TOWER_2F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 3, RATTATA\n\tdb 4, RATTATA\n\tdb 5, RATTATA\n\
+    \tdb 3, RATTATA\n\tdb 6, RATTATA\n\tdb 5, RATTATA\n\tdb 5, RATTATA\n\t; day\n\t\
+    db 3, RATTATA\n\tdb 4, RATTATA\n\tdb 5, RATTATA\n\tdb 3, RATTATA\n\tdb 6, RATTATA\n\
+    \tdb 5, RATTATA\n\tdb 5, RATTATA\n\t; nite\n\tdb 3, GASTLY\n\tdb 4, GASTLY\n\t\
+    db 5, GASTLY\n\tdb 3, RATTATA\n\tdb 6, GASTLY\n\tdb 5, RATTATA\n\tdb 5, RATTATA\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 3
+  Name: SPROUT_TOWER_2F
+  Pokemon:
+    RATTATA:
+    - 3
+    - 4
+    - 5
+    - 6
+SPROUT_TOWER_3F:
+  Code: "map SPROUT_TOWER_3F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 3, RATTATA\n\tdb 4, RATTATA\n\tdb 5, RATTATA\n\
+    \tdb 3, RATTATA\n\tdb 6, RATTATA\n\tdb 5, RATTATA\n\tdb 5, RATTATA\n\t; day\n\t\
+    db 3, RATTATA\n\tdb 4, RATTATA\n\tdb 5, RATTATA\n\tdb 3, RATTATA\n\tdb 6, RATTATA\n\
+    \tdb 5, RATTATA\n\tdb 5, RATTATA\n\t; nite\n\tdb 3, GASTLY\n\tdb 4, GASTLY\n\t\
+    db 5, GASTLY\n\tdb 3, RATTATA\n\tdb 6, GASTLY\n\tdb 5, RATTATA\n\tdb 5, RATTATA\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 3
+  Name: SPROUT_TOWER_3F
+  Pokemon:
+    RATTATA:
+    - 3
+    - 4
+    - 5
+    - 6
+TIN_TOWER_2F:
+  Code: "map TIN_TOWER_2F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_2F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_3F:
+  Code: "map TIN_TOWER_3F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_3F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_4F:
+  Code: "map TIN_TOWER_4F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_4F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_5F:
+  Code: "map TIN_TOWER_5F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_5F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_6F:
+  Code: "map TIN_TOWER_6F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_6F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_7F:
+  Code: "map TIN_TOWER_7F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_7F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_8F:
+  Code: "map TIN_TOWER_8F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_8F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TIN_TOWER_9F:
+  Code: "map TIN_TOWER_9F\n\tdb 2 percent, 2 percent, 2 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\
+    \tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; day\n\
+    \tdb 20, RATTATA\n\tdb 21, RATTATA\n\tdb 22, RATTATA\n\tdb 22, RATTATA\n\tdb 23,\
+    \ RATTATA\n\tdb 24, RATTATA\n\tdb 24, RATTATA\n\t; nite\n\tdb 20, GASTLY\n\tdb\
+    \ 21, GASTLY\n\tdb 22, GASTLY\n\tdb 22, RATTATA\n\tdb 23, RATTATA\n\tdb 24, RATTATA\n\
+    \tdb 24, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: TIN_TOWER_9F
+  Pokemon:
+    RATTATA:
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+TOHJO_FALLS:
+  Code: "map TOHJO_FALLS\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, ZUBAT\n\tdb 22, RATICATE\n\tdb 24, GOLBAT\n\
+    \tdb 21, SLOWPOKE\n\tdb 20, RATTATA\n\tdb 23, SLOWPOKE\n\tdb 23, SLOWPOKE\n\t\
+    ; day\n\tdb 22, ZUBAT\n\tdb 22, RATICATE\n\tdb 24, GOLBAT\n\tdb 21, SLOWPOKE\n\
+    \tdb 20, RATTATA\n\tdb 23, SLOWPOKE\n\tdb 23, SLOWPOKE\n\t; nite\n\tdb 22, ZUBAT\n\
+    \tdb 22, RATICATE\n\tdb 24, GOLBAT\n\tdb 21, SLOWPOKE\n\tdb 20, RATTATA\n\tdb\
+    \ 23, SLOWPOKE\n\tdb 23, SLOWPOKE\n\n\t"
+  File: kanto_grass.asm
+  Level: 20
+  Name: TOHJO_FALLS
+  Pokemon:
+    GOLBAT:
+    - 24
+    RATICATE:
+    - 22
+    RATTATA:
+    - 20
+    SLOWPOKE:
+    - 21
+    - 23
+    ZUBAT:
+    - 22
+UNION_CAVE_1F:
+  Code: "map UNION_CAVE_1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 6, GEODUDE\n\tdb 6, SANDSHREW\n\tdb 5, ZUBAT\n\
+    \tdb 4, RATTATA\n\tdb 7, ZUBAT\n\tdb 6, ONIX\n\tdb 6, ONIX\n\t; day\n\tdb 6, GEODUDE\n\
+    \tdb 6, SANDSHREW\n\tdb 5, ZUBAT\n\tdb 4, RATTATA\n\tdb 7, ZUBAT\n\tdb 6, ONIX\n\
+    \tdb 6, ONIX\n\t; nite\n\tdb 6, GEODUDE\n\tdb 6, RATTATA\n\tdb 5, WOOPER\n\tdb\
+    \ 4, RATTATA\n\tdb 7, ZUBAT\n\tdb 6, ONIX\n\tdb 6, ONIX\n\n\t"
+  File: johto_grass.asm
+  Level: 4
+  Name: UNION_CAVE_1F
+  Pokemon:
+    GEODUDE:
+    - 6
+    ONIX:
+    - 6
+    RATTATA:
+    - 4
+    SANDSHREW:
+    - 6
+    ZUBAT:
+    - 5
+    - 7
+UNION_CAVE_B1F:
+  Code: "map UNION_CAVE_B1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 8, GEODUDE\n\tdb 6, ZUBAT\n\tdb 8, ZUBAT\n\tdb\
+    \ 8, ONIX\n\tdb 6, RATTATA\n\tdb 8, RATTATA\n\tdb 8, RATTATA\n\t; day\n\tdb 8,\
+    \ GEODUDE\n\tdb 6, ZUBAT\n\tdb 8, ZUBAT\n\tdb 8, ONIX\n\tdb 6, RATTATA\n\tdb 8,\
+    \ RATTATA\n\tdb 8, RATTATA\n\t; nite\n\tdb 8, GEODUDE\n\tdb 6, ZUBAT\n\tdb 8,\
+    \ WOOPER\n\tdb 8, ONIX\n\tdb 6, RATTATA\n\tdb 8, RATTATA\n\tdb 8, RATTATA\n\n\t"
+  File: johto_grass.asm
+  Level: 6
+  Name: UNION_CAVE_B1F
+  Pokemon:
+    GEODUDE:
+    - 8
+    ONIX:
+    - 8
+    RATTATA:
+    - 6
+    - 8
+    ZUBAT:
+    - 6
+    - 8
+UNION_CAVE_B2F:
+  Code: "map UNION_CAVE_B2F\n\tdb 4 percent, 4 percent, 4 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, ZUBAT\n\tdb 22, GOLBAT\n\tdb 22, ZUBAT\n\t\
+    db 21, RATICATE\n\tdb 20, GEODUDE\n\tdb 23, ONIX\n\tdb 23, ONIX\n\t; day\n\tdb\
+    \ 22, ZUBAT\n\tdb 22, GOLBAT\n\tdb 22, ZUBAT\n\tdb 21, RATICATE\n\tdb 20, GEODUDE\n\
+    \tdb 23, ONIX\n\tdb 23, ONIX\n\t; nite\n\tdb 22, ZUBAT\n\tdb 22, GOLBAT\n\tdb\
+    \ 22, QUAGSIRE\n\tdb 21, RATICATE\n\tdb 20, GEODUDE\n\tdb 23, ONIX\n\tdb 23, ONIX\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 20
+  Name: UNION_CAVE_B2F
+  Pokemon:
+    GEODUDE:
+    - 20
+    GOLBAT:
+    - 22
+    ONIX:
+    - 23
+    RATICATE:
+    - 21
+    ZUBAT:
+    - 22
+VICTORY_ROAD:
+  Code: "map VICTORY_ROAD\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 34, GRAVELER\n\tdb 32, RHYHORN\n\tdb 33, ONIX\n\
+    \tdb 34, GOLBAT\n\tdb 35, SANDSLASH\n\tdb 35, RHYDON\n\tdb 35, RHYDON\n\t; day\n\
+    \tdb 34, GRAVELER\n\tdb 32, RHYHORN\n\tdb 33, ONIX\n\tdb 34, GOLBAT\n\tdb 35,\
+    \ SANDSLASH\n\tdb 35, RHYDON\n\tdb 35, RHYDON\n\t; nite\n\tdb 34, GOLBAT\n\tdb\
+    \ 34, GRAVELER\n\tdb 32, ONIX\n\tdb 36, GRAVELER\n\tdb 38, GRAVELER\n\tdb 40,\
+    \ GRAVELER\n\tdb 40, GRAVELER\n\n\t"
+  File: kanto_grass.asm
+  Level: 32
+  Name: VICTORY_ROAD
+  Pokemon:
+    GOLBAT:
+    - 34
+    GRAVELER:
+    - 34
+    ONIX:
+    - 33
+    RHYDON:
+    - 35
+    RHYHORN:
+    - 32
+    SANDSLASH:
+    - 35
+WHIRL_ISLAND_B1F:
+  Code: "map WHIRL_ISLAND_B1F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 23, KRABBY\n\tdb 24, ZUBAT\n\tdb 23, SEEL\n\t\
+    db 25, KRABBY\n\tdb 26, GOLBAT\n\tdb 25, SEEL\n\tdb 25, SEEL\n\t; day\n\tdb 23,\
+    \ KRABBY\n\tdb 24, ZUBAT\n\tdb 23, SEEL\n\tdb 25, KRABBY\n\tdb 26, GOLBAT\n\t\
+    db 25, SEEL\n\tdb 25, SEEL\n\t; nite\n\tdb 23, KRABBY\n\tdb 24, ZUBAT\n\tdb 23,\
+    \ KRABBY\n\tdb 25, KRABBY\n\tdb 26, GOLBAT\n\tdb 25, GOLBAT\n\tdb 25, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 23
+  Name: WHIRL_ISLAND_B1F
+  Pokemon:
+    GOLBAT:
+    - 26
+    KRABBY:
+    - 23
+    - 25
+    SEEL:
+    - 23
+    - 25
+    ZUBAT:
+    - 24
+WHIRL_ISLAND_B2F:
+  Code: "map WHIRL_ISLAND_B2F\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 24, KRABBY\n\tdb 25, ZUBAT\n\tdb 24, SEEL\n\t\
+    db 26, KRABBY\n\tdb 27, GOLBAT\n\tdb 26, SEEL\n\tdb 26, SEEL\n\t; day\n\tdb 24,\
+    \ KRABBY\n\tdb 25, ZUBAT\n\tdb 24, SEEL\n\tdb 26, KRABBY\n\tdb 27, GOLBAT\n\t\
+    db 26, SEEL\n\tdb 26, SEEL\n\t; nite\n\tdb 24, KRABBY\n\tdb 25, ZUBAT\n\tdb 24,\
+    \ KRABBY\n\tdb 26, KRABBY\n\tdb 27, GOLBAT\n\tdb 26, GOLBAT\n\tdb 26, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 24
+  Name: WHIRL_ISLAND_B2F
+  Pokemon:
+    GOLBAT:
+    - 27
+    KRABBY:
+    - 24
+    - 26
+    SEEL:
+    - 24
+    - 26
+    ZUBAT:
+    - 25
+WHIRL_ISLAND_CAVE:
+  Code: "map WHIRL_ISLAND_CAVE\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\t\
+    db 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, SEEL\n\tdb 24, SEEL\n\t; day\n\tdb 22,\
+    \ KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\t\
+    db 24, SEEL\n\tdb 24, SEEL\n\t; nite\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22,\
+    \ KRABBY\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, GOLBAT\n\tdb 24, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: WHIRL_ISLAND_CAVE
+  Pokemon:
+    GOLBAT:
+    - 25
+    KRABBY:
+    - 22
+    - 24
+    SEEL:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
+WHIRL_ISLAND_LUGIA_CHAMBER:
+  Code: "map WHIRL_ISLAND_LUGIA_CHAMBER\n\tdb 6 percent, 6 percent, 6 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 25, KRABBY\n\tdb 26, ZUBAT\n\tdb 25, SEEL\n\
+    \tdb 27, KRABBY\n\tdb 28, GOLBAT\n\tdb 27, SEEL\n\tdb 27, SEEL\n\t; day\n\tdb\
+    \ 25, KRABBY\n\tdb 26, ZUBAT\n\tdb 25, SEEL\n\tdb 27, KRABBY\n\tdb 28, GOLBAT\n\
+    \tdb 27, SEEL\n\tdb 27, SEEL\n\t; nite\n\tdb 25, KRABBY\n\tdb 26, ZUBAT\n\tdb\
+    \ 25, KRABBY\n\tdb 27, KRABBY\n\tdb 28, GOLBAT\n\tdb 27, GOLBAT\n\tdb 27, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 25
+  Name: WHIRL_ISLAND_LUGIA_CHAMBER
+  Pokemon:
+    GOLBAT:
+    - 28
+    KRABBY:
+    - 25
+    - 27
+    SEEL:
+    - 25
+    - 27
+    ZUBAT:
+    - 26
+WHIRL_ISLAND_NE:
+  Code: "map WHIRL_ISLAND_NE\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\t\
+    db 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, SEEL\n\tdb 24, SEEL\n\t; day\n\tdb 22,\
+    \ KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\t\
+    db 24, SEEL\n\tdb 24, SEEL\n\t; nite\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22,\
+    \ KRABBY\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, GOLBAT\n\tdb 24, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: WHIRL_ISLAND_NE
+  Pokemon:
+    GOLBAT:
+    - 25
+    KRABBY:
+    - 22
+    - 24
+    SEEL:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
+WHIRL_ISLAND_NW:
+  Code: "map WHIRL_ISLAND_NW\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\t\
+    db 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, SEEL\n\tdb 24, SEEL\n\t; day\n\tdb 22,\
+    \ KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\t\
+    db 24, SEEL\n\tdb 24, SEEL\n\t; nite\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22,\
+    \ KRABBY\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, GOLBAT\n\tdb 24, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: WHIRL_ISLAND_NW
+  Pokemon:
+    GOLBAT:
+    - 25
+    KRABBY:
+    - 22
+    - 24
+    SEEL:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
+WHIRL_ISLAND_SE:
+  Code: "map WHIRL_ISLAND_SE\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\t\
+    db 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, SEEL\n\tdb 24, SEEL\n\t; day\n\tdb 22,\
+    \ KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\t\
+    db 24, SEEL\n\tdb 24, SEEL\n\t; nite\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22,\
+    \ KRABBY\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, GOLBAT\n\tdb 24, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: WHIRL_ISLAND_SE
+  Pokemon:
+    GOLBAT:
+    - 25
+    KRABBY:
+    - 22
+    - 24
+    SEEL:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
+WHIRL_ISLAND_SW:
+  Code: "map WHIRL_ISLAND_SW\n\tdb 6 percent, 6 percent, 6 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\t\
+    db 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, SEEL\n\tdb 24, SEEL\n\t; day\n\tdb 22,\
+    \ KRABBY\n\tdb 23, ZUBAT\n\tdb 22, SEEL\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\t\
+    db 24, SEEL\n\tdb 24, SEEL\n\t; nite\n\tdb 22, KRABBY\n\tdb 23, ZUBAT\n\tdb 22,\
+    \ KRABBY\n\tdb 24, KRABBY\n\tdb 25, GOLBAT\n\tdb 24, GOLBAT\n\tdb 24, GOLBAT\n\
+    \n\t"
+  File: johto_grass.asm
+  Level: 22
+  Name: WHIRL_ISLAND_SW
+  Pokemon:
+    GOLBAT:
+    - 25
+    KRABBY:
+    - 22
+    - 24
+    SEEL:
+    - 22
+    - 24
+    ZUBAT:
+    - 23
