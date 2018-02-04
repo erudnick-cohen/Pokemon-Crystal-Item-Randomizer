@@ -181,9 +181,9 @@ Location:
                     ElmGiveTicketScript:
                         writetext ElmGiveTicketText1
                         buttonsound
-                        ITEMNAME
+                        ITEMLINE
                         setevent EVENT_GOT_SS_TICKET_FROM_ELM
                         writetext ElmGiveTicketText2
                         waitbutton
                         closetext
-                        end        
+                        end
