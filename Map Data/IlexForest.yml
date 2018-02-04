@@ -125,37 +125,6 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:           
-            -
-                Name: Cut HM
-                FileName: IlexForest.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ilex Forest Front 
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    IlexForestCharcoalMasterScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_HM01_CUT
-                        iftrue .AlreadyGotCut
-                        writetext Text_CharcoalMasterIntro
-                        buttonsound
-                        ITEMLINE
-                        setevent EVENT_GOT_HM01_CUT
-                        writetext Text_CharcoalMasterOutro
-                        waitbutton
-                        closetext
-                        setevent EVENT_ILEX_FOREST_FARFETCHD
-                        setevent EVENT_ILEX_FOREST_APPRENTICE
-                        setevent EVENT_ILEX_FOREST_CHARCOAL_MASTER
-                        clearevent EVENT_CHARCOAL_KILN_FARFETCH_D
-                        clearevent EVENT_CHARCOAL_KILN_APPRENTICE
-                        clearevent EVENT_CHARCOAL_KILN_BOSS
-                        end
                 Text: |
                     Text_CharcoalMasterOutro:
                         text "That's the ITEMNAME."
