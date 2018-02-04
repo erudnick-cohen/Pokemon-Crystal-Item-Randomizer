@@ -197,6 +197,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 					else:
 						#It is a badge, pick a random trash gym and put it there
 						gym = random.choice(trashGyms)
+						trashGyms.remove(gym)
 						badgeSet.append(gym.badge.Name)
 						badgeSet.remove(j)
 						gym.badge = badgeData[j]
