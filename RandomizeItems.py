@@ -186,7 +186,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 						progressItems.remove(j)
 						#Pick a random location with trash and put the item there
 						#This choice is slightly biased to be more likely to be a recent location
-						randspot = len(trashSpots) - random.randint(1,len(trashSpots))
+						randspot = int(round(random.triangular(1,len(trashSpots)-1)))
 						place = random.choice(trashSpots[randspot:])
 						trashItems.append(place.item)
 						place.item = j
