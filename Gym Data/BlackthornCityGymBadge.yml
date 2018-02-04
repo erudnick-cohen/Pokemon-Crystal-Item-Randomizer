@@ -13,7 +13,7 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
-        NormalBadge: Dra Badge
+        NormalBadge: Rising Badge
         BadgeLine: |
             .PassedTheTest:
                 writetext UnknownText_0x18d47c
