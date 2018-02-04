@@ -19,6 +19,10 @@ class Location:
 			self.NormalItem = self.NormalItem
 		self.HasPKMN = yamlTree["HasPKMN"]
 		self.WildTableList = yamlTree["WildTableList"]
+		if self.WildTableList is None:
+			self.WildTableList = []
+		elif isinstance(self.WildTableList,str):
+			self.WildTableList = [self.WildTableList]
 		self.LocationReqs = yamlTree["LocationReqs"]
 		if self.LocationReqs is None:
 			self.LocationReqs = []

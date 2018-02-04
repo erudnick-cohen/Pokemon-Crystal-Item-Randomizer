@@ -157,3 +157,110 @@ def WriteTrainerLevels(locationDict, distDict):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
+	
+def WriteWildLevels(locationDict, distDict):
+	#load up the trainer file
+	jgfile = open("RandomizerRom/data/wild/johto_grass.asm")
+	kgfile = open("RandomizerRom/data/wild/kanto_grass.asm")
+	jwfile = open("RandomizerRom/data/wild/johto_water.asm")
+	kwfile = open("RandomizerRom/data/wild/kanto_water.asm")
+	sfile = open("RandomizerRom/data/wild/swarm_grass.asm")
+	wildDict = {}
+	surfDict = {}
+	swarmDict = {}
+	wildDict["johto_grass.asm"] = jgfile.read()
+	wildDict["kanto_grass.asm"] = kgfile.read()
+	surfDict["johto_water.asm"] = jwfile.read()
+	surfDict["kanto_water.asm"] = kwfile.read()
+	swarmDict["swarm_grass.asm"] = sfile.read()
+	surfDist = max(distDict['Surf'],distDict['Fog Badge'])
+	#loop through locations
+	#load up the grass data
+	yamlfile = open("Wild Data/wildGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					print('Writing '+j+" at "+location.Name)
+					if j.upper() in wildData:
+						areaData = wildData[j.upper()]
+						newcode = areaData['Code']
+						minLV = areaData['Level']
+						for k in areaData['Pokemon']:
+							for l in areaData['Pokemon'][k]:
+								pokemon = k
+								level = l
+								newlevel = max(level-minLV+distDict[i], 2)
+								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+						wildDict[areaData["File"]] = wildDict[areaData["File"]].replace(areaData['Code'],newcode)
+	for i in wildDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(wildDict[i])
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+	#loop through locations
+	#load up the water data
+	yamlfile = open("Wild Data/surfGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					print('Writing '+j+" at "+location.Name)
+					if j.upper() in wildData:
+						areaData = wildData[j.upper()]
+						newcode = areaData['Code']
+						minLV = areaData['Level']
+						for k in areaData['Pokemon']:
+							for l in areaData['Pokemon'][k]:
+								pokemon = k
+								level = l
+								newlevel = max(level-minLV+max(distDict[i],surfDist), 2)
+								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+						surfDict[areaData["File"]] = surfDict[areaData["File"]].replace(areaData['Code'],newcode)
+	for i in surfDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(surfDict[i])
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+	#loop through locations
+	#load up the swarm data
+	yamlfile = open("Wild Data/swarmGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					if j.upper() in wildData:
+						print('Writing '+j+" at "+location.Name)
+						areaData = wildData[j.upper()]
+						newcode = areaData['Code']
+						minLV = areaData['Level']
+						for k in areaData['Pokemon']:
+							for l in areaData['Pokemon'][k]:
+								pokemon = k
+								level = l
+								newlevel = max(level-minLV+distDict[i], 2)
+								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+						swarmDict[areaData["File"]] = swarmDict[areaData["File"]].replace(areaData['Code'],newcode)
+	for i in swarmDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(swarmDict[i])
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()

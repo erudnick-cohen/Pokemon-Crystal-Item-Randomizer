@@ -1,0 +1,46 @@
+DARK_CAVE_VIOLET_ENTRANCE:
+  Code: "map DARK_CAVE_VIOLET_ENTRANCE\n\tdb 4 percent, 4 percent, 4 percent ; encounter\
+    \ rates: morn/day/nite\n\t; morn\n\tdb 3, GEODUDE\n\tdb 3, DUNSPARCE\n\tdb 2,\
+    \ ZUBAT\n\tdb 2, GEODUDE\n\tdb 2, DUNSPARCE\n\tdb 4, DUNSPARCE\n\tdb 4, DUNSPARCE\n\
+    \t; day\n\tdb 3, GEODUDE\n\tdb 3, DUNSPARCE\n\tdb 2, ZUBAT\n\tdb 2, GEODUDE\n\t\
+    db 2, DUNSPARCE\n\tdb 4, DUNSPARCE\n\tdb 4, DUNSPARCE\n\t; nite\n\tdb 3, GEODUDE\n\
+    \tdb 3, DUNSPARCE\n\tdb 2, ZUBAT\n\tdb 2, GEODUDE\n\tdb 2, DUNSPARCE\n\tdb 4,\
+    \ DUNSPARCE\n\tdb 4, DUNSPARCE\n\n"
+  File: swarm_grass.asm
+  Level: 2
+  Name: DARK_CAVE_VIOLET_ENTRANCE
+  Pokemon:
+    DUNSPARCE:
+    - 3
+    - 2
+    - 4
+    GEODUDE:
+    - 3
+    - 2
+    ZUBAT:
+    - 2
+ROUTE_35:
+  Code: "map ROUTE_35\n\tdb 10 percent, 10 percent, 10 percent ; encounter rates:\
+    \ morn/day/nite\n\t; morn\n\tdb 12, NIDORAN_M\n\tdb 12, NIDORAN_F\n\tdb 12, YANMA\n\
+    \tdb 14, YANMA\n\tdb 14, PIDGEY\n\tdb 10, DITTO\n\tdb 10, DITTO\n\t; day\n\tdb\
+    \ 12, NIDORAN_M\n\tdb 12, NIDORAN_F\n\tdb 12, YANMA\n\tdb 14, YANMA\n\tdb 14,\
+    \ PIDGEY\n\tdb 10, DITTO\n\tdb 10, DITTO\n\t; nite\n\tdb 12, NIDORAN_M\n\tdb 12,\
+    \ NIDORAN_F\n\tdb 12, YANMA\n\tdb 14, YANMA\n\tdb 14, HOOTHOOT\n\tdb 10, DITTO\n\
+    \tdb 10, DITTO\n\n\t"
+  File: swarm_grass.asm
+  Level: 10
+  Name: ROUTE_35
+  Pokemon:
+    DITTO:
+    - 10
+    HOOTHOOT:
+    - 14
+    NIDORAN_F:
+    - 12
+    NIDORAN_M:
+    - 12
+    PIDGEY:
+    - 14
+    YANMA:
+    - 12
+    - 14

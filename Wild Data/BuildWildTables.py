@@ -27,7 +27,7 @@ for i in results:
 	monre = re.compile(monstring)
 	monres = []
 	minLV = 1000
-	for j in range(3,5):
+	for j in range(3,6):
 		monres.extend(monre.findall(i[j]))
 	for j in monres:
 		if(int(j[1]) not in monDict[j[2]]):
@@ -54,7 +54,7 @@ for i in results:
 	monre = re.compile(monstring)
 	monres = []
 	minLV = 1000
-	for j in range(3,5):
+	for j in range(3,6):
 		monres.extend(monre.findall(i[j]))
 	for j in monres:
 		if(int(j[1]) not in monDict[j[2]]):
@@ -64,7 +64,7 @@ for i in results:
 	dataDict["Level"] = minLV
 	grassDict[i[1]] = dataDict
 	
-#open and parse the file for swar,s
+#open and parse the file for swarms
 grassfile = open("../RandomizerRom/data/wild/swarm_grass.asm")
 grasstext = grassfile.read()
 regex = re.compile(restringgrass)
@@ -81,7 +81,7 @@ for i in results:
 	monre = re.compile(monstring)
 	monres = []
 	minLV = 1000
-	for j in range(3,5):
+	for j in range(3,6):
 		monres.extend(monre.findall(i[j]))
 	for j in monres:
 		if(int(j[1]) not in monDict[j[2]]):
@@ -145,3 +145,6 @@ print(yaml.dump(surfDict,default_flow_style=False))      # Output the document t
 stream = open('wildGrass.yaml', 'w')
 yaml.dump(grassDict, stream,default_flow_style=False)    # Write a YAML representation of data to 'document.yaml'.
 print(yaml.dump(grassDict,default_flow_style=False))      # Output the document to the screen.
+stream = open('swarmGrass.yaml', 'w')
+yaml.dump(swarmDict, stream,default_flow_style=False)    # Write a YAML representation of data to 'document.yaml'.
+print(yaml.dump(swarmDict,default_flow_style=False))      # Output the document to the screen.

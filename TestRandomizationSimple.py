@@ -34,5 +34,6 @@ result = RandomizeItems.RandomizeItems('None',LocationData.LocationList,progress
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())
 RandomizerRom.WriteTrainerLevels(result[0], result[2])
+RandomizerRom.WriteWildLevels(result[0], result[2])
 print(result[2])
 print(result[1])
