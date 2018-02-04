@@ -76,11 +76,9 @@ Location:
                     Type: Map
                     HasPKMN: No
                     WildTableList: Route_42
-                    LocationReqs: Route 42
+                    LocationReqs: Mt Mortar
                     FlagReqs:
-                        - Zephyr Badge
                     ItemReqs:
-                        - Flash
                     FlagsSet:
                     ReachableReqs:
                     Code:

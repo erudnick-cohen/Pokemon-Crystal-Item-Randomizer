@@ -1,0 +1,444 @@
+Location:
+    -
+        Name: Mt Mortar
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - MOUNT_MORTAR_1F_OUTSIDE
+            - MOUNT_MORTAR_1F_INSIDE
+        LocationReqs: Route 42
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+            - POKEMANIAC 15
+        Sublocations:
+            -
+                Name: Mt Mortar Ether
+                FileName: MountMortar1FOutside.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: ETHER
+                Code: |
+                    MountMortar1FOutsideEther:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt Mortar Revive
+                FileName: MountMortar1FOutside.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: REVIVE
+                Code: |
+                    MountMortar1FOutsideRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt Mortar Inside Entry
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                    - Plain Badge
+                ItemReqs:
+                    - Strength
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt Mortar Inside Entry
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                    - Rising Badge
+                    - Fog Badge
+                ItemReqs:
+                    - Waterfall
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt Mortar Inside
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Mt Mortar Inside Entry
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 13
+                TrainerList:
+                    - SUPER_NERD 14
+                Sublocations:
+                    -
+                        Name: Mt Mortar Inner Escape Rope
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Inside
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ESCAPE_ROPE
+                        Code: |
+                            MountMortar1FInsideEscapeRope:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Inner Hyper Potion
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Inside
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: HYPER_POTION
+                        Code: |
+                            MountMortar1FInsideHyperPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Nugget
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Inside
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: NUGGET
+                        Code: |
+                            MountMortar1FInsideNugget:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Ultra Ball
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Inside
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ULTRA_BALL
+                        Code: |
+                            MountMortar1FInsideUltraBall:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            -
+                Name: Mt Mortar Surf Floor
+                FileName: MountMortarB1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: MOUNT_MORTAR_B1F
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+                    -
+                        Name: Mt Mortar Max Ether
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Surf Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: MAX_ETHER
+                        Code: |
+                            MountMortarB1FHyperPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Lower Hyper Potion
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Surf Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: HYPER_POTION
+                        Code: |
+                            MountMortarB1FHyperPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar PP Up
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Surf Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: PP_UP
+                        Code: |
+                            MountMortarB1FPPUp:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Carbos
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Surf Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: CARBOS
+                        Code: |
+                            MountMortarB1FCarbos:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Full Restore
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Surf Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: FULL_RESTORE
+                        Code: |
+                            MountMortarB1FFullRestore:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            -
+                Name: Mt Mortar Upper Floor
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Surf
+                    - Waterfall
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 30
+                TrainerList: 
+                    - BLACKBELT_T 6
+                    - SUPER_NERD 13
+                Sublocations:
+                    -
+                        Name: Mt Mortar Rare Candy
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: RARE_CANDY
+                        Code: |
+                            MountMortar2FInsideRareCandy:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Max Potion
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: MAX_POTION
+                        Code: |
+                            MountMortar2FInsideMaxPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Defense Curl TM
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: TM_DEFENSE_CURL
+                        Code: |
+                            MountMortar2FInsideTMDefenseCurl:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Dragon Scale
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: DRAGON_SCALE
+                        Code: |
+                            MountMortar2FInsideDragonScale:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Elixer
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ELIXER
+                        Code: |
+                            MountMortar2FInsideElixer:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Upper Escape Rope
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ESCAPE_ROPE
+                        Code: |
+                            MountMortar2FInsideEscapeRope:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
+
+
+
+
+
+
+
+                        
