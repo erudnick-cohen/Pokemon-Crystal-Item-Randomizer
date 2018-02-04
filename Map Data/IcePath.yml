@@ -180,7 +180,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 IsBall: Yes
-                NormalItem: Protein
+                NormalItem: PROTEIN
                 Code: |
                     IcePath1FProtein:
                         ITEMLINE
