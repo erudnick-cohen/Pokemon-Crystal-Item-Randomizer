@@ -47,7 +47,7 @@ Location:
         FileName: Route45.asm
         Type: Item
         HasPKMN: Yes
-        WildTableList: Route_ 45
+        WildTableList: Route_45
         LocationReqs: Route 45
         FlagReqs:
         ItemReqs:
