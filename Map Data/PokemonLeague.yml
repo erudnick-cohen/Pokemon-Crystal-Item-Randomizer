@@ -123,7 +123,6 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
-            - Became Champion
         ReachableReqs:
         Code:
         Text:
