@@ -65,7 +65,6 @@ Location:
                 WildTableList:
                 LocationReqs: Elm's Lab
                 FlagReqs: 
-                    - Zephyr Badge
                 ItemReqs:
                     - Mystery Egg
                 FlagsSet: Showed Elm Togepi
