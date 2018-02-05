@@ -26,7 +26,7 @@ Location:
             -
                 Name: Route 44 Max Revive
                 FileName: Route44.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList: Route_44
                 LocationReqs: Route 44
@@ -45,7 +45,7 @@ Location:
             -
                 Name: Route 44 Ultra Ball
                 FileName: Route44.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList: Route_44
                 LocationReqs: Route 44
@@ -64,7 +64,7 @@ Location:
             -
                 Name: Route 44 Max Repel
                 FileName: Route44.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList: Route_44
                 LocationReqs: Route 44

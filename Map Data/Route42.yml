@@ -46,6 +46,7 @@ Location:
                     - Surf
                 FlagsSet:
                 ReachableReqs:
+                IsBall: Yes
                 NormalItem: SUPER_POTION
                 Code: |
                     Route42SuperPotion:

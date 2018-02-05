@@ -150,8 +150,8 @@ Location:
                 Sublocations:
                     -
                         Name: Sunny Day TM
-                        FileName: RadioTower5F.asm
-                        Type: Map
+                        FileName: RadioTower3F.asm
+                        Type: Item
                         HasPKMN: No
                         WildTableList: 
                         LocationReqs: Radio Tower
