@@ -8,6 +8,7 @@ Location:
         LocationReqs: Mahogany Town
         FlagReqs:
             - Mahogany Rockets Defeated
+            - Beat Team Rocket
         ItemReqs:
         FlagsSet:
         ReachableReqs:
