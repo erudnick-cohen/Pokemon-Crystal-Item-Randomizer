@@ -1,6 +1,8 @@
 import csv
 from collections import defaultdict
 import random
+import yaml
+import copy
 
 #returns a function to randomly generate pokemon
 def generateRandomMonFun(stateDist,locations):
@@ -66,7 +68,14 @@ def generateRandomMonFun(stateDist,locations):
 	
 #returns a randomized dictionary of the trainer data, with a specified range for base stat variation
 #the randomized entries are put in a new entry in the dict called newCode
-def randomizeTrainers(range,monFun):
+def randomizeTrainers(locations, bstrange,monFun):
+	#build list of reachable trainers
+	trainerList = []
+	for i in locations:
+		if locations[i].Trainers is not None:
+			for j in locations[i].Trainers:
+				trainerList.append(j)
+	bstMap = {}
 	#load in base stat information
 	with open('pokedex.csv', newline='') as csvfile:
 		reader = csv.reader(csvfile)
@@ -81,7 +90,53 @@ def randomizeTrainers(range,monFun):
 	#for trainers who DO have moves, we SHUFFLE their pokemon with those of other trainers with moves
 	mList = []
 	for i in trainerData:
-		trainerData[i]['NewCode'] = trainerData[i]['Code']
-		if(trainerData[i]['Type'] == 'TRAINERTYPE_MOVES'):
-			for j in range(0,len(trainerData[i]["Pokemon"])):
-				mList.append(i,j,bstMap[trainerData[i]["Pokemon"][j]])
+		if(i in trainerList):
+			if(trainerData[i]['Type'] == 'TRAINERTYPE_MOVES'):
+				for j in range(0,len(trainerData[i]["Pokemon"])):
+					mList.append((i,j,bstMap[trainerData[i]["Pokemon"][j]["Pokemon"]]))
+			else:
+				for q in range(0,len(trainerData[i]['Pokemon'])):
+					k = trainerData[i]['Pokemon'][q]
+					newcode = k['Code']
+					pokemon = monFun(k['Pokemon'])
+					level = k['Level']
+					newlevel = level
+					newcode = newcode.replace("db "+str(level)+", "+k['Pokemon'],"db "+str(newlevel)+", "+pokemon)
+					trainerData[i]['Pokemon'][q]['NewCode'] = newcode
+	#find a viable shuffle of the pokemon with moves
+	shuffleDict = {}
+	monList = copy.copy(mList)
+	random.shuffle(monList)
+	random.shuffle(mList)
+	stuckList = []
+	notStuck = []
+	for i in mList:
+		shuffleDict[i] = None
+		for j in monList:
+			if(abs(i[2]-j[2]) < bstrange):
+				shuffleDict[i] = j
+				monList.remove(j)
+				notStuck.append(j)
+				break
+		else:
+			stuckList.append(i)
+	#perform feasible swaps with things in the stuck list to fix everything
+	random.shuffle(notStuck)
+	for i in stuckList:
+		for j in notStuck:
+			if(abs(shuffleDict[j][2]-i[2]) < bstrange):
+				#perform swap
+				old = shuffleDict[j]
+				shuffleDict[j] = i
+				shuffleDict[i] = j
+				notStuck.append(i)
+				random.shuffle(notStuck)
+				break
+	#finally, rewrite code for each entry
+	for i in mList:
+		basemon = trainerData[i[0]]["Pokemon"][i[1]]["Code"]
+		newMon = trainerData[shuffleDict[i][0]]["Pokemon"][shuffleDict[i][1]]["Code"]
+		#change level of new mon to match what the original was
+		newMon = newMon.replace("db "+str(trainerData[shuffleDict[i][0]]["Pokemon"][shuffleDict[i][1]]["Level"]), "db "+ str(trainerData[i[0]]["Pokemon"][i[1]]["Level"]))
+		trainerData[i[0]]["Pokemon"][i[1]]["NewCode"] = newMon
+	return trainerData

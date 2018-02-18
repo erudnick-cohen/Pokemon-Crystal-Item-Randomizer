@@ -20,19 +20,21 @@ for i in results:
 	dataDict['Type'] = i[4]
 	dataDict['Name'] = i[3]
 	#parse out the pokemon
-	pokere = '(db \d+, [A-Z_]+(?:, [A-Z_]+)?\s+(?:db [A-Z_]+\s+){0,4}\s+)'
+	pokere = '(db \d+, [A-Z_]+(?:, [A-Z_]+)?\s+(?:db (?:[A-Z_2]{3,}|0)\s+){0,4}\s+)'
 	pokemon = []
 	pokeregex = re.compile(pokere)
 	pokeresults = pokeregex.findall(i[0])
 	for j in pokeresults:
 		pokedict = {}
 		#grab the level, item and name of the pokemon via yet another regex
-		pokedataregex = re.compile('db (\d+), ([A-Z_]+)(?:, ([A-Z_]+))?')
+		pokedataregex = re.compile('(db (\d+), ([A-Z_]+)(?:, ([A-Z_]+))?)')
 		m = pokedataregex.search(j)
-		pokedict['Level'] = int(m.groups()[0])
-		pokedict['Pokemon'] = m.groups()[1]
-		pokedict['Item'] = m.groups()[2]
-		moveregex = re.compile('db ([A-Z_2]+)')
+		pokedict['Code'] = j
+		pokedict['NewCode'] = j
+		pokedict['Level'] = int(m.groups()[1])
+		pokedict['Pokemon'] = m.groups()[2]
+		pokedict['Item'] = m.groups()[3]
+		moveregex = re.compile('db ([A-Z_2]{3,}|0)')
 		moves = moveregex.findall(j)
 		moveList = []
 		for k in moves:

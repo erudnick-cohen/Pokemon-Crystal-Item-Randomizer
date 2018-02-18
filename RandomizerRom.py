@@ -127,16 +127,10 @@ def WriteItemLocations(locations):
 		elif i.isGym():
 			WriteBadgeToRom(i)
 			
-def WriteTrainerLevels(locationDict, distDict):
-	#load up the trainer data
-	yamlfile = open("TrainerData/Trainers.yaml")
-	yamltext = yamlfile.read()
-	
-	#load up the trainer file
+def WriteTrainerLevels(locationDict, distDict, trainerData):
 	trainerfile = open("Game Files/pokecrystal/data/trainers/parties.asm")
 	newfile = trainerfile.read()
 	#loop through locations
-	trainerData = yaml.load(yamltext)
 	for i in distDict:
 		if i in locationDict:
 			location = locationDict[i]
@@ -147,9 +141,11 @@ def WriteTrainerLevels(locationDict, distDict):
 					newcode = trainer['Code']
 					for k in trainer['Pokemon']:
 						pokemon = k['Pokemon']
+						pCode = k['NewCode']
 						level = k['Level']
 						newlevel = max(level-location.AreaLevel+distDict[i], 2)
-						newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+						npCode = pCode.replace("db "+str(level),"db "+str(newlevel),1)
+						newcode = newcode.replace(k['Code'],npCode,1)
 					newfile = newfile.replace(trainer['Code'],newcode)
 	newfilestream = open("RandomizerRom/data/trainers/parties.asm",'w')
 	newfilestream.seek(0)
