@@ -20,7 +20,7 @@ Location:
                 FileName: LakeOfRage.asm
                 Type: Map
                 HasPKMN: No
-                WildTableList: Lake_Of_Rage
+                WildTableList:
                 LocationReqs: Route 43
                 FlagReqs:
                     - Mahogany Rockets Defeated
@@ -41,7 +41,7 @@ Location:
                 FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Lake_Of_Rage
+                WildTableList:
                 LocationReqs: Route 43
                 FlagReqs:
                     - Fog Badge
@@ -75,7 +75,7 @@ Location:
                 FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Lake_Of_Rage
+                WildTableList: 
                 LocationReqs: Route 43
                 FlagReqs:
                     - Hive Badge
@@ -96,7 +96,7 @@ Location:
                 FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Lake_Of_Rage
+                WildTableList: 
                 LocationReqs: Route 43
                 FlagReqs:
                     - Hive Badge
@@ -117,7 +117,7 @@ Location:
                 FileName: LakeOfRageHiddenPowerHouse.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Lake_Of_Rage
+                WildTableList:
                 LocationReqs: Route 43
                 FlagReqs:
                     - Hive Badge
