@@ -68,7 +68,25 @@ def generateRandomMonFun(stateDist,locations):
 	
 #returns a randomized dictionary of the trainer data, with a specified range for base stat variation
 #the randomized entries are put in a new entry in the dict called newCode
-def randomizeTrainers(locations, bstrange,monFun):
+def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
+	#if the users specifies it, the rival will be homogenized
+	#across one of his three possibilities per encounter
+	#this prevents him from polluting the shuffle pool
+	skipList = []
+	tmapdict = {}
+	if(rivalFix):
+		rsets = []
+		rsets.append(['RIVAL1 7','RIVAL1 8','RIVAL1 9'])
+		rsets.append(['RIVAL1 10','RIVAL1 11','RIVAL1 12'])
+		rsets.append(['RIVAL1 13','RIVAL1 14','RIVAL1 15'])
+		for i in rsets:
+			random.shuffle(i)
+			tmapdict[i[1]] = i[0]
+			tmapdict[i[2]] = i[0]
+			skipList.append(i[1])
+			skipList.append(i[2])
+	else:
+		tmapfun = lambda x: x
 	#build list of reachable trainers
 	trainerList = []
 	for i in locations:
@@ -90,7 +108,7 @@ def randomizeTrainers(locations, bstrange,monFun):
 	#for trainers who DO have moves, we SHUFFLE their pokemon with those of other trainers with moves
 	mList = []
 	for i in trainerData:
-		if(i in trainerList):
+		if(i in trainerList and i not in skipList):
 			if(trainerData[i]['Type'] == 'TRAINERTYPE_MOVES'):
 				for j in range(0,len(trainerData[i]["Pokemon"])):
 					mList.append((i,j,bstMap[trainerData[i]["Pokemon"][j]["Pokemon"]]))
@@ -121,8 +139,8 @@ def randomizeTrainers(locations, bstrange,monFun):
 		else:
 			stuckList.append(i)
 	#perform feasible swaps with things in the stuck list to fix everything
-	random.shuffle(notStuck)
 	for i in stuckList:
+		random.shuffle(notStuck)
 		for j in notStuck:
 			if(abs(shuffleDict[j][2]-i[2]) < bstrange):
 				#perform swap
@@ -130,7 +148,6 @@ def randomizeTrainers(locations, bstrange,monFun):
 				shuffleDict[j] = i
 				shuffleDict[i] = j
 				notStuck.append(i)
-				random.shuffle(notStuck)
 				break
 	#finally, rewrite code for each entry
 	for i in mList:
@@ -139,4 +156,13 @@ def randomizeTrainers(locations, bstrange,monFun):
 		#change level of new mon to match what the original was
 		newMon = newMon.replace("db "+str(trainerData[shuffleDict[i][0]]["Pokemon"][shuffleDict[i][1]]["Level"]), "db "+ str(trainerData[i[0]]["Pokemon"][i[1]]["Level"]))
 		trainerData[i[0]]["Pokemon"][i[1]]["NewCode"] = newMon
+	
+	#if we have any remappped trainers like the rival, update their entries
+	for i in tmapdict:
+		for q in range(0,len(trainerData[i]['Pokemon'])):
+			trainerData[i]['Pokemon'][q]["Pokemon"] = trainerData[tmapdict[i]]['Pokemon'][q]["Pokemon"]
+			trainerData[i]['Pokemon'][q]["Level"] = trainerData[tmapdict[i]]['Pokemon'][q]["Level"]
+			trainerData[i]['Pokemon'][q]["Item"] = trainerData[tmapdict[i]]['Pokemon'][q]["Item"]
+			trainerData[i]['Pokemon'][q]["Moves"] = trainerData[tmapdict[i]]['Pokemon'][q]["Moves"]
+			trainerData[i]['Pokemon'][q]["NewCode"] = trainerData[tmapdict[i]]['Pokemon'][q]["NewCode"]
 	return trainerData
