@@ -31,6 +31,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 	#define paranoia variable for if the search screws up and ACTUALLY gets stuck
 	stuckCount = 0
 	
+	oldTrashList = []
 	
 	#begin search and assignment
 	goalReached = False
@@ -125,6 +126,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 		else:
 			stuckCount = 0
 		if(stuckCount > 2):
+			#update trashList
+			random.shuffle(trashSpots)
+			oldTrashList.extend(trashSpots)
+			trashSpots = []
 			print('Got stuck, forcing progress')
 			print('Current state')
 			print(stateDist)
@@ -186,11 +191,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData):
 						progressItems.remove(j)
 						#Pick a random location with trash and put the item there
 						#This choice is slightly biased to be more likely to be a recent location
-						randspot = int(round(random.triangular(1,len(trashSpots)-1)))
-						place = random.choice(trashSpots[randspot:])
+						#However, the mode is still randomized uniformly, so the main effect is a center-ish bias
+						randspot = int(round(random.triangular(1,len(oldTrashList)-1, random.randrange(1,len(oldTrashList)-1))))
+						place = random.choice(oldTrashList[randspot:])
 						trashItems.append(place.item)
 						place.item = j
-						trashSpots.remove(place)
+						oldTrashList.remove(place)
 						state[j] = True
 						stateDist[j] = place.distance
 						spoiler[j] = place.Name
