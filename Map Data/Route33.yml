@@ -7,7 +7,6 @@ Location:
         WildTableList: 
         LocationReqs: Union Cave
         FlagReqs:
-            - Zephyr Badge
         ItemReqs:
         FlagsSet:
         ReachableReqs:
