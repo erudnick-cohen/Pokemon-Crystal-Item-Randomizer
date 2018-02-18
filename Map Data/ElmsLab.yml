@@ -63,10 +63,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Elm's Lab
-                FlagReqs: 
+                LocationReqs: Falkner TM
+                FlagReqs:
                 ItemReqs:
-                    - Mystery Egg
                 FlagsSet: Showed Elm Togepi
                 ReachableReqs:
                 NormalItem: EVERSTONE
