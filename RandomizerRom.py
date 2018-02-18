@@ -4,6 +4,7 @@ import re
 import os
 import time
 import yaml
+import copy
 
 def ResetRom():
 	try:
@@ -132,7 +133,7 @@ def WriteTrainerLevels(locationDict, distDict):
 	yamltext = yamlfile.read()
 	
 	#load up the trainer file
-	trainerfile = open("RandomizerRom/data/trainers/parties.asm")
+	trainerfile = open("Game Files/pokecrystal/data/trainers/parties.asm")
 	newfile = trainerfile.read()
 	#loop through locations
 	trainerData = yaml.load(yamltext)
@@ -158,13 +159,13 @@ def WriteTrainerLevels(locationDict, distDict):
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
 	
-def WriteWildLevels(locationDict, distDict):
+def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the trainer file
-	jgfile = open("RandomizerRom/data/wild/johto_grass.asm")
-	kgfile = open("RandomizerRom/data/wild/kanto_grass.asm")
-	jwfile = open("RandomizerRom/data/wild/johto_water.asm")
-	kwfile = open("RandomizerRom/data/wild/kanto_water.asm")
-	sfile = open("RandomizerRom/data/wild/swarm_grass.asm")
+	jgfile = open("Game Files/pokecrystal/data/wild/johto_grass.asm")
+	kgfile = open("Game Files/pokecrystal/data/wild/kanto_grass.asm")
+	jwfile = open("Game Files/pokecrystal/data/wild/johto_water.asm")
+	kwfile = open("Game Files/pokecrystal/data/wild/kanto_water.asm")
+	sfile = open("Game Files/pokecrystal/data/wild/swarm_grass.asm")
 	wildDict = {}
 	surfDict = {}
 	swarmDict = {}
@@ -191,10 +192,11 @@ def WriteWildLevels(locationDict, distDict):
 						minLV = areaData['Level']
 						for k in areaData['Pokemon']:
 							for l in areaData['Pokemon'][k]:
-								pokemon = k
+								pokemon = monFun(k,distDict[i])
 								level = l
 								newlevel = max(level-minLV+distDict[i], 2)
-								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+								newcode = newcode.replace("db "+str(level)+", "+k,"db "+str(newlevel)+", "+pokemon )
+						print(areaData["Code"] in areaData["File"])
 						wildDict[areaData["File"]] = wildDict[areaData["File"]].replace(areaData['Code'],newcode)
 	for i in wildDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
@@ -221,10 +223,10 @@ def WriteWildLevels(locationDict, distDict):
 						minLV = areaData['Level']
 						for k in areaData['Pokemon']:
 							for l in areaData['Pokemon'][k]:
-								pokemon = k
+								pokemon = monFun(k,distDict[i])
 								level = l
 								newlevel = max(level-minLV+max(distDict[i],surfDist), 2)
-								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+								newcode = newcode.replace("db "+str(level)+", "+k,"db "+str(newlevel)+", "+pokemon )
 						surfDict[areaData["File"]] = surfDict[areaData["File"]].replace(areaData['Code'],newcode)
 	for i in surfDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
@@ -251,10 +253,10 @@ def WriteWildLevels(locationDict, distDict):
 						minLV = areaData['Level']
 						for k in areaData['Pokemon']:
 							for l in areaData['Pokemon'][k]:
-								pokemon = k
+								pokemon = monFun(k,distDict[i])
 								level = l
 								newlevel = max(level-minLV+distDict[i], 2)
-								newcode = newcode.replace("db "+str(level)+", "+pokemon,"db "+str(newlevel)+", "+pokemon )
+								newcode = newcode.replace("db "+str(level)+", "+k,"db "+str(newlevel)+", "+pokemon )
 						swarmDict[areaData["File"]] = swarmDict[areaData["File"]].replace(areaData['Code'],newcode)
 	for i in swarmDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
@@ -264,3 +266,47 @@ def WriteWildLevels(locationDict, distDict):
 		newfilestream.flush()
 		os.fsync(newfilestream.fileno())
 		newfilestream.close()
+
+def WriteSpecialWildLevels(locationDict,distDict,monFun):
+	monList = []
+	print("Editing Special Pokemon")
+	for root, dir, files  in os.walk("Special Pokemon Locations"):
+		for file in files:
+			print("File: "+file)
+			entry = open("Special Pokemon Locations/"+file,'r')
+			yamlData = yaml.load(entry)
+			loc = yamlData["Location"]
+			fileName = locationDict[loc].FileName
+			mon = yamlData["NormalMon"]
+			shift = yamlData["LevelShift"]
+			type = yamlData["Type"]
+			code = yamlData["Code"]
+			#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
+			newmon = monFun(mon,1001)
+			givestr = ""
+			if(type == 'Give Mon with Berry'):
+					givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)+', BERRY'
+			if(type == 'Wild Pokemon'):
+				givestr = 'loadwildmon '+newmon+', '+str(distDict[loc]+shift)
+			if(type == 'Give Egg'):
+				givestr = 'giveegg '+newmon+', '+str(distDict[loc]+shift)
+			if(type == 'Give Poke'):
+				givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)
+			newcode = code.replace("MONLINE",givestr).replace("MONNAME",newmon)
+			#switch spaces to tabs.....
+			newcode = newcode.replace("    ","\t")
+
+			#find the code we need to replace
+			coderegexstr = re.escape(code.replace("    ","\t")).replace("MONLINE",".+").replace("MONNAME",".+")
+			file = open("RandomizerRom/maps/"+fileName)
+			filecode = file.read()
+			oldcode = re.findall(coderegexstr,filecode)[0]
+			newfile = filecode.replace(oldcode,newcode)
+			#write the new file into the files for the randomizer rom
+			newfilestream = open("RandomizerRom/maps/"+fileName,'w')
+			newfilestream.seek(0)
+			newfilestream.write(newfile)
+			newfilestream.truncate()
+			newfilestream.flush()
+			#os.fsync(newfilestream.fileno())
+			newfilestream.close()

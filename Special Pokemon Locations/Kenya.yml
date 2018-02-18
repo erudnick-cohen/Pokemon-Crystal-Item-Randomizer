@@ -1,0 +1,33 @@
+Location: Kenya Gate Item
+NormalMon: SPEAROW
+Type: Give Poke
+LevelShift: -4
+Code: |
+    OfficerScript_0x69d37:
+        faceplayer
+        opentext
+        checkevent EVENT_GOT_HP_UP_FROM_RANDY
+        iftrue .gothpup
+        checkevent EVENT_GAVE_KENYA
+        iftrue .questcomplete
+        checkevent EVENT_GOT_KENYA
+        iftrue .alreadyhavekenya
+        writetext UnknownText_0x69ddd
+        yesorno
+        iffalse .refused
+        writetext UnknownText_0x69e48
+        buttonsound
+        waitsfx
+        checkcode VAR_PARTYCOUNT
+        if_equal PARTY_LENGTH, .partyfull
+        writetext UnknownText_0x69eb8
+        playsound SFX_KEY_ITEM
+        waitsfx
+        MONLINE, NO_ITEM, 1, GiftSpearowName, GiftSpearowOTName
+        givepokeitem GiftSpearowMail
+        setevent EVENT_GOT_KENYA
+    .alreadyhavekenya
+        writetext UnknownText_0x69ed6
+        waitbutton
+        closetext
+        end

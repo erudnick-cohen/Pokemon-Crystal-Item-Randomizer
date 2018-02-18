@@ -1,0 +1,32 @@
+Location: Elm's Lab
+NormalMon: CHIKORITA
+Type: Give Mon with Berry
+LevelShift: 5
+Code: |
+    ChikoritaPokeBallScript:
+        checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+        iftrue LookAtElmPokeBallScript
+        spriteface ELMSLAB_ELM, DOWN
+        refreshscreen $0
+        pokepic MONNAME
+        cry MONNAME
+        waitbutton
+        closepokepic
+        opentext
+        writetext TakeChikoritaText
+        yesorno
+        iffalse DidntChooseStarterScript
+        disappear ELMSLAB_POKE_BALL3
+        setevent EVENT_GOT_CHIKORITA_FROM_ELM
+        writetext ChoseStarterText
+        buttonsound
+        waitsfx
+        pokenamemem MONNAME, $0
+        writetext ReceivedStarterText
+        playsound SFX_CAUGHT_MON
+        waitsfx
+        buttonsound
+        givepoke MONNAME, 5, BERRY
+        closetext
+        applymovement PLAYER, AfterChikoritaMovement
+        jump ElmDirectionsScript

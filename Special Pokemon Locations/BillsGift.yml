@@ -1,0 +1,155 @@
+Location: Goldenrod Eevee Gift
+NormalMon: EEVEE
+Type: Give Poke
+LevelShift: 5
+Code: |
+        BillsHouseBill:
+            faceplayer
+            opentext
+            checkevent EVENT_GOT_EEVEE
+            iftrue UnknownScript_0x54c1f
+            writetext UnknownText_0x54c74
+            yesorno
+            iffalse UnknownScript_0x54c19
+            writetext UnknownText_0x54d3f
+            buttonsound
+            waitsfx
+            checkcode VAR_PARTYCOUNT
+            if_equal $6, UnknownScript_0x54c13
+            writetext UnknownText_0x54dae
+            playsound SFX_CAUGHT_MON
+            waitsfx
+            MONLINE
+            setevent EVENT_GOT_EEVEE
+            writetext UnknownText_0x54dc1
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c13:
+            writetext UnknownText_0x54e02
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c19:
+            writetext UnknownText_0x54e2d
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c1f:
+            writetext UnknownText_0x54e42
+            waitbutton
+            closetext
+            end
+
+        BillsMom:
+            faceplayer
+            opentext
+            checkevent EVENT_MET_BILL
+            iffalse UnknownScript_0x54c33
+            writetext UnknownText_0x54ea8
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c33:
+            writetext UnknownText_0x54f4e
+            waitbutton
+            closetext
+            end
+
+        BillsSister:
+            faceplayer
+            opentext
+            checkcellnum PHONE_BILL
+            iftrue UnknownScript_0x54c58
+            writetext UnknownText_0x54f9e
+            askforphonenumber PHONE_BILL
+            if_equal $1, UnknownScript_0x54c64
+            if_equal $2, UnknownScript_0x54c5e
+            waitsfx
+            addcellnum PHONE_BILL
+            writetext UnknownText_0x54fd9
+            playsound SFX_REGISTER_PHONE_NUMBER
+            waitsfx
+            buttonsound
+        UnknownScript_0x54c58: ;0x54c58
+            writetext UnknownText_0x55069
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c5e:
+            writetext UnknownText_0x54ff3
+            waitbutton
+            closetext
+            end
+
+        UnknownScript_0x54c64:
+            writetext UnknownText_0x55046
+            buttonsound
+            jump UnknownScript_0x54c5e
+
+        BillsHouseBookshelf1:
+            jumpstd picturebookshelf
+
+        BillsHouseBookshelf2:
+            jumpstd magazinebookshelf
+
+        BillsHouseRadio:
+            jumpstd radio2
+
+        UnknownText_0x54c74:
+            text "BILL: Hi, <PLAYER>!"
+            line "Do us a favor and"
+            cont "take this MONNAME."
+
+            para "It came over when"
+            line "I was adjusting"
+            cont "the TIME CAPSULE."
+
+            para "Someone has to"
+            line "take care of it,"
+
+            para "but I don't like"
+            line "being outside."
+
+            para "Can I count on you"
+            line "to play with it,"
+            cont "<PLAYER>?"
+            done
+
+        UnknownText_0x54d3f:
+            text "BILL: I knew you'd"
+            line "come through!"
+
+            para "Way to go! You're"
+            line "the real deal!"
+
+            para "OK, I'm counting"
+            line "on you."
+
+            para "Take good care of"
+            line "it!"
+            done
+
+        UnknownText_0x54dae:
+            text "<PLAYER> received"
+            line "MONNAME!"
+            done
+
+        UnknownText_0x54dc1:
+            text "BILL: PROF.ELM"
+            line "claims MONNAME may"
+
+            para "evolve in new and"
+            line "unknown ways."
+            done
+
+        UnknownText_0x54e02:
+            text "Whoa, wait. You"
+            line "can't carry any"
+            cont "more #MON."
+            done

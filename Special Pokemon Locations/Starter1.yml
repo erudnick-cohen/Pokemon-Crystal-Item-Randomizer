@@ -1,0 +1,34 @@
+Location: Elm's Lab
+NormalMon: CYNDAQUIL
+Type: Give Mon with Berry
+LevelShift: 5
+Code: |
+    CyndaquilPokeBallScript:
+        checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+        iftrue LookAtElmPokeBallScript
+        spriteface ELMSLAB_ELM, DOWN
+        refreshscreen $0
+        pokepic MONNAME
+        cry MONNAME
+        waitbutton
+        closepokepic
+        opentext
+        writetext TakeCyndaquilText
+        yesorno
+        iffalse DidntChooseStarterScript
+        disappear ELMSLAB_POKE_BALL1
+        setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+        writetext ChoseStarterText
+        buttonsound
+        waitsfx
+        pokenamemem MONNAME, $0
+        writetext ReceivedStarterText
+        playsound SFX_CAUGHT_MON
+        waitsfx
+        buttonsound
+        givepoke MONNAME, 5, BERRY
+        closetext
+        checkcode VAR_FACING
+        if_equal RIGHT, ElmDirectionsScript
+        applymovement PLAYER, AfterCyndaquilMovement
+        jump ElmDirectionsScript

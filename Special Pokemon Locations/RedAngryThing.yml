@@ -1,0 +1,16 @@
+Location: Red Scale Dropped
+NormalMon: GYARADOS
+Type: Wild Pokemon
+LevelShift: 11
+Code: |
+        GyaradosScript_0x70063:
+            opentext
+            writetext UnknownText_0x703cb
+            pause 15
+            cry MONNAME
+            closetext
+            MONLINE
+            writecode VAR_BATTLETYPE, BATTLETYPE_SHINY
+            startbattle
+            if_equal $1, UnknownScript_0x7007a
+            disappear LAKEOFRAGE_GYARADOS

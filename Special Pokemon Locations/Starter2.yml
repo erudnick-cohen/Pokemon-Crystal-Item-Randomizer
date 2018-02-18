@@ -1,0 +1,32 @@
+Location: Elm's Lab
+NormalMon: TOTODILE
+Type: Give Mon with Berry
+LevelShift: 5
+Code: |
+    TotodilePokeBallScript:
+        checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+        iftrue LookAtElmPokeBallScript
+        spriteface ELMSLAB_ELM, DOWN
+        refreshscreen $0
+        pokepic MONNAME
+        cry MONNAME
+        waitbutton
+        closepokepic
+        opentext
+        writetext TakeTotodileText
+        yesorno
+        iffalse DidntChooseStarterScript
+        disappear ELMSLAB_POKE_BALL2
+        setevent EVENT_GOT_TOTODILE_FROM_ELM
+        writetext ChoseStarterText
+        buttonsound
+        waitsfx
+        pokenamemem MONNAME, $0
+        writetext ReceivedStarterText
+        playsound SFX_CAUGHT_MON
+        waitsfx
+        buttonsound
+        givepoke MONNAME, 5, BERRY
+        closetext
+        applymovement PLAYER, AfterTotodileMovement
+        jump ElmDirectionsScript

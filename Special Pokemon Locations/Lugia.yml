@@ -1,0 +1,19 @@
+Location: Lugia Chamber
+NormalMon: LUGIA
+Type: Wild Pokemon
+LevelShift: 6
+Code: |
+    Lugia:
+        faceplayer
+        opentext
+        writetext LugiaText
+        cry MONNAME
+        pause 15
+        closetext
+        setevent EVENT_FOUGHT_LUGIA
+        writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+        MONLINE
+        startbattle
+        disappear WHIRLISLANDLUGIACHAMBER_LUGIA
+        reloadmapafterbattle
+        end

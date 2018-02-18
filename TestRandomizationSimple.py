@@ -2,6 +2,7 @@ import LoadLocationData as LocationData
 import Badge
 import RandomizeItems
 import RandomizerRom
+import PokemonRandomizer
 
 trashItems = LocationData.trashList;
 progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall']
@@ -31,9 +32,11 @@ Rising.isTrash = False
 Rising.Name = 'Rising Badge'
 BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 result = RandomizeItems.RandomizeItems('None',LocationData.LocationList,progressItems,trashItems,BadgeDict)
+monFun = PokemonRandomizer.generateRandomMonFun(result[2],result[0])
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())
 RandomizerRom.WriteTrainerLevels(result[0], result[2])
-RandomizerRom.WriteWildLevels(result[0], result[2])
+RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
+RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 print(result[2])
 print(result[1])

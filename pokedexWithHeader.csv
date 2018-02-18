@@ -1,3 +1,4 @@
+PokedexNumber,PokemonName,BST,Flash,Cut,Strength,Surf,Whirlpool,Waterfall,Rock Smash
 1,Bulbasaur,318,Yes,Yes,No,No,No,No,No
 2,Ivysaur,405,Yes,Yes,No,No,No,No,No
 3,Venusaur,525,Yes,Yes,No,No,No,No,No
@@ -198,6 +199,7 @@
 198,Murkrow,405,No,No,No,No,No,No,No
 199,Slowking,490,Yes,No,Yes,Yes,Yes,No,Yes
 200,Misdreavus,435,Yes,No,No,No,No,No,No
+201,Unown,336,No,No,No,No,No,No,No
 202,Wobbuffet,405,No,No,No,No,No,No,No
 203,Girafarig,455,No,No,Yes,No,No,No,Yes
 204,Pineco,290,No,No,Yes,No,No,No,Yes
