@@ -44,6 +44,21 @@ Location:
                 TrainerList: 
                 Sublocations:
                     -
+                        Name: Lugia Chamber
+                        FileName: WhirlIslandLugiaChamber.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Whirl Islands
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
                         Name: Whirl Islands B1 Full Restore
                         FileName: WhirlIslandB1F.asm
                         Type: Item
