@@ -1,7 +1,7 @@
 import re
 import yaml
 #open and parse the file
-trainerfile = open("../RandomizerRom/data/trainers/parties.asm")
+trainerfile = open("../Game Files/pokecrystal//data/trainers/parties.asm")
 trainerstext = trainerfile.read()
 
 #define the regex for parsing trainers (fix below the word fix to inlcude ampersands)

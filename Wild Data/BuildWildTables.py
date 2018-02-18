@@ -11,7 +11,7 @@ restringgrass = '(map (\S+)\s+([ a-zA-Z0-9;:,/]*)\s+; morn\s+((?:db \d+, \S+\s+)
 restringwater = '(map (\S+)\s+([ a-zA-Z0-9;:,/]*)\s+((?:db \d+, \S+\s+)+)\s*)'
 
 #open and parse the file for johto grass
-grassfile = open("../RandomizerRom/data/wild/johto_grass.asm")
+grassfile = open("../Game Files/pokecrystal/data/wild/johto_grass.asm")
 grasstext = grassfile.read()
 regex = re.compile(restringgrass)
 results = regex.findall(grasstext)
@@ -38,7 +38,7 @@ for i in results:
 	grassDict[i[1]] = dataDict
 
 	#open and parse the file for kanto grass
-grassfile = open("../RandomizerRom/data/wild/kanto_grass.asm")
+grassfile = open("../Game Files/pokecrystal/data/wild/kanto_grass.asm")
 grasstext = grassfile.read()
 regex = re.compile(restringgrass)
 results = regex.findall(grasstext)
@@ -65,7 +65,7 @@ for i in results:
 	grassDict[i[1]] = dataDict
 	
 #open and parse the file for swarms
-grassfile = open("../RandomizerRom/data/wild/swarm_grass.asm")
+grassfile = open("../Game Files/pokecrystal/data/wild/swarm_grass.asm")
 grasstext = grassfile.read()
 regex = re.compile(restringgrass)
 results = regex.findall(grasstext)
@@ -91,7 +91,7 @@ for i in results:
 	dataDict["Level"] = minLV
 	swarmDict[i[1]] = dataDict
 	
-waterfile = open("../RandomizerRom/data/wild/kanto_water.asm")
+waterfile = open("../Game Files/pokecrystal/data/wild/kanto_water.asm")
 watertext = waterfile.read()
 regex = re.compile(restringwater)
 results = regex.findall(watertext)
@@ -115,7 +115,7 @@ for i in results:
 	dataDict["Level"] = minLV
 	surfDict[i[1]] = dataDict
 
-waterfile = open("../RandomizerRom/data/wild/johto_water.asm")
+waterfile = open("../Game Files/pokecrystal/data/wild/johto_water.asm")
 watertext = waterfile.read()
 regex = re.compile(restringwater)
 results = regex.findall(watertext)

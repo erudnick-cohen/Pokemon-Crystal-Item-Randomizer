@@ -71,38 +71,38 @@ CINNABAR_ISLAND:
     - 35
 DARK_CAVE_BLACKTHORN_ENTRANCE:
   Code: "map DARK_CAVE_BLACKTHORN_ENTRANCE\n\tdb 2 percent ; encounter rate\n\tdb\
-    \ 25, MAGIKARP\n\tdb 20, MAGIKARP\n\tdb 15, MAGIKARP\n\n\t"
+    \ 15, MAGIKARP\n\tdb 10, MAGIKARP\n\tdb 5, MAGIKARP\n\n\t"
   File: johto_water.asm
-  Level: 15
+  Level: 5
   Name: DARK_CAVE_BLACKTHORN_ENTRANCE
   Pokemon:
     MAGIKARP:
-    - 25
-    - 20
     - 15
+    - 10
+    - 5
 DARK_CAVE_VIOLET_ENTRANCE:
-  Code: "map DARK_CAVE_VIOLET_ENTRANCE\n\tdb 2 percent ; encounter rate\n\tdb 16,\
-    \ MAGIKARP\n\tdb 11, MAGIKARP\n\tdb 6, MAGIKARP\n\n\t"
+  Code: "map DARK_CAVE_VIOLET_ENTRANCE\n\tdb 2 percent ; encounter rate\n\tdb 15,\
+    \ MAGIKARP\n\tdb 10, MAGIKARP\n\tdb 5, MAGIKARP\n\n\t"
   File: johto_water.asm
-  Level: 6
+  Level: 5
   Name: DARK_CAVE_VIOLET_ENTRANCE
   Pokemon:
     MAGIKARP:
-    - 16
-    - 11
-    - 6
+    - 15
+    - 10
+    - 5
 DRAGONS_DEN_B1F:
-  Code: "map DRAGONS_DEN_B1F\n\tdb 4 percent ; encounter rate\n\tdb 20, MAGIKARP\n\
-    \tdb 15, MAGIKARP\n\tdb 15, DRATINI\n\n\t"
+  Code: "map DRAGONS_DEN_B1F\n\tdb 4 percent ; encounter rate\n\tdb 15, MAGIKARP\n\
+    \tdb 10, MAGIKARP\n\tdb 10, DRATINI\n\n\t"
   File: johto_water.asm
-  Level: 15
+  Level: 10
   Name: DRAGONS_DEN_B1F
   Pokemon:
     DRATINI:
-    - 15
+    - 10
     MAGIKARP:
-    - 20
     - 15
+    - 10
 ECRUTEAK_CITY:
   Code: "map ECRUTEAK_CITY\n\tdb 2 percent ; encounter rate\n\tdb 20, POLIWAG\n\t\
     db 15, POLIWAG\n\tdb 20, POLIWHIRL\n\n\t"
@@ -127,67 +127,68 @@ FUCHSIA_CITY:
     - 15
     - 10
 ILEX_FOREST:
-  Code: "map ILEX_FOREST\n\tdb 2 percent ; encounter rate\n\tdb 5, PSYDUCK\n\tdb 5,\
-    \ PSYDUCK\n\tdb 10, GOLDUCK\n\n\t"
+  Code: "map ILEX_FOREST\n\tdb 2 percent ; encounter rate\n\tdb 15, PSYDUCK\n\tdb\
+    \ 10, PSYDUCK\n\tdb 15, GOLDUCK\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 10
   Name: ILEX_FOREST
   Pokemon:
     GOLDUCK:
-    - 10
+    - 15
     PSYDUCK:
-    - 5
+    - 15
+    - 10
 LAKE_OF_RAGE:
-  Code: "map LAKE_OF_RAGE\n\tdb 6 percent ; encounter rate\n\tdb 12, MAGIKARP\n\t\
-    db 7, MAGIKARP\n\tdb 12, GYARADOS\n\n\t"
+  Code: "map LAKE_OF_RAGE\n\tdb 6 percent ; encounter rate\n\tdb 15, MAGIKARP\n\t\
+    db 10, MAGIKARP\n\tdb 15, GYARADOS\n\n\t"
   File: johto_water.asm
-  Level: 7
+  Level: 10
   Name: LAKE_OF_RAGE
   Pokemon:
     GYARADOS:
-    - 12
+    - 15
     MAGIKARP:
-    - 12
-    - 7
+    - 15
+    - 10
 MOUNT_MORTAR_1F_OUTSIDE:
-  Code: "map MOUNT_MORTAR_1F_OUTSIDE\n\tdb 4 percent ; encounter rate\n\tdb 5, GOLDEEN\n\
-    \tdb 10, MARILL\n\tdb 10, SEAKING\n\n\t"
+  Code: "map MOUNT_MORTAR_1F_OUTSIDE\n\tdb 4 percent ; encounter rate\n\tdb 15, GOLDEEN\n\
+    \tdb 20, MARILL\n\tdb 20, SEAKING\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: MOUNT_MORTAR_1F_OUTSIDE
   Pokemon:
     GOLDEEN:
-    - 5
+    - 15
     MARILL:
-    - 10
+    - 20
     SEAKING:
-    - 10
+    - 20
 MOUNT_MORTAR_2F_INSIDE:
-  Code: "map MOUNT_MORTAR_2F_INSIDE\n\tdb 2 percent ; encounter rate\n\tdb 5, GOLDEEN\n\
-    \tdb 10, MARILL\n\tdb 10, SEAKING\n\n\t"
+  Code: "map MOUNT_MORTAR_2F_INSIDE\n\tdb 2 percent ; encounter rate\n\tdb 20, GOLDEEN\n\
+    \tdb 25, MARILL\n\tdb 25, SEAKING\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 20
   Name: MOUNT_MORTAR_2F_INSIDE
   Pokemon:
     GOLDEEN:
-    - 5
+    - 20
     MARILL:
-    - 10
+    - 25
     SEAKING:
-    - 10
+    - 25
 MOUNT_MORTAR_B1F:
-  Code: "map MOUNT_MORTAR_B1F\n\tdb 2 percent ; encounter rate\n\tdb 5, GOLDEEN\n\t\
-    db 10, MARILL\n\tdb 10, SEAKING\n\n\t"
+  Code: "map MOUNT_MORTAR_B1F\n\tdb 2 percent ; encounter rate\n\tdb 15, GOLDEEN\n\
+    \tdb 20, MARILL\n\tdb 20, SEAKING\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: MOUNT_MORTAR_B1F
   Pokemon:
     GOLDEEN:
-    - 5
+    - 15
     MARILL:
-    - 10
+    - 20
     SEAKING:
-    - 10
+    - 20
 NEW_BARK_TOWN:
   Code: "map NEW_BARK_TOWN\n\tdb 6 percent ; encounter rate\n\tdb 20, TENTACOOL\n\t\
     db 15, TENTACOOL\n\tdb 20, TENTACRUEL\n\n\t"
@@ -383,66 +384,66 @@ ROUTE_28:
     POLIWHIRL:
     - 40
 ROUTE_30:
-  Code: "map ROUTE_30\n\tdb 2 percent ; encounter rate\n\tdb 10, POLIWAG\n\tdb 5,\
-    \ POLIWAG\n\tdb 10, POLIWHIRL\n\n\t"
+  Code: "map ROUTE_30\n\tdb 2 percent ; encounter rate\n\tdb 20, POLIWAG\n\tdb 15,\
+    \ POLIWAG\n\tdb 20, POLIWHIRL\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: ROUTE_30
   Pokemon:
     POLIWAG:
-    - 10
-    - 5
+    - 20
+    - 15
     POLIWHIRL:
-    - 10
+    - 20
 ROUTE_31:
-  Code: "map ROUTE_31\n\tdb 2 percent ; encounter rate\n\tdb 10, POLIWAG\n\tdb 5,\
-    \ POLIWAG\n\tdb 10, POLIWHIRL\n\n\t"
+  Code: "map ROUTE_31\n\tdb 2 percent ; encounter rate\n\tdb 20, POLIWAG\n\tdb 15,\
+    \ POLIWAG\n\tdb 20, POLIWHIRL\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: ROUTE_31
   Pokemon:
     POLIWAG:
-    - 10
-    - 5
+    - 20
+    - 15
     POLIWHIRL:
-    - 10
+    - 20
 ROUTE_32:
-  Code: "map ROUTE_32\n\tdb 6 percent ; encounter rate\n\tdb 5, TENTACOOL\n\tdb 10,\
-    \ QUAGSIRE\n\tdb 10, TENTACRUEL\n\n\t"
+  Code: "map ROUTE_32\n\tdb 6 percent ; encounter rate\n\tdb 15, TENTACOOL\n\tdb 20,\
+    \ QUAGSIRE\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: ROUTE_32
   Pokemon:
     QUAGSIRE:
-    - 10
+    - 20
     TENTACOOL:
-    - 5
+    - 15
     TENTACRUEL:
-    - 10
+    - 20
 ROUTE_34:
-  Code: "map ROUTE_34\n\tdb 6 percent ; encounter rate\n\tdb 11, TENTACOOL\n\tdb 6,\
-    \ TENTACOOL\n\tdb 11, TENTACRUEL\n\n\t"
+  Code: "map ROUTE_34\n\tdb 6 percent ; encounter rate\n\tdb 20, TENTACOOL\n\tdb 15,\
+    \ TENTACOOL\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 6
+  Level: 15
   Name: ROUTE_34
   Pokemon:
     TENTACOOL:
-    - 11
-    - 6
+    - 20
+    - 15
     TENTACRUEL:
-    - 11
+    - 20
 ROUTE_35:
-  Code: "map ROUTE_35\n\tdb 4 percent ; encounter rate\n\tdb 10, PSYDUCK\n\tdb 5,\
-    \ PSYDUCK\n\tdb 10, GOLDUCK\n\n\t"
+  Code: "map ROUTE_35\n\tdb 4 percent ; encounter rate\n\tdb 20, PSYDUCK\n\tdb 15,\
+    \ PSYDUCK\n\tdb 20, GOLDUCK\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: ROUTE_35
   Pokemon:
     GOLDUCK:
-    - 10
+    - 20
     PSYDUCK:
-    - 10
-    - 5
+    - 20
+    - 15
 ROUTE_4:
   Code: "map ROUTE_4\n\tdb 4 percent ; encounter rate\n\tdb 10, GOLDEEN\n\tdb 5, GOLDEEN\n\
     \tdb 10, SEAKING\n\n\t"
@@ -456,76 +457,76 @@ ROUTE_4:
     SEAKING:
     - 10
 ROUTE_40:
-  Code: "map ROUTE_40\n\tdb 6 percent ; encounter rate\n\tdb 11, TENTACOOL\n\tdb 6,\
-    \ TENTACOOL\n\tdb 11, TENTACRUEL\n\n\t"
+  Code: "map ROUTE_40\n\tdb 6 percent ; encounter rate\n\tdb 20, TENTACOOL\n\tdb 15,\
+    \ TENTACOOL\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 6
+  Level: 15
   Name: ROUTE_40
   Pokemon:
     TENTACOOL:
-    - 11
-    - 6
+    - 20
+    - 15
     TENTACRUEL:
-    - 11
+    - 20
 ROUTE_41:
-  Code: "map ROUTE_41\n\tdb 6 percent ; encounter rate\n\tdb 7, TENTACOOL\n\tdb 7,\
-    \ TENTACRUEL\n\tdb 7, MANTINE\n\n\t"
+  Code: "map ROUTE_41\n\tdb 6 percent ; encounter rate\n\tdb 20, TENTACOOL\n\tdb 20,\
+    \ TENTACRUEL\n\tdb 20, MANTINE\n\n\t"
   File: johto_water.asm
-  Level: 7
+  Level: 20
   Name: ROUTE_41
   Pokemon:
     MANTINE:
-    - 7
+    - 20
     TENTACOOL:
-    - 7
+    - 20
     TENTACRUEL:
-    - 7
+    - 20
 ROUTE_42:
-  Code: "map ROUTE_42\n\tdb 4 percent ; encounter rate\n\tdb 10, GOLDEEN\n\tdb 5,\
-    \ GOLDEEN\n\tdb 10, SEAKING\n\n\t"
+  Code: "map ROUTE_42\n\tdb 4 percent ; encounter rate\n\tdb 20, GOLDEEN\n\tdb 15,\
+    \ GOLDEEN\n\tdb 20, SEAKING\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: ROUTE_42
   Pokemon:
     GOLDEEN:
-    - 10
-    - 5
+    - 20
+    - 15
     SEAKING:
-    - 10
+    - 20
 ROUTE_43:
-  Code: "map ROUTE_43\n\tdb 2 percent ; encounter rate\n\tdb 17, MAGIKARP\n\tdb 12,\
-    \ MAGIKARP\n\tdb 7, MAGIKARP\n\n\t"
+  Code: "map ROUTE_43\n\tdb 2 percent ; encounter rate\n\tdb 20, MAGIKARP\n\tdb 15,\
+    \ MAGIKARP\n\tdb 10, MAGIKARP\n\n\t"
   File: johto_water.asm
-  Level: 7
+  Level: 10
   Name: ROUTE_43
   Pokemon:
     MAGIKARP:
-    - 17
-    - 12
-    - 7
+    - 20
+    - 15
+    - 10
 ROUTE_44:
-  Code: "map ROUTE_44\n\tdb 2 percent ; encounter rate\n\tdb 17, POLIWAG\n\tdb 12,\
-    \ POLIWAG\n\tdb 17, POLIWHIRL\n\n\t"
+  Code: "map ROUTE_44\n\tdb 2 percent ; encounter rate\n\tdb 25, POLIWAG\n\tdb 20,\
+    \ POLIWAG\n\tdb 25, POLIWHIRL\n\n\t"
   File: johto_water.asm
-  Level: 12
+  Level: 20
   Name: ROUTE_44
   Pokemon:
     POLIWAG:
-    - 17
-    - 12
+    - 25
+    - 20
     POLIWHIRL:
-    - 17
+    - 25
 ROUTE_45:
-  Code: "map ROUTE_45\n\tdb 2 percent ; encounter rate\n\tdb 30, MAGIKARP\n\tdb 25,\
-    \ MAGIKARP\n\tdb 15, MAGIKARP\n\n\t"
+  Code: "map ROUTE_45\n\tdb 2 percent ; encounter rate\n\tdb 20, MAGIKARP\n\tdb 15,\
+    \ MAGIKARP\n\tdb 5, MAGIKARP\n\n\t"
   File: johto_water.asm
-  Level: 15
+  Level: 5
   Name: ROUTE_45
   Pokemon:
     MAGIKARP:
-    - 30
-    - 25
+    - 20
     - 15
+    - 5
 ROUTE_6:
   Code: "map ROUTE_6\n\tdb 2 percent ; encounter rate\n\tdb 10, PSYDUCK\n\tdb 5, PSYDUCK\n\
     \tdb 10, GOLDUCK\n\n\t"
@@ -588,27 +589,28 @@ SILVER_CAVE_ROOM_2:
     SEAKING:
     - 35
 SLOWPOKE_WELL_B1F:
-  Code: "map SLOWPOKE_WELL_B1F\n\tdb 2 percent ; encounter rate\n\tdb 5, SLOWPOKE\n\
-    \tdb 15, SLOWPOKE\n\tdb 5, SLOWPOKE\n\n\t"
+  Code: "map SLOWPOKE_WELL_B1F\n\tdb 2 percent ; encounter rate\n\tdb 15, SLOWPOKE\n\
+    \tdb 20, SLOWPOKE\n\tdb 10, SLOWPOKE\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 10
   Name: SLOWPOKE_WELL_B1F
   Pokemon:
     SLOWPOKE:
-    - 5
     - 15
+    - 20
+    - 10
 SLOWPOKE_WELL_B2F:
-  Code: "map SLOWPOKE_WELL_B2F\n\tdb 2 percent ; encounter rate\n\tdb 8, SLOWPOKE\n\
-    \tdb 13, SLOWPOKE\n\tdb 13, SLOWBRO\n\n\t"
+  Code: "map SLOWPOKE_WELL_B2F\n\tdb 2 percent ; encounter rate\n\tdb 15, SLOWPOKE\n\
+    \tdb 20, SLOWPOKE\n\tdb 20, SLOWBRO\n\n\t"
   File: johto_water.asm
-  Level: 8
+  Level: 15
   Name: SLOWPOKE_WELL_B2F
   Pokemon:
     SLOWBRO:
-    - 13
+    - 20
     SLOWPOKE:
-    - 8
-    - 13
+    - 15
+    - 20
 TOHJO_FALLS:
   Code: "map TOHJO_FALLS\n\tdb 4 percent ; encounter rate\n\tdb 20, GOLDEEN\n\tdb\
     \ 20, SLOWPOKE\n\tdb 20, SEAKING\n\n\t"
@@ -623,42 +625,42 @@ TOHJO_FALLS:
     SLOWPOKE:
     - 20
 UNION_CAVE_1F:
-  Code: "map UNION_CAVE_1F\n\tdb 2 percent ; encounter rate\n\tdb 5, WOOPER\n\tdb\
-    \ 10, QUAGSIRE\n\tdb 5, QUAGSIRE\n\n\t"
+  Code: "map UNION_CAVE_1F\n\tdb 2 percent ; encounter rate\n\tdb 15, WOOPER\n\tdb\
+    \ 20, QUAGSIRE\n\tdb 15, QUAGSIRE\n\n\t"
   File: johto_water.asm
-  Level: 5
+  Level: 15
   Name: UNION_CAVE_1F
   Pokemon:
     QUAGSIRE:
-    - 10
-    - 5
+    - 20
+    - 15
     WOOPER:
-    - 5
+    - 15
 UNION_CAVE_B1F:
-  Code: "map UNION_CAVE_B1F\n\tdb 2 percent ; encounter rate\n\tdb 6, WOOPER\n\tdb\
-    \ 11, QUAGSIRE\n\tdb 6, QUAGSIRE\n\n\t"
+  Code: "map UNION_CAVE_B1F\n\tdb 2 percent ; encounter rate\n\tdb 15, WOOPER\n\t\
+    db 20, QUAGSIRE\n\tdb 15, QUAGSIRE\n\n\t"
   File: johto_water.asm
-  Level: 6
+  Level: 15
   Name: UNION_CAVE_B1F
   Pokemon:
     QUAGSIRE:
-    - 11
-    - 6
+    - 20
+    - 15
     WOOPER:
-    - 6
+    - 15
 UNION_CAVE_B2F:
-  Code: "map UNION_CAVE_B2F\n\tdb 4 percent ; encounter rate\n\tdb 6, TENTACOOL\n\t\
-    db 11, QUAGSIRE\n\tdb 11, TENTACRUEL\n\n\t"
+  Code: "map UNION_CAVE_B2F\n\tdb 4 percent ; encounter rate\n\tdb 15, TENTACOOL\n\
+    \tdb 20, QUAGSIRE\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 6
+  Level: 15
   Name: UNION_CAVE_B2F
   Pokemon:
     QUAGSIRE:
-    - 11
+    - 20
     TENTACOOL:
-    - 6
+    - 15
     TENTACRUEL:
-    - 11
+    - 20
 VERMILION_CITY:
   Code: "map VERMILION_CITY\n\tdb 6 percent ; encounter rate\n\tdb 35, TENTACOOL\n\
     \tdb 30, TENTACOOL\n\tdb 35, TENTACRUEL\n\n\t"
@@ -708,40 +710,40 @@ VIRIDIAN_CITY:
     POLIWHIRL:
     - 10
 WHIRL_ISLAND_B2F:
-  Code: "map WHIRL_ISLAND_B2F\n\tdb 4 percent ; encounter rate\n\tdb 14, HORSEA\n\t\
-    db 19, HORSEA\n\tdb 19, TENTACRUEL\n\n\t"
+  Code: "map WHIRL_ISLAND_B2F\n\tdb 4 percent ; encounter rate\n\tdb 15, HORSEA\n\t\
+    db 20, HORSEA\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 14
+  Level: 15
   Name: WHIRL_ISLAND_B2F
   Pokemon:
     HORSEA:
-    - 14
-    - 19
+    - 15
+    - 20
     TENTACRUEL:
-    - 19
+    - 20
 WHIRL_ISLAND_LUGIA_CHAMBER:
-  Code: "map WHIRL_ISLAND_LUGIA_CHAMBER\n\tdb 4 percent ; encounter rate\n\tdb 14,\
-    \ HORSEA\n\tdb 14, TENTACRUEL\n\tdb 14, SEADRA\n\n\t"
+  Code: "map WHIRL_ISLAND_LUGIA_CHAMBER\n\tdb 4 percent ; encounter rate\n\tdb 20,\
+    \ HORSEA\n\tdb 20, TENTACRUEL\n\tdb 20, SEADRA\n\n\t"
   File: johto_water.asm
-  Level: 14
+  Level: 20
   Name: WHIRL_ISLAND_LUGIA_CHAMBER
   Pokemon:
     HORSEA:
-    - 14
+    - 20
     SEADRA:
-    - 14
+    - 20
     TENTACRUEL:
-    - 14
+    - 20
 WHIRL_ISLAND_SW:
-  Code: "map WHIRL_ISLAND_SW\n\tdb 4 percent ; encounter rate\n\tdb 19, TENTACOOL\n\
-    \tdb 14, HORSEA\n\tdb 19, TENTACRUEL\n\n\t"
+  Code: "map WHIRL_ISLAND_SW\n\tdb 4 percent ; encounter rate\n\tdb 20, TENTACOOL\n\
+    \tdb 15, HORSEA\n\tdb 20, TENTACRUEL\n\n\t"
   File: johto_water.asm
-  Level: 14
+  Level: 15
   Name: WHIRL_ISLAND_SW
   Pokemon:
     HORSEA:
-    - 14
+    - 15
     TENTACOOL:
-    - 19
+    - 20
     TENTACRUEL:
-    - 19
+    - 20
