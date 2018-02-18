@@ -36,7 +36,7 @@ Location:
         HasPKMN: No
         WildTableList: 
             - Route_26
-        LocationReqs:
+        LocationReqs: Route 26
         FlagReqs:
         ItemReqs:
         FlagsSet:
