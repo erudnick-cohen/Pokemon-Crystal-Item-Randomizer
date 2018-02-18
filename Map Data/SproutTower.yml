@@ -5,6 +5,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+            - SPROUT_TOWER_2F
+            - SPROUT_TOWER_3F
         LocationReqs: Violet City
         FlagReqs:
         ItemReqs:
@@ -156,8 +158,6 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                    - SPROUT_TOWER_2F
-                    - SPROUT_TOWER_3F
                 LocationReqs: Violet City
                 FlagReqs:
                 ItemReqs:
