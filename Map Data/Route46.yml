@@ -1,10 +1,25 @@
 Location:
     -
+            Name: Route 46
+            FileName: Route46.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList: ROUTE_46
+            LocationReqs: Route 29
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList: 
+            Sublocations:
+    -
             Name: Route 46 upper
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
-            WildTableList: 
+            WildTableList:
             LocationReqs: Route 45
             FlagReqs:
             ItemReqs:
@@ -19,7 +34,7 @@ Location:
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
-            WildTableList: 
+            WildTableList:
             LocationReqs: Dark Cave Violet
             FlagReqs:
                 - Zephyr Badge
