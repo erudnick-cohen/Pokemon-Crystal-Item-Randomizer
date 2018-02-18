@@ -96,7 +96,7 @@ Location:
                 Name: Mt Mortar Inside
                 FileName: MountMortar1FInside.asm
                 Type: Map
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Mt Mortar Inside Entry
                 FlagReqs:
@@ -189,7 +189,7 @@ Location:
                 Name: Mt Mortar Surf Floor
                 FileName: MountMortarB1F.asm
                 Type: Map
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: MOUNT_MORTAR_B1F
                 LocationReqs: Mt Mortar
                 FlagReqs:
@@ -301,7 +301,7 @@ Location:
                 Name: Mt Mortar Upper Floor
                 FileName: MountMortar2FInside.asm
                 Type: Map
-                HasPKMN: No
+                HasPKMN: Yes
                 WildTableList: MOUNT_MORTAR_2F_INSIDE
                 LocationReqs: Mt Mortar
                 FlagReqs:
