@@ -3,7 +3,7 @@ Location:
         Name: Ecruteak City
         FileName: EcruteakCity.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList: 
         LocationReqs: Route 37
         FlagReqs:

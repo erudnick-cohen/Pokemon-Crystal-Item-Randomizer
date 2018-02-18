@@ -84,7 +84,7 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                AREALV: 4
+                AREALV: 5
                 TrainerList: 
                         - BIRD_KEEPER 1                              
                         - BIRD_KEEPER 2

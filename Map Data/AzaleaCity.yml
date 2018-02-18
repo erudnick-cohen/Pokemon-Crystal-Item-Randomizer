@@ -3,7 +3,7 @@ Location:
         Name: Azalea Town entrance
         FileName: AzaleaTown.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList:
         LocationReqs: Route 33
         FlagReqs:

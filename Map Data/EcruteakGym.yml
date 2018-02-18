@@ -56,7 +56,21 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
-
+                    -
+                        Name: Suicune
+                        FileName: TinTower1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Morty TM
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
             -
                 Name: Ecruteak Gym Trainers
                 FileName: EcruteakGym.asm
@@ -70,10 +84,10 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                AREALV: 14
+                AREALV: 15
                 TrainerList: 
                         - SAGE 5
                         - SAGE 6
                         - MEDIUM 1
                         - MEDIUM 2
-                        - MORTY 1        
+                        - MORTY 1

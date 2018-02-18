@@ -3,7 +3,7 @@ Location:
         Name: Violet City
         FileName: VioletCity.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList: 
         LocationReqs: Route 31
         FlagReqs:
@@ -14,6 +14,21 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+            -
+                Name: Got Egg From Aide
+                FileName: VioletPokecenter1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Falkner TM
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
             -
                 Name: Violet City Rare Candy
                 FileName: VioletCity.asm

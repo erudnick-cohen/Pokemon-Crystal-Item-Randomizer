@@ -33,7 +33,7 @@ Location:
         Name: Goldenrod City
         FileName: GoldenrodCity.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList: 
         LocationReqs: Goldenrod Entrance
         FlagReqs:
@@ -325,6 +325,21 @@ Location:
                 ItemReqs:
                 FlagsSet:
                     - Rock Smash
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Eevee Gift
+                FileName: GoldenrodBillsHouse.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs: 
+                ItemReqs:
+                FlagsSet:
                 ReachableReqs:
                 Code:
                 Text:
