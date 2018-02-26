@@ -138,33 +138,47 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 				break
 		else:
 			stuckList.append(i)
+	#for some reason this is needed
+	for i in shuffleDict:
+		if shuffleDict[i] is None and i in notStuck:
+			notStuck.remove(i)
+			stuckList.append(i)
 	#perform feasible swaps with things in the stuck list to fix everything
 	while(len(stuckList)>0):
+		print(stuckList)
 		random.shuffle(notStuck)
 		for i in stuckList:
 			for j in notStuck:
+				print(j)
 				if(abs(j[2]-i[2]) < bstrange):
 					if(abs(shuffleDict[j][2]-i[2]) < bstrange):
 						#perform swap
+						print('swap')
+						print(i)
+						print(j)
 						old = shuffleDict[j]
 						shuffleDict[j] = i
 						shuffleDict[i] = old
 						notStuck.append(i)
 						stuckList.remove(i)
 						break
-					else:
-						#can't swap, so put the old thing into the list of things that are stuck
-						old = shuffleDict[j]
-						shuffleDict[j] = i
-						stuckList.append(old)
-						notStuck.remove(old)
-						stuckList.remove(i)
-						notStuck.append(i)
-						random.shuffle(notStuck)
-						break
+					# else:
+						# #can't swap, so put the old thing into the list of things that are stuck
+						# old = shuffleDict[j]
+						# shuffleDict[j] = i
+						# stuckList.append(old)
+						# #notStuck.remove(old)
+						# stuckList.remove(i)
+						# notStuck.append(i)
+						# random.shuffle(notStuck)
+						# print('swap')
+						# print(i)
+						# print(j)
+						# break
 
 	#finally, rewrite code for each entry
 	for i in mList:
+		print(str(i) +' has '+ str(shuffleDict[i]))
 		basemon = trainerData[i[0]]["Pokemon"][i[1]]["Code"]
 		newMon = trainerData[shuffleDict[i][0]]["Pokemon"][shuffleDict[i][1]]["Code"]
 		#change level of new mon to match what the original was
