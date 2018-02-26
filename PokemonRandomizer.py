@@ -139,8 +139,8 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 		else:
 			stuckList.append(i)
 	#perform feasible swaps with things in the stuck list to fix everything
+	random.shuffle(notStuck)
 	for i in stuckList:
-		random.shuffle(notStuck)
 		for j in notStuck:
 			if(abs(j[2]-i[2]) < bstrange):
 				if(abs(shuffleDict[j][2]-i[2]) < bstrange):
