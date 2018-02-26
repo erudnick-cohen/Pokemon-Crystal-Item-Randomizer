@@ -58,49 +58,6 @@ Location:
                 TrainerList: 
                 Sublocations:
             -             
-                Name: Elm's Everstone
-                FileName: ElmsLab.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Falkner TM
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: Showed Elm Togepi
-                ReachableReqs:
-                NormalItem: EVERSTONE
-                Text: |
-                    ElmGiveEverstoneText2:
-                        text "That's an"
-                        line "ITEMNAME."
-
-                        para "Some species of"
-                        line "#MON evolve"
-
-                        para "when they grow to"
-                        line "certain levels."
-
-                        para "A #MON holding"
-                        line "the ITEMNAME"
-                        cont "won't evolve."
-
-                        para "Give it to a #-"
-                        line "MON you don't want"
-                        cont "to evolve."
-                        done
-                TrainerList: 
-                Code: |
-                    ElmGiveEverstoneScript:
-                        writetext ElmGiveEverstoneText1
-                        buttonsound
-                        ITEMLINE
-                        iffalse ElmScript_NoRoomForEverstone
-                        writetext ElmGiveEverstoneText2
-                        waitbutton
-                        closetext
-                        setevent EVENT_GOT_EVERSTONE_FROM_ELM
-                        end
-            -             
                 Name: Master Ball
                 FileName: ElmsLab.asm
                 Type: Item
