@@ -139,25 +139,29 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 		else:
 			stuckList.append(i)
 	#perform feasible swaps with things in the stuck list to fix everything
-	random.shuffle(notStuck)
-	for i in stuckList:
-		for j in notStuck:
-			if(abs(j[2]-i[2]) < bstrange):
-				if(abs(shuffleDict[j][2]-i[2]) < bstrange):
-					#perform swap
-					old = shuffleDict[j]
-					shuffleDict[j] = i
-					shuffleDict[i] = old
-					notStuck.append(i)
-					break
-				else:
-					#can't swap, so put the old thing into the list of things that are stuck
-					old = shuffleDict[j]
-					shuffleDict[j] = i
-					stuckList.append(old)
-					notStuck.append(i)
-					random.shuffle(notStuck)
-					break
+	while(len(stuckList)>0):
+		random.shuffle(notStuck)
+		for i in stuckList:
+			for j in notStuck:
+				if(abs(j[2]-i[2]) < bstrange):
+					if(abs(shuffleDict[j][2]-i[2]) < bstrange):
+						#perform swap
+						old = shuffleDict[j]
+						shuffleDict[j] = i
+						shuffleDict[i] = old
+						notStuck.append(i)
+						stuckList.remove(i)
+						break
+					else:
+						#can't swap, so put the old thing into the list of things that are stuck
+						old = shuffleDict[j]
+						shuffleDict[j] = i
+						stuckList.append(old)
+						notStuck.remove(old)
+						stuckList.remove(i)
+						notStuck.append(i)
+						random.shuffle(notStuck)
+						break
 
 	#finally, rewrite code for each entry
 	for i in mList:
