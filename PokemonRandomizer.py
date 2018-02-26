@@ -156,6 +156,9 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 					shuffleDict[j] = i
 					stuckList.append(old)
 					notStuck.append(i)
+					random.shuffle(notStuck)
+					break
+
 	#finally, rewrite code for each entry
 	for i in mList:
 		basemon = trainerData[i[0]]["Pokemon"][i[1]]["Code"]
