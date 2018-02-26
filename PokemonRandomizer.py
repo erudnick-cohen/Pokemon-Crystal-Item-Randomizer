@@ -142,13 +142,20 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 	for i in stuckList:
 		random.shuffle(notStuck)
 		for j in notStuck:
-			if(abs(shuffleDict[j][2]-i[2]) < bstrange):
-				#perform swap
-				old = shuffleDict[j]
-				shuffleDict[j] = i
-				shuffleDict[i] = j
-				notStuck.append(i)
-				break
+			if(abs(j[2]-i[2]) < bstrange):
+				if(abs(shuffleDict[j][2]-i[2]) < bstrange):
+					#perform swap
+					old = shuffleDict[j]
+					shuffleDict[j] = i
+					shuffleDict[i] = old
+					notStuck.append(i)
+					break
+				else:
+					#can't swap, so put the old thing into the list of things that are stuck
+					old = shuffleDict[j]
+					shuffleDict[j] = i
+					stuckList.append(old)
+					notStuck.append(i)
 	#finally, rewrite code for each entry
 	for i in mList:
 		basemon = trainerData[i[0]]["Pokemon"][i[1]]["Code"]
