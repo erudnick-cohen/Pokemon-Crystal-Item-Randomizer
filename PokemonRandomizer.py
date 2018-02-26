@@ -142,7 +142,8 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 	for i in shuffleDict:
 		if shuffleDict[i] is None and i in notStuck:
 			notStuck.remove(i)
-			stuckList.append(i)
+			if i not in stuckList:
+				stuckList.append(i)
 	#perform feasible swaps with things in the stuck list to fix everything
 	while(len(stuckList)>0):
 		print(stuckList)
