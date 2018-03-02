@@ -83,7 +83,7 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                AREALV: 23
+                AREALV: 30
                 TrainerList: 
                         - COOLTRAINERM 3
                         - COOLTRAINERM 4
@@ -104,7 +104,7 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                AREALV: 23
+                AREALV: 30
                 TrainerList: 
                         - COOLTRAINERF 4
                         - CLAIR 1
