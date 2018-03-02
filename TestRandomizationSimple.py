@@ -3,6 +3,7 @@ import Badge
 import RandomizeItems
 import RandomizerRom
 import PokemonRandomizer
+from collections import defaultdict
 
 trashItems = LocationData.trashList;
 progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall']
@@ -33,7 +34,8 @@ Rising.Name = 'Rising Badge'
 BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 result = RandomizeItems.RandomizeItems('None',LocationData.LocationList,progressItems,trashItems,BadgeDict)
 monFun = PokemonRandomizer.generateRandomMonFun(result[2],result[0])
-newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True)
+banMap = defaultdict(lambda: [],{'FALKNER 1':['FISHER 11','CLAIR 1'],'BUGSY 1':['CHAMPION 1']})
+newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 RandomizerRom.ResetRom()
 RandomizerRom.WriteItemLocations(result[0].values())
 RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)

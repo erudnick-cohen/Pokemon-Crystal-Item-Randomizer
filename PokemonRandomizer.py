@@ -68,7 +68,8 @@ def generateRandomMonFun(stateDist,locations):
 	
 #returns a randomized dictionary of the trainer data, with a specified range for base stat variation
 #the randomized entries are put in a new entry in the dict called newCode
-def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
+#banMap is a dict mapping specific trainers that cannot have other trainers pokemon, primarily for early gym leaders and lance
+def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defaultdict(lambda: [])):
 	#if the users specifies it, the rival will be homogenized
 	#across one of his three possibilities per encounter
 	#this prevents him from polluting the shuffle pool
@@ -131,7 +132,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 	for i in mList:
 		shuffleDict[i] = None
 		for j in monList:
-			if(abs(i[2]-j[2]) < bstrange):
+			if(abs(i[2]-j[2]) < bstrange and j not in banMap[i]):
 				shuffleDict[i] = j
 				monList.remove(j)
 				notStuck.append(j)
@@ -152,7 +153,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False):
 			for j in notStuck:
 				print(j)
 				if(abs(j[2]-i[2]) < bstrange):
-					if(abs(shuffleDict[j][2]-i[2]) < bstrange):
+					if(abs(shuffleDict[j][2]-i[2]) < bstrange and j not in banMap[i]):
 						#perform swap
 						print('swap')
 						print(i)
