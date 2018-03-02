@@ -132,7 +132,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defau
 	for i in mList:
 		shuffleDict[i] = None
 		for j in monList:
-			if(abs(i[2]-j[2]) < bstrange and j not in banMap[i]):
+			if(abs(i[2]-j[2]) < bstrange and j[0] not in banMap[i]):
 				shuffleDict[i] = j
 				monList.remove(j)
 				notStuck.append(j)
@@ -153,7 +153,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defau
 			for j in notStuck:
 				print(j)
 				if(abs(j[2]-i[2]) < bstrange):
-					if(abs(shuffleDict[j][2]-i[2]) < bstrange and j not in banMap[i]):
+					if(abs(shuffleDict[j][2]-i[2]) < bstrange and j[0] not in banMap[i]):
 						#perform swap
 						print('swap')
 						print(i)
