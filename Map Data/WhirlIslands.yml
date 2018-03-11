@@ -64,7 +64,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -85,7 +85,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -106,7 +106,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -127,7 +127,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -148,7 +148,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -169,7 +169,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -190,7 +190,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -211,7 +211,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -232,7 +232,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:
@@ -253,7 +253,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                             - Glacier Badge
                         ItemReqs:

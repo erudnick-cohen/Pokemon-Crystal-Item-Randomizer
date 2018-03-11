@@ -76,7 +76,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Blackthorn City
+                LocationReqs: Blackthorn Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -95,7 +95,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Blackthorn City
+                LocationReqs: Blackthorn Gym
                 FlagReqs:
                     - Plain Badge
                 ItemReqs:

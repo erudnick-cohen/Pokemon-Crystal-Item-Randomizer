@@ -79,6 +79,7 @@ Location:
                 LocationReqs: Goldenrod City
                 FlagReqs:
                     - Rocket Invasion
+                    - Radio Tower Rockets Part 1
                 ItemReqs:
                     - Card Key
                 FlagsSet:
@@ -204,7 +205,7 @@ Location:
     -
         Name: Buena Item
         FileName: RadioTower2F.asm
-        Type: Map
+        Type: Item
         HasPKMN: No
         WildTableList: 
         LocationReqs: Radio Tower
