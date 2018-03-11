@@ -33,6 +33,7 @@ Location:
         FlagsSet:
         ReachableReqs:
         IsBall: Yes
+        NormalItem: MAX_ETHER
         Code: |
             Route43MaxEther:
                 itemball MAX_ETHER
@@ -51,6 +52,7 @@ Location:
         ItemReqs:
         FlagsSet:
         ReachableReqs:
+        NormalItem: TM_SLUDGE_BOMB
         Code: |
             OfficerScript_GuardWithSludgeBomb:
                 faceplayer

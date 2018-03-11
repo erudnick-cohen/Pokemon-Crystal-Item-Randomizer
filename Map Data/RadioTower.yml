@@ -185,7 +185,7 @@ Location:
                     -
                         Name: Radio Tower Ultra Ball
                         FileName: RadioTower5F.asm
-                        Type: Map
+                        Type: Item
                         HasPKMN: No
                         WildTableList: 
                         LocationReqs: Radio Tower

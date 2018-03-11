@@ -24,6 +24,7 @@ Location:
                 FlagReqs: Fog Badge
                 ItemReqs: Surf
                 FlagsSet:
+                NormalItem: MYSTIC_WATER
                 ReachableReqs:
                 Text: |
                     MysticWaterGuyTextBefore:
