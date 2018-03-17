@@ -91,6 +91,51 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
+                    -
+                        Name: Trap 1
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Trap 2
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Trap 3
+                        FileName: TeamRocketBaseB1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
             -
                 Name: Rocket Base 2F
                 FileName: TeamRocketBaseB2F.asm
@@ -318,7 +363,49 @@ Location:
                 TrainerList: 
                     - EXECUTIVEF 2
                 Sublocations:
-
-
-
+                    -
+                        Name: Electrode 1
+                        FileName: TeamRocketBaseB2F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base Whirlpool
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Electrode 2
+                        FileName: TeamRocketBaseB2F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base Whirlpool
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Electrode 3
+                        FileName: TeamRocketBaseB2F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base Whirlpool
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
                         

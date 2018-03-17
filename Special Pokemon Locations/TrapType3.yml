@@ -1,0 +1,14 @@
+Location: Trap 3
+NormalMon: KOFFING
+Type: Wild Pokemon
+LevelShift: 4
+Code: |
+    KoffingExplodingTrap:
+        special FadeOutPalettes
+        cry MONNAME
+        special FadeInPalettes
+        setlasttalked -1
+        writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+        MONLINE
+        startbattle
+        end

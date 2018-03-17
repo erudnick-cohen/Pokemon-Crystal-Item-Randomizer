@@ -1,0 +1,22 @@
+Location: Electrode 2
+NormalMon: ELECTRODE
+Type: Wild Pokemon
+LevelShift: 4
+Code: |
+    RocketElectrode2:
+        cry MONNAME
+        MONLINE
+        startbattle
+        iftrue UnknownScript_0x6d182
+        disappear TEAMROCKETBASEB2F_ELECTRODE2
+        disappear TEAMROCKETBASEB2F_ELECTRODE5
+        checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
+        iffalse UnknownScript_0x6d182
+        checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
+        iffalse UnknownScript_0x6d182
+        checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
+        iffalse UnknownScript_0x6d182
+        reloadmapafterbattle
+        special PlayMapMusic
+        applymovement PLAYER, MovementData_0x6d299
+        jump UnknownScript_0x6d184

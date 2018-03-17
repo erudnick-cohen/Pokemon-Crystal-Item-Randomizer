@@ -1,0 +1,14 @@
+Location: Trap 1
+NormalMon: VOLTORB
+Type: Wild Pokemon
+LevelShift: 6
+Code: |
+    VoltorbExplodingTrap:
+        special FadeOutPalettes
+        cry MONNAME
+        special FadeInPalettes
+        setlasttalked -1
+        writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+        MONLINE
+        startbattle
+        end

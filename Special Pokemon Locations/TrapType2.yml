@@ -1,0 +1,14 @@
+Location: Trap 2
+NormalMon: GEODUDE
+Type: Wild Pokemon
+LevelShift: 4
+Code: |
+    GeodudeExplodingTrap:
+        special FadeOutPalettes
+        cry MONNAME
+        special FadeInPalettes
+        setlasttalked -1
+        writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+        MONLINE
+        startbattle
+        end
