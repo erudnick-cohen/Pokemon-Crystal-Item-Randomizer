@@ -1,7 +1,7 @@
 Location:
     -
         Name: Vermillion City
-        FileName:VermillionCity.asm
+        FileName: VermillionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
@@ -17,44 +17,7 @@ Location:
             -
                 Name: Vermillion City Fan Club President
                 FileName: PokemonFanClub.asm
-                Type: Map
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: SS Aqua
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: RARE_CANDY
-                Code: |
-                    UnknownScript_0x191802:
-                        writetext UnknownText_0x191a3d
-                        buttonsound
-                        ITEMLINE
-                        iffalse UnknownScript_0x19181f
-                        setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
-                        writetext UnknownText_0x191a72
-                        waitbutton
-                        closetext
-                        end
-                Text: |
-                    UnknownText_0x191a72:
-                        text "It's a ITEMNAME"
-                        line "that makes #MON"
-                        cont "stronger."
-
-                        para "I prefer making my"
-                        line "#MON stronger"
-
-                        para "by battling, so"
-                        line "you can have it."
-                        done
-                TrainerList:
-                Sublocations:
-            -
-                Name: Vermillion City Fan Club President
-                FileName: PokemonFanClub.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList:
                 LocationReqs: SS Aqua
@@ -91,7 +54,7 @@ Location:
             -
                 Name: Vermillion City Lost Item
                 FileName: PokemonFanClub.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList:
                 LocationReqs: SS Aqua

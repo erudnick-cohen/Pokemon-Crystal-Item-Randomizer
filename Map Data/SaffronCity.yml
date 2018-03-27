@@ -1,0 +1,105 @@
+Location:
+    -
+        Name: Saffron City
+        FileName: SaffronCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 6
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+            -
+                Name: Mr Psychic
+                FileName: MrPsychicsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Saffron City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_PSYCHIC_M
+                Code: |
+                    MrPsychic:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_TM29_PSYCHIC
+                        iftrue .AlreadyGotItem
+                        writetext MrPsychicText1
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_TM29_PSYCHIC
+                    .AlreadyGotItem:
+                        writetext MrPsychicText2
+                        waitbutton
+                    .Done:
+                        closetext
+                        end
+                Text: |
+                    MrPsychicText2:
+                        text "TM29 is ITEMNAME."
+
+                        para "It may lower the"
+                        line "target's SPCL.DEF."
+                        done
+                TrainerList:
+                Sublocations:
+            -
+                Name: Dojo Band
+                FileName: FightingDojo.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Saffron City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: FOCUS_BAND
+                Code: |
+                    FightingDojoFocusBand:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Silph Co Upgrade
+                FileName: SilphCo1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Saffron City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: UP_GRADE
+                Code: |
+                    OfficerScript_0x18abe8:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_UP_GRADE
+                        iftrue UnknownScript_0x18abfd
+                        writetext UnknownText_0x18ac36
+                        buttonsound
+                        verbosegiveitem UP_GRADE
+                        iffalse UnknownScript_0x18ac01
+                        setevent EVENT_GOT_UP_GRADE
+                    UnknownScript_0x18abfd:
+                        writetext UnknownText_0x18aca8
+                        waitbutton
+                    UnknownScript_0x18ac01:
+                        closetext
+                        end
+                Text:
+                TrainerList:
+                Sublocations:

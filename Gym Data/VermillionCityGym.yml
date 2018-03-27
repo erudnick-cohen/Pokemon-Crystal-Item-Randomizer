@@ -1,12 +1,13 @@
 Location:
     -
         Name: Vermillion City Gym Badge
-        FileName: VermillionGym.asm
+        FileName: VermilionGym.asm
         LocationReqs: Vermillion Gym
         HasPKMN: No
         Type: Gym
         WildTableList:
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -42,7 +43,7 @@ Location:
         Code:
         Text:
             -
-                File: VermillionGym.asm
+                File: VermilionGym.asm
                 Text: |
                     UnknownText_0x192238:
                         text "SURGE: Arrrgh!"

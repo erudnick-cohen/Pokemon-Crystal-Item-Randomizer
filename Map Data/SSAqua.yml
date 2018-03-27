@@ -1,7 +1,7 @@
 Location:
     -
         Name: SS Aqua
-        FileName:FastShipCabins_SE_SSE_CaptainsCabin.asm
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: Item
         HasPKMN: Yes
         WildTableList:
@@ -9,7 +9,7 @@ Location:
         FlagReqs:
             - Kanto Mode
         ItemReqs:
-            - SS Ticket
+            - S S Ticket
         FlagsSet:
         ReachableReqs:
         NormalItem: METAL_COAT

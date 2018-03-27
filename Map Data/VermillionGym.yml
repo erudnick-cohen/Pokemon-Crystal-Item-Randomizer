@@ -1,7 +1,7 @@
 Location:
     -
         Name: Vermillion city to Gym
-        FileName:VermillionGym.asm
+        FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
         WildTableList:
@@ -18,11 +18,11 @@ Location:
         Sublocations:
     -
         Name: Vermillion city to Gym
-        FileName:VermillionGym.asm
+        FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion City
+        LocationReqs: Vermilion City
         FlagReqs:
             - Hive Badge
         ItemReqs:
@@ -35,11 +35,11 @@ Location:
         Sublocations:
     -
         Name: Vermillion Gym
-        FileName:VermillionGym.asm
+        FileName: VermilionGym.asm
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Vermillion City to Gym
+        LocationReqs: Vermillion city to Gym
         FlagReqs:
         ItemReqs:
         FlagsSet:

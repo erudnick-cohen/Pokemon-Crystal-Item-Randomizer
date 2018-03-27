@@ -1,0 +1,22 @@
+Location:
+    -
+        Name: Saffron Gym
+        FileName: SaffronGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Saffron City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - MEDIUM 6
+            - PSYCHIC_T 11
+            - MEDIUM 7
+            - PSYCHIC_T 2
+            - SABRINA 1
+        Sublocations:

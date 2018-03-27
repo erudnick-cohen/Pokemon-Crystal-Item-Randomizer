@@ -1,0 +1,20 @@
+Location:
+    -
+        Name: Route 6
+        FileName: Route6.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Vermillion City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - POKEFANM 13
+            - POKEFANM 14
+        Sublocations:

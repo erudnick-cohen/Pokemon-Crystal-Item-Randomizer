@@ -1,0 +1,70 @@
+Location:
+    -
+        Name: Saffron City Gym Badge
+        FileName: SaffronGym.asm
+        LocationReqs: Saffron Gym
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Marsh Badge
+        BadgeLine: |
+            SabrinaScript_0x189c2e:
+                faceplayer
+                opentext
+                checkflag BADGELINE
+                iftrue .FightDone
+                writetext UnknownText_0x189cdf
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x189df4, 0
+                loadtrainer SABRINA, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_SABRINA
+                setevent EVENT_BEAT_MEDIUM_REBECCA
+                setevent EVENT_BEAT_MEDIUM_DORIS
+                setevent EVENT_BEAT_PSYCHIC_FRANKLIN
+                setevent EVENT_BEAT_PSYCHIC_JARED
+                opentext
+                writetext UnknownText_0x189e95
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                writetext UnknownText_0x189ead
+                waitbutton
+                closetext
+                end
+        Code:
+        Text:
+            -
+                File: SaffronGym.asm
+                Text: |
+                    UnknownText_0x189df4:
+                        text "SABRINA: Your"
+                        line "power..."
+
+                        para "It far exceeds"
+                        line "what I foresaw..."
+
+                        para "Maybe it isn't"
+                        line "possible to fully"
+
+                        para "predict what the"
+                        line "future holds..."
+
+                        para "OK, you win. You"
+                        line "earned yourself"
+                        cont "BADGENAME."
+                        done
+
+                    UnknownText_0x189e95:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done
