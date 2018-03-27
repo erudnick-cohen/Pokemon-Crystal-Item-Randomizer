@@ -1,0 +1,16 @@
+Location:
+    -
+        Name: SS Aqua
+        FileName: 
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: SS Aqua
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:

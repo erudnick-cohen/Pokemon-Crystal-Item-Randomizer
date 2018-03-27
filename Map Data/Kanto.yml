@@ -7,6 +7,7 @@ Location:
         WildTableList:
         LocationReqs: Elite Four
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
         FlagsSet:
             - Became Champion
