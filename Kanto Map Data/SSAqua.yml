@@ -1,0 +1,56 @@
+Location:
+    -
+        Name: SS Aqua
+        FileName: 
+        Type: Item
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+            - SS Ticket
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: METAL_COAT
+        Code: |
+            SSAquaFoundGranddaughter:
+                writetext SSAquaGrandpaHaveThisText
+                buttonsound
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
+            .NoRoom:
+                closetext
+                end
+        Text:
+        AREALV: 32
+        TrainerList:
+            - HIKER 14
+            - POKEFANM 9
+            - TWINS 7
+            - TWINS 8
+            - FIREBREATHER 8
+            - SAILOR 9
+            - JUGGLER 2
+            - SAILOR 6
+            - PICNICKER 8
+            - GENTLEMAN 2
+            - COOLTRAINERM 16
+            - COOLTRAINERF 13
+            - SUPER_NERD 9
+            - PSYCHIC_T 12
+            - BEAUTY 6
+            - FISHER 12
+            - SAILOR 7
+            - BLACKBELT_T 9
+            - BURGLAR 3
+            - POKEMANIAC 8
+            - BUG_CATCHER 9
+            - GUITARIST 1
+            - POKEFANF 5
+            - POKEFANM 8
+            - SAILOR 8
+            - TEACHER 3
+            - SCHOOLBOY 11
+            - SCHOOLBOY 12
+        Sublocations:
