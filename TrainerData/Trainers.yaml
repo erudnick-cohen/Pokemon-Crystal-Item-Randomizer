@@ -7651,6 +7651,79 @@ LASS 9:
     NewCode: "db 34, JUMPLUFF\n\n\t"
     Pokemon: JUMPLUFF
   Type: TRAINERTYPE_NORMAL
+LT_SURGE 1:
+  Class: LT_SURGE
+  Code: "; LT_SURGE (1)\n\tdb \"LT.SURGE@\"\n\tdb TRAINERTYPE_MOVES\n\n\t; party\n\
+    \n\tdb 44, RAICHU\n\t\tdb THUNDER_WAVE\n\t\tdb QUICK_ATTACK\n\t\tdb THUNDERBOLT\n\
+    \t\tdb THUNDER\n\n\tdb 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb DOUBLE_TEAM\n\t\t\
+    db SWIFT\n\t\tdb EXPLOSION\n\n\tdb 40, MAGNETON\n\t\tdb LOCK_ON\n\t\tdb DOUBLE_TEAM\n\
+    \t\tdb SWIFT\n\t\tdb ZAP_CANNON\n\n\tdb 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb\
+    \ DOUBLE_TEAM\n\t\tdb SWIFT\n\t\tdb EXPLOSION\n\n\tdb 46, ELECTABUZZ\n\t\tdb QUICK_ATTACK\n\
+    \t\tdb THUNDERPUNCH\n\t\tdb LIGHT_SCREEN\n\t\tdb THUNDER\n\n\tdb $ff ; end"
+  Name: LT.SURGE
+  Number: '1'
+  Pokemon:
+  - Code: "db 44, RAICHU\n\t\tdb THUNDER_WAVE\n\t\tdb QUICK_ATTACK\n\t\tdb THUNDERBOLT\n\
+      \t\tdb THUNDER\n\n\t"
+    Item: null
+    Level: 44
+    Moves:
+    - THUNDER_WAVE
+    - QUICK_ATTACK
+    - THUNDERBOLT
+    - THUNDER
+    NewCode: "db 44, RAICHU\n\t\tdb THUNDER_WAVE\n\t\tdb QUICK_ATTACK\n\t\tdb THUNDERBOLT\n\
+      \t\tdb THUNDER\n\n\t"
+    Pokemon: RAICHU
+  - Code: "db 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\t\t\
+      db EXPLOSION\n\n\t"
+    Item: null
+    Level: 40
+    Moves:
+    - SCREECH
+    - DOUBLE_TEAM
+    - SWIFT
+    - EXPLOSION
+    NewCode: "db 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\
+      \t\tdb EXPLOSION\n\n\t"
+    Pokemon: ELECTRODE
+  - Code: "db 40, MAGNETON\n\t\tdb LOCK_ON\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\t\t\
+      db ZAP_CANNON\n\n\t"
+    Item: null
+    Level: 40
+    Moves:
+    - LOCK_ON
+    - DOUBLE_TEAM
+    - SWIFT
+    - ZAP_CANNON
+    NewCode: "db 40, MAGNETON\n\t\tdb LOCK_ON\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\t\
+      \tdb ZAP_CANNON\n\n\t"
+    Pokemon: MAGNETON
+  - Code: "db 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\t\t\
+      db EXPLOSION\n\n\t"
+    Item: null
+    Level: 40
+    Moves:
+    - SCREECH
+    - DOUBLE_TEAM
+    - SWIFT
+    - EXPLOSION
+    NewCode: "db 40, ELECTRODE\n\t\tdb SCREECH\n\t\tdb DOUBLE_TEAM\n\t\tdb SWIFT\n\
+      \t\tdb EXPLOSION\n\n\t"
+    Pokemon: ELECTRODE
+  - Code: "db 46, ELECTABUZZ\n\t\tdb QUICK_ATTACK\n\t\tdb THUNDERPUNCH\n\t\tdb LIGHT_SCREEN\n\
+      \t\tdb THUNDER\n\n\t"
+    Item: null
+    Level: 46
+    Moves:
+    - QUICK_ATTACK
+    - THUNDERPUNCH
+    - LIGHT_SCREEN
+    - THUNDER
+    NewCode: "db 46, ELECTABUZZ\n\t\tdb QUICK_ATTACK\n\t\tdb THUNDERPUNCH\n\t\tdb\
+      \ LIGHT_SCREEN\n\t\tdb THUNDER\n\n\t"
+    Pokemon: ELECTABUZZ
+  Type: TRAINERTYPE_MOVES
 MEDIUM 1:
   Class: MEDIUM
   Code: "; MEDIUM (1)\n\tdb \"MARTHA@\"\n\tdb TRAINERTYPE_NORMAL\n\n\t; party\n\t\

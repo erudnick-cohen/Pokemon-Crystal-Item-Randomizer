@@ -1,0 +1,58 @@
+Location:
+    -
+        Name: Vermillion City Gym Badge
+        FileName: VermillionGym.asm
+        LocationReqs: Vermillion Gym
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Thunder Badge
+        BadgeLine: |
+            SurgeScript_0x1920a5:
+                faceplayer
+                opentext
+                checkflag BADGELINE
+                iftrue .FightDone
+                writetext UnknownText_0x192142
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x192238, 0
+                loadtrainer LT_SURGE, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_LTSURGE
+                setevent EVENT_BEAT_GENTLEMAN_GREGORY
+                setevent EVENT_BEAT_GUITARIST_VINCENT
+                setevent EVENT_BEAT_JUGGLER_HORTON
+                opentext
+                writetext UnknownText_0x192277
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                writetext UnknownText_0x192291
+                waitbutton
+                closetext
+                end
+        Code:
+        Text:
+            -
+                File: VermillionGym.asm
+                Text: |
+                    UnknownText_0x192238:
+                        text "SURGE: Arrrgh!"
+                        line "You are strong!"
+
+                        para "OK, kid. You get"
+                        line "BADGENAME!"
+                        done
+
+                    UnknownText_0x192277:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

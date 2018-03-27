@@ -5,7 +5,7 @@ trainerfile = open("../Game Files/pokecrystal//data/trainers/parties.asm")
 trainerstext = trainerfile.read()
 
 #define the regex for parsing trainers (fix below the word fix to inlcude ampersands)
-restring = '(; (\S+) \((\d+)\)\s+db \"([A-Z_& ?]+)@\"\s+db (\S+)\s+; party\s+(?:db \d+, [A-Z_]+(?:, [A-Z]+)?\s+(?:db (?:[A-Z_2]|0)+\s+){0,4}\s+)+\s+db [$]ff ; end)'
+restring = '(; (\S+) \((\d+)\)\s+db \"([A-Z_& ?\.]+)@\"\s+db (\S+)\s+; party\s+(?:db \d+, [A-Z_]+(?:, [A-Z]+)?\s+(?:db (?:[A-Z_2]|0)+\s+){0,4}\s+)+\s+db [$]ff ; end)'
 regex = re.compile(restring)
 results = regex.findall(trainerstext)
 
