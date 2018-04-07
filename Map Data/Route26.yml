@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Route 27
+        LocationReqs: Route 27 right side
         FlagReqs:
         ItemReqs:
         FlagsSet:
