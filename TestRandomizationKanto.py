@@ -39,7 +39,10 @@ Thunder.Name = 'Thunder Badge'
 Marsh = Badge.Badge()
 Marsh.isTrash = True
 Marsh.Name = 'Marsh Badge'
-BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising, 'Thunder Badge': Thunder, 'Marsh Badge' : Marsh}
+Rainbow = Badge.Badge()
+Rainbow.isTrash = True
+Rainbow.Name = 'Rainbow Badge'
+BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising, 'Thunder Badge': Thunder, 'Marsh Badge' : Marsh, 'Rainbow Badge': Rainbow}
 result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = ['Kanto Mode'])
 print('-------')
 for j in result[0]:

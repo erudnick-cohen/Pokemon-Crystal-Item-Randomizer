@@ -1,0 +1,17 @@
+Location:
+    -
+        Name: Route 7
+        FileName: Route7.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Saffron City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
