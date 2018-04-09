@@ -1,0 +1,61 @@
+Location:
+    -
+        Name: Fuchsia Gym
+        FileName: FuchsiaGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Fuchsia City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - LASS 6
+            - PICNICKER 5
+            - CAMPER 5
+            - LASS 3
+            - JANINE 1
+        Sublocations:
+            -
+                Name: Janine TM
+                FileName: FuchsiaGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Fuchsia Gym
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_TOXIC
+                Code: |
+                    .AfterBattle:
+                        checkevent EVENT_GOT_TM06_TOXIC
+                        iftrue .AfterTM
+                        writetext JanineText_ToxicSpeech
+                        buttonsound
+                        ITEMLINE
+                        iffalse .AfterTM
+                        setevent EVENT_GOT_TM06_TOXIC
+                    .AfterTM:
+                        writetext JanineText_ApplyMyself
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    JanineText_ToxicSpeech:
+                        text "JANINE: You're so"
+                        line "tough! I have a"
+                        cont "special gift!"
+
+                        para "It's ITEMNAME, a pow-"
+                        line "erful poison that"
+
+                        para "steadily saps the"
+                        line "victim's HP."
+                        done
+                TrainerList:

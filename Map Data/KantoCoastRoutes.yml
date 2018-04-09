@@ -1,0 +1,58 @@
+Location:
+    -
+        Name: Route 13-14 entrance
+        FileName: Route14.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 15
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 13-14 entrance
+        FileName: Route14.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 12
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 13 and 14
+        FileName: Route14.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 13-14 entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BIRD_KEEPER 9
+            - POKEFANM 5
+            - POKEFANM 6
+            - BIRD_KEEPER 16
+            - BIRD_KEEPER 15
+            - POKEFANM 4
+            - POKEFANM 12
+            - HIKER 16
+        Sublocations:

@@ -1,0 +1,78 @@
+Location:
+    -
+        Name: Route 15 entrance
+        FileName: Route15.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 14
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 15 entrance
+        FileName: Route15.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Fuchsia City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 15
+        FileName: Route15.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 15 entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - SCHOOLBOY 2
+            - SCHOOLBOY 6
+            - TEACHER 2
+            - SCHOOLBOY 9
+            - TEACHER 1
+            - SCHOOLBOY 4
+        Sublocations:
+    -
+        Name: Route 15 PP Up
+        FileName: Route15.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 13 and 14
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: PP_UP
+        IsBall: Yes
+        Code: |
+            Route15PPUp:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:

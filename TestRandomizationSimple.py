@@ -6,6 +6,7 @@ import PokemonRandomizer
 from collections import defaultdict
 
 res = LoadLocationData.LoadDataFromFolder(".")
+trashItems.append('BICYCLE')#because bike is a key item if kanto is active
 trashItems = res[1]
 LocationList = res[0]
 progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall']

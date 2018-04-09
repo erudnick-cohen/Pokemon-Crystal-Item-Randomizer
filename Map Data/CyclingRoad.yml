@@ -1,0 +1,58 @@
+Location:
+    -
+        Name: Cycling Road
+        FileName: Route17.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+        ItemReqs:
+            - Bicycle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BIKER 7
+            - BIKER 6
+            - BIKER 8
+            - BIKER 9
+        Sublocations:
+    -
+        Name: Route 18
+        FileName: Route18.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Cycling Road
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BIRD_KEEPER 11
+            - BIRD_KEEPER 10
+        Sublocations:
+    -
+        Name: Route 18
+        FileName: Route18.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Fuschia City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BIRD_KEEPER 11
+            - BIRD_KEEPER 10
+        Sublocations:

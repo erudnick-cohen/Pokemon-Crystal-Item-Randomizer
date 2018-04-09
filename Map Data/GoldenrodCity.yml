@@ -55,7 +55,6 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: BICYCLE
                 Code: |
                     ClerkScript_0x54750:
                         faceplayer

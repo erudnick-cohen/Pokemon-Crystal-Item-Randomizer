@@ -3,7 +3,7 @@ Location:
         Name: Saffron Gym
         FileName: SaffronGym.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList:
         LocationReqs: Saffron City
         FlagReqs:

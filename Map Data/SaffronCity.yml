@@ -3,7 +3,7 @@ Location:
         Name: Saffron City
         FileName: SaffronCity.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList:
         LocationReqs: Route 6
         FlagReqs:

@@ -8,7 +8,7 @@ from collections import defaultdict
 res = LoadLocationData.LoadDataFromFolder(".")
 trashItems = res[1]
 LocationList = res[0]
-progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket']
+progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle']
 Zephyr = Badge.Badge()
 Zephyr.isTrash = False
 Zephyr.Name = 'Zephyr Badge'
@@ -42,7 +42,10 @@ Marsh.Name = 'Marsh Badge'
 Rainbow = Badge.Badge()
 Rainbow.isTrash = True
 Rainbow.Name = 'Rainbow Badge'
-BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising, 'Thunder Badge': Thunder, 'Marsh Badge' : Marsh, 'Rainbow Badge': Rainbow}
+Soul = Badge.Badge()
+Soul.isTrash = True
+Soul.Name = 'Soul Badge'
+BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising, 'Thunder Badge': Thunder, 'Marsh Badge' : Marsh, 'Rainbow Badge': Rainbow, 'Soul Badge': Soul}
 result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = ['Kanto Mode'])
 print('-------')
 for j in result[0]:
