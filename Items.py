@@ -2,7 +2,7 @@ import yaml
 
 def makeItemCodeDict():
 	#hardcoding key item lookups for now, pass as parameter in future
-	keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL'}
+	keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL', 'Machine Part': 'MACHINE PART','Lost Item':'LOST_ITEM'}
 	itemCodeDict = {}
 	
 	#progress items
@@ -22,14 +22,16 @@ def makeItemCodeDict():
 			itemCodeDict[i["Name"]] = i["Output"]
 		
 	#define lookup function
-	def lookupItem(item,isBall):
+	def lookupItem(item,isBall,isSpecial):
 		if item not in itemCodeDict:
 			if item in keyItemMap:
 				item = keyItemMap[item]
 			if(isBall):
 				return "itemball "+item
-			else:
+			elif not isSpecial:
 				return "verbosegiveitem "+item
+			else:
+				return item
 		else:
 			return itemCodeDict[item]
 	return lookupItem

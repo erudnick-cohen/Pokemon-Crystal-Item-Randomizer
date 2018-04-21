@@ -1,0 +1,64 @@
+Location:
+    -
+        Name: Pewter City Gym Badge
+        FileName: PewterGym.asm
+        LocationReqs: Pewter Gym
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Boulder Badge
+        BadgeLine: |
+            BrockScript_0x1a2864:
+                faceplayer
+                opentext
+                checkflag BADGELINE
+                iftrue .FightDone
+                writetext UnknownText_0x1a28d0
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x1a29bb, 0
+                loadtrainer BROCK, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_BROCK
+                setevent EVENT_BEAT_CAMPER_JERRY
+                opentext
+                writetext UnknownText_0x1a2a3d
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                writetext UnknownText_0x1a2a57
+                waitbutton
+                closetext
+                end
+        Code:
+        Text:
+            -
+                File: PewterGym.asm
+                Text: |
+                    UnknownText_0x1a2a3d:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done
+
+                    UnknownText_0x1a2a57:
+                        text "BROCK: <PLAY_G>,"
+                        line "thanks. I enjoyed"
+
+                        para "battling you, even"
+                        line "though I am a bit"
+                        cont "upset."
+
+                        para "That BADGENAME"
+                        line "will make your"
+
+                        para "#MON even more"
+                        line "powerful."
+                        done

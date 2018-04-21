@@ -1,0 +1,59 @@
+Location:
+    -
+        Name: Cinnibar Island Gym Badge
+        FileName: SeafoamGym.asm
+        LocationReqs: Seafoam Islands
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Volcano Badge
+        BadgeLine: |
+            BlaineScript_0x1ab4fb:
+                faceplayer
+                opentext
+                checkflag BADGELINE
+                iftrue .FightDone
+                writetext UnknownText_0x1ab548
+                waitbutton
+                closetext
+                winlosstext UnknownText_0x1ab646, 0
+                loadtrainer BLAINE, 1
+                startbattle
+                iftrue .ReturnAfterBattle
+                appear SEAFOAMGYM_GYM_GUY
+            .ReturnAfterBattle:
+                reloadmapafterbattle
+                setevent EVENT_BEAT_BLAINE
+                opentext
+                writetext UnknownText_0x1ab683
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                writetext UnknownText_0x1ab69d
+                waitbutton
+                closetext
+                end
+        Code:
+        Text:
+            -
+                File: SeafoamGym.asm
+                Text: |
+                    UnknownText_0x1ab646:
+                        text "BLAINE: Awesome."
+                        line "I've burned out..."
+
+                        para "You've earned"
+                        line "VOLCANOBADGE!"
+                        done
+
+                    UnknownText_0x1ab683:
+                        text "<PLAYER> received"
+                        line "VOLCANOBADGE."
+                        done

@@ -1,0 +1,43 @@
+Location:
+    -
+        Name: Route 4
+        FileName: Route4.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_4
+        LocationReqs:
+            - Route 3 and Mt. Moon
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - PICNICKER 6
+            - PICNICKER 7
+            - BIRD_KEEPER 8
+        Sublocations:
+            -
+                Name: Route 4 HP UP
+                FileName: Route4.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 4
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HP_UP
+                IsBall: Yes
+                Code: |
+                    Route4HPUp:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList: 
+                Sublocations:

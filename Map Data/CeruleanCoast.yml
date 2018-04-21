@@ -1,0 +1,96 @@
+Location:
+    -
+        Name: Route 25
+        FileName: Route25.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_25
+            - ROUTE_24
+        LocationReqs:
+            - Cerulean City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - LASS 11
+            - SCHOOLBOY 8
+            - SCHOOLBOY 7
+            - LASS 7
+            - CAMPER 6
+            - LASS 8
+            - SUPER_NERD 8
+            - COOLTRAINERM 17
+        Sublocations:
+            -
+                Name: Route 25 Nugget
+                FileName: Route25.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: NUGGET
+                Code: |
+                    CooltrainerMScript_0x19efac:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_BEAT_COOLTRAINERM_KEVIN
+                        iftrue UnknownScript_0x19efda
+                        checkevent EVENT_CLEARED_NUGGET_BRIDGE
+                        iftrue UnknownScript_0x19efc7
+                        writetext UnknownText_0x19f43b
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x19efde
+                        setevent EVENT_CLEARED_NUGGET_BRIDGE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 25 Protein
+                FileName: Route25.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                IsBall: Yes
+                Code: |
+                    Route25Protein:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Date Ruined
+                FileName: Route25.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                FlagReqs:
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:

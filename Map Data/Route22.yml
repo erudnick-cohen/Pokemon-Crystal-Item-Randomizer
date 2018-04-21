@@ -1,12 +1,13 @@
 Location:
     -
-        Name: Celadon City
-        FileName: CeladonCity.asm
+        Name: Route 22
+        FileName: Route22.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
+            - ROUTE_22
         LocationReqs:
-            - Route 7
+            - Viridian City
         FlagReqs:
         ItemReqs:
         FlagsSet:

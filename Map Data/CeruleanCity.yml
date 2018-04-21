@@ -1,13 +1,12 @@
 Location:
     -
-        Name: Route 7
-        FileName: Route7.asm
+        Name: Cerulean City
+        FileName: CeruleanCity.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-            - ROUTE_7
         LocationReqs:
-            - Saffron City
+            - Route 5
         FlagReqs:
         ItemReqs:
         FlagsSet:

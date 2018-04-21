@@ -1,0 +1,18 @@
+Location:
+    -
+        Name: Seafoam Islands
+        FileName: SeafoamGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 20 and 19
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BLAINE 1
+        Sublocations:

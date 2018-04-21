@@ -1,0 +1,131 @@
+Location:
+    -
+        Name: Rock Tunnel
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROCK_TUNNEL_1F
+            - ROCK_TUNNEL_B1F
+        LocationReqs:
+            - Route 10
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Rock Tunnel Elixer
+                FileName: RockTunnel1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    RockTunnel1FElixer:
+                        ITEMLINE
+                Text:
+                IsBall: Yes
+                NormalItem: ELIXER
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Steel Wing
+                FileName: RockTunnel1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    RockTunnel1FTMSteelWing:
+                        ITEMLINE
+                Text:
+                IsBall: Yes
+                NormalItem: TM_STEEL_WING
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Rock Tunnel Iron
+                FileName: RockTunnelB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    RockTunnelB1FIron:
+                        ITEMLINE
+                Text:
+                IsBall: Yes
+                NormalItem: IRON
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Rock Tunnel PP UP
+                FileName: RockTunnelB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    RockTunnelB1FPPUp:
+                        ITEMLINE
+                Text:
+                IsBall: Yes
+                NormalItem: PP_UP
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Rock Tunnel Revive
+                FileName: RockTunnelB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    RockTunnelB1FRevive:
+                        ITEMLINE
+                Text:
+                IsBall: Yes
+                NormalItem: REVIVE
+                TrainerList: 
+                Sublocations:
+

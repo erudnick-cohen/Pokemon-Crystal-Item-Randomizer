@@ -1,0 +1,227 @@
+Location:
+    -
+        Name: Mt. Silver
+        FileName: SilverCaveOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - SILVER_CAVE_OUTSIDE
+            - SILVER_CAVE_ROOM_1
+            - SILVER_CAVE_ROOM_2
+            - SILVER_CAVE_ROOM_3
+            - SILVER_CAVE_ITEM_ROOMS
+        LocationReqs:
+            - Route 22
+        FlagReqs:
+            - Mt. Silver Unlock
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 54
+        TrainerList: 
+            - RED 1
+        Sublocations:
+            -
+                Name: Mt. Silver Max Elixer
+                FileName: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ELIXER
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom1MaxElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Max Protein
+                FileName: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom1Protein:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Escape Rope
+                FileName: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ESCAPE_ROPE
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom1EscapeRope:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Ultra Ball
+                FileName: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom1UltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Max Revive
+                FileName: SilverCaveItemRooms.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Surf
+                    - Waterfall
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_REVIVE
+                IsBall: Yes
+                Code: |
+                    SilverCaveItemRoomsMaxRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Full Restore
+                FileName: SilverCaveItemRooms.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Surf
+                    - Waterfall
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                IsBall: Yes
+                Code: |
+                    SilverCaveItemRoomsFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver PP UP
+                FileName: SilverCaveRoom2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Surf
+                    - Waterfall
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PP_UP
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom2PPUp:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Other Ultra Ball
+                FileName: SilverCaveRoom2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom2UltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Calcium
+                FileName: SilverCaveRoom2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CALCIUM
+                IsBall: Yes
+                Code: |
+                    SilverCaveRoom2Calcium:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+
+
+
+
+
+
+
+
+
+                

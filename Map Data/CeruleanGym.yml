@@ -1,0 +1,55 @@
+Location:
+    -
+        Name: Cerulean Gym
+        FileName: CeruleanGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Cerulean City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+            -
+                Name: Machine Part
+                FileName: CeruleanGym.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean City
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem:
+                IsSpecial: Yes
+                Code: |
+                    CeruleanGymHiddenMachinePart:
+                        dwb EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM, ITEMLINE
+                Text:
+                TrainerList:
+            -
+                Name: Cerulean Gym Trainers
+                FileName: CeruleanGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Cerulean City
+                FlagReqs:
+                    - Date Ruined
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 32
+                TrainerList:
+                    - SWIMMERM 21
+                    - SWIMMERF 19
+                    - SWIMMERF 18
+                    - MISTY 1
+                Sublocations:

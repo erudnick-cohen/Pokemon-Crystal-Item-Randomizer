@@ -1,0 +1,25 @@
+Location:
+    -
+        Name: Route 9
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_9
+        LocationReqs:
+            - Cerulean City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - PICNICKER 14
+            - CAMPER 8
+            - CAMPER 7
+            - HIKER 10
+            - PICNICKER 13
+            - HIKER 15
+        Sublocations:

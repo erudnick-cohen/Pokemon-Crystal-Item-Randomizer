@@ -1,0 +1,30 @@
+Location:
+    -
+        Name: Route 20 and 19
+        FileName: Route20.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_20
+            - ROUTE 19
+        LocationReqs:
+            - Cinnibar Island
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - SWIMMERM 17
+            - SWIMMERF 14
+            - SWIMMERM 18
+            - SWIMMERF 15
+            - SWIMMERM 1
+            - SWIMMERM 15
+            - SWIMMERF 12
+            - SWIMMERM 14
+        Sublocations:

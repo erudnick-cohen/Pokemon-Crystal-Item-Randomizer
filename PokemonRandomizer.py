@@ -80,6 +80,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defau
 		rsets.append(['RIVAL1 7','RIVAL1 8','RIVAL1 9'])
 		rsets.append(['RIVAL1 10','RIVAL1 11','RIVAL1 12'])
 		rsets.append(['RIVAL1 13','RIVAL1 14','RIVAL1 15'])
+		rsets.append(['RIVAL2 1','RIVAL2 2','RIVAL2 3'])
 		for i in rsets:
 			random.shuffle(i)
 			tmapdict[i[1]] = i[0]

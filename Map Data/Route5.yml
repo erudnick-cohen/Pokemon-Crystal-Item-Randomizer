@@ -1,0 +1,51 @@
+Location:
+    -
+        Name: Route 5
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+            - ROUTE_5
+        LocationReqs:
+            - Saffron City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Cleanse Tag
+                FileName: Route5CleanseTagSpeechHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 5
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CLEANSE_TAG
+                Code: |
+                    GrannyScript_0x18b634:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_CLEANSE_TAG
+                        iftrue UnknownScript_0x18b649
+                        writetext UnknownText_0x18b655
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x18b64d
+                        setevent EVENT_GOT_CLEANSE_TAG
+                    UnknownScript_0x18b649:
+                        writetext UnknownText_0x18b6a7
+                        waitbutton
+                    UnknownScript_0x18b64d:
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:

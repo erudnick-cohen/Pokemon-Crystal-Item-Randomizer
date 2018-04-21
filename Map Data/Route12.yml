@@ -1,0 +1,112 @@
+Location:
+    -
+        Name: Route 12
+        FileName: Route12.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_12
+        LocationReqs:
+            - Lavender Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - FISHER 4
+            - FISHER 13
+            - FISHER 14
+            - FISHER 15
+        Sublocations:
+            -
+                Name: Route 12 Calcium
+                FileName: Route12.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 12
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: CALCIUM
+                Code: |
+                    Route12Calcium:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 12 Nugget
+                FileName: Route12.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 12
+                FlagReqs:
+                    - Hive Badge
+                    - Fog Badge
+                ItemReqs:
+                    - Cut
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: NUGGET
+                Code: |
+                    Route12Nugget:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Super Rod
+                FileName: Route12SuperRodHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 12
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_ROD
+                Code: |
+                    FishingGuruScript_0x7f484:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_SUPER_ROD
+                        iftrue UnknownScript_0x7f4a0
+                        writetext UnknownText_0x7f4af
+                        yesorno
+                        iffalse UnknownScript_0x7f4a6
+                        writetext UnknownText_0x7f52f
+                        buttonsound
+                        ITEMLINE
+                        iffalse UnknownScript_0x7f4aa
+                        setevent EVENT_GOT_SUPER_ROD
+                    UnknownScript_0x7f4a0:
+                        writetext UnknownText_0x7f57c
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x7f52f:
+                        text "Yes, yes. Just as"
+                        line "I thought!"
+
+                        para "Here, fishing fan!"
+                        line "Take this--it's a"
+                        cont "ITEMNAME."
+                        done
+                TrainerList: 
+                Sublocations:

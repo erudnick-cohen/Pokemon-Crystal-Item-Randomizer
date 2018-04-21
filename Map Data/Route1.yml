@@ -1,13 +1,13 @@
 Location:
     -
-        Name: Route 6
-        FileName: Route6.asm
+        Name: Route 1
+        FileName: Route1.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-            - ROUTE_6
+            - ROUTE_1
         LocationReqs:
-            - Vermillion City
+            - Viridian City
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -16,6 +16,6 @@ Location:
         Text:
         AREALV: 32
         TrainerList: 
-            - POKEFANM 13
-            - POKEFANM 14
+            - SCHOOLBOY 5
+            - COOLTRAINERF 14
         Sublocations:

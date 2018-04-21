@@ -1,0 +1,176 @@
+Location:
+    -
+        Name: Route 2
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+            - ROUTE_2
+        LocationReqs:
+            - Diglett's Cave
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Route 2 Nugget House
+                FileName: Route2NuggetSpeechHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: NUGGET
+                Code: |
+                    FisherScript_0x9b847:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_NUGGET_FROM_GUY
+                        iftrue .GotItem
+                        writetext UnknownText_0x9b865
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_NUGGET_FROM_GUY
+                    .GotItem:
+                        writetext UnknownText_0x9b8e5
+                        waitbutton
+                    .Done:
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x9b8e5:
+                        text "That's a ITEMNAME."
+
+                        para "I can't give you"
+                        line "any ITEMNAMEs of"
+
+                        para "wisdom, so that'll"
+                        line "have to do!"
+                        done
+                AREALV: 32
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Elixer
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ELIXER
+                IsBall: Yes
+                Code: |
+                    Route2Elixer:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Carbos
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CARBOS
+                IsBall: Yes
+                Code: |
+                    Route2Carbos:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Dire Hit
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: DIRE_HIT
+                IsBall: Yes
+                Code: |
+                    Route2DireHit:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Max Potion
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                IsBall: Yes
+                Code: |
+                    Route2MaxPotion:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Post Cut
+                FileName: Route2.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                Code: 
+                Text:
+                AREALV: 32
+                TrainerList: 
+                    - BUG_CATCHER 2
+                    - BUG_CATCHER 12
+                    - BUG_CATCHER 3
+                Sublocations:
+
+

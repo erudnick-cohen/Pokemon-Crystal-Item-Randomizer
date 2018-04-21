@@ -1,0 +1,19 @@
+Location:
+    -
+        Name: Pewter Gym
+        FileName: PewterGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Pewter City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - CAMPER 18
+            - BROCK 1
+        Sublocations:

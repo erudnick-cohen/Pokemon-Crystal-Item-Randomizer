@@ -1,12 +1,13 @@
 Location:
     -
-        Name: Route 6
-        FileName: Route6.asm
+        Name: Route 8
+        FileName: Route8.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
+            - ROUTE_8
         LocationReqs:
-            - Vermillion City
+            - Saffron City
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,6 +16,8 @@ Location:
         Text:
         AREALV: 32
         TrainerList: 
-            - POKEFANM 13
-            - POKEFANM 14
+            - BIKER 3
+            - BIKER 4
+            - BIKER 5
+            - SUPER_NERD 6
         Sublocations:

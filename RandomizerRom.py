@@ -22,7 +22,7 @@ def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
-	newcode = location.Code.replace("ITEMLINE",itemScriptLookup(location.item,location.IsBall))
+	newcode = location.Code.replace("ITEMLINE",itemScriptLookup(location.item,location.IsBall,location.IsSpecial))
 	#switch spaces to tabs.....
 	newcode = newcode.replace("    ","\t")
 

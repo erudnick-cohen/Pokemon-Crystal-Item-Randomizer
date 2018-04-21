@@ -37,6 +37,8 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
+            - ROUTE 13
+            - ROUTE 14
         LocationReqs:
             - Route 13-14 entrance
         FlagReqs:

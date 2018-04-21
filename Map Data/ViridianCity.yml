@@ -1,0 +1,89 @@
+Location:
+    -
+        Name: Viridian City
+        FileName: ViridianCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 2 Post Cut
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Viridian City dream eating entrance
+                FileName: ViridianCity.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Viridian City
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Viridian City dream eating entrance
+                FileName: ViridianCity.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Viridian City
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dream Eater
+                FileName: ViridianCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Viridian City dream eating entrance
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_DREAM_EATER
+                Code: |
+                    FisherScript_0x1a9a75:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_TM42_DREAM_EATER
+                        iftrue .GotDreamEater
+                        writetext UnknownText_0x1a9cc4
+                        buttonsound
+                        ITEMLINE
+                        iffalse .NoRoomForDreamEater
+                        setevent EVENT_GOT_TM42_DREAM_EATER
+                    .GotDreamEater:
+                        writetext UnknownText_0x1a9d86
+                        waitbutton
+                    .NoRoomForDreamEater:
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x1a9d86:
+                        text "TM42 contains"
+                        line "DREAM EATER..."
+                TrainerList: 
+                Sublocations:

@@ -1,0 +1,17 @@
+Location: Woke Snorlax
+NormalMon: SUDOWOODO
+Type: Wild Pokemon
+LevelShift: 16
+Code: |
+    UnknownScript_0x1aa9ab:
+        writetext UnknownText_0x1aab84
+        pause 15
+        cry MONNAME
+        closetext
+        writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+        MONLINE
+        startbattle
+        disappear VERMILIONCITY_BIG_SNORLAX
+        setevent EVENT_FOUGHT_SNORLAX
+        reloadmapafterbattle
+        end

@@ -103,3 +103,151 @@ Location:
                 Text:
                 TrainerList:
                 Sublocations:
+            -
+                Name: Rail Pass
+                FileName: CopycatsHouse2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Saffron City
+                FlagReqs:
+                    - Lost Item
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PASS
+                Code: |
+                    .GivePass:
+                        writetext CopycatText_GivePass
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Cancel
+                        setevent EVENT_GOT_PASS_FROM_COPYCAT
+                        writetext CopycatText_ExplainPass
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    CopycatText_Male_2:
+                        text "<PLAYER>: Hi!"
+                        line "I heard that you"
+
+                        para "lost your favorite"
+                        line "# DOLL."
+
+                        para "<PLAYER>: If I find"
+                        line "it, you'll give me"
+                        cont "a rail ITEMNAME?"
+
+                        para "<PLAYER>: I'll go"
+                        line "find it for you."
+
+                        para "You think you lost"
+                        line "it when you went"
+                        cont "to VERMILION CITY?"
+                        done
+
+                    CopycatText_Worried:
+                        text "COPYCAT: Pardon?"
+
+                        para "I shouldn't decide"
+                        line "what you should"
+                        cont "do?"
+
+                        para "But I'm really"
+                        line "worried... What if"
+                        cont "someone finds it?"
+                        done
+
+                    CopycatText_GiveDoll:
+                        text "COPYCAT: Yay!"
+                        line "That's my CLEFAIRY"
+                        cont "# DOLL!"
+
+                        para "See the tear where"
+                        line "the right leg is"
+
+                        para "sewn on? That's"
+                        line "proof!"
+                        done
+
+                    CopycatText_GivePass:
+                        text "OK. Here's the"
+                        line "MAGNET TRAIN ITEMNAME"
+                        cont "like I promised!"
+                        done
+
+                    CopycatText_ExplainPass:
+                        text "COPYCAT: That's"
+                        line "the ITEMNAME for the"
+                        cont "MAGNET TRAIN."
+
+                        para "The rail company"
+                        line "man gave me that"
+
+                        para "when they tore"
+                        line "down our old house"
+                        cont "for the STATION."
+                        done
+
+                    CopycatText_Male_3:
+                        text "<PLAYER>: Hi!"
+                        line "Thanks a lot for"
+                        cont "the rail ITEMNAME!"
+
+                        para "<PLAYER>: Pardon?"
+
+                        para "<PLAYER>: Is it"
+                        line "that fun to mimic"
+                        cont "my every move?"
+                        done
+
+                    CopycatText_ItsAScream:
+                        text "COPYCAT: You bet!"
+                        line "It's a scream!"
+                        done
+
+                    CopycatText_Female_1:
+                        text "<PLAYER>: Hi. You"
+                        line "must like #MON."
+
+                        para "<PLAYER>: No, not"
+                        line "me. I asked you."
+
+                        para "<PLAYER>: Pardon?"
+                        line "You're weird!"
+                        done
+
+                    CopycatText_Female_2:
+                        text "<PLAYER>: Hi. Did"
+                        line "you really lose"
+                        cont "your # DOLL?"
+
+                        para "<PLAYER>: You'll"
+                        line "really give me a"
+
+                        para "rail ITEMNAME if I"
+                        line "find it for you?"
+
+                        para "<PLAYER>: Sure,"
+                        line "I'll look for it!"
+
+                        para "You think you lost"
+                        line "it when you were"
+                        cont "in VERMILION?"
+                        done
+
+                    CopycatText_Female_3:
+                        text "<PLAYER>: Thank you"
+                        line "for the rail ITEMNAME!"
+
+                        para "<PLAYER>: ...Pardon?"
+
+                        para "<PLAYER>: Is it"
+                        line "really that fun to"
+
+                        para "copy what I say"
+                        line "and do?"
+                        done
+                TrainerList:
+                Sublocations:

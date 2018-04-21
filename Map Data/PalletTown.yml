@@ -1,0 +1,34 @@
+Location:
+    -
+        Name: Pallet Town
+        FileName: PalletTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 1
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Mt. Silver Unlock
+                FileName: PalletTowns.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Pallet Town
+                FlagReqs:
+                    - All Badges
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:

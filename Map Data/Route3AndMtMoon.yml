@@ -1,0 +1,29 @@
+Location:
+    -
+        Name: Route 3 and Mt. Moon
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_3
+            - MOUNT_MOON_INSIDE_1F
+            - MOUNT_MOON_INSIDE_2F
+            - MOUNT_MOON_INSIDE_B1F
+        LocationReqs:
+            - Pewter City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - RIVAL2 1
+            - RIVAL2 2
+            - RIVAL2 3
+            - YOUNGSTER 9
+            - YOUNGSTER 10
+            - FIREBREATHER 1
+            - FIREBREATHER 4
+        Sublocations:

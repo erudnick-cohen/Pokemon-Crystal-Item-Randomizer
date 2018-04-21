@@ -1,0 +1,61 @@
+Location:
+    -
+        Name: Viridian City Gym Badge
+        FileName: ViridianGym.asm
+        LocationReqs: Seafoam Islands
+        HasPKMN: No
+        Type: Gym
+        WildTableList:
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        ItemUnlock:
+        InfeasibleBadges:
+        NormalBadge: Earth Badge
+        BadgeLine: |
+            ViridianGymBlueScript:
+                faceplayer
+                opentext
+                checkflag BADGELINE
+                iftrue .FightDone
+                writetext LeaderBlueBeforeText
+                waitbutton
+                closetext
+                winlosstext LeaderBlueWinText, 0
+                loadtrainer BLUE, 1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_BLUE
+                opentext
+                writetext Text_ReceivedEarthBadge
+                playsound SFX_GET_BADGE
+                waitsfx
+                setflag BADGELINE
+                writetext LeaderBlueAfterText
+                waitbutton
+                closetext
+                end
+        Code:
+        Text:
+            -
+                File: ViridianGym.asm
+                Text: |
+                    LeaderBlueWinText:
+                        text "BLUE: What?"
+
+                        para "How the heck did I"
+                        line "lose to you?"
+
+                        para "..."
+
+                        para "Tch, all right..."
+                        line "Here, take this--"
+                        cont "it's BADGENAME."
+                        done
+
+                    Text_ReceivedEarthBadge:
+                        text "<PLAYER> received"
+                        line "BADGENAME."
+                        done

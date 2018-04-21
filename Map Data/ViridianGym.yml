@@ -1,0 +1,19 @@
+Location:
+    -
+        Name: Viridian Gym
+        FileName: ViridianGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Viridian City
+        FlagReqs:
+            - Bothered Blue
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 34
+        TrainerList:
+            - BLUE 1
+        Sublocations:

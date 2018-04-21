@@ -1,13 +1,13 @@
 Location:
     -
-        Name: Route 6
-        FileName: Route6.asm
+        Name: Diglett's Cave
+        FileName: DiglettsCave.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-            - ROUTE_6
+            - DIGLETTS_CAVE
         LocationReqs:
-            - Vermillion City
+            - Woke Snorlax
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -16,6 +16,6 @@ Location:
         Text:
         AREALV: 32
         TrainerList: 
-            - POKEFANM 13
-            - POKEFANM 14
         Sublocations:
+
+

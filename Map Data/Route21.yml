@@ -1,21 +1,24 @@
 Location:
     -
-        Name: Route 6
-        FileName: Route6.asm
+        Name: Route21
+        FileName: Route21.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-            - ROUTE_6
+            - ROUTE_21
         LocationReqs:
-            - Vermillion City
+            - Pallet Town
         FlagReqs:
+            - Fog Badge
         ItemReqs:
+            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
         AREALV: 32
         TrainerList: 
-            - POKEFANM 13
-            - POKEFANM 14
+            - SWIMMERF 17
+            - FISHER 3
+            - SWIMMERM 18
         Sublocations:
