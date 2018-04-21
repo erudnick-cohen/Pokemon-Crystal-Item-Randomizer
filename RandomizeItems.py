@@ -195,7 +195,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						#Pick a random location with trash and put the item there
 						#This choice is slightly biased to be more likely to be a recent location
 						#However, the mode is still randomized uniformly, so the main effect is a center-ish bias
-						randspot = int(round(random.triangular(1,len(oldTrashList)-1, random.randrange(1,len(oldTrashList)-1))))
+						#randspot = int(round(random.triangular(1,len(oldTrashList)-1, random.randrange(1,len(oldTrashList)-1))))
+						#place = random.choice(oldTrashList[randspot:])
+						#the width of the triangular distribution used is based off the number of possible requirements that could be used as a resolver
+						#this width is based off the ratio of the number of possible resolvers to the number of key items left, max 1
+						#the ratio is multiplied by the number of inaccesible locations current present
+						center = random.triangular(1,len(oldTrashList),len(oldTrashList));
+						rrange = len(oldTrashList)/2
+						if(2*len(pLocations)<len(oldTrashList)):
+							center = random.randrange(len(pLocations),len(oldTrashList)-len(pLocations))
+							rrange = len(pLocations)*min(1,len(reqSet)/max(1,len(progressItems)))
+						upper = min(len(oldTrashList),center+rrange)
+						lower = max(center-rrange,1)
+						randspot = int(round(random.triangular(lower,upper,center)))
 						place = random.choice(oldTrashList[randspot:])
 						trashItems.append(place.item)
 						place.item = j
