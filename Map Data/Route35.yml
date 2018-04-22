@@ -13,15 +13,6 @@ Location:
         Code:
         Text:
         TrainerList: 
-            - CAMPER 4
-            - CAMPER 3
-            - PICNICKER 4
-            - PICNICKER 3
-            - JUGGLER 1
-            - FIREBREATHER 6
-            - OFFICER 2
-            - BUG_CATCHER 13
-            - BIRD_KEEPER 3
         Sublocations:
     -
         Name: Route 35 Entrance
@@ -38,15 +29,7 @@ Location:
         Text:
         AREALV: 12
         TrainerList: 
-            - CAMPER 4
-            - CAMPER 3
-            - PICNICKER 4
-            - PICNICKER 3
-            - JUGGLER 1
-            - FIREBREATHER 6
-            - OFFICER 2
-            - BUG_CATCHER 13
-            - BIRD_KEEPER 3
+
         Sublocations:        
     -
         Name: Route 35
@@ -62,6 +45,15 @@ Location:
         Code:
         Text:
         TrainerList: 
+            - CAMPER 4
+            - CAMPER 3
+            - PICNICKER 4
+            - PICNICKER 3
+            - JUGGLER 1
+            - FIREBREATHER 6
+            - OFFICER 2
+            - BUG_CATCHER 13
+            - BIRD_KEEPER 3
         Sublocations:        
             -
                 Name: Rollout TM
