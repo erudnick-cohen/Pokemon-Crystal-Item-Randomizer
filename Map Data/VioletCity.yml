@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
+            - VIOLET_CITY
         LocationReqs: Route 31
         FlagReqs:
         ItemReqs:

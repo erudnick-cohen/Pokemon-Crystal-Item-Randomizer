@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+            - CIANWOOD_CITY
         LocationReqs: Route 41
         FlagReqs:
         ItemReqs:

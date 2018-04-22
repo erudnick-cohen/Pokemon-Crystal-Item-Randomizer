@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
+            - ECRUTEAK_CITY
         LocationReqs: Route 37
         FlagReqs:
         ItemReqs:

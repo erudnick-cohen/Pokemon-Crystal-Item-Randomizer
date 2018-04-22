@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+            - CHERRYGROVE_CITY
         LocationReqs: Route 29
         FlagReqs:
         ItemReqs:

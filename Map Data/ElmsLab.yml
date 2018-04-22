@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+            - NEW_BARK_TOWN
         LocationReqs:
         FlagReqs:
         ItemReqs:
