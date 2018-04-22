@@ -36,7 +36,7 @@ Location:
         NormalItem: MAX_ETHER
         Code: |
             Route43MaxEther:
-                itemball MAX_ETHER
+                ITEMLINE
         Text:
         TrainerList: 
         Sublocations:
