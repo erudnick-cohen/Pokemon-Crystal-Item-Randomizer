@@ -36,10 +36,6 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
-                writetext UnknownText_0x1ab69d
-                waitbutton
-                closetext
-                end
         Code:
         Text:
             -

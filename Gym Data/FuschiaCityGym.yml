@@ -43,7 +43,6 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
-                jump .AfterBattle
         Code:
         Text:
             -

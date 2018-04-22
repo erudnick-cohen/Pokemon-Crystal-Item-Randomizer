@@ -33,10 +33,6 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
-                writetext LeaderBlueAfterText
-                waitbutton
-                closetext
-                end
         Code:
         Text:
             -

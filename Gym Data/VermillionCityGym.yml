@@ -37,6 +37,8 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 writetext UnknownText_0x192291
+                checkcode VAR_BADGES
+                scall VermilionGymActivateRockets
                 waitbutton
                 closetext
                 end

@@ -36,11 +36,6 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
-            .FightDone:
-                writetext UnknownText_0x188782
-                waitbutton
-                closetext
-                end
         Code:
         Text:
             -
