@@ -149,9 +149,7 @@ Location:
         WildTableList: UNION_CAVE_B1F
         LocationReqs: Union Cave Floor 1
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code: 
