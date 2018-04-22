@@ -200,7 +200,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						#the width of the triangular distribution used is based off the number of possible requirements that could be used as a resolver
 						#this width is based off the ratio of the number of possible resolvers to the number of key items left, max 1
 						#the ratio is multiplied by the number of inaccesible locations current present
-						center = random.triangular(1,len(oldTrashList),len(oldTrashList));
+						center = random.triangular(1,len(oldTrashList),len(oldTrashList)/2);
 						rrange = len(oldTrashList)/2
 						if(2*len(pLocations)<len(oldTrashList)):
 							center = random.randrange(len(pLocations),len(oldTrashList)-len(pLocations))

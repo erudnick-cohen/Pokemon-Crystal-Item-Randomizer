@@ -9,7 +9,9 @@ Location:
         LocationReqs:
             - Cerulean City
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

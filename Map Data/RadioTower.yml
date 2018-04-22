@@ -183,6 +183,33 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
+                        Name: Pink Bow
+                        FileName: RadioTower4F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Radio Tower
+                        FlagReqs:
+                        ItemReqs:
+                            - Card Key
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: PINK_BOW
+                        Code: |
+                            UnknownScript_0x5eb99:
+                                writetext UnknownText_0x5ecab
+                                buttonsound
+                                ITEMLINE
+                                iffalse UnknownScript_0x5ebb0
+                                writetext UnknownText_0x5ecef
+                                waitbutton
+                                closetext
+                                setevent EVENT_GOT_PINK_BOW_FROM_MARY
+                                end
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
                         Name: Radio Tower Ultra Ball
                         FileName: RadioTower5F.asm
                         Type: Item

@@ -25,12 +25,13 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                    - ROUTE_10
                 LocationReqs:
                     - Route 10
                 FlagReqs:
+                    - Fog Badge
                 ItemReqs:
                     - Machine Part
+                    - Surf
                 FlagsSet:
                     - Kanto Power Restored
                 ReachableReqs:

@@ -97,30 +97,12 @@ Location:
                 Text: |        
                     UnknownText_0x18d9bf:
                         text "Here, this is the"
-                        line "RISINGBADGE..."
+                        line "BADGENAME..."
 
                         para "Hurry up! Take it!"
                         done
 
                     UnknownText_0x18d9f2:
                         text "<PLAYER> received"
-                        line "RISINGBADGE."
-                        done
-
-                    UnknownText_0x18da0b:
-                        text "RISINGBADGE will"
-                        line "enable your"
-
-                        para "#MON to use the"
-                        line "move for climbing"
-                        cont "waterfalls."
-
-                        para "Also, all #MON"
-                        line "will recognize you"
-
-                        para "as a trainer and"
-                        line "obey your every"
-
-                        para "command without"
-                        line "question."
+                        line "BADGENAME."
                         done

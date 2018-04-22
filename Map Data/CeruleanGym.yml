@@ -15,7 +15,7 @@ Location:
         TrainerList:
         Sublocations:
             -
-                Name: Machine Part
+                Name: Hidden Machine Part
                 FileName: CeruleanGym.asm
                 Type: Item
                 HasPKMN: No
