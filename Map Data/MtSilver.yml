@@ -5,6 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
+            - ROUTE_28
             - SILVER_CAVE_OUTSIDE
             - SILVER_CAVE_ROOM_1
             - SILVER_CAVE_ROOM_2
@@ -23,6 +24,33 @@ Location:
         TrainerList: 
             - RED 1
         Sublocations:
+            -
+                Name: Steel Wing
+                FileName: Route28FamousSpeechHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_STEEL_WING
+                Code: |
+                    Celebrity:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_TM47_STEEL_WING
+                        iftrue .AlreadyGotItem
+                        writetext CelebrityText1
+                        buttonsound
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_TM47_STEEL_WING
+                Text:
+                TrainerList: 
+                Sublocations:
             -
                 Name: Mt. Silver Max Elixer
                 FileName: SilverCaveRoom1.asm
