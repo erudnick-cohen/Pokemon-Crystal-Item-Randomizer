@@ -6,17 +6,17 @@ In order to run this item randomizer you need the ability to build pokecrystal (
 
 # How to run the randomizer
 First, from the top of this repo, run:
-'''
+```
 py TestRandomizationKanto.py
-'''
+```
 Alternately, if one wants to randomize the game with the goal of only staying in Johto, run:
-'''
+```
 py TestRandomizationSimple.py
-'''
+```
 After this completes move to the RandomizerRom directory that will have been created and run:
-'''
+```
 make
-'''
+```
 Once the build finishes, the randomized rom of pokemon crystal will be located in the RandomizerRom folder, with the file being titled "pokecrystal.gbc".
 
 # How it works
