@@ -26,5 +26,5 @@ This randomizer uses YAML files to represent most of the locations in pokemon cr
 If you think you have found a bug, please make a post about it on this on the issues page for this project. The following bugs are known to exist in the current implementation of the randomizer:
 1. Some text occaisionally pushes outside the text box of NPCs
 
-# If you have a suggestion/idea/way to speed up game/observation about levels that seem wrong/complaint/ect...
+# If you have a suggestion/idea/way to speed up game/observation about levels that seem wrong/complaint/etc...
 Make a post about it under issues, but please indicate in the title of your post that you are not reporting a bug
