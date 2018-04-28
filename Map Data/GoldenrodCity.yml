@@ -144,7 +144,6 @@ Location:
                 LocationReqs: Goldenrod City
                 FlagReqs:
                     - Plain Badge
-                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
