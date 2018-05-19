@@ -58,6 +58,48 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Elm Aide Pokeballs
+                FileName: ElmsLab.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Mr. Pokemon Visited
+                ItemReqs:
+                    - Mystery Egg
+                FlagsSet:
+                    - Gave Elm Egg
+                ReachableReqs:
+                IsSpecial: Yes
+                NormalItem: POKE_BALL
+                Code: |
+                    AideScript_GiveYouBalls:
+                        opentext
+                        writetext AideText_GiveYouBalls
+                        buttonsound
+                        itemtotext ITEMLINE, $1
+                        scall AideScript_ReceiveTheBalls
+                        giveitem ITEMLINE, 5
+                        writetext AideText_ExplainBalls
+                        buttonsound
+                        itemnotify
+                        closetext
+                        setscene $2
+                        end
+                Text: |
+                    AideText_ExplainBalls:
+                        text "To add to your"
+                        line "#DEX, you have"
+                        cont "to catch #MON."
+
+                        para "Throw ITEMNAMES"
+                        line "at wild #MON"
+                        cont "to get them."
+                        done
+                TrainerList: 
+                Sublocations:
             -             
                 Name: Master Ball
                 FileName: ElmsLab.asm
