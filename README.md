@@ -30,14 +30,14 @@ If you think you have found a bug, please make a post about it on this on the is
 Make a post about it under issues, but please indicate in the title of your post that you are not reporting a bug
 
 # List of changes relative to vanilla crystal
-	* Fast text speed is instant text speed, medium text speed is fast text speed, slow text speed is medium text speed
-	* Team Rocket taking over the radio tower will not block the following things:
-		* Obtaining the radio card
-		* Obtaining the item from the flower shop
-		* Obtaining the item from Buena
-	* The fake director does not need to be fought before clearing Team Rocket from the radio tower, however he remains in the directors office afterwards as he has an item
-	* The director will remain in the basement even after Team Rocket is cleared(and is there before it as well), however he will not give the player an item until team rocket actually has attacked
-	* Team Rocket's takeover of the radio tower can be triggered from either Johto or Kanto
-		* Note: Team Rocket taking over the Johto radio tower does not affect the radio in Kanto
-	* Red will appear in Mt. Silver, even if the Elite Four and Lance have not been beaten yet
-	* The SS Aqua operates every day of the week in both directions bewteen Kanto and Johto
+  * Fast text speed is instant text speed, medium text speed is fast text speed, slow text speed is medium text speed
+  * Team Rocket taking over the radio tower will not block the following things:
+    * Obtaining the radio card
+    * Obtaining the item from the flower shop
+    * Obtaining the item from Buena
+  * The fake director does not need to be fought before clearing Team Rocket from the radio tower, however he remains in the directors office afterwards as he has an item
+  * The director will remain in the basement even after Team Rocket is cleared(and is there before it as well), however he will not give the player an item until team rocket actually has attacked
+  * Team Rocket's takeover of the radio tower can be triggered from either Johto or Kanto
+    * Note: Team Rocket taking over the Johto radio tower does not affect the radio in Kanto
+  * Red will appear in Mt. Silver, even if the Elite Four and Lance have not been beaten yet
+  * The SS Aqua operates every day of the week in both directions bewteen Kanto and Johto
