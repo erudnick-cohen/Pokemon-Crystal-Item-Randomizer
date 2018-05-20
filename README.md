@@ -44,3 +44,7 @@ Make a post about it under issues, but please indicate in the title of your post
   * Red will appear in Mt. Silver, even if the Elite Four and Lance have not been beaten yet
   * The SS Aqua operates every day of the week in both directions bewteen Kanto and Johto
   * The SS Aqua can be ridden in both directions without having beaten the Elite Four and Lance
+# Item Locations not randomized:
+  * Tin Tower and the rainbow wing, because putting the rainbow wing into the randomizer would be overly sadistic as it could then be required to catch all three legendary dogs in order  to beat the game.
+  * Water stone and ho-oh ruins of alph chambers: Due to the player being able to softlock themselves by using water stones and due to Ho-oh not being reliably obtainable.
+  * Hidden item locations, due to there being too many of them and the fact that they aren't actually visible. There is one exception to this rule, which is the machine part's location, as it is normally a key item's location.
