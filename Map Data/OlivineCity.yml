@@ -3,7 +3,7 @@ Location:
         Name: Olivine City
         FileName: OlivineCity.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList:
         LocationReqs: Route 39
         FlagReqs:

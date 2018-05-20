@@ -5,14 +5,16 @@ This is an item randomizer for pokemon crystal. Unlike many existing pokemon ran
 In order to run this item randomizer you need the ability to build pokecrystal (https://github.com/pret/pokecrystal), instructions on how to do this can be found in the README for pokecrystal. Additionally, you need python installed with the PyYAML package.
 
 # How to run the randomizer
-First, from the top of this repo, run:
+First, from the top level of this repo, run:
 ```
 py TestRandomizationKanto.py
 ```
 Alternately, if one wants to randomize the game with the goal of only staying in Johto, run:
 ```
 py TestRandomizationSimple.py
+Be aware that when using TestRandomizationSimple.py, the randomizer will occaisionally fail to produce a valid seed due to an "unsolvable" allocation of gyms, this should be checked for when using this file
 ```
+If you don't want to see the solution to the generated seed, it is reccommended you pipe the output of these files to a file (ex. run "py TestRandomizationKanto.py > output.log")
 After this completes move to the RandomizerRom directory that will have been created and run:
 ```
 make
@@ -41,3 +43,4 @@ Make a post about it under issues, but please indicate in the title of your post
     * Note: Team Rocket taking over the Johto radio tower does not affect the radio in Kanto
   * Red will appear in Mt. Silver, even if the Elite Four and Lance have not been beaten yet
   * The SS Aqua operates every day of the week in both directions bewteen Kanto and Johto
+  * The SS Aqua can be ridden in both directions without having beaten the Elite Four and Lance

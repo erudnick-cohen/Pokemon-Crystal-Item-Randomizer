@@ -33,7 +33,7 @@ Location:
         Name: Azalea Town
         FileName: AzaleaTown.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList:
         LocationReqs: Azalea Town entrance
         FlagReqs:

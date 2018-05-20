@@ -20,7 +20,7 @@ Location:
                 Type: Item
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Ecruteak Gym
+                LocationReqs: Ecruteak Gym Trainers
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -90,4 +90,19 @@ Location:
                         - SAGE 6
                         - MEDIUM 1
                         - MEDIUM 2
+            -
+                Name: Ecruteak Gym Leader
+                FileName: EcruteakGym.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Ecruteak Gym Trainers
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 15
+                TrainerList: 
                         - MORTY 1
