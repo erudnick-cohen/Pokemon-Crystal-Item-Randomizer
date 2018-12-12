@@ -1,5 +1,37 @@
 Location:
     -
+        Name: Rock Tunnel Entrance
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 10
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rock Tunnel Entrance
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Lavender Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Rock Tunnel
         FileName: RockTunnel1F.asm
         Type: Map
@@ -8,7 +40,7 @@ Location:
             - ROCK_TUNNEL_1F
             - ROCK_TUNNEL_B1F
         LocationReqs:
-            - Route 10
+            - Rock Tunnel Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -18,6 +50,24 @@ Location:
         AREALV: 32
         TrainerList: 
         Sublocations:
+            -
+                Name: Traversed Rock Tunnel
+                FileName: RockTunnel1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Rock Tunnel
+                FlagReqs:
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
             -
                 Name: Rock Tunnel Elixer
                 FileName: RockTunnel1F.asm

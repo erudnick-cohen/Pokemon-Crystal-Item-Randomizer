@@ -1,5 +1,37 @@
 Location:
     -
+        Name: Route 10 Entrance
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 9
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 10 Entrance
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Traversed Rock Tunnel
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Route 10
         FileName: Route10North.asm
         Type: Map
@@ -7,7 +39,7 @@ Location:
         WildTableList: 
             - ROUTE_10
         LocationReqs:
-            - Route 9
+            - Route 10 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -23,7 +55,7 @@ Location:
                 Name: Power Plant
                 FileName: PowerPlant.asm
                 Type: Map
-                HasPKMN: Yes
+                HasPKMN: No
                 WildTableList: 
                 LocationReqs:
                     - Route 10
