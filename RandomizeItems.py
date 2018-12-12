@@ -205,7 +205,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						if(2*len(pLocations)<len(oldTrashList)):
 							center = random.randrange(len(pLocations),len(oldTrashList)-len(pLocations))
 							rrange = len(pLocations)*min(1,len(reqSet)/max(1,len(progressItems)))
-						upper = min(len(oldTrashList),center+rrange)
+						upper = min(len(oldTrashList)-1,center+rrange)
 						lower = max(center-rrange,1)
 						randspot = int(round(random.triangular(lower,upper,center)))
 						place = random.choice(oldTrashList[randspot:])
