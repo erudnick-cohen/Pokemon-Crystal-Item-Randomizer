@@ -22,91 +22,109 @@ Location:
             -
                 Name: Power Plant
                 FileName: PowerPlant.asm
-                Type: Item
-                HasPKMN: No
+                Type: Map
+                HasPKMN: Yes
                 WildTableList: 
                 LocationReqs:
                     - Route 10
                 FlagReqs:
                     - Fog Badge
                 ItemReqs:
-                    - Machine Part
                     - Surf
                 FlagsSet:
-                    - Kanto Power Restored
                 ReachableReqs:
-                NormalItem: TM_ZAP_CANNON
-                Code: |
-                    UnknownScript_0x188eac:
-                        checkevent EVENT_GOT_TM07_ZAP_CANNON
-                        iftrue UnknownScript_0x188ec5
-                        writetext UnknownText_0x1893c4
-                        buttonsound
-                        ITEMLINE
-                        iffalse UnknownScript_0x188ec3
-                        setevent EVENT_GOT_TM07_ZAP_CANNON
-                        writetext UnknownText_0x1893f4
-                        waitbutton
-                Text: |
-                    UnknownText_0x189264:
-                        text "MANAGER: I, I, I'm"
-                        line "ready to blast"
-                        cont "someone!"
-
-                        para "Who would dare"
-                        line "ruin my generator?"
-
-                        para "I spent so much"
-                        line "time on it!"
-
-                        para "If I catch him,"
-                        line "he's going to get"
-
-                        para "a taste of my "
-                        line "ITEMNAME!"
-                        done
-
-                    UnknownText_0x189308:
-                        text "MANAGER: I won't"
-                        line "forgive him!"
-
-                        para "The culprit can"
-                        line "cry and apologize,"
-
-                        para "but I'll still"
-                        line "hammer him!"
-
-                        para "Gahahahah!"
-                        done
-
-                    UnknownText_0x18936e:
-                        text "MANAGER: Ah! Yeah!"
-
-                        para "That's the missing"
-                        line "PART from my be-"
-                        cont "loved generator!"
-                        cont "You found it?"
-                        done
-
-                    UnknownText_0x1893c4:
-                        text "Wahah! Thanks!"
-
-                        para "Here! Take this TM"
-                        line "as a reward!"
-                        done
-
-                    UnknownText_0x1893f4:
-                        text "MANAGER: TM07 is"
-                        line "my ITEMNAME."
-
-                        para "It's a powerful"
-                        line "technique!"
-
-                        para "It's not what any-"
-                        line "one would consider"
-
-                        para "accurate, but it"
-                        line "packs a wallop!"
-                        done
+                Code:
+                Text:
                 TrainerList: 
                 Sublocations:
+                    -            
+                        Name: Power Plant Activated
+                        FileName: PowerPlant.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs:
+                            - Route 10
+                        FlagReqs:
+                            - Fog Badge
+                        ItemReqs:
+                            - Machine Part
+                            - Surf
+                        FlagsSet:
+                            - Kanto Power Restored
+                        ReachableReqs:
+                        NormalItem: TM_ZAP_CANNON
+                        Code: |
+                            UnknownScript_0x188eac:
+                                checkevent EVENT_GOT_TM07_ZAP_CANNON
+                                iftrue UnknownScript_0x188ec5
+                                writetext UnknownText_0x1893c4
+                                buttonsound
+                                ITEMLINE
+                                iffalse UnknownScript_0x188ec3
+                                setevent EVENT_GOT_TM07_ZAP_CANNON
+                                writetext UnknownText_0x1893f4
+                                waitbutton
+                        Text: |
+                            UnknownText_0x189264:
+                                text "MANAGER: I, I, I'm"
+                                line "ready to blast"
+                                cont "someone!"
+
+                                para "Who would dare"
+                                line "ruin my generator?"
+
+                                para "I spent so much"
+                                line "time on it!"
+
+                                para "If I catch him,"
+                                line "he's going to get"
+
+                                para "a taste of my "
+                                line "ITEMNAME!"
+                                done
+
+                            UnknownText_0x189308:
+                                text "MANAGER: I won't"
+                                line "forgive him!"
+
+                                para "The culprit can"
+                                line "cry and apologize,"
+
+                                para "but I'll still"
+                                line "hammer him!"
+
+                                para "Gahahahah!"
+                                done
+
+                            UnknownText_0x18936e:
+                                text "MANAGER: Ah! Yeah!"
+
+                                para "That's the missing"
+                                line "PART from my be-"
+                                cont "loved generator!"
+                                cont "You found it?"
+                                done
+
+                            UnknownText_0x1893c4:
+                                text "Wahah! Thanks!"
+
+                                para "Here! Take this TM"
+                                line "as a reward!"
+                                done
+
+                            UnknownText_0x1893f4:
+                                text "MANAGER: TM07 is"
+                                line "my ITEMNAME."
+
+                                para "It's a powerful"
+                                line "technique!"
+
+                                para "It's not what any-"
+                                line "one would consider"
+
+                                para "accurate, but it"
+                                line "packs a wallop!"
+                                done
+                        TrainerList: 
+                        Sublocations:

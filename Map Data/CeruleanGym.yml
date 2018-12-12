@@ -22,6 +22,8 @@ Location:
                 WildTableList:
                 LocationReqs: Cerulean City
                 FlagReqs:
+                    - Power Plant
+                    - Fog Badge
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
