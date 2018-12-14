@@ -7,8 +7,7 @@ Location:
         WildTableList: Route_44
         LocationReqs: Mahogany Town
         FlagReqs:
-            - Mahogany Rockets Defeated
-            - Beat Team Rocket
+            - Rocket Invasion
         ItemReqs:
         FlagsSet:
         ReachableReqs:
