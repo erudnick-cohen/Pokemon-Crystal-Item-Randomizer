@@ -49,7 +49,7 @@ Location:
                         Type: Map
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Whirl Islands
+                        LocationReqs: Whirl Islands Requires Flash
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
