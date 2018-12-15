@@ -87,7 +87,7 @@ Location:
                 LocationReqs:
                     - Route 25
                 FlagReqs:
-                    - Kanto Power Restored
+                    - Power Plant
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
