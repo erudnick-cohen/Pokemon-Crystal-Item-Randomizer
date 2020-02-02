@@ -38,8 +38,6 @@ Location:
                             writetext AideText_AlwaysBusy
                             waitbutton
                             closetext
-                            setscene $2
-                            end
             -
                 Name: Elm's Theft Occurs
                 FileName: ElmsLab.asm
