@@ -48,7 +48,7 @@ Location:
             -
                 File: FuchsiaGym.asm
                 Text: |
-                    JanineText_ToughOne:
+                    UnknownText_0x195fa1:
                         text "JANINE: You're a"
                         line "tough one. You"
                         cont "definitely won…"
@@ -57,7 +57,7 @@ Location:
                         line "Take it."
                         done
 
-                    Text_ReceivedSoulBadge:
+                    UnknownText_0x195feb:
                         text "<PLAYER> received"
                         line "BADGENAME."
                         done
