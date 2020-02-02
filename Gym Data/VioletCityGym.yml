@@ -32,15 +32,13 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
-                checkcode VAR_BADGES
-                scall VioletGymActivateRockets
         Code:
         Text:
             -
                 File: VioletGym.asm
                 Text: |
                     UnknownText_0x6854a:
-                        text "…Darn! My dad's"
+                        text "...Darn! My dad's"
                         line "cherished bird"
                         cont "#MON..."
 
@@ -53,7 +51,7 @@ Location:
                         done
             -
                 File: VioletGym.asm
-                Text: |        
+                Text: |
                     UnknownText_0x685af:
                         text "<PLAYER> received"
                         line "BADGENAME."

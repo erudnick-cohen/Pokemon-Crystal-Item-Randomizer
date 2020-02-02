@@ -29,22 +29,22 @@ Location:
                 Code: |
                     .FightDone:
                         checkevent EVENT_GOT_TM30_SHADOW_BALL
-                        iftrue .GotShadowBall
+                        iftrue UnknownScript_0x99db1
                         setevent EVENT_BEAT_SAGE_JEFFREY
                         setevent EVENT_BEAT_SAGE_PING
                         setevent EVENT_BEAT_MEDIUM_MARTHA
                         setevent EVENT_BEAT_MEDIUM_GRACE
-                        writetext MortyText_FogBadgeSpeech
+                        writetext UnknownText_0x9a059
                         buttonsound
                         ITEMLINE
-                        iffalse .NoRoomForShadowBall
+                        iffalse UnknownScript_0x99db5
                         setevent EVENT_GOT_TM30_SHADOW_BALL
-                        writetext MortyText_ShadowBallSpeech
+                        writetext UnknownText_0x9a0ec
                         waitbutton
                         closetext
                         end
                 Text: |
-                    MortyText_ShadowBallSpeech:
+                    UnknownText_0x9a0ec:
                         text "It's ITEMNAME."
                         line "It causes damage"
 

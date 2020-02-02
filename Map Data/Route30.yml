@@ -88,7 +88,7 @@ Location:
                     FlagsSet: Mr. Pokemon Visited
                     ReachableReqs:
                     Code: |
-                        .MrPokemonEvent:
+                        .MrPokemonEvent
                             showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
                             spriteface MRPOKEMONSHOUSE_GENTLEMAN, DOWN
                             opentext

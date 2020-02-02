@@ -7,26 +7,27 @@ Code: |
         faceplayer
         opentext
         checkevent EVENT_GOT_HP_UP_FROM_RANDY
-        iftrue .gothpup
+        iftrue GGOfficergothpup
         checkevent EVENT_GAVE_KENYA
-        iftrue .questcomplete
+        iftrue GGOfficerquestcomplete
         checkevent EVENT_GOT_KENYA
-        iftrue .alreadyhavekenya
+        iftrue GGOfficeralreadyhavekenya
         writetext UnknownText_0x69ddd
         yesorno
-        iffalse .refused
+        iffalse GGOfficerrefused
         writetext UnknownText_0x69e48
         buttonsound
         waitsfx
         checkcode VAR_PARTYCOUNT
-        if_equal PARTY_LENGTH, .partyfull
+        if_equal PARTY_LENGTH, GGOfficerpartyfull
         writetext UnknownText_0x69eb8
         playsound SFX_KEY_ITEM
         waitsfx
-        MONLINE, NO_ITEM, 1, GiftSpearowName, GiftSpearowOTName
+    Randomizer_KenyaSpecies::
+        MONLINE, 10, NO_ITEM, 1, GiftSpearowName, GiftSpearowOTName
         givepokeitem GiftSpearowMail
         setevent EVENT_GOT_KENYA
-    .alreadyhavekenya
+    GGOfficeralreadyhavekenya:
         writetext UnknownText_0x69ed6
         waitbutton
         closetext

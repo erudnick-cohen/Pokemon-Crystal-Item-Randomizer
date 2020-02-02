@@ -27,7 +27,7 @@ Location:
                 writetext ChuckIntroText2
                 waitbutton
                 closetext
-                applymovement CIANWOODGYM_BOULDER1, CianwoodGymMovement_ChuckChucksBoulder
+                applymovement CIANWOODGYM_BOULDER1, MovementData_0x9d6f3
                 playsound SFX_STRENGTH
                 earthquake 80
                 disappear CIANWOODGYM_BOULDER1
@@ -48,7 +48,6 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall CianwoodGymActivateRockets
         Code:
         Text:
             -

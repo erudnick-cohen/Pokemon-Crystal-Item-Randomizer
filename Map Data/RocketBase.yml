@@ -304,7 +304,7 @@ Location:
                 ReachableReqs:
                 Code: |
                     UnknownScript_0x6d184:
-                        moveobject TEAMROCKETBASEB2F_LANCE, $12, $6
+                        moveperson TEAMROCKETBASEB2F_LANCE, $12, $6
                         appear TEAMROCKETBASEB2F_LANCE
                         applymovement TEAMROCKETBASEB2F_LANCE, MovementData_0x6d27a
                         spriteface PLAYER, RIGHT
@@ -328,7 +328,7 @@ Location:
                         clearflag ENGINE_ROCKET_SIGNAL_ON_CH20
                         setevent EVENT_ROUTE_43_GATE_ROCKETS
                         setevent EVENT_MAHOGANY_TOWN_POKEFAN_M_BLOCKS_GYM
-                        setscene $3
+                        dotrigger $3
                         clearevent EVENT_LAKE_OF_RAGE_CIVILIANS
                         setevent EVENT_TURNED_OFF_SECURITY_CAMERAS
                         setevent EVENT_SECURITY_CAMERA_1

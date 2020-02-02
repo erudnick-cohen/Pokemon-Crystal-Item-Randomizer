@@ -3,29 +3,24 @@ NormalMon: SUDOWOODO
 Type: Wild Pokemon
 LevelShift: 6
 Code: |
-        .Fight:
-            opentext
-            writetext UseSquirtbottleText
-            yesorno
-            iffalse DidntUseSquirtbottleScript
-            closetext
-        WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
-            opentext
-            writetext UsedSquirtbottleText
-            waitbutton
-            closetext
-            waitsfx
-            playsound SFX_SANDSTORM
-            applymovement ROUTE36_WEIRD_TREE, SudowoodoShakeMovement
-            opentext
-            writetext SudowoodoAttackedText
-            waitbutton
-            closetext
-            MONLINE
-            startbattle
-            setevent EVENT_FOUGHT_SUDOWOODO
-            if_equal $2, DidntCatchSudowoodo
-            disappear ROUTE36_WEIRD_TREE
-            variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
-            reloadmapafterbattle
-            end
+    WateredWeirdTreeScript::
+        opentext
+        writetext UnknownText_0x194290
+        waitbutton
+        closetext
+        waitsfx
+        playsound SFX_SANDSTORM
+        applymovement ROUTE36_WEIRD_TREE, MovementData_0x194249
+        opentext
+        writetext UnknownText_0x1942aa
+        waitbutton
+        closetext
+    Randomizer_SudowoodoSpecies::
+        MONLINE
+        startbattle
+        setevent EVENT_FOUGHT_SUDOWOODO
+        if_equal $2, UnknownScript_0x19407b
+        disappear ROUTE36_WEIRD_TREE
+        variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
+        reloadmapafterbattle
+        end

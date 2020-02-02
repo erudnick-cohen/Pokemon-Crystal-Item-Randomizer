@@ -84,7 +84,7 @@ Location:
                         buttonsound
                         itemnotify
                         closetext
-                        setscene $2
+                        dotrigger $2
                         end
                 Text: |
                     AideText_ExplainBalls:

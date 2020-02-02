@@ -3,13 +3,17 @@ NormalMon: ELECTRODE
 Type: Wild Pokemon
 LevelShift: 4
 Code: |
-    RocketElectrode1:
+    VoltorbScript_0x6d101:
+    Randomizer_Electrode1Cry::
         cry MONNAME
+    Randomizer_Electrode1Species::
         MONLINE
         startbattle
         iftrue UnknownScript_0x6d182
-        disappear TEAMROCKETBASEB2F_ELECTRODE1
-        disappear TEAMROCKETBASEB2F_ELECTRODE4
+        disappear TEAMROCKETBASEB2F_VOLTORB1
+        disappear TEAMROCKETBASEB2F_VOLTORB4
+        check_permaoptions ROCKETLESS
+        iftrue UnknownScript_0x6d182
         checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
         iffalse UnknownScript_0x6d182
         checkevent EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2

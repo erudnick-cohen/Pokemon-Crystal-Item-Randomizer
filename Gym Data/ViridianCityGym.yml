@@ -15,7 +15,7 @@ Location:
         InfeasibleBadges:
         NormalBadge: Earth Badge
         BadgeLine: |
-            ViridianGymBlueScript:
+            BlueScript_0x9aa26:
                 faceplayer
                 opentext
                 checkflag BADGELINE
@@ -33,6 +33,7 @@ Location:
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
+                checkcode VAR_BADGES
         Code:
         Text:
             -
@@ -44,9 +45,9 @@ Location:
                         para "How the heck did I"
                         line "lose to you?"
 
-                        para "..."
+                        para "…"
 
-                        para "Tch, all right..."
+                        para "Tch, all right…"
                         line "Here, take this--"
                         cont "it's BADGENAME."
                         done

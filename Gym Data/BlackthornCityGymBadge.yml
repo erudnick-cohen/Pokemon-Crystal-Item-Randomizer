@@ -18,81 +18,49 @@ Location:
             .PassedTheTest:
                 writetext UnknownText_0x18d47c
                 waitbutton
-                dotrigger $1
-                jump DSElderGiveDratini
-                ; check_permaoptions EARLY_KANTO
-                ; iftrue DSElderGiveDratini
-                ; closetext
-                ; playsound SFX_ENTER_DOOR
-                ; showemote EMOTE_SHOCK, PLAYER, 15
-                ; playmusic MUSIC_CLAIR
-                ; appear DRAGONSHRINE_CLAIR
-                ; waitsfx
-                ; spriteface PLAYER, DOWN
-                ; pause 30
-                ; applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2d4
-                ; spriteface DRAGONSHRINE_CLAIR, RIGHT
-                ; spriteface PLAYER, LEFT
-                ; spriteface DRAGONSHRINE_ELDER1, LEFT
-                ; opentext
-                ; writetext UnknownText_0x18d916
-                ; waitbutton
-                ; closetext
-                ; special Special_FadeOutMusic
-                ; applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2da
-                ; opentext
-                ; writetext UnknownText_0x18d974
-                ; waitbutton
-                ; closetext
-                ; applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2dd
-                ; opentext
-                ; writetext UnknownText_0x18d983
-                ; waitbutton
-                ; closetext
-                ; applymovement DRAGONSHRINE_ELDER1, MovementData_0x18d2c9
-                ; spriteface DRAGONSHRINE_CLAIR, UP
-                ; opentext
-                ; writetext UnknownText_0x18d520
-                ; waitbutton
-                ; closetext
-                ; showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
-                ; opentext
-                ; writetext UnknownText_0x18d9ae
-                ; waitbutton
-                ; closetext
-                ; applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2e0
-                ; opentext
-                ; writetext UnknownText_0x18d9bf
-                ; waitbutton
-                ; setflag BADGELINE
-                ; playsound SFX_GET_BADGE
-                ; waitsfx
-                ; special RestartMapMusic
-                ; specialphonecall SPECIALCALL_MASTERBALL
-                ; domaptrigger DRAGONS_DEN_B1F, $1
-                ; writetext UnknownText_0x18d9f2
-                ; buttonsound
-                ; writetext UnknownText_0x18da0b
-                ; waitbutton
-                ; closetext
-                ; applymovement DRAGONSHRINE_ELDER1, MovementData_0x18d2ce
-                ; spriteface DRAGONSHRINE_CLAIR, UP
-                ; applymovement DRAGONSHRINE_ELDER1, MovementData_0x18d2d1
-                ; spriteface PLAYER, UP
-                ; opentext
-                ; writetext UnknownText_0x18d5a3
-                ; waitbutton
-                ; closetext
-                ; opentext
-                ; writetext UnknownText_0x18dab4
-                ; waitbutton
-                ; closetext
-                ; applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2e3
-                ; playsound SFX_ENTER_DOOR
-                ; disappear DRAGONSHRINE_CLAIR
-                ; waitsfx
-                ; setevent EVENT_GAVE_KURT_APRICORNS
-                ; end
+                closetext
+                playsound SFX_ENTER_DOOR
+                showemote EMOTE_SHOCK, PLAYER, 15
+                playmusic MUSIC_CLAIR
+                appear DRAGONSHRINE_CLAIR
+                waitsfx
+                spriteface PLAYER, DOWN
+                pause 30
+                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2d4
+                spriteface DRAGONSHRINE_CLAIR, RIGHT
+                spriteface PLAYER, LEFT
+                spriteface DRAGONSHRINE_ELDER1, LEFT
+                opentext
+                writetext UnknownText_0x18d916
+                waitbutton
+                closetext
+                special Special_FadeOutMusic
+                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2da
+                opentext
+                writetext UnknownText_0x18d974
+                waitbutton
+                closetext
+                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2dd
+                opentext
+                writetext UnknownText_0x18d983
+                waitbutton
+                closetext
+                applymovement DRAGONSHRINE_ELDER1, MovementData_0x18d2c9
+                spriteface DRAGONSHRINE_CLAIR, UP
+                opentext
+                writetext UnknownText_0x18d520
+                waitbutton
+                closetext
+                showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
+                opentext
+                writetext UnknownText_0x18d9ae
+                waitbutton
+                closetext
+                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2e0
+                opentext
+                writetext UnknownText_0x18d9bf
+                waitbutton
+                setflag BADGELINE
         Code:
         Text:
             -
@@ -100,7 +68,7 @@ Location:
                 Text: |        
                     UnknownText_0x18d9bf:
                         text "Here, this is the"
-                        line "BADGENAME..."
+                        line "BADGENAME…"
 
                         para "Hurry up! Take it!"
                         done

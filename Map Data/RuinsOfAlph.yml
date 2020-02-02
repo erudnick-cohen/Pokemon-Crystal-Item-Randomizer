@@ -48,7 +48,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsOfAlphKabutoItemRoomBerry:
+                    RuinsofAlphKabutoItemRoomBerry:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -67,7 +67,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsOfAlphKabutoItemRoomPsncureberry:
+                    RuinsofAlphKabutoItemRoomPsncureberry:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -86,7 +86,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsOfAlphKabutoItemRoomHealPowder:
+                    RuinsofAlphKabutoItemRoomHealPowder:
                         ITEMLINE
 
                 Text:
@@ -106,7 +106,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsOfAlphKabutoItemRoomEnergypowder:
+                    RuinsofAlphKabutoItemRoomEnergypowder:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -145,7 +145,7 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsOfAlphAerodactylItemRoomGoldBerry:
+                            RuinsofAlphAerodactylItemRoomGoldBerry:
                                 ITEMLINE
                         Text:
                         TrainerList: 
@@ -164,7 +164,7 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsOfAlphAerodactylItemRoomHealPowder:
+                            RuinsofAlphAerodactylItemRoomHealPowder:
                                 ITEMLINE
                         Text:
                         TrainerList: 
@@ -183,7 +183,7 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsOfAlphAerodactylItemRoomEnergyRoot:
+                            RuinsofAlphAerodactylItemRoomEnergyRoot:
                                 ITEMLINE
                         Text:
                         TrainerList: 
@@ -203,7 +203,7 @@ Location:
                         ReachableReqs:
                         Text:
                         Code: |
-                            RuinsOfAlphAerodactylItemRoomMoonStone:
+                            RuinsofAlphAerodactylItemRoomMoonStone:
                                 ITEMLINE
                         TrainerList: 
                         Sublocations:                    

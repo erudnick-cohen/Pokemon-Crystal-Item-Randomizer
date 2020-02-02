@@ -38,7 +38,7 @@ Location:
                 Sublocations:
             -
                 Name: Red Scale Dropped
-                FileName: LakeOfRage.asm
+                FileName: LakeofRage.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -60,7 +60,7 @@ Location:
                         waitsfx
                         itemnotify
                         closetext
-                        setscene $0
+                        dotrigger $0
                         appear LAKEOFRAGE_LANCE
                         end
                 Text: |
@@ -72,7 +72,7 @@ Location:
                 Sublocations:
             -
                 Name: Lake Of Rage Elixer
-                FileName: LakeOfRage.asm
+                FileName: LakeofRage.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -86,14 +86,14 @@ Location:
                 IsBall: Yes
                 NormalItem: ELIXER
                 Code: |
-                    LakeOfRageElixer:
+                    LakeofRageElixer:
                         ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Detect TM
-                FileName: LakeOfRage.asm
+                FileName: LakeofRage.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -107,14 +107,14 @@ Location:
                 IsBall: Yes
                 NormalItem: TM_DETECT
                 Code: |
-                    LakeOfRageTMDetect:
+                    LakeofRageTMDetect:
                         ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Hidden Power
-                FileName: LakeOfRageHiddenPowerHouse.asm
+                FileName: LakeofRageHiddenPowerHouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:

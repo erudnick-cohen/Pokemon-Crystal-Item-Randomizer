@@ -192,16 +192,16 @@ Location:
                 ReachableReqs:
                 NormalItem: HP_UP
                 Code: |
-                    .questcomplete
+                    GGOfficerquestcomplete:
                         writetext UnknownText_0x69f8b
                         buttonsound
                         ITEMLINE
-                        iffalse .bagfull
+                        iffalse GGOfficerbagfull
                         setevent EVENT_GOT_HP_UP_FROM_RANDY
-                    .gothpup
+                    GGOfficergothpup:
                         writetext UnknownText_0x69fd9
                         waitbutton
-                    .bagfull
+                    GGOfficerbagfull:
                         closetext
                         end
                 Text:

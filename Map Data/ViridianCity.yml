@@ -69,21 +69,21 @@ Location:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_TM42_DREAM_EATER
-                        iftrue .GotDreamEater
+                        iftrue UnknownScript_0x1a9a8a
                         writetext UnknownText_0x1a9cc4
                         buttonsound
                         ITEMLINE
-                        iffalse .NoRoomForDreamEater
+                        iffalse UnknownScript_0x1a9a8e
                         setevent EVENT_GOT_TM42_DREAM_EATER
-                    .GotDreamEater:
+                    UnknownScript_0x1a9a8a:
                         writetext UnknownText_0x1a9d86
                         waitbutton
-                    .NoRoomForDreamEater:
+                    UnknownScript_0x1a9a8e:
                         closetext
                         end
                 Text: |
                     UnknownText_0x1a9d86:
                         text "TM42 contains"
-                        line "DREAM EATER..."
+                        line "DREAM EATER…"
                 TrainerList: 
                 Sublocations:

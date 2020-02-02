@@ -128,7 +128,7 @@ def WriteItemLocations(locations):
 			WriteBadgeToRom(i)
 			
 def WriteTrainerLevels(locationDict, distDict, trainerData):
-	trainerfile = open("Game Files/pokecrystal/data/trainers/parties.asm")
+	trainerfile = open("Game Files/pokecrystal-speedchoice/trainers/trainers.asm")
 	newfile = trainerfile.read()
 	#loop through locations
 	for i in distDict:
@@ -147,7 +147,7 @@ def WriteTrainerLevels(locationDict, distDict, trainerData):
 						npCode = pCode.replace("db "+str(level),"db "+str(newlevel),1)
 						newcode = newcode.replace(k['Code'],npCode,1)
 					newfile = newfile.replace(trainer['Code'],newcode)
-	newfilestream = open("RandomizerRom/data/trainers/parties.asm",'w')
+	newfilestream = open("RandomizerRom/trainers/trainers.asm",'w')
 	newfilestream.seek(0)
 	newfilestream.write(newfile)
 	newfilestream.truncate()
@@ -157,11 +157,11 @@ def WriteTrainerLevels(locationDict, distDict, trainerData):
 	
 def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the trainer file
-	jgfile = open("Game Files/pokecrystal/data/wild/johto_grass.asm")
-	kgfile = open("Game Files/pokecrystal/data/wild/kanto_grass.asm")
-	jwfile = open("Game Files/pokecrystal/data/wild/johto_water.asm")
-	kwfile = open("Game Files/pokecrystal/data/wild/kanto_water.asm")
-	sfile = open("Game Files/pokecrystal/data/wild/swarm_grass.asm")
+	jgfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_grass.asm")
+	kgfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_grass.asm")
+	jwfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_water.asm")
+	kwfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_water.asm")
+	sfile = open("Game Files/pokecrystal-speedchoice/data/wild/swarm_grass.asm")
 	wildDict = {}
 	surfDict = {}
 	swarmDict = {}
