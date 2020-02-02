@@ -1,3 +1,6 @@
 [submodule "Game Files/pokecrystal"]
 	path = Game Files/pokecrystal
 	url = https://github.com/erudnick-cohen/pokecrystal
+[submodule "Game Files/pokecrystal-speedchoice"]
+	path = Game Files/pokecrystal-speedchoice
+	url = https://github.com/erudnick-cohen/pokecrystal-speedchoice.git
