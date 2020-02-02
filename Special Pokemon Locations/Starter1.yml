@@ -8,7 +8,9 @@ Code: |
         iftrue LookAtElmPokeBallScript
         spriteface ELMSLAB_ELM, DOWN
         refreshscreen $0
+    Randomizer_StarterCyndaquilOffset1::
         pokepic MONNAME
+    Randomizer_StarterCyndaquilOffset2::
         cry MONNAME
         waitbutton
         closepokepic
@@ -21,11 +23,13 @@ Code: |
         writetext ChoseStarterText
         buttonsound
         waitsfx
+    Randomizer_StarterCyndaquilOffset3::
         pokenamemem MONNAME, $0
         writetext ReceivedStarterText
         playsound SFX_CAUGHT_MON
         waitsfx
         buttonsound
+    Randomizer_StarterCyndaquilOffset4::
         givepoke MONNAME, 5, BERRY
         closetext
         checkcode VAR_FACING

@@ -8,7 +8,9 @@ Code: |
         iftrue LookAtElmPokeBallScript
         spriteface ELMSLAB_ELM, DOWN
         refreshscreen $0
+    Randomizer_StarterTotodileOffset1::
         pokepic MONNAME
+    Randomizer_StarterTotodileOffset2::
         cry MONNAME
         waitbutton
         closepokepic
@@ -21,11 +23,13 @@ Code: |
         writetext ChoseStarterText
         buttonsound
         waitsfx
+    Randomizer_StarterTotodileOffset3::
         pokenamemem MONNAME, $0
         writetext ReceivedStarterText
         playsound SFX_CAUGHT_MON
         waitsfx
         buttonsound
+    Randomizer_StarterTotodileOffset4::
         givepoke MONNAME, 5, BERRY
         closetext
         applymovement PLAYER, AfterTotodileMovement
