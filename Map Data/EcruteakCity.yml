@@ -27,7 +27,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    .GetSurf:
+                    UnknownScript_0x99505:
                         writetext SurfGuyLikeADanceText
                         buttonsound
                         ITEMLINE
