@@ -15,16 +15,16 @@ Location:
         InfeasibleBadges:
         NormalBadge: Soul Badge
         BadgeLine: |
-            FuchsiaGymJanineScript:
+            JanineScript_0x195db9:
                 checkflag BADGELINE
                 iftrue .FightDone
-                applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
+                applymovement FUCHSIAGYM_JANINE, MovementData_0x195f27
                 faceplayer
                 opentext
-                writetext JanineText_DisappointYou
+                writetext UnknownText_0x195f35
                 waitbutton
                 closetext
-                winlosstext JanineText_ToughOne, 0
+                winlosstext UnknownText_0x195fa1, 0
                 loadtrainer JANINE, 1
                 startbattle
                 reloadmapafterbattle
@@ -37,9 +37,9 @@ Location:
                 variablesprite SPRITE_FUCHSIA_GYM_2, SPRITE_LASS
                 variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_LASS
                 variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_YOUNGSTER
-                special MapCallbackSprites_LoadUsedSpritesGFX
+                special RunCallback_04
                 opentext
-                writetext Text_ReceivedSoulBadge
+                writetext UnknownText_0x195feb
                 playsound SFX_GET_BADGE
                 waitsfx
                 setflag BADGELINE
