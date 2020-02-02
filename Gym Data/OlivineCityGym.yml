@@ -33,7 +33,6 @@ Location:
                 waitsfx
                 setflag BADGELINE
                 checkcode VAR_BADGES
-                scall OlivineGymActivateRockets
         Code:
         Text:
             -

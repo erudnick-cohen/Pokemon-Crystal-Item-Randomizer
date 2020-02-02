@@ -7,8 +7,10 @@ Code: |
             opentext
             writetext UnknownText_0x703cb
             pause 15
+        Randomizer_RedGyaradosCry::
             cry MONNAME
             closetext
+        Randomizer_RedGyaradosSpecies::
             MONLINE
             writecode VAR_BATTLETYPE, BATTLETYPE_SHINY
             startbattle

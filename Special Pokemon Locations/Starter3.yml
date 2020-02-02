@@ -30,7 +30,7 @@ Code: |
         waitsfx
         buttonsound
     Randomizer_StarterChikoritaOffset4::
-        givepoke MONNAME, 5, BERRY
+        MONLINE
         closetext
         applymovement PLAYER, AfterChikoritaMovement
         jump ElmDirectionsScript

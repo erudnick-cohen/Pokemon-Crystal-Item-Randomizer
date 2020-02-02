@@ -3,15 +3,17 @@ NormalMon: LUGIA
 Type: Wild Pokemon
 LevelShift: 6
 Code: |
-    Lugia:
+    LugiaScript_0x18c518:
         faceplayer
         opentext
-        writetext LugiaText
+        writetext UnknownText_0x18c531
+    Randomizer_LugiaCry::
         cry MONNAME
         pause 15
         closetext
         setevent EVENT_FOUGHT_LUGIA
         writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+    Randomizer_LugiaSpecies::
         MONLINE
         startbattle
         disappear WHIRLISLANDLUGIACHAMBER_LUGIA

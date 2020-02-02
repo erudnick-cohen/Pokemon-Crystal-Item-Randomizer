@@ -21,7 +21,7 @@ Location:
         Sublocations:
             -
                 Name: Goldenrod Tunnel Smoke Ball
-                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                FileName: UndergroundPathSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -32,7 +32,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    GoldenrodUndergroundSwitchRoomEntrancesSmokeBall:
+                    UndergroundPathSwitchRoomEntrancesSmokeBall:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -41,7 +41,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Full Heal
-                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                FileName: UndergroundPathSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -52,7 +52,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    GoldenrodUndergroundSwitchRoomEntrancesFullHeal:
+                    UndergroundPathSwitchRoomEntrancesFullHeal:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -61,7 +61,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Max Ether
-                FileName: GoldenrodUndergroundWarehouse.asm
+                FileName: UndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -72,7 +72,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    GoldenrodUndergroundWarehouseMaxEther:
+                    UndergroundWarehouseMaxEther:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -81,7 +81,7 @@ Location:
                 Sublocations:
             -
                 Name: Sleep Talk TM
-                FileName: GoldenrodUndergroundWarehouse.asm
+                FileName: UndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -92,7 +92,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    GoldenrodUndergroundWarehouseTMSleepTalk:
+                    UndergroundWarehouseTMSleepTalk:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -101,7 +101,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Ultra Ball
-                FileName: GoldenrodUndergroundWarehouse.asm
+                FileName: UndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -112,7 +112,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    GoldenrodUndergroundWarehouseUltraBall:
+                    UndergroundWarehouseUltraBall:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -121,7 +121,7 @@ Location:
                 Sublocations:
     -
         Name: Goldenrod Tunnel Rocket Attack
-        FileName: GoldenrodUndergroundWarehouse.asm
+        FileName: UndergroundWarehouse.asm
         Type: Item
         HasPKMN: Yes
         WildTableList: 

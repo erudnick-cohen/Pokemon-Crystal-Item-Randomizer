@@ -5,10 +5,12 @@ LevelShift: 4
 Code: |
     GeodudeExplodingTrap:
         special FadeOutPalettes
+    Randomizer_GeodudeCry::
         cry MONNAME
         special FadeInPalettes
         setlasttalked -1
         writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+    Randomizer_GeodudeSpecies::
         MONLINE
         startbattle
         end

@@ -5,10 +5,12 @@ LevelShift: 4
 Code: |
     KoffingExplodingTrap:
         special FadeOutPalettes
+    Randomizer_KoffingCry::
         cry MONNAME
         special FadeInPalettes
         setlasttalked -1
         writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+    Randomizer_KoffingSpecies::
         MONLINE
         startbattle
         end

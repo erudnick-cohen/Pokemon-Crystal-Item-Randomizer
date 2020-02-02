@@ -30,7 +30,7 @@ Code: |
         waitsfx
         buttonsound
     Randomizer_StarterCyndaquilOffset4::
-        givepoke MONNAME, 5, BERRY
+        MONLINE
         closetext
         checkcode VAR_FACING
         if_equal RIGHT, ElmDirectionsScript

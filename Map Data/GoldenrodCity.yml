@@ -209,7 +209,7 @@ Location:
                 Sublocations:
             -
                 Name: Coin Case
-                FileName: GoldenrodUnderground.asm
+                FileName: WarehouseEntrance.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList: 
@@ -221,7 +221,7 @@ Location:
                 NormalItem: COIN_CASE
                 IsBall: Yes
                 Code: |
-                    GoldenrodUndergroundCoinCase:
+                    WarehouseEntranceCoinCase:
                         ITEMLINE
                 Text:
                 AREALV: 10

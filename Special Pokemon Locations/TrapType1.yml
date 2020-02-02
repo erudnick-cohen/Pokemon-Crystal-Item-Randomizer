@@ -5,10 +5,12 @@ LevelShift: 6
 Code: |
     VoltorbExplodingTrap:
         special FadeOutPalettes
+    Randomizer_VoltorbCry::
         cry MONNAME
         special FadeInPalettes
         setlasttalked -1
         writecode VAR_BATTLETYPE, BATTLETYPE_TRAP
+    Randomizer_VoltorbSpecies::
         MONLINE
         startbattle
         end
