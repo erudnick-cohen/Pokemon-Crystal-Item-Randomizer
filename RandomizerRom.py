@@ -11,7 +11,7 @@ def ResetRom():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Game Files/pokecrystal","RandomizerRom")
+	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 
 
 def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
