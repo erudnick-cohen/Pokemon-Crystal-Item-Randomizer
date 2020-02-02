@@ -11,7 +11,7 @@ def makeItemCodeDict():
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
-			itemCodeDict[i["Name"]] = i["Output"]
+			itemCodeDict[i["Name"]] = i["Output"].upper()
 	
 	#trash items
 	filestream = open('ItemData/trashItems.yml')

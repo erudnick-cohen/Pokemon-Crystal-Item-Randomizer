@@ -30,7 +30,7 @@ Location:
                     - Whirlpool
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: DragonsDenB1F_ClairTrigger
+                NormalItem: TM_DRAGONBREATH
                 Code: |
                     DragonsDenB1F_ClairTrigger:
                         appear DRAGONSDENB1F_CLAIR

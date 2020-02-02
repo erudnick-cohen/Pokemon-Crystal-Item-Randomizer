@@ -111,7 +111,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defau
 	mList = []
 	for i in trainerData:
 		if(i in trainerList and i not in skipList):
-			if(trainerData[i]['Type'] == 'TRAINERTYPE_MOVES'):
+			if(trainerData[i]['Type'] == '1'):
 				for j in range(0,len(trainerData[i]["Pokemon"])):
 					mList.append((i,j,bstMap[trainerData[i]["Pokemon"][j]["Pokemon"]]))
 			else:
