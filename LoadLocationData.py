@@ -39,3 +39,20 @@ def LoadDataFromFolder(path):
 	for i in LocationList:
 		trashList.extend(i.getTrashItemList())
 	return (LocationList,trashList)
+	
+def FlattenLocationTree(locations):
+	nList = []
+	aList = []
+	done = False
+	while not done:
+		done = True
+		aList = []
+		for i in locations:
+			nList.append(i)
+			print('Flattened :'+i.Name)
+			for j in i.Sublocations:
+				aList.append(j)
+				done = False
+		locations = aList
+	return nList
+		
