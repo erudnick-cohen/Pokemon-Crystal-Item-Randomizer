@@ -17,7 +17,7 @@ Location:
             -
                 Name: Radio Tower Rockets Part 1
                 FileName: RadioTower5F.asm
-                Type: Item
+                Type: Map
                 HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Goldenrod City
@@ -100,7 +100,7 @@ Location:
             -
                 Name: Radio Tower Rockets Part 2
                 FileName: RadioTower5F.asm
-                Type: No
+                Type: Map
                 HasPKMN: Yes
                 WildTableList: 
                 LocationReqs: Goldenrod City
