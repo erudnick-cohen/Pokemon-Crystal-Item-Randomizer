@@ -49,7 +49,7 @@ def LabelItemLocation(location):
 	oldcode = codeSearch[0]
 	print(codeSearch)
 	
-	newcode = oldcode.replace(codeSearch[1],("".join(location.Name.split())).upper().replace('.','_')+'_CODE::\n'+codeSearch[1])
+	newcode = oldcode.replace(codeSearch[1],"."+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'+codeSearch[1])
 	#switch spaces to tabs.....
 	newcode = newcode.replace("    ","\t")
 	newtext = ""
@@ -57,7 +57,7 @@ def LabelItemLocation(location):
 	#For now, just not labeling text
 	if location.Text is not None: 
 		#construct a new script that updates text about the new item
-		newtext = ("".join(location.Name.split())).upper()+'_TEXT::\n'
+		newtext = ("".join(location.Name.split())).upper()+'0TEXT::\n'
 		#switch spaces to tabs.....
 		newtext = newtext.replace("    ","\t")
 		
