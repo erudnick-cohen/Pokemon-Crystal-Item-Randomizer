@@ -2,7 +2,7 @@ Location:
     -
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
-        Type: Item
+        Type: No
         HasPKMN: Yes
         WildTableList:
         LocationReqs: Olivine City
