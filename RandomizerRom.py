@@ -13,7 +13,12 @@ def ResetRom():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 
-
+def ResetRomForLabelling():
+	try:
+		shutil.rmtree("RandomizerRom")
+	except:
+		print("No existing folder created, nothing to remove")
+	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
 def LabelAllLocations(locations):
 	codeLookup = Items.makeItemCodeDict()
@@ -25,6 +30,29 @@ def LabelAllLocations(locations):
 		#TODO: ALLOW FOR BADGE LABELING
 		#elif i.isGym():
 		#	LabelBadgeLocation(i)
+
+def LabelTrainerData(trainerData):
+	trainerfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/trainers/trainers.asm")
+	newfile = trainerfile.read()
+	#loop through locations
+	for j in trainerData:
+		trainer = trainerData[j]
+		print('Labeling '+j)
+		nCode = trainer['Code']
+		idText = "."+"".join(j.upper().split())+"0TRAINER::\n\t"
+		for k in range(0,len(trainer['Pokemon'])):
+			print('Labeling mon '+str(k))
+			pCode = trainer['Pokemon'][k]['Code']
+			idTextP = "."+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
+			nCode = nCode.replace("\t"+pCode,idTextP+pCode,1)
+		newfile = newfile.replace("\t"+trainer['Code'],idText+nCode,1)
+	newfilestream = open("RandomizerRom/trainers/trainers.asm",'w')
+	newfilestream.seek(0)
+	newfilestream.write(newfile)
+	newfilestream.truncate()
+	newfilestream.flush()
+	os.fsync(newfilestream.fileno())
+	newfilestream.close()
 
 #currently only labels "regular" items
 def LabelItemLocation(location):
