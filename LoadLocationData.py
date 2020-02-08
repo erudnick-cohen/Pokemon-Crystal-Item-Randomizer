@@ -6,10 +6,10 @@ import yaml
 def LoadDataFromFolder(path):
 	LocationList = []
 	print("Creating Locations")
-	for root, dir, files  in os.walk(path+"\\Map Data"):
+	for root, dir, files  in os.walk(path+"//Map Data"):
 		for file in files:
 			print("File: "+file)
-			entry = open(path+"\\Map Data\\"+file,'r')
+			entry = open(path+"//Map Data//"+file,'r')
 			yamlData = yaml.load(entry)
 			print("Locations in file are:")
 			for location in yamlData["Location"]:
@@ -24,7 +24,7 @@ def LoadDataFromFolder(path):
 	for groot, gdir, gfiles  in os.walk("Gym Data"):
 		for gfile in gfiles:
 			print("File: "+gfile)
-			entry = open(path+"\\Gym Data\\"+gfile,'r')
+			entry = open(path+"//Gym Data//"+gfile,'r')
 			yamlData = yaml.load(entry)
 			print("Locations in file are:")
 			for location in yamlData["Location"]:

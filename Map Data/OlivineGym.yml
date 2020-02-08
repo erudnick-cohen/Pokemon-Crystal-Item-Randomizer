@@ -28,15 +28,15 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_IRON_TAIL
                 Code: |
-                    .FightDone:
+                    .FightDone
                         checkevent EVENT_GOT_TM23_IRON_TAIL
-                        iftrue .GotIronTail
-                        writetext Jasmine_BadgeSpeech
+                        iftrue UnknownScript_0x9c172
+                        writetext UnknownText_0x9c354
                         buttonsound
                         ITEMLINE
-                        iffalse .NoRoomForIronTail
+                        iffalse UnknownScript_0x9c176
                         setevent EVENT_GOT_TM23_IRON_TAIL
-                        writetext Jasmine_IronTailSpeech
+                        writetext UnknownText_0x9c3a5
                         waitbutton
                         closetext
                         end

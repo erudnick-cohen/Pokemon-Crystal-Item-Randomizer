@@ -33,19 +33,14 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_TOXIC
                 Code: |
-                    .AfterBattle:
+                    UnknownScript_0x195e02:
                         checkevent EVENT_GOT_TM06_TOXIC
-                        iftrue .AfterTM
-                        writetext JanineText_ToxicSpeech
+                        iftrue UnknownScript_0x195e15
+                        writetext UnknownText_0x196002
                         buttonsound
                         ITEMLINE
-                        iffalse .AfterTM
+                        iffalse UnknownScript_0x195e15
                         setevent EVENT_GOT_TM06_TOXIC
-                    .AfterTM:
-                        writetext JanineText_ApplyMyself
-                        waitbutton
-                        closetext
-                        end
                 Text: |
                     JanineText_ToxicSpeech:
                         text "JANINE: You're so"

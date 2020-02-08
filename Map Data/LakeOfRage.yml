@@ -55,14 +55,6 @@ Location:
                         opentext
                         ITEMLINE
                         waitsfx
-                        writetext UnknownText_0x703df
-                        playsound SFX_ITEM
-                        waitsfx
-                        itemnotify
-                        closetext
-                        dotrigger $0
-                        appear LAKEOFRAGE_LANCE
-                        end
                 Text: |
                     UnknownText_0x703df:
                         text "<PLAYER> obtained a"

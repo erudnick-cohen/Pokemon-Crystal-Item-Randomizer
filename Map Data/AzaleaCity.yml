@@ -98,7 +98,7 @@ Location:
                 ReachableReqs:
                 NormalItem: CHARCOAL
                 Code: |
-                    .Thanks:
+                    .Thanks
                         writetext CharcoalKilnApprenticeText2
                         buttonsound
                         ITEMLINE

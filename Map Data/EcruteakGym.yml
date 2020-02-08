@@ -27,7 +27,7 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_SHADOW_BALL
                 Code: |
-                    .FightDone:
+                    .FightDone
                         checkevent EVENT_GOT_TM30_SHADOW_BALL
                         iftrue UnknownScript_0x99db1
                         setevent EVENT_BEAT_SAGE_JEFFREY
@@ -37,12 +37,6 @@ Location:
                         writetext UnknownText_0x9a059
                         buttonsound
                         ITEMLINE
-                        iffalse UnknownScript_0x99db5
-                        setevent EVENT_GOT_TM30_SHADOW_BALL
-                        writetext UnknownText_0x9a0ec
-                        waitbutton
-                        closetext
-                        end
                 Text: |
                     UnknownText_0x9a0ec:
                         text "It's ITEMNAME."

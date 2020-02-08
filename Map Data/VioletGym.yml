@@ -27,7 +27,7 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_MUD_SLAP
                 Code: |
-                    .FightDone:
+                    .FightDone
                         checkevent EVENT_GOT_TM31_MUD_SLAP
                         iftrue .SpeechAfterTM
                         setevent EVENT_BEAT_BIRD_KEEPER_ROD

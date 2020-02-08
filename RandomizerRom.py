@@ -21,8 +21,8 @@ def ResetRomForLabelling():
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
 def LabelAllLocations(locations):
-	codeLookup = Items.makeItemCodeDict()
-	textLookup = Items.makeItemTextDict()
+	#codeLookup = Items.makeItemCodeDict()
+	#textLookup = Items.makeItemTextDict()
 	for i in locations:
 		#TODO, LABELING FOR SPECIAL LOCATIONS
 		if i.isItem() and not i.IsSpecial:
@@ -43,8 +43,10 @@ def LabelTrainerData(trainerData):
 		for k in range(0,len(trainer['Pokemon'])):
 			print('Labeling mon '+str(k))
 			pCode = trainer['Pokemon'][k]['Code']
-			idTextP = "."+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
-			nCode = nCode.replace("\t"+pCode,idTextP+pCode,1)
+			idTextPB = ".ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
+			idTextPA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
+
+			nCode = nCode.replace("\t"+pCode,idTextPB+pCode+idTextPA,1)
 		newfile = newfile.replace("\t"+trainer['Code'],idText+nCode,1)
 	newfilestream = open("RandomizerRom/trainers/trainers.asm",'w')
 	newfilestream.seek(0)
@@ -76,24 +78,25 @@ def LabelItemLocation(location):
 	codeSearch = re.findall(coderegexstr,filecode)[0]
 	oldcode = codeSearch[0]
 	print(codeSearch)
-	
-	newcode = oldcode.replace(codeSearch[1],"."+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'+codeSearch[1])
+	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+	newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 	#switch spaces to tabs.....
 	newcode = newcode.replace("    ","\t")
 	newtext = ""
 	#TODO: Need to completely change how text works, we now need to actually track each string individually, no spanning across commands
 	#For now, just not labeling text
-	if location.Text is not None: 
-		#construct a new script that updates text about the new item
-		newtext = ("".join(location.Name.split())).upper()+'0TEXT::\n'
-		#switch spaces to tabs.....
-		newtext = newtext.replace("    ","\t")
+	# if location.Text is not None: 
+	# 	#construct a new script that updates text about the new item
+	# 	newtext = ("".join(location.Name.split())).upper()+'0TEXT::\n'
+	# 	#switch spaces to tabs.....
+	# 	newtext = newtext.replace("    ","\t")
 		
-		#find the text we need to replace
-		textregexstr = re.escape(location.Text.replace("    ","\t")).replace("ITEMNAME",".+")
-		oldtext = re.findall(textregexstr,filecode)[0]
-	else:
-		oldtext = ""
+	# 	#find the text we need to replace
+	# 	textregexstr = re.escape(location.Text.replace("    ","\t")).replace("ITEMNAME",".+")
+	# 	oldtext = re.findall(textregexstr,filecode)[0]
+	# else:
+	# 	oldtext = ""
 	
 	#make new file with the new text (except no new text right now)
 	#newfile = filecode.replace(oldcode,newcode+oldcode).replace(oldtext,newtext)

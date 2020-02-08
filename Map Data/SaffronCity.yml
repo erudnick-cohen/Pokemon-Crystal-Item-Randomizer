@@ -37,10 +37,10 @@ Location:
                         ITEMLINE
                         iffalse .Done
                         setevent EVENT_GOT_TM29_PSYCHIC
-                    .AlreadyGotItem:
+                    .AlreadyGotItem
                         writetext MrPsychicText2
                         waitbutton
-                    .Done:
+                    .Done
                         closetext
                         end
                 Text: |
@@ -117,13 +117,13 @@ Location:
                 ReachableReqs:
                 NormalItem: PASS
                 Code: |
-                    .GivePass:
-                        writetext CopycatText_GivePass
+                    .Part14
+                        writetext UnknownText_0x18b1e2
                         buttonsound
                         ITEMLINE
-                        iffalse .Cancel
+                        iffalse .Part22
                         setevent EVENT_GOT_PASS_FROM_COPYCAT
-                        writetext CopycatText_ExplainPass
+                        writetext UnknownText_0x18b214
                         waitbutton
                         closetext
                         end

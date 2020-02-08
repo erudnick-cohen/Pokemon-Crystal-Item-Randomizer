@@ -138,7 +138,7 @@ Location:
                     ReachableReqs:
                     NormalItem: EXP_SHARE
                     Code: |
-                        .RedScale:
+                        .RedScale
                             writetext MrPokemonText_GimmeTheScale
                             yesorno
                             iffalse .refused

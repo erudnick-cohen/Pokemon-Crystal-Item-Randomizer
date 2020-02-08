@@ -77,13 +77,13 @@ Location:
                 ReachableReqs:
                 NormalItem: HM_FLY
                 Code: |
-                    .BeatChuck:
-                        writetext ChucksWifeGiveHMText
+                    UnknownScript_0x1a009c:
+                        writetext UnknownText_0x1a01e3
                         buttonsound
                         ITEMLINE
-                        iffalse .Done
+                        iffalse UnknownScript_0x1a00b1
                         setevent EVENT_GOT_HM02_FLY
-                        writetext ChucksWifeFlySpeechText
+                        writetext UnknownText_0x1a021d
                         buttonsound
                 Text: |
                     ChucksWifeEasierToFlyText:

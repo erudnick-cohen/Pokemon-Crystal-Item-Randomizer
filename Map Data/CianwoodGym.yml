@@ -29,19 +29,19 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
                 Code: |
-                    .FightDone:
+                    .FightDone
                         checkevent EVENT_GOT_TM01_DYNAMICPUNCH
-                        iftrue .AlreadyGotTM
+                        iftrue UnknownScript_0x9d67b
                         setevent EVENT_BEAT_BLACKBELT_YOSHI
                         setevent EVENT_BEAT_BLACKBELT_LAO
                         setevent EVENT_BEAT_BLACKBELT_NOB
                         setevent EVENT_BEAT_BLACKBELT_LUNG
-                        writetext ChuckExplainBadgeText
+                        writetext UnknownText_0x9d84d
                         buttonsound
                         ITEMLINE
-                        iffalse .BagFull
+                        iffalse UnknownScript_0x9d67f
                         setevent EVENT_GOT_TM01_DYNAMICPUNCH
-                        writetext ChuckExplainTMText
+                        writetext UnknownText_0x9d8da
                         waitbutton
                         closetext
                         end

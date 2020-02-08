@@ -29,7 +29,7 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_FURY_CUTTER
                 Code: |
-                    .FightDone:
+                    .FightDone
                         checkevent EVENT_GOT_TM49_FURY_CUTTER
                         iftrue .GotFuryCutter
                         setevent EVENT_BEAT_TWINS_AMY_AND_MAY

@@ -149,6 +149,8 @@ Location:
                 ReachableReqs:
                 Code: |
                     FlowerShopTeacherScript:
+                        checkevent EVENT_FOUGHT_SUDOWOODO
+                        iftrue .Lalala
                         checkevent EVENT_GOT_SQUIRTBOTTLE
                         iftrue .GotSquirtbottle
                         checkevent EVENT_MET_FLORIA
@@ -180,7 +182,7 @@ Location:
                 Sublocations:        
             -
                 Name: Kenya Gate Item
-                FileName: Route35GoldenrodGate.asm
+                FileName: Route35Goldenrodgate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 

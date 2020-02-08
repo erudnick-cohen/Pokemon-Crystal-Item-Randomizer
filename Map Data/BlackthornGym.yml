@@ -17,48 +17,32 @@ Location:
         Sublocations:
             -
                 Name: Clair TM
-                FileName: DragonsDenB1F.asm
+                FileName: BlackthornGym1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs: Blackthorn Gym Trainers After Boulders
                 FlagReqs:
                     - Plain Badge
-                    - Glacier Badge
                 ItemReqs:
                     - Strength
-                    - Whirlpool
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_DRAGONBREATH
                 Code: |
-                    DragonsDenB1F_ClairTrigger:
-                        appear DRAGONSDENB1F_CLAIR
-                        opentext
-                        writetext ClairText_Wait
-                        pause 30
-                        closetext
-                        showemote EMOTE_SHOCK, PLAYER, 15
-                        spriteface PLAYER, LEFT
-                        playmusic MUSIC_CLAIR
-                        applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
-                        opentext
-                        writetext ClairText_GiveDragonbreathDragonDen
+                    .GiveTM
                         buttonsound
                         ITEMLINE
                         iffalse .BagFull
                         itemtotext TM_DRAGONBREATH, $0
-                        writetext NotifyReceiveDragonbreath
+                        writetext BlackthornGymText_ReceivedTM24
                         playsound SFX_ITEM
                         waitsfx
                         itemnotify
                         setevent EVENT_GOT_TM24_DRAGONBREATH
-                        writetext ClairText_DescribeDragonbreathDragonDen
+                        writetext BlackthornGymClairText_DescribeTM24
                         buttonsound
-                        writetext ClairText_WhatsTheMatterDragonDen
-                        waitbutton
-                        closetext
-                        jump .FinishClair
+                        jump .GotTM24
                 Text: |
                     NotifyReceiveDragonbreath:
                         text "<PLAYER> received"
