@@ -18,7 +18,7 @@ Location:
             SurgeScript_0x1920a5:
                 faceplayer
                 opentext
-                checkflag BADGELINE
+                checkflag ENGINE_THUNDERBADGE
                 iftrue .FightDone
                 writetext UnknownText_0x192142
                 waitbutton
@@ -35,7 +35,7 @@ Location:
                 writetext UnknownText_0x192277
                 playsound SFX_GET_BADGE
                 waitsfx
-                setflag BADGELINE
+                BADGELINE
                 checkcode VAR_BADGES
         Code:
         Text:

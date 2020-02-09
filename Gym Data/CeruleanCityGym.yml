@@ -15,27 +15,27 @@ Location:
         InfeasibleBadges:
         NormalBadge: Cascade Badge
         BadgeLine: |
-            MistyScript_0x188432:
-                faceplayer
-                opentext
-                checkflag BADGELINE
-                iftrue .FightDone
-                writetext UnknownText_0x188674
-                waitbutton
-                closetext
-                winlosstext UnknownText_0x18870c, 0
-                loadtrainer MISTY, 1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_MISTY
-                setevent EVENT_BEAT_SWIMMERF_DIANA
-                setevent EVENT_BEAT_SWIMMERF_BRIANA
-                setevent EVENT_BEAT_SWIMMERM_PARKER
-                opentext
-                writetext UnknownText_0x188768
-                playsound SFX_GET_BADGE
-                waitsfx
-                setflag BADGELINE
+                MistyScript_0x188432:
+                    faceplayer
+                    opentext
+                    checkflag ENGINE_CASCADEBADGE
+                    iftrue .FightDone
+                    writetext UnknownText_0x188674
+                    waitbutton
+                    closetext
+                    winlosstext UnknownText_0x18870c, 0
+                    loadtrainer MISTY, 1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_MISTY
+                    setevent EVENT_BEAT_SWIMMERF_DIANA
+                    setevent EVENT_BEAT_SWIMMERF_BRIANA
+                    setevent EVENT_BEAT_SWIMMERM_PARKER
+                    opentext
+                    writetext UnknownText_0x188768
+                    playsound SFX_GET_BADGE
+                    waitsfx
+                    BADGELINE
         Code:
         Text:
             -

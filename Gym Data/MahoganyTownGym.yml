@@ -14,30 +14,29 @@ Location:
         InfeasibleBadges:
         NormalBadge: Glacier Badge
         BadgeLine: |
-            PryceScript_0x199a9e:
-                faceplayer
-                opentext
-                checkevent EVENT_BEAT_PRYCE
-                iftrue .FightDone
-                writetext PryceText_Intro
-                waitbutton
-                closetext
-                winlosstext PryceText_Impressed, 0
-                loadtrainer PRYCE, 1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_PRYCE
-                opentext
-                writetext Text_ReceivedGlacierBadge
-                playsound SFX_GET_BADGE
-                waitsfx
-                setflag BADGELINE
-                checkcode VAR_BADGES
+                PryceScript_0x199a9e:
+                    faceplayer
+                    opentext
+                    checkevent EVENT_BEAT_PRYCE
+                    iftrue .FightDone
+                    writetext UnknownText_0x199b8d
+                    waitbutton
+                    closetext
+                    winlosstext UnknownText_0x199cb3, 0
+                    loadtrainer PRYCE, 1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_PRYCE
+                    opentext
+                    writetext UnknownText_0x199d3b
+                    playsound SFX_GET_BADGE
+                    waitsfx
+                    BADGELINE
         Code:
         Text:
             -
                 File: MahoganyGym.asm
-                Text: |        
+                Text: |
                     Text_ReceivedGlacierBadge:
                         text "<PLAYER> received"
                         line "BADGENAME."

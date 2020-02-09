@@ -15,30 +15,28 @@ Location:
         InfeasibleBadges:
         NormalBadge: Marsh Badge
         BadgeLine: |
-            SabrinaScript_0x189c2e:
-                faceplayer
-                opentext
-                checkflag BADGELINE
-                iftrue .FightDone
-                writetext UnknownText_0x189cdf
-                waitbutton
-                closetext
-                winlosstext UnknownText_0x189df4, 0
-                loadtrainer SABRINA, 1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_SABRINA
-                setevent EVENT_BEAT_MEDIUM_REBECCA
-                setevent EVENT_BEAT_MEDIUM_DORIS
-                setevent EVENT_BEAT_PSYCHIC_FRANKLIN
-                setevent EVENT_BEAT_PSYCHIC_JARED
-                opentext
-                writetext UnknownText_0x189e95
-                playsound SFX_GET_BADGE
-                waitsfx
-                setflag BADGELINE
-                writetext UnknownText_0x189ead
-                checkcode VAR_BADGES
+                SabrinaScript_0x189c2e:
+                    faceplayer
+                    opentext
+                    checkflag ENGINE_MARSHBADGE
+                    iftrue .FightDone
+                    writetext UnknownText_0x189cdf
+                    waitbutton
+                    closetext
+                    winlosstext UnknownText_0x189df4, 0
+                    loadtrainer SABRINA, 1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_SABRINA
+                    setevent EVENT_BEAT_MEDIUM_REBECCA
+                    setevent EVENT_BEAT_MEDIUM_DORIS
+                    setevent EVENT_BEAT_PSYCHIC_FRANKLIN
+                    setevent EVENT_BEAT_PSYCHIC_JARED
+                    opentext
+                    writetext UnknownText_0x189e95
+                    playsound SFX_GET_BADGE
+                    waitsfx
+                    BADGELINE
         Code:
         Text:
             -

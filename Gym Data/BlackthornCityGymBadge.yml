@@ -1,13 +1,12 @@
 Location:
     -
         Name: Blackthorn City Gym Badge
-        FileName: DragonShrine.asm
-        LocationReqs: Blackthorn Gym Trainers After Boulders
+        FileName: BlackthornGym1F.asm
+        LocationReqs: Clair TM
         Type: Gym
         HasPKMN: No
         WildTableList:
         FlagReqs:
-            - Dragons Den Shrine
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -15,57 +14,47 @@ Location:
         InfeasibleBadges:
         NormalBadge: Rising Badge
         BadgeLine: |
-            .PassedTheTest:
-                writetext UnknownText_0x18d47c
-                waitbutton
-                closetext
-                playsound SFX_ENTER_DOOR
-                showemote EMOTE_SHOCK, PLAYER, 15
-                playmusic MUSIC_CLAIR
-                appear DRAGONSHRINE_CLAIR
-                waitsfx
-                spriteface PLAYER, DOWN
-                pause 30
-                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2d4
-                spriteface DRAGONSHRINE_CLAIR, RIGHT
-                spriteface PLAYER, LEFT
-                spriteface DRAGONSHRINE_ELDER1, LEFT
-                opentext
-                writetext UnknownText_0x18d916
-                waitbutton
-                closetext
-                special Special_FadeOutMusic
-                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2da
-                opentext
-                writetext UnknownText_0x18d974
-                waitbutton
-                closetext
-                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2dd
-                opentext
-                writetext UnknownText_0x18d983
-                waitbutton
-                closetext
-                applymovement DRAGONSHRINE_ELDER1, MovementData_0x18d2c9
-                spriteface DRAGONSHRINE_CLAIR, UP
-                opentext
-                writetext UnknownText_0x18d520
-                waitbutton
-                closetext
-                showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
-                opentext
-                writetext UnknownText_0x18d9ae
-                waitbutton
-                closetext
-                applymovement DRAGONSHRINE_CLAIR, MovementData_0x18d2e0
-                opentext
-                writetext UnknownText_0x18d9bf
-                waitbutton
-                setflag BADGELINE
+                BlackthornGymClairScript:
+                    faceplayer
+                    opentext
+                    checkflag ENGINE_RISINGBADGE
+                    iftrue .AlreadyGotBadge
+                    checkevent EVENT_BEAT_CLAIR
+                    iftrue .FightDone
+                    writetext ClairIntroText
+                    waitbutton
+                    closetext
+                    winlosstext ClairWinText, 0
+                    loadtrainer CLAIR, 1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_CLAIR
+                    opentext
+                    setevent EVENT_BEAT_COOLTRAINERM_PAUL
+                    setevent EVENT_BEAT_COOLTRAINERM_CODY
+                    setevent EVENT_BEAT_COOLTRAINERM_MIKE
+                    setevent EVENT_BEAT_COOLTRAINERF_FRAN
+                    setevent EVENT_BEAT_COOLTRAINERF_LOLA
+                    clearevent EVENT_MAHOGANY_MART_OWNERS
+                    setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
+                    clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+                    ; check_permaoptions EARLY_KANTO
+                    ; iffalse .do_dden
+                    writetext ClairText_Lazy
+                    waitsfx
+                    playsound SFX_GET_BADGE
+                    waitsfx
+                    BADGELINE
+                    checkcode VAR_BADGES
+                    scall BlackthornGymTriggerRockets
+                    specialphonecall SPECIALCALL_MASTERBALL
+                    writetext BlackthornGymClairText_DescribeBadge
+                    jump .GiveTM
         Code:
         Text:
             -
                 File: DragonShrine.asm
-                Text: |        
+                Text: |
                     UnknownText_0x18d9bf:
                         text "Here, this is the"
                         line "BADGENAME…"

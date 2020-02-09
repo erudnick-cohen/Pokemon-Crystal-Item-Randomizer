@@ -27,9 +27,38 @@ def LabelAllLocations(locations):
 		#TODO, LABELING FOR SPECIAL LOCATIONS
 		if i.isItem():
 			LabelItemLocation(i)
-		#TODO: ALLOW FOR BADGE LABELING
-		#elif i.isGym():
-		#	LabelBadgeLocation(i)
+		elif i.isGym():
+			LabelBadgeLocation(i)
+
+def LabelBadgeLocation(location):
+	print("Labeling "+location.Name)
+	
+	#open the relevant file and get it as a string
+	file = open("RandomizerRom/maps/"+location.FileName)
+	filecode = file.read()
+	newfile = filecode
+	#constuct new script that gives the new item
+	#replace is technically deprecated, but this is more readable
+	
+	#find the code we need to replace
+	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+	codeSearch = re.findall(coderegexstr,filecode)[0]
+	oldcode = codeSearch[0]
+	print(codeSearch)
+	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
+	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
+	newCode = ""
+	newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
+
+	newfile = filecode.replace(oldcode,newcode)
+	#write the new file into the files for the randomizer rom
+	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
+	newfilestream.seek(0)
+	newfilestream.write(newfile)
+	newfilestream.truncate()
+	newfilestream.flush()
+	os.fsync(newfilestream.fileno())
+	newfilestream.close()
 
 def LabelWild():
 	#load up the trainer file
@@ -214,8 +243,8 @@ def LabelItemLocation(location):
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
-	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
-	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
+	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	newCode = ""
 	if not location.IsSpecial:
 		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
@@ -241,8 +270,8 @@ def LabelItemLocation(location):
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
 	else:
-		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
-		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 		#need to do this because asm label weirdness (more accurately regex weirdness with them)
 		if ":" in oldcode:
 			lines = oldcode.partition('\n')

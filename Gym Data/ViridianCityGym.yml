@@ -18,7 +18,7 @@ Location:
             BlueScript_0x9aa26:
                 faceplayer
                 opentext
-                checkflag BADGELINE
+                checkflag ENGINE_EARTHBADGE
                 iftrue .FightDone
                 writetext LeaderBlueBeforeText
                 waitbutton
@@ -32,7 +32,7 @@ Location:
                 writetext Text_ReceivedEarthBadge
                 playsound SFX_GET_BADGE
                 waitsfx
-                setflag BADGELINE
+                BADGELINE
                 checkcode VAR_BADGES
         Code:
         Text:

@@ -16,7 +16,7 @@ Location:
         NormalBadge: Soul Badge
         BadgeLine: |
             JanineScript_0x195db9:
-                checkflag BADGELINE
+                checkflag ENGINE_SOULBADGE
                 iftrue .FightDone
                 applymovement FUCHSIAGYM_JANINE, MovementData_0x195f27
                 faceplayer
@@ -42,7 +42,7 @@ Location:
                 writetext UnknownText_0x195feb
                 playsound SFX_GET_BADGE
                 waitsfx
-                setflag BADGELINE
+                BADGELINE
         Code:
         Text:
             -

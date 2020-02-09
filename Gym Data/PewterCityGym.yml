@@ -18,7 +18,7 @@ Location:
             BrockScript_0x1a2864:
                 faceplayer
                 opentext
-                checkflag BADGELINE
+                checkflag ENGINE_BOULDERBADGE
                 iftrue .FightDone
                 writetext UnknownText_0x1a28d0
                 waitbutton
@@ -33,7 +33,7 @@ Location:
                 writetext UnknownText_0x1a2a3d
                 playsound SFX_GET_BADGE
                 waitsfx
-                setflag BADGELINE
+                BADGELINE
         Code:
         Text:
             -

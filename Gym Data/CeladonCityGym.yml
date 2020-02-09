@@ -18,7 +18,7 @@ Location:
             ErikaScript_0x72a6a:
                 faceplayer
                 opentext
-                checkflag BADGELINE
+                checkflag ENGINE_RAINBOWBADGE
                 iftrue .FightDone
                 writetext UnknownText_0x72b28
                 waitbutton
@@ -36,7 +36,7 @@ Location:
                 writetext UnknownText_0x72c96
                 playsound SFX_GET_BADGE
                 waitsfx
-                setflag BADGELINE
+                BADGELINE
         Code:
         Text:
             -
