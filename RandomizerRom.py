@@ -25,11 +25,142 @@ def LabelAllLocations(locations):
 	#textLookup = Items.makeItemTextDict()
 	for i in locations:
 		#TODO, LABELING FOR SPECIAL LOCATIONS
-		if i.isItem() and not i.IsSpecial:
+		if i.isItem():
 			LabelItemLocation(i)
 		#TODO: ALLOW FOR BADGE LABELING
 		#elif i.isGym():
 		#	LabelBadgeLocation(i)
+
+def LabelWild():
+	#load up the trainer file
+	jgfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_grass.asm")
+	kgfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_grass.asm")
+	jwfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_water.asm")
+	kwfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_water.asm")
+	sfile = open("Game Files/pokecrystal-speedchoice/data/wild/swarm_grass.asm")
+	wildDict = {}
+	surfDict = {}
+	swarmDict = {}
+	wildDict["johto_grass.asm"] = jgfile.read()
+	wildDict["kanto_grass.asm"] = kgfile.read()
+	surfDict["johto_water.asm"] = jwfile.read()
+	surfDict["kanto_water.asm"] = kwfile.read()
+	swarmDict["swarm_grass.asm"] = sfile.read()
+	#loop through locations
+	#load up the grass data
+	yamlfile = open("Wild Data/wildGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for j in wildData:
+		print('Writing '+j)
+		areaData = wildData[j.upper()]
+		newcode = areaData['Code']
+		minLV = areaData['Level']
+		idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"+"::\n\n\t"
+		idTextA = "\nckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"+"::\n\n"
+		wildDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+	for i in wildDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(wildDict[i])
+		newfilestream.flush()
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+	#loop through locations
+	#load up the water data
+	yamlfile = open("Wild Data/surfGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for j in wildData:
+		print('Writing '+j)
+		areaData = wildData[j.upper()]
+		newcode = areaData['Code']
+		minLV = areaData['Level']
+		idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"+"::\n\n\t"
+		idTextA = "\nckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDWATER"+"::\n"
+		surfDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+	for i in surfDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(surfDict[i])
+		newfilestream.flush()
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+	#loop through locations
+	#load up the swarm data
+	yamlfile = open("Wild Data/swarmGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for j in wildData:
+		print('Writing '+j)
+		areaData = wildData[j.upper()]
+		newcode = areaData['Code']
+		minLV = areaData['Level']
+		idTextB = ".ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"+"::\n\n\t"
+		idTextA = "\n.ckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"+"::\n"
+		swarmDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+	for i in swarmDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(swarmDict[i])
+		newfilestream.flush()
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+
+def LabelSpecialWild():
+	monList = []
+	print("Editing Special Pokemon")
+	for root, dir, files  in os.walk("Special Pokemon Locations"):
+		for file in files:
+			print("File: "+file)
+			entry = open("Special Pokemon Locations/"+file,'r')
+			yamlData = yaml.load(entry)
+			loc = yamlData["Location"]
+			if(loc in locationDict):
+				fileName = locationDict[loc].FileName
+				mon = yamlData["NormalMon"]
+				shift = yamlData["LevelShift"]
+				type = yamlData["Type"]
+				code = yamlData["Code"]
+				#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
+				newmon = monFun(mon,1001)
+				givestr = ""
+				if(type == 'Give Mon with Berry'):
+						givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)+', BERRY'
+				if(type == 'Wild Pokemon'):
+					givestr = 'loadwildmon '+newmon+', '+str(distDict[loc]+shift)
+				if(type == 'Give Egg'):
+					givestr = 'giveegg '+newmon+', '+str(distDict[loc]+shift)
+				if(type == 'Give Poke'):
+					givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)
+				newcode = code.replace("MONLINE",givestr).replace("MONNAME",newmon)
+				#switch spaces to tabs.....
+				newcode = newcode.replace("    ","\t")
+				idTextB = ".ckir_BEFORE"+"".join(j.upper().split())+"0SPECIALWILD"+"::\n"
+				idTextA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0SPECIALWILD"+"::\n"
+				#find the code we need to replace
+				coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("MONLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+				file = open("RandomizerRom/maps/"+fileName)
+				filecode = file.read()
+				codeSearch = re.findall(coderegexstr,filecode)[0]
+				oldcode = codeSearch[0]
+
+				newfile = filecode.replace(oldcode,idTextB+code[1]+idTextA)
+				#write the new file into the files for the randomizer rom
+				newfilestream = open("RandomizerRom/maps/"+fileName,'w')
+				newfilestream.seek(0)
+				newfilestream.write(newfile)
+				newfilestream.truncate()
+				newfilestream.flush()
+				#os.fsync(newfilestream.fileno())
+				newfilestream.close()
+
 
 def LabelTrainerData(trainerData):
 	trainerfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/trainers/trainers.asm")
@@ -75,14 +206,21 @@ def LabelItemLocation(location):
 	print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
 	print("\tITEMLINE" in (location.Code.replace("    ","\t")))
 	print(coderegexstr)
-	codeSearch = re.findall(coderegexstr,filecode)[0]
-	oldcode = codeSearch[0]
-	print(codeSearch)
+	codeSearch = None
+	if not location.IsSpecial:
+		codeSearch = re.findall(coderegexstr,filecode)[0]
+		oldcode = codeSearch[0]
+		print(codeSearch)
+	else:
+		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
+		oldcode = re.findall(coderegexstr,filecode)[0]
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
-	newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
-	#switch spaces to tabs.....
-	newcode = newcode.replace("    ","\t")
+	newCode = ""
+	if not location.IsSpecial:
+		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
+		#switch spaces to tabs.....
+		newcode = newcode.replace("    ","\t")
 	newtext = ""
 	#TODO: Need to completely change how text works, we now need to actually track each string individually, no spanning across commands
 	#For now, just not labeling text
@@ -100,8 +238,17 @@ def LabelItemLocation(location):
 	
 	#make new file with the new text (except no new text right now)
 	#newfile = filecode.replace(oldcode,newcode+oldcode).replace(oldtext,newtext)
-	newfile = filecode.replace(oldcode,newcode)
-	
+	if not location.IsSpecial:
+		newfile = filecode.replace(oldcode,newcode)
+	else:
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0CODE::\n'
+		#need to do this because asm label weirdness (more accurately regex weirdness with them)
+		if ":" in oldcode:
+			lines = oldcode.partition('\n')
+			newfile = filecode.replace(oldcode,lines[0]+"\n"+labelCodeB+"".join(lines[1:])+labelCodeA)
+		else:
+			newfile = filecode.replace(oldcode,labelCodeB+oldcode+labelCodeA)
 	#write the new file into the files for the randomizer rom
 	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
 	newfilestream.seek(0)

@@ -61,6 +61,11 @@ def main
       .reject { |label| label.include?("ckir_AFTER") }
       .map do |label|
         post_label = label.gsub("ckir_BEFORE", "ckir_AFTER")
+        puts(label)
+        puts(label_addresses[label])
+        puts(post_label)
+        puts(label_addresses[post_label])
+        puts(label_addresses[label]...label_addresses[post_label])
         address_range = label_addresses[label]...label_addresses[post_label]
         [label, address_range]
       end
