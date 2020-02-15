@@ -4,7 +4,9 @@ import re
 import os
 import time
 import yaml
+import json
 import copy
+import mmap
 
 def ResetRom():
 	try:
@@ -19,6 +21,35 @@ def ResetRomForLabelling():
 	except:
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
+
+def DirectWriteItemLocations(locations):
+	codeLookup = Items.makeRawItemCodeDict()
+	yamlfile = open("crystal-speedchoice-label-details.json")
+	yamltext = yamlfile.read()
+	addressLists = json.loads(yamltext)
+	addressData = {}
+	for i in addressLists:
+		addressData[i['label'].split(".")[-1]] = i
+	print(addressData)
+	f = open('crystal-speedchoice-v6.0.gbc','r+b')
+	gameFile = mmap.mmap(f.fileno(),0)
+	for i in locations:
+		if i.isItem():
+			if not i.IsSpecial:
+				WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+
+		# elif i.isGym():
+			# WriteBadgeToRom(i)
+
+
+#STILL NEED TO WRITE THE REST OF THESE
+def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	print('Writing'+labelCodeB)
+	addressData = labelData[labelCodeB]
+	nItemCode = itemScriptLookup(location.item)
+	romMap[addressData["address_range"]["begin"]+1] = nItemCode
+
 
 def LabelAllLocations(locations):
 	#codeLookup = Items.makeItemCodeDict()
