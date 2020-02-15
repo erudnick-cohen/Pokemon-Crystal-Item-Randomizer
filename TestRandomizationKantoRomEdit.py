@@ -3,6 +3,7 @@ import Badge
 import RandomizeItems
 import RandomizerRom
 import PokemonRandomizer
+import yaml
 from collections import defaultdict
 
 res = LoadLocationData.LoadDataFromFolder(".")
@@ -85,10 +86,21 @@ for j in result[0]:
 	i = result[0][j]
 	if(i.NormalItem is not None and not i.isItem()):
 		print(i.Name)
+
+yamlfile = open("crystal-speedchoice-label-details.json")
+yamltext = yamlfile.read()
+addressLists = json.loads(yamltext)
+addressData = {}
+for i in addressLists:
+	addressData[i['label'].split(".")[-1]] = i
+print(addressData)
+		
+		
 monFun = PokemonRandomizer.generateRandomMonFun(result[2],result[0])
 banMap = defaultdict(lambda: [],{'FALKNER 1':['FISHER 11','CLAIR 1', 'BROCK 1'],'BUGSY 1':['CHAMPION 1']})
 #newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
-RandomizerRom.DirectWriteItemLocations(result[0].values())
+RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData)
+RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData):
 RandomizerRom.ApplyGamePatches()
 #RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 #RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
