@@ -60,7 +60,7 @@ def ApplyGamePatches():
 	yamltext = yamlfile.read()
 	patches = json.loads(yamltext)
 	for i in patches:
-		for j in range(0,len(i['integer_values']['new']):
+		for j in range(0,len(i['integer_values']['new'])):
 			gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
 
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
@@ -160,11 +160,11 @@ def LabelBadgeLocation(location):
 
 def LabelWild():
 	#load up the trainer file
-	jgfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_grass.asm")
-	kgfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_grass.asm")
-	jwfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_water.asm")
-	kwfile = open("Game Files/pokecrystal-speedchoice/data/wild/kanto_water.asm")
-	sfile = open("Game Files/pokecrystal-speedchoice/data/wild/swarm_grass.asm")
+	jgfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/data/wild/johto_grass.asm")
+	kgfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/data/wild/kanto_grass.asm")
+	jwfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/data/wild/johto_water.asm")
+	kwfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/data/wild/kanto_water.asm")
+	sfile = open("VanillaSpeedCrystal/pokecrystal-speedchoice/data/wild/swarm_grass.asm")
 	wildDict = {}
 	surfDict = {}
 	swarmDict = {}
@@ -183,11 +183,11 @@ def LabelWild():
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
-		idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"+"::\n\n\t"
+		idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"+"::\n\n\t"
 		idTextA = "\nckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"+"::\n\n"
-		wildDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+		wildDict[areaData["File"]] = wildDict[areaData["File"]].replace(areaData['Code'],idTextB+areaData['Code']+idTextA)
 	for i in wildDict:
-		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream = open("RandomizerRom/data/wild/"+i,'r+')
 		newfilestream.seek(0)
 		newfilestream.write(wildDict[i])
 		newfilestream.flush()
