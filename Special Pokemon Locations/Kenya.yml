@@ -24,7 +24,7 @@ Code: |
         playsound SFX_KEY_ITEM
         waitsfx
     Randomizer_KenyaSpecies::
-        MONLINE, 10, NO_ITEM, 1, GiftSpearowName, GiftSpearowOTName
+        MONLINE
         givepokeitem GiftSpearowMail
         setevent EVENT_GOT_KENYA
     GGOfficeralreadyhavekenya:

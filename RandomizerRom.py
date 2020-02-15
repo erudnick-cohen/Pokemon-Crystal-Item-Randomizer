@@ -297,8 +297,11 @@ def LabelWild():
 		os.fsync(newfilestream.fileno())
 		newfilestream.close()
 
-def LabelSpecialWild():
+def LabelSpecialWild(locationList):
 	monList = []
+	locationDict = {}
+	for i in locationList:
+		locationDict[i.Name] = i
 	print("Editing Special Pokemon")
 	for root, dir, files  in os.walk("Special Pokemon Locations"):
 		for file in files:
@@ -306,36 +309,27 @@ def LabelSpecialWild():
 			entry = open("Special Pokemon Locations/"+file,'r')
 			yamlData = yaml.load(entry)
 			loc = yamlData["Location"]
-			if(loc in locationDict):
+			if(True):
 				fileName = locationDict[loc].FileName
 				mon = yamlData["NormalMon"]
 				shift = yamlData["LevelShift"]
 				type = yamlData["Type"]
 				code = yamlData["Code"]
 				#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
-				newmon = monFun(mon,1001)
-				givestr = ""
-				if(type == 'Give Mon with Berry'):
-						givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)+', BERRY'
-				if(type == 'Wild Pokemon'):
-					givestr = 'loadwildmon '+newmon+', '+str(distDict[loc]+shift)
-				if(type == 'Give Egg'):
-					givestr = 'giveegg '+newmon+', '+str(distDict[loc]+shift)
-				if(type == 'Give Poke'):
-					givestr = 'givepoke '+newmon+', '+str(distDict[loc]+shift)
-				newcode = code.replace("MONLINE",givestr).replace("MONNAME",newmon)
-				#switch spaces to tabs.....
-				newcode = newcode.replace("    ","\t")
-				idTextB = ".ckir_BEFORE"+"".join(j.upper().split())+"0SPECIALWILD"+"::\n"
-				idTextA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0SPECIALWILD"+"::\n"
+				newmon = mon
+
+				idTextB = ".ckir_BEFORE"+"".join(loc.upper().split()).replace('.','_').replace("'","")+"0SPECIALWILD"+"::\n"
+				idTextA = "\n.ckir_AFTER"+"".join(loc.upper().split()).replace('.','_').replace("'","")+"0SPECIALWILD"+"::\n"
 				#find the code we need to replace
-				coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("MONLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+				coderegexstr = "("+re.escape(yamlData['Code'].replace('MONNAME',newmon).replace("    ","\t").replace("\tMONLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 				file = open("RandomizerRom/maps/"+fileName)
 				filecode = file.read()
+				print(coderegexstr)
 				codeSearch = re.findall(coderegexstr,filecode)[0]
 				oldcode = codeSearch[0]
-
-				newfile = filecode.replace(oldcode,idTextB+code[1]+idTextA)
+				newcode = oldcode.replace(codeSearch[1],idTextB+codeSearch[1]+idTextA)
+				print(newcode)
+				newfile = filecode.replace(oldcode,newcode)
 				#write the new file into the files for the randomizer rom
 				newfilestream = open("RandomizerRom/maps/"+fileName,'w')
 				newfilestream.seek(0)
