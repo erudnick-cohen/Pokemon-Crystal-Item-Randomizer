@@ -40,7 +40,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 						for k in range(5,len(addressData[idTextB]['integer_values']),2):
 							cLV = addressData[idTextB]['integer_values'][k]
 							nLV = max(cLV-minLV+distDict[i], 2)
-							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
 	#loop through locations
 	#load up the water data
 	yamlfile = open("Wild Data/surfGrass.yaml")
@@ -57,7 +57,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 						for k in range(5,len(addressData[idTextB]['integer_values']),2):
 							cLV = addressData[idTextB]['integer_values'][k]
 							nLV = max(cLV-minLV+distDict[i], 2)
-							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
 	for i in surfDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
 		newfilestream.seek(0)
@@ -279,9 +279,9 @@ def LabelWild():
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
-		idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"+"::\n\n\t"
+		idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"+"::\n\n\t"
 		idTextA = "\nckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDWATER"+"::\n"
-		surfDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+		surfDict[areaData["File"]] =  surfDict[areaData["File"]].replace(areaData['Code'],idTextB+areaData['Code']+idTextA)
 	for i in surfDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
 		newfilestream.seek(0)
@@ -301,9 +301,9 @@ def LabelWild():
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
-		idTextB = ".ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"+"::\n\n\t"
+		idTextB = "\n.ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"+"::\n\n\t"
 		idTextA = "\n.ckir_AFTER"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"+"::\n"
-		swarmDict[areaData["File"]] = idTextB+areaData['Code']+idTextA
+		swarmDict[areaData["File"]] =  swarmDict[areaData["File"]].replace(areaData['Code'],idTextB+areaData['Code']+idTextA)
 	for i in swarmDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
 		newfilestream.seek(0)
