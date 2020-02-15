@@ -34,7 +34,7 @@ Location:
                 IsBall: Yes
                 Code: |
                     SlowpokeWellB1FSuperPotion:
-                        itemball SUPER_POTION
+                        ITEMLINE
                 Text:
                 TrainerList:
                 Sublocations:
