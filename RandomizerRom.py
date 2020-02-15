@@ -22,6 +22,80 @@ def ResetRomForLabelling():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
+def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
+	surfDist = max(distDict['Surf'],distDict['Fog Badge'])
+	#loop through locations
+	#load up the grass data
+	yamlfile = open("Wild Data/wildGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					print('Writing '+j+" at "+location.Name)
+					if j.upper() in wildData:
+						idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"
+						for k in range(5,len(addressData[idTextB]['integer_values']),2):
+							cLV = addressData[idTextB]['integer_values'][k]
+							nLV = max(cLV-minLV+distDict[i], 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV)
+	#loop through locations
+	#load up the water data
+	yamlfile = open("Wild Data/surfGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					print('Writing '+j+" at "+location.Name)
+					if j.upper() in wildData:
+						idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"
+						for k in range(5,len(addressData[idTextB]['integer_values']),2):
+							cLV = addressData[idTextB]['integer_values'][k]
+							nLV = max(cLV-minLV+distDict[i], 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV)
+	for i in surfDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(surfDict[i])
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
+	#loop through locations
+	#load up the swarm data
+	yamlfile = open("Wild Data/swarmGrass.yaml")
+	yamltext = yamlfile.read()
+	wildData = yaml.load(yamltext)
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					if j.upper() in wildData:
+						print('Writing '+j+" at "+location.Name)
+						areaData = wildData[j.upper()]
+						newcode = areaData['Code']
+						minLV = areaData['Level']
+						for k in areaData['Pokemon']:
+							for l in areaData['Pokemon'][k]:
+								pokemon = monFun(k,distDict[i])
+								level = l
+								newlevel = max(level-minLV+distDict[i], 2)
+								newcode = newcode.replace("db "+str(level)+", "+k,"db "+str(newlevel)+", "+pokemon )
+						swarmDict[areaData["File"]] = swarmDict[areaData["File"]].replace(areaData['Code'],newcode)
+	for i in swarmDict:
+		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
+		newfilestream.seek(0)
+		newfilestream.write(swarmDict[i])
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
 
 def DirectWriteItemLocations(locations):
 	codeLookup = Items.makeRawItemCodeDict()
