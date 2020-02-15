@@ -22,6 +22,7 @@ def ResetRomForLabelling():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
+
 def DirectWriteItemLocations(locations):
 	codeLookup = Items.makeRawItemCodeDict()
 	yamlfile = open("crystal-speedchoice-label-details.json")
@@ -31,24 +32,90 @@ def DirectWriteItemLocations(locations):
 	for i in addressLists:
 		addressData[i['label'].split(".")[-1]] = i
 	print(addressData)
+	
+	yamlfile = open("badgeData.yml")
+	yamltext = yamlfile.read()
+	gymOffsets = yaml.load(yamltext)
 	f = open('crystal-speedchoice-v6.0.gbc','r+b')
 	gameFile = mmap.mmap(f.fileno(),0)
 	for i in locations:
 		if i.isItem():
 			if not i.IsSpecial:
 				WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+			else:
+				if i.Name == "Elm Aide Pokeballs":
+					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
+				if i.Name == "Dragons Den Dragon Fang":
+					#this just happens to work, its in the same byte offset
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+				if i.Name == "Hidden Machine Part":
+					WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
+		elif i.isGym():
+			WriteBadgeToRomMemory(i,addressData,gymOffsets,gameFile)
 
-		# elif i.isGym():
-			# WriteBadgeToRom(i)
+def ApplyGamePatches():
+	f = open('crystal-speedchoice-v6.0.gbc','r+b')
+	gameFile = mmap.mmap(f.fileno(),0)
+	yamlfile = open("item-randomizer-patches-diff-speedchoice.json")
+	yamltext = yamlfile.read()
+	patches = json.loads(yamltext)
+	for i in patches:
+		for j in range(0,len(i['integer_values']['new']):
+			gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
 
-
+def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+	print('Writing '+labelCodeB)
+	addressData = labelData[labelCodeB]
+	romMap[addressData["address_range"]["begin"]+1] = location.badge.Code
+	#borrowing this trick from goldenrules's key item randomizer
+	nString = "It's\n"+location.badge.Name.upper()
+	for i in range(0,len(nString)):
+		#+1 to dodge the initial byte that isn't part of the text
+		#note that this leaves the remaining text as "garbage", since we are terminating the string ourselves
+		print(nString[i])
+		nByte = str.encode(nString[i],'ascii')
+		nByte = int.from_bytes(nByte,'big')-65+128
+		if nString[i] == '\n':
+			nByte = 79
+		if nString[i] == "'":
+			nByte = 224
+		if nString[i] == " ":
+			nByte = 127
+		print(romMap[gymOffsets[location.Name]+i+1])
+		print('to')
+		print(nByte)
+		romMap[gymOffsets[location.Name]+i+1] = nByte
+		print('---')
+	#add the done character to the end
+	romMap[gymOffsets[location.Name]+len(nString)+1] = 87
+	#then terminate the string
+	romMap[gymOffsets[location.Name]+len(nString)+2] = 50
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	print('Writing '+labelCodeB)
+	addressData = labelData[labelCodeB]
+	nItemCode = itemScriptLookup(location.item)
+	if location.IsBall:
+		romMap[addressData["address_range"]["begin"]] = nItemCode
+	else:
+		romMap[addressData["address_range"]["begin"]+1] = nItemCode
+		
+def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCode = itemScriptLookup(location.item)
-	romMap[addressData["address_range"]["begin"]+1] = nItemCode
+	romMap[addressData["address_range"]["begin"]+6] = nItemCode
+	romMap[addressData["address_range"]["begin"]+12] = nItemCode
+
+def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	print('Writing'+labelCodeB)
+	addressData = labelData[labelCodeB]
+	nItemCode = itemScriptLookup(location.item)
+	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
 def LabelAllLocations(locations):
