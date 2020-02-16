@@ -378,18 +378,18 @@ def LabelTrainerData(trainerData):
 	for j in trainerData:
 		trainer = trainerData[j]
 		print('Labeling '+j)
-		nCode = trainer['Code'].split("; party")[0]
-		idText = "."+"".join(j.upper().split())+"0TRAINER::\n\t"
-		for k in range(0,len(trainer['Pokemon'])):
-			print('Labeling mon '+str(k))
-			pCode = trainer['Pokemon'][k]['Code']
-			idTextPB = "\n.ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
-			idTextPA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
-			#nCode = nCode.replace("\t"+pCode,idTextPB+pCode+idTextPA,1)
-			nCode = nCode+idTextPB+pCode+idTextPA
-		nCode = nCode + "\n\tdb $ff ; end"
+		nCode = trainer['Code']
+		idTextA = "\n.ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER::\n\t"
+		idTextB = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER::\n\t"
+		# for k in range(0,len(trainer['Pokemon'])):
+		# 	print('Labeling mon '+str(k))
+		# 	pCode = trainer['Pokemon'][k]['Code'][:-1]
+		# 	idTextPB = "\n.ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n\t"
+		# 	idTextPA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
+		# 	#nCode = nCode.replace("\t"+pCode,idTextPB+pCode+idTextPA,1)
+		# 	nCode = nCode+idTextPB+pCode+idTextPA
 		#newfile = newfile.replace("\t"+trainer['Code'],idText+nCode,1)
-		newfile = newfile.replace("\t"+trainer['Code'],idText+nCode,1)
+		newfile = newfile.replace("\t"+trainer['Code'],idTextA+nCode+idTextB)
 	newfilestream = open("RandomizerRom/trainers/trainers.asm",'w')
 	newfilestream.seek(0)
 	newfilestream.write(newfile)
