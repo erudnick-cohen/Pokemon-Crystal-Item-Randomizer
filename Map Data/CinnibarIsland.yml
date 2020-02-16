@@ -4,7 +4,7 @@ Location:
         FileName: CinnibarIsland.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList: CINNABAR_ISLAND
         LocationReqs:
             - Route 22
         FlagReqs:
