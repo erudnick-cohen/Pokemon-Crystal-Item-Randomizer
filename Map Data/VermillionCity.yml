@@ -5,6 +5,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+             - VERMILION_PORT
+             - VERMILION_CITY
         LocationReqs: SS Aqua
         FlagReqs:
         ItemReqs:
@@ -20,7 +22,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: SS Aqua
+                LocationReqs: Vermillion City
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -57,7 +59,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: SS Aqua
+                LocationReqs: Vermillion City
                 FlagReqs:
                     - Saffron City
                     - Lavender Town
@@ -65,14 +67,13 @@ Location:
                     - Machine Part
                 FlagsSet:
                 ReachableReqs:
-                IsSpecial: Yes
                 Code: |
                     UnknownScript_0x191844:
                         buttonsound
                         writetext UnknownText_0x191c5a
                         buttonsound
                         waitsfx
-                        giveitem ITEMLINE
+                        ITEMLINE
                         iffalse UnknownScript_0x191865
                         disappear POKEMONFANCLUB_FAIRY
                         writetext UnknownText_0x191d0a

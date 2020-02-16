@@ -4,7 +4,7 @@ Location:
         FileName: PalletTown.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList: PALLET_TOWN
         LocationReqs:
             - Route 1
         FlagReqs:

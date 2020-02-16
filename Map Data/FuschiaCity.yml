@@ -36,7 +36,7 @@ Location:
         FileName: FuchsiaCity.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList: FUCHSIA_CITY
         LocationReqs:
             - Route 15
         FlagReqs:

@@ -4,7 +4,7 @@ Location:
         FileName: CeladonCity.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList: CELADON_CITY
         LocationReqs:
             - Route 7
         FlagReqs:
