@@ -257,8 +257,8 @@
             "new": [64, 12, 16, 3, 0, 255, 255, 0, 0, 191, 89, 200, 6]
         },
         "address_range": {
-            "begin": 515530,
-            "end": 515534
+            "begin": 515520,
+            "end": 515533
         },
         "label": "Director permanently stuck in basement",
         "description": "Make director always present in basement, to prevent softlocks"
@@ -269,8 +269,8 @@
             "new": [6, 14, 13, 7, 0, 255, 255, 128, 0, 3, 70, 200, 6]
         },
         "address_range": {
-            "begin": 1623643,
-            "end": 1623643
+            "begin": 1623631,
+            "end": 1623644
         },
         "label": "Red always in mt. silver",
         "description": "Causes red to always be present at mt. silver, without needing to defeat the E4"

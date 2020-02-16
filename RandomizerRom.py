@@ -35,12 +35,30 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap):
 				for j in location.Trainers:
 					trainer = trainerData[j]
 					print('Writing '+j)
+					idTextB = "ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER"
+					if int(trainer['Type']) == 1:
+						monJump = 6
+					if int(trainer['Type']) == 0:
+						monJump = 2
+					if int(trainer['Type']) == 2:
+						monJump = 3
+					baseOffset = 0
+					#find base offset (WHY ISN'T THIS CONSTANT???? Answer: Because there is a string in each entry!!!!)
+					k = 0
+					while k < len(addressData[idTextB]['integer_values'].split()):
+						print(romMap[addressData[idTextB]['address_range']['begin']+k])
+						if romMap[addressData[idTextB]['address_range']['begin']+k] == int(trainer['Type']):
+							baseOffset = k
+							k = len(addressData[idTextB]['integer_values'].split())
+						k = k+1
 					for k in range(0,len(trainer['Pokemon'])):
 						print('Writing mon '+str(k))
 						level = trainer['Pokemon'][k]['Level']
-						idTextB = "ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)
 						newlevel = max(level-location.AreaLevel+distDict[i], 2)
-						romMap[addressData[idTextB]['address_range']['begin']] = newlevel
+						print(romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1])
+						print('to')
+						print(newlevel)
+						romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1] = newlevel
 
 def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 	surfDist = max(distDict['Surf'],distDict['Fog Badge'])
