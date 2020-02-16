@@ -253,20 +253,20 @@
 
     {
         "integer_values": {
-            "old": [316],
-            "new": [7]
+            "old": [64, 12, 16, 3, 0, 255, 255, 0, 0, 191, 89, 206, 6],
+            "new": [64, 12, 16, 3, 0, 255, 255, 0, 0, 191, 89, 200, 6]
         },
         "address_range": {
-            "begin": 515532,
-            "end": 515532
+            "begin": 515530,
+            "end": 515534
         },
         "label": "Director permanently stuck in basement",
         "description": "Make director always present in basement, to prevent softlocks"
     },
     {
         "integer_values": {
-            "old": [142],
-            "new": [7]
+            "old": [6, 14, 13, 7, 0, 255, 255, 128, 0, 3, 70, 98, 7],
+            "new": [6, 14, 13, 7, 0, 255, 255, 128, 0, 3, 70, 200, 6]
         },
         "address_range": {
             "begin": 1623643,

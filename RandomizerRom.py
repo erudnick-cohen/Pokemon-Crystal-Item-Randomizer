@@ -38,7 +38,7 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap):
 					for k in range(0,len(trainer['Pokemon'])):
 						print('Writing mon '+str(k))
 						level = trainer['Pokemon'][k]['Level']
-						idTextPB = ".ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)
+						idTextB = "ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)
 						newlevel = max(level-location.AreaLevel+distDict[i], 2)
 						romMap[addressData[idTextB]['address_range']['begin']] = newlevel
 
