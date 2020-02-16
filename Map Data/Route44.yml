@@ -28,7 +28,7 @@ Location:
                 FileName: Route44.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_44
+                WildTableList: 
                 LocationReqs: Route 44
                 FlagReqs:
                 ItemReqs:
@@ -47,7 +47,7 @@ Location:
                 FileName: Route44.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_44
+                WildTableList: 
                 LocationReqs: Route 44
                 FlagReqs:
                 ItemReqs:
@@ -66,7 +66,7 @@ Location:
                 FileName: Route44.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_44
+                WildTableList: 
                 LocationReqs: Route 44
                 FlagReqs:
                 ItemReqs:

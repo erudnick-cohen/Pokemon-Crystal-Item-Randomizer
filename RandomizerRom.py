@@ -22,9 +22,27 @@ def ResetRomForLabelling():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
-def WriteWildLevelsToMemory(locationDict, distDict,addressData):
-	f = open('crystal-speedchoice-v6.0.gbc','r+b')
-	romMap = mmap.mmap(f.fileno(),0)
+def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap):
+	#load up the trainer data
+	yamlfile = open("TrainerData/Trainers.yaml")
+	yamltext = yamlfile.read()
+	trainerData = yaml.load(yamltext)
+	#loop through locations
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.Trainers is not None:
+				for j in location.Trainers:
+					trainer = trainerData[j]
+					print('Writing '+j)
+					for k in range(0,len(trainer['Pokemon'])):
+						print('Writing mon '+str(k))
+						level = trainer['Pokemon'][k]['Level']
+						idTextPB = ".ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)
+						newlevel = max(level-location.AreaLevel+distDict[i], 2)
+						romMap[addressData[idTextB]['address_range']['begin']] = newlevel
+
+def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 	surfDist = max(distDict['Surf'],distDict['Fog Badge'])
 	#loop through locations
 	for i in distDict:
@@ -32,69 +50,82 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData):
 			location = locationDict[i]
 			if location.WildTableList is not None:
 				for j in location.WildTableList:
-					print('Writing '+j+" at "+location.Name)
-					idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"
-					minLV = float('inf')
-					#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY to low level
-					LVthresh = 0
-					if "SILVERCAVEROOM" in location.Name:
-						LVthresh = 40
-					for k in range(5,len(addressData[idTextB]['integer_values']),2):
-						minLV = min(addressData[idTextB]['integer_values'][k],max(minLV,LVthresh))
-					for k in range(5,len(addressData[idTextB]['integer_values']),2):
-						cLV = addressData[idTextB]['integer_values'][k]
-						nLV = max(cLV-minLV+distDict[i], 2)
-						romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
-	#loop through locations
-	for i in distDict:
-		if i in locationDict:
-			location = locationDict[i]
-			if location.WildTableList is not None:
-				for j in location.WildTableList:
-					print('Writing '+j+" at "+location.Name)
-					idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"
-					minLV = float('inf')
-					for k in range(3,len(addressData[idTextB]['integer_values']),2):
-						minLV = min(addressData[idTextB]['integer_values'][k],minLV)
-					for k in range(3,len(addressData[idTextB]['integer_values']),2):
-						cLV = addressData[idTextB]['integer_values'][k]
-						nLV = max(cLV-minLV+max(surfDist,distDict[i]), 2)
-						romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
-	#loop through locations
-	#load up the swarm data
-	yamlfile = open("Wild Data/swarmGrass.yaml")
-	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
-	for i in distDict:
-		if i in locationDict:
-			location = locationDict[i]
-			if location.WildTableList is not None:
-				for j in location.WildTableList:
-					print('Writing '+j+" at "+location.Name)
-					idTextB = "\nckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"
-					minLV = float('inf')
-					for k in range(5,len(addressData[idTextB]['integer_values']),2):
-						minLV = min(addressData[idTextB]['integer_values'][k],minLV)
-					for k in range(5,len(addressData[idTextB]['integer_values']),2):
-						cLV = addressData[idTextB]['integer_values'][k]
-						nLV = max(cLV-minLV+distDict[i], 2)
-						romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"
+					if(idTextB in addressData):
+						print('Writing '+j+" at "+location.Name)
+						aData = addressData[idTextB]['integer_values'].split(" ")
+						minLV = float('inf')
+						#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY to low level
+						LVthresh = 0
+						if "SILVERCAVEROOM" in location.Name:
+							LVthresh = 40
+						for k in range(5,len(aData),2):
+							minLV = min(int(aData[k]),max(minLV,LVthresh))
+						for k in range(5,len(aData),2):
+							cLV = int(aData[k])
+							nLV = max(cLV-minLV+distDict[i], 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
 
-def DirectWriteItemLocations(locations):
+	#loop through locations
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"
+					if(idTextB in addressData):
+						print('Writing '+j+" at "+location.Name)
+						aData = addressData[idTextB]['integer_values'].split(" ")
+						minLV = float('inf')
+						for k in range(5,len(aData),2):
+							minLV = min(int(aData[k]),minLV)
+						for k in range(5,len(aData),2):
+							cLV = int(aData[k])
+							nLV = max(cLV-minLV+distDict[i], 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+	#loop through locations
+	for i in distDict:
+		if i in locationDict:
+			location = locationDict[i]
+			if location.WildTableList is not None:
+				for j in location.WildTableList:
+					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"
+					if(idTextB in addressData):
+						print('Writing '+j+" at "+location.Name)
+						aData = addressData[idTextB]['integer_values'].split(" ")
+						minLV = float('inf')
+						for k in range(5,len(aData),2):
+							minLV = min(int(aData[k]),minLV)
+						for k in range(5,len(aData),2):
+							cLV = int(aData[k])
+							nLV = max(cLV-minLV+distDict[i], 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+
+def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap):
+	monList = []
+	print("Editing Special Pokemon")
+	for root, dir, files  in os.walk("Special Pokemon Locations"):
+		for file in files:
+			print("File: "+file)
+			entry = open("Special Pokemon Locations/"+file,'r')
+			yamlData = yaml.load(entry)
+			loc = yamlData["Location"]
+			if(True):
+				idTextB = "ckir_BEFORE"+"".join(loc.upper().split()).replace('.','_').replace("'","")+"0SPECIALWILD"
+				cLV = addressData[idTextB]['integer_values'][2]
+				mon = yamlData["NormalMon"]
+				shift = yamlData["LevelShift"]
+				type = yamlData["Type"]
+				code = yamlData["Code"]
+				#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
+				newmon = mon
+				romMap[addressData[idTextB]['address_range']['begin']+2] = distDict[loc]+shift
+
+def DirectWriteItemLocations(locations,addressData,gameFile):
 	codeLookup = Items.makeRawItemCodeDict()
-	yamlfile = open("crystal-speedchoice-label-details.json")
-	yamltext = yamlfile.read()
-	addressLists = json.loads(yamltext)
-	addressData = {}
-	for i in addressLists:
-		addressData[i['label'].split(".")[-1]] = i
-	print(addressData)
-	
 	yamlfile = open("badgeData.yml")
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext)
-	f = open('crystal-speedchoice-v6.0.gbc','r+b')
-	gameFile = mmap.mmap(f.fileno(),0)
 	for i in locations:
 		if i.isItem():
 			if not i.IsSpecial:
@@ -110,9 +141,7 @@ def DirectWriteItemLocations(locations):
 		elif i.isGym():
 			WriteBadgeToRomMemory(i,addressData,gymOffsets,gameFile)
 
-def ApplyGamePatches():
-	f = open('crystal-speedchoice-v6.0.gbc','r+b')
-	gameFile = mmap.mmap(f.fileno(),0)
+def ApplyGamePatches(gameFile):
 	yamlfile = open("item-randomizer-patches-diff-speedchoice.json")
 	yamltext = yamlfile.read()
 	patches = json.loads(yamltext)
@@ -157,6 +186,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	if location.IsBall:
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 	else:
+		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
+		romMap[addressData["address_range"]["begin"]] = 158
 		romMap[addressData["address_range"]["begin"]+1] = nItemCode
 		
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):

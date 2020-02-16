@@ -56,7 +56,7 @@ Location:
                 FileName: Route34.asm
                 Type: Item
                 HasPKMN: Yes
-                WildTableList: ROUTE_34
+                WildTableList: 
                 LocationReqs: Route 34
                 FlagReqs:
                     - Fog Badge
@@ -94,7 +94,7 @@ Location:
                 FileName: Route34.asm
                 Type: Item
                 HasPKMN: Yes
-                WildTableList: ROUTE_34
+                WildTableList: 
                 LocationReqs: Route 34
                 FlagReqs:
                     - Fog Badge

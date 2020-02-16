@@ -19,7 +19,7 @@ Location:
                 FileName: Route31.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_31
+                WildTableList: 
                 LocationReqs: Route 31
                 FlagReqs:
                 ItemReqs:
@@ -37,7 +37,7 @@ Location:
                 FileName: Route31.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_31
+                WildTableList: 
                 LocationReqs: Route 31
                 FlagReqs:
                 ItemReqs:
@@ -55,7 +55,7 @@ Location:
                 FileName: Route31.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: Route_31
+                WildTableList: 
                 LocationReqs: Route 31
                 FlagReqs: Kenya Obtained
                 ItemReqs:
@@ -107,7 +107,7 @@ Location:
                 FileName: Route31.asm
                 Type: Map
                 HasPKMN: No
-                WildTableList: Route_31
+                WildTableList: 
                 LocationReqs: Route 31
                 FlagReqs:
                 ItemReqs:

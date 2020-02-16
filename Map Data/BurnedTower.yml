@@ -23,7 +23,7 @@ Location:
                 FileName: BurnedTower1F.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: BURNED_TOWER_1F
+                WildTableList: 
                 LocationReqs: Ecruteak City
                 FlagReqs:
                 ItemReqs: 
@@ -59,7 +59,7 @@ Location:
                 FileName: BurnedTowerB1F.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: BURNED_TOWER_B1F
+                WildTableList: 
                 LocationReqs: Ecruteak City
                 FlagReqs: 
                     - Plain Badge

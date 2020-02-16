@@ -23,18 +23,6 @@
         "label": "FlowerShopTeacherScript.ckir_BEFORE_CHECKEVENT_EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP",
         "description": "Allow the player to skip talking to Floria back at the Flower Shop"
     },
-    {
-        "integer_values": {
-            "old": [ 49, 205, 0 ],
-            "new": [ 49,  26, 0 ]
-        },
-        "address_range": {
-            "begin": 348398,
-            "end": 348401
-        },
-        "label": "OfficerScript_0x550ec.ckir_BEFORE_CHECKEVENT_EVENT_RESTORED_POWER_TO_KANTO",
-        "description": "All the player to take the train from Goldenrod to Saffrom before fixing the Power Plant"
-    },
 
     {
         "integer_values": {
@@ -286,6 +274,40 @@
         },
         "label": "Red always in mt. silver",
         "description": "Causes red to always be present at mt. silver, without needing to defeat the E4"
+    },
+   {
+    "address_range": {
+        "begin": 460315,
+        "end" : 460340},
+        "integer_values": {
+            "old": [0, 82, 127, 174, 161, 179, 160, 168,
+                     173, 164, 163, 127, 160, 79, 145,
+                     132, 131, 127, 146, 130, 128, 139,
+                     132, 232, 87],
+            "new": [0, 135, 172, 172, 172, 172, 172, 172,
+                     87, 50, 163, 127, 160, 79, 145,
+                     132, 131, 127, 146, 130, 128, 139,
+                     132, 232, 87]
+                     },
+        "label": "Red scale text change",
+        "description": "Change red scale text so the game doesn't confuse the player"
+    },
+    {
+    "address_range": {
+        "begin": 1667591,
+        "end" : 1667616},
+        "integer_values": {
+            "old": [0, 82, 127, 177, 164, 162, 164, 168,
+                     181, 164, 163, 79, 140, 152, 146,
+                     147, 132, 145, 152, 127, 132, 134,
+                     134, 232, 87],
+            "new": [0, 142, 170, 230, 87, 150, 164, 168,
+                     181, 164, 163, 79, 140, 152, 146,
+                     147, 132, 145, 152, 127, 132, 134,
+                     134, 232, 87]
+                     },
+        "label": "Mr. Pokemon text change",
+        "description": "Change Mr. Pokemon text so the game doesn't confuse the player"
     },
     {
         "integer_values": {
@@ -555,5 +577,29 @@
         },
         "label": "BlueScript_0x9aa26.ckir_BEFORE_checkflag_ENGINE_EARTHBADGE",
         "description": "For badge randomization, enable the player to battle the gym leader even if the player already has their vanilla badge"
+    },
+    {
+        "integer_values": {
+            "old": [ 52, 34, 0 ],
+            "new": [ 52, 76, 0 ]
+        },
+        "address_range": {
+            "end": 1658406,
+            "begin": 1658409
+        },
+        "label": "Clair weird checking",
+        "description": "For badge randomization, ensure that clair actually doesn't care about you having the vanilla badge. Check is rerouted to the silver cave flypoint, which cannot be reached without beating clair in the first place"
+    },
+    {
+        "integer_values": {
+            "old": [ 52, 29, 0 ],
+            "new": [ 52, 76, 0 ]
+        },
+        "address_range": {
+            "end": 344138,
+            "begin": 344141
+        },
+        "label": "Whitney weird checking",
+        "description": "For badge randomization, ensure that whitney actually doesn't care about you having the vanilla badge. Check is rerouted to the silver cave flypoint, which cannot be reached without beating whitney in the first place"
     }
 ]

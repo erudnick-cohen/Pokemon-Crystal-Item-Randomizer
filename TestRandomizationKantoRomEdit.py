@@ -4,6 +4,8 @@ import RandomizeItems
 import RandomizerRom
 import PokemonRandomizer
 import yaml
+import json
+import mmap
 from collections import defaultdict
 
 res = LoadLocationData.LoadDataFromFolder(".")
@@ -94,14 +96,16 @@ addressData = {}
 for i in addressLists:
 	addressData[i['label'].split(".")[-1]] = i
 print(addressData)
-		
-		
-monFun = PokemonRandomizer.generateRandomMonFun(result[2],result[0])
-banMap = defaultdict(lambda: [],{'FALKNER 1':['FISHER 11','CLAIR 1', 'BROCK 1'],'BUGSY 1':['CHAMPION 1']})
+
 #newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
-RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData)
-RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData):
-RandomizerRom.ApplyGamePatches()
+
+f = open('crystal-speedchoice-v6.0.gbc','r+b')
+romMap = mmap.mmap(f.fileno(),0)
+RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap)
+RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap)
+RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap)
+RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap)
+RandomizerRom.ApplyGamePatches(romMap)
 #RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 #RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 #RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

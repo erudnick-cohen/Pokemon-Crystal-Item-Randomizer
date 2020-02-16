@@ -26,7 +26,7 @@ Location:
         FileName: Route43.asm
         Type: Item
         HasPKMN: No
-        WildTableList: Route_43
+        WildTableList: 
         LocationReqs: Route 43
         FlagReqs:
         ItemReqs:
@@ -45,7 +45,7 @@ Location:
         FileName: Route43Gate.asm
         Type: Item
         HasPKMN: No
-        WildTableList: Route_43
+        WildTableList: 
         LocationReqs: Route 43
         FlagReqs:
             - Mahogany Rockets Defeated
