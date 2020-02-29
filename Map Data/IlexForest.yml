@@ -165,7 +165,7 @@ Location:
         FileName: IlexForest.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: ILEX_FOREST
+        WildTableList:
         LocationReqs: Ilex Forest Back Entrance
         FlagReqs:
         ItemReqs:
