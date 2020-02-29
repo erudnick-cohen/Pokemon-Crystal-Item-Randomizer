@@ -106,10 +106,19 @@ class Location:
 	def isGym(self):
 		return False
 	
+		#get all trash items in this locations tree
+	def applyBanList(self, banList, allowList):
+		list = [];
+		if((not (banList is None) and self.Name in banList) or (self.Name not in allowList and not (allowList is None))):
+			print('Banning '+self.Name)
+			self.IsItem = False
+		for i in self.Sublocations:
+			 i.applyBanList(banList, allowList)
+	
 	#get all trash items in this locations tree
 	def getTrashItemList(self):
 		list = [];
-		if(self.NormalItem is not None):
+		if(self.NormalItem is not None and self.isItem()):
 			list.append(self.NormalItem)
 		for i in self.Sublocations:
 			list.extend(i.getTrashItemList())

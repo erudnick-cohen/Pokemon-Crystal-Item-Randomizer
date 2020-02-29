@@ -132,6 +132,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			#update trashList
 			random.shuffle(trashSpots)
 			oldTrashList.extend(trashSpots)
+			print(trashSpots)
 			trashSpots = []
 			print('Got stuck, forcing progress')
 			print('Current state')
@@ -208,7 +209,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						upper = min(len(oldTrashList)-1,center+rrange)
 						lower = max(center-rrange,1)
 						randspot = int(round(random.triangular(lower,upper,center)))
-						place = random.choice(oldTrashList[randspot:])
+						print(oldTrashList)
+						if(len(oldTrashList)> 1):
+							place = random.choice(oldTrashList[randspot:])
+						else:
+							place = oldTrashList[0]
 						trashItems.append(place.item)
 						place.item = j
 						oldTrashList.remove(place)

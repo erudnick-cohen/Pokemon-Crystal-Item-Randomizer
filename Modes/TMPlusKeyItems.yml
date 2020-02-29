@@ -1,0 +1,69 @@
+Name: TMsPlusKeyItems
+BannedLocations:
+AllowedLocations:
+    - Mr. Pokemon's Egg
+    - Route 31 Kenya Item
+    - Sprout Tower Sage Li
+    - Falkner TM
+    - Old Rod
+    - Roar Dude
+    - Union Cave Floor 2 Swift
+    - Bugsy TM
+    - Rain Dance
+    - Cut HM
+    - Headbutt
+    - Sweet Scent
+    - Bike
+    - Coin Case
+    - Buena Item
+    - Whitney 
+    - Goldenrod City Flower Shop
+    - Rollout TM
+    - Dig TM
+    - Route 36 Rock Smash Item
+    - Dance Theatre
+    - Itemfinder House
+    - Morty TM
+    - Burned Tower Strength Item
+    - Strength HM
+    - Fishing Guru
+    - Lighthouse Swagger TM
+    - Jasmine TM
+    - Secret Potion Man
+    - Chuck TM
+    - Chuck's Wife
+    - Defense Curl TM
+    - Sludge Bomb TM
+    - Red Scale Dropped
+    - Detect TM
+    - Hidden Power
+    - Rocket Base 2F Thief TM
+    - Rocket Base Whirlpool
+    - Pryce TM
+    - Sleep Talk TM
+    - Radio Tower Rockets Part 1
+    - Goldenrod Tunnel Rocket Attack
+    - Radio Tower Rockets Part 2
+    - Sunny Day TM
+    - Ice Path Waterfall
+    - Rest TM
+    - Claire TM
+    - Snore TM
+    - SS Ticket
+    - Solar Beam TM
+    - Earthquake TM
+    - Vermillion City Lost Item
+    - Mr Psychic
+    - Rail Pass
+    - Erika TM
+    - Fuchsia Gym
+    - Hidden Machine Part
+    - Power Plant Activated
+    - Super Rod
+    - Steel Wing Rock Tunnel
+    - Silver Wing
+    - Dream Eater
+    - Steel Wing MT Silver
+Goal: Mt. Silver
+FlagsSet:
+    - Kanto Mode
