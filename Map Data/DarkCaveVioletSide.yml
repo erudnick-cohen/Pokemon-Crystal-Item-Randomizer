@@ -4,7 +4,7 @@ Location:
         FileName: DarkCaveVioletEntrance.asm
         Type: Map
         HasPKMN: No
-        WildTableList: DARK_CAVE_VIOLET_ENTRANCE
+        WildTableList: 
         LocationReqs: Route 31
         FlagReqs:
         ItemReqs:
@@ -19,7 +19,7 @@ Location:
         FileName: DarkCaveVioletEntrance.asm
         Type: Map
         HasPKMN: No
-        WildTableList: DARK_CAVE_VIOLET_ENTRANCE
+        WildTableList: 
         LocationReqs: Dark Cave Blackthorn
         FlagReqs:
             - Zephyr Badge
