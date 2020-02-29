@@ -1,4 +1,5 @@
 from collections import defaultdict
+from itertools import accumulate
 import copy
 import random
 
@@ -35,7 +36,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	stuckCount = 0
 	
 	oldTrashList = []
-	
+	allTrashList = []
+	reqItems = copy.copy(progressItems)
+
 	#begin search and assignment
 	goalReached = False
 	randomizerFailed = False
@@ -132,6 +135,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			#update trashList
 			random.shuffle(trashSpots)
 			oldTrashList.extend(trashSpots)
+			allTrashList.extend(trashSpots)
 			print(trashSpots)
 			trashSpots = []
 			print('Got stuck, forcing progress')
@@ -193,25 +197,64 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						#Its an item, so find it in the progress items list
 						#item = next(x for x in progressItems if x == j)
 						progressItems.remove(j)
+						
+						#compute item density map in the forwards direction
+						itemDensityMap = [0]*len(oldTrashList)
+						itemDistSum = 0
+						iter = 0
+						for k in range(0,len(allTrashList)):
+							print('a '+str(k)+' b '+str(iter))
+							if(allTrashList[k].item in reqItems):
+								itemDistSum = 0
+							else:
+								itemDensityMap[iter] = itemDistSum
+								itemDistSum = itemDistSum+1
+								iter = iter+1
+						print(itemDensityMap)
+						#compute item density map in the reverse direction
+						itemDistSum = 0
+						iter = len(oldTrashList)-1
+						rFlag = 0
+						for k in range(len(allTrashList)-1,-1,-1):
+							print(k)
+							print(reqItems)
+							if(allTrashList[k].item in reqItems):
+								itemDistSum = 0
+								rFlag = 1
+							else:
+								if(rFlag == 1):
+									itemDensityMap[iter] = min(itemDistSum,itemDensityMap[iter])
+								itemDistSum = itemDistSum+1
+								iter = iter-1
 						#Pick a random location with trash and put the item there
-						#This choice is slightly biased to be more likely to be a recent location
+						#This choice is biased to space out items to be evenly distributed
+						dSum = sum(itemDensityMap)
+						print(itemDensityMap)
+						randVal = random.uniform(0,dSum)
+						randSpot = 0
+						while(randVal>0):
+							randVal = randVal-itemDensityMap[randSpot]
+							randSpot = randSpot+1
+						randSpot = randSpot-1
+						print(randSpot)
 						#However, the mode is still randomized uniformly, so the main effect is a center-ish bias
 						#randspot = int(round(random.triangular(1,len(oldTrashList)-1, random.randrange(1,len(oldTrashList)-1))))
 						#place = random.choice(oldTrashList[randspot:])
 						#the width of the triangular distribution used is based off the number of possible requirements that could be used as a resolver
 						#this width is based off the ratio of the number of possible resolvers to the number of key items left, max 1
 						#the ratio is multiplied by the number of inaccesible locations current present
-						center = random.triangular(1,len(oldTrashList),len(oldTrashList)/2);
-						rrange = len(oldTrashList)/2
-						if(2*len(pLocations)<len(oldTrashList)):
-							center = random.randrange(len(pLocations),len(oldTrashList)-len(pLocations))
-							rrange = len(pLocations)*min(1,len(reqSet)/max(1,len(progressItems)))
-						upper = min(len(oldTrashList)-1,center+rrange)
-						lower = max(center-rrange,1)
-						randspot = int(round(random.triangular(lower,upper,center)))
+						# center = random.triangular(1,len(oldTrashList),len(oldTrashList)/2);
+						# rrange = len(oldTrashList)/2
+						# if(2*len(pLocations)<len(oldTrashList)):
+							# center = random.randrange(len(pLocations),len(oldTrashList)-len(pLocations))
+							# rrange = len(pLocations)*min(1,len(reqSet)/max(1,len(progressItems)))
+						# upper = min(len(oldTrashList)-1,center+rrange)
+						# lower = max(center-rrange,1)
+						# randspot = int(round(random.triangular(lower,upper,center)))
 						print(oldTrashList)
 						if(len(oldTrashList)> 1):
-							place = random.choice(oldTrashList[randspot:])
+							#place = random.choice(oldTrashList[randspot:])
+							place = oldTrashList[randSpot]
 						else:
 							place = oldTrashList[0]
 						trashItems.append(place.item)
