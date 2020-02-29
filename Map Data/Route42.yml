@@ -59,7 +59,7 @@ Location:
                     FileName: Route42.asm
                     Type: Map
                     HasPKMN: No
-                    WildTableList: Route_42
+                    WildTableList: 
                     LocationReqs: Route 42
                     FlagReqs:
                         - Fog Badge
@@ -76,7 +76,7 @@ Location:
                     FileName: Route42.asm
                     Type: Map
                     HasPKMN: No
-                    WildTableList: Route_42
+                    WildTableList: 
                     LocationReqs: Mt Mortar
                     FlagReqs:
                     ItemReqs:
