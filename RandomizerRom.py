@@ -76,7 +76,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 						#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY to low level
 						LVthresh = 0
 						if "SILVERCAVEROOM" in location.Name:
-							LVthresh = 40
+							LVthresh = 50
 						for k in range(5,len(aData),2):
 							minLV = min(int(aData[k]),max(minLV,LVthresh))
 						for k in range(5,len(aData),2):
