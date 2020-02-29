@@ -109,7 +109,7 @@ class Location:
 		#get all trash items in this locations tree
 	def applyBanList(self, banList, allowList):
 		list = [];
-		if((not (banList is None) and self.Name in banList) or (self.Name not in allowList and not (allowList is None))):
+		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):
 			print('Banning '+self.Name)
 			self.IsItem = False
 		for i in self.Sublocations:
