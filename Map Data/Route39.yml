@@ -1,11 +1,41 @@
-Location:  
+Location:
+    -
+        Name: Route 39 Entrance
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 38
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 39 Entrance
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
     -
         Name: Route 39
         FileName: Route39.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_39
-        LocationReqs: Route 38
+        LocationReqs: Route 39 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

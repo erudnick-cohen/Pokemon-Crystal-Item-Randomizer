@@ -1,11 +1,41 @@
-Location:  
+Location:
+    -
+        Name: Route 38 Entrance
+        FileName: Route38.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 38 Entrance
+        FileName: Route38.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 39
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
     -
         Name: Route 38
         FileName: Route38.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_38
-        LocationReqs: Ecruteak City
+        LocationReqs: Route 38 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

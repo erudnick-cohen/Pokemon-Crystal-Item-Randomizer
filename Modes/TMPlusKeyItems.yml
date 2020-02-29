@@ -1,4 +1,15 @@
 Name: TMsPlusKeyItems
+Description: All TMs, HMs and Key Items are randomized. All TMs which require daily events, day night events or happiness checks are NOT included under these settings.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+WildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+DefaultModifiers:
+    - Modifiers/ForceEarlyBike.yml
+    - Modifiers/NoEarlySabrina.yml
+    - Modifiers/NoEarlyBasement.yml
+    - Modifiers/EnableTrainToKanto.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/SkipE4AndFightRed.yml
 BannedLocations:
 AllowedLocations:
     - Mr. Pokemon's Egg
@@ -16,7 +27,7 @@ AllowedLocations:
     - Bike
     - Coin Case
     - Buena Item
-    - Whitney 
+    - Whitney TM
     - Goldenrod City Flower Shop
     - Rollout TM
     - Dig TM

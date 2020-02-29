@@ -1,0 +1,8 @@
+Name: No early basement
+Description: Prevents the basement in goldenrod from having the squirtbottle, to prevent fighting rival 4 early.
+Changes:
+    -
+        Location: Goldenrod Tunnel
+        NewItemReqs:
+            - Basement Key
+            - Squirtbottle

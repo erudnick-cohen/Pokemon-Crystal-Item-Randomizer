@@ -8,7 +8,21 @@ import json
 import mmap
 from collections import defaultdict
 
-def randomizeRom(romPath, goal, flags = [], banList = None, allowList = None, modifiers = {}, adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0):
+def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0):
+
+	changeListDict = defaultdict(lambda: [])
+	for i in modifiers:
+		if 'FlagsSet' in i:
+			flags.extend(i['FlagsSet'])
+		if 'Changes' in i:
+			for j in i['Changes']:
+				changeListDict[j['Location']].append(j) 
+		if 'NewGamePatches' in i:
+			for j in i['NewGamePatches']:
+				pfile = open(j)
+				ptext = pfile.read()
+				patchList.extend(json.loads(ptext))
+	print(changeListDict)
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
@@ -82,10 +96,10 @@ def randomizeRom(romPath, goal, flags = [], banList = None, allowList = None, mo
 	result = ['Nothing', 'Here']
 	while goal not in result[0]:
 		try:
-			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList)
+			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict)
 			trashItems = res[1]
 			LocationList = res[0]
-			progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item']
+			progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass']
 			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags)
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
@@ -119,7 +133,7 @@ def randomizeRom(romPath, goal, flags = [], banList = None, allowList = None, mo
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap)
-	RandomizerRom.ApplyGamePatches(romMap)
+	RandomizerRom.ApplyGamePatches(romMap,patchList)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 	#RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

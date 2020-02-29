@@ -114,6 +114,29 @@ class Location:
 			self.IsItem = False
 		for i in self.Sublocations:
 			 i.applyBanList(banList, allowList)
+
+	def applyModifiers(self, modifierDict):
+		list = [];
+		if(self.Name in modifierDict):
+			print('Modifying '+self.Name)
+			for j in modifierDict[self.Name]:
+				if 'NewItemReqs' in j:
+					if not (j['NewItemReqs'] is None):
+						self.ItemReqs = j['NewItemReqs']
+					else:
+						self.ItemReqs = []
+				if 'NewFlagReqs' in j:
+					if not (j['NewFlagReqs'] is None):
+						self.FlagReqs = j['NewFlagReqs']
+					else:
+						self.FlagReqs = []
+				if 'NewLocationReqs' in j:
+					if not (j['NewLocationReqs'] is None):
+						self.LocationReqs = j['NewLocationReqs']
+					else:
+						self.LocationReqs = []
+		for i in self.Sublocations:
+			 i.applyModifiers(modifierDict)
 	
 	#get all trash items in this locations tree
 	def getTrashItemList(self):

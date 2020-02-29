@@ -1,0 +1,13 @@
+Name: Force early bike
+Description: Ensures that the bike is available before the player would pass sudowoodo or leave johto
+Changes:
+    -
+        Location: Route 36 Sudowoodo Junction
+        NewItemReqs:
+            - Squirtbottle
+            - Bicycle
+    -
+        Location: Saffron City via Magnet Train
+        NewItemReqs:
+            - Pass
+            - Bicycle

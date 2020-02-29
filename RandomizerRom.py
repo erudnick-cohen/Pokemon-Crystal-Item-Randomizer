@@ -159,10 +159,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile):
 		elif i.isGym():
 			WriteBadgeToRomMemory(i,addressData,gymOffsets,gameFile)
 
-def ApplyGamePatches(gameFile):
-	yamlfile = open("item-randomizer-patches-diff-speedchoice.json")
-	yamltext = yamlfile.read()
-	patches = json.loads(yamltext)
+def ApplyGamePatches(gameFile, patches):
 	for i in patches:
 		for j in range(0,len(i['integer_values']['new'])):
 			gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]

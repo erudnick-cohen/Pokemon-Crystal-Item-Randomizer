@@ -1,0 +1,15 @@
+Name: Standard Logic
+Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+WildLevelScalingDefault: True
+TrainerLevelScalingDefault: True
+DefaultModifiers:
+    - Modifiers/ForceEarlyBike.yml
+    - Modifiers/EnableTrainToKanto.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/SkipE4AndFightRed.yml
+BannedLocations:
+AllowedLocations:
+Goal: Mt. Silver
+FlagsSet:
+    - Kanto Mode

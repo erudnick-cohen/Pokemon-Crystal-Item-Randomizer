@@ -1,11 +1,60 @@
 Location:
     -
+        Name: Saffron City via Magnet Train
+        FileName: SaffronCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Goldenrod City
+            - Power Plant Activated
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+            - Pass
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Saffron City Entrance
+        FileName: SaffronCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Saffron City via Magnet Train
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Saffron City Entrance
+        FileName: SaffronCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 6
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
         Name: Saffron City
         FileName: SaffronCity.asm
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Route 6
+        LocationReqs: Saffron City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -115,7 +164,6 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: PASS
                 Code: |
                     .Part14
                         writetext UnknownText_0x18b1e2

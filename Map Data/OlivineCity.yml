@@ -1,11 +1,41 @@
-Location:  
+Location:
+    -
+        Name: Olivine City Entrance
+        FileName: OlivineCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 39
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Olivine City Entrance
+        FileName: OlivineCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
     -
         Name: Olivine City
         FileName: OlivineCity.asm
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Route 39
+        LocationReqs: Olivine City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

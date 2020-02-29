@@ -11,7 +11,7 @@ from collections import defaultdict
 res = LoadLocationData.LoadDataFromFolder(".")
 trashItems = res[1]
 LocationList = res[0]
-progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item']
+progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item','Pass']
 Zephyr = Badge.Badge()
 Zephyr.isTrash = False
 Zephyr.Name = 'Zephyr Badge'
@@ -105,7 +105,10 @@ RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap)
 RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap)
 RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap)
 RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap)
-RandomizerRom.ApplyGamePatches(romMap)
+yamlfile = open("item-randomizer-patches-diff-speedchoice.json")
+yamltext = yamlfile.read()
+patches = json.loads(yamltext)
+RandomizerRom.ApplyGamePatches(romMap,patches)
 #RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 #RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 #RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

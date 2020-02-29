@@ -5,8 +5,9 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_31
-        LocationReqs: Route 30
-        FlagReqs: Gave Elm Egg
+        LocationReqs:
+            - Route 30 towards Route 31
+        FlagReqs:
         ItemReqs:
         FlagsSet:
         ReachableReqs:

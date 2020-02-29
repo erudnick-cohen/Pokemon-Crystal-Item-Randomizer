@@ -1,0 +1,10 @@
+Name: No early Sabrina
+Description: Prevents Sabrina from having the fog badge and ensures that surf is available before you need to fight her
+Changes:
+    -
+        Location: Saffron City Gym Badge
+        NewFlagReqs:
+            - Kanto Mode
+            - Fog Badge
+        NewItemReqs:
+            - Surf

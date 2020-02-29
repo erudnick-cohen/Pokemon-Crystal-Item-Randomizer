@@ -3,7 +3,7 @@ import Location
 import Gym
 import yaml
 
-def LoadDataFromFolder(path, banList = None, allowList = None):
+def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}):
 	LocationList = []
 	print("Creating Locations")
 	for root, dir, files  in os.walk(path+"\\Map Data"):
@@ -17,6 +17,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None):
 				try:
 					nLoc =Location.Location(location)
 					nLoc.applyBanList(banList,allowList)
+					nLoc.applyModifiers(modifierDict)
 					LocationList.append(nLoc)
 				except Exception as inst:
 					print("-----------")
@@ -32,7 +33,10 @@ def LoadDataFromFolder(path, banList = None, allowList = None):
 			for location in yamlData["Location"]:
 				print(location["Name"])
 				try:
-					LocationList.append(Gym.Gym(location))
+					nLoc = Gym.Gym(location)
+					nLoc.applyBanList(banList,allowList)
+					nLoc.applyModifiers(modifierDict)
+					LocationList.append(nLoc)
 				except Exception as inst:
 					print("-----------")
 					print("Failure in "+location["Name"])

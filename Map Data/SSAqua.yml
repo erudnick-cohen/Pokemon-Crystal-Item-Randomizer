@@ -1,11 +1,43 @@
 Location:
     -
+        Name: SS Aqua Entrance
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+    -
+        Name: SS Aqua Entrance
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Vermillion City
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+    -
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: No
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Olivine City
+        LocationReqs: SS Aqua Entrance
         FlagReqs:
             - Kanto Mode
         ItemReqs:

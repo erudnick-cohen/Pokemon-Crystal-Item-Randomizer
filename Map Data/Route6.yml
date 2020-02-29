@@ -1,5 +1,35 @@
 Location:
     -
+        Name: Route 6 Entrance
+        FileName: Route6.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Vermillion City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 6 Entrance
+        FileName: Route6.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Saffron City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
         Name: Route 6
         FileName: Route6.asm
         Type: Map
@@ -7,7 +37,7 @@ Location:
         WildTableList: 
             - ROUTE_6
         LocationReqs:
-            - Vermillion City
+            - Route 6 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

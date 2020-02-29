@@ -1,0 +1,9 @@
+Name: Enable Train to Kanto
+Description: Allows the player to use the rail pass to take the train to Kanto before restoring power to Kanto
+NewGamePatches:
+    - 'Patches/TrainBeforePowerPlant.json'
+Changes:
+    -
+        Location: Saffron City via Magnet Train
+        NewLocationReqs:
+            - Goldenrod City
