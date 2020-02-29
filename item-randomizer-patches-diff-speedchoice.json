@@ -301,13 +301,28 @@
                      181, 164, 163, 79, 140, 152, 146,
                      147, 132, 145, 152, 127, 132, 134,
                      134, 232, 87],
-            "new": [0, 142, 170, 230, 87, 150, 164, 168,
+            "new": [0, 142, 170, 230, 87, 50, 164, 168,
                      181, 164, 163, 79, 140, 152, 146,
                      147, 132, 145, 152, 127, 132, 134,
                      134, 232, 87]
                      },
         "label": "Mr. Pokemon text change",
         "description": "Change Mr. Pokemon text so the game doesn't confuse the player"
+    },
+    {
+    "address_range": {
+        "begin": 1645842,
+        "end" : 1645862},
+        "integer_values": {
+            "old": [0, 82, 127, 177, 164, 162, 164, 168,
+                     181, 164, 163, 79, 84, 127, 131, 142,
+                     139, 139, 232, 87],
+            "new": [0, 117, 117, 117, 87, 50, 164, 168,
+                     181, 164, 163, 79, 84, 127, 131, 142,
+                     139, 139, 232, 87]
+                     },
+        "label": "Lost item text change",
+        "description": "Change lost item text so the game doesn't confuse the player"
     },
     {
         "integer_values": {
