@@ -139,6 +139,6 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 	#RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
-	print(result[2])
-	print(result[1])
+	#print(result[2])
+	#print(result[1])
 	return result

@@ -35,7 +35,7 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonu
 			if location.Trainers is not None:
 				for j in location.Trainers:
 					trainer = trainerData[j]
-					print('Writing '+j)
+					#print('Writing '+j)
 					idTextB = "ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER"
 					if int(trainer['Type']) == 1:
 						monJump = 6
@@ -47,18 +47,18 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonu
 					#find base offset (WHY ISN'T THIS CONSTANT???? Answer: Because there is a string in each entry!!!!)
 					k = 0
 					while k < len(addressData[idTextB]['integer_values'].split()):
-						print(romMap[addressData[idTextB]['address_range']['begin']+k])
+						#print(romMap[addressData[idTextB]['address_range']['begin']+k])
 						if romMap[addressData[idTextB]['address_range']['begin']+k] == int(trainer['Type']):
 							baseOffset = k
 							k = len(addressData[idTextB]['integer_values'].split())
 						k = k+1
 					for k in range(0,len(trainer['Pokemon'])):
-						print('Writing mon '+str(k))
+						#print('Writing mon '+str(k))
 						level = trainer['Pokemon'][k]['Level']
 						newlevel = max(level-location.AreaLevel+distDict[i]+round(levelBonus*(distDict[i]/maxLevel)), 2)
-						print(romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1])
-						print('to')
-						print(newlevel)
+						#print(romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1])
+						#print('to')
+						#print(newlevel)
 						romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1] = max(newlevel,2)
 
 def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
@@ -71,7 +71,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonu
 				for j in location.WildTableList:
 					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDGRASS"
 					if(idTextB in addressData):
-						print('Writing '+j+" at "+location.Name)
+						#print('Writing '+j+" at "+location.Name)
 						aData = addressData[idTextB]['integer_values'].split(" ")
 						minLV = float('inf')
 						#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY too low level
@@ -93,7 +93,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonu
 				for j in location.WildTableList:
 					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDWATER"
 					if(idTextB in addressData):
-						print('Writing '+j+" at "+location.Name)
+						#print('Writing '+j+" at "+location.Name)
 						aData = addressData[idTextB]['integer_values'].split(" ")
 						minLV = float('inf')
 						for k in range(5,len(aData),2):
@@ -110,7 +110,7 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonu
 				for j in location.WildTableList:
 					idTextB = "ckir_BEFORE"+"".join(j.upper().replace("_","").split())+"0WILDSWARM"
 					if(idTextB in addressData):
-						print('Writing '+j+" at "+location.Name)
+						#print('Writing '+j+" at "+location.Name)
 						aData = addressData[idTextB]['integer_values'].split(" ")
 						minLV = float('inf')
 						for k in range(5,len(aData),2):
@@ -122,10 +122,10 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonu
 
 def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	monList = []
-	print("Editing Special Pokemon")
+	#print("Editing Special Pokemon")
 	for root, dir, files  in os.walk("Special Pokemon Locations"):
 		for file in files:
-			print("File: "+file)
+			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
 			yamlData = yaml.load(entry)
 			loc = yamlData["Location"]
@@ -167,7 +167,7 @@ def ApplyGamePatches(gameFile, patches):
 
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
-	print('Writing '+labelCodeB)
+	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	romMap[addressData["address_range"]["begin"]+1] = location.badge.Code
 	#borrowing this trick from goldenrules's key item randomizer
@@ -175,7 +175,7 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	for i in range(0,len(nString)):
 		#+1 to dodge the initial byte that isn't part of the text
 		#note that this leaves the remaining text as "garbage", since we are terminating the string ourselves
-		print(nString[i])
+		#print(nString[i])
 		nByte = str.encode(nString[i],'ascii')
 		nByte = int.from_bytes(nByte,'big')-65+128
 		if nString[i] == '\n':
@@ -184,11 +184,11 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 			nByte = 224
 		if nString[i] == " ":
 			nByte = 127
-		print(romMap[gymOffsets[location.Name]+i+1])
-		print('to')
-		print(nByte)
+		#print(romMap[gymOffsets[location.Name]+i+1])
+		#print('to')
+		#print(nByte)
 		romMap[gymOffsets[location.Name]+i+1] = nByte
-		print('---')
+		#print('---')
 	#add the done character to the end
 	romMap[gymOffsets[location.Name]+len(nString)+1] = 87
 	#then terminate the string
@@ -196,7 +196,7 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	print('Writing '+labelCodeB)
+	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCode = itemScriptLookup(location.item)
 	if location.IsBall:
@@ -208,7 +208,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	print('Writing'+labelCodeB)
+	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCode = itemScriptLookup(location.item)
 	romMap[addressData["address_range"]["begin"]+6] = nItemCode
@@ -216,7 +216,7 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	print('Writing'+labelCodeB)
+	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCode = itemScriptLookup(location.item)
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
@@ -233,7 +233,7 @@ def LabelAllLocations(locations):
 			LabelBadgeLocation(i)
 
 def LabelBadgeLocation(location):
-	print("Labeling "+location.Name)
+	#print("Labeling "+location.Name)
 	
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
@@ -246,7 +246,7 @@ def LabelBadgeLocation(location):
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 	codeSearch = re.findall(coderegexstr,filecode)[0]
 	oldcode = codeSearch[0]
-	print(codeSearch)
+	#print(codeSearch)
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
 	newCode = ""
@@ -283,7 +283,7 @@ def LabelWild():
 	yamltext = yamlfile.read()
 	wildData = yaml.load(yamltext)
 	for j in wildData:
-		print('Writing '+j)
+		#print('Writing '+j)
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
@@ -305,7 +305,7 @@ def LabelWild():
 	yamltext = yamlfile.read()
 	wildData = yaml.load(yamltext)
 	for j in wildData:
-		print('Writing '+j)
+		#print('Writing '+j)
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
@@ -327,7 +327,7 @@ def LabelWild():
 	yamltext = yamlfile.read()
 	wildData = yaml.load(yamltext)
 	for j in wildData:
-		print('Writing '+j)
+		#print('Writing '+j)
 		areaData = wildData[j.upper()]
 		newcode = areaData['Code']
 		minLV = areaData['Level']
@@ -349,10 +349,10 @@ def LabelSpecialWild(locationList):
 	locationDict = {}
 	for i in locationList:
 		locationDict[i.Name] = i
-	print("Editing Special Pokemon")
+	#print("Editing Special Pokemon")
 	for root, dir, files  in os.walk("Special Pokemon Locations"):
 		for file in files:
-			print("File: "+file)
+			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
 			yamlData = yaml.load(entry)
 			loc = yamlData["Location"]
@@ -371,11 +371,11 @@ def LabelSpecialWild(locationList):
 				coderegexstr = "("+re.escape(yamlData['Code'].replace('MONNAME',newmon).replace("    ","\t").replace("\tMONLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 				file = open("RandomizerRom/maps/"+fileName)
 				filecode = file.read()
-				print(coderegexstr)
+				#print(coderegexstr)
 				codeSearch = re.findall(coderegexstr,filecode)[0]
 				oldcode = codeSearch[0]
 				newcode = oldcode.replace(codeSearch[1],idTextB+codeSearch[1]+idTextA)
-				print(newcode)
+				#print(newcode)
 				newfile = filecode.replace(oldcode,newcode)
 				#write the new file into the files for the randomizer rom
 				newfilestream = open("RandomizerRom/maps/"+fileName,'w')
@@ -393,12 +393,12 @@ def LabelTrainerData(trainerData):
 	#loop through locations
 	for j in trainerData:
 		trainer = trainerData[j]
-		print('Labeling '+j)
+		#print('Labeling '+j)
 		nCode = trainer['Code']
 		idTextA = "\n.ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER::\n\t"
 		idTextB = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER::\n\t"
 		# for k in range(0,len(trainer['Pokemon'])):
-		# 	print('Labeling mon '+str(k))
+		# 	#print('Labeling mon '+str(k))
 		# 	pCode = trainer['Pokemon'][k]['Code'][:-1]
 		# 	idTextPB = "\n.ckir_BEFORE"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n\t"
 		# 	idTextPA = "\n.ckir_AFTER"+"".join(j.upper().split())+"0TRAINER0MON"+str(k)+"::\n"
@@ -416,7 +416,7 @@ def LabelTrainerData(trainerData):
 
 #currently only labels "regular" items
 def LabelItemLocation(location):
-	print("Labelling "+location.Name)
+	#print("Labelling "+location.Name)
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
@@ -427,17 +427,17 @@ def LabelItemLocation(location):
 
 	#find the code we need to replace
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tITEMLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
-	print(repr(re.escape(location.Code.replace("    ","\t"))))
-	print(repr(location.Code.replace("    ","\t")))
-	print(repr("\tITEMLINE"))
-	print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
-	print("\tITEMLINE" in (location.Code.replace("    ","\t")))
-	print(coderegexstr)
+	#print(repr(re.escape(location.Code.replace("    ","\t"))))
+	#print(repr(location.Code.replace("    ","\t")))
+	#print(repr("\tITEMLINE"))
+	#print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
+	#print("\tITEMLINE" in (location.Code.replace("    ","\t")))
+	#print(coderegexstr)
 	codeSearch = None
 	if not location.IsSpecial:
 		codeSearch = re.findall(coderegexstr,filecode)[0]
 		oldcode = codeSearch[0]
-		print(codeSearch)
+		#print(codeSearch)
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
@@ -486,7 +486,7 @@ def LabelItemLocation(location):
 	newfilestream.close()
 
 def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
-	print("Writing "+location.Name+" which contains "+location.item)
+	#print("Writing "+location.Name+" which contains "+location.item)
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
@@ -528,7 +528,7 @@ def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	newfilestream.close()
 
 def WriteBadgeToRom(location):
-	print("Writing "+location.Name+" which contains "+location.badge.Name)
+	#print("Writing "+location.Name+" which contains "+location.badge.Name)
 	
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
@@ -607,7 +607,7 @@ def WriteTrainerLevels(locationDict, distDict, trainerData):
 			location = locationDict[i]
 			if location.Trainers is not None:
 				for j in location.Trainers:
-					print('Writing '+j+" at "+location.Name)
+					#print('Writing '+j+" at "+location.Name)
 					trainer = trainerData[j]
 					newcode = trainer['Code']
 					for k in trainer['Pokemon']:
@@ -652,7 +652,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 			location = locationDict[i]
 			if location.WildTableList is not None:
 				for j in location.WildTableList:
-					print('Writing '+j+" at "+location.Name)
+					#print('Writing '+j+" at "+location.Name)
 					if j.upper() in wildData:
 						areaData = wildData[j.upper()]
 						newcode = areaData['Code']
@@ -663,7 +663,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 								level = l
 								newlevel = max(level-minLV+distDict[i], 2)
 								newcode = newcode.replace("db "+str(level)+", "+k,"db "+str(newlevel)+", "+pokemon )
-						print(areaData["Code"] in areaData["File"])
+						#print(areaData["Code"] in areaData["File"])
 						wildDict[areaData["File"]] = wildDict[areaData["File"]].replace(areaData['Code'],newcode)
 	for i in wildDict:
 		newfilestream = open("RandomizerRom/data/wild/"+i,'w')
@@ -683,7 +683,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 			location = locationDict[i]
 			if location.WildTableList is not None:
 				for j in location.WildTableList:
-					print('Writing '+j+" at "+location.Name)
+					#print('Writing '+j+" at "+location.Name)
 					if j.upper() in wildData:
 						areaData = wildData[j.upper()]
 						newcode = areaData['Code']
@@ -714,7 +714,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 			if location.WildTableList is not None:
 				for j in location.WildTableList:
 					if j.upper() in wildData:
-						print('Writing '+j+" at "+location.Name)
+						#print('Writing '+j+" at "+location.Name)
 						areaData = wildData[j.upper()]
 						newcode = areaData['Code']
 						minLV = areaData['Level']
@@ -736,10 +736,10 @@ def WriteWildLevels(locationDict, distDict,monFun):
 
 def WriteSpecialWildLevels(locationDict,distDict,monFun):
 	monList = []
-	print("Editing Special Pokemon")
+	#print("Editing Special Pokemon")
 	for root, dir, files  in os.walk("Special Pokemon Locations"):
 		for file in files:
-			print("File: "+file)
+			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
 			yamlData = yaml.load(entry)
 			loc = yamlData["Location"]

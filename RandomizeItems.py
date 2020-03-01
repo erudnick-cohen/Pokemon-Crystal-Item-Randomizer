@@ -43,8 +43,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	goalReached = False
 	randomizerFailed = False
 	while not goalReached and not randomizerFailed:
-		print('Solution is')
-		print(spoiler)
+		#print('Solution is')
+		#print(spoiler)
 		#track if we're stuck
 		stuck = True
 		#shuffle the list of active locations to prevent any possible biases	
@@ -53,7 +53,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		for i in activeLoc:
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
-				print(i.Name)
+				#print(i.Name)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				stuckCount = 0
@@ -78,12 +78,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				#perform appropriate behaviors for location
 				#if its an item, put an item in it
 				if(i.isItem()):
-					print('Storing Item:')
+					#print('Storing Item:')
 					#determine what item to put in
-					print(trashItems)
-					print(progressItems)
+					#print(trashItems)
+					#print(progressItems)
 					itemType = random.choices(population = ['Trash', 'Progress'], weights = [len(trashItems), len(progressItems)])
-					print('Type is '+itemType[0]+' it is...')
+					#print('Type is '+itemType[0]+' it is...')
 					if(itemType[0] == 'Trash'):
 						item = random.choice(trashItems)
 						trashItems.remove(item)
@@ -97,7 +97,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						state[item] = True
 						stateDist[item] = i.distance
 						spoiler[item] = i.Name
-					print(i.item)
+					#print(i.item)
 				#if its a gym, put a badge in it
 				if(i.isGym()):
 					#pick a random badge that hasn't been used yet
@@ -136,11 +136,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			random.shuffle(trashSpots)
 			oldTrashList.extend(trashSpots)
 			allTrashList.extend(trashSpots)
-			print(trashSpots)
+			#print(trashSpots)
 			trashSpots = []
-			print('Got stuck, forcing progress')
-			print('Current state')
-			print(stateDist)
+			#print('Got stuck, forcing progress')
+			#print('Current state')
+			#print(stateDist)
 			stuckCount = stuckCount+1
 			#Define set of possible locations to open up
 			pLocations = copy.copy(activeLoc)
@@ -149,8 +149,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			for j in pLocations:
 				#places with no requirements are places already visited, so ignore them
 				if(j.Name not in stateDist):
-					print('Trying '+j.Name+', which needs:')
-					print(j.requirementsNeeded(state))
+					#print('Trying '+j.Name+', which needs:')
+					#print(j.requirementsNeeded(state))
 					#We need to check for not having enough badges and flags that aren't badges
 					#Count number of reqs which are badges
 					#also count reqs which aren't items
@@ -171,8 +171,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				pLocations.remove(j)
 			#Build list of feasible combinations of requirements
 			reqSet = list(frozenset([frozenset(x.requirementsNeeded(state)) for x in pLocations]))
-			print("Resolvers are currently")
-			print(reqSet)
+			#print("Resolvers are currently")
+			#print(reqSet)
 			if(len(reqSet)>0):
 				#Determine appropriate weights for each requirement combinations
 				weightList = [0]*len(reqSet)
@@ -189,8 +189,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				#Now choose the set of requirements that we need to fulfill randomly according to the weights
 				reqs = random.choices(population = reqSet, weights = weightList)
 				#For each requirement, make it so that it is met
-				print('Resolving issue with')
-				print(reqs[0])
+				#print('Resolving issue with')
+				#print(reqs[0])
 				for j in reqs[0]:
 					#if the requirement isn't a badge, its an item
 					if(j not in badgeData):
@@ -204,21 +204,21 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						itemDistSum = 1000
 						iter = 0
 						for k in range(0,len(allTrashList)):
-							print('a '+str(k)+' b '+str(iter))
+							#print('a '+str(k)+' b '+str(iter))
 							if(allTrashList[k].item in reqItems):
 								itemDistSum = 0
 							else:
 								itemDensityMap[iter] = itemDistSum
 								itemDistSum = itemDistSum+1
 								iter = iter+1
-						print(itemDensityMap)
+						#print(itemDensityMap)
 						#compute item density map in the reverse direction
 						itemDistSum = 0
 						iter = len(oldTrashList)-1
 						rFlag = 0
 						for k in range(len(allTrashList)-1,-1,-1):
-							print(k)
-							print(reqItems)
+							#print(k)
+							#print(reqItems)
 							if(allTrashList[k].item in reqItems):
 								itemDistSum = 0
 								rFlag = 1
@@ -230,14 +230,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						#Pick a random location with trash and put the item there
 						#This choice is biased to space out items to be evenly distributed
 						dSum = sum(itemDensityMap)
-						print(itemDensityMap)
+						#print(itemDensityMap)
 						randVal = random.uniform(0,dSum)
 						randSpot = 0
 						while(randVal>0):
 							randVal = randVal-itemDensityMap[randSpot]
 							randSpot = randSpot+1
 						randSpot = randSpot-1
-						print(randSpot)
+						#print(randSpot)
 						#However, the mode is still randomized uniformly, so the main effect is a center-ish bias
 						#randspot = int(round(random.triangular(1,len(oldTrashList)-1, random.randrange(1,len(oldTrashList)-1))))
 						#place = random.choice(oldTrashList[randspot:])
@@ -252,7 +252,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						# upper = min(len(oldTrashList)-1,center+rrange)
 						# lower = max(center-rrange,1)
 						# randspot = int(round(random.triangular(lower,upper,center)))
-						print(oldTrashList)
+						#print(oldTrashList)
 						if(len(oldTrashList)> 1):
 							#place = random.choice(oldTrashList[randspot:])
 							place = oldTrashList[randSpot]
@@ -276,7 +276,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						spoiler[j] = gym.Name
 			else:
 				randomizerFailed = True
-				print("No Resolvers Available, randomizer has failed")
+				#print("No Resolvers Available, randomizer has failed")
 	#return the information we need
 	#1 location dictionary of allocated locations
 	#2 spoiler
