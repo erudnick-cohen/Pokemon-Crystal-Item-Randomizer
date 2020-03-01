@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: CINNABAR_ISLAND
         LocationReqs:
-            - Route 22
+            - Route 21
         FlagReqs:
         ItemReqs:
         FlagsSet:

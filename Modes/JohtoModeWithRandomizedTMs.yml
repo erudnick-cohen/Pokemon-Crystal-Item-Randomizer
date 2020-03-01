@@ -1,0 +1,35 @@
+Name: Johto Mode
+Description: The item randomizer is restricted to randomizing items which appear in johto. These settings also allow for the universal pokemon randomizer's ability to randomize TM moves. To allow this, all item locations which require rock smash are ignored by the randomizer, as the rock smash TM is one of the TMs which has its move randomized. 
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: True
+SpecialWildLevelScalingDefault: True
+TrainerLevelScalingDefault: True
+DefaultModifiers:
+    - Modifiers/ForceEarlyBike.yml
+    - Modifiers/SkipReturningToNewBark.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Mystery Egg
+    - Cut
+    - Strength
+    - Secret Potion
+    - Red Scale
+    - Whirlpool
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+BannedLocations:
+    - Dark Cave Violet Potion
+    - Dark Cave Violet Dire Hit
+    - Dark Cave Violet Hyper Potion
+    - Dark Cave Violet Full Heal
+    - Burned Tower Rock Smash Item
+    - Route 46 upper via Violet
+AllowedLocations:
+Goal: Elite Four
+FlagsSet:
+    - Johto Mode

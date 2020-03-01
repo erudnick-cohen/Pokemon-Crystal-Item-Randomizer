@@ -111,7 +111,11 @@ class Location:
 		list = [];
 		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):
 			print('Banning '+self.Name)
-			self.IsItem = False
+			if(self.isItem):
+				self.IsItem = False
+			else:
+				#this means its a map location, so we need to just make it unreachable
+				self.flagReqs.append('Impossible')
 		for i in self.Sublocations:
 			 i.applyBanList(banList, allowList)
 

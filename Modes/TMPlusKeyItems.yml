@@ -1,10 +1,12 @@
 Name: TMsPlusKeyItems
 Description: All TMs, HMs and Key Items are randomized. All TMs which require daily events, day night events or happiness checks are NOT included under these settings.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
-WildLevelScalingDefault: False
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 DefaultModifiers:
     - Modifiers/ForceEarlyBike.yml
+    - Modifiers/ForceEarlyFly.yml
     - Modifiers/NoEarlySabrina.yml
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/EnableTrainToKanto.yml

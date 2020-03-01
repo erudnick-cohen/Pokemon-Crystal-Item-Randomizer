@@ -1,0 +1,29 @@
+Name: Johto Mode
+Description: The item randomizer is restricted to randomizing items which appear in johto.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: True
+SpecialWildLevelScalingDefault: True
+TrainerLevelScalingDefault: True
+DefaultModifiers:
+    - Modifiers/ForceEarlyBike.yml
+    - Modifiers/SkipReturningToNewBark.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Mystery Egg
+    - Cut
+    - Strength
+    - Secret Potion
+    - Red Scale
+    - Whirlpool
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+BannedLocations:
+AllowedLocations:
+Goal: Elite Four
+FlagsSet:
+    - Johto Mode

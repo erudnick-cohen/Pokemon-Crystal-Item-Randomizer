@@ -7,8 +7,9 @@ import yaml
 import json
 import mmap
 from collections import defaultdict
+import copy
 
-def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0):
+def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly']):
 
 	changeListDict = defaultdict(lambda: [])
 	for i in modifiers:
@@ -41,7 +42,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	Plain.Name = 'Plain Badge'
 	Plain.Code = 29
 	Storm = Badge.Badge()
-	Storm.isTrash = True
+	Storm.isTrash = False
 	Storm.Name = 'Storm Badge'
 	Storm.Code = 32
 	Mineral = Badge.Badge()
@@ -99,7 +100,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict)
 			trashItems = res[1]
 			LocationList = res[0]
-			progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass']
+			progressItems = copy.copy(requiredItems)
 			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags)
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
@@ -123,16 +124,17 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	print(addressData)
 
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
-
+	#get furthest item location distance
+	maxDist = max(result[2].values())
 	f = open(romPath,'r+b')
 	romMap = mmap.mmap(f.fileno(),0)
 	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap)
 	if adjustRegularWildLevels:
-		RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap)
+		RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustSpecialWildLevels:
-		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap)
+		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
-		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap)
+		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
 	RandomizerRom.ApplyGamePatches(romMap,patchList)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

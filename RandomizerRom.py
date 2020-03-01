@@ -7,6 +7,7 @@ import yaml
 import json
 import copy
 import mmap
+import math
 
 def ResetRom():
 	try:
@@ -22,7 +23,7 @@ def ResetRomForLabelling():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
 
-def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap):
+def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")
 	yamltext = yamlfile.read()
@@ -54,13 +55,13 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap):
 					for k in range(0,len(trainer['Pokemon'])):
 						print('Writing mon '+str(k))
 						level = trainer['Pokemon'][k]['Level']
-						newlevel = max(level-location.AreaLevel+distDict[i], 2)
+						newlevel = max(level-location.AreaLevel+distDict[i]+round(levelBonus*(distDict[i]/maxLevel)), 2)
 						print(romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1])
 						print('to')
 						print(newlevel)
-						romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1] = newlevel
+						romMap[addressData[idTextB]['address_range']['begin']+baseOffset+k*monJump+1] = max(newlevel,2)
 
-def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
+def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	surfDist = max(distDict['Surf'],distDict['Fog Badge'])
 	#loop through locations
 	for i in distDict:
@@ -73,16 +74,16 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 						print('Writing '+j+" at "+location.Name)
 						aData = addressData[idTextB]['integer_values'].split(" ")
 						minLV = float('inf')
-						#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY to low level
+						#this is a hack to account for the fact that the larvitar in mt. silver are WAAAAYYYY too low level
 						LVthresh = 0
-						if "SILVERCAVEROOM" in location.Name:
-							LVthresh = 50
+						if "SILVERCAVE" in idTextB:
+							LVthresh = 45
 						for k in range(5,len(aData),2):
-							minLV = min(int(aData[k]),max(minLV,LVthresh))
+							minLV = min(max(int(aData[k]),LVthresh),minLV)
 						for k in range(5,len(aData),2):
-							cLV = int(aData[k])
+							cLV = max(int(aData[k]),LVthresh)
 							nLV = max(cLV-minLV+distDict[i], 2)
-							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+							romMap[addressData[idTextB]['address_range']['begin']+k] = max(nLV+round(levelBonus*(distDict[i]/maxLevel)),2)
 
 	#loop through locations
 	for i in distDict:
@@ -99,8 +100,8 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 							minLV = min(int(aData[k]),minLV)
 						for k in range(5,len(aData),2):
 							cLV = int(aData[k])
-							nLV = max(cLV-minLV+distDict[i], 2)
-							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+							nLV = max(cLV-minLV+max(distDict[i],distDict['Surf']), 2)
+							romMap[addressData[idTextB]['address_range']['begin']+k] = max(nLV+round(levelBonus*(max(distDict[i],distDict['Surf'])/maxLevel)),2)
 	#loop through locations
 	for i in distDict:
 		if i in locationDict:
@@ -117,9 +118,9 @@ def WriteWildLevelsToMemory(locationDict, distDict,addressData,romMap):
 						for k in range(5,len(aData),2):
 							cLV = int(aData[k])
 							nLV = max(cLV-minLV+distDict[i], 2)
-							romMap[addressData[idTextB]['address_range']['begin']+k] = nLV
+							romMap[addressData[idTextB]['address_range']['begin']+k] = max(nLV+round(levelBonus*(distDict[i]/maxLevel)),2)
 
-def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap):
+def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	monList = []
 	print("Editing Special Pokemon")
 	for root, dir, files  in os.walk("Special Pokemon Locations"):
@@ -137,7 +138,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap):
 				code = yamlData["Code"]
 				#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
 				newmon = mon
-				romMap[addressData[idTextB]['address_range']['begin']+2] = distDict[loc]+shift
+				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
 
 def DirectWriteItemLocations(locations,addressData,gameFile):
 	codeLookup = Items.makeRawItemCodeDict()

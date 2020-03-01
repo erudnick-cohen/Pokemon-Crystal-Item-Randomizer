@@ -30,7 +30,7 @@ Location:
             TrainerList: 
             Sublocations:
     -
-            Name: Route 46 upper
+            Name: Route 46 upper via Violet
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
@@ -41,6 +41,21 @@ Location:
             ItemReqs:
                 - Flash
                 - Rock Smash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList: 
+            Sublocations:
+    -
+            Name: Route 46 upper
+            FileName: Route46.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 46 upper via Violet
+            FlagReqs:
+            ItemReqs:
             FlagsSet:
             ReachableReqs:
             Code:
