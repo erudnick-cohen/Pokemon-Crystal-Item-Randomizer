@@ -1,5 +1,5 @@
 Name: Force early fly
-Description: "Ensures that the fly HM is obtainable and usable before the player does any of the following things: 1. Takes the SS Aqua, 2. Enters route 44, 3. Enters Diglett's Cave after waking up Snorlax."
+Description: "Ensures that the fly HM is obtainable and usable before the player does any of the following things: 1. Takes the SS Aqua, 2. Enters route 44, 3. Enters Diglett's Cave after waking up Snorlax. 4. Enters Victory Road"
 Changes:
     -
         Location: SS Aqua
@@ -18,6 +18,12 @@ Changes:
             - Storm Badge
     -
         Location: Diglett's Cave
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Storm Badge
+    -
+        Location: Victory Road
         NewItemReqs:
             - Fly
         NewFlagReqs:
