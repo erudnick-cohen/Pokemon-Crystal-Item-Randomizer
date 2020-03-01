@@ -1,5 +1,24 @@
 Location:
     -
+        Name: Whirl Islands Requires Flash
+        FileName: WhirlIslandB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 41
+        FlagReqs:
+            - Glacier Badge
+            - Zephyr Badge
+        ItemReqs:
+            - Whirlpool
+            - Flash
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Whirl Islands
         FileName: WhirlIslandCave.asm
         Type: Map
@@ -24,25 +43,6 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-            -
-                Name: Whirl Islands Requires Flash
-                FileName: WhirlIslandB1F.asm
-                Type: Map
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Whirl Islands
-                FlagReqs:
-                    - Glacier Badge
-                    - Zephyr Badge
-                ItemReqs:
-                    - Whirlpool
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code:
-                Text:
-                TrainerList: 
-                Sublocations:
                     -
                         Name: Lugia Chamber
                         FileName: WhirlIslandLugiaChamber.asm
