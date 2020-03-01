@@ -12,7 +12,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		self.loadSettings('Modes/Standard.yml')
+		self.loadSettings('Modes/StandardNoLevelScaling.yml')
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
 		self.ChooseSettings.clicked.connect(self.selectLogicSettings)
 		self.LoadModifier.clicked.connect(self.loadModifier)
@@ -22,7 +22,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.Randomize.setEnabled(False)
 		self.Randomize.setText(_translate("MainWindow", "No Rom Loaded!"))
 		self.Randomize.clicked.connect(self.runRandomizer)
-		
+		self.SaveSettings.clicked.connect(self.saveSettings)
+
 	def runRandomizer(self):
 		_translate = QtCore.QCoreApplication.translate
 		yamlfile = open(self.settings['BasePatch'])
@@ -42,6 +43,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			else:
 				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = self.TrainerLevelScaling.isChecked(), adjustRegularWildLevels = self.RegularWildLevelScaling.isChecked(), adjustSpecialWildLevels = self.SpecialWildLevelScaling.isChecked(), trainerLVBoost = tlv, wildLVBoost=wlv)
 			self.Randomize.setEnabled(True)
+			if(self.OutputSpoiler.isChecked()):
+				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
+					yaml.dump(result[1], f, default_flow_style=False)
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 			QtWidgets.QMessageBox.about(self, 'Success', 'Sucessfully randomized rom')
 		except ValueError:
@@ -73,6 +77,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			yamlfile = open(modfile)
 			yamltext = yamlfile.read()
 			self.modList.append(yaml.load(yamltext))
+			self.modList[-1]['fileName'] = modfile
 			self.updateModListView()
 
 	def deleteModifier(self):
@@ -99,6 +104,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			yamlfile = open(i)
 			yamltext = yamlfile.read()
 			self.modList.append(yaml.load(yamltext))
+			self.modList[-1]['fileName'] = i
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))
@@ -112,7 +118,20 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.WildLevelShiftBonus.setText(_translate("MainWindow", str(settings['WildLevelBonus'])))
 		self.CurrentGoal.setText(_translate("MainWindow", settings['Goal']))
 
-	
+	def saveSettings(self):
+		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
+		if(fName != ''):
+			self.settings['TrainerLevelScalingDefault'] = self.TrainerLevelScaling.isChecked()
+			self.settings['RegularWildLevelScaling'] = self.RegularWildLevelScaling.isChecked()
+			self.settings['SpecialWildLevelScalingDefault'] = self.SpecialWildLevelScaling.isChecked()
+			self.settings['DefaultModifiers'] = []
+			for i in self.modList:
+				self.settings['DefaultModifiers'].append(i['fileName'])
+			self.settings['WildLevelBonus'] = self.WildLevelShiftBonus.text()
+			self.settings['TrainerLevelBonus'] = self.TrainerLevelShiftBonus.text()
+			with open(fName+'.yml', 'w') as f:
+				yaml.dump(self.settings, f, default_flow_style=False)
+
 	def updateModListView(self):
 		self.modifierList.clear()
 		for i in self.modList:
