@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>444</height>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -134,9 +134,9 @@ Wild Levels?</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>0</y>
-      <width>701</width>
+      <width>781</width>
       <height>41</height>
      </rect>
     </property>
@@ -148,7 +148,7 @@ Wild Levels?</string>
      </font>
     </property>
     <property name="text">
-     <string>Pokemon Crystal Item Randomizer Tool</string>
+     <string>Pokemon Crystal-Speedchoice Item Randomizer Tool</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

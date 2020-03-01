@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 444)
+        MainWindow.resize(800, 442)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.TrainerLevelScaling = QtWidgets.QCheckBox(self.centralwidget)
@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.WildLevelShiftBonus.setGeometry(QtCore.QRect(100, 210, 31, 20))
         self.WildLevelShiftBonus.setObjectName("WildLevelShiftBonus")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(40, 0, 701, 41))
+        self.label.setGeometry(QtCore.QRect(10, 0, 781, 41))
         font = QtGui.QFont()
         font.setPointSize(22)
         font.setBold(True)
@@ -204,7 +204,7 @@ class Ui_MainWindow(object):
         self.WildLevelShift.setText(_translate("MainWindow", "Wild Level\n"
 " Shift Bonus:"))
         self.WildLevelShiftBonus.setText(_translate("MainWindow", "0"))
-        self.label.setText(_translate("MainWindow", "Pokemon Crystal Item Randomizer Tool"))
+        self.label.setText(_translate("MainWindow", "Pokemon Crystal-Speedchoice Item Randomizer Tool"))
         self.label_2.setText(_translate("MainWindow", "Options"))
         self.ChooseSettings.setText(_translate("MainWindow", "Select Logic Settings"))
         self.label_4.setText(_translate("MainWindow", "Curent Settings"))

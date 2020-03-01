@@ -7,3 +7,8 @@
 *.log
 *.gbc
 *_SPOILER.txt
+build/*
+dist/*
+RunGui.spec
+BuildGUILameName.bat
+BuildGUI.bat
