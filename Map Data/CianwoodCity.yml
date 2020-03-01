@@ -75,7 +75,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: HM_FLY
+                NormalItem:
                 Code: |
                     UnknownScript_0x1a009c:
                         writetext UnknownText_0x1a01e3
