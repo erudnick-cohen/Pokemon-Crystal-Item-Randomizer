@@ -200,7 +200,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						
 						#compute item density map in the forwards direction
 						itemDensityMap = [0]*len(oldTrashList)
-						itemDistSum = 0
+						#initialize distance to large number so we get early areas the right weight
+						itemDistSum = 1000
 						iter = 0
 						for k in range(0,len(allTrashList)):
 							print('a '+str(k)+' b '+str(iter))
