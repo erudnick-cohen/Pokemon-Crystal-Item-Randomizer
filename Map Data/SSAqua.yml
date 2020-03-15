@@ -7,9 +7,7 @@ Location:
         WildTableList:
         LocationReqs: Olivine City
         FlagReqs:
-            - Kanto Mode
         ItemReqs:
-            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code:
@@ -23,9 +21,7 @@ Location:
         WildTableList:
         LocationReqs: Vermillion City
         FlagReqs:
-            - Kanto Mode
         ItemReqs:
-            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code:

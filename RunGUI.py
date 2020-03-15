@@ -1,12 +1,16 @@
 import sys
 import RandomizerGUI
+import time
 import yaml
 import json
+import random
+import string
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QFileDialog
 import RunCustomRandomization
 from shutil import copyfile
+
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
 		super(RunWindow, self).__init__(parent)
@@ -25,6 +29,12 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.SaveSettings.clicked.connect(self.saveSettings)
 
 	def runRandomizer(self):
+		rngSeed = str(time.time())
+		random.seed(rngSeed)
+		rngSeed = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
+		if(self.SeedInput.text() != ''):
+			rngSeed = self.SeedInput.text()
+		random.seed(rngSeed)
 		_translate = QtCore.QCoreApplication.translate
 		yamlfile = open(self.settings['BasePatch'])
 		yamltext = yamlfile.read()
@@ -44,8 +54,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = self.TrainerLevelScaling.isChecked(), adjustRegularWildLevels = self.RegularWildLevelScaling.isChecked(), adjustSpecialWildLevels = self.SpecialWildLevelScaling.isChecked(), trainerLVBoost = tlv, wildLVBoost=wlv)
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
+				outputSpoiler = {}
+				outputSpoiler['RNG Seed'] = rngSeed
+				outputSpoiler['Solution'] = result[1]
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
-					yaml.dump(result[1], f, default_flow_style=False)
+					yaml.dump(outputSpoiler, f, default_flow_style=False)
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 			QtWidgets.QMessageBox.about(self, 'Success', 'Sucessfully randomized rom')
 		except ValueError:
