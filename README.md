@@ -1,6 +1,8 @@
 # Pokemon Crystal Item Randomizer
 This is an item randomizer for pokemon crystal. Unlike many existing pokemon randomizers, this randomizer not only randomizes what pokemon appear, but also the item locations of the regular(non-hidden) and key items in the game.
 
+If you are looking for the speedchoice compatible version of this randomizer (which includes an exectuable version of the randomizer), you should check the releases tab of this repository (https://github.com/erudnick-cohen/Pokemon-Crystal-Item-Randomizer/releases), or go to https://github.com/erudnick-cohen/Pokemon-Crystal-Item-Randomizer/tree/Speedchoice-GUI.
+
 # Prequisites to run the randomizer
 In order to run this item randomizer you need the ability to build pokecrystal (https://github.com/pret/pokecrystal), instructions on how to do this can be found in the README for pokecrystal. Additionally, you need python installed with the PyYAML package.
 
