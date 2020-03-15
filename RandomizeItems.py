@@ -198,29 +198,33 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						#item = next(x for x in progressItems if x == j)
 						progressItems.remove(j)
 						
+						#compute item density map, items are weighted based off distance from total number of items and weighted to not be clumped
 						#compute item density map in the forwards direction
 						itemDensityMap = [0]*len(oldTrashList)
 						#initialize distance to large number so we get early areas the right weight
 						itemDistSum = 1000
 						iter = 0
+						nProgressCount = 0
 						for k in range(0,len(allTrashList)):
 							#print('a '+str(k)+' b '+str(iter))
 							if(allTrashList[k].item in reqItems):
-								itemDistSum = 0
+								nProgressCount = nProgressCount+1
+								itemDistSum = nProgressCount
 							else:
 								itemDensityMap[iter] = itemDistSum
 								itemDistSum = itemDistSum+1
 								iter = iter+1
 						#print(itemDensityMap)
 						#compute item density map in the reverse direction
-						itemDistSum = 0
+						itemDistSum = nProgressCount
 						iter = len(oldTrashList)-1
 						rFlag = 0
 						for k in range(len(allTrashList)-1,-1,-1):
 							#print(k)
 							#print(reqItems)
 							if(allTrashList[k].item in reqItems):
-								itemDistSum = 0
+								nProgressCount = nProgressCount-1
+								itemDistSum = nProgressCount
 								rFlag = 1
 							else:
 								if(rFlag == 1):
