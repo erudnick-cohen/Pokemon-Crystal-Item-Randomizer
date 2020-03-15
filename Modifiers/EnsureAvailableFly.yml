@@ -1,0 +1,9 @@
+Name: Ensure fly available
+Description: "Ensures that the fly HM is available before fighting E4"
+Changes:
+    -
+        Location: Elite Four
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Storm Badge
