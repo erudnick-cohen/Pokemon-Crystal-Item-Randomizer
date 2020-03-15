@@ -128,17 +128,17 @@ class Location:
 					if not (j['NewItemReqs'] is None):
 						self.ItemReqs = j['NewItemReqs']
 					else:
-						self.ItemReqs = []
+						self.ItemReqs = self.ItemReqs
 				if 'NewFlagReqs' in j:
 					if not (j['NewFlagReqs'] is None):
 						self.FlagReqs = j['NewFlagReqs']
 					else:
-						self.FlagReqs = []
+						self.FlagReqs = self.FlagReqs
 				if 'NewLocationReqs' in j:
 					if not (j['NewLocationReqs'] is None):
 						self.LocationReqs = j['NewLocationReqs']
 					else:
-						self.LocationReqs = []
+						self.LocationReqs = self.LocationReqs
 		for i in self.Sublocations:
 			 i.applyModifiers(modifierDict)
 	
