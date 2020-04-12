@@ -46,5 +46,29 @@
         },
         "label": "Route30_MapEventHeader.ckir_BEFORE_EVENT_ROUTE_30_YOUNGSTER_JOEY",
         "description": "NOTE THAT THESE VALUES DIFFER FROM VANILLA - WHY? Make the battleable Youngster Joey appear"
+    },
+    {
+        "integer_values": {
+            "old": [ 3, 116],
+            "new": [ 162, 77]
+        },
+        "address_range": {
+            "begin": 494596,
+            "end": 494597
+        },
+        "label": "Prevent egg softlock 1",
+        "description": "Ensures that elm doesn't lock out the initial pokeball gift if you've progressed other things in lab"
+    },
+    {
+        "integer_values": {
+            "old": [ 65, 114],
+            "new": [ 162, 77]
+        },
+        "address_range": {
+            "begin": 494602,
+            "end": 494603
+        },
+        "label": "Prevent egg softlock 2",
+        "description": "Ensures that elm doesn't lock out the initial pokeball gift if you've progressed other things in lab"
     }
 ]

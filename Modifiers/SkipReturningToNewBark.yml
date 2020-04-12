@@ -1,18 +1,8 @@
 Name: Skip returning to New Bark
-Description: Gets rid of the fight occuring on Route 30, allowing the player to skip returning the egg back to New Bark town. Note that the egg IS still required to obtain the master ball and SS ticket items!
+Description: Gets rid of the fight occuring on Route 30, allowing the player to skip returning the egg back to New Bark town. Note that the egg is NOT required to obtain the master ball and SS ticket items!
 NewGamePatches:
     - 'Patches/SkipImportantBattle.json'
 Changes:
     -
-        Location: Master Ball
-        NewLocationReqs:
-            - Elm's Lab
-            - Elm's Theft Occurs
-    -
-        Location: SS Ticket
-        NewLocationReqs:
-            - Elm's Lab
-            - Elm's Theft Occurs
-    -
         Location: Route 30 towards Route 31
-        NewFlagReqs:
+        NewFlagReqs: []
