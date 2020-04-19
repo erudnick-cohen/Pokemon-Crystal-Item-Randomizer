@@ -1,5 +1,5 @@
 Name: Force early bike
-Description: Ensures that the bike is available before the player would pass sudowoodo or leave johto
+Description: Ensures that the bike is available before the player would pass sudowoodo or take the magnet train.
 Changes:
     -
         Location: Route 36 Sudowoodo Junction
