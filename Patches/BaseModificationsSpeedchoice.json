@@ -604,5 +604,29 @@
         },
         "label": "Whitney weird checking",
         "description": "For badge randomization, ensure that whitney actually doesn't care about you having the vanilla badge. Check is rerouted to the silver cave flypoint, which cannot be reached without beating whitney in the first place"
+    },
+    {
+        "integer_values": {
+            "old": [0,0],
+            "new": [0,0]
+        },
+        "address_range": {
+            "end": 380175,
+            "begin": 380174
+        },
+        "label": "Prevent bug catching contest softlock 1",
+        "description": "During the bug catching contest, all itemballs are moved to inaccessible locations, to prevent the player from softlocking themselves by obtaining the unrandomized item"
+    },
+    {
+        "integer_values": {
+            "old": [0,0],
+            "new": [0,0]
+        },
+        "address_range": {
+            "end": 380188,
+            "begin": 380187
+        },
+        "label": "Prevent bug catching contest softlock 2",
+        "description": "During the bug catching contest, all itemballs are moved to inaccessible locations, to prevent the player from softlocking themselves by obtaining the unrandomized item"
     }
 ]
