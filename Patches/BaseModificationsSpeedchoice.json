@@ -628,5 +628,41 @@
         },
         "label": "Prevent bug catching contest softlock 2",
         "description": "During the bug catching contest, all itemballs are moved to inaccessible locations, to prevent the player from softlocking themselves by obtaining the unrandomized item"
+    },
+    {
+        "integer_values": {
+            "old": [0,0,0],
+            "new": [145,20,2]
+        },
+        "address_range": {
+            "end": 495420,
+            "begin": 495408
+        },
+        "label": "Prevent the police aide bug",
+        "description": "Ensures that talking to the policeman does not cause the aide to not give you pokeballs"
+    },
+    {
+        "integer_values": {
+            "old": [3],
+            "new": [9]
+        },
+        "address_range": {
+            "end": 500732,
+            "begin": 500732
+        },
+        "label": "Prevent the police aide bug, part 2",
+        "description": "Ensures that talking to the policeman does not cause the aide to not give you pokeballs. Also ensures that the policeman doesn't permanently trap you in elm's lab when you don't have the egg"
+    },
+    {
+        "integer_values": {
+            "old": [3],
+            "new": [9]
+        },
+        "address_range": {
+            "end": 500740,
+            "begin": 500740
+        },
+        "label": "Prevent the police aide bug, part 3",
+        "description": "Ensures that talking to the policeman does not cause the aide to not give you pokeballs. Also ensures that the policeman doesn't permanently trap you in elm's lab when you don't have the egg"
     }
 ]
