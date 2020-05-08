@@ -1,11 +1,75 @@
 Location:
     -
-        Name: Goldenrod Tunnel
+        Name: Goldenrod Tunnel Entrance A
         FileName: GoldenrodCity.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
         LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+            - Basement Key
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Tunnel Entrance B
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+            - Basement Key
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Tunnel Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Goldenrod Tunnel Entrance A
+        FlagReqs:
+        ItemReqs:
+            - Basement Key
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Tunnel Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Goldenrod Tunnel Entrance A
+        FlagReqs:
+        ItemReqs:
+            - Basement Key
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Tunnel
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Goldenrod Tunnel Entrance
         FlagReqs:
         ItemReqs:
             - Basement Key
