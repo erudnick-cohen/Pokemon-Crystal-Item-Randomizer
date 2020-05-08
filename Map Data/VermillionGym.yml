@@ -22,7 +22,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermilion City
+        LocationReqs: Vermillion City
         FlagReqs:
             - Hive Badge
         ItemReqs:
