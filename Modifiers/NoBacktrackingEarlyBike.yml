@@ -1,0 +1,108 @@
+Name: No backtracking early bike
+Description: Ensures that the bike is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking.
+Changes:
+    -
+        Location: Route 36 Sudowoodo Junction
+        NewItemReqs:
+            - Squirtbottle
+            - Bicycle
+    -
+        Location: Saffron City via Magnet Train
+        NewItemReqs:
+            - Pass
+            - Bicycle
+    -
+        Location: Route 31 Kenya Item
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Dark Cave Violet Potion
+        NewItemReqs:
+            - Flash
+            - Bicycle
+    -
+        Location: Mr. Pokemon's EXP Share
+        NewItemReqs:
+            - Bicycle
+            - Red Scale
+    -
+        Location: Mystic Water Man
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Elm Aide Pokeballs
+        NewItemReqs:
+            - Bicycle
+            - Mystery Egg
+    -
+        Location: Master Ball
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Violet City Rare Candy
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Violet City PP UP
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Roar Dude
+        NewItemReqs:
+            - Bicycle
+            - Cut
+    -
+        Location: Miracle Seed Man
+        NewItemReqs:
+            - Cut
+    -
+        Location: Route 27
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Union Cave Floor 3
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Slowpoke Well Floor 2
+        NewItemReqs:
+            - Bicycle
+            - Surf
+            - Strength
+    -
+        Location: Soft Sand
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Route 34 Nugget
+        NewItemReqs:
+            - Bicycle
+            - Surf
+    -
+        Location: Kenya Gate Item
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Goldenrod Tunnel
+        NewItemReqs:
+            - Bicycle
+            - Basement Key
+    -
+        Location: Ruins of Alph Light Chamber
+        NewItemReqs:
+            - Bicycle
+            - Surf
+            - Flash
+
+
+
+
+
+
+
