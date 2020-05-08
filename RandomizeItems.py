@@ -37,8 +37,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	
 	oldTrashList = []
 	allTrashList = []
+	allTrashGyms = []
+	newTrashGyms = []
+	newSpots = []
 	reqItems = copy.copy(progressItems)
-
+	#this is hardcoded to crystal, remember you have to change this when you migrate this stuff to the ruby item randomizer
+	reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}
 	#begin search and assignment
 	goalReached = False
 	randomizerFailed = False
@@ -89,6 +93,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						trashItems.remove(item)
 						i.item = item
 						trashSpots.append(i)
+						newSpots.append(i)
 					if(itemType[0] == 'Progress'):
 						item = random.choice(progressItems)
 						progressItems.remove(item)
@@ -97,6 +102,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						state[item] = True
 						stateDist[item] = i.distance
 						spoiler[item] = i.Name
+						newSpots.append(i)
 					#print(i.item)
 				#if its a gym, put a badge in it
 				if(i.isGym()):
@@ -107,11 +113,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					#if badge is trash, put gym in trash gym list
 					if(badgeData[badge].isTrash):
 						trashGyms.append(i)
+						newTrashGyms.append(i)
 					else:
 						#otherwise add this badge to the state
 						state[badge] = True
 						stateDist[badge] = i.distance
 						spoiler[badge] = i.Name
+						newTrashGyms.append(i)
 					nBadges = nBadges+1
 					maxBadgeDist = max(maxBadgeDist,i.distance)
 					#set badge count based flags
@@ -134,13 +142,21 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		if(stuckCount > 2):
 			#update trashList
 			random.shuffle(trashSpots)
+			random.shuffle(newSpots)
 			oldTrashList.extend(trashSpots)
-			allTrashList.extend(trashSpots)
+			allTrashList.extend(newSpots)
+			
+			random.shuffle(newTrashGyms)
+			allTrashGyms.extend(newTrashGyms)
+			newTrashGyms = []
+			newSpots = []
+
 			#print(trashSpots)
 			trashSpots = []
 			#print('Got stuck, forcing progress')
 			#print('Current state')
 			#print(stateDist)
+			#print(spoiler)
 			stuckCount = stuckCount+1
 			#Define set of possible locations to open up
 			pLocations = copy.copy(activeLoc)
@@ -257,8 +273,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						# lower = max(center-rrange,1)
 						# randspot = int(round(random.triangular(lower,upper,center)))
 						#print(oldTrashList)
-						if(len(oldTrashList)> 1):
+						if(len(oldTrashList)> 1 and rFlag == 1):
 							#place = random.choice(oldTrashList[randspot:])
+							place = oldTrashList[randSpot]
+						elif(len(oldTrashList)> 1 and rFlag == 0):
+							#place = random.choice(oldTrashList)
 							place = oldTrashList[randSpot]
 						else:
 							place = oldTrashList[0]
@@ -269,8 +288,68 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						stateDist[j] = place.distance
 						spoiler[j] = place.Name
 					else:
+						#print('badging')
+						#print(allTrashGyms)
+						#print(trashGyms)
+						#print(reqItems)
 						#It is a badge, pick a random trash gym and put it there
-						gym = random.choice(trashGyms)
+						#compute badge density map, items are weighted based off distance from total number of items and weighted to not be clumped
+						#compute badge density map in the forwards direction
+						badgeDensityMap = [0]*len(trashGyms)
+						#initialize distance to large number so we get early areas the right weight
+						itemDistSum = 1000
+						iter = 0
+						nProgressCount = 0
+						for k in range(0,len(allTrashGyms)):
+							#print('a '+str(k)+' b '+str(iter))
+							#print(allTrashGyms[k].badge.Name)
+							if(allTrashGyms[k].badge.Name in reqBadges):
+								nProgressCount = nProgressCount+1
+								itemDistSum = nProgressCount
+							else:
+								badgeDensityMap[iter] = itemDistSum
+								itemDistSum = itemDistSum+1
+								iter = iter+1
+						#print(itemDensityMap)
+						#compute item density map in the reverse direction
+						#print('rev')
+						itemDistSum = nProgressCount
+						iter = len(trashGyms)-1
+						rFlag = 0
+						for k in range(len(allTrashGyms)-1,-1,-1):
+							#print(k)
+							#print(reqItems)
+							if(allTrashGyms[k].badge.Name in reqBadges):
+								nProgressCount = nProgressCount-1
+								itemDistSum = nProgressCount
+								rFlag = 1
+							else:
+								if(rFlag == 1):
+									badgeDensityMap[iter] = min(itemDistSum,badgeDensityMap[iter])
+								itemDistSum = itemDistSum+1
+								iter = iter-1
+						#Pick a random location with trash and put the item there
+						#This choice is biased to space out items to be evenly distributed
+						dSum = sum(badgeDensityMap)
+						#print(badgeDensityMap)
+						#print(stateDist)
+						#print(spoiler)
+						#print(reqs)
+						#print(allTrashGyms)
+						#print(rFlag)
+						randVal = random.uniform(0,dSum)
+						randSpot = 0
+						while(randVal>0):
+							randVal = randVal-badgeDensityMap[randSpot]
+							randSpot = randSpot+1
+						randSpot = randSpot-1
+						
+						
+						#gym = random.choice(trashGyms)
+						if(rFlag == 1):
+							gym = trashGyms[randSpot]
+						else:
+							gym = random.choice(trashGyms)
 						trashGyms.remove(gym)
 						badgeSet.append(gym.badge.Name)
 						badgeSet.remove(j)
@@ -278,6 +357,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						state[j] = True
 						stateDist[j] = gym.distance
 						spoiler[j] = gym.Name
+						#print('done')
 			else:
 				randomizerFailed = True
 				#print("No Resolvers Available, randomizer has failed")
