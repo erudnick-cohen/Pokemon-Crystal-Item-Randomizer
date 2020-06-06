@@ -5,9 +5,11 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Olivine City
+        LocationReqs: Olivine City Entrance
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
+            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code:
@@ -19,9 +21,11 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion City
+        LocationReqs: Vermillion City Entrance
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
+            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code:

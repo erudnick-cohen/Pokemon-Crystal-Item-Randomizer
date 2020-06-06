@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Ilex Forest Back
+        LocationReqs: Ilex Forest Back Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Goldenrod City
+        LocationReqs: Goldenrod City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

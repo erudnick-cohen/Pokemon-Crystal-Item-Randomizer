@@ -25,7 +25,83 @@ Location:
                     - Pallet Town
                 FlagReqs:
                     - All Badges
+                    - Zephyr Badge
+                    - Hive Badge
+                    - Plain Badge
+                    - Fog Badge
+                    - Glacier Badge
+                    - Rising Badge
                 ItemReqs:
+                    - Cut
+                    - Surf
+                    - Strength
+                    - Secret Potion
+                    - Card Key
+                    - Squirtbottle
+                    - Pass
+                    - Machine Part
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock
+                FileName: PalletTowns.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Pallet Town
+                FlagReqs:
+                    - All Badges
+                    - Zephyr Badge
+                    - Hive Badge
+                    - Plain Badge
+                    - Fog Badge
+                    - Glacier Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Cut
+                    - Surf
+                    - Strength
+                    - Secret Potion
+                    - Card Key
+                    - Squirtbottle
+                    - S S Ticket
+                    - Machine Part
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock
+                FileName: PalletTowns.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Pallet Town
+                FlagReqs:
+                    - All Badges
+                    - Zephyr Badge
+                    - Hive Badge
+                    - Plain Badge
+                    - Fog Badge
+                    - Glacier Badge
+                    - Rising Badge
+                ItemReqs:
+                    - Cut
+                    - Surf
+                    - Strength
+                    - Secret Potion
+                    - Card Key
+                    - Machine Part
+                    - Pass
+                    - S S Ticket
                 FlagsSet:
                 ReachableReqs:
                 Code:

@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Goldenrod City
+        LocationReqs: Goldenrod City Entrance
         FlagReqs:
         ItemReqs:
             - Basement Key
@@ -21,7 +21,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Goldenrod City
+        LocationReqs: Goldenrod City Entrance
         FlagReqs:
         ItemReqs:
             - Basement Key
@@ -53,7 +53,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Goldenrod Tunnel Entrance A
+        LocationReqs: Goldenrod Tunnel Entrance B
         FlagReqs:
         ItemReqs:
             - Basement Key

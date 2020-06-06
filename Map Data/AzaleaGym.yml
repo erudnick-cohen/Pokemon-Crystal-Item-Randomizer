@@ -6,9 +6,9 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs: 
-            - Slowpoke Well Floor 1
             - Azalea Town
         FlagReqs:
+            - Saved Slowpokes
         ItemReqs:
         FlagsSet:
         ReachableReqs:

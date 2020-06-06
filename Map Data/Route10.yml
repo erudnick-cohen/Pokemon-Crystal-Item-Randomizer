@@ -22,9 +22,11 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Traversed Rock Tunnel
+            - Rock Tunnel Entrance
         FlagReqs:
+            - Zephyr Badge
         ItemReqs:
+            - Flash
         FlagsSet:
         ReachableReqs:
         Code:

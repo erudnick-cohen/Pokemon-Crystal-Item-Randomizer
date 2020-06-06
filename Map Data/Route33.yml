@@ -15,23 +15,6 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 33
-        FileName: Route33.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Azalea Town
-        FlagReqs:
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
         Name: Route 33 actual
         FileName: Route33.asm
         Type: Map

@@ -1,11 +1,11 @@
 Location:
     -
-        Name: Goldenrod Entrance
+        Name: Goldenrod City Entrance
         FileName: GoldenrodCity.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 34
+        LocationReqs: Route 34 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,12 +15,12 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Goldenrod Entrance
+        Name: Goldenrod City Entrance
         FileName: GoldenrodCity.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 35
+        LocationReqs: Route 35 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -35,7 +35,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Goldenrod Entrance
+        LocationReqs: Goldenrod City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -319,7 +319,7 @@ Location:
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod City Entrance
                 FlagReqs: 
                     - Rock Smash Purchaseable
                 ItemReqs:

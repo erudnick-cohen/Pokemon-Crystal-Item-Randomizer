@@ -9,6 +9,7 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Saved Slowpokes
         ReachableReqs:
         Code:
         Text:

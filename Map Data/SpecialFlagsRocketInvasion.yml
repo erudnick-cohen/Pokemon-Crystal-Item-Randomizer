@@ -1,0 +1,224 @@
+Location:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - S S Ticket
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Fog Badge
+            - Zephyr Badge
+        ItemReqs:
+            - Surf
+            - Pass
+            - Squirtbottle
+            - Flash
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - S S Ticket
+            - Squirtbottle
+            - Secret Potion
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Fog Badge
+            - Hive Badge
+        ItemReqs:
+            - Surf
+            - Cut
+            - Pass
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Hive Badge
+        ItemReqs:
+            - Cut
+            - S S Ticket
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Hive Badge
+            - Zephyr Badge
+            - Fog Badge
+        ItemReqs:
+            - Cut
+            - Pass
+            - Flash
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+        FlagReqs:
+            - Assumed Fill
+            - Fog Badge
+            - Hive Badge
+            - Plain Badge
+        ItemReqs:
+            - Surf
+            - Cut
+            - Squirtbottle
+            - Strength
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+            - Saffron City Gym Badge
+        FlagReqs:
+            - Assumed Fill
+        ItemReqs:
+            - S S Ticket
+            - Squirtbottle
+            - Secret Potion
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+            - Saffron City Gym Badge
+        FlagReqs:
+            - Assumed Fill
+        ItemReqs:
+            - Pass
+            - Squirtbottle
+            - Secret Potion
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Goldenrod City Entrance
+            - Saffron City Gym Badge
+        FlagReqs:
+            - Assumed Fill
+            - Zephyr Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Flash
+            - Pass
+            - Secret Potion
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

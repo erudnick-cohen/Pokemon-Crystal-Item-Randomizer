@@ -10,6 +10,7 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Expansion Card
         ReachableReqs:
         Code:
         Text:

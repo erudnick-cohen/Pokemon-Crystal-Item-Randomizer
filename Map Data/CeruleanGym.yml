@@ -39,7 +39,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs: Cerulean City
+                LocationReqs: Cerulean Gym
                 FlagReqs:
                     - Date Ruined
                 ItemReqs:

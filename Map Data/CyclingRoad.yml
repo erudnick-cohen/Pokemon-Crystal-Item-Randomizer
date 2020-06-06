@@ -21,7 +21,7 @@ Location:
             - BIKER 9
         Sublocations:
     -
-        Name: Route 18
+        Name: Route 18 Entrance
         FileName: Route18.asm
         Type: Map
         HasPKMN: Yes
@@ -35,8 +35,22 @@ Location:
         Text:
         AREALV: 32
         TrainerList:
-            - BIRD_KEEPER 11
-            - BIRD_KEEPER 10
+        Sublocations:
+    -
+        Name: Route 18 Entrance
+        FileName: Route18.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Fuchsia City Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
         Sublocations:
     -
         Name: Route 18
@@ -44,7 +58,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Fuschia City
+        LocationReqs: Route 18 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

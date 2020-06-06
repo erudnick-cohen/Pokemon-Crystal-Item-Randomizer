@@ -9,9 +9,11 @@ Location:
         FlagReqs:
             - Glacier Badge
             - Zephyr Badge
+            - Fog Badge
         ItemReqs:
             - Whirlpool
             - Flash
+            - Surf
         FlagsSet:
         ReachableReqs:
         Code:

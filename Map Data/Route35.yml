@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Goldenrod City
+        LocationReqs: Goldenrod City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -20,9 +20,10 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: National Park
+        LocationReqs: National Park Entrance
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:

@@ -85,7 +85,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 26
+        LocationReqs: Route 26 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

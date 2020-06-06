@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Route 26
+        Name: Route 26 Entrance
         FileName: Route26.asm
         Type: Map
         HasPKMN: Yes
@@ -15,12 +15,27 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 26
+        Name: Route 26 Entrance
         FileName: Route26.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
         LocationReqs: League Gate
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 26
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Route 26 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

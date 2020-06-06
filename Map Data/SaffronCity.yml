@@ -39,7 +39,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6
+        LocationReqs: Route 6 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

@@ -5,9 +5,10 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 34
+        LocationReqs: Route 34 Entrance
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -37,7 +38,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Azalea Town
+        LocationReqs: Azalea Town entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

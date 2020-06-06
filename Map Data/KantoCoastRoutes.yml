@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 15
+            - Route 15 entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

@@ -5,7 +5,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Red Scale Dropped
+        LocationReqs: 
+            - Red Scale Dropped
         FlagReqs:
         ItemReqs:
         FlagsSet:

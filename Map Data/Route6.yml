@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion City
+        LocationReqs: Vermillion City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Saffron City
+        LocationReqs: Saffron City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

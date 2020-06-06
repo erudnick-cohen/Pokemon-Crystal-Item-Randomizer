@@ -40,7 +40,7 @@ Location:
         WildTableList: DARK_CAVE_VIOLET_ENTRANCE
         LocationReqs: Dark Cave Violet Entrance
         FlagReqs:
-            - Goldenrod City
+            - Goldenrod City Entrance
             - Rock Smash Purchaseable
         ItemReqs:
         FlagsSet:

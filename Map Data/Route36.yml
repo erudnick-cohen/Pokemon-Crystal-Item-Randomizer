@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: National Park
+        LocationReqs: National Park Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -68,7 +68,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 36 via Violet
+        LocationReqs: 
+            - Route 36 via Violet
         FlagReqs:
         ItemReqs: 
             - Squirtbottle
@@ -77,14 +78,16 @@ Location:
         Code:
         Text:
         TrainerList: 
-        Sublocations:   
+        Sublocations:
     -
         Name: Route 36 Sudowoodo Junction
         FileName: Route36.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 36 via Goldenrod
+        LocationReqs: 
+            - Route 36 via Goldenrod
+            - Route 36 Goldenrod Side
         FlagReqs:
         ItemReqs: 
             - Squirtbottle

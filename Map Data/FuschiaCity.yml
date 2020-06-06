@@ -22,7 +22,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 18
+            - Route 18 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -38,7 +38,7 @@ Location:
         HasPKMN: No
         WildTableList: FUCHSIA_CITY
         LocationReqs:
-            - Route 15
+            - Route 15 entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

@@ -4,7 +4,8 @@ class Location:
 		self.Name = yamlTree["Name"]
 		self.FileName = yamlTree["FileName"]
 		self.IsItem = yamlTree["Type"]=="Item"
-		self.Item = None
+		self.Type = yamlTree["Type"]
+		self.item = None
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this
 		if("NormalItem" in yamlTree):

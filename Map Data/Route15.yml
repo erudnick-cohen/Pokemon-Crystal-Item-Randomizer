@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 14
+            - Route 13-14 entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -22,7 +22,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Fuchsia City
+            - Fuchsia City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

@@ -5,7 +5,8 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Mahogany Town
+        LocationReqs: 
+            - Mahogany Town
         FlagReqs:
             - Mahogany Rockets Defeated
         ItemReqs:

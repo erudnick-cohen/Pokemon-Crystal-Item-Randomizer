@@ -14,21 +14,6 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-    -
-        Name: Union Cave
-        FileName: UnionCave1F.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: UNION_CAVE_1F
-        LocationReqs: Route 33
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
     -    
         Name: Union Cave Floor 1
         FileName: UnionCave1F.asm

@@ -7,9 +7,9 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermillion City
-            - Lavender Town
         FlagReqs:
             - Kanto Power Restored
+            - Expansion Card
         ItemReqs:
         FlagsSet:
         ReachableReqs:

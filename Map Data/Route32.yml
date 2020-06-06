@@ -5,23 +5,10 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: Route_32
-        LocationReqs: Violet City
-        FlagReqs:
+        LocationReqs: 
             - Falkner TM
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 32
-        FileName: Route32.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: Route_32
-        LocationReqs: Union Cave
+            - Violet Gym
+            - Violet City
         FlagReqs:
         ItemReqs:
         FlagsSet:
