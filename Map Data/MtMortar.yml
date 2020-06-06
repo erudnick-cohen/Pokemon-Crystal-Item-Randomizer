@@ -433,9 +433,63 @@ Location:
                         Text:
                         TrainerList:
                         Sublocations:
-
-
-
+                    -
+                        Name: Mt Mortar Max Potion #2
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: MAX_POTION
+                        Code: |
+                            MountMortar1FInsideMaxPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Iron
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: IRON
+                        Code: |
+                            MountMortar1FInsideIron:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Max Revive
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ESCAPE_ROPE
+                        Code: |
+                            MountMortar1FInsideMaxRevive:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
 
 
 
