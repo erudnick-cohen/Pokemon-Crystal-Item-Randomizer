@@ -9,7 +9,9 @@ Location:
             - Dragons_Den_B1F
         LocationReqs: Clair TM
         FlagReqs:
+            - Fog Badge
         ItemReqs:
+            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
