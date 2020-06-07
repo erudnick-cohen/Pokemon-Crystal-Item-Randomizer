@@ -5,9 +5,25 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+        LocationReqs: Vermillion via Route 6
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Vermillion via Route 6
+        FileName: VermillionCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
         LocationReqs: Route 6 Entrance
         FlagReqs:
         ItemReqs:
+            - Pass
         FlagsSet:
         ReachableReqs:
         Code: 
@@ -20,9 +36,32 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+        LocationReqs: Vermillion via SS Aqua
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+            - Squirtbottle
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Vermillion via SS Aqua
+        FileName: VermillionCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
         LocationReqs: SS Aqua Entrance
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
+            - Squirtbottle
+            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code: 

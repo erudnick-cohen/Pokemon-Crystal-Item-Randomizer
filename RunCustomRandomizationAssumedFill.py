@@ -103,6 +103,8 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			LocationList = res[0]
 			progressItems = copy.copy(requiredItems)
 			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags)
+			if goal not in result[0]:
+				print('bad run, retrying')
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			traceback.print_exc()

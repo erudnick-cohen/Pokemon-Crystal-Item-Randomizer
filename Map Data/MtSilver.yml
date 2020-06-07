@@ -1,11 +1,39 @@
 Location:
     -
+        Name: Steel Wing MT Silver
+        FileName: Route28FamousSpeechHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_28
+        LocationReqs:
+            - Mt. Silver Unlock
+            - Became Champion
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: TM_STEEL_WING
+        Code: |
+            Celebrity:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_TM47_STEEL_WING
+                iftrue .AlreadyGotItem
+                writetext CelebrityText1
+                buttonsound
+                ITEMLINE
+                iffalse .Done
+                setevent EVENT_GOT_TM47_STEEL_WING
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Mt. Silver
         FileName: SilverCaveOutside.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-            - ROUTE_28
             - SILVER_CAVE_OUTSIDE
             - SILVER_CAVE_ROOM_1
             - SILVER_CAVE_ROOM_2
@@ -16,7 +44,9 @@ Location:
         FlagReqs:
             - Mt. Silver Unlock
             - Became Champion
+            - Zephyr Badge
         ItemReqs:
+            - Flash
         FlagsSet:
         ReachableReqs:
         Code:
@@ -25,33 +55,7 @@ Location:
         TrainerList: 
             - RED 1
         Sublocations:
-            -
-                Name: Steel Wing MT Silver
-                FileName: Route28FamousSpeechHouse.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Mt. Silver
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: TM_STEEL_WING
-                Code: |
-                    Celebrity:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_TM47_STEEL_WING
-                        iftrue .AlreadyGotItem
-                        writetext CelebrityText1
-                        buttonsound
-                        ITEMLINE
-                        iffalse .Done
-                        setevent EVENT_GOT_TM47_STEEL_WING
-                Text:
-                TrainerList: 
-                Sublocations:
+
             -
                 Name: Mt. Silver Max Elixer
                 FileName: SilverCaveRoom1.asm
@@ -61,7 +65,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ELIXER
@@ -81,7 +87,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PROTEIN
@@ -101,7 +109,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: ESCAPE_ROPE
@@ -121,7 +131,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: ULTRA_BALL
@@ -143,9 +155,11 @@ Location:
                 FlagReqs:
                     - Fog Badge
                     - Rising Badge
+                    - Zephyr Badge
                 ItemReqs:
                     - Surf
                     - Waterfall
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_REVIVE
@@ -167,9 +181,11 @@ Location:
                 FlagReqs:
                     - Fog Badge
                     - Rising Badge
+                    - Zephyr Badge
                 ItemReqs:
                     - Surf
                     - Waterfall
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: FULL_RESTORE
@@ -191,9 +207,11 @@ Location:
                 FlagReqs:
                     - Fog Badge
                     - Rising Badge
+                    - Zephyr Badge
                 ItemReqs:
                     - Surf
                     - Waterfall
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PP_UP
@@ -213,7 +231,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: ULTRA_BALL
@@ -233,7 +253,9 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Zephyr Badge
                 ItemReqs:
+                    - Flash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: CALCIUM

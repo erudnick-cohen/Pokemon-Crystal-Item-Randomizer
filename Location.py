@@ -107,16 +107,20 @@ class Location:
 	def isGym(self):
 		return False
 	
-		#get all trash items in this locations tree
 	def applyBanList(self, banList, allowList):
 		list = [];
 		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):
 			print('Banning '+self.Name)
-			if(self.isItem):
+			if(self.isItem()):
 				self.IsItem = False
+				self.Type = 'Map'
 			else:
 				#this means its a map location, so we need to just make it unreachable
-				self.flagReqs.append('Impossible')
+				#unless its a gym, in which case nothing happens
+				#note that this only functions for the BANLISt
+				#for the allow list, it will still be available because that would be tedious and defeating the entire point of the allow list
+				if(not self.isGym() and (not (banList is None) and self.Name in banList)):
+					self.FlagReqs.append('Impossible')
 		for i in self.Sublocations:
 			 i.applyBanList(banList, allowList)
 

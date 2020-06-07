@@ -10,6 +10,7 @@ Location:
         FlagReqs:
             - Assumed Fill
             - Fog Badge
+            - Kanto Mode
         ItemReqs:
             - Surf
             - S S Ticket
@@ -32,6 +33,7 @@ Location:
             - Assumed Fill
             - Fog Badge
             - Zephyr Badge
+            - Kanto Mode
         ItemReqs:
             - Surf
             - Pass
@@ -54,6 +56,7 @@ Location:
         FlagReqs:
             - Assumed Fill
             - Fog Badge
+            - Kanto Mode
         ItemReqs:
             - Surf
             - S S Ticket
@@ -77,6 +80,7 @@ Location:
             - Assumed Fill
             - Fog Badge
             - Hive Badge
+            - Kanto Mode
         ItemReqs:
             - Surf
             - Cut
@@ -98,6 +102,7 @@ Location:
         FlagReqs:
             - Assumed Fill
             - Hive Badge
+            - Kanto Mode
         ItemReqs:
             - Cut
             - S S Ticket
@@ -121,6 +126,7 @@ Location:
             - Hive Badge
             - Zephyr Badge
             - Fog Badge
+            - Kanto Mode
         ItemReqs:
             - Cut
             - Pass
@@ -150,6 +156,7 @@ Location:
             - Cut
             - Squirtbottle
             - Strength
+            - Secret Potion
         FlagsSet:
         ReachableReqs:
         Code:
@@ -167,6 +174,7 @@ Location:
             - Saffron City Gym Badge
         FlagReqs:
             - Assumed Fill
+            - Kanto Mode
         ItemReqs:
             - S S Ticket
             - Squirtbottle
@@ -188,6 +196,7 @@ Location:
             - Saffron City Gym Badge
         FlagReqs:
             - Assumed Fill
+            - Kanto Mode
         ItemReqs:
             - Pass
             - Squirtbottle
@@ -211,6 +220,7 @@ Location:
             - Assumed Fill
             - Zephyr Badge
             - Fog Badge
+            - Kanto Mode
         ItemReqs:
             - Surf
             - Flash

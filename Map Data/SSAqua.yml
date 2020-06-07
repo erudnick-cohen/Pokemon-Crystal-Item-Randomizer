@@ -5,11 +5,31 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Olivine City Entrance
+        LocationReqs: 
+            - SS Aqua via Olvine
         FlagReqs:
             - Kanto Mode
         ItemReqs:
             - S S Ticket
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+    -
+        Name: SS Aqua via Olvine
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: 
+            - Olivine City via Route 39
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+            - S S Ticket
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -19,13 +39,37 @@ Location:
         Name: SS Aqua Entrance
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: Map
-        HasPKMN: No
+        HasPKMN: Yes
         WildTableList:
-        LocationReqs: Vermillion City Entrance
+        LocationReqs:
+            - SS Aqua via Vermillion
         FlagReqs:
             - Kanto Mode
+            - Hive Badge
         ItemReqs:
             - S S Ticket
+            - Pass
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+    -
+        Name: SS Aqua via Vermillion
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Vermillion via Route 6
+        FlagReqs:
+            - Kanto Mode
+            - Hive Badge
+        ItemReqs:
+            - S S Ticket
+            - Pass
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -35,7 +79,7 @@ Location:
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: No
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList:
         LocationReqs: SS Aqua Entrance
         FlagReqs:

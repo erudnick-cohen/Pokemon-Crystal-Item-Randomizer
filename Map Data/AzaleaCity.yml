@@ -15,21 +15,6 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Azalea Town entrance
-        FileName: AzaleaTown.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList:
-        LocationReqs: Ilex Forest Front Entrance
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
         Name: Azalea Town
         FileName: AzaleaTown.asm
         Type: Map

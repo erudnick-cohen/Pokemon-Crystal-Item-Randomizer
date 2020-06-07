@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: League Gate
+        LocationReqs: League Gate Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -72,7 +72,7 @@ Location:
             - FISHER 21
         Sublocations:
     -
-        Name: League Gate
+        Name: League Gate Entrance
         FileName: Route26.asm
         Type: Map
         HasPKMN: No
@@ -80,6 +80,45 @@ Location:
         LocationReqs: Route 26
         FlagReqs:
             - 8 Badges
+            - Rising Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate Entrance
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Viridian City
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate
+        FileName: Route26.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 26
+        FlagReqs:
+            - League Gate Entrance
         ItemReqs:
         FlagsSet:
         ReachableReqs:

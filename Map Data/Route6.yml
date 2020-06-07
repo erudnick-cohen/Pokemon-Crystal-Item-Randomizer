@@ -5,9 +5,28 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+        LocationReqs: Route 6 via Vermillion
+        FlagReqs:
+        ItemReqs:
+            - S S Ticket
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 6 via Vermillion
+        FileName: Route6.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
         LocationReqs: Vermillion City Entrance
         FlagReqs:
         ItemReqs:
+            - S S Ticket
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code: 
@@ -20,9 +39,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+        LocationReqs: Route 6 via Saffron
+        FlagReqs:
+        ItemReqs:
+            - Pass
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 6 via Saffron
+        FileName: Route6.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
         LocationReqs: Saffron City Entrance
         FlagReqs:
         ItemReqs:
+            - Pass
         FlagsSet:
         ReachableReqs:
         Code: 

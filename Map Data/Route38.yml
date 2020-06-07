@@ -5,9 +5,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Ecruteak City
+        LocationReqs: Route 38 via Ecruteak
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 38 via Ecruteak
+        FileName: Route38.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Ecruteak City Entrance
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -20,7 +37,28 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 39 Entrance
+        LocationReqs: 
+            - Route 38 via Route 39
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Pass
+            - S S Ticket 
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 38 via Route 39
+        FileName: Route38.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: 
+            - Route 39 via Olivine
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -33,7 +71,7 @@ Location:
         Name: Route 38
         FileName: Route38.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: Route_38
         LocationReqs: Route 38 Entrance
         FlagReqs:

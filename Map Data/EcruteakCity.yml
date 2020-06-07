@@ -3,11 +3,28 @@ Location:
         Name: Ecruteak City Entrance
         FileName: EcruteakCity.asm
         Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ecruteak City via Route 37
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Ecruteak City via Route 37
+        FileName: EcruteakCity.asm
+        Type: Map
         HasPKMN: Yes
         WildTableList: 
         LocationReqs: Route 37
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -18,11 +35,36 @@ Location:
         Name: Ecruteak City Entrance
         FileName: EcruteakCity.asm
         Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: 
+            - Route 38 via Route 39
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Pass
+            - S S Ticket
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Ecruteak City via Route 38
+        FileName: EcruteakCity.asm
+        Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Route 38 Entrance
+        LocationReqs: 
+            - Route 38 via Route 39
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Pass
+            - S S Ticket
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -33,10 +75,11 @@ Location:
         Name: Ecruteak City
         FileName: EcruteakCity.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: 
             - ECRUTEAK_CITY
-        LocationReqs: Route 37
+        LocationReqs:
+            - Ecruteak City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

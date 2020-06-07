@@ -5,9 +5,28 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+        LocationReqs: Route 34 via Ilex
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 34 via Ilex
+        FileName: Route34.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
         LocationReqs: Ilex Forest Back Entrance
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -20,9 +39,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Goldenrod City Entrance
+        LocationReqs: Route 34 via Goldenrod
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 34 via Goldenrod
+        FileName: Route34.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Goldenrod City via Route 35
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -33,7 +69,7 @@ Location:
         Name: Route 34 
         FileName: Route34.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: ROUTE_34
         LocationReqs: Route 34 Entrance
         FlagReqs:

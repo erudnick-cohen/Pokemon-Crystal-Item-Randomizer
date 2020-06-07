@@ -6,10 +6,12 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs: 
-            - Vermillion City
+            - Vermillion City Entrance
+            - Power Plant
         FlagReqs:
             - Kanto Power Restored
             - Expansion Card
+            - Surf
         ItemReqs:
         FlagsSet:
         ReachableReqs:

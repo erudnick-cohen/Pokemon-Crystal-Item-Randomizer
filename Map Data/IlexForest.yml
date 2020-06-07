@@ -48,23 +48,6 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Ilex Forest Front Entrance
-        FileName: IlexForest.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Ilex Forest Back Entrance
-        FlagReqs:
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
         Name: Ilex Forest Front 
         FileName: IlexForest.asm
         Type: Map
