@@ -434,7 +434,7 @@ Location:
                         TrainerList:
                         Sublocations:
                     -
-                        Name: Mt Mortar Max Potion #2
+                        Name: Mt Mortar Max Potion Number 2
                         FileName: MountMortar1FInside.asm
                         Type: Item
                         HasPKMN: No
