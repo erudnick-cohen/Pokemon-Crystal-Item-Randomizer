@@ -5,9 +5,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 39 Entrance
+        LocationReqs: Olivine City via Route 39
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Olivine City via Route 39
+        FileName: OlivineCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 39 via Route 38
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -20,9 +37,30 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: SS Aqua Entrance
+        LocationReqs: 
+            - Olivine City via SS Aqua
         FlagReqs:
         ItemReqs:
+            - S S Ticket
+            - Pass
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Olivine City via SS Aqua
+        FileName: OlivineCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+            - SS Aqua Entrance
+        FlagReqs:
+        ItemReqs:
+            - S S Ticket
+            - Pass
         FlagsSet:
         ReachableReqs:
         Code:

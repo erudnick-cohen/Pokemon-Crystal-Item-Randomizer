@@ -7,7 +7,26 @@ Location:
         WildTableList: 
         LocationReqs: Route 34 Entrance
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Goldenrod City via Route 34
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: Route 34 Entrance
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -20,9 +39,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+        LocationReqs: Goldenrod City via Route 35
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Goldenrod City via Route 35
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
         LocationReqs: Route 35 Entrance
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -33,7 +69,7 @@ Location:
         Name: Goldenrod City
         FileName: GoldenrodCity.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: 
         LocationReqs: Goldenrod City Entrance
         FlagReqs:

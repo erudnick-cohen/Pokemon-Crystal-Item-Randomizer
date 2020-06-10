@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: League Gate
+        LocationReqs: League Gate Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

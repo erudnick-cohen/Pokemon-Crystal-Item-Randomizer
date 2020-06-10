@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: Route_42
-        LocationReqs: Ecruteak City
+        LocationReqs: Ecruteak City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

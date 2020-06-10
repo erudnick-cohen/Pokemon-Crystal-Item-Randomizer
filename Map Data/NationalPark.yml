@@ -5,9 +5,28 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+        LocationReqs: National Park via Route 35
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: National Park via Route 35
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
         LocationReqs: Route 35 Entrance
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -20,9 +39,26 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
+        LocationReqs: National Park via Route 36
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: National Park via Route 36
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
         LocationReqs: Route 36 Goldenrod Side
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -33,7 +69,7 @@ Location:
         Name: National Park
         FileName: NationalPark.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: 
         LocationReqs: National Park Entrance
         FlagReqs:

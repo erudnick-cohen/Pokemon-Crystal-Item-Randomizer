@@ -4,11 +4,12 @@ import random
 import copy
 import time
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle'] ):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
 	#build progress set
 	progressList = copy.copy(progressItems)
 	progressList.extend(reqBadges)
 	progressSet = copy.copy(progressList)
+	coreProgress = list(set(coreProgress).intersection(set(progressSet)))
 	locList = LoadLocationData.FlattenLocationTree(locationTree)
 	allocatedList = []
 
@@ -31,10 +32,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#flagList = ['Rocket Invasion', '8 Badges', 'All Badges']
 	flagList = ['Assumed Fill', 'All Badges']
 	#build the initial requirements mappings
+	allReqsList = copy.copy(progressSet)
 	for i in locList:
 		#baseline requirements
 		#allReqs = i.LocationReqs+i.FlagReqs+i.itemReqs
 		allReqs = i.requirementsNeeded(defaultdict(lambda: False))
+		allReqsList.extend(allReqs) 
+		allReqsList.append(i.Name)
 		requirementsDict[i.Name].append(allReqs)
 		for j in i.FlagsSet:
 			requirementsDict[j].append(allReqs)
@@ -45,6 +49,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		progressList.remove(i)
 	progressList = progressList+coreProgress
 	#print(progressList)
+	
+	#keep copy of initial requirements dictionary to check tautologies
+	initReqDict = copy.copy(requirementsDict)
+	usedFlagsList = list(set(allReqsList).intersection(allPossibleFlags))
 	#begin assumed fill loop
 	valid = True
 	while(len(progressList)>0 and valid):
@@ -62,6 +70,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		while not valid and iter < len(locList) and retryPasses > 0:
 			legal = True
 			#is it the right type of location?
+			#print(locList[iter].Name)
+			#print(locList[iter].Type)
 			if(locList[iter].Type == allocationType):
 				#print('Trying '+locList[iter].Name)
 				#do any of its dependencies depend on this item/badge?
@@ -71,7 +81,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				newDeps = allDepsList
 				addedList = [locList[iter].Name]
 				revReqDict = defaultdict(lambda: [])
-				while oldDepsList != allDepsList:
+				while oldDepsList != allDepsList and legal:
 					oldDepsList = allDepsList
 					for j in newDeps:
 						jReqs = []
@@ -94,12 +104,30 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 									#print(k)
 									kTrue = True
 									for l in k:
-										kTrue = kTrue and l not in revReqDict[j] and toAllocate not in k
+										kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
+										lTrueOr = len(requirementsDict[l]) == 0
+										for m in requirementsDict[l]:
+											lTrueOr = lTrueOr or toAllocate not in m
+										kTrue = kTrue and lTrueOr
+										if not lTrueOr:
+											1+1
+											#print('False because '+l+' requires:')
+											#print(requirementsDict[l])
+										#if a flag we don't have is needed, we can't use that path
+										kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
+										if (l in usedFlagsList and l not in inputFlags):
+											1+1
+											#print('False because the needed flag '+ l +' is not set')
+											#print(usedFlagsList)
+											#print(inputFlags)
 									if(kTrue):
 										trueOption = k
 										#print('found non-tautological path')
 										#print(k)
 										break
+									else:
+										1+1
+										#print('Path is false')
 								#if new choice is none, ignore it because this is a true tautology
 								#e.g. trying to place the squirtbottle at the sudowoodo junction
 								if(not trueOption is None):
@@ -109,17 +137,20 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 										revReqDict[k].append(j)
 									jReqs = trueOption
 									addedList.append(j)
-									#if len(paths)>1:
+									if len(paths)>1:
+										1+1
 										#print(revReqDict)
 								else:
 									legal = False
 									#this is not a legal item location! because it involves a tautology!
 									#print('Illegal tautology:')
 									#print(paths)
-	
-								
+									#print('The following could create the tautology when allocating '+ toAllocate +' to '+locList[iter].Name+':')
+									#print(revReqDict[j])
 							else:
 								jReqs = requirementsDict[j][0]
+								#print('found non-tautological path')
+								#print(jReqs)
 								addedList.append(j)
 						for k in jReqs:
 							if k not in allDepsList:
@@ -128,6 +159,17 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					#print('Expanded dependencies of '+locList[iter].Name+' to:')
 					#print(allDepsList)
 					newDeps = []
+				#if a dependency requires an input flag (not set by a location, a location, or a progress item), that flag MUST be set
+				#print(allDepsList)
+				#print(legal)
+				#print(set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags))
+				#print(usedFlagsList)
+				#print(set(allDepsList).intersection(set(usedFlagsList)))
+				legal = legal and set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)
+				if(not set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)):
+					1+1
+					#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
+					#print(set(allDepsList).intersection(set(usedFlagsList)))
 				if(toAllocate not in allDepsList and legal):
 					loc = locList.pop(iter)
 					valid = True
@@ -142,12 +184,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					allocatedList.append(loc)
 					#requirementsDict[toAllocate] = requirementsDict[loc.Name]
 					requirementsDict[toAllocate] = [list(set(allDepsList))]
+					#print(spoiler)
 				else:
 					#print(locList[iter].Name+' cannot contain '+toAllocate)
-					#if(toAllocate in allDepsList):
+					if(toAllocate in allDepsList):
+						1+1
 						#print('...because it requires '+toAllocate+' to be reached in the first place!')
 						#print(spoiler)
-					#else:
+					else:
+						1+1
 						#print('...because its currently an illegal location')
 						#print(spoiler)
 					iter = iter+1
@@ -235,8 +280,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						stateDist['All Badges'] = maxBadgeDist
 		if(stuckCount == 4):
 			randomizerFailed = True
-			#for j in activeLoc:
-				#if(not state[j.Name]):
+			for j in activeLoc:
+				if(not state[j.Name]):
+					1+1
 					#print('Stuck on '+j.Name+', which needs:')
 					#print(j.requirementsNeeded(state))
 			#print(state)

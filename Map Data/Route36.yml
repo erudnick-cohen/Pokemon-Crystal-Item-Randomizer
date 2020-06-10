@@ -20,7 +20,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: National Park Entrance
+        LocationReqs: 
+            - National Park via Route 35
         FlagReqs:
         ItemReqs:
         FlagsSet:

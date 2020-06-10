@@ -8,7 +8,7 @@ import string
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QFileDialog
-import RunCustomRandomization
+import RunCustomRandomizationAssumedFill as RunCustomRandomization
 from shutil import copyfile
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):

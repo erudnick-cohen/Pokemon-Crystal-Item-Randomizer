@@ -26,7 +26,9 @@ Location:
         WildTableList:
         LocationReqs: Saffron City via Magnet Train
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
+            - Pass
         FlagsSet:
         ReachableReqs:
         Code: 
@@ -39,9 +41,28 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6 Entrance
+        LocationReqs: Saffron City via Route 6
         FlagReqs:
+            - Kanto Mode
         ItemReqs:
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Saffron City via Route 6
+        FileName: SaffronCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 6 via Vermillion
+        FlagReqs:
+            - Kanto Mode
+        ItemReqs:
+            - S S Ticket
         FlagsSet:
         ReachableReqs:
         Code: 

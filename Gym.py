@@ -9,3 +9,7 @@ class Gym(Location.Location):
 	#This is the gym class
 	def isGym(self):
 		return True
+		
+	#Gyms cannot be items
+	def isItem(self):
+		return False

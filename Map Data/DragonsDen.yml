@@ -70,7 +70,9 @@ Location:
         LocationReqs: Dragons Den
         FlagReqs:
             - Glacier Badge
+            - Fog Badge
         ItemReqs:
+            - Surf
             - Whirlpool
         FlagsSet:
         ReachableReqs:
@@ -86,7 +88,11 @@ Location:
                 WildTableList:
                 LocationReqs: Dragons Den Shrine
                 FlagReqs:
+                    - Glacier Badge
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
+                    - Whirlpool
                 FlagsSet:
                 ReachableReqs:
                 IsSpecial: Yes

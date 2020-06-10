@@ -5,7 +5,22 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 38 Entrance
+        LocationReqs: Route 39 via Route 38
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 39 via Route 38
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 38 via Ecruteak
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -20,6 +35,21 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
+        LocationReqs: Route 39 via Olivine
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 39 via Olivine
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
         LocationReqs: Olivine City Entrance
         FlagReqs:
         ItemReqs:
@@ -33,7 +63,7 @@ Location:
         Name: Route 39
         FileName: Route39.asm
         Type: Map
-        HasPKMN: Yes
+        HasPKMN: No
         WildTableList: Route_39
         LocationReqs: Route 39 Entrance
         FlagReqs:
