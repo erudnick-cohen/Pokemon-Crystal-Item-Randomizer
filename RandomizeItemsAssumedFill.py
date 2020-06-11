@@ -4,7 +4,7 @@ import random
 import copy
 import time
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
 	#build progress set
 	progressList = copy.copy(progressItems)
 	progressList.extend(reqBadges)
