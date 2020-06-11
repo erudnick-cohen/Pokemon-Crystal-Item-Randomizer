@@ -1,12 +1,88 @@
 Location:
     -
+        Name: Viridian City Entrance
+        FileName: ViridianCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Viridian City via Route 2
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Viridian City via Route 2
+        FileName: ViridianCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 2 Post Cut via Route 2
+        FlagReqs:
+            - Hive Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Cut
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Viridian City Entrance
+        FileName: ViridianCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Viridian City via League Gate
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Viridian City via League Gate
+        FileName: ViridianCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - League Gate via Route 26
+            - Woke Snorlax
+        FlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Viridian City
         FileName: ViridianCity.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 2 Post Cut
+            - Viridian City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

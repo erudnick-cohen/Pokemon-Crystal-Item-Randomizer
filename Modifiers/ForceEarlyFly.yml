@@ -23,6 +23,17 @@ Changes:
         NewFlagReqs:
             - Storm Badge
     -
+        Location: League Gate via Route 26
+        NewFlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+            - Storm Badge
+        NewItemReqs:
+            - Surf
+            - Waterfall
+            - Fly
+    -
         Location: Victory Road
         NewItemReqs:
             - Fly

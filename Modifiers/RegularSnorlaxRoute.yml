@@ -1,0 +1,19 @@
+Name: Regular snorlax route
+Description: You will not be required to wake up snorlax and then enter Viridian City through the gate that also leads to Victory Road and Mt. Silver.
+Changes:
+    -
+        Location: Viridian City via League Gate
+        NewLocationReqs:
+            - League Gate via Route 26
+            - Woke Snorlax
+            - Impossible
+        NewFlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+            - Impossible
+        NewItemReqs:
+            - Surf
+            - Waterfall
+            - Machine Part
+            - Impossible

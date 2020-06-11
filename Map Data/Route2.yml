@@ -104,6 +104,107 @@ Location:
                 AREALV: 32
                 TrainerList: 
                 Sublocations:
+    -
+        Name: Route 2 Post Cut Entrance
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 2 Post Cut via Route 2
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        AREALV: 32
+        TrainerList: 
+    -
+        Name: Route 2 Post Cut via Route 2
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 2
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        AREALV: 32
+        TrainerList: 
+    -
+        Name: Route 2 Post Cut Entrance
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 2 Post Cut via Viridian
+        FlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        AREALV: 32
+        TrainerList: 
+    -
+        Name: Route 2 Post Cut via Viridian
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Viridian City via League Gate
+        FlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 2 Post Cut
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 2 Post Cut Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        AREALV: 32
+        TrainerList: 
+            - BUG_CATCHER 2
+            - BUG_CATCHER 12
+            - BUG_CATCHER 3
+        Sublocations:
             -
                 Name: Route 2 Dire Hit
                 FileName: Route2.asm
@@ -150,27 +251,6 @@ Location:
                 AREALV: 32
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Route 2 Post Cut
-                FileName: Route2.asm
-                Type: Map
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs:
-                    - Route 2
-                FlagReqs:
-                    - Hive Badge
-                ItemReqs:
-                    - Cut
-                FlagsSet:
-                ReachableReqs:
-                Code: 
-                Text:
-                AREALV: 32
-                TrainerList: 
-                    - BUG_CATCHER 2
-                    - BUG_CATCHER 12
-                    - BUG_CATCHER 3
-                Sublocations:
+
 
 
