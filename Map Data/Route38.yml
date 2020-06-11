@@ -21,7 +21,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Ecruteak City Entrance
+        LocationReqs: Ecruteak City via Route 37
         FlagReqs:
         ItemReqs:
             - Squirtbottle
