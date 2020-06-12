@@ -13,6 +13,18 @@
     },
     {
         "integer_values": {
+            "old": [ 49, 185, 0 ],
+            "new": [ 49, 26, 0 ]
+        },
+        "address_range": {
+            "begin": 349038,
+            "end": 349041
+        },
+        "label": "FlowerShopTeacherScript.ckir_BEFORE_checkevent_EVENT_MET_FLORIA",
+        "description": "Allow the player to skip talking to Floria at the tree"
+    },
+    {
+        "integer_values": {
             "old": [ 49, 186, 0 ],
             "new": [ 49,  26, 0 ]
         },
@@ -240,15 +252,15 @@
     },
     {
         "integer_values": {
-            "old": [ 49, 201, 0 ],
-            "new": [ 49, 200, 6 ]
+            "old": [ 49, 201, 0, 9, 192, 78, 33, 128,  9, 167,  78, 49, 202,   0, 9, 161,  78, 76, 120, 82, 84, 73, 51, 202,  0, 50, 109, 7, 50, 251,  0,  18,  7,   6, 1,  20,  1, 145, 76, 28, 83, 84,  73, 145 ],
+            "new": [ 49, 202, 0, 9, 155, 78, 76, 120, 82,  51, 202,  0,  50, 109, 7,  50, 251,  0,  18,  7,  6,  1, 20,   1, 84, 33, 128, 9, 167, 78, 73, 145, 33, 128, 9, 167, 78,  76, 28, 83, 84, 73, 145, 145 ]
         },
         "address_range": {
             "begin": 1609339,
-            "end": 1609342
+            "end": 1609383
         },
-        "label": "PowerPlantManager.ckir_BEFORE_CHECKEVENT_EVENT_RETURNED_MACHINE_PART",
-        "description": "Ensure Cerulean Gym item is obtainable even if the player has already given the real MACHINE PART to the Power Plant manager"
+        "label": "PowerPlantManager.ckir_BEFORE_checkitem_MACHINE_PART",
+        "description": "Talking to the Power Plant manager should just work"
     },
 
     {
