@@ -206,4 +206,102 @@ Location:
                             RuinsofAlphAerodactylItemRoomMoonStone:
                                 ITEMLINE
                         TrainerList: 
-                        Sublocations:                    
+                        Sublocations:
+            -
+                Name: Ruins of Alph Water Chamber
+                FileName: 
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Union Cave
+                    - Celadon City
+                FlagReqs: 
+                    - Fog Badge
+                    - Plain Badge
+                ItemReqs: 
+                    - Surf
+                    - Strength
+                FlagsSet:
+                NormalItem: 
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+                    -
+                        Name: Ruins of Alph Water Chamber 1
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Water Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: MYSTERYBERRY
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphOmanyteItemRoomMysteryberry:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Water Chamber 2
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Water Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: MYSTIC_WATER
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphOmanyteItemRoomMysticWater:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Water Chamber 3
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Water Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: STARDUST
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsofAlphOmanyteItemRoomStardust:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Water Chamber 4
+                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Water Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: STAR_PIECE
+                        IsBall: Yes
+                        ReachableReqs:
+                        Text:
+                        Code: |
+                            RuinsofAlphOmanyteItemRoomStarPiece:
+                                ITEMLINE
+                        TrainerList: 
+                        Sublocations:
