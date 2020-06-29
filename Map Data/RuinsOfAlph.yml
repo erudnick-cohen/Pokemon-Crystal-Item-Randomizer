@@ -231,7 +231,7 @@ Location:
                 Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 1
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsofAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -250,7 +250,7 @@ Location:
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 2
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsofAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -269,7 +269,7 @@ Location:
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 3
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsofAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -288,7 +288,7 @@ Location:
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 4
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsofAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
