@@ -216,7 +216,7 @@ Location:
                         IsBall: Yes
                         NormalItem: MAX_ETHER
                         Code: |
-                            MountMortarB1FHyperPotion:
+                            MountMortarB1FMaxEther:
                                 ITEMLINE
                         Text:
                         TrainerList: 
