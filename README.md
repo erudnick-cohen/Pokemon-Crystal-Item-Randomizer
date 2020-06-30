@@ -4,9 +4,11 @@ This is an item randomizer for pokemon crystal. Unlike many existing pokemon ran
 If you are looking for the speedchoice compatible version of this randomizer (which includes an easy to run exectuable version of the randomizer), you should check the releases tab of this repository (https://github.com/erudnick-cohen/Pokemon-Crystal-Item-Randomizer/releases), or go to https://github.com/erudnick-cohen/Pokemon-Crystal-Item-Randomizer/tree/Speedchoice-GUI. Note that the current version of the randomizer requires that you turn on the "Better Marts" setting available in speedchoice.
 
 # Prequisites to run the randomizer
+Currently the speedchoice compatible version of this randomizer (see above) is the actively developed version and it is suggested that you download and use it. However, if you would rather use (and build) vanilla crystal, continue reading onwards.
+
 In order to run this item randomizer you need the ability to build pokecrystal (https://github.com/pret/pokecrystal), instructions on how to do this can be found in the README for pokecrystal. Additionally, you need python installed with the PyYAML package.
 
-# How to run the randomizer
+# How to run the randomizer (non-speedchoice version)
 First, from the top level of this repo, run:
 ```
 py TestRandomizationKanto.py
