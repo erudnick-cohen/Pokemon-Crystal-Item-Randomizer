@@ -7,7 +7,10 @@ This is an item (and badge) randomizer for the popular speedchoice mod of pokemo
 # Prerequisites to run the randomizer
 There is an .EXE version of the randomizer available under the releases page of this repository. If you have already downloaded this, then just run the "PokemonCrystalItemRandomize.exe" file provided in the zipped folder.
 Alternately, the randomizer can be run by installing python with the PyYAML and PyQt packages and then running "RunGUI.py", after you have downloaded the code in this branch.
+
 Note that this randomizer is ONLY compatible with the speedchoice mod of pokemon crystal, which can be obtained from the Pokemon Crystal Cinco Bingo discord page (link not provided due to legal reasons, google is your friend here). Note that if you want to also randomize the pokemon present in the game, you should use the speedchoice compatible version of the Universal Pokemon Randomizer (also available on the Pokemon Crystal Cinco Bingo discord) to randomize the ROM BEFORE you use this randomizer on it. A settings file for the Universal Pokemon Randomizer ("FullItemRandomizer.rnqs") is provided in this repository that can be used for this purpose.
+
+Note that you MUST turn on the "Better Marts" settings in speedchoice when using this randomizer. Failure to do so may cause softlocks related to one of the chambers in ruins of alph.
 
 # How it works
 This randomizer shuffles the locations of all items in the game, while also shuffling the locations of all badges in the game. The game will always still be beatable after this shuffling. It also (optionally) can rescale trainer (and wild pokemon) levels to prevent situations where the player might end up fighting stronger trainers early (or if the player wants to buff up Crystal's pretty terrible wild pokemon levels). The modes provided allow for defining customizable rules for how the randomizer logic allocates items, see the "Modes" folder for several examples of these rules. Optional modifiers are also provided for implementing small logic changes, examples can be found in the "Modifiers" folder.
@@ -32,5 +35,5 @@ Make a post about it under issues, but please indicate in the title of your post
   * The SS Aqua can be ridden in both directions without having beaten the Elite Four and Lance
 # Item Locations not randomized:
   * Tin Tower and the rainbow wing, because putting the rainbow wing into the randomizer would be overly sadistic as it could then be required to catch all three legendary dogs in order  to beat the game.
-  * Water stone and ho-oh ruins of alph chambers: Due to the player being able to softlock themselves by using water stones and due to Ho-oh not being reliably obtainable.
+  * Ho-oh ruins of alph chamber: Due due to Ho-oh not being reliably obtainable.
   * The metal coat given to the player on the SS Aqua, due to a weird situation where it has two separate instances of being given
