@@ -211,6 +211,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 
 	#traverse seed to both confirm beatability, allocate "trash" items and determine location distances
 	#define the set of active initial locations to consider
+	rodList = ['OLD_ROD','GOOD_ROD','SUPER_ROD']
+	#overwrite rods into semi-progressive order
+	if('SemiProgressiveRods' in inputFlags):
+		#print(trashItems)
+		for i in range(0,len(trashItems)):
+			if('ROD' in trashItems[i]):
+				trashItems[i] = rodList.pop()
+		#print('---')
+		#print(trashItems)
 	activeLoc = copy.copy(locationTree)
 	goalReached = False
 	randomizerFailed = False
@@ -301,4 +310,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#print(spoiler)
 	#print(nBadges)
 	#print('illegal')
+	#print('remaining')
+	#print(trashItems)
 	return (reachable, spoiler, stateDist, randomizerFailed)
