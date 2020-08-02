@@ -416,7 +416,7 @@ def LabelTrainerData(trainerData):
 
 #currently only labels "regular" items
 def LabelItemLocation(location):
-	#print("Labelling "+location.Name)
+	print("Labelling "+location.Name)
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
@@ -427,12 +427,12 @@ def LabelItemLocation(location):
 
 	#find the code we need to replace
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tITEMLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
-	#print(repr(re.escape(location.Code.replace("    ","\t"))))
-	#print(repr(location.Code.replace("    ","\t")))
-	#print(repr("\tITEMLINE"))
-	#print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
-	#print("\tITEMLINE" in (location.Code.replace("    ","\t")))
-	#print(coderegexstr)
+	# print(repr(re.escape(location.Code.replace("    ","\t"))))
+	# print(repr(location.Code.replace("    ","\t")))
+	# print(repr("\tITEMLINE"))
+	# print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
+	# print("\tITEMLINE" in (location.Code.replace("    ","\t")))
+	# print(coderegexstr)
 	codeSearch = None
 	if not location.IsSpecial:
 		codeSearch = re.findall(coderegexstr,filecode)[0]
@@ -470,10 +470,10 @@ def LabelItemLocation(location):
 	newfilestream.close()
 	
 	#if there is a secondary set of code that also needs to be written, write it
-	if(not self.SecondaryCode is None):
-		#print("Labelling "+location.Name)
+	if(not location.SecondaryCode is None):
+		print("Secondary Labelling "+location.Name)
 		#open the relevant file and get it as a string
-		file = open("RandomizerRom/maps/"+location.FileName)
+		file = open("RandomizerRom/maps/"+location.SecondaryFile)
 		filecode = file.read()
 		
 		#constuct new script that gives the new item
@@ -481,7 +481,7 @@ def LabelItemLocation(location):
 
 
 		#find the code we need to replace
-		coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tITEMLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+		coderegexstr = "("+re.escape(location.SecondaryCode.replace("    ","\t").replace("\tITEMLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 		#print(repr(re.escape(location.Code.replace("    ","\t"))))
 		#print(repr(location.Code.replace("    ","\t")))
 		#print(repr("\tITEMLINE"))
@@ -494,7 +494,7 @@ def LabelItemLocation(location):
 			oldcode = codeSearch[0]
 			#print(codeSearch)
 		else:
-			coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
+			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
 			oldcode = re.findall(coderegexstr,filecode)[0]
 		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
 		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
@@ -516,7 +516,7 @@ def LabelItemLocation(location):
 			else:
 				newfile = filecode.replace(oldcode,labelCodeB+oldcode+labelCodeA)
 		#write the new file into the files for the randomizer rom
-		newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
+		newfilestream = open("RandomizerRom/maps/"+location.SecondaryFile,'w')
 		newfilestream.seek(0)
 		newfilestream.write(newfile)
 		newfilestream.truncate()

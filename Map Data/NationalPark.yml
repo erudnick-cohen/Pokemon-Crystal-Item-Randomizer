@@ -128,6 +128,7 @@ Location:
             -
                 Name: Dig TM
                 FileName: NationalPark.asm
+                SecondaryFile: NationalParkBugContest.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -150,6 +151,7 @@ Location:
             -
                 Name: National Park Parlyz Heal
                 FileName: NationalPark.asm
+                SecondaryFile: NationalParkBugContest.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 

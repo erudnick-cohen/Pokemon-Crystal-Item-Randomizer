@@ -52,7 +52,11 @@ class Location:
 		if self.ReachableReqs is None:
 			self.ReachableReqs = []
 		self.Code = yamlTree["Code"]
-		self.SecondaryCode = yamlTree["SecondaryCode"]
+		if("SecondaryCode" in yamlTree):
+			self.SecondaryCode = yamlTree["SecondaryCode"]
+			self.SecondaryFile = yamlTree["SecondaryFile"]
+		else:
+			self.SecondaryCode = None
 		self.Text = yamlTree["Text"]
 		if ("TrainerList" in yamlTree):
 			self.Trainers = yamlTree["TrainerList"]
