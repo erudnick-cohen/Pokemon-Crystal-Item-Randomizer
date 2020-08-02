@@ -78,7 +78,7 @@ Location:
     -
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
-        Type: No
+        Type: Item
         HasPKMN: No
         WildTableList:
         LocationReqs: SS Aqua Entrance
@@ -90,13 +90,13 @@ Location:
         ReachableReqs:
         NormalItem: METAL_COAT
         Code: |
-            SSAquaMetalCoatAndDocking:
-                writetext SSAquaGrandpaHaveThisText
+            UnknownScript_0x75f37:
+                writetext UnknownText_0x7619b
                 buttonsound
                 ITEMLINE
-                iffalse .NoRoom
+                iffalse UnknownScript_0x75f44
                 setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
-            .NoRoom:
+            UnknownScript_0x75f44:
                 closetext
                 waitsfx
                 playsound SFX_ELEVATOR_END
@@ -108,14 +108,14 @@ Location:
                 setevent EVENT_FAST_SHIP_FOUND_GIRL
                 closetext
                 end
-
-            SSAquaFoundGranddaughter:
-                writetext SSAquaGrandpaHaveThisText
+        SecondaryCode: |
+            UnknownScript_0x75f58:
+                writetext UnknownText_0x7619b
                 buttonsound
                 ITEMLINE
-                iffalse .NoRoom
+                iffalse UnknownScript_0x75f65
                 setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
-            .NoRoom:
+            UnknownScript_0x75f65:
                 closetext
                 end
         Text:

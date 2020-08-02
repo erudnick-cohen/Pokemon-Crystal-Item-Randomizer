@@ -141,6 +141,9 @@ Location:
                 Code: |
                     NationalParkTMDig:
                         ITEMLINE
+                SecondaryCode: |
+                    NationalParkBugContestTMDig:
+                        ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:            
@@ -159,6 +162,9 @@ Location:
                 IsBall: Yes
                 Code: |
                     NationalParkParlyzHeal:
+                        ITEMLINE
+                SecondaryCode: |
+                    NationalParkBugContestParlyzHeal:
                         ITEMLINE
                 Text:
                 TrainerList: 
