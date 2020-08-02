@@ -448,23 +448,7 @@ def LabelItemLocation(location):
 		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 		#switch spaces to tabs.....
 		newcode = newcode.replace("    ","\t")
-	newtext = ""
-	#TODO: Need to completely change how text works, we now need to actually track each string individually, no spanning across commands
-	#For now, just not labeling text
-	# if location.Text is not None: 
-	# 	#construct a new script that updates text about the new item
-	# 	newtext = ("".join(location.Name.split())).upper()+'0TEXT::\n'
-	# 	#switch spaces to tabs.....
-	# 	newtext = newtext.replace("    ","\t")
-		
-	# 	#find the text we need to replace
-	# 	textregexstr = re.escape(location.Text.replace("    ","\t")).replace("ITEMNAME",".+")
-	# 	oldtext = re.findall(textregexstr,filecode)[0]
-	# else:
-	# 	oldtext = ""
-	
-	#make new file with the new text (except no new text right now)
-	#newfile = filecode.replace(oldcode,newcode+oldcode).replace(oldtext,newtext)
+
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
 	else:
@@ -484,6 +468,61 @@ def LabelItemLocation(location):
 	newfilestream.flush()
 	#os.fsync(newfilestream.fileno())
 	newfilestream.close()
+	
+	#if there is a secondary set of code that also needs to be written, write it
+	if(not self.SecondaryCode is None):
+		#print("Labelling "+location.Name)
+		#open the relevant file and get it as a string
+		file = open("RandomizerRom/maps/"+location.FileName)
+		filecode = file.read()
+		
+		#constuct new script that gives the new item
+		#replace is technically deprecated, but this is more readable
+
+
+		#find the code we need to replace
+		coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tITEMLINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+		#print(repr(re.escape(location.Code.replace("    ","\t"))))
+		#print(repr(location.Code.replace("    ","\t")))
+		#print(repr("\tITEMLINE"))
+		#print(repr("\tITEMLINE") in (repr(location.Code.replace("    ","\t"))))
+		#print("\tITEMLINE" in (location.Code.replace("    ","\t")))
+		#print(coderegexstr)
+		codeSearch = None
+		if not location.IsSpecial:
+			codeSearch = re.findall(coderegexstr,filecode)[0]
+			oldcode = codeSearch[0]
+			#print(codeSearch)
+		else:
+			coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
+			oldcode = re.findall(coderegexstr,filecode)[0]
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+		newCode = ""
+		if not location.IsSpecial:
+			newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
+			#switch spaces to tabs.....
+			newcode = newcode.replace("    ","\t")
+
+		if not location.IsSpecial:
+			newfile = filecode.replace(oldcode,newcode)
+		else:
+			labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+			labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+			#need to do this because asm label weirdness (more accurately regex weirdness with them)
+			if ":" in oldcode:
+				lines = oldcode.partition('\n')
+				newfile = filecode.replace(oldcode,lines[0]+"\n"+labelCodeB+"".join(lines[1:])+labelCodeA)
+			else:
+				newfile = filecode.replace(oldcode,labelCodeB+oldcode+labelCodeA)
+		#write the new file into the files for the randomizer rom
+		newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
+		newfilestream.seek(0)
+		newfilestream.write(newfile)
+		newfilestream.truncate()
+		newfilestream.flush()
+		#os.fsync(newfilestream.fileno())
+		newfilestream.close()
 
 def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	#print("Writing "+location.Name+" which contains "+location.item)

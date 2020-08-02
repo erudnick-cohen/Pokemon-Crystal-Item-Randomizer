@@ -52,11 +52,12 @@ class Location:
 		if self.ReachableReqs is None:
 			self.ReachableReqs = []
 		self.Code = yamlTree["Code"]
+		self.SecondaryCode = yamlTree["SecondaryCode"]
 		self.Text = yamlTree["Text"]
 		if ("TrainerList" in yamlTree):
 			self.Trainers = yamlTree["TrainerList"]
 		else:
-			self.Trainers = None			
+			self.Trainers = None
 		if self.Trainers is not None:
 			self.AreaLevel = yamlTree["AREALV"]
 		self.Sublocations = [];
