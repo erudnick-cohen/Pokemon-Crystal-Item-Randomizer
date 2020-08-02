@@ -33,6 +33,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	flagList = ['Assumed Fill', 'All Badges']
 	#build the initial requirements mappings
 	allReqsList = copy.copy(progressSet)
+	itemCount = 0
 	for i in locList:
 		#baseline requirements
 		#allReqs = i.LocationReqs+i.FlagReqs+i.itemReqs
@@ -43,6 +44,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		for j in i.FlagsSet:
 			requirementsDict[j].append(allReqs)
 			flagList.append(j)
+		if i.Type == 'Item':
+			itemCount = itemCount+1
+	print('Total number of items: '+str(itemCount))
 	#extract all core items out and put them in shuffled order at the start (which is the BACK) of the item list
 	#this is done because these items unlock way too many item locations, so we want to maximize their legal locations
 	for i in coreProgress:
@@ -257,6 +261,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				if(i.isItem()):
 					if(i.item is None):
 						i.item = trashItems.pop()
+						#print('Placing '+i.item +' in '+i.Name)
 					else:
 						state[i.item] = True
 						stateDist[i.item] = max(stateDist[i.item],stateDist[i.Name])
