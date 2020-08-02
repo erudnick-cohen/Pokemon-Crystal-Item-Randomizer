@@ -1,0 +1,4 @@
+Name: Semi-Progressive Rods
+Description: Makes the fishing rods appear in a roughly progressive order. It is still possible to break the normal rod progression order
+FlagsSet:
+    - SemiProgressiveRods

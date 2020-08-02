@@ -1,14 +1,12 @@
-Name: Standard Logic
+Name: Standard Logic with Level Scaling
 Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
-RegularWildLevelScalingDefault: False
-SpecialWildLevelScalingDefault: False
-TrainerLevelScalingDefault: False
+RegularWildLevelScalingDefault: True
+SpecialWildLevelScalingDefault: True
+TrainerLevelScalingDefault: True
 DefaultModifiers:
     - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/ForceEarlyFly.yml
-    - Modifiers/DefinitelyNoEarlySabrina.yml
-    - Modifiers/NoEarlyBasement.yml
     - Modifiers/EnableTrainToKanto.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/SkipE4AndFightRed.yml

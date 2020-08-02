@@ -449,32 +449,6 @@ Wild Levels?</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="OutputRomName">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>300</y>
-      <width>121</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>RandomizedRom</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="OutputRomLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>280</y>
-      <width>101</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Output Rom Name:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="ModifierDescription">
     <property name="geometry">
      <rect>

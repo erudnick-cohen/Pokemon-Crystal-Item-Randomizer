@@ -16,7 +16,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		self.loadSettings('Modes/StandardNoLevelScaling.yml')
+		self.loadSettings('Modes/Standard.yml')
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
 		self.ChooseSettings.clicked.connect(self.selectLogicSettings)
 		self.LoadModifier.clicked.connect(self.loadModifier)
@@ -46,7 +46,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.Randomize.setEnabled(False)
 			self.Randomize.setText(_translate("MainWindow", "Randomizing"))
 			QtGui.QGuiApplication.processEvents()
-			randomizedFileName = self.OutputRomName.text()
+			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file')
+			validFileName = False
+			while not validFileName:
+				file = QFileDialog.getSaveFileName(directory = '.')[0]
+				if file != '':
+					validFileName = True
+				else:
+					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
+			randomizedFileName = file
 			copyfile(self.romPath, randomizedFileName+'.gbc')
 			if('ProgressItems' in self.settings):
 				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = self.TrainerLevelScaling.isChecked(), adjustRegularWildLevels = self.RegularWildLevelScaling.isChecked(), adjustSpecialWildLevels = self.SpecialWildLevelScaling.isChecked(), trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'])
@@ -61,6 +69,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 			QtWidgets.QMessageBox.about(self, 'Success', 'Sucessfully randomized rom')
+			_translate = QtCore.QCoreApplication.translate
+
+
+
 		except ValueError:
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage('Level bonus must be an integer')

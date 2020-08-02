@@ -196,15 +196,24 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCode = itemScriptLookup(location.item)
 	if location.IsBall:
 		romMap[addressData["address_range"]["begin"]] = nItemCode
+		if(not location.SecondaryCode is None):
+			addressData2 = labelData[labelCodeB2]
+			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
 		romMap[addressData["address_range"]["begin"]] = 158
 		romMap[addressData["address_range"]["begin"]+1] = nItemCode
+		if(not location.SecondaryCode is None):
+			addressData2 = labelData[labelCodeB2]
+			romMap[addressData2["address_range"]["begin"]] = 158
+			romMap[addressData2["address_range"]["begin"]+1] = nItemCode
 		
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
