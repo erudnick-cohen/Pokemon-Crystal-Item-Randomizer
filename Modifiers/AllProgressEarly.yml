@@ -1,0 +1,16 @@
+Name: Most Progress Early
+Description: Puts most of the progress items early to allow for easy testing. This setting is cheating, and should not be used!
+Changes:
+    -
+        Location: Violet City
+        NewItemReqs:
+            - Squirtbottle
+            - Bicycle
+            - Fly
+            - S S Ticket
+
+
+
+
+
+
