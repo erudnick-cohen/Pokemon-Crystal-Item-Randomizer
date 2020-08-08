@@ -80,7 +80,7 @@ Location:
                         checkevent EVENT_GOT_HM01_CUT
                         iftrue .AlreadyGotCut
                         writetext Text_CharcoalMasterIntro
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_HM01_CUT
                         writetext Text_CharcoalMasterOutro
@@ -237,7 +237,7 @@ Location:
                         checkevent EVENT_GOT_TM02_HEADBUTT
                         iftrue .AlreadyGotHeadbutt
                         writetext Text_HeadbuttIntro
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM02_HEADBUTT
@@ -272,22 +272,22 @@ Location:
                 NormalItem: TM_SWEET_SCENT
                 ReachableReqs:
                 Code: |
-                    TeacherScript_0x62d63:
+                    Route34IlexForestGateTeacherScript:
                         faceplayer
                         opentext
                         checkevent EVENT_FOREST_IS_RESTLESS
-                        iftrue UnknownScript_0x62d84
+                        iftrue .ForestIsRestless
                         checkevent EVENT_GOT_TM12_SWEET_SCENT
-                        iftrue UnknownScript_0x62d7e
-                        writetext UnknownText_0x62d9d
-                        buttonsound
+                        iftrue .GotSweetScent
+                        writetext Route34IlexForestGateTeacherText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x62d82
+                        iffalse .NoRoom
                         setevent EVENT_GOT_TM12_SWEET_SCENT
-                    UnknownScript_0x62d7e:
-                        writetext UnknownText_0x62df6
+                    .GotSweetScent:
+                        writetext Route34IlexForestGateTeacher_GotSweetScent
                         waitbutton
-                    UnknownScript_0x62d82:
+                    .NoRoom:
                         closetext
                         end
                 Text: |

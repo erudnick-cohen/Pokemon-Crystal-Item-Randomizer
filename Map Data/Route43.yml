@@ -54,15 +54,15 @@ Location:
         ReachableReqs:
         NormalItem: TM_SLUDGE_BOMB
         Code: |
-            OfficerScript_0x19ac85:
+            OfficerScript_GuardWithSludgeBomb:
                 faceplayer
                 opentext
                 checkevent EVENT_GOT_TM36_SLUDGE_BOMB
-                iftrue UnknownScript_0x19ac9c
-                writetext UnknownText_0x19ad9b
-                buttonsound
+                iftrue .GotSludgeBomb
+                writetext OfficerText_FoundTM
+                promptbutton
                 ITEMLINE
-                iffalse UnknownScript_0x19aca0
+                iffalse .NoRoomForSludgeBomb
                 setevent EVENT_GOT_TM36_SLUDGE_BOMB
                 closetext
                 end

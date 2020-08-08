@@ -14,39 +14,36 @@ Location:
         InfeasibleBadges:
         NormalBadge: Storm Badge
         BadgeLine: |
-                ChuckScript_0x9d60f:
-                    faceplayer
-                    opentext
-                    checkevent EVENT_BEAT_CHUCK
-                    iftrue .FightDone
-                    writetext UnknownText_0x9d6f9
-                    waitbutton
-                    closetext
-                    spriteface CIANWOODGYM_CHUCK, RIGHT
-                    opentext
-                    writetext UnknownText_0x9d76f
-                    waitbutton
-                    closetext
-                    applymovement CIANWOODGYM_BOULDER1, MovementData_0x9d6f3
-                    playsound SFX_STRENGTH
-                    earthquake 80
-                    disappear CIANWOODGYM_BOULDER1
-                    pause 30
-                    faceplayer
-                    opentext
-                    writetext UnknownText_0x9d78a
-                    waitbutton
-                    closetext
-                    winlosstext UnknownText_0x9d7f6, 0
-                    loadtrainer CHUCK, 1
-                    startbattle
-                    reloadmapafterbattle
-                    setevent EVENT_BEAT_CHUCK
-                    opentext
-                    writetext UnknownText_0x9d835
-                    playsound SFX_GET_BADGE
-                    waitsfx
-                    BADGELINE
+            CianwoodGymChuckScript:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_CHUCK
+                iftrue .FightDone
+                writetext ChuckIntroText1
+                waitbutton
+                closetext
+                turnobject CIANWOODGYM_CHUCK, RIGHT
+                opentext
+                writetext ChuckIntroText2
+                waitbutton
+                closetext
+                applymovement CIANWOODGYM_BOULDER1, CianwoodGymMovement_ChuckChucksBoulder
+                playsound SFX_STRENGTH
+                earthquake 80
+                disappear CIANWOODGYM_BOULDER1
+                pause 30
+                faceplayer
+                opentext
+                writetext ChuckIntroText3
+                waitbutton
+                closetext
+                winlosstext ChuckLossText, 0
+                loadtrainer CHUCK, CHUCK1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_CHUCK
+                opentext
+                BADGELINE
         Code:
         Text:
             -

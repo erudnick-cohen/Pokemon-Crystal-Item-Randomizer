@@ -74,15 +74,15 @@ Location:
                 ReachableReqs:
                 NormalItem: BLACKGLASSES
                 Code: |
-                    PharmacistScript_0x18c720:
+                    DarkCaveBlackthornEntrancePharmacistScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
-                        iftrue UnknownScript_0x18c735
-                        writetext UnknownText_0x18c73f
-                        buttonsound
+                        iftrue .GotBlackglasses
+                        writetext DarkCaveBlackthornEntrancePharmacistText1
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x18c739
+                        iffalse .PackFull
                         setevent EVENT_GOT_BLACKGLASSES_IN_DARK_CAVE
                 Text: |
                     DarkCaveBlackthornEntrancePharmacistText1:

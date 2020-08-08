@@ -91,32 +91,32 @@ Location:
         ReachableReqs:
         NormalItem: METAL_COAT
         Code: |
-            UnknownScript_0x75f37:
-                writetext UnknownText_0x7619b
-                buttonsound
+            SSAquaMetalCoatAndDocking:
+                writetext SSAquaGrandpaHaveThisText
+                promptbutton
                 ITEMLINE
-                iffalse UnknownScript_0x75f44
+                iffalse .NoRoom
                 setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
-            UnknownScript_0x75f44:
+            .NoRoom:
                 closetext
                 waitsfx
                 playsound SFX_ELEVATOR_END
                 pause 30
                 opentext
-                writetext UnknownText_0x76645
+                writetext SSAquaHasArrivedVermilionText
                 waitbutton
                 setevent EVENT_FAST_SHIP_HAS_ARRIVED
                 setevent EVENT_FAST_SHIP_FOUND_GIRL
                 closetext
                 end
         SecondaryCode: |
-            UnknownScript_0x75f58:
-                writetext UnknownText_0x7619b
-                buttonsound
+            SSAquaFoundGranddaughter:
+                writetext SSAquaGrandpaHaveThisText
+                promptbutton
                 ITEMLINE
-                iffalse UnknownScript_0x75f65
+                iffalse .NoRoom
                 setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
-            UnknownScript_0x75f65:
+            .NoRoom:
                 closetext
                 end
         Text:

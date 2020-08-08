@@ -108,7 +108,7 @@ Location:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_HM05_FLASH
-                        iftrue UnknownScript_0x1849d1
+                        iftrue .GotFlash
                         writetext SageLiSeenText
                         waitbutton
                         closetext
@@ -117,12 +117,12 @@ Location:
                         startbattle
                         reloadmapafterbattle
                         opentext
-                        writetext UnknownText_0x184cc2
-                        buttonsound
+                        writetext SageLiTakeThisFlashText
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_HM05_FLASH
                         setevent EVENT_BEAT_SAGE_LI
-                        writetext UnknownText_0x184d13
+                        writetext SageLiFlashExplanationText
                         waitbutton
                         closetext
                         end

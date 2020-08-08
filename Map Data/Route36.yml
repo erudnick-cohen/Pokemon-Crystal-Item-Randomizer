@@ -118,18 +118,12 @@ Location:
         ReachableReqs:
         NormalItem: TM_ROCK_SMASH
         Code: |
-            UnknownScript_0x1940cd:
-                writetext UnknownText_0x1944d0
-                buttonsound
+            .ClearedSudowoodo:
+                writetext RockSmashGuyText2
+                promptbutton
                 ITEMLINE
-                iffalse UnknownScript_0x1940de
+                iffalse .NoRoomForTM
                 setevent EVENT_GOT_TM08_ROCK_SMASH
-            UnknownScript_0x1940da:
-                writetext UnknownText_0x19452c
-                waitbutton
-            UnknownScript_0x1940de:
-                closetext
-                end
         Text: |
             UnknownText_0x19452c::
                 text "That happens to be"

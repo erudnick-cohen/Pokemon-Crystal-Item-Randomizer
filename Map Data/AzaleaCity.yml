@@ -62,8 +62,8 @@ Location:
                 NormalItem: LURE_BALL
                 Code: |
                     .ClearedSlowpokeWell:
-                        writetext UnknownText_0x18e615
-                        buttonsound
+                        writetext KurtsHouseKurtHonoredToMakeBallsText
+                        promptbutton
                         ITEMLINE
                         iffalse .NoRoomForBall
                         setevent EVENT_KURT_GAVE_YOU_LURE_BALL
@@ -83,9 +83,9 @@ Location:
                 ReachableReqs:
                 NormalItem: CHARCOAL
                 Code: |
-                    .Thanks
+                    .Thanks:
                         writetext CharcoalKilnApprenticeText2
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .Done
                         setevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN

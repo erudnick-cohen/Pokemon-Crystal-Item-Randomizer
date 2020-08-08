@@ -15,16 +15,16 @@ Location:
         InfeasibleBadges:
         NormalBadge: Thunder Badge
         BadgeLine: |
-            SurgeScript_0x1920a5:
+            VermilionGymSurgeScript:
                 faceplayer
                 opentext
-                checkflag ENGINE_THUNDERBADGE
+                checkevent EVENT_BEAT_LTSURGE
                 iftrue .FightDone
-                writetext UnknownText_0x192142
+                writetext LtSurgeIntroText
                 waitbutton
                 closetext
-                winlosstext UnknownText_0x192238, 0
-                loadtrainer LT_SURGE, 1
+                winlosstext LtSurgeWinLossText, 0
+                loadtrainer LT_SURGE, LT_SURGE1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_LTSURGE
@@ -32,11 +32,11 @@ Location:
                 setevent EVENT_BEAT_GUITARIST_VINCENT
                 setevent EVENT_BEAT_JUGGLER_HORTON
                 opentext
-                writetext UnknownText_0x192277
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
-                checkcode VAR_BADGES
+                writetext LtSurgeThunderBadgeText
+                waitbutton
+                closetext
+                end
         Code:
         Text:
             -

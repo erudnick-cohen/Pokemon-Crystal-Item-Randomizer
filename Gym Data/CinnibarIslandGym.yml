@@ -15,14 +15,28 @@ Location:
         InfeasibleBadges:
         NormalBadge: Volcano Badge
         BadgeLine: |
-                .ReturnAfterBattle
-                    reloadmapafterbattle
-                    setevent EVENT_BEAT_BLAINE
-                    opentext
-                    writetext UnknownText_0x1ab683
-                    playsound SFX_GET_BADGE
-                    waitsfx
-                    BADGELINE
+            SeafoamGymBlaineScript:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_BLAINE
+                iftrue .FightDone
+                writetext BlaineIntroText
+                waitbutton
+                closetext
+                winlosstext BlaineWinLossText, 0
+                loadtrainer BLAINE, BLAINE1
+                startbattle
+                iftrue .ReturnAfterBattle
+                appear SEAFOAMGYM_GYM_GUY
+            .ReturnAfterBattle:
+                reloadmapafterbattle
+                setevent EVENT_BEAT_BLAINE
+                opentext
+                BADGELINE
+                writetext BlaineAfterBattleText
+                waitbutton
+                closetext
+                end
         Code:
         Text:
             -

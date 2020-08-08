@@ -85,7 +85,7 @@ Location:
         Sublocations:
             -
                 Name: Goldenrod Tunnel Smoke Ball
-                FileName: UndergroundPathSwitchRoomEntrances.asm
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -96,7 +96,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UndergroundPathSwitchRoomEntrancesSmokeBall:
+                    GoldenrodUndergroundSwitchRoomEntrancesSmokeBall:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -105,7 +105,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Full Heal
-                FileName: UndergroundPathSwitchRoomEntrances.asm
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -116,7 +116,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UndergroundPathSwitchRoomEntrancesFullHeal:
+                    GoldenrodUndergroundSwitchRoomEntrancesFullHeal:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -125,7 +125,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Max Ether
-                FileName: UndergroundWarehouse.asm
+                FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -136,7 +136,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UndergroundWarehouseMaxEther:
+                    GoldenrodUndergroundWarehouseMaxEther:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -145,7 +145,7 @@ Location:
                 Sublocations:
             -
                 Name: Sleep Talk TM
-                FileName: UndergroundWarehouse.asm
+                FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -156,7 +156,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UndergroundWarehouseTMSleepTalk:
+                    GoldenrodUndergroundWarehouseTMSleepTalk:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -165,7 +165,7 @@ Location:
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Ultra Ball
-                FileName: UndergroundWarehouse.asm
+                FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -176,7 +176,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UndergroundWarehouseUltraBall:
+                    GoldenrodUndergroundWarehouseUltraBall:
                         ITEMLINE
                 Text:
                 IsBall: Yes
@@ -185,7 +185,7 @@ Location:
                 Sublocations:
     -
         Name: Goldenrod Tunnel Rocket Attack
-        FileName: UndergroundWarehouse.asm
+        FileName: GoldenrodUndergroundWarehouse.asm
         Type: Item
         HasPKMN: Yes
         WildTableList: 
@@ -197,20 +197,27 @@ Location:
         FlagsSet:
         ReachableReqs:
         Code: |
-            GentlemanScript_0x7d9bf:
+            GoldenrodUndergroundWarehouseDirectorScript:
                 faceplayer
                 opentext
                 checkevent EVENT_RECEIVED_CARD_KEY
-                iftrue UnknownScript_0x7d9de
-                writetext UnknownText_0x7dbc6
-                buttonsound
+                iftrue .GotCardKey
+                checkcode VAR_BADGES
+                ifless 7, .GotCardKey
+                writetext DirectorIntroText
+                promptbutton
                 ITEMLINE
                 setevent EVENT_RECEIVED_CARD_KEY
-                setevent EVENT_WAREHOUSE_LAYOUT_1
-                clearevent EVENT_WAREHOUSE_LAYOUT_2
-                clearevent EVENT_WAREHOUSE_LAYOUT_3
-                writetext UnknownText_0x7dc5b
-                buttonsound
+                setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
+                clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
+                clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+                writetext DirectorCardKeyText
+                promptbutton
+            .GotCardKey:
+                writetext DirectorAfterText
+                waitbutton
+                closetext
+                end
         Text: |
             UnknownText_0x7dbc6:
                 text "DIRECTOR: Who?"

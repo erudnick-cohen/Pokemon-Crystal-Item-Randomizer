@@ -15,16 +15,16 @@ Location:
         InfeasibleBadges:
         NormalBadge: Rainbow Badge
         BadgeLine: |
-            ErikaScript_0x72a6a:
+            CeladonGymErikaScript:
                 faceplayer
                 opentext
-                checkflag ENGINE_RAINBOWBADGE
+                checkevent EVENT_BEAT_ERIKA
                 iftrue .FightDone
-                writetext UnknownText_0x72b28
+                writetext ErikaBeforeBattleText
                 waitbutton
                 closetext
-                winlosstext UnknownText_0x72c3e, 0
-                loadtrainer ERIKA, 1
+                winlosstext ErikaBeatenText, 0
+                loadtrainer ERIKA, ERIKA1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_ERIKA
@@ -33,9 +33,6 @@ Location:
                 setevent EVENT_BEAT_BEAUTY_JULIA
                 setevent EVENT_BEAT_TWINS_JO_AND_ZOE
                 opentext
-                writetext UnknownText_0x72c96
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
         Code:
         Text:

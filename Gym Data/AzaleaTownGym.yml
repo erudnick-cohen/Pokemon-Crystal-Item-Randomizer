@@ -14,25 +14,21 @@ Location:
         InfeasibleBadges:
         NormalBadge: Hive Badge
         BadgeLine: |
-            BugsyScript:
-                faceplayer
-                opentext
-                checkevent EVENT_BEAT_BUGSY
-                iftrue .FightDone
-                writetext BugsyText_INeverLose
-                waitbutton
-                closetext
-                winlosstext BugsyText_ResearchIncomplete, 0
-                loadtrainer BUGSY, 1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_BUGSY
-                opentext
-                writetext Text_ReceivedHiveBadge
-                playsound SFX_GET_BADGE
-                waitsfx
-                BADGELINE
-                checkcode VAR_BADGES
+                AzaleaGymBugsyScript:
+                    faceplayer
+                    opentext
+                    checkevent EVENT_BEAT_BUGSY
+                    iftrue .FightDone
+                    writetext BugsyText_INeverLose
+                    waitbutton
+                    closetext
+                    winlosstext BugsyText_ResearchIncomplete, 0
+                    loadtrainer BUGSY, BUGSY1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_BUGSY
+                    opentext
+                    BADGELINE
         Code:
         Text:
             -

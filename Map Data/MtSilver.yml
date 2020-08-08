@@ -1,7 +1,7 @@
 Location:
     -
         Name: Steel Wing MT Silver
-        FileName: Route28FamousSpeechHouse.asm
+        FileName: Route28SteelWingHouse.asm
         Type: Item
         HasPKMN: No
         WildTableList:
@@ -21,8 +21,8 @@ Location:
                 checkevent EVENT_GOT_TM47_STEEL_WING
                 iftrue .AlreadyGotItem
                 writetext CelebrityText1
-                buttonsound
-                ITEMLINE
+                promptbutton
+                verbosegiveitem TM_STEEL_WING
                 iffalse .Done
                 setevent EVENT_GOT_TM47_STEEL_WING
         Text:

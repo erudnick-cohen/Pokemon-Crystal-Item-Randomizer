@@ -19,7 +19,7 @@ Location:
         Sublocations:
             -
                 Name: Route 2 Nugget House
-                FileName: Route2NuggetSpeechHouse.asm
+                FileName: Route2NuggetHouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -31,20 +31,20 @@ Location:
                 ReachableReqs:
                 NormalItem: NUGGET
                 Code: |
-                    FisherScript_0x9b847:
+                    Route2NuggetHouseFisherScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_NUGGET_FROM_GUY
-                        iftrue .GotItem
-                        writetext UnknownText_0x9b865
-                        buttonsound
+                        iftrue .GotNugget
+                        writetext Route2NuggetHouseFisherText
+                        promptbutton
                         ITEMLINE
-                        iffalse .Done
+                        iffalse .NoRoom
                         setevent EVENT_GOT_NUGGET_FROM_GUY
-                    .GotItem
-                        writetext UnknownText_0x9b8e5
+                    .GotNugget:
+                        writetext Route2NuggetHouseFisherText_GotNugget
                         waitbutton
-                    .Done
+                    .NoRoom:
                         closetext
                         end
                 Text: |

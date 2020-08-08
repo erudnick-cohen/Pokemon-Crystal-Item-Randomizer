@@ -15,25 +15,25 @@ Location:
         InfeasibleBadges:
         NormalBadge: Earth Badge
         BadgeLine: |
-            BlueScript_0x9aa26:
+            ViridianGymBlueScript:
                 faceplayer
                 opentext
-                checkflag ENGINE_EARTHBADGE
+                checkevent EVENT_BEAT_BLUE
                 iftrue .FightDone
                 writetext LeaderBlueBeforeText
                 waitbutton
                 closetext
                 winlosstext LeaderBlueWinText, 0
-                loadtrainer BLUE, 1
+                loadtrainer BLUE, BLUE1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_BLUE
                 opentext
-                writetext Text_ReceivedEarthBadge
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
-                checkcode VAR_BADGES
+                writetext LeaderBlueAfterText
+                waitbutton
+                closetext
+                end
         Code:
         Text:
             -

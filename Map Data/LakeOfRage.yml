@@ -50,11 +50,27 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UnknownScript_0x7007a:
+                    RedGyarados:
+                        opentext
+                        writetext LakeOfRageGyaradosCryText
+                        pause 15
+                    Randomizer_RedGyaradosCry::
+                        cry GYARADOS
+                        closetext
+                    Randomizer_RedGyaradosSpecies::
+                        loadwildmon GYARADOS, 30
+                        loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+                        startbattle
+                        ifequal LOSE, .NotBeaten
+                        disappear LAKEOFRAGE_GYARADOS
+                    .NotBeaten:
                         reloadmapafterbattle
                         opentext
                         ITEMLINE
-                        waitsfx
+                        closetext
+                        setscene 0 ; Lake of Rage does not have a scene variable
+                        appear LAKEOFRAGE_LANCE
+                        end
                 Text: |
                     UnknownText_0x703df:
                         text "<PLAYER> obtained a"
@@ -78,7 +94,7 @@ Location:
                 IsBall: Yes
                 NormalItem: ELIXER
                 Code: |
-                    LakeofRageElixer:
+                    LakeOfRageElixer:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -99,7 +115,7 @@ Location:
                 IsBall: Yes
                 NormalItem: TM_DETECT
                 Code: |
-                    LakeofRageTMDetect:
+                    LakeOfRageTMDetect:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -125,7 +141,7 @@ Location:
                         checkevent EVENT_GOT_TM10_HIDDEN_POWER
                         iftrue .AlreadyGotItem
                         writetext HiddenPowerGuyText1
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .Done
                         setevent EVENT_GOT_TM10_HIDDEN_POWER

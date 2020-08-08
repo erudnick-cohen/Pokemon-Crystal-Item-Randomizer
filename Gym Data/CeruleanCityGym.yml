@@ -15,16 +15,16 @@ Location:
         InfeasibleBadges:
         NormalBadge: Cascade Badge
         BadgeLine: |
-                MistyScript_0x188432:
+                CeruleanGymMistyScript:
                     faceplayer
                     opentext
-                    checkflag ENGINE_CASCADEBADGE
+                    checkevent EVENT_BEAT_MISTY
                     iftrue .FightDone
-                    writetext UnknownText_0x188674
+                    writetext MistyIntroText
                     waitbutton
                     closetext
-                    winlosstext UnknownText_0x18870c, 0
-                    loadtrainer MISTY, 1
+                    winlosstext MistyWinLossText, 0
+                    loadtrainer MISTY, MISTY1
                     startbattle
                     reloadmapafterbattle
                     setevent EVENT_BEAT_MISTY
@@ -32,9 +32,6 @@ Location:
                     setevent EVENT_BEAT_SWIMMERF_BRIANA
                     setevent EVENT_BEAT_SWIMMERM_PARKER
                     opentext
-                    writetext UnknownText_0x188768
-                    playsound SFX_GET_BADGE
-                    waitsfx
                     BADGELINE
         Code:
         Text:

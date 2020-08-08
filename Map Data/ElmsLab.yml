@@ -30,14 +30,16 @@ Location:
                 TrainerList: 
                 NormalItem: POTION
                 Code: |
-                        AideScript_GivePotions:
-                            opentext
-                            writetext AideText_GiveYouPotions
-                            buttonsound
-                            ITEMLINE
-                            writetext AideText_AlwaysBusy
-                            waitbutton
-                            closetext
+                    AideScript_GivePotion:
+                        opentext
+                        writetext AideText_GiveYouPotion
+                        promptbutton
+                        ITEMLINE
+                        writetext AideText_AlwaysBusy
+                        waitbutton
+                        closetext
+                        setscene SCENE_ELMSLAB_NOTHING
+                        end
             -
                 Name: Elm's Theft Occurs
                 FileName: ElmsLab.asm
@@ -76,15 +78,15 @@ Location:
                     AideScript_GiveYouBalls:
                         opentext
                         writetext AideText_GiveYouBalls
-                        buttonsound
-                        itemtotext ITEMLINE, $1
+                        promptbutton
+                        getitemname STRING_BUFFER_4, POKE_BALL
                         scall AideScript_ReceiveTheBalls
                         giveitem ITEMLINE, 5
                         writetext AideText_ExplainBalls
-                        buttonsound
+                        promptbutton
                         itemnotify
                         closetext
-                        dotrigger $2
+                        setscene SCENE_ELMSLAB_NOTHING
                         end
                 Text: |
                     AideText_ExplainBalls:
@@ -136,7 +138,7 @@ Location:
                 Code: |
                     ElmGiveMasterBallScript:
                         writetext ElmGiveMasterBallText1
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .notdone
                         setevent EVENT_GOT_MASTER_BALL_FROM_ELM
@@ -176,7 +178,7 @@ Location:
                 Code: |
                     ElmGiveTicketScript:
                         writetext ElmGiveTicketText1
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_SS_TICKET_FROM_ELM
                         writetext ElmGiveTicketText2

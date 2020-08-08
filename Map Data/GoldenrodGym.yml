@@ -27,13 +27,13 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_ATTRACT
                 Code: |
-                    UnknownScript_0x54064:
-                        writetext UnknownText_0x5428b
-                        buttonsound
+                    .GotPlainBadge:
+                        writetext WhitneyPlainBadgeText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x5407b
+                        iffalse .NoRoomForAttract
                         setevent EVENT_GOT_TM45_ATTRACT
-                        writetext UnknownText_0x54302
+                        writetext WhitneyAttractText
                         waitbutton
                         closetext
                         end

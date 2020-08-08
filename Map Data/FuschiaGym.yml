@@ -33,13 +33,13 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_TOXIC
                 Code: |
-                    UnknownScript_0x195e02:
+                    .AfterBattle:
                         checkevent EVENT_GOT_TM06_TOXIC
-                        iftrue UnknownScript_0x195e15
-                        writetext UnknownText_0x196002
-                        buttonsound
+                        iftrue .AfterTM
+                        writetext JanineText_ToxicSpeech
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x195e15
+                        iffalse .AfterTM
                         setevent EVENT_GOT_TM06_TOXIC
                 Text: |
                     JanineText_ToxicSpeech:

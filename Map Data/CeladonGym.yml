@@ -38,13 +38,13 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_GIGA_DRAIN
                 Code: |
-                    .FightDone
+                    .FightDone:
                         checkevent EVENT_GOT_TM19_GIGA_DRAIN
-                        iftrue UnknownScript_0x72aae
-                        writetext UnknownText_0x72cb0
-                        buttonsound
+                        iftrue .GotGigaDrain
+                        writetext ErikaExplainTMText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x72aae
+                        iffalse .GotGigaDrain
                         setevent EVENT_GOT_TM19_GIGA_DRAIN
                 Text: |
                     UnknownText_0x72cb0:

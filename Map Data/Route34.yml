@@ -103,12 +103,12 @@ Location:
                 NormalItem: SOFT_SAND
                 Code: |
                     .Script:
-                        end_if_just_battled
+                        endifjustbattled
                         opentext
                         checkevent EVENT_GOT_SOFT_SAND_FROM_KATE
                         iftrue .GotSoftSand
                         writetext CooltrainerfKateOfferSoftSandText
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_SOFT_SAND_FROM_KATE

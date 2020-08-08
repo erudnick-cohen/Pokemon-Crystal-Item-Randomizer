@@ -29,20 +29,20 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_ICY_WIND
                 Code: |
-                    .FightDone
+                    .FightDone:
                         checkevent EVENT_GOT_TM16_ICY_WIND
-                        iftrue UnknownScript_0x199af0
+                        iftrue PryceScript_Defeat
                         setevent EVENT_BEAT_SKIER_ROXANNE
                         setevent EVENT_BEAT_SKIER_CLARISSA
                         setevent EVENT_BEAT_BOARDER_RONALD
                         setevent EVENT_BEAT_BOARDER_BRAD
                         setevent EVENT_BEAT_BOARDER_DOUGLAS
-                        writetext UnknownText_0x199d55
-                        buttonsound
+                        writetext PryceText_GlacierBadgeSpeech
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x199af4
+                        iffalse MahoganyGym_NoRoomForIcyWind
                         setevent EVENT_GOT_TM16_ICY_WIND
-                        writetext UnknownText_0x199def
+                        writetext PryceText_IcyWindSpeech
                         waitbutton
                         closetext
                         end

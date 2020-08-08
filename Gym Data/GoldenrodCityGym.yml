@@ -14,20 +14,13 @@ Location:
         InfeasibleBadges:
         NormalBadge: Plain Badge
         BadgeLine: |
-                .StoppedCrying
-                    checkevent EVENT_GOT_TM45_ATTRACT
-                    iftrue UnknownScript_0x54077
-                    checkflag ENGINE_PLAINBADGE
-                    iftrue UnknownScript_0x54064
-                    writetext UnknownText_0x54222
-                    buttonsound
-                    waitsfx
-                    writetext UnknownText_0x54273
-                    playsound SFX_GET_BADGE
-                    waitsfx
-                    BADGELINE
-                    checkcode VAR_BADGES
-                    scall GoldenrodGymTriggerRockets
+            .StoppedCrying:
+                checkevent EVENT_GOT_TM45_ATTRACT
+                iftrue .GotAttract
+                writetext WhitneyWhatDoYouWantText
+                promptbutton
+                waitsfx
+                BADGELINE
         Code:
         Text:
             -

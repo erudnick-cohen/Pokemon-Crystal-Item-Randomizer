@@ -14,6 +14,6 @@ yamltext = yamlfile.read()
 trainerData = yaml.load(yamltext)
 RandomizerRom.ResetRomForLabelling()
 RandomizerRom.LabelAllLocations(LocationList)
-RandomizerRom.LabelTrainerData(trainerData)
-RandomizerRom.LabelWild()
-RandomizerRom.LabelSpecialWild(LocationList)
+#RandomizerRom.LabelTrainerData(trainerData) #disabled because new speedchoice has different format for these
+#RandomizerRom.LabelWild() # See above
+#RandomizerRom.LabelSpecialWild(LocationList) # See above

@@ -98,20 +98,20 @@ Location:
                 ReachableReqs:
                 NormalItem: QUICK_CLAW
                 Code: |
-                    TeacherScript_0x5c008:
+                    NationalParkTeacher1Script:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_QUICK_CLAW
-                        iftrue UnknownScript_0x5c01d
-                        writetext UnknownText_0x5c265
-                        buttonsound
+                        iftrue .GotQuickClaw
+                        writetext NationalParkTeacher1Text
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x5c021
+                        iffalse .NoRoom
                         setevent EVENT_GOT_QUICK_CLAW
-                    UnknownScript_0x5c01d:
-                        writetext UnknownText_0x5c30d
+                    .GotQuickClaw:
+                        writetext NationalParkTeacher1Text_GotQuickClaw
                         waitbutton
-                    UnknownScript_0x5c021:
+                    .NoRoom:
                         closetext
                         end
                 Text: |

@@ -81,21 +81,21 @@ Location:
                 ReachableReqs:
                 NormalItem: SUPER_ROD
                 Code: |
-                    FishingGuruScript_0x7f484:
+                    Route12SuperRodHouseFishingGuruScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_SUPER_ROD
-                        iftrue UnknownScript_0x7f4a0
-                        writetext UnknownText_0x7f4af
+                        iftrue .GotSuperRod
+                        writetext OfferSuperRodText
                         yesorno
-                        iffalse UnknownScript_0x7f4a6
-                        writetext UnknownText_0x7f52f
-                        buttonsound
+                        iffalse .Refused
+                        writetext GiveSuperRodText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x7f4aa
+                        iffalse .NoRoom
                         setevent EVENT_GOT_SUPER_ROD
-                    UnknownScript_0x7f4a0:
-                        writetext UnknownText_0x7f57c
+                    .GotSuperRod:
+                        writetext GaveSuperRodText
                         waitbutton
                         closetext
                         end

@@ -46,7 +46,7 @@ Location:
                         checkevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
                         iftrue .After
                         writetext MysticWaterGuyTextBefore
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .Exit
                         setevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE

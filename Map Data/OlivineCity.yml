@@ -94,15 +94,20 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    SailorScript_0x9c8c1:
+                    OlivineCafeStrengthSailorScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_HM04_STRENGTH
-                        iftrue UnknownScript_0x9c8d3
-                        writetext UnknownText_0x9c8df
-                        buttonsound
+                        iftrue .GotStrength
+                        writetext OlivineCafeStrengthSailorText
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_HM04_STRENGTH
+                    .GotStrength:
+                        writetext OlivineCafeStrengthSailorText_GotStrength
+                        waitbutton
+                        closetext
+                        end
                 Text: |
                     UnknownText_0x9c8df:
                         text "Hah! Your #MON"
@@ -141,7 +146,7 @@ Location:
                         yesorno
                         iffalse .DontWantIt
                         writetext GiveGoodRodText
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         writetext GaveGoodRodText
                         waitbutton

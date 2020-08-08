@@ -15,25 +15,26 @@ Location:
         InfeasibleBadges:
         NormalBadge: Boulder Badge
         BadgeLine: |
-            BrockScript_0x1a2864:
+            PewterGymBrockScript:
                 faceplayer
                 opentext
-                checkflag ENGINE_BOULDERBADGE
+                checkevent EVENT_BEAT_BROCK
                 iftrue .FightDone
-                writetext UnknownText_0x1a28d0
+                writetext BrockIntroText
                 waitbutton
                 closetext
-                winlosstext UnknownText_0x1a29bb, 0
-                loadtrainer BROCK, 1
+                winlosstext BrockWinLossText, 0
+                loadtrainer BROCK, BROCK1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_BROCK
                 setevent EVENT_BEAT_CAMPER_JERRY
                 opentext
-                writetext UnknownText_0x1a2a3d
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
+                writetext BrockBoulderBadgeText
+                waitbutton
+                closetext
+                end
         Code:
         Text:
             -

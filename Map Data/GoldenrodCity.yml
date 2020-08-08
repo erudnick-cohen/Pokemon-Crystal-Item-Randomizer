@@ -92,29 +92,24 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    ClerkScript_0x54750:
+                    GoldenrodBikeShopClerkScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_BICYCLE
-                        iftrue UnknownScript_0x54775
-                        writetext UnknownText_0x54787
+                        iftrue .GotBicycle
+                        writetext GoldenrodBikeShopClerkIntroText
                         yesorno
-                        iffalse UnknownScript_0x5477b
-                        writetext UnknownText_0x547f8
-                        buttonsound
+                        iffalse .Refused
+                        writetext GoldenrodBikeShopClerkAgreedText
+                        promptbutton
                         waitsfx
                         ITEMLINE
-                        writetext UnknownText_0x54848
+                        writetext BorrowedABicycleText
                         playsound SFX_KEY_ITEM
                         waitsfx
                         itemnotify
                         setflag ENGINE_BIKE_SHOP_CALL_ENABLED
                         setevent EVENT_GOT_BICYCLE
-                    UnknownScript_0x54775:
-                        writetext UnknownText_0x5485f
-                        waitbutton
-                        closetext
-                        end
                 Text: |
                     UnknownText_0x54787:
                         text "...sigh... I moved"
@@ -184,21 +179,13 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    FlowerShopTeacherScript:
-                        checkevent EVENT_FOUGHT_SUDOWOODO
-                        iftrue .Lalala
-                        checkevent EVENT_GOT_SQUIRTBOTTLE
-                        iftrue .GotSquirtbottle
-                        checkevent EVENT_MET_FLORIA
-                        iffalse .HaventMetFloria
-                        checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
-                        iffalse .Lalala
+                    .SkipFloriaCheck:
                         checkflag ENGINE_PLAINBADGE
                         iffalse .NoPlainBadge
                         faceplayer
                         opentext
-                        writetext UnknownText_0x554c2
-                        buttonsound
+                        writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_SQUIRTBOTTLE
                         closetext
@@ -230,16 +217,16 @@ Location:
                 ReachableReqs:
                 NormalItem: HP_UP
                 Code: |
-                    GGOfficerquestcomplete:
-                        writetext UnknownText_0x69f8b
-                        buttonsound
+                    RandyScript_questcomplete:
+                        writetext Route35GoldenrodGateRandySomethingForYourTroubleText
+                        promptbutton
                         ITEMLINE
-                        iffalse GGOfficerbagfull
+                        iffalse RandyScript_bagfull
                         setevent EVENT_GOT_HP_UP_FROM_RANDY
-                    GGOfficergothpup:
-                        writetext UnknownText_0x69fd9
+                    RandyScript_gothpup:
+                        writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
                         waitbutton
-                    GGOfficerbagfull:
+                    RandyScript_bagfull:
                         closetext
                         end
                 Text:
@@ -247,7 +234,7 @@ Location:
                 Sublocations:
             -
                 Name: Coin Case
-                FileName: WarehouseEntrance.asm
+                FileName: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList: 
@@ -259,7 +246,7 @@ Location:
                 NormalItem: COIN_CASE
                 IsBall: Yes
                 Code: |
-                    WarehouseEntranceCoinCase:
+                    GoldenrodUndergroundCoinCase:
                         ITEMLINE
                 Text:
                 AREALV: 10

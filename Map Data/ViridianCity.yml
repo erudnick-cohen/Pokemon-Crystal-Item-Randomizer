@@ -141,20 +141,20 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_DREAM_EATER
                 Code: |
-                    FisherScript_0x1a9a75:
+                    ViridianCityDreamEaterFisher:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_TM42_DREAM_EATER
-                        iftrue UnknownScript_0x1a9a8a
-                        writetext UnknownText_0x1a9cc4
-                        buttonsound
+                        iftrue .GotDreamEater
+                        writetext ViridianCityDreamEaterFisherText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x1a9a8e
+                        iffalse .NoRoomForDreamEater
                         setevent EVENT_GOT_TM42_DREAM_EATER
-                    UnknownScript_0x1a9a8a:
-                        writetext UnknownText_0x1a9d86
+                    .GotDreamEater:
+                        writetext ViridianCityDreamEaterFisherGotDreamEaterText
                         waitbutton
-                    UnknownScript_0x1a9a8e:
+                    .NoRoomForDreamEater:
                         closetext
                         end
                 Text: |

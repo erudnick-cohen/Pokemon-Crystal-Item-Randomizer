@@ -103,14 +103,14 @@ Location:
                         checkevent EVENT_GOT_TM29_PSYCHIC
                         iftrue .AlreadyGotItem
                         writetext MrPsychicText1
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .Done
                         setevent EVENT_GOT_TM29_PSYCHIC
-                    .AlreadyGotItem
+                    .AlreadyGotItem:
                         writetext MrPsychicText2
                         waitbutton
-                    .Done
+                    .Done:
                         closetext
                         end
                 Text: |
@@ -154,20 +154,20 @@ Location:
                 ReachableReqs:
                 NormalItem: UP_GRADE
                 Code: |
-                    OfficerScript_0x18abe8:
+                    SilphCoOfficerScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_UP_GRADE
-                        iftrue UnknownScript_0x18abfd
-                        writetext UnknownText_0x18ac36
-                        buttonsound
+                        iftrue .GotUpGrade
+                        writetext SilphCoOfficerText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x18ac01
+                        iffalse .NoRoom
                         setevent EVENT_GOT_UP_GRADE
-                    UnknownScript_0x18abfd:
-                        writetext UnknownText_0x18aca8
+                    .GotUpGrade:
+                        writetext SilphCoOfficerText_GotUpGrade
                         waitbutton
-                    UnknownScript_0x18ac01:
+                    .NoRoom:
                         closetext
                         end
                 Text:
@@ -186,13 +186,15 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    .Part14
-                        writetext UnknownText_0x18b1e2
-                        buttonsound
+                    .TryGivePassAgain:
+                        opentext
+                    .GivePass:
+                        writetext CopycatText_GivePass
+                        promptbutton
                         ITEMLINE
-                        iffalse .Part22
+                        iffalse .Cancel
                         setevent EVENT_GOT_PASS_FROM_COPYCAT
-                        writetext UnknownText_0x18b214
+                        writetext CopycatText_ExplainPass
                         waitbutton
                         closetext
                         end

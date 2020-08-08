@@ -38,12 +38,8 @@ Location:
                         checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
                         iffalse .Mart
                         writetext PharmacistGiveSecretpotionText
-                        buttonsound
+                        promptbutton
                         ITEMLINE
-                        writetext ReceivedSecretpotionText
-                        playsound SFX_KEY_ITEM
-                        waitsfx
-                        itemnotify
                         setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
                         writetext PharmacistDescribeSecretpotionText
                         waitbutton
@@ -77,14 +73,14 @@ Location:
                 ReachableReqs:
                 NormalItem:
                 Code: |
-                    UnknownScript_0x1a009c:
-                        writetext UnknownText_0x1a01e3
-                        buttonsound
+                    .BeatChuck:
+                        writetext ChucksWifeGiveHMText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x1a00b1
+                        iffalse .Done
                         setevent EVENT_GOT_HM02_FLY
-                        writetext UnknownText_0x1a021d
-                        buttonsound
+                        writetext ChucksWifeFlySpeechText
+                        promptbutton
                 Text: |
                     ChucksWifeEasierToFlyText:
                         text "You crossed the"

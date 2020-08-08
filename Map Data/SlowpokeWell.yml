@@ -75,17 +75,17 @@ Location:
                 ReachableReqs:
                 NormalItem: KINGS_ROCK
                 Code: |
-                    GymGuyScript_0x5ad0b:
+                    SlowpokeWellB2FGymGuyScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
-                        iftrue UnknownScript_0x5ad22
-                        writetext UnknownText_0x5ad2a
-                        buttonsound
+                        iftrue .GotKingsRock
+                        writetext SlowpokeWellB2FGymGuyText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x5ad20
+                        iffalse .NoRoom
                         setevent EVENT_GOT_KINGS_ROCK_IN_SLOWPOKE_WELL
-                    UnknownScript_0x5ad20:
+                    .NoRoom:
                         closetext
                         end
                 Text: |

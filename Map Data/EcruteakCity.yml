@@ -100,12 +100,12 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UnknownScript_0x99505:
-                        writetext UnknownText_0x9991a
-                        buttonsound
+                    .GetSurf:
+                        writetext SurfGuyLikeADanceText
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_HM03_SURF
-                        writetext UnknownText_0x9999b
+                        writetext SurfGuySurfExplanationText
                         waitbutton
                         closetext
                         end
@@ -138,16 +138,16 @@ Location:
                 ReachableReqs:
                 NormalItem: ITEMFINDER
                 Code: |
-                    CooltrainerMScript_0x9a5fb:
+                    EcruteakItemfinderGuy:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_ITEMFINDER
-                        iftrue UnknownScript_0x9a614
-                        writetext UnknownText_0x9a63c
+                        iftrue .itemfinder
+                        writetext EcruteakItemfinderAdventureText
                         yesorno
-                        iffalse UnknownScript_0x9a61a
-                        writetext UnknownText_0x9a6b5
-                        buttonsound
+                        iffalse .no
+                        writetext EcruteakItemfinderTrueSpiritText
+                        promptbutton
                         ITEMLINE
                         setevent EVENT_GOT_ITEMFINDER
 

@@ -36,7 +36,7 @@ Location:
                 Sublocations:
             -
                 Name: Ruins of Alph Rope Chamber 1
-                FileName: RuinsofAlphKabutoItemRoom.asm
+                FileName: RuinsOfAlphKabutoItemRoom.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -48,14 +48,14 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomBerry:
+                    RuinsOfAlphKabutoItemRoomBerry:
                         ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Ruins of Alph Rope Chamber 2
-                FileName: RuinsofAlphKabutoItemRoom.asm
+                FileName: RuinsOfAlphKabutoItemRoom.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -67,14 +67,14 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomPsncureberry:
+                    RuinsOfAlphKabutoItemRoomPsncureberry:
                         ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Ruins of Alph Rope Chamber 3
-                FileName: RuinsofAlphKabutoItemRoom.asm
+                FileName: RuinsOfAlphKabutoItemRoom.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -86,7 +86,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomHealPowder:
+                    RuinsOfAlphKabutoItemRoomHealPowder:
                         ITEMLINE
 
                 Text:
@@ -94,7 +94,7 @@ Location:
                 Sublocations:
             -
                 Name: Ruins of Alph Rope Chamber 4
-                FileName: RuinsofAlphKabutoItemRoom.asm
+                FileName: RuinsOfAlphKabutoItemRoom.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -106,7 +106,7 @@ Location:
                 IsBall: Yes
                 ReachableReqs:
                 Code: |
-                    RuinsofAlphKabutoItemRoomEnergypowder:
+                    RuinsOfAlphKabutoItemRoomEnergypowder:
                         ITEMLINE
                 Text:
                 TrainerList: 
@@ -133,7 +133,7 @@ Location:
                 Sublocations:
                     -
                         Name: Ruins of Alph Light Chamber 1
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsOfAlphAerodactylItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -145,14 +145,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomGoldBerry:
+                            RuinsOfAlphAerodactylItemRoomGoldBerry:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Light Chamber 2
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsOfAlphAerodactylItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -164,14 +164,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomHealPowder:
+                            RuinsOfAlphAerodactylItemRoomHealPowder:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Light Chamber 3
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsOfAlphAerodactylItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -183,14 +183,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomEnergyRoot:
+                            RuinsOfAlphAerodactylItemRoomEnergyRoot:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Light Chamber 4
-                        FileName: RuinsofAlphAerodactylItemRoom.asm
+                        FileName: RuinsOfAlphAerodactylItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -203,7 +203,7 @@ Location:
                         ReachableReqs:
                         Text:
                         Code: |
-                            RuinsofAlphAerodactylItemRoomMoonStone:
+                            RuinsOfAlphAerodactylItemRoomMoonStone:
                                 ITEMLINE
                         TrainerList: 
                         Sublocations:
@@ -231,7 +231,7 @@ Location:
                 Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 1
-                        FileName: RuinsofAlphOmanyteItemRoom.asm
+                        FileName: RuinsOfAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -243,14 +243,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphOmanyteItemRoomMysteryberry:
+                            RuinsOfAlphOmanyteItemRoomMysteryberry:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 2
-                        FileName: RuinsofAlphOmanyteItemRoom.asm
+                        FileName: RuinsOfAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -262,14 +262,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphOmanyteItemRoomMysticWater:
+                            RuinsOfAlphOmanyteItemRoomMysticWater:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 3
-                        FileName: RuinsofAlphOmanyteItemRoom.asm
+                        FileName: RuinsOfAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -281,14 +281,14 @@ Location:
                         IsBall: Yes
                         ReachableReqs:
                         Code: |
-                            RuinsofAlphOmanyteItemRoomStardust:
+                            RuinsOfAlphOmanyteItemRoomStardust:
                                 ITEMLINE
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 4
-                        FileName: RuinsofAlphOmanyteItemRoom.asm
+                        FileName: RuinsOfAlphOmanyteItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
@@ -301,7 +301,7 @@ Location:
                         ReachableReqs:
                         Text:
                         Code: |
-                            RuinsofAlphOmanyteItemRoomStarPiece:
+                            RuinsOfAlphOmanyteItemRoomStarPiece:
                                 ITEMLINE
                         TrainerList: 
                         Sublocations:

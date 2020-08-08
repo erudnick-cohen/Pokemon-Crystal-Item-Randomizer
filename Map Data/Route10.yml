@@ -89,16 +89,30 @@ Location:
                         ReachableReqs:
                         NormalItem: TM_ZAP_CANNON
                         Code: |
-                            UnknownScript_0x188eac:
+                            .FoundMachinePart:
+                                setevent EVENT_MET_MANAGER_AT_POWER_PLANT
+                                writetext PowerPlantManagerThatsThePartText
+                                promptbutton
+                                takeitem MACHINE_PART
+                                setevent EVENT_RETURNED_MACHINE_PART
+                                clearevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
+                                setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+                                setevent EVENT_ROUTE_24_ROCKET
+                                setevent EVENT_RESTORED_POWER_TO_KANTO
+                                clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
+                            .ReturnedMachinePart:
                                 checkevent EVENT_GOT_TM07_ZAP_CANNON
-                                iftrue UnknownScript_0x188ec5
-                                writetext UnknownText_0x1893c4
-                                buttonsound
+                                iftrue .GotZapCannon
+                                writetext PowerPlantManagerTakeThisTMText
+                                promptbutton
                                 ITEMLINE
-                                iffalse UnknownScript_0x188ec3
+                                iffalse .NoRoom
                                 setevent EVENT_GOT_TM07_ZAP_CANNON
-                                writetext UnknownText_0x1893f4
+                                writetext PowerPlantManagerTM07IsZapCannonText
                                 waitbutton
+                            .NoRoom:
+                                closetext
+                                end
                         Text: |
                             UnknownText_0x189264:
                                 text "MANAGER: I, I, I'm"

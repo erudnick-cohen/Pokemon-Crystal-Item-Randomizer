@@ -41,17 +41,17 @@ Location:
                 ReachableReqs:
                 NormalItem: NUGGET
                 Code: |
-                    CooltrainerMScript_0x19efac:
+                    TrainerCooltrainermKevin:
                         faceplayer
                         opentext
                         checkevent EVENT_BEAT_COOLTRAINERM_KEVIN
-                        iftrue UnknownScript_0x19efda
+                        iftrue .AfterBattle
                         checkevent EVENT_CLEARED_NUGGET_BRIDGE
-                        iftrue UnknownScript_0x19efc7
-                        writetext UnknownText_0x19f43b
-                        buttonsound
+                        iftrue .AfterNuggetBridge
+                        writetext CooltrainermKevinNuggetText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x19efde
+                        iffalse .NoRoomForNugget
                         setevent EVENT_CLEARED_NUGGET_BRIDGE
                 Text:
                 TrainerList: 

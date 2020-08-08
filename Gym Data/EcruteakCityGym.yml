@@ -14,25 +14,24 @@ Location:
         InfeasibleBadges:
         NormalBadge: Fog Badge
         BadgeLine: |
-            MortyScript_0x99d58:
+            EcruteakGymMortyScript:
                 faceplayer
                 opentext
                 checkevent EVENT_BEAT_MORTY
                 iftrue .FightDone
-                writetext UnknownText_0x99e65
+                writetext MortyIntroText
                 waitbutton
                 closetext
-                winlosstext UnknownText_0x9a00a, 0
-                loadtrainer MORTY, 1
+                winlosstext MortyWinLossText, 0
+                loadtrainer MORTY, MORTY1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_MORTY
                 opentext
-                writetext UnknownText_0x9a043
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
-                checkcode VAR_BADGES
+                setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_FINISHED
+                setevent EVENT_RANG_CLEAR_BELL_1
+                setevent EVENT_RANG_CLEAR_BELL_2
         Code:
         Text:
             -

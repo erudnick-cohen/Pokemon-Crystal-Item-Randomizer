@@ -98,13 +98,25 @@ Location:
                 ReachableReqs:
                 NormalItem: RARE_CANDY
                 Code: |
-                    UnknownScript_0x191802:
-                        writetext UnknownText_0x191a3d
-                        buttonsound
+                    PokemonFanClubChairmanScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
+                        iftrue .HeardSpeech
+                        checkevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT_BUT_BAG_WAS_FULL
+                        iftrue .HeardSpeechButBagFull
+                        writetext PokemonFanClubChairmanDidYouVisitToHearAboutMyMonText
+                        yesorno
+                        iffalse .NotListening
+                        writetext PokemonFanClubChairmanRapidashText
+                        promptbutton
+                    .HeardSpeechButBagFull:
+                        writetext PokemonFanClubChairmanIWantYouToHaveThisText
+                        promptbutton
                         ITEMLINE
-                        iffalse UnknownScript_0x19181f
+                        iffalse .BagFull
                         setevent EVENT_LISTENED_TO_FAN_CLUB_PRESIDENT
-                        writetext UnknownText_0x191a72
+                        writetext PokemonFanClubChairmanItsARareCandyText
                         waitbutton
                         closetext
                         end
@@ -138,18 +150,14 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
-                    UnknownScript_0x191844:
-                        buttonsound
-                        writetext UnknownText_0x191c5a
-                        buttonsound
+                    .MetCopycat:
+                        promptbutton
+                        writetext PokemonFanClubClefairyGuyTakeThisDollBackToGirlText
+                        promptbutton
                         waitsfx
                         ITEMLINE
-                        iffalse UnknownScript_0x191865
+                        iffalse .NoRoom
                         disappear POKEMONFANCLUB_FAIRY
-                        writetext UnknownText_0x191d0a
-                        playsound SFX_KEY_ITEM
-                        waitsfx
-                        itemnotify
                         setevent EVENT_GOT_LOST_ITEM_FROM_FAN_CLUB
                         closetext
                         end

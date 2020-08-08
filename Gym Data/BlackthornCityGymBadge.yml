@@ -14,42 +14,36 @@ Location:
         InfeasibleBadges:
         NormalBadge: Rising Badge
         BadgeLine: |
-                BlackthornGymClairScript:
-                    faceplayer
-                    opentext
-                    checkflag ENGINE_RISINGBADGE
-                    iftrue .AlreadyGotBadge
-                    checkevent EVENT_BEAT_CLAIR
-                    iftrue .FightDone
-                    writetext ClairIntroText
-                    waitbutton
-                    closetext
-                    winlosstext ClairWinText, 0
-                    loadtrainer CLAIR, 1
-                    startbattle
-                    reloadmapafterbattle
-                    setevent EVENT_BEAT_CLAIR
-                    opentext
-                    setevent EVENT_BEAT_COOLTRAINERM_PAUL
-                    setevent EVENT_BEAT_COOLTRAINERM_CODY
-                    setevent EVENT_BEAT_COOLTRAINERM_MIKE
-                    setevent EVENT_BEAT_COOLTRAINERF_FRAN
-                    setevent EVENT_BEAT_COOLTRAINERF_LOLA
-                    clearevent EVENT_MAHOGANY_MART_OWNERS
-                    setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-                    clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
-                    ; check_permaoptions EARLY_KANTO
-                    ; iffalse .do_dden
-                    writetext ClairText_Lazy
-                    waitsfx
-                    playsound SFX_GET_BADGE
-                    waitsfx
-                    BADGELINE
-                    checkcode VAR_BADGES
-                    scall BlackthornGymTriggerRockets
-                    specialphonecall SPECIALCALL_MASTERBALL
-                    writetext BlackthornGymClairText_DescribeBadge
-                    jump .GiveTM
+            BlackthornGymClairScript:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_CLAIR
+                iftrue .FightDone
+                writetext ClairIntroText
+                waitbutton
+                closetext
+                winlosstext ClairWinText, 0
+                loadtrainer CLAIR, CLAIR1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_CLAIR
+                opentext
+                setevent EVENT_BEAT_COOLTRAINERM_PAUL
+                setevent EVENT_BEAT_COOLTRAINERM_CODY
+                setevent EVENT_BEAT_COOLTRAINERM_MIKE
+                setevent EVENT_BEAT_COOLTRAINERF_FRAN
+                setevent EVENT_BEAT_COOLTRAINERF_LOLA
+                clearevent EVENT_MAHOGANY_MART_OWNERS
+                setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
+                clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+                checkpermaoptions EASY_CLAIR_BADGE
+                iffalse .DoDDen
+                writetext ClairText_Lazy
+                waitsfx
+                BADGELINE
+                specialphonecall SPECIALCALL_MASTERBALL
+                writetext BlackthornGymClairText_DescribeBadge
+                jump .GiveTM
         Code:
         Text:
             -

@@ -28,7 +28,7 @@ Location:
                 ReachableReqs:
                 Code: |
                     FakeDirectorScript:
-                        spriteface RADIOTOWER5F_DIRECTOR, UP
+                        turnobject RADIOTOWER5F_DIRECTOR, UP
                         showemote EMOTE_SHOCK, RADIOTOWER5F_DIRECTOR, 15
                         opentext
                         writetext FakeDirectorTextBefore1
@@ -42,16 +42,18 @@ Location:
                         closetext
                         winlosstext FakeDirectorWinText, 0
                         setlasttalked RADIOTOWER5F_DIRECTOR
-                        loadtrainer EXECUTIVEM, 3
+                        loadtrainer EXECUTIVEM, EXECUTIVEM_3
                         startbattle
                         reloadmapafterbattle
                         opentext
                         writetext FakeDirectorTextAfter
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         closetext
-                        dotrigger $1
                         setevent EVENT_BEAT_ROCKET_EXECUTIVEM_3
+                        checkevent EVENT_BEAT_ROCKET_EXECUTIVEM_1
+                        iftrue RadioTower5FDoneScript
+                        setscene SCENE_RADIOTOWER5F_BEAT_FAKE_DIRECTOR
                         end
                 Text:
                 AREALV: 20
@@ -79,7 +81,6 @@ Location:
                 LocationReqs: Goldenrod City Entrance
                 FlagReqs:
                     - Rocket Invasion
-                    - Radio Tower Rockets Part 1
                 ItemReqs:
                     - Card Key
                 FlagsSet:
@@ -87,70 +88,45 @@ Location:
                 ReachableReqs:
                 NormalItem: CLEAR_BELL
                 Code: |
-                    RadioTower5FRocketBossTrigger:
-                        applymovement PLAYER, MovementData_0x60125
-                        playmusic MUSIC_ROCKET_ENCOUNTER
-                        spriteface RADIOTOWER5F_ROCKET, RIGHT
-                        opentext
-                        writetext RadioTower5FRocketBossBeforeText
-                        waitbutton
-                        closetext
-                        winlosstext RadioTower5FRocketBossWinText, 0
-                        setlasttalked RADIOTOWER5F_ROCKET
-                        loadtrainer EXECUTIVEM, 1
-                        startbattle
-                        reloadmapafterbattle
-                        opentext
-                        writetext RadioTower5FRocketBossAfterText
-                        waitbutton
-                        closetext
-                        special Special_FadeBlackQuickly
-                        special Special_ReloadSpritesNoPalettes
-                        disappear RADIOTOWER5F_ROCKET
-                        disappear RADIOTOWER5F_ROCKET_GIRL
-                        pause 15
-                        special Special_FadeInQuickly
-                        setevent EVENT_BEAT_ROCKET_EXECUTIVEM_1
-                        setevent EVENT_CLEARED_RADIO_TOWER
-                        clearflag ENGINE_ROCKETS_IN_RADIO_TOWER
-                        setevent EVENT_GOLDENROD_CITY_ROCKET_SCOUT
-                        setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
-                        setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
+                    .SkipHidingDirector:
                         clearevent EVENT_MAHOGANY_MART_OWNERS
                         clearflag ENGINE_ROCKETS_IN_MAHOGANY
                         clearevent EVENT_GOLDENROD_CITY_CIVILIANS
+                        clearevent EVENT_RADIO_CARD_WOMAN
                         clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
                         setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
                         clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
                         special PlayMapMusic
                         disappear RADIOTOWER5F_DIRECTOR
-                        moveperson RADIOTOWER5F_DIRECTOR, $c, $0
+                        moveobject RADIOTOWER5F_DIRECTOR, 12, 0
                         appear RADIOTOWER5F_DIRECTOR
                         applymovement RADIOTOWER5F_DIRECTOR, RadioTower5FDirectorWalksIn
-                        spriteface PLAYER, RIGHT
+                        turnobject PLAYER, RIGHT
                         opentext
                         writetext RadioTower5FDirectorThankYouText
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         writetext RadioTower5FDirectorDescribeClearBellText
                         waitbutton
                         closetext
-                        dotrigger $2
-                        domaptrigger ECRUTEAK_HOUSE, $0
+                        setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_DEFAULT
                         setevent EVENT_GOT_CLEAR_BELL
                         setevent EVENT_TEAM_ROCKET_DISBANDED
-                        check_permaoptions EARLY_KANTO
+                        checkpermaoptions EARLY_KANTO
                         iffalse .skip_boat_and_train
-                        ; setup for boat
+                    ; setup for boat
                         setflag ENGINE_CREDITS_SKIP
                         specialphonecall SPECIALCALL_SSTICKET
-                        ; fix people flags later on
+                    ; fix people flags later on
                         clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
                         clearevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
                     .skip_boat_and_train
                         applymovement RADIOTOWER5F_DIRECTOR, RadioTower5FDirectorWalksOut
                         playsound SFX_EXIT_BUILDING
                         disappear RADIOTOWER5F_DIRECTOR
+                        checkevent EVENT_BEAT_ROCKET_EXECUTIVEM_3
+                        iftrue RadioTower5FDoneScript
+                        setscene SCENE_RADIOTOWER5F_BEAT_EXECUTIVE
                         end
                 Text:
                 AREALV: 20
@@ -175,12 +151,12 @@ Location:
                         ReachableReqs:
                         NormalItem: TM_SUNNY_DAY
                         Code: |
-                            UnknownScript_0x5e58a:
-                                writetext UnknownText_0x5e7e2
-                                buttonsound
+                            .NoRockets:
+                                writetext RadioTower3FCooltrainerFYoureMyHeroText
+                                promptbutton
                                 ITEMLINE
-                                iffalse UnknownScript_0x5e5a1
-                                writetext UnknownText_0x5e821
+                                iffalse .NoRoom
+                                writetext RadioTower3FCooltrainerFItsSunnyDayText
                                 waitbutton
                                 closetext
                                 setevent EVENT_GOT_SUNNY_DAY_FROM_RADIO_TOWER
@@ -208,12 +184,12 @@ Location:
                         ReachableReqs:
                         NormalItem: PINK_BOW
                         Code: |
-                            UnknownScript_0x5eb99:
-                                writetext UnknownText_0x5ecab
-                                buttonsound
+                            .ClearedRockets:
+                                writetext RadioTower4FDJMaryText_ClearedRockets
+                                promptbutton
                                 ITEMLINE
-                                iffalse UnknownScript_0x5ebb0
-                                writetext UnknownText_0x5ecef
+                                iffalse .NoRoom
+                                writetext RadioTower4FDJMaryText_GivePinkBow
                                 waitbutton
                                 closetext
                                 setevent EVENT_GOT_PINK_BOW_FROM_MARY
@@ -254,9 +230,9 @@ Location:
         ReachableReqs:
         NormalItem: BLUE_CARD
         Code: |
-            UnknownScript_0x5d800:
-                writetext UnknownText_0x5dcf4
-                buttonsound
+            .Introduction:
+                writetext RadioTower2FBuenaShowIntroductionText
+                promptbutton
                 setevent EVENT_MET_BUENA
                 ITEMLINE
         Text:

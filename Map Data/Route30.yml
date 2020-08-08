@@ -35,7 +35,7 @@ Location:
                     Sublocations:
             -
                     Name: Route 30 Berry Man
-                    FileName: Route30BerrySpeechHouse.asm
+                    FileName: Route30BerryHouse.asm
                     Type: Item
                     HasPKMN: No
                     WildTableList:
@@ -46,20 +46,20 @@ Location:
                     ReachableReqs:
                     NormalItem: BERRY
                     Code: |
-                        PokefanMScript_0x196d64:
+                        Route30BerryHousePokefanMScript:
                             faceplayer
                             opentext
                             checkevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
-                            iftrue UnknownScript_0x196d79
-                            writetext UnknownText_0x196d82
-                            buttonsound
+                            iftrue .GotBerry
+                            writetext Route30BerrySpeechHouseMonEatBerriesText
+                            promptbutton
                             ITEMLINE
-                            iffalse UnknownScript_0x196d7d
+                            iffalse .NoRoom
                             setevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
-                        UnknownScript_0x196d79:
-                            writetext UnknownText_0x196dec
+                        .GotBerry:
+                            writetext Route30BerrySpeechHouseCheckTreesText
                             waitbutton
-                        UnknownScript_0x196d7d:
+                        .NoRoom:
                             closetext
                             end
                     Text: |
@@ -88,9 +88,9 @@ Location:
                     FlagsSet: Mr. Pokemon Visited
                     ReachableReqs:
                     Code: |
-                        .MrPokemonEvent
+                        .MrPokemonEvent:
                             showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
-                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
                             opentext
                             writetext MrPokemonIntroText1
                             waitbutton
@@ -98,26 +98,22 @@ Location:
                             applymovement PLAYER, MrPokemonsHouse_PlayerWalksToMrPokemon
                             opentext
                             writetext MrPokemonIntroText2
-                            buttonsound
+                            promptbutton
                             waitsfx
                             ITEMLINE
-                            writetext MrPokemonsHouse_GotEggText
-                            playsound SFX_KEY_ITEM
-                            waitsfx
-                            itemnotify
                             setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
                             blackoutmod CHERRYGROVE_CITY
                             writetext MrPokemonIntroText3
-                            buttonsound
-                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
+                            promptbutton
+                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
                             writetext MrPokemonIntroText4
-                            buttonsound
-                            spriteface MRPOKEMONSHOUSE_GENTLEMAN, DOWN
-                            spriteface MRPOKEMONSHOUSE_OAK, LEFT
+                            promptbutton
+                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                            turnobject MRPOKEMONSHOUSE_OAK, LEFT
                             writetext MrPokemonIntroText5
                             waitbutton
                             closetext
-                            jump MrPokemonsHouse_OakScript
+                            sjump MrPokemonsHouse_OakScript
                     Text: |
                         MrPokemonsHouse_GotEggText:
                             text "<PLAYER> received"
@@ -138,14 +134,18 @@ Location:
                     ReachableReqs:
                     NormalItem: EXP_SHARE
                     Code: |
-                        .RedScale
+                        .RedScale:
+                            checkmbpermaoptions EXP_SPLITTING, GEN8
+                            iftrue .AlwaysNewDiscoveries
                             writetext MrPokemonText_GimmeTheScale
                             yesorno
                             iffalse .refused
+                            checkmbpermaoptions EXP_SPLITTING, GEN67
+                            iftrue .Gen67ExpShare
                             ITEMLINE
                             iffalse .full
                             takeitem RED_SCALE
-                            jump .AlwaysNewDiscoveries
+                            sjump .AlwaysNewDiscoveries
                     Text: |
                         MrPokemonText_GimmeTheScale:
                             text "Hm? That SCALE!"

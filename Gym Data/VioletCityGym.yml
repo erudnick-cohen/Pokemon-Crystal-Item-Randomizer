@@ -14,23 +14,20 @@ Location:
         InfeasibleBadges:
         NormalBadge: Zephyr Badge
         BadgeLine: |
-            FalknerScript_0x683c2:
+            VioletGymFalknerScript:
                 faceplayer
                 opentext
                 checkevent EVENT_BEAT_FALKNER
                 iftrue .FightDone
-                writetext UnknownText_0x68473
+                writetext FalknerIntroText
                 waitbutton
                 closetext
-                winlosstext UnknownText_0x6854a, 0
-                loadtrainer FALKNER, 1
+                winlosstext FalknerWinLossText, 0
+                loadtrainer FALKNER, FALKNER1
                 startbattle
                 reloadmapafterbattle
                 setevent EVENT_BEAT_FALKNER
                 opentext
-                writetext UnknownText_0x685af
-                playsound SFX_GET_BADGE
-                waitsfx
                 BADGELINE
         Code:
         Text:

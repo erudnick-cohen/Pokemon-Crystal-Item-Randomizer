@@ -95,24 +95,13 @@ Location:
                     - Whirlpool
                 FlagsSet:
                 ReachableReqs:
-                IsSpecial: Yes
+                IsBall: Yes
                 NormalItem: DRAGON_FANG
                 Code: |
-                    PokeBallScript_0x18c95a:
-                    ; This whole script is written out rather than as an
-                    ; item fragment because it's left over from the GS
-                    ; event.
-                        giveitem ITEMLINE
-                        iffalse .BagFull
-                        disappear DRAGONSDENB1F_POKE_BALL1
-                        opentext
-                        itemtotext ITEMLINE, $0
-                        writetext Text_FoundDragonFang
-                        playsound SFX_ITEM
-                        waitsfx
-                        itemnotify
-                        closetext
-                        end
+                    DragonsDenB1FDragonFangScript:
+                    ; This whole script is written out rather than as an itemball
+                    ; because it's left over from the GS event.
+                        ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:

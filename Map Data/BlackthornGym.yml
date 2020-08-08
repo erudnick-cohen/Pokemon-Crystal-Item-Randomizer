@@ -30,19 +30,14 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_DRAGONBREATH
                 Code: |
-                    .GiveTM
-                        buttonsound
-                        ITEMLINE
+                    .GiveTM:
+                        promptbutton
+                        verbosegiveitem TM_DRAGONBREATH
                         iffalse .BagFull
-                        itemtotext TM_DRAGONBREATH, $0
-                        writetext BlackthornGymText_ReceivedTM24
-                        playsound SFX_ITEM
-                        waitsfx
-                        itemnotify
                         setevent EVENT_GOT_TM24_DRAGONBREATH
                         writetext BlackthornGymClairText_DescribeTM24
-                        buttonsound
-                        jump .GotTM24
+                        promptbutton
+                        sjump .GotTM24
                 Text: |
                     NotifyReceiveDragonbreath:
                         text "<PLAYER> received"

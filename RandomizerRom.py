@@ -21,7 +21,7 @@ def ResetRomForLabelling():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("VanillaSpeedCrystal/pokecrystal-speedchoice","RandomizerRom")
+	shutil.copytree("Speedchoice V7\pokecrystal-speedchoice-new","RandomizerRom")
 
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
@@ -242,7 +242,7 @@ def LabelAllLocations(locations):
 			LabelBadgeLocation(i)
 
 def LabelBadgeLocation(location):
-	#print("Labeling "+location.Name)
+	print("Labeling "+location.Name)
 	
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)

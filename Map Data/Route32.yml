@@ -57,11 +57,11 @@ Location:
                 Code: |
                     .GiveMiracleSeed:
                         writetext Route32CooltrainerMText_HaveThisSeed
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
-                        jump .GotMiracleSeed
+                        sjump .GotMiracleSeed
                 Text:
                 TrainerList: 
                 Sublocations:
@@ -86,7 +86,7 @@ Location:
                         checkevent EVENT_GOT_TM05_ROAR
                         iftrue .AlreadyHaveRoar
                         writetext Text_RoarIntro
-                        buttonsound
+                        promptbutton
                         ITEMLINE
                         iffalse .Finish
                         setevent EVENT_GOT_TM05_ROAR
@@ -172,18 +172,18 @@ Location:
                 ReachableReqs:
                 NormalItem: OLD_ROD
                 Code: |
-                    FishingGuruScript_0x69b55:
+                    Route32Pokecenter1FFishingGuruScript:
                         faceplayer
                         opentext
                         checkevent EVENT_GOT_OLD_ROD
-                        iftrue UnknownScript_0x69b7a
-                        writetext UnknownText_0x69b83
+                        iftrue .GotOldRod
+                        writetext Route32Pokecenter1FFishingGuruText_Question
                         yesorno
-                        iffalse UnknownScript_0x69b74
-                        writetext UnknownText_0x69be8
-                        buttonsound
+                        iffalse .Refused
+                        writetext Route32Pokecenter1FFishingGuruText_Yes
+                        promptbutton
                         ITEMLINE
-                        writetext UnknownText_0x69c1b
+                        writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
                         waitbutton
                         closetext
                         setevent EVENT_GOT_OLD_ROD
