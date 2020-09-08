@@ -21,7 +21,7 @@ def ResetRomForLabelling():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Speedchoice V7\pokecrystal-speedchoice-new","RandomizerRom")
+	shutil.copytree("Speedchoice Current/pokecrystal-speedchoice","RandomizerRom")
 
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
