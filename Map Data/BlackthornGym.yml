@@ -32,7 +32,7 @@ Location:
                 Code: |
                     .GiveTM:
                         promptbutton
-                        verbosegiveitem TM_DRAGONBREATH
+                        ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM24_DRAGONBREATH
                         writetext BlackthornGymClairText_DescribeTM24
