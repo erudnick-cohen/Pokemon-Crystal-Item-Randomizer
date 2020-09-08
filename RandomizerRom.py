@@ -25,7 +25,7 @@ def ResetRomForLabelling():
 	shutil.copytree("Speedchoice Current/pokecrystal-speedchoice","RandomizerRom")
 	#next overwrite the files which need custom labels
 	for root, dir, files  in os.walk("/Files with manual labels"):
-		distutils.file_util.copy_file("/Files with manual labels/"+file,"Speedchoice Current/pokecrystal-speedchoice/maps/"+file)
+		distutils.file_util.copy_file("/Files with manual labels/"+file,"RandomizerRom/maps/"+file)
 
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
