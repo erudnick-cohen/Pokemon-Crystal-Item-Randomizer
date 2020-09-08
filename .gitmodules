@@ -10,3 +10,6 @@
 [submodule "Speedchoice V7/pokecrystal-speedchoice-new"]
 	path = Speedchoice V7/pokecrystal-speedchoice-new
 	url = https://github.com/erudnick-cohen/pokecrystal-speedchoice-new
+[submodule "Speedchoice Current/pokecrystal-speedchoice"]
+	path = Speedchoice Current/pokecrystal-speedchoice
+	url = https://github.com/Dabomstew/pokecrystal-speedchoice.git
