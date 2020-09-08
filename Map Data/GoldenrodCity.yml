@@ -205,7 +205,7 @@ Location:
                 Sublocations:        
             -
                 Name: Kenya Gate Item
-                FileName: Route35Goldenrodgate.asm
+                FileName: Route35GoldenrodGate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 

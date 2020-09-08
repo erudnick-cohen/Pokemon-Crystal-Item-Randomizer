@@ -161,7 +161,7 @@ Location:
                 Sublocations:
             -
                 Name: Old Rod
-                FileName: Route32PokeCenter1F.asm
+                FileName: Route32Pokecenter1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
