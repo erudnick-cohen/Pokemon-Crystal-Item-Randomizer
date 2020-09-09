@@ -22,7 +22,7 @@ Location:
                 iftrue .AlreadyGotItem
                 writetext CelebrityText1
                 promptbutton
-                verbosegiveitem TM_STEEL_WING
+                ITEMLINE
                 iffalse .Done
                 setevent EVENT_GOT_TM47_STEEL_WING
         Text:
