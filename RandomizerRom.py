@@ -25,7 +25,7 @@ def ResetRomForLabelling():
 	#next overwrite the files which need custom labels
 	for root, dir, files  in os.walk("Files with manual labels"):
 		for file in files:
-			shutil.copyfile("Files with manual labels/"+file,"RandomizerRom/maps/"+file)
+			shutil.copy("Files with manual labels/"+file,"RandomizerRom/maps/"+file)
 
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
