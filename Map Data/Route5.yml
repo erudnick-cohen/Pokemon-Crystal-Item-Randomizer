@@ -37,7 +37,7 @@ Location:
                         iftrue .GotCleanseTag
                         writetext Route5CleanseTagHouseGrannyText1
                         promptbutton
-                        verbosegiveitem CLEANSE_TAG
+                        ITEMLINE
                         iffalse .NoRoom
                         setevent EVENT_GOT_CLEANSE_TAG
                     .GotCleanseTag:
