@@ -1,0 +1,24 @@
+ItemRandoData::
+ItemRandoDataVersion::
+	db 1
+.ckir_BEFOREItemRandoActive::
+ItemRandoActive::
+	db
+.ckir_AFTERItemRandoActive::
+.ckir_BEFOREItemRandoRocketless::
+ItemRandoRocketless::
+	db
+.ckir_AFTERItemRandoRocketless::
+.ckir_BEFOREItemRandoEasyClairBadge::
+ItemRandoEasyClairBadge::
+	db
+.ckir_AFTERItemRandoEasyClairBadge::
+.ckir_BEFOREItemRandoEarlyKanto::
+ItemRandoEarlyKanto::
+	db
+.ckir_AFTERItemRandoEarlyKanto::
+.ckir_BEFOREItemRandoEasyTinTower::
+ItemRandoEasyTinTower::
+	db
+.ckir_AFTERItemRandoEasyTinTower::
+ItemRandoDataEnd::
