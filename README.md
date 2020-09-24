@@ -26,7 +26,7 @@ Make a post about it under issues, but please indicate in the title of your post
     * Obtaining the radio card
     * Obtaining the item from the flower shop
     * Obtaining the item from Buena
-  * The director is always present in the basement, currently he will give the player an item before team rocket actually has attacked.
+  * The director is always present in the basement, but will not give the player an item until team rocket has actually has attacked.
   * Team Rocket's takeover of the radio tower can be triggered from either Johto or Kanto
     * Note: Team Rocket taking over the Johto radio tower does not affect the radio in Kanto
   * Red will appear in Mt. Silver, even if the Elite Four and Lance have not been beaten yet (can be disabled if desired)
