@@ -4,7 +4,7 @@ import random
 import copy
 import time
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge', 'Storm Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
 	#build progress set
 	progressList = copy.copy(progressItems)
 	progressList.extend(reqBadges)
@@ -46,7 +46,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			flagList.append(j)
 		if i.Type == 'Item':
 			itemCount = itemCount+1
-	print('Total number of items: '+str(itemCount))
+	#print('Total number of items: '+str(itemCount))
 	#extract all core items out and put them in shuffled order at the start (which is the BACK) of the item list
 	#this is done because these items unlock way too many item locations, so we want to maximize their legal locations
 	for i in coreProgress:
