@@ -14,19 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QCheckBox" name="TrainerLevelScaling">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>80</y>
-      <width>131</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Scale Trainer Levels?</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Randomize">
     <property name="geometry">
      <rect>
@@ -61,74 +48,6 @@
     </property>
     <property name="text">
      <string>Select Rom File</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="RegularWildLevelScaling">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>126</y>
-      <width>91</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Scale Regular 
-Wild Levels?</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="TrainerLevelShiftBonus">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>110</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="TrainerLevelShift">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>100</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Trainer Level
- Shift Bonus:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="WildLevelShift">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>195</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Wild Level
- Shift Bonus:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="WildLevelShiftBonus">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>200</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -437,7 +356,7 @@ Wild Levels?</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>260</y>
+      <y>110</y>
       <width>121</width>
       <height>17</height>
      </rect>
@@ -508,25 +427,11 @@ Wild Levels?</string>
  Settings</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="SpecialWildLevelScaling">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Scale Special
-Wild Levels?</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="SeedInput">
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>230</y>
+      <y>80</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -539,7 +444,7 @@ Wild Levels?</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>80</y>
       <width>51</width>
       <height>16</height>
      </rect>

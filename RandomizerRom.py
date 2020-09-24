@@ -176,29 +176,29 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	romMap[addressData["address_range"]["begin"]+1] = location.badge.Code
-	#borrowing this trick from goldenrules's key item randomizer
-	nString = "It's\n"+location.badge.Name.upper()
-	for i in range(0,len(nString)):
-		#+1 to dodge the initial byte that isn't part of the text
-		#note that this leaves the remaining text as "garbage", since we are terminating the string ourselves
-		#print(nString[i])
-		nByte = str.encode(nString[i],'ascii')
-		nByte = int.from_bytes(nByte,'big')-65+128
-		if nString[i] == '\n':
-			nByte = 79
-		if nString[i] == "'":
-			nByte = 224
-		if nString[i] == " ":
-			nByte = 127
-		#print(romMap[gymOffsets[location.Name]+i+1])
-		#print('to')
-		#print(nByte)
-		romMap[gymOffsets[location.Name]+i+1] = nByte
-		#print('---')
-	#add the done character to the end
-	romMap[gymOffsets[location.Name]+len(nString)+1] = 87
-	#then terminate the string
-	romMap[gymOffsets[location.Name]+len(nString)+2] = 50
+	#no longer borrowing this trick from goldenrules's key item randomizer
+	# nString = "It's\n"+location.badge.Name.upper()
+	# for i in range(0,len(nString)):
+		# #+1 to dodge the initial byte that isn't part of the text
+		# #note that this leaves the remaining text as "garbage", since we are terminating the string ourselves
+		# #print(nString[i])
+		# nByte = str.encode(nString[i],'ascii')
+		# nByte = int.from_bytes(nByte,'big')-65+128
+		# if nString[i] == '\n':
+			# nByte = 79
+		# if nString[i] == "'":
+			# nByte = 224
+		# if nString[i] == " ":
+			# nByte = 127
+		# #print(romMap[gymOffsets[location.Name]+i+1])
+		# #print('to')
+		# #print(nByte)
+		# romMap[gymOffsets[location.Name]+i+1] = nByte
+		# #print('---')
+	# #add the done character to the end
+	# romMap[gymOffsets[location.Name]+len(nString)+1] = 87
+	# #then terminate the string
+	# romMap[gymOffsets[location.Name]+len(nString)+2] = 50
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'

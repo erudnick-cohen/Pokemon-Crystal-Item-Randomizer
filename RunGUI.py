@@ -41,8 +41,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		patches = json.loads(yamltext)
 		modFileList = self.settings['DefaultModifiers']
 		try:
-			tlv = int(self.TrainerLevelShiftBonus.text())
-			wlv = int(self.WildLevelShiftBonus.text())
+			tlv = 0
+			wlv = 0
 			self.Randomize.setEnabled(False)
 			self.Randomize.setText(_translate("MainWindow", "Randomizing"))
 			QtGui.QGuiApplication.processEvents()
@@ -57,9 +57,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			randomizedFileName = file
 			copyfile(self.romPath, randomizedFileName+'.gbc')
 			if('ProgressItems' in self.settings):
-				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = self.TrainerLevelScaling.isChecked(), adjustRegularWildLevels = self.RegularWildLevelScaling.isChecked(), adjustSpecialWildLevels = self.SpecialWildLevelScaling.isChecked(), trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'])
+				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'])
 			else:
-				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = self.TrainerLevelScaling.isChecked(), adjustRegularWildLevels = self.RegularWildLevelScaling.isChecked(), adjustSpecialWildLevels = self.SpecialWildLevelScaling.isChecked(), trainerLVBoost = tlv, wildLVBoost=wlv)
+				result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv)
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
 				outputSpoiler = {}
@@ -133,27 +133,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))
-		self.RegularWildLevelScaling.setChecked(settings['RegularWildLevelScalingDefault'])
-		self.SpecialWildLevelScaling.setChecked(settings['SpecialWildLevelScalingDefault'])
-
-		self.TrainerLevelScaling.setChecked(settings['TrainerLevelScalingDefault'])
-		if('TrainerLevelBonus' in settings):
-			self.TrainerLevelShiftBonus.setText(_translate("MainWindow", str(settings['TrainerLevelBonus'])))
-		if('WildLevelBonus' in settings):
-			self.WildLevelShiftBonus.setText(_translate("MainWindow", str(settings['WildLevelBonus'])))
 		self.CurrentGoal.setText(_translate("MainWindow", settings['Goal']))
 
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
 		if(fName != ''):
-			self.settings['TrainerLevelScalingDefault'] = self.TrainerLevelScaling.isChecked()
-			self.settings['RegularWildLevelScaling'] = self.RegularWildLevelScaling.isChecked()
-			self.settings['SpecialWildLevelScalingDefault'] = self.SpecialWildLevelScaling.isChecked()
 			self.settings['DefaultModifiers'] = []
 			for i in self.modList:
 				self.settings['DefaultModifiers'].append(i['fileName'])
-			self.settings['WildLevelBonus'] = self.WildLevelShiftBonus.text()
-			self.settings['TrainerLevelBonus'] = self.TrainerLevelShiftBonus.text()
 			with open(fName+'.yml', 'w') as f:
 				yaml.dump(self.settings, f, default_flow_style=False)
 

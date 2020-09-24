@@ -9,7 +9,6 @@ DefaultModifiers:
     - Modifiers/ForceEarlyFly.yml
     - Modifiers/DefinitelyNoEarlySabrina.yml
     - Modifiers/NoEarlyBasement.yml
-    - Modifiers/EnableTrainToKanto.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/SkipE4AndFightRed.yml
 BannedLocations:
