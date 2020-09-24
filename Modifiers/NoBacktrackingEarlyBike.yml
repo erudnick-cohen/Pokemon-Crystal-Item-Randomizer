@@ -99,8 +99,12 @@ Changes:
             - Bicycle
             - Surf
             - Flash
-
-
+    -
+        Location: Ruins of Alph Water Chamber
+        NewItemReqs:
+            - Bicycle
+            - Surf
+            - Strength
 
 
 
