@@ -36,4 +36,3 @@ Make a post about it under issues, but please indicate in the title of your post
 # Item Locations not randomized:
   * Tin Tower and the rainbow wing, because putting the rainbow wing into the randomizer would be overly sadistic as it could then be required to catch all three legendary dogs in order  to beat the game.
   * Ho-oh ruins of alph chamber: Due due to Ho-oh not being reliably obtainable.
-  * The metal coat given to the player on the SS Aqua, due to a weird situation where it has two separate instances of being given
