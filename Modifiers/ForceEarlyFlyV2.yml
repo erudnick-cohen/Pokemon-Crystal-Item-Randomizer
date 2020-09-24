@@ -1,0 +1,60 @@
+Name: Force early fly V2
+Description: "Ensures that the fly HM is obtainable and usable before the player is required to do any of the following things: 1. Take the SS Aqua, 2. Enter route 44, 3. Enter Diglett's Cave after waking up Snorlax. 4. Enter the gate to the Pokemon League (before Victory Road). 5. Fight Misty."
+Changes:
+    -
+        Location: SS Aqua via Olvine
+        NewItemReqs:
+            - S S Ticket
+            - Fly
+            - Squirtbottle
+        NewFlagReqs:
+            - Kanto Mode
+            - Storm Badge
+    -
+        Location: SS Aqua via Vermillion
+        NewItemReqs:
+            - S S Ticket
+            - Fly
+            - Pass
+            - Cut
+        NewFlagReqs:
+            - Kanto Mode
+            - Storm Badge
+            - Hive Badge
+    -
+        Location: Route 44
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Rocket Invasion
+            - Storm Badge
+    -
+        Location: Diglett's Cave
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Storm Badge
+    -
+        Location: League Gate via Route 26
+        NewFlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+            - Storm Badge
+        NewItemReqs:
+            - Surf
+            - Waterfall
+            - Fly
+    -
+        Location: Victory Road
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Storm Badge
+    -
+        Location: Cerulean Gym Trainers
+        NewItemReqs:
+            - Fly
+        NewFlagReqs:
+            - Storm Badge
+            - Date Ruined
