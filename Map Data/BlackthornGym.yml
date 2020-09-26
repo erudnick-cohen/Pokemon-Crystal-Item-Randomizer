@@ -18,6 +18,7 @@ Location:
             -
                 Name: Clair TM
                 FileName: BlackthornGym1F.asm
+                SecondaryFile: DragonsDenB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -38,6 +39,29 @@ Location:
                         writetext BlackthornGymClairText_DescribeTM24
                         promptbutton
                         sjump .GotTM24
+                SecondaryCode: |
+                    DragonsDenB1F_ClairScene:
+                        appear DRAGONSDENB1F_CLAIR
+                        opentext
+                        writetext ClairText_Wait
+                        pause 30
+                        closetext
+                        showemote EMOTE_SHOCK, PLAYER, 15
+                        turnobject PLAYER, LEFT
+                        playmusic MUSIC_CLAIR
+                        applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
+                        opentext
+                        writetext ClairText_GiveDragonbreathDragonDen
+                        promptbutton
+                        verbosegiveitem TM_DRAGONBREATH
+                        iffalse .BagFull
+                        setevent EVENT_GOT_TM24_DRAGONBREATH
+                        writetext ClairText_DescribeDragonbreathDragonDen
+                        promptbutton
+                        writetext ClairText_WhatsTheMatterDragonDen
+                        waitbutton
+                        closetext
+                        sjump .FinishClair
                 Text: |
                     NotifyReceiveDragonbreath:
                         text "<PLAYER> received"
