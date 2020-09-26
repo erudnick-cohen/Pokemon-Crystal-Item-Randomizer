@@ -1,7 +1,7 @@
 Location:
     -
         Name: Your House
-        FileName: PlayerHouse1F.asm
+        FileName: PlayersHouse1F.asm
         Type: Map
         HasPKMN: No
         WildTableList:
@@ -17,7 +17,7 @@ Location:
         Sublocations:
             -
                 Name: Pokegear Gift
-                FileName: PlayerHouse1F.asm
+                FileName: PlayersHouse1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:

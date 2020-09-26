@@ -130,6 +130,7 @@ Location:
                     LocationReqs: Route 30
                     FlagReqs:
                     ItemReqs:
+                    FlagsSet:
                     NormalItem: ENGINE_POKEDEX
                     ReachableReqs:
                     Code: |

@@ -4,7 +4,8 @@ Location:
         FileName: Route36.asm
         Type: Map
         HasPKMN: Yes
-        LocationReqs: 
+        LocationReqs:
+        WildTableList: 
             - Ecruteak City
         FlagReqs:
         ItemReqs:
@@ -26,6 +27,7 @@ Location:
                     - Elite Four
                 ItemReqs:
                     - Clear Bell
+                FlagReqs:
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -62,6 +64,7 @@ Location:
         FileName: Route36.asm
         Type: Map
         HasPKMN: No
+        WildTableList: 
         LocationReqs: 
             - Tin Tower
         FlagReqs:
