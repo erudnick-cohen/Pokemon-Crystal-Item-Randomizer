@@ -147,8 +147,8 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 				newmon = mon
 				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
 
-def DirectWriteItemLocations(locations,addressData,gameFile):
-	codeLookup = Items.makeRawItemCodeDict()
+def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
+	codeLookup = Items.makeRawItemCodeDict(progRod)
 	yamlfile = open("badgeData.yml")
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext)
@@ -174,9 +174,14 @@ def ApplyGamePatches(gameFile, patches):
 
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	romMap[addressData["address_range"]["begin"]+1] = location.badge.Code
+	if(not location.SecondaryCode is None):
+		addressData2 = labelData[labelCodeB2]
+		romMap[addressData2["address_range"]["begin"]+1] = location.badge.Code
+
 	#no longer borrowing this trick from goldenrules's key item randomizer
 	# nString = "It's\n"+location.badge.Name.upper()
 	# for i in range(0,len(nString)):
@@ -207,34 +212,94 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
-	nItemCode = itemScriptLookup(location.item)
+	nItemCodeData = itemScriptLookup(location.item)
+	nItemCode = nItemCodeData[0]
+	itemType = nItemCodeData[1]
+	if(itemType == 'Item'):
+		commandVerbose = 158
+		commandBall = 16
+		nextVal = nItemCode
+		endVal = 1
+	elif(itemType == 'Flag'):
+		commandVerbose = 175
+		commandBall = 17
+		nextVal = nItemCode
+		endVal = 1
+	elif(itemType == 'Rod'):
+		commandVerbose = 177
+		commandBall = 18
+		nextVal = 0
+		endVal = 0
+		nItemCode = 0
 	if location.IsBall:
+		romMap[addressData["address_range"]["begin"]-1] = commandBall
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 		if(not location.SecondaryCode is None):
 			addressData2 = labelData[labelCodeB2]
+			romMap[addressData2["address_range"]["begin"]-1] = commandBall
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
-		romMap[addressData["address_range"]["begin"]] = 158
+		romMap[addressData["address_range"]["begin"]] = commandVerbose
 		romMap[addressData["address_range"]["begin"]+1] = nItemCode
+		romMap[addressData["address_range"]["begin"]+2] = endVal
 		if(not location.SecondaryCode is None):
 			addressData2 = labelData[labelCodeB2]
-			romMap[addressData2["address_range"]["begin"]] = 158
+			romMap[addressData2["address_range"]["begin"]] = commandVerbose
 			romMap[addressData2["address_range"]["begin"]+1] = nItemCode
+			romMap[addressData2["address_range"]["begin"]+2] = endVal
+
 		
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
-	nItemCode = itemScriptLookup(location.item)
-	romMap[addressData["address_range"]["begin"]+6] = nItemCode
-	romMap[addressData["address_range"]["begin"]+12] = nItemCode
+	nItemCodeData = itemScriptLookup(location.item)
+	nItemCode = nItemCodeData[0]
+	itemType = nItemCodeData[1]
+	if(itemType == 'Item'):
+		commandVerbose = 158
+		commandBall = 16
+		nextVal = nItemCode
+		endVal = 5
+	elif(itemType == 'Flag'):
+		commandVerbose = 175
+		commandBall = 17
+		nextVal = nItemCode
+		endVal = 5
+	elif(itemType == 'Rod'):
+		commandVerbose = 177
+		commandBall = 18
+		nextVal = 0
+		endVal = 0
+		nItemCode = 0
+	if(itemType == 'Item'):
+		romMap[addressData["address_range"]["begin"]+6] = nItemCode
+		romMap[addressData["address_range"]["begin"]+12] = nItemCode
+	else:
+		romMap[addressData["address_range"]["begin"]+6] = 0
+		romMap[addressData["address_range"]["begin"]+11] = commandVerbose
+		romMap[addressData["address_range"]["begin"]+12] = nItemCode
+		romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
-	nItemCode = itemScriptLookup(location.item)
+	nItemCodeData = itemScriptLookup(location.item)
+	nItemCode = nItemCodeData[0]
+	itemType = nItemCodeData[1]
+	if(itemType == 'Item'):
+		command = 251
+		nextVal = nItemCode
+	elif(itemType == 'Flag'):
+		command = 253
+		nextVal = nItemCode
+	elif(itemType == 'Rod'):
+		command = 254
+		nextVal = 0
+		nItemCode = 0
+	romMap[addressData["address_range"]["begin"]+1] = command
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
@@ -277,6 +342,35 @@ def LabelBadgeLocation(location):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
+	
+	if(not location.SecondaryCode is None):
+		print("Secondary Labelling "+location.Name)
+		#open the relevant file and get it as a string
+		file = open("RandomizerRom/maps/"+location.SecondaryFile)
+		filecode = file.read()
+		newfile = filecode
+		#constuct new script that gives the new item
+		#replace is technically deprecated, but this is more readable
+		
+		#find the code we need to replace
+		coderegexstr = "("+re.escape(location.SecondaryCode.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
+		codeSearch = re.findall(coderegexstr,filecode)[0]
+		oldcode = codeSearch[0]
+		#print(codeSearch)
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
+		newCode = ""
+		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
+
+		newfile = filecode.replace(oldcode,newcode)
+		#write the new file into the files for the randomizer rom
+		newfilestream = open("RandomizerRom/maps/"+location.SecondaryFile,'w')
+		newfilestream.seek(0)
+		newfilestream.write(newfile)
+		newfilestream.truncate()
+		newfilestream.flush()
+		os.fsync(newfilestream.fileno())
+		newfilestream.close()
 
 def LabelWild():
 	#load up the trainer file
