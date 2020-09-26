@@ -1,0 +1,75 @@
+Name: Remove cut tree in Ilex
+Description: Removes the cut tree in Ilex forest, allowing the player to pass through Ilex forest without cut. The logic is updated accordingly to account for this.
+Changes:
+    -
+        Location: SS Aqua via Vermillion
+        NewItemReqs:
+            - S S Ticket
+            - Pass
+        NewFlagReqs:
+            - Kanto Mode
+    -
+        Location: Olivine City via SS Aqua
+        NewItemReqs:
+            - S S Ticket
+            - Pass
+        NewFlagReqs:
+            - Kanto Mode
+
+    -
+        Location: Route 39 via Olivine
+        NewItemReqs:
+            - S S Ticket
+            - Pass
+        NewFlagReqs:
+            - Kanto Mode
+    -
+        Location: Route 38 via Route 39
+        NewItemReqs:
+            - S S Ticket
+            - Pass
+        NewFlagReqs:
+            - Kanto Mode
+    -
+        Location: Ecruteak City via Route 38
+        NewItemReqs:
+            - S S Ticket
+            - Pass
+        NewFlagReqs:
+            - Kanto Mode
+    -
+        Location: Goldenrod City via Route 34
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok
+    -
+        Location: Route 34 via Ilex
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok
+    -
+        Location: Ilex Forest Back via Azalea
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok
+    -
+        Location: Route 35 via Goldenrod
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok
+    -
+        Location: National Park via Route 35
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok
+    -
+        Location: Route 36 via Goldenrod
+        NewItemReqs:
+            - Ok
+        NewFlagReqs:
+            - Ok

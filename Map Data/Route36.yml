@@ -24,9 +24,7 @@ Location:
         LocationReqs: 
             - National Park via Route 35
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

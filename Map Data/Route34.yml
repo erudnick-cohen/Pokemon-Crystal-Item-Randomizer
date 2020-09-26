@@ -7,9 +7,7 @@ Location:
         WildTableList: 
         LocationReqs: Route 34 via Ilex
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

@@ -58,9 +58,12 @@ Location:
         LocationReqs: 
             - SS Aqua Entrance
         FlagReqs:
+            - Hive Badge
+            - Kanto Mode
         ItemReqs:
             - S S Ticket
             - Pass
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

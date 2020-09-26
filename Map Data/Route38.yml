@@ -40,11 +40,9 @@ Location:
         LocationReqs: 
             - Route 38 via Route 39
         FlagReqs:
-            - Hive Badge
         ItemReqs:
             - Pass
             - S S Ticket 
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -60,7 +58,12 @@ Location:
         LocationReqs: 
             - Route 39 via Olivine
         FlagReqs:
+            - Hive Badge
+            - Kanto Mode
         ItemReqs:
+            - Pass
+            - S S Ticket 
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

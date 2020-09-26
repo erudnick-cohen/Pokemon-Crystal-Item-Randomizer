@@ -8,6 +8,7 @@ Location:
         LocationReqs: Route 39 via Route 38
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -23,6 +24,7 @@ Location:
         LocationReqs: Route 38 via Ecruteak
         FlagReqs:
         ItemReqs:
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code:
@@ -38,6 +40,8 @@ Location:
         LocationReqs: Route 39 via Olivine
         FlagReqs:
         ItemReqs:
+            - Pass
+            - S S Ticket 
         FlagsSet:
         ReachableReqs:
         Code:
@@ -52,7 +56,12 @@ Location:
         WildTableList:
         LocationReqs: Olivine City Entrance
         FlagReqs:
+            - Hive Badge
+            - Kanto Mode
         ItemReqs:
+            - Pass
+            - S S Ticket 
+            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

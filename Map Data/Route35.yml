@@ -7,9 +7,7 @@ Location:
         WildTableList: 
         LocationReqs: Route 35 via Goldenrod
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

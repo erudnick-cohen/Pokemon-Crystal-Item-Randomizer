@@ -45,11 +45,9 @@ Location:
             - SS Aqua via Vermillion
         FlagReqs:
             - Kanto Mode
-            - Hive Badge
         ItemReqs:
             - S S Ticket
             - Pass
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:

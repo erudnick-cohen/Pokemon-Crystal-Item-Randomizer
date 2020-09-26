@@ -5,7 +5,23 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 34 Entrance
+        LocationReqs: Ilex Forest Back via Route 34
+        FlagReqs:
+        ItemReqs:
+            - Squirtbottle
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Back via Route 34
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 34 via Goldenrod
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -17,6 +33,21 @@ Location:
         Sublocations:
     -
         Name: Ilex Forest Back Entrance
+        FileName: IlexForest.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ilex Forest Back via Azalea
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Ilex Forest Back via Azalea
         FileName: IlexForest.asm
         Type: Map
         HasPKMN: No

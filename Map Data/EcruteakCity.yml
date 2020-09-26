@@ -38,13 +38,11 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs: 
-            - Route 38 via Route 39
+            - Ecruteak City via Route 38
         FlagReqs:
-            - Hive Badge
         ItemReqs:
             - Pass
             - S S Ticket
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -61,6 +59,7 @@ Location:
             - Route 38 via Route 39
         FlagReqs:
             - Hive Badge
+            - Kanto Mode
         ItemReqs:
             - Pass
             - S S Ticket

@@ -38,9 +38,7 @@ Location:
         WildTableList:
         LocationReqs: Vermillion via SS Aqua
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
             - Squirtbottle
             - S S Ticket
         FlagsSet:
@@ -57,9 +55,7 @@ Location:
         WildTableList:
         LocationReqs: SS Aqua Entrance
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
             - Squirtbottle
             - S S Ticket
         FlagsSet:
