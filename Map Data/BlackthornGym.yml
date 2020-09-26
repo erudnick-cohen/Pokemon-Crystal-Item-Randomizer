@@ -53,7 +53,7 @@ Location:
                         opentext
                         writetext ClairText_GiveDragonbreathDragonDen
                         promptbutton
-                        verbosegiveitem TM_DRAGONBREATH
+                        ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM24_DRAGONBREATH
                         writetext ClairText_DescribeDragonbreathDragonDen
