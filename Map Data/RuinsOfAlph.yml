@@ -306,7 +306,7 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
-                Name: Ruins of Alph Ho-Oh Chamber
+                Name: Ruins of Alph Ho Oh Chamber
                 FileName: 
                 Type: Map
                 HasPKMN: No
@@ -326,12 +326,12 @@ Location:
                 TrainerList: 
                 Sublocations:
                     -
-                        Name: Ruins of Alph Ho-Oh Chamber 1
+                        Name: Ruins of Alph Ho Oh Chamber 1
                         FileName: RuinsOfAlphHoOhItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        LocationReqs: Ruins of Alph Ho Oh Chamber
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -345,12 +345,12 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
-                        Name: Ruins of Alph Ho-Oh Chamber 2
+                        Name: Ruins of Alph Ho Oh Chamber 2
                         FileName: RuinsOfAlphHoOhItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        LocationReqs: Ruins of Alph Ho Oh Chamber
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -364,12 +364,12 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
-                        Name: Ruins of Alph Ho-Oh Chamber 3
+                        Name: Ruins of Alph Ho Oh Chamber 3
                         FileName: RuinsOfAlphHoOhItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        LocationReqs: Ruins of Alph Ho Oh Chamber
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -383,12 +383,12 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
-                        Name: Ruins of Alph Ho-Oh Chamber 4
+                        Name: Ruins of Alph Ho Oh Chamber 4
                         FileName: RuinsOfAlphHoOhItemRoom.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        LocationReqs: Ruins of Alph Ho Oh Chamber
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
