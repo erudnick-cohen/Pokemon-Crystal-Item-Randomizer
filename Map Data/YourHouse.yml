@@ -1,0 +1,44 @@
+Location:
+    -
+        Name: Your House
+        FileName: PlayerHouse1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - NEW_BARK_TOWN
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+            -
+                Name: Pokegear Gift
+                FileName: PlayerHouse1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Your House
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList: 
+                Code: |
+                    MeetMomScript:
+                        opentext
+                        writetext ElmsLookingForYouText
+                        promptbutton
+                        ITEMLINE
+                        verbosesetflag ENGINE_PHONE_CARD
+                        addcellnum PHONE_MOM
+                        setscene SCENE_FINISHED
+                        setevent EVENT_PLAYERS_HOUSE_MOM_1
+                        clearevent EVENT_PLAYERS_HOUSE_MOM_2
+                        writetext MomGivesPokegearText
+                        promptbutton
+                        special SetDayOfWeek
