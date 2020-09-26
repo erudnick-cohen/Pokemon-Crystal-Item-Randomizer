@@ -5,9 +5,10 @@ Location:
         Type: Map
         HasPKMN: Yes
         LocationReqs:
-        WildTableList: 
             - Ecruteak City
+        WildTableList: 
         FlagReqs:
+            - Impossible
         ItemReqs:
             - Clear Bell
         FlagsSet:
@@ -99,7 +100,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Tin Tower Full Heal
+                Name: Tin Tower Ultra Ball
                 FileName: TinTower4F.asm
                 Type: Item
                 HasPKMN: No
@@ -258,7 +259,7 @@ Location:
                     - Rainbow Wing
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: MAX_ELIXIR
+                NormalItem: MAX_ELIXER
                 IsBall: Yes
                 Code: |
                     TinTower8FMaxElixer:
