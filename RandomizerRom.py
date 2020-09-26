@@ -29,6 +29,7 @@ def ResetRomForLabelling():
 	for root, dir, files  in os.walk("Files with manual labels/engine"):
 		for file in files:
 			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
+	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")
