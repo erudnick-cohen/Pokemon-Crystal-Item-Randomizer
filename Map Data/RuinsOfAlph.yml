@@ -305,3 +305,99 @@ Location:
                                 ITEMLINE
                         TrainerList: 
                         Sublocations:
+            -
+                Name: Ruins of Alph Ho-Oh Chamber
+                FileName: 
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Union Cave
+                    - VS Ho-Oh
+                FlagReqs: 
+                    - Fog Badge
+                ItemReqs: 
+                    - Surf
+                FlagsSet:
+                NormalItem: 
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+                    -
+                        Name: Ruins of Alph Ho-Oh Chamber 1
+                        FileName: RuinsOfAlphHoOhItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: GOLD_BERRY
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphHoOhItemRoomGoldBerry:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Ho-Oh Chamber 2
+                        FileName: RuinsOfAlphHoOhItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: MYSTERYBERRY
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphHoOhItemRoomMysteryberry:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Ho-Oh Chamber 3
+                        FileName: RuinsOfAlphHoOhItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: REVIVAL_HERB
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphHoOhItemRoomRevivalHerb:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Ho-Oh Chamber 4
+                        FileName: RuinsOfAlphHoOhItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Ruins of Alph Ho-Oh Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: CHARCOAL
+                        IsBall: Yes
+                        ReachableReqs:
+                        Text:
+                        Code: |
+                            RuinsOfAlphHoOhItemRoomCharcoal:
+                                ITEMLINE
+                        TrainerList: 
+                        Sublocations:
