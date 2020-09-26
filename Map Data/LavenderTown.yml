@@ -10,9 +10,35 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
-            - Expansion Card
         ReachableReqs:
         Code:
         Text:
         TrainerList: 
         Sublocations:
+        -
+            Name: Expansion Card Gift
+            FileName: LavRadioTower1F.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList: 
+            LocationReqs:
+                - Power Plant Activated
+                - Lavender Town
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code: |
+                .ReturnedMachinePart:
+                    writetext LavRadioTower1FGentlemanText_ReturnedMachinePart
+                    promptbutton
+                    ITEMLINE
+                    setevent EVENT_EXPN_CARD_RECEIVED
+                .GotExpnCard:
+                    writetext LavRadioTower1FGentlemanText_GotExpnCard
+                    waitbutton
+                    closetext
+                    end
+            Text:
+            TrainerList: 
+            Sublocations:
