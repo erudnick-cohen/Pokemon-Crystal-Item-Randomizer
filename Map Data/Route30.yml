@@ -129,9 +129,10 @@ Location:
                     WildTableList:
                     LocationReqs: Route 30
                     FlagReqs:
+                        - Impossible
                     ItemReqs:
                     FlagsSet:
-                    NormalItem: ENGINE_POKEDEX
+                    NormalItem:
                     ReachableReqs:
                     Code: |
                         MrPokemonsHouse_OakScript:
