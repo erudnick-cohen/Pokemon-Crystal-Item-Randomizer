@@ -247,7 +247,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Tin Tower Max Revive
+                Name: Tin Tower Max Elixer
                 FileName: TinTower8F.asm
                 Type: Item
                 HasPKMN: No
@@ -314,7 +314,7 @@ Location:
                 FileName: TinTower9F.asm
                 Type: Map
                 HasPKMN: Yes
-                WildTableList: 
+                WildTableList:
                 LocationReqs:
                     - Climb Tin Tower
                     - Elite Four
@@ -324,11 +324,7 @@ Location:
                     - Rainbow Wing
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: HP_UP
-                IsBall: Yes
-                Code: |
-                    TinTower9FHPUp:
-                        ITEMLINE
+                Code:
                 Text:
                 TrainerList: 
                 Sublocations:
