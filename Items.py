@@ -3,7 +3,7 @@ import csv
 
 def makeItemCodeDict():
 	#hardcoding key item lookups for now, pass as parameter in future
-	keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY'}
+	keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXP_CARD'}
 	itemCodeDict = {}
 	
 	#progress items
@@ -56,14 +56,20 @@ def makeRawItemCodeDict():
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
-			itemCodeDict[i["Name"]] = i["Output"]	
+			itemCodeDict[i["Name"]] = i["Output"]
 	rawTable = {}
 	with open('ItemValues.csv', newline='') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
 			print(i)
 			if(len(i)>0):
-				rawTable[i[0]] = int(i[1])
+				rawTable[i[0]] = (int(i[1]), 'Item')
+	with open('FlagValues.csv', newline='') as csvfile:
+		reader = csv.reader(csvfile)
+		for i in reader:
+			print(i)
+			if(len(i)>0):
+				rawTable[i[0]] = (int(i[1]), 'Flag')
 			
 	def lookupItemCode(item):
 		if item not in itemCodeDict:
