@@ -174,7 +174,7 @@ def ApplyGamePatches(gameFile, patches):
 
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
-	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	romMap[addressData["address_range"]["begin"]+1] = location.badge.Code

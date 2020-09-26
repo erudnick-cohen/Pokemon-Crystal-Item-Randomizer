@@ -25,6 +25,7 @@ Location:
                 - Power Plant Activated
                 - Lavender Town
             FlagReqs:
+                - Impossible
             ItemReqs:
             FlagsSet:
             ReachableReqs:
