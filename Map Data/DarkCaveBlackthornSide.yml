@@ -46,8 +46,10 @@ Location:
                 LocationReqs: Dark Cave Blackthorn
                 FlagReqs:
                     - Zephyr Badge
+                    - Fog Badge
                 ItemReqs:
                     - Flash
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_SNORE
@@ -68,8 +70,10 @@ Location:
                 LocationReqs: Dark Cave Blackthorn
                 FlagReqs:
                     - Zephyr Badge
+                    - Fog Badge
                 ItemReqs:
                     - Flash
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: BLACKGLASSES
