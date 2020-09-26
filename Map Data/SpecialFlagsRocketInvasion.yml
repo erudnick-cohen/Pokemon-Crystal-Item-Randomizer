@@ -149,11 +149,9 @@ Location:
         FlagReqs:
             - Assumed Fill
             - Fog Badge
-            - Hive Badge
             - Plain Badge
         ItemReqs:
             - Surf
-            - Cut
             - Squirtbottle
             - Strength
             - Secret Potion
