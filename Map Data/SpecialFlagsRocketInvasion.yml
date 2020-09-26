@@ -124,13 +124,11 @@ Location:
         FlagReqs:
             - Assumed Fill
             - Hive Badge
-            - Zephyr Badge
             - Fog Badge
             - Kanto Mode
         ItemReqs:
             - Cut
             - Pass
-            - Flash
             - Surf
         FlagsSet:
         ReachableReqs:
