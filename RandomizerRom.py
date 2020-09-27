@@ -211,7 +211,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
-	#print('Writing '+labelCodeB)
+	print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	addressDataNPC = labelData[labelCodeBNPC]
 
@@ -221,18 +221,15 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	if(itemType == 'Item'):
 		commandVerbose = 158
 		commandBall = 1
-		nextVal = nItemCode
 		endVal = 1
 	elif(itemType == 'Flag'):
 		commandVerbose = 175
 		commandBall = 3
-		nextVal = nItemCode
 		endVal = 1
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		commandBall = 4
-		nextVal = 0
-		endVal = 0
+		endVal = 1
 		nItemCode = 0
 	if location.IsBall:
 		romMap[addressDataNPC["address_range"]["begin"]+7] = commandBall
@@ -278,7 +275,7 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		romMap[addressData["address_range"]["begin"]+6] = nItemCode
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
 	else:
-		romMap[addressData["address_range"]["begin"]+6] = 0
+		romMap[addressData["address_range"]["begin"]+6] = 168
 		romMap[addressData["address_range"]["begin"]+11] = commandVerbose
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
 		romMap[addressData["address_range"]["begin"]+13] = endVal
