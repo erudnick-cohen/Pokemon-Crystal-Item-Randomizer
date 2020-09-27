@@ -1,7 +1,5 @@
 Name: Randomize Pokegear and Pokegear Cards
-Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized. Do not turn this setting on 
-NewGamePatches:
-    - 'Patches/TinTowerActive.json'
+Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized.
 AddedItems:
     - Pokegear
     - Radio Card
