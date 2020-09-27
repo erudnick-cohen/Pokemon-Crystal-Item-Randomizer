@@ -213,31 +213,34 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
+	addressDataNPC = labelData[labelCodeBNPC]
+
 	nItemCodeData = itemScriptLookup(location.item)
 	nItemCode = nItemCodeData[0]
 	itemType = nItemCodeData[1]
 	if(itemType == 'Item'):
 		commandVerbose = 158
-		commandBall = 16
+		commandBall = 1
 		nextVal = nItemCode
 		endVal = 1
 	elif(itemType == 'Flag'):
 		commandVerbose = 175
-		commandBall = 17
+		commandBall = 3
 		nextVal = nItemCode
 		endVal = 1
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
-		commandBall = 18
+		commandBall = 4
 		nextVal = 0
 		endVal = 0
 		nItemCode = 0
 	if location.IsBall:
-		#romMap[addressData["address_range"]["begin"]-1] = commandBall
+		romMap[addressDataNPC["address_range"]["begin"]+7] = commandBall
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 		if(not location.SecondaryCode is None):
 			addressData2 = labelData[labelCodeB2]
-			#romMap[addressData2["address_range"]["begin"]-1] = commandBall
+			addressDataNPC2 = labelData[labelCodeBNPC2]
+			romMap[addressDataNPC2["address_range"]["begin"]+7] = commandBall
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
@@ -260,17 +263,14 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	itemType = nItemCodeData[1]
 	if(itemType == 'Item'):
 		commandVerbose = 158
-		commandBall = 16
 		nextVal = nItemCode
 		endVal = 5
 	elif(itemType == 'Flag'):
 		commandVerbose = 175
-		commandBall = 17
 		nextVal = nItemCode
 		endVal = 5
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
-		commandBall = 18
 		nextVal = 0
 		endVal = 0
 		nItemCode = 0
@@ -285,22 +285,25 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
+	addressDataNPC = labelData[labelCodeBNPC]
 	nItemCodeData = itemScriptLookup(location.item)
 	nItemCode = nItemCodeData[0]
 	itemType = nItemCodeData[1]
 	if(itemType == 'Item'):
-		command = 251
+		command = 7
 		nextVal = nItemCode
 	elif(itemType == 'Flag'):
-		command = 253
+		command = 9
 		nextVal = nItemCode
 	elif(itemType == 'Rod'):
-		command = 254
+		command = 10
 		nextVal = 0
 		nItemCode = 0
-	romMap[addressData["address_range"]["begin"]+1] = command
+	romMap[addressDataNPC["address_range"]["begin"]+2] = command
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
