@@ -13,12 +13,21 @@ import traceback
 def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly']):
 
 	changeListDict = defaultdict(lambda: [])
+	extraTrash = []
 	for i in modifiers:
+		#print(i)
 		if 'FlagsSet' in i:
 			flags.extend(i['FlagsSet'])
 		if 'Changes' in i:
 			for j in i['Changes']:
 				changeListDict[j['Location']].append(j) 
+		if 'AddedItems' in i:
+			for j in i['AddedItems']:
+				if j not in requiredItems:
+					requiredItems.append(j)
+			#print(requiredItems)
+		if 'AddedTrash' in i:
+			extraTrash.extend(i['AddedTrash'])
 		if 'NewGamePatches' in i:
 			for j in i['NewGamePatches']:
 				pfile = open(j)
@@ -99,9 +108,13 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	while goal not in result[0]:
 		try:
 			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict)
-			trashItems = res[1]
-			LocationList = res[0]
 			progressItems = copy.copy(requiredItems)
+			#hardcoding key item lookups for now, pass as parameter in future
+			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
+			trashItems = [x for x in res[1] if not x in keyItemMap.values()] #ensure progress items don't sneak into trash list
+			trashItems.extend(extraTrash)
+			LocationList = res[0]
+			print(progressItems)
 			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags)
 			if goal not in result[0]:
 				print('bad run, retrying')
@@ -132,7 +145,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	maxDist = max(result[2].values())
 	f = open(romPath,'r+b')
 	romMap = mmap.mmap(f.fileno(),0)
-	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap)
+	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap,'progressiveRods' in flags)
 	if adjustRegularWildLevels:
 		RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustSpecialWildLevels:
