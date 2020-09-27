@@ -23,6 +23,7 @@ Location:
                 WildTableList:
                 LocationReqs: Your House
                 FlagReqs:
+                    - Impossible
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
