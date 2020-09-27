@@ -160,7 +160,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 				if i.Name == "Elm Aide Pokeballs":
 					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Dragons Den Dragon Fang":
-					#this just happens to work, its in the same byte offset
+					#this just happens to work, its in the same byte offset (its also now just a regular location...)
 					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Hidden Machine Part":
 					WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
@@ -232,11 +232,11 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		endVal = 0
 		nItemCode = 0
 	if location.IsBall:
-		romMap[addressData["address_range"]["begin"]-1] = commandBall
+		#romMap[addressData["address_range"]["begin"]-1] = commandBall
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 		if(not location.SecondaryCode is None):
 			addressData2 = labelData[labelCodeB2]
-			romMap[addressData2["address_range"]["begin"]-1] = commandBall
+			#romMap[addressData2["address_range"]["begin"]-1] = commandBall
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
@@ -551,16 +551,28 @@ def LabelItemLocation(location):
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
+	
+	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
+	if location.IsBall:
+		#find the code on the line BEFORE the one we need to modify
+		#fortunately, we have these lines already labeled, we need them to label something else
+		commandregexstr = "(\w+):"
+		commandSearch = re.findall(commandregexstr,location.Code)[0]
+		npcRegex = ("[^\n]+")+commandSearch+",[^\n]+\n"
+		npcSearch = re.findall(npcRegex,filecode)[0]
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
+	labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
+	labelCodeANPC = ".ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
 	newCode = ""
 	if not location.IsSpecial:
 		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 		#switch spaces to tabs.....
 		newcode = newcode.replace("    ","\t")
-
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
+		if(location.IsBall):
+			newfile = newfile.replace(npcSearch,labelCodeBNPC+npcSearch+labelCodeANPC)
 	else:
 		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
