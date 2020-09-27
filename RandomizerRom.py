@@ -230,7 +230,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		commandVerbose = 177
 		commandBall = 4
 		endVal = 1
-		nItemCode = 0
+		nItemCode = 1
 	if location.IsBall:
 		romMap[addressDataNPC["address_range"]["begin"]+7] = commandBall
 		romMap[addressData["address_range"]["begin"]] = nItemCode
@@ -282,7 +282,7 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
