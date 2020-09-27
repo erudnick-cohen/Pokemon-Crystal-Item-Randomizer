@@ -1,5 +1,7 @@
 Name: Remove cut tree in Ilex
 Description: Removes the cut tree in Ilex forest, allowing the player to pass through Ilex forest without cut. The logic is updated accordingly to account for this.
+NewGamePatches:
+    - 'Patches/RemoveCutTree.json'
 Changes:
     -
         Location: SS Aqua via Vermillion
