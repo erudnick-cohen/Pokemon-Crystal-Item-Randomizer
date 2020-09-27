@@ -209,7 +209,8 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
-
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCodeData = itemScriptLookup(location.item)
@@ -618,8 +619,18 @@ def LabelItemLocation(location):
 		else:
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
 			oldcode = re.findall(coderegexstr,filecode)[0]
-		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
-		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
+		if location.IsBall:
+			#find the code on the line BEFORE the one we need to modify
+			#fortunately, we have these lines already labeled, we need them to label something else
+			commandregexstr = "(\w+):"
+			commandSearch = re.findall(commandregexstr,location.Code)[0]
+			npcRegex = ("[^\n]+")+commandSearch+",[^\n]+\n"
+			npcSearch = re.findall(npcRegex,filecode)[0]
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
+		labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
+		labelCodeANPC = ".ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
 		newCode = ""
 		if not location.IsSpecial:
 			newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
@@ -628,6 +639,8 @@ def LabelItemLocation(location):
 
 		if not location.IsSpecial:
 			newfile = filecode.replace(oldcode,newcode)
+			if(location.IsBall):
+				newfile = newfile.replace(npcSearch,labelCodeBNPC+npcSearch+labelCodeANPC)
 		else:
 			labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
 			labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
