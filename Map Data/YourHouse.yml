@@ -25,6 +25,7 @@ Location:
                 FlagReqs:
                     - Impossible
                 ItemReqs:
+                    - Mystery Egg
                 FlagsSet:
                 ReachableReqs:
                 Text:
