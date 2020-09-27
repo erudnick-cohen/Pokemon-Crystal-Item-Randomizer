@@ -342,6 +342,7 @@ Location:
                 WildTableList: 
                 LocationReqs: Goldenrod City
                 FlagReqs:
+                    - Impossible
                 ItemReqs:
                 FlagsSet: 
                 ReachableReqs:
