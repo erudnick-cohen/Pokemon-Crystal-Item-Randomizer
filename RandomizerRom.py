@@ -624,13 +624,13 @@ def LabelItemLocation(location):
 			#find the code on the line BEFORE the one we need to modify
 			#fortunately, we have these lines already labeled, we need them to label something else
 			commandregexstr = "(\w+):"
-			commandSearch = re.findall(commandregexstr,location.Code)[0]
+			commandSearch = re.findall(commandregexstr,location.SecondaryCode)[0]
 			npcRegex = ("[^\n]+")+commandSearch+",[^\n]+\n"
 			npcSearch = re.findall(npcRegex,filecode)[0]
-		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
-		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
-		labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
-		labelCodeANPC = ".ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
+		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+		labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB::\n'
+		labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB::\n'
+		labelCodeANPC = ".ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB::\n'
 		newCode = ""
 		if not location.IsSpecial:
 			newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
