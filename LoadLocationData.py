@@ -2,9 +2,11 @@ import os
 import Location
 import Gym
 import yaml
+from collections import defaultdict
 
 def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}):
 	LocationList = []
+	LocCountDict = defaultdict(lambda: 0)
 	print("Creating Locations")
 	for root, dir, files  in os.walk(path+"//Map Data"):
 		for file in files:
@@ -19,6 +21,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict)
 					LocationList.append(nLoc)
+					LocCountDict[nLoc.Name] = LocCountDict[nLoc.Name]+1
 				except Exception as inst:
 					print("-----------")
 					print("Failure in "+location["Name"])
@@ -44,6 +47,9 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	trashList = []
 	for i in LocationList:
 		trashList.extend(i.getTrashItemList())
+		
+	print('NameCounts')
+	print(LocCountDict)
 	return (LocationList,trashList)
 	
 def FlattenLocationTree(locations):
