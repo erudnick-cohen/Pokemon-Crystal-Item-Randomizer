@@ -10,7 +10,6 @@ Location:
             - Power Plant
         FlagReqs:
             - Kanto Power Restored
-            - Expansion Card
             - Surf
         ItemReqs:
         FlagsSet:
