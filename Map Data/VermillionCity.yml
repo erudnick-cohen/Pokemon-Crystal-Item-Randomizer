@@ -53,7 +53,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: SS Aqua Entrance
+        LocationReqs: SS Aqua via Olvine
         FlagReqs:
         ItemReqs:
             - Squirtbottle
