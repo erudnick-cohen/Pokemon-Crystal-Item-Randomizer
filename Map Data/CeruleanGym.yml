@@ -32,8 +32,7 @@ Location:
                 Code: |
                     CeruleanGymHiddenMachinePart:
                         ITEMLINE
-                SecondaryCode: |
-                    bg_event  3,  8, BGEVENT_ITEM, CeruleanGymHiddenMachinePart
+                SecondaryCode: '    bg_event  3,  8, BGEVENT_ITEM, CeruleanGymHiddenMachinePart'
 
                 Text:
                 TrainerList:
