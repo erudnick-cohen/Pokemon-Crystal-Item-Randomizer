@@ -17,12 +17,79 @@ Location:
         Sublocations:
             -
                 Name: Mt. Silver Unlock
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
+                    - Mt. Silver Unlock Entrance
+                    - Pallet Town
+                FlagReqs:
+                    - All Badges
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock Entrance
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
+                    - Mt. Silver Unlock A
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock Entrance
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
+                    - Mt. Silver Unlock B
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock Entrance
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
+                    - Mt. Silver Unlock C
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock A
                 FileName: PalletTowns.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
                     - Pallet Town
+                    - Woke Snorlax
                 FlagReqs:
                     - All Badges
                     - Zephyr Badge
@@ -39,7 +106,6 @@ Location:
                     - Card Key
                     - Squirtbottle
                     - Pass
-                    - Machine Part
                 FlagsSet:
                 ReachableReqs:
                 Code:
@@ -47,13 +113,14 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Unlock
+                Name: Mt. Silver Unlock B
                 FileName: PalletTowns.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
                     - Pallet Town
+                    - Woke Snorlax
                 FlagReqs:
                     - All Badges
                     - Zephyr Badge
@@ -70,7 +137,6 @@ Location:
                     - Card Key
                     - Squirtbottle
                     - S S Ticket
-                    - Machine Part
                 FlagsSet:
                 ReachableReqs:
                 Code:
@@ -78,13 +144,14 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Unlock
+                Name: Mt. Silver Unlock C
                 FileName: PalletTowns.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
                     - Pallet Town
+                    - Woke Snorlax
                 FlagReqs:
                     - All Badges
                     - Zephyr Badge
@@ -99,7 +166,6 @@ Location:
                     - Strength
                     - Secret Potion
                     - Card Key
-                    - Machine Part
                     - Pass
                     - S S Ticket
                 FlagsSet:
