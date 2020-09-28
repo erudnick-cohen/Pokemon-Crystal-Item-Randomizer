@@ -209,11 +209,9 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
-	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+
 	print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
-	addressDataNPC = labelData[labelCodeBNPC]
 
 	nItemCodeData = itemScriptLookup(location.item)
 	nItemCode = nItemCodeData[0]
@@ -232,12 +230,41 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		endVal = 1
 		nItemCode = 1
 	if location.IsBall:
-		romMap[addressDataNPC["address_range"]["begin"]+7] = commandBall
+		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
+		addressDataNPC = labelData[labelCodeBNPC]
+		#need to extract the nibble out
+		print(list(map(int, addressDataNPC["integer_values"].split(' '))))
+		print(addressDataNPC["integer_values"].split(' '))
+		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
+		#form full binary expression
+		fullByte = (10-len(combobyte))*'0'+combobyte[2:]
+		#split it into two nibbles
+		nb1 = fullByte[0:4]
+		nb2 = fullByte[4:8]
+		#now generate the correct nibble for the object type
+		nibbleBall = bin(commandBall)
+		print(nibbleBall)
+		fullNibble = nb1+((6-len(combobyte))*'0'+nibbleBall[2:])
+		print(fullNibble)
+		newBallByte = int(fullNibble,2)
+		print(newBallByte)
+		romMap[addressDataNPC["address_range"]["begin"]+7] = newBallByte
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 		if(not location.SecondaryCode is None):
 			addressData2 = labelData[labelCodeB2]
 			addressDataNPC2 = labelData[labelCodeBNPC2]
-			romMap[addressDataNPC2["address_range"]["begin"]+7] = commandBall
+			combobyte = bin(list(map(int, addressDataNPC2["integer_values"].split(' ')))[7])
+			#form full binary expression
+			fullByte = (10-len(combobyte))*'0'+combobyte[2:]
+			#split it into two nibbles
+			nb1 = fullByte[0:4]
+			nb2 = fullByte[4:8]
+			#now generate the correct nibble for the object type
+			nibbleBall = bin(commandBall)
+			fullNibble = nb1+((6-len(combobyte))*'0'+nibbleBall[2:])
+			newBallByte = int(fullNibble,2)
+			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
