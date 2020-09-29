@@ -63,11 +63,9 @@ Location:
             - Vermillion via Route 6
         FlagReqs:
             - Kanto Mode
-            - Hive Badge
         ItemReqs:
             - S S Ticket
             - Pass
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
