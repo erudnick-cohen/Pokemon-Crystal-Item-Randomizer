@@ -55,7 +55,9 @@ Location:
         WildTableList:
         LocationReqs: SS Aqua via Olvine
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
             - Squirtbottle
             - S S Ticket
         FlagsSet:

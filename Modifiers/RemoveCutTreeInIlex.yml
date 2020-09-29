@@ -4,7 +4,7 @@ NewGamePatches:
     - 'Patches/RemoveCutTree.json'
 Changes:
     -
-        Location: SS Aqua via Vermillion
+        Location: Vermillion City via SS Aqua
         NewItemReqs:
             - S S Ticket
             - Pass

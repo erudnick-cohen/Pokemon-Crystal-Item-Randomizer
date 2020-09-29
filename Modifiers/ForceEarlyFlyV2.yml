@@ -16,11 +16,9 @@ Changes:
             - S S Ticket
             - Fly
             - Pass
-            - Cut
         NewFlagReqs:
             - Kanto Mode
             - Storm Badge
-            - Hive Badge
     -
         Location: Route 44
         NewItemReqs:
