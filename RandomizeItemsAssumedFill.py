@@ -4,7 +4,7 @@ import random
 import copy
 import time
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge', 'Storm Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode']):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge', 'Storm Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
 	inputFlags.append('Ok')
 	#build progress set
@@ -29,7 +29,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	random.shuffle(trashItems)
 	#build spoiler
 	spoiler = {}
-	print('Building mappings')
+	#print('Building mappings')
 	#note: these are the randomizer only flags, they do not map to actual logic defined in the config files
 	#flagList = ['Rocket Invasion', '8 Badges', 'All Badges']
 	flagList = ['Assumed Fill', 'All Badges', 'Ok']
@@ -48,14 +48,28 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			flagList.append(j)
 		if i.Type == 'Item':
 			itemCount = itemCount+1
-	print('Total number of items: '+str(itemCount))
+	#print('Total number of items: '+str(itemCount))
 	#extract all core items out and put them in shuffled order at the start (which is the BACK) of the item list
 	#this is done because these items unlock way too many item locations, so we want to maximize their legal locations
 	for i in coreProgress:
 		progressList.remove(i)
 	progressList = progressList+coreProgress
-	print(progressList)
+	#print(progressList)
 	
+	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
+	#this works by putting the plando placements to be tried first
+	for i in plandoPlacements:
+		for j in range(0, len(locList)):
+			if(locList[j].Name == i):
+				locInd = j
+				#print(j)
+		#print(locList[0].Name)
+		locList.insert(0, locList.pop(locInd))
+		#print(locList[0].Name)
+		progressList.remove(plandoPlacements[i])
+		progressList.insert(len(progressList),plandoPlacements[i])
+	#print(plandoPlacements)
+	#print(progressList)
 	#keep copy of initial requirements dictionary to check tautologies
 	initReqDict = copy.copy(requirementsDict)
 	usedFlagsList = list(set(allReqsList).intersection(allPossibleFlags))
@@ -64,7 +78,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	while(len(progressList)>0 and valid):
 		#pick and item to place
 		toAllocate = progressList.pop()
-		print('Allocating '+toAllocate)
+		#print('Allocating '+toAllocate)
 		if toAllocate in progressItems:
 			allocationType = 'Item'
 		else:
@@ -76,10 +90,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		while not valid and iter < len(locList) and retryPasses > 0:
 			legal = True
 			#is it the right type of location?
-			print(locList[iter].Name)
-			print(locList[iter].Type)
+			#print(locList[iter].Name)
+			#print(locList[iter].Type)
 			if(locList[iter].Type == allocationType):
-				print('Trying '+locList[iter].Name)
+				#print('Trying '+locList[iter].Name)
 				#do any of its dependencies depend on this item/badge?
 				randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
 				allDepsList = copy.copy(requirementsDict[locList[iter].Name][randOpt])
@@ -92,7 +106,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					for j in newDeps:
 						jReqs = []
 						if(len(requirementsDict[j])>0):
-							print('Choosing non-tautological path for '+j)
+							#print('Choosing non-tautological path for '+j)
 							#choose a random path through dependencies that IS NOT A TAUTOLOGY!
 							paths = copy.copy(requirementsDict[j])
 							random.shuffle(paths)
@@ -106,8 +120,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 								#also, we don't pick paths that require the item we're trying to allocate, for obvious reasons
 								trueOption = None
 								for k in paths:
-									print('trying potential path:')
-									print(k)
+									#print('trying potential path:')
+									#print(k)
 									kTrue = True
 									for l in k:
 										kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
@@ -117,23 +131,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 										kTrue = kTrue and lTrueOr
 										if not lTrueOr:
 											1+1
-											print('False because '+l+' requires:')
-											print(requirementsDict[l])
+											#print('False because '+l+' requires:')
+											#print(requirementsDict[l])
 										#if a flag we don't have is needed, we can't use that path
 										kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
 										if (l in usedFlagsList and l not in inputFlags):
 											1+1
-											print('False because the needed flag '+ l +' is not set')
-											print(usedFlagsList)
-											print(inputFlags)
+											#print('False because the needed flag '+ l +' is not set')
+											#print(usedFlagsList)
+											#print(inputFlags)
 									if(kTrue):
 										trueOption = k
-										print('found non-tautological path')
-										print(k)
+										#print('found non-tautological path')
+										#print(k)
 										break
 									else:
 										1+1
-										print('Path is false')
+										#print('Path is false')
 								#if new choice is none, ignore it because this is a true tautology
 								#e.g. trying to place the squirtbottle at the sudowoodo junction
 								if(not trueOption is None):
@@ -145,41 +159,41 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 									addedList.append(j)
 									if len(paths)>1:
 										1+1
-										print(revReqDict)
+										#print(revReqDict)
 								else:
 									legal = False
 									#this is not a legal item location! because it involves a tautology!
-									print('Illegal tautology:')
-									print(paths)
-									print('The following could create the tautology when allocating '+ toAllocate +' to '+locList[iter].Name+':')
-									print(revReqDict[j])
+									#print('Illegal tautology:')
+									#print(paths)
+									#print('The following could create the tautology when allocating '+ toAllocate +' to '+locList[iter].Name+':')
+									#print(revReqDict[j])
 							else:
 								jReqs = requirementsDict[j][0]
-								print('found non-tautological path')
-								print(jReqs)
+								#print('found non-tautological path')
+								#print(jReqs)
 								addedList.append(j)
 						for k in jReqs:
 							if k not in allDepsList:
 								newDeps.append(k)
 					allDepsList.extend(newDeps)
-					print('Expanded dependencies of '+locList[iter].Name+' to:')
-					print(allDepsList)
+					#print('Expanded dependencies of '+locList[iter].Name+' to:')
+					#print(allDepsList)
 					newDeps = []
 				#if a dependency requires an input flag (not set by a location, a location, or a progress item), that flag MUST be set
-				print(allDepsList)
-				print(legal)
-				print(set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags))
-				print(usedFlagsList)
-				print(set(allDepsList).intersection(set(usedFlagsList)))
+				#print(allDepsList)
+				#print(legal)
+				#print(set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags))
+				#print(usedFlagsList)
+				#print(set(allDepsList).intersection(set(usedFlagsList)))
 				legal = legal and set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)
 				if(not set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)):
 					1+1
-					print(locList[iter].Name + ' is not legal because it needs flags that are not set')
-					print(set(allDepsList).intersection(set(usedFlagsList)))
+					#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
+					#print(set(allDepsList).intersection(set(usedFlagsList)))
 				if(toAllocate not in allDepsList and legal):
 					loc = locList.pop(iter)
 					valid = True
-					print('Gave '+ toAllocate +' to '+ loc.Name)
+					#print('Gave '+ toAllocate +' to '+ loc.Name)
 					if(loc.isItem()):
 						loc.item = toAllocate
 						spoiler[loc.item] = loc.Name
@@ -190,38 +204,38 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					allocatedList.append(loc)
 					#requirementsDict[toAllocate] = requirementsDict[loc.Name]
 					requirementsDict[toAllocate] = [list(set(allDepsList))]
-					print(spoiler)
+					#print(spoiler)
 				else:
-					print(locList[iter].Name+' cannot contain '+toAllocate)
+					#print(locList[iter].Name+' cannot contain '+toAllocate)
 					if(toAllocate in allDepsList):
 						1+1
-						print('...because it requires '+toAllocate+' to be reached in the first place!')
-						print(spoiler)
+						#print('...because it requires '+toAllocate+' to be reached in the first place!')
+						#print(spoiler)
 					else:
 						1+1
-						print('...because its currently an illegal location')
-						print(spoiler)
+						#print('...because its currently an illegal location')
+						#print(spoiler)
 					iter = iter+1
 			else:
 				iter = iter+1
 			if iter == len(locList) and not valid:
 				iter = 0
 				retryPasses = retryPasses-1
-				print('retrying with different paths')
+				#print('retrying with different paths')
 
-	print('----')
+	#print('----')
 
 	#traverse seed to both confirm beatability, allocate "trash" items and determine location distances
 	#define the set of active initial locations to consider
 	rodList = ['OLD_ROD','GOOD_ROD','SUPER_ROD']
 	#overwrite rods into semi-progressive order
 	if('SemiProgressiveRods' in inputFlags):
-		print(trashItems)
+		#print(trashItems)
 		for i in range(0,len(trashItems)):
 			if('ROD' in trashItems[i]):
 				trashItems[i] = rodList.pop()
-		print('---')
-		print(trashItems)
+		#print('---')
+		#print(trashItems)
 	activeLoc = copy.copy(locationTree)
 	goalReached = False
 	randomizerFailed = False
@@ -246,7 +260,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		for i in activeLoc:
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
-				print(i.Name)
+				#print(i.Name)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				#we can get somehwhere, so set this location in the state as true
@@ -273,12 +287,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				if(i.isItem()):
 					if(not i.Name in spoiler.values()):
 						i.item = trashItems.pop()
-						print('Placing '+i.item +' in '+i.Name)
+						#print('Placing '+i.item +' in '+i.Name)
 					else:
 						state[i.item] = True
 						stateDist[i.item] = max(stateDist[i.item],stateDist[i.Name])
 						i.item = next(key for key, value in spoiler.items() if value == i.Name)
-						print('Progress item '+i.item +' in '+i.Name)
+						#print('Progress item '+i.item +' in '+i.Name)
 				if(i.isGym()):
 					maxBadgeDist = max(maxBadgeDist,i.distance)
 					nBadges = nBadges+1
@@ -302,19 +316,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			for j in activeLoc:
 				if(not state[j.Name]):
 					1+1
-					print('Stuck on '+j.Name+', which needs:')
-					print(j.requirementsNeeded(state))
-			print(state)
+					#print('Stuck on '+j.Name+', which needs:')
+					#print(j.requirementsNeeded(state))
+			#print(state)
 		#check if we've become stuck
 		if(stuck):
 			stuckCount = stuckCount+1
 		else:
 			stuckCount = 0
 
-	print(stateDist)
-	print(spoiler)
-	print(nBadges)
-	print('illegal')
-	print('remaining')
-	print(trashItems)
+	#print(stateDist)
+	#print(spoiler)
+	#print(nBadges)
+	#print('illegal')
+	#print('remaining')
+	#print(trashItems)
 	return (reachable, spoiler, stateDist, randomizerFailed)
