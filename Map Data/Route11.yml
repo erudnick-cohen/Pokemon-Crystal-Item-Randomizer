@@ -7,9 +7,8 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermillion City Entrance
-            - Power Plant
+            - Power Plant Activated
         FlagReqs:
-            - Kanto Power Restored
             - Surf
         ItemReqs:
         FlagsSet:
