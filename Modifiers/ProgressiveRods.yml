@@ -1,0 +1,4 @@
+Name: Progressive Rods
+Description: Makes the fishing rods appear in progressive order irregardless of where you pick them up.
+FlagsSet:
+    - Progressive Rods

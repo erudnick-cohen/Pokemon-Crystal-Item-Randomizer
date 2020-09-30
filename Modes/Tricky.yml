@@ -11,7 +11,7 @@ DefaultModifiers:
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/SkipE4AndFightRed.yml
-    - Modifiers/SemiProgressiveRods.yml
+    - Modifiers/ProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
     - Modifiers/VanillaClair.yml
     - Modifiers/EnableTinTower.yml
@@ -21,4 +21,3 @@ AllowedLocations:
 Goal: Mt. Silver
 FlagsSet:
     - Kanto Mode
-    - Progressive Rods
