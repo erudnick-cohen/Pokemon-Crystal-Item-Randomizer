@@ -190,6 +190,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 					1+1
 					#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
 					#print(set(allDepsList).intersection(set(usedFlagsList)))
+				#Impossible locations are illegal
+				if("Impossible" in allDepsList):
+					legal = False
 				if(toAllocate not in allDepsList and legal):
 					loc = locList.pop(iter)
 					valid = True
