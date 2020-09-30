@@ -210,7 +210,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
-	print('Writing '+labelCodeB)
+	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
 
 	nItemCodeData = itemScriptLookup(location.item)
@@ -234,8 +234,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 		#need to extract the nibble out
-		print(list(map(int, addressDataNPC["integer_values"].split(' '))))
-		print(addressDataNPC["integer_values"].split(' '))
+		#print(list(map(int, addressDataNPC["integer_values"].split(' '))))
+		#print(addressDataNPC["integer_values"].split(' '))
 		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
 		#form full binary expression
 		fullByte = (10-len(combobyte))*'0'+combobyte[2:]
@@ -244,11 +244,11 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		nb2 = fullByte[4:8]
 		#now generate the correct nibble for the object type
 		nibbleBall = bin(commandBall)
-		print(nibbleBall)
+		#print(nibbleBall)
 		fullNibble = nb1+((6-len(combobyte))*'0'+nibbleBall[2:])
-		print(fullNibble)
+		#print(fullNibble)
 		newBallByte = int(fullNibble,2)
-		print(newBallByte)
+		#print(newBallByte)
 		romMap[addressDataNPC["address_range"]["begin"]+7] = newBallByte
 		romMap[addressData["address_range"]["begin"]] = nItemCode
 		if(not location.SecondaryCode is None):
