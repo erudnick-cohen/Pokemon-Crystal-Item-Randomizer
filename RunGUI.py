@@ -65,6 +65,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				outputSpoiler = {}
 				outputSpoiler['RNG Seed'] = rngSeed
 				outputSpoiler['Solution'] = result[1]
+				outputSpoiler['Useless Stuff'] = result[4]
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))

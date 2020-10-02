@@ -255,6 +255,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#define mapping of state to distances at which parts of state were met
 	stateDist = defaultdict(lambda: 0)
 	stuckCount = 0
+	trashSpoiler = {}
 	while not goalReached and not randomizerFailed:
 		#track if we're stuck
 		stuck = True
@@ -290,6 +291,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				if(i.isItem()):
 					if(not i.Name in spoiler.values()):
 						i.item = trashItems.pop()
+						trashSpoiler[i.Name] = i.item
 						#print('Placing '+i.item +' in '+i.Name)
 					else:
 						state[i.item] = True
@@ -334,4 +336,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#print('illegal')
 	#print('remaining')
 	#print(trashItems)
-	return (reachable, spoiler, stateDist, randomizerFailed)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler)
