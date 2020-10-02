@@ -145,7 +145,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	maxDist = max(result[2].values())
 	f = open(romPath,'r+b')
 	romMap = mmap.mmap(f.fileno(),0)
-	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap,'progressiveRods' in flags)
+	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap,'Progressive Rods' in flags)
 	if adjustRegularWildLevels:
 		RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustSpecialWildLevels:
