@@ -1,5 +1,5 @@
 Name: Randomize Pokegear and Pokegear Cards
-Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized.
+Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized. Also shuffles the Pokedex.
 AddedItems:
     - Pokegear
     - Radio Card
