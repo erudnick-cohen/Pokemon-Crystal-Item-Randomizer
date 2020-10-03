@@ -227,8 +227,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		commandBall = 4
-		endVal = 1
-		nItemCode = 1
+		endVal = 176 
+		nItemCode = 176
 	if location.IsBall:
 		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
 		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'

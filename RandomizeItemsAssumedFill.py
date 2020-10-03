@@ -59,15 +59,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
 	for i in plandoPlacements:
-		for j in range(0, len(locList)):
-			if(locList[j].Name == i):
-				locInd = j
-				#print(j)
-		#print(locList[0].Name)
-		locList.insert(0, locList.pop(locInd))
-		#print(locList[0].Name)
-		progressList.remove(plandoPlacements[i])
-		progressList.insert(len(progressList),plandoPlacements[i])
+		if (i in progressList):
+			for j in range(0, len(locList)):
+				if(locList[j].Name == i):
+					locInd = j
+					#print(j)
+			#print(locList[0].Name)
+			locList.insert(0, locList.pop(locInd))
+			#print(locList[0].Name)
+			progressList.remove(plandoPlacements[i])
+			progressList.insert(len(progressList),plandoPlacements[i])
 	#print(plandoPlacements)
 	#print(progressList)
 	#keep copy of initial requirements dictionary to check tautologies
@@ -290,7 +291,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 				#double checks items to write due to bizzare bug observed only once
 				if(i.isItem()):
 					if(not i.Name in spoiler.values()):
-						i.item = trashItems.pop()
+						if i.Name in plandoPlacements:
+							item = plandoPlacements[i.Name]
+							i.item = item
+							try:
+								trashItems.remove(item)
+							except ValueError:
+								pass
+						else:
+							i.item = trashItems.pop()
 						trashSpoiler[i.Name] = i.item
 						#print('Placing '+i.item +' in '+i.Name)
 					else:
