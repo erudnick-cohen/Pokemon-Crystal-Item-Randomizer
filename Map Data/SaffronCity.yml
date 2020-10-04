@@ -62,6 +62,7 @@ Location:
             - Kanto Mode
         ItemReqs:
             - S S Ticket
+            - Squirtbottle
         FlagsSet:
         ReachableReqs:
         Code: 
