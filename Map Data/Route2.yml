@@ -148,6 +148,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Route 2 Post Cut via Viridian
+            - Woke Snorlax
         FlagReqs:
             - 8 Badges
             - Rising Badge
@@ -155,7 +156,6 @@ Location:
         ItemReqs:
             - Surf
             - Waterfall
-            - Machine Part
         FlagsSet:
         ReachableReqs:
         Code: 
@@ -170,6 +170,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Viridian City via League Gate
+            - Woke Snorlax
         FlagReqs:
             - 8 Badges
             - Rising Badge
@@ -177,7 +178,6 @@ Location:
         ItemReqs:
             - Surf
             - Waterfall
-            - Machine Part
         FlagsSet:
         ReachableReqs:
         Code: 
