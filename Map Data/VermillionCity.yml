@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6 Entrance
+        LocationReqs: Route 6 via Saffron
         FlagReqs:
         ItemReqs:
             - Pass
