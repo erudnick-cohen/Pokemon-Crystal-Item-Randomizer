@@ -46,6 +46,14 @@ Changes:
         NewFlagReqs:
             - Ok
     -
+        Location: Goldenrod City via Route 35
+        NewLocationReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+        NewFlagReqs:
+            - Impossible
+    -
         Location: Route 34 via Ilex
         NewItemReqs:
             - Ok
