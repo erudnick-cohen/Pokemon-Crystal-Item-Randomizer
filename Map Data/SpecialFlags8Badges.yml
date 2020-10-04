@@ -191,6 +191,7 @@ Location:
         LocationReqs:
             - Route 26
             - Saffron City Gym Badge
+            - Blackthorn City Gym Badge
         FlagReqs:
             - Assumed Fill
             - Fog Badge
