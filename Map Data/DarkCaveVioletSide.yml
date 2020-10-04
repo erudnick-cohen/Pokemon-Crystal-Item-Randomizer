@@ -15,24 +15,6 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Dark Cave Violet Entrance
-        FileName: DarkCaveVioletEntrance.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Dark Cave Blackthorn
-        FlagReqs:
-            - Zephyr Badge
-        ItemReqs:
-            - Rock Smash
-            - Flash
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:        
-    -
         Name: Dark Cave Violet
         FileName: DarkCaveVioletEntrance.asm
         Type: Map
