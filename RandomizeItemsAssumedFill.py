@@ -4,7 +4,7 @@ import random
 import copy
 import time
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge', 'Storm Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
 	inputFlags.append('Ok')
 	#build progress set
@@ -94,7 +94,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			#print(locList[iter].Name)
 			#print(locList[iter].Type)
 			if(locList[iter].Type == allocationType):
-				#print('Trying '+locList[iter].Name)
+				#print('Trying '+locList[iter].Name +' as ' +toAllocate)
 				#do any of its dependencies depend on this item/badge?
 				randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
 				allDepsList = copy.copy(requirementsDict[locList[iter].Name][randOpt])
@@ -130,6 +130,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 										for m in requirementsDict[l]:
 											lTrueOr = lTrueOr or toAllocate not in m
 										kTrue = kTrue and lTrueOr
+										#also make sure the location doesn't literally require it
+										kTrue = kTrue and l != toAllocate
 										if not lTrueOr:
 											1+1
 											#print('False because '+l+' requires:')
