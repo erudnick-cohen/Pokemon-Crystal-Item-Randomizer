@@ -2,6 +2,8 @@ Name: Remove cut tree in Ilex
 Description: Removes the cut tree in Ilex forest, allowing the player to pass through Ilex forest without cut. The logic is updated accordingly to account for this.
 NewGamePatches:
     - 'Patches/RemoveCutTree.json'
+#FlagsSet:
+#    - Allocate Badges First
 Changes:
     -
         Location: Vermillion City via SS Aqua
@@ -47,6 +49,38 @@ Changes:
             - Ok
     -
         Location: Goldenrod City via Route 35
+        NewLocationReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Route 34 via Goldenrod
+        NewLocationReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Ilex Forest Back via Route 34
+        NewLocationReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Route 35 via National Park
+        NewLocationReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: National Park via Route 36
         NewLocationReqs:
             - Impossible
         NewItemReqs:
