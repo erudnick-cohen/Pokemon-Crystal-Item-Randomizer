@@ -10,8 +10,8 @@ from collections import defaultdict
 import copy
 import traceback
 
-def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}):
-
+def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}):
+	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
 	for i in modifiers:
@@ -23,8 +23,8 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 				changeListDict[j['Location']].append(j) 
 		if 'AddedItems' in i:
 			for j in i['AddedItems']:
-				if j not in requiredItems:
-					requiredItems.append(j)
+				if j not in requiredItemsCopy:
+					requiredItemsCopy.append(j)
 			#print(requiredItems)
 		if 'AddedTrash' in i:
 			extraTrash.extend(i['AddedTrash'])
@@ -104,18 +104,24 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	else:
 		BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 
-	result = ['Nothing', 'Here']
+	result = ['Nothing', 'Here'] 
 	while goal not in result[0]:
 		try:
 			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict)
-			progressItems = copy.copy(requiredItems)
+			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
 			trashItems = [x for x in res[1] if not x in keyItemMap.values()] #ensure progress items don't sneak into trash list
 			trashItems.extend(extraTrash)
+			if 'TrashItemList' in otherSettings:
+				trashItems = copy.copy(otherSettings['TrashItemList'])
+				if 'ProgressItems' in otherSettings:
+					progressItems = copy.copy(otherSettings['ProgressItems'])
+					print(otherSettings)
 			LocationList = res[0]
 			print(progressItems)
-			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements )
+			print(trashItems)
+			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
 				print('bad run, retrying')
 		except Exception as err:
