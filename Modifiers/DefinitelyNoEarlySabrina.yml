@@ -5,3 +5,11 @@ Changes:
         Location: Saffron City Gym Badge
         NewFlagReqs:
             - Rocket Invasion
+    -
+        Location: Early Sabrina
+        NewFlagReqs:
+            - Impossible
+        NewLocationsReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible

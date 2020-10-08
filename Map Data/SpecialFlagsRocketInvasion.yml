@@ -7,6 +7,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Vermillion City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -29,6 +30,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Saffron City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -53,6 +55,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Vermillion City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -76,6 +79,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Saffron City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -99,6 +103,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Vermillion City Entrance
         FlagReqs:
             - Assumed Fill
             - Hive Badge
@@ -121,6 +126,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Saffron City Entrance
         FlagReqs:
             - Assumed Fill
             - Hive Badge
@@ -144,6 +150,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
+            - Ecruteak City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -168,6 +175,8 @@ Location:
         LocationReqs:
             - Goldenrod City Entrance
             - Saffron City Gym Badge
+            - Early Sabrina
+            - Vermillion City Entrance
         FlagReqs:
             - Assumed Fill
             - Kanto Mode
@@ -190,6 +199,8 @@ Location:
         LocationReqs:
             - Goldenrod City Entrance
             - Saffron City Gym Badge
+            - Early Sabrina
+            - Saffron City Entrance
         FlagReqs:
             - Assumed Fill
             - Kanto Mode
@@ -212,6 +223,8 @@ Location:
         LocationReqs:
             - Goldenrod City Entrance
             - Saffron City Gym Badge
+            - Early Sabrina
+            - Saffron City Entrance
         FlagReqs:
             - Assumed Fill
             - Zephyr Badge
@@ -222,6 +235,21 @@ Location:
             - Flash
             - Pass
             - Secret Potion
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Early Sabrina
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code:
