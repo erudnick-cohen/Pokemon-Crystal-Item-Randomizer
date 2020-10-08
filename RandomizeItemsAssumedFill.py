@@ -54,12 +54,17 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	for i in coreProgress:
 		progressList.remove(i)
 	progressList = progressList+coreProgress
+	if 'Allocate Badges First' in inputFlags:
+		for i in coreProgress:
+			if 'Badge' in i:
+				progressList.remove(i)
+				progressList.append(i)
 	#print(progressList)
 	
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
 	for i in plandoPlacements:
-		if (i in progressList):
+		if (plandoPlacements[i] in progressList):
 			for j in range(0, len(locList)):
 				if(locList[j].Name == i):
 					locInd = j
@@ -76,158 +81,199 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	usedFlagsList = list(set(allReqsList).intersection(allPossibleFlags))
 	#begin assumed fill loop
 	valid = True
-	while(len(progressList)>0 and valid):
-		#pick and item to place
-		toAllocate = progressList.pop()
-		#print('Allocating '+toAllocate)
-		if toAllocate in progressItems:
-			allocationType = 'Item'
-		else:
-			allocationType = 'Gym'
+	# while(len(progressList)>0 and valid):
+		#pick an item to place
+		# toAllocate = progressList.pop()
+		# #print('Allocating '+toAllocate)
+		# if toAllocate in progressItems:
+			# allocationType = 'Item'
+		# else:
+			# allocationType = 'Gym'
 		#iterate through randomly ordered locations until a feasible location to place item is found
+	maxIter = len(progressList)
+	#progressList.reverse()
+	#print(progressList)
+	while len(progressList) > 0 and maxIter > 0:
+		maxIter = maxIter - 1
 		valid = False
 		iter = 0
 		retryPasses = 4
-		while not valid and iter < len(locList) and retryPasses > 0:
-			legal = True
-			#is it the right type of location?
-			#print(locList[iter].Name)
-			#print(locList[iter].Type)
-			if(locList[iter].Type == allocationType):
-				#print('Trying '+locList[iter].Name +' as ' +toAllocate)
-				#do any of its dependencies depend on this item/badge?
-				randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
-				allDepsList = copy.copy(requirementsDict[locList[iter].Name][randOpt])
-				oldDepsList = []
-				newDeps = allDepsList
-				addedList = [locList[iter].Name]
-				revReqDict = defaultdict(lambda: [])
-				while oldDepsList != allDepsList and legal:
-					oldDepsList = allDepsList
-					for j in newDeps:
-						jReqs = []
-						if(len(requirementsDict[j])>0):
-							#print('Choosing non-tautological path for '+j)
-							#choose a random path through dependencies that IS NOT A TAUTOLOGY!
-							paths = copy.copy(requirementsDict[j])
-							random.shuffle(paths)
-							#pick an option from paths which isn't a tautology!
-							tautologyCheck = True
-							tautIter = 0
-							#only need to pick if there are two options!
-							if(len(requirementsDict[j])>1):
-								#better strategy, if you choose option A from the multiple options, then the locations required by A CANNOT require j!
-								#so when choosing a path to the locations required by A, we CANNOT choose an option with j as a dependency!
-								#also, we don't pick paths that require the item we're trying to allocate, for obvious reasons
-								trueOption = None
-								for k in paths:
-									#print('trying potential path:')
-									#print(k)
-									kTrue = True
-									for l in k:
-										kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
-										lTrueOr = len(requirementsDict[l]) == 0
-										for m in requirementsDict[l]:
-											lTrueOr = lTrueOr or toAllocate not in m
-										kTrue = kTrue and lTrueOr
-										#also make sure the location doesn't literally require it
-										kTrue = kTrue and l != toAllocate
-										if not lTrueOr:
-											1+1
-											#print('False because '+l+' requires:')
-											#print(requirementsDict[l])
-										#if a flag we don't have is needed, we can't use that path
-										kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
-										if (l in usedFlagsList and l not in inputFlags):
-											1+1
-											#print('False because the needed flag '+ l +' is not set')
-											#print(usedFlagsList)
-											#print(inputFlags)
-									if(kTrue):
-										trueOption = k
-										#print('found non-tautological path')
+		#determine type of location to allocate based of progress list
+		if progressList[-1] in progressItems:
+			allocationType = 'Item'
+		else:
+			allocationType = 'Gym'
+			toAllocate = progressList[-1] #If its a badge, we always force the allocation of THAT badge
+		while not valid and iter < len(locList) and retryPasses > 0 and len(progressList) > 0:
+			#sub item allocation loop, so that locations are at least randomly given items they can actually have
+			allocated = False
+			nLeft = len(progressList)
+			while nLeft > 0 and not allocated:
+				#skip over entries until we get to the type we're trying to allocate
+				placeable = False
+				while not placeable and nLeft > 0 and allocationType != 'Gym':
+					nLeft = nLeft - 1
+					toAllocate = progressList[nLeft]
+					if allocationType == 'Item' and toAllocate in progressItems:
+						placeable = True
+					# if allocationType == 'Gym' and not (toAllocate in progressItems):
+						# placeable = True
+				#print('Allocating '+toAllocate)
+				if allocationType == 'Gym':
+					placeable = True
+					nLeft = 0
+				legal = True
+				#is it the right type of location?
+				#print(locList[iter].Name)
+				#print(locList[iter].Type)
+				if(locList[iter].Type == allocationType and placeable):
+					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
+					#do any of its dependencies depend on this item/badge?
+					randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
+					allDepsList = copy.copy(requirementsDict[locList[iter].Name][randOpt])
+					oldDepsList = []
+					newDeps = allDepsList
+					addedList = [locList[iter].Name]
+					revReqDict = defaultdict(lambda: [])
+					while oldDepsList != allDepsList and legal:
+						oldDepsList = allDepsList
+						for j in newDeps:
+							jReqs = []
+							if(len(requirementsDict[j])>0):
+								#print('Choosing non-tautological path for '+j)
+								#choose a random path through dependencies that IS NOT A TAUTOLOGY!
+								paths = copy.copy(requirementsDict[j])
+								random.shuffle(paths)
+								#pick an option from paths which isn't a tautology!
+								tautologyCheck = True
+								tautIter = 0
+								#only need to pick if there are two options!
+								if(len(requirementsDict[j])>1):
+									#better strategy, if you choose option A from the multiple options, then the locations required by A CANNOT require j!
+									#so when choosing a path to the locations required by A, we CANNOT choose an option with j as a dependency!
+									#also, we don't pick paths that require the item we're trying to allocate, for obvious reasons
+									trueOption = None
+									for k in paths:
+										#print('trying potential path:')
 										#print(k)
-										break
+										kTrue = True
+										for l in k:
+											kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
+											lTrueOr = len(requirementsDict[l]) == 0
+											for m in requirementsDict[l]:
+												lTrueOr = lTrueOr or toAllocate not in m
+											kTrue = kTrue and lTrueOr
+											#also make sure the location doesn't literally require it
+											kTrue = kTrue and l != toAllocate
+											#also make sure its not impossible
+											kTrue = kTrue and l != 'Impossible'
+											#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
+											if(len(requirementsDict[l]) != 0):
+												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0])
+											if not lTrueOr:
+												1+1
+												#print('False because '+l+' requires:')
+												#print(requirementsDict[l])
+											#if a flag we don't have is needed, we can't use that path
+											kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
+											if (l in usedFlagsList and l not in inputFlags):
+												1+1
+												#print('False because the needed flag '+ l +' is not set')
+												#print(usedFlagsList)
+												#print(inputFlags)
+										if(kTrue):
+											trueOption = k
+											#print('found non-tautological path')
+											#print(k)
+											break
+										else:
+											1+1
+											#print('Path is false')
+									#if new choice is none, ignore it because this is a true tautology
+									#e.g. trying to place the squirtbottle at the sudowoodo junction
+									if(not trueOption is None):
+										#add all reverse dependencies onto new choice
+										for k in trueOption:
+											revReqDict[k].extend(revReqDict[j])
+											revReqDict[k].append(j)
+										jReqs = trueOption
+										addedList.append(j)
+										if len(paths)>1:
+											1+1
+											#print(revReqDict)
 									else:
-										1+1
-										#print('Path is false')
-								#if new choice is none, ignore it because this is a true tautology
-								#e.g. trying to place the squirtbottle at the sudowoodo junction
-								if(not trueOption is None):
-									#add all reverse dependencies onto new choice
-									for k in trueOption:
-										revReqDict[k].extend(revReqDict[j])
-										revReqDict[k].append(j)
-									jReqs = trueOption
-									addedList.append(j)
-									if len(paths)>1:
-										1+1
-										#print(revReqDict)
+										legal = False
+										#this is not a legal item location! because it involves a tautology!
+										#print('Illegal tautology:')
+										#print(paths)
+										#print('The following could create the tautology when allocating '+ toAllocate +' to '+locList[iter].Name+':')
+										#print(revReqDict[j])
 								else:
-									legal = False
-									#this is not a legal item location! because it involves a tautology!
-									#print('Illegal tautology:')
-									#print(paths)
-									#print('The following could create the tautology when allocating '+ toAllocate +' to '+locList[iter].Name+':')
-									#print(revReqDict[j])
-							else:
-								jReqs = requirementsDict[j][0]
-								#print('found non-tautological path')
-								#print(jReqs)
-								addedList.append(j)
-						for k in jReqs:
-							if k not in allDepsList:
-								newDeps.append(k)
-					allDepsList.extend(newDeps)
-					#print('Expanded dependencies of '+locList[iter].Name+' to:')
+									jReqs = requirementsDict[j][0]
+									#no impossible paths
+									if 'Impossible' in jReqs:
+										legal = False
+										#print('but its impossible!')
+									else:
+										#print('found non-tautological path')
+										#print(jReqs)
+									addedList.append(j)
+							for k in jReqs:
+								if k not in allDepsList:
+									newDeps.append(k)
+						allDepsList.extend(newDeps)
+						#print('Expanded dependencies of '+locList[iter].Name+' to:')
+						#print(allDepsList)
+						newDeps = []
+					#if a dependency requires an input flag (not set by a location, a location, or a progress item), that flag MUST be set
 					#print(allDepsList)
-					newDeps = []
-				#if a dependency requires an input flag (not set by a location, a location, or a progress item), that flag MUST be set
-				#print(allDepsList)
-				#print(legal)
-				#print(set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags))
-				#print(usedFlagsList)
-				#print(set(allDepsList).intersection(set(usedFlagsList)))
-				legal = legal and set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)
-				if(not set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)):
-					1+1
-					#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
+					#print(legal)
+					#print(set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags))
+					#print(usedFlagsList)
 					#print(set(allDepsList).intersection(set(usedFlagsList)))
-				#Impossible locations are illegal
-				if("Impossible" in allDepsList):
-					legal = False
-				if(toAllocate not in allDepsList and legal):
-					loc = locList.pop(iter)
-					valid = True
-					#print('Gave '+ toAllocate +' to '+ loc.Name)
-					if(loc.isItem()):
-						loc.item = toAllocate
-						spoiler[loc.item] = loc.Name
-					if(loc.isGym()):
-						loc.badge = badgeData[toAllocate]
-						badgeSet.remove(toAllocate)
-						spoiler[loc.badge.Name] = loc.Name
-					allocatedList.append(loc)
-					#requirementsDict[toAllocate] = requirementsDict[loc.Name]
-					requirementsDict[toAllocate] = [list(set(allDepsList))]
-					#print(spoiler)
-				else:
-					#print(locList[iter].Name+' cannot contain '+toAllocate)
-					if(toAllocate in allDepsList):
+					legal = legal and set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)
+					if(not set(allDepsList).intersection(set(usedFlagsList)).issubset(inputFlags)):
 						1+1
-						#print('...because it requires '+toAllocate+' to be reached in the first place!')
+						#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
+						#print(set(allDepsList).intersection(set(usedFlagsList)))
+					#Impossible locations are illegal
+					if("Impossible" in allDepsList):
+						legal = False
+					if(toAllocate not in allDepsList and legal):
+						loc = locList.pop(iter)
+						valid = True
+						#print('Gave '+ toAllocate +' to '+ loc.Name)
+						progressList.remove(toAllocate)
+						allocated = True
+						if(loc.isItem()):
+							loc.item = toAllocate
+							spoiler[loc.item] = loc.Name
+						if(loc.isGym()):
+							loc.badge = badgeData[toAllocate]
+							badgeSet.remove(toAllocate)
+							spoiler[loc.badge.Name] = loc.Name
+						allocatedList.append(loc)
+						#requirementsDict[toAllocate] = requirementsDict[loc.Name]
+						requirementsDict[toAllocate] = [list(set(allDepsList))]
 						#print(spoiler)
 					else:
-						1+1
-						#print('...because its currently an illegal location')
-						#print(spoiler)
-					iter = iter+1
-			else:
-				iter = iter+1
-			if iter == len(locList) and not valid:
-				iter = 0
-				retryPasses = retryPasses-1
-				#print('retrying with different paths')
+						#print(locList[iter].Name+' cannot contain '+toAllocate)
+						if(toAllocate in allDepsList):
+							1+1
+							#print('...because it requires '+toAllocate+' to be reached in the first place!')
+							#print(spoiler)
+						else:
+							1+1
+							#print('...because its currently an illegal location')
+							#print(spoiler)
+						#iter = iter+1
+				# else:
+					# iter = iter+1
+				# if iter == len(locList) and not valid:
+					# iter = 0
+					# retryPasses = retryPasses-1
+					# #print('retrying with different paths')
+			iter = iter + 1
 
 	#print('----')
 
