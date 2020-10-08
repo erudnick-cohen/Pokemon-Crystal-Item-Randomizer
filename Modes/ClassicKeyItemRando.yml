@@ -1,0 +1,70 @@
+Name: Classic KIR
+Description: All HMs and Key Items are randomized. All badges are also shuffled. Functions like the key item randomizer originally developed by goldenrules.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Cut
+    - Strength
+    - Secret Potion
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+    - S S Ticket
+    - Machine Part
+    - Lost Item
+    - Pass
+TrashItemList:
+    - Mystery Egg
+    - OLD_ROD
+    - BLUE_CARD
+    - COIN_CASE
+    - ITEMFINDER
+    - GOOD_ROD
+    - Red Scale
+    - Whirlpool
+    - Clear Bell
+    - SUPER_ROD
+    - SILVER_WING
+BannedLocations:
+AllowedLocations:
+    - Mr. Pokemon's Egg
+    - Sprout Tower Sage Li
+    - Old Rod
+    - Cut HM
+    - Bike
+    - Coin Case
+    - Buena Item
+    - Goldenrod City Flower Shop
+    - Dance Theatre
+    - Itemfinder House
+    - Fishing Guru
+    - Secret Potion Man
+    - Chuck's Wife
+    - Red Scale Dropped
+    - Rocket Base Whirlpool
+    - Radio Tower Rockets Part 1
+    - Goldenrod Tunnel Rocket Attack
+    - Radio Tower Rockets Part 2
+    - Ice Path Waterfall
+    - SS Ticket
+    - Vermillion City Lost Item
+    - Rail Pass
+    - Hidden Machine Part
+    - Super Rod
+    - Silver Wing
+Goal: Mt. Silver
+FlagsSet:
+    - Kanto Mode
