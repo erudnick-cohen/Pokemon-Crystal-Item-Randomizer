@@ -35,6 +35,7 @@ Make a post about it under issues, but please indicate in the title of your post
   * The player does not need to return the Mystery Egg to Professor Elm in order to progress the game (can be disabled if desired)
   * The SS Aqua operates every day of the week in both directions between Kanto and Johto
   * The SS Aqua can be ridden in both directions without having beaten the Elite Four and Lance
+  * Under a number of settings, the cut tree in Ilex Forest is removed (can be turned on or off as desired).
 # Item Locations not randomized (unless you use Tricky settings):
   * Tin Tower and the rainbow wing, because putting the rainbow wing into the randomizer would be overly sadistic as it could then be required to catch all three legendary dogs in order  to beat the game. (NOTE: Tricky settings change this requirement to just defeating Suicune and having the rainbow wing)
   * Ho-oh ruins of alph chamber: Due due to Ho-oh not being reliably obtainable. (NOTE: Tricky settings change this requirement to defeating Ho-Oh on top of Tin Tower)
