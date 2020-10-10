@@ -1,11 +1,11 @@
 # Pokemon Crystal Item Randomizer
 This is an item (and badge) randomizer for the popular speedchoice mod of Pokemon Crystal. This randomizer supports randomizing all items and badges in the game (TMs, key items, HMs, itemballs, etc...) and can place items in any possible item location in the game. Currently, several modes of randomization are provided by default, including:
   * Key Items - All key items and HMs are randomized. Badges are also randomized, The goal is to defeat Red.
-  * Standard - All item locations are randomized. Badges are also randomized. The goal is to defeat Red.
-  * Tricky - All item locations and several "flags" which are effectively items are randomized. Badges are also randomized. The goal is to defeat Red.
+  * Standard - Most item locations are randomized. Badges are also randomized. The goal is to defeat Red.
+  * Tricky - Most (plus a few more) item locations and several "flags" which are effectively items are randomized. Badges are also randomized. The goal is to defeat Red.
   * Johto Mode - All item locations in Johto are randomized. Badges are also randomized. The goal is to defeat the Elite 4.
   * TMs + Key Items - All key items, TMs and HMs are randomized. Badges are also randomized, The goal is to defeat Red.
-  * Vintage - All game behavior is (mostly) identical to vanilla Pokemon Crystal. All item locations are randomized. Badges are also randomized. The goal is to defeat Red. 
+  * Vintage - All game behavior is (mostly) identical to vanilla Pokemon Crystal. Most item locations are randomized. Badges are also randomized. The goal is to defeat Red. 
 # Prerequisites to run the randomizer
 There is an .EXE version of the randomizer available under the releases page of this repository. If you have already downloaded this, then just run the "PokemonCrystalItemRandomize.exe" file provided in the zipped folder.
 Alternately, the randomizer can be run by installing python with the PyYAML and PyQt packages and then running "RunGUI.py", after you have downloaded the code in this branch.
