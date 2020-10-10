@@ -215,6 +215,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 										legal = False
 										#print('but its impossible!')
 									else:
+										1+1
 										#print('found non-tautological path')
 										#print(jReqs)
 									addedList.append(j)
