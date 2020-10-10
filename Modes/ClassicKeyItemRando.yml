@@ -10,6 +10,7 @@ DefaultModifiers:
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/ProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/RegularSnorlaxRoute.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -51,6 +52,7 @@ AllowedLocations:
     - Dance Theatre
     - Itemfinder House
     - Fishing Guru
+    - Strength HM
     - Secret Potion Man
     - Chuck's Wife
     - Red Scale Dropped
