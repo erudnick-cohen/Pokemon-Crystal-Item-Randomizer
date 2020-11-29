@@ -362,3 +362,22 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+    -
+        Name: 8 Badges
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 26
+        FlagReqs:
+            - Assumed Fill
+            - Explicit Checking
+        ItemReqs:
+
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

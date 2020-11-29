@@ -242,6 +242,23 @@ Location:
         TrainerList: 
         Sublocations:
     -
+        Name: Rocket Invasion
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+        FlagReqs:
+            - Assumed Fill
+            - Explicit Checking
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
         Name: Early Sabrina
         FileName: Route5.asm
         Type: Map

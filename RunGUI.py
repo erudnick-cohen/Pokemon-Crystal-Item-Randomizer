@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QFileDialog
 import RunCustomRandomizationAssumedFill as RunCustomRandomization
 from shutil import copyfile
+from collections import OrderedDict
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -27,6 +28,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.Randomize.setText(_translate("MainWindow", "No Rom Loaded!"))
 		self.Randomize.clicked.connect(self.runRandomizer)
 		self.SaveSettings.clicked.connect(self.saveSettings)
+		self.PlandoMode = False
+		self.PlandoData = {}
+		self.LoadPlandoFile.clicked.connect(self.SetUpPlando)
+		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
 
 	def runRandomizer(self):
 		rngSeed = str(time.time())
@@ -58,14 +63,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			copyfile(self.romPath, randomizedFileName+'.gbc')
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
 				outputSpoiler = {}
@@ -150,6 +155,30 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				self.settings['DefaultModifiers'].append(i['fileName'])
 			with open(fName+'.yml', 'w') as f:
 				yaml.dump(self.settings, f, default_flow_style=False)
+				
+	def SetUpPlando(self):
+		QtWidgets.QMessageBox.about(self, 'Plandomizer Mode', 'Select a log file (which need not specify every item allocation) to use as basis for plandomizer.\n NOTE: We are not reponsible for any lost friendships due to use of plandomizer mode')
+		file = QFileDialog.getOpenFileName(directory = '.')[0]
+		if file != '':
+			yamlfile = open(file)
+			yamltext = yamlfile.read()
+			spoiler = yaml.load(yamltext)
+			newSpoiler = OrderedDict()
+			for i in sorted(spoiler['Solution'],reverse=True):
+				print(i)
+				print(spoiler['Solution'][i])
+				newSpoiler[spoiler['Solution'][i]] = i
+			print(newSpoiler)
+			for i in spoiler['Useless Stuff']:
+				newSpoiler[i] = spoiler['Useless Stuff'][i]
+			self.PlandoData = newSpoiler
+			self.PlandoMode = True
+			self.TurnOffPlando.setEnabled(True)
+			
+	def DeactivatePlando(self):
+		self.PlandoData = {}
+		self.PlandoMode = False
+		self.TurnOffPlando.setEnabled(False)
 
 	def updateModListView(self):
 		self.modifierList.clear()

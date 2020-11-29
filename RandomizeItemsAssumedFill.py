@@ -33,6 +33,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#note: these are the randomizer only flags, they do not map to actual logic defined in the config files
 	#flagList = ['Rocket Invasion', '8 Badges', 'All Badges']
 	flagList = ['Assumed Fill', 'All Badges', 'Ok']
+	if(len(plandoPlacements) > 0):
+		flagList.append('External Checking')
 	#build the initial requirements mappings
 	allReqsList = copy.copy(progressSet)
 	itemCount = 0
@@ -49,6 +51,21 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		if i.Type == 'Item':
 			itemCount = itemCount+1
 	#print('Total number of items: '+str(itemCount))
+	
+	#if we are in plando mode (explicit placements, only use explicit checks for locations which have the option)
+	if(len(plandoPlacements)>0):
+		for i in requirementsDict:
+			explicitable = False
+			explicitOption = None
+			for j in requirementsDict[i]:
+				if('Explicit Checking' in j):
+					explicitable = True
+					explicitOption = j
+			if explicitable:
+				#print(requirementsDict[i])
+				requirementsDict[i] = [explicitOption]
+				#print(requirementsDict[i])
+
 	#extract all core items out and put them in shuffled order at the start (which is the BACK) of the item list
 	#this is done because these items unlock way too many item locations, so we want to maximize their legal locations
 	for i in coreProgress:
@@ -109,19 +126,25 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			allocated = False
 			nLeft = len(progressList)
 			while nLeft > 0 and not allocated:
-				#skip over entries until we get to the type we're trying to allocate
-				placeable = False
-				while not placeable and nLeft > 0 and allocationType != 'Gym':
-					nLeft = nLeft - 1
-					toAllocate = progressList[nLeft]
-					if allocationType == 'Item' and toAllocate in progressItems:
-						placeable = True
-					# if allocationType == 'Gym' and not (toAllocate in progressItems):
-						# placeable = True
-				#print('Allocating '+toAllocate)
-				if allocationType == 'Gym':
-					placeable = True
+				#if its a plando placement, just place it, we'll complain if infeasible later on
+				if locList[iter] in plandoPlacements:
+					toAllocate = plandoPlacements[locList[iter]]
 					nLeft = 0
+					placeable = True
+				else:
+					#skip over entries until we get to the type we're trying to allocate
+					placeable = False
+					while not placeable and nLeft > 0 and allocationType != 'Gym':
+						nLeft = nLeft - 1
+						toAllocate = progressList[nLeft]
+						if allocationType == 'Item' and toAllocate in progressItems:
+							placeable = True
+						# if allocationType == 'Gym' and not (toAllocate in progressItems):
+							# placeable = True
+					#print('Allocating '+toAllocate)
+					if allocationType == 'Gym':
+						placeable = True
+						nLeft = 0
 				legal = True
 				#is it the right type of location?
 				#print(locList[iter].Name)
@@ -387,6 +410,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			stuckCount = stuckCount+1
 		else:
 			stuckCount = 0
+
+	#verify that plando is matched if in use
+	for i in plandoPlacements:
+		if(plandoPlacements[i] in spoiler and spoiler[plandoPlacements[i]] != i):
+			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
+			raise Exception('Did not match plando placements!!!')
 
 	#print(stateDist)
 	#print(spoiler)

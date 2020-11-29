@@ -82,6 +82,23 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Mt. Silver Unlock Entrance
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
+                    - Mt. Silver Unlock Sure Why Not
+                FlagReqs:
+                    - Explicit Checking
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Mt. Silver Unlock A
                 FileName: PalletTowns.asm
                 Type: Map
@@ -168,6 +185,22 @@ Location:
                     - Card Key
                     - Pass
                     - S S Ticket
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock Sure Why Not
+                FileName: PalletTowns.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                FlagReqs:
+                    - Explicit Checking
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 Code:
