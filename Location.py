@@ -69,7 +69,8 @@ class Location:
 			if (yamlTree["Sublocations"] is not None):
 				for i in yamlTree["Sublocations"]:
 					self.Sublocations.append(Location(i))
-	
+		self.IsGym = False
+		self.IsActuallyGym = False
 	#determine if this location is reachable
 	#reachable defined by requirements being present in state
 	#and reachable reqs NOT present in state
@@ -110,7 +111,7 @@ class Location:
 	#return if this is a gym or not
 	#Gym class overloads this to return true
 	def isGym(self):
-		return False
+		return self.IsGym
 	
 	def applyBanList(self, banList, allowList):
 		list = [];

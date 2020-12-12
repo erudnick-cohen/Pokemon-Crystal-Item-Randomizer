@@ -1,6 +1,8 @@
 import LoadLocationData
 import Badge
 import RandomizeItemsAssumedFill as RandomizeItems
+import RandomizeItemsBadgesAssumedFill as RandomizeItemsBadges
+
 import RandomizerRom
 import PokemonRandomizer
 import yaml
@@ -121,7 +123,10 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			LocationList = res[0]
 			print(progressItems)
 			print(trashItems)
-			result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+			if(not "BadgeItemShuffle" in otherSettings):
+				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+			else:
+				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
 				print('bad run, retrying')
 		except Exception as err:

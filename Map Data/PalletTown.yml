@@ -88,6 +88,22 @@ Location:
                 HasPKMN: No
                 WildTableList: PALLET_TOWN
                 LocationReqs:
+                    - Mt. Silver Unlock D
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock Entrance
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: PALLET_TOWN
+                LocationReqs:
                     - Mt. Silver Unlock Sure Why Not
                 FlagReqs:
                     - Explicit Checking
@@ -185,6 +201,31 @@ Location:
                     - Card Key
                     - Pass
                     - S S Ticket
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Unlock D
+                FileName: PalletTowns.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Pallet Town
+                    - Woke Snorlax
+                FlagReqs:
+                    - All Badges
+                    - Item Badge Shuffle
+                    - Zephyr Badge
+                    - Hive Badge
+                    - Plain Badge
+                    - Fog Badge
+                    - Glacier Badge
+                    - Rising Badge
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 Code:

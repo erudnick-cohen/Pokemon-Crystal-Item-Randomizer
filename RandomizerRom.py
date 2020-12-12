@@ -8,6 +8,7 @@ import json
 import copy
 import mmap
 import math
+import Gym
 
 def ResetRom():
 	try:
@@ -207,8 +208,12 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	# romMap[gymOffsets[location.Name]+len(nString)+2] = 50
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	if(not isinstance(location, Gym.Gym)):
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	else:
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
 
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
