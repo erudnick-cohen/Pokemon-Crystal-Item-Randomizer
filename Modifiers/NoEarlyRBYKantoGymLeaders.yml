@@ -1,0 +1,48 @@
+Name: No early RBY Kanto Gym Leaders
+Description: Prevents fighting any gym leader who was a character in the generation 1 pokemon games from being required before you can access 7 other gyms. This affects to all kanto gyms except Fuchsia (Janine).
+Changes:
+    -
+        Location: Saffron City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Cinnibar Island Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Viridian City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Pewter City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Cerulean City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Celadon City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Vermillion City Gym Badge
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+            
+            
+    -
+        Location: Early Sabrina
+        NewFlagReqs:
+            - Impossible
+        NewLocationsReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
