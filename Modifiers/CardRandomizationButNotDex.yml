@@ -1,0 +1,35 @@
+Name: Randomize Pokegear and Pokegear Cards but Not the Pokedex
+Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized. Does not shuffle the Pokedex.
+AddedItems:
+    - Pokegear
+    - Radio Card
+    - Expansion Card
+Changes:
+    -
+        Location: Woke Snorlax
+        NewLocationReqs:
+            - Vermillion City Entrance
+        NewFlagReqs:
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+    -
+        Location: Viridian City via Route 2
+        NewLocationReqs:
+            - Route 2 Post Cut via Route 2
+        NewFlagReqs:
+            - Hive Badge
+        NewItemReqs:
+            - Cut
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+    -
+        Location: Radio Card Quiz
+        NewFlagReqs: []
+    -
+        Location: Pokegear Gift
+        NewFlagReqs: []
+    -
+        Location: Expansion Card Gift
+        NewFlagReqs: []

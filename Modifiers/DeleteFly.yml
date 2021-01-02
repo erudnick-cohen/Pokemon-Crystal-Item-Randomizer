@@ -1,0 +1,4 @@
+Name: Delete Fly
+Description: Deletes HM02 (Fly) from the game and replaces it with a berry. I don't understand why you want to do this, but OK.
+FlagsSet:
+    - Delete Fly
