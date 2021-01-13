@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import QFileDialog
 import RunCustomRandomizationAssumedFill as RunCustomRandomization
 from shutil import copyfile
 from collections import OrderedDict
+import traceback
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -82,12 +83,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 			QtWidgets.QMessageBox.about(self, 'Success', 'Sucessfully randomized rom')
 			_translate = QtCore.QCoreApplication.translate
-
-
-
-		except ValueError:
+		except Exception:
 			error_dialog = QtWidgets.QErrorMessage()
-			error_dialog.showMessage('Level bonus must be an integer')
+			error_dialog.showMessage(''.join(traceback.format_stack()))
 			error_dialog.exec_()
 
 		
