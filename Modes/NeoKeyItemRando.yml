@@ -33,8 +33,8 @@ ProgressItems:
     - Pokegear
     - Radio Card
     - Expansion Card
-TrashItemList:
     - Mystery Egg
+TrashItemList:
     - OLD_ROD
     - BLUE_CARD
     - COIN_CASE
@@ -48,6 +48,7 @@ TrashItemList:
     - ENGINE_POKEDEX
 BannedLocations:
 AllowedLocations:
+    - Pokegear Gift
     - Mr. Pokemon's Egg
     - Sprout Tower Sage Li
     - Old Rod
