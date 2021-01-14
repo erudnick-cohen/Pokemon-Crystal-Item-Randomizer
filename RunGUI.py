@@ -85,7 +85,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			_translate = QtCore.QCoreApplication.translate
 		except Exception:
 			error_dialog = QtWidgets.QErrorMessage()
-			error_dialog.showMessage(''.join(traceback.format_stack()))
+			error_dialog.showMessage(''.join(traceback.format_exc()))
 			error_dialog.exec_()
 
 		
