@@ -7,7 +7,7 @@ def makeItemCodeDict():
 	itemCodeDict = {}
 	
 	#progress items
-	filestream = open('ItemData/ProgressItems.yml')
+	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
@@ -15,7 +15,7 @@ def makeItemCodeDict():
 			itemCodeDict[i["Name"]] = i["Output"].upper()
 	
 	#trash items
-	filestream = open('ItemData/trashItems.yml')
+	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
@@ -42,7 +42,7 @@ def makeRawItemCodeDict(progRod = False):
 	keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD','Zephyr Badge' : 'ENGINE_ZEPHYRBADGE', 'Hive Badge':'ENGINE_HIVEBADGE','Plain Badge':'ENGINE_PLAINBADGE','Fog Badge':'ENGINE_FOGBADGE', 'Storm Badge':'ENGINE_STORMBADGE', 'Mineral Badge':'ENGINE_MINERALBADGE', 'Glacier Badge':'ENGINE_GLACIERBADGE','Rising Badge':'ENGINE_RISINGBADGE', 'Boulder Badge':'ENGINE_BOULDERBADGE','Cascade Badge':'ENGINE_CASCADEBADGE','Thunder Badge':'ENGINE_THUNDERBADGE','Rainbow Badge':'ENGINE_RAINBOWBADGE', 'Soul Badge':'ENGINE_SOULBADGE','Marsh Badge':'ENGINE_MARSHBADGE','Volcano Badge':'ENGINE_VOLCANOBADGE','Earth Badge':'ENGINE_EARTHBADGE'}
 	itemCodeDict = {}
 	#progress items
-	filestream = open('ItemData/ProgressItems.yml')
+	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
@@ -50,14 +50,14 @@ def makeRawItemCodeDict(progRod = False):
 			itemCodeDict[i["Name"]] = i["Output"].upper()
 	
 	#trash items
-	filestream = open('ItemData/trashItems.yml')
+	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"]
 	rawTable = {}
-	with open('ItemValues.csv', newline='') as csvfile:
+	with open('ItemValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
 			print(i)
@@ -66,7 +66,7 @@ def makeRawItemCodeDict(progRod = False):
 					rawTable[i[0]] = (int(i[1]), 'Rod')
 				else:
 					rawTable[i[0]] = (int(i[1]), 'Item')
-	with open('FlagValues.csv', newline='') as csvfile:
+	with open('FlagValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
 			print(i)
@@ -86,7 +86,7 @@ def makeItemTextDict():
 	itemCodeDict = {}
 	
 	#progress items
-	filestream = open('ItemData/ProgressItems.yml')
+	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
@@ -94,7 +94,7 @@ def makeItemTextDict():
 			itemCodeDict[i["Name"]] = i["Name"]
 			
 	#trash items
-	filestream = open('ItemData/trashItems.yml')
+	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
 	data = filestream.read()
 	yamlTree = yaml.load(data)
 	if not yamlTree["Items"] is None:
