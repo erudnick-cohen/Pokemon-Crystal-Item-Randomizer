@@ -109,7 +109,10 @@ Changes:
         Location: Goldenrod City Flower Shop
         NewItemReqs:
             - Bicycle
-
+    -
+        Location: Goldenrod City Buy Rock Smash
+        NewItemReqs:
+            - Bicycle
 
 
 

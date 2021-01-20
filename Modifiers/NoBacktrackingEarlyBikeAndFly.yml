@@ -193,7 +193,14 @@ Changes:
         NewItemReqs:
             - Bicycle
             - Fly
-
+    -
+        Location: Goldenrod City Buy Rock Smash
+        NewFlagReqs:
+            - Storm Badge
+            - Rock Smash Purchaseable
+        NewItemReqs:
+            - Bicycle
+            - Fly
 
 
 

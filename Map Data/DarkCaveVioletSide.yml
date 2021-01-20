@@ -22,8 +22,6 @@ Location:
         WildTableList: DARK_CAVE_VIOLET_ENTRANCE
         LocationReqs: Dark Cave Violet Entrance
         FlagReqs:
-            - Goldenrod City Entrance
-            - Rock Smash Purchaseable
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -61,6 +59,8 @@ Location:
                 LocationReqs: Dark Cave Violet
                 FlagReqs:
                     - Zephyr Badge
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash
                     - Flash
@@ -83,6 +83,8 @@ Location:
                 LocationReqs: Dark Cave Violet
                 FlagReqs:
                     - Zephyr Badge
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash
                     - Flash
@@ -105,6 +107,8 @@ Location:
                 LocationReqs: Dark Cave Violet
                 FlagReqs:
                     - Zephyr Badge
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash
                     - Flash
