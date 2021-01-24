@@ -36,6 +36,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 				ptext = pfile.read()
 				patchList.extend(json.loads(ptext))
 	print(changeListDict)
+	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
@@ -58,7 +59,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	Storm.Name = 'Storm Badge'
 	Storm.Code = 32
 	Mineral = Badge.Badge()
-	Mineral.isTrash = True
+	Mineral.isTrash = badgeRandoCheck
 	Mineral.Name = 'Mineral Badge'
 	Mineral.Code = 31
 	Glacier = Badge.Badge()
@@ -71,35 +72,35 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	Rising.Code = 34
 	if('Kanto Mode' in flags):
 		Thunder = Badge.Badge()
-		Thunder.isTrash = True
+		Thunder.isTrash = badgeRandoCheck
 		Thunder.Name = 'Thunder Badge'
 		Thunder.Code = 37
 		Marsh = Badge.Badge()
-		Marsh.isTrash = True
+		Marsh.isTrash = badgeRandoCheck
 		Marsh.Name = 'Marsh Badge'
 		Marsh.Code = 40
 		Rainbow = Badge.Badge()
-		Rainbow.isTrash = True
+		Rainbow.isTrash = badgeRandoCheck
 		Rainbow.Name = 'Rainbow Badge'
 		Rainbow.Code = 38
 		Soul = Badge.Badge()
-		Soul.isTrash = True
+		Soul.isTrash = badgeRandoCheck
 		Soul.Name = 'Soul Badge'
 		Soul.Code = 39
 		Cascade = Badge.Badge()
-		Cascade.isTrash = True
+		Cascade.isTrash = badgeRandoCheck
 		Cascade.Name = 'Cascade Badge'
 		Cascade.Code = 36
 		Boulder = Badge.Badge()
-		Boulder.isTrash = True
+		Boulder.isTrash = badgeRandoCheck
 		Boulder.Name = 'Boulder Badge'
 		Boulder.Code = 35
 		Volcano = Badge.Badge()
-		Volcano.isTrash = True
+		Volcano.isTrash = badgeRandoCheck
 		Volcano.Name = 'Volcano Badge'
 		Volcano.Code = 41
 		Earth = Badge.Badge()
-		Earth.isTrash = True
+		Earth.isTrash = badgeRandoCheck
 		Earth.Name = 'Earth Badge'
 		Earth.Code = 42
 		BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising, 'Thunder Badge': Thunder, 'Marsh Badge' : Marsh, 'Rainbow Badge': Rainbow, 'Soul Badge': Soul, 'Cascade Badge': Cascade,'Boulder Badge': Boulder, 'Volcano Badge': Volcano, 'Earth Badge': Earth}
@@ -126,7 +127,10 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			if(not "BadgeItemShuffle" in otherSettings):
 				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			else:
-				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+				rBadgeList = []
+				for i in BadgeDict:
+					rBadgeList.append(i)
+				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
 				print('bad run, retrying')
 		except Exception as err:
