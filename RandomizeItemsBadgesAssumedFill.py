@@ -77,6 +77,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 			if 'Badge' in i:
 				progressList.remove(i)
 				progressList.append(i)
+				
+	#put surf at the front of the list because with badges being shuffled, there is otherwise an abnormal bias towards early surf
+	progressList.remove('Surf')
+	progressList.append('Surf')
 	#print(progressList)
 	
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
