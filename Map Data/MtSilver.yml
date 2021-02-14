@@ -10,7 +10,9 @@ Location:
             - Mt. Silver Unlock
             - Became Champion
         FlagReqs:
+            - Hive Badge
         ItemReqs:
+            - Cut
         FlagsSet:
         ReachableReqs:
         NormalItem: TM_STEEL_WING
