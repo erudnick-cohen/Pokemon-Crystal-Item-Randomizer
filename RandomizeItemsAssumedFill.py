@@ -11,7 +11,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	progressList = copy.copy(progressItems)
 	progressList.extend(reqBadges)
 	progressSet = copy.copy(progressList)
-	coreProgress = list(set(coreProgress).intersection(set(progressSet)))
+	coreProgress = list(sorted(set(coreProgress).intersection(set(progressSet))))
 	locList = LoadLocationData.FlattenLocationTree(locationTree)
 	allocatedList = []
 

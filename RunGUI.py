@@ -12,6 +12,7 @@ import RunCustomRandomizationAssumedFill as RunCustomRandomization
 from shutil import copyfile
 from collections import OrderedDict
 import traceback
+import hashlib
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -40,7 +41,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		rngSeed = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
 		if(self.SeedInput.text() != ''):
 			rngSeed = self.SeedInput.text()
-		random.seed(rngSeed)
+		rngSeedBytes = rngSeed.encode('utf-8')
+		random.seed(int(hashlib.md5(rngSeedBytes).hexdigest(),16))
 		_translate = QtCore.QCoreApplication.translate
 		yamlfile = open(self.settings['BasePatch'])
 		yamltext = yamlfile.read()

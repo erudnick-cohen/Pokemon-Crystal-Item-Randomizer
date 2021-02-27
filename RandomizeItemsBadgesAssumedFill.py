@@ -8,26 +8,32 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
 	inputFlags.append('Ok')
 	#build progress set
-	progressList = copy.copy(progressItems)
-	progressList.extend(reqBadges)
+	progressList = copy.copy(sorted(progressItems))
+	progressList.extend(sorted(reqBadges))
 	progressSet = copy.copy(progressList)
-	coreProgress = list(set(coreProgress).intersection(set(progressSet)))
-	locList = LoadLocationData.FlattenLocationTree(locationTree)
+	coreProgress = list(sorted(set(coreProgress).intersection(set(progressSet))))
+	locList = sorted(LoadLocationData.FlattenLocationTree(locationTree), key= lambda i: ''.join(i.Name).join(i.requirementsNeeded(defaultdict(lambda: False))))
 	allocatedList = []
 
 	#define set of badges
-	badgeSet = list(badgeData.keys())
+	badgeSet = list(sorted(badgeData.keys()))
 	#define set of trash badges
-	trashBadges = list(set(badgeData.keys()).difference(set(reqBadges)))
+	trashBadges = list(sorted(set(badgeData.keys()).difference(set(reqBadges))))
 	trashItems.extend(trashBadges)
+	trashItems.sort()
 	#stores current requirements for each location
 	requirementsDict = defaultdict(lambda: [])
 
 	#shuffle the lists (no seriously, this is a perfectly valid randomization strategy)
-	random.shuffle(locList)
-	random.shuffle(progressList)
-	random.shuffle(coreProgress)
-	random.shuffle(trashItems)
+	#random.shuffle(locList)
+	#random.shuffle(progressList)
+	#random.shuffle(coreProgress)
+	#random.shuffle(trashItems)
+	locList = random.sample(locList, k=len(locList))
+	progressList = random.sample(progressList, k=len(progressList))
+	coreProgress = random.sample(coreProgress, k=len(coreProgress))
+	trashItems = random.sample(trashItems, k=len(trashItems))
+
 	#build spoiler
 	spoiler = {}
 	#print('Building mappings')
@@ -52,7 +58,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 		if i.Type == 'Item':
 			itemCount = itemCount+1
 	#print('Total number of items: '+str(itemCount))
-	
+	E4Badges = random.sample(badgeSet,8)
+	#print('E4Badges')
+	#print(E4Badges)
+	#choose 8 random badges and make them the "required" badges to access the elite 4
+	#this is needed to break the randomizer's addiction to E4 required seeds on extreme
+	if 'Sane Extreme E4 Access' in inputFlags:
+		for i in requirementsDict['8 Badges']:
+			i.extend(E4Badges)
 	#if we are in plando mode (explicit placements, only use explicit checks for locations which have the option)
 	if(len(plandoPlacements)>0):
 		for i in requirementsDict:
@@ -100,7 +113,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 	#print(progressList)
 	#keep copy of initial requirements dictionary to check tautologies
 	initReqDict = copy.copy(requirementsDict)
-	usedFlagsList = list(set(allReqsList).intersection(allPossibleFlags))
+	usedFlagsList = list(sorted(set(allReqsList).intersection(allPossibleFlags)))
 	#begin assumed fill loop
 	valid = True
 	# while(len(progressList)>0 and valid):

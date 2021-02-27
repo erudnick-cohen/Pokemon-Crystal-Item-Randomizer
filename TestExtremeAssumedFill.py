@@ -2,9 +2,13 @@ import RunCustomRandomizationAssumedFill as RunCustomRandomization
 import yaml
 import json
 from shutil import copyfile
-
 romPath = 'testTrickyAgainBase - Copy.gbc'
 copyfile(romPath, 'Hmmm'+romPath)
+
+import os
+os.environ['PYTHONHASHSEED'] = '0'
+import random
+random.seed(0,1)
 
 yamlfile = open("Modes/Extreme.yml")
 yamltext = yamlfile.read()
