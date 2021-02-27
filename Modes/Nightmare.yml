@@ -1,0 +1,26 @@
+Name: Nightmare Logic
+Description: This setting isn't meant to be fun. It's customary to also turn on spinner hell. All settings to prevent fighting potentially impossible bosses early have been disabled, but you're a master at Pokemon Crystal, so this shouldn't be an issue right? People have complained about Fly's location deciding races, so we've deleted fly and replaced it with a berry. The bike can now be anywhere in the game, including Mt. Silver. The logic is also set to maximum evil mode. The seed will still be beatable, but who knows how long it will take, or if you'll even be able to.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+CoreProgress:
+    -'Surf'
+    -'Fog Badge'
+    -'Pass'
+    -'S S Ticket'
+    -'Squirtbottle'
+DefaultModifiers:
+    - Modifiers/DeleteFly.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/CardRandomization.yml
+BannedLocations:
+AllowedLocations:
+Goal: Mt. Silver
+FlagsSet:
+    - Kanto Mode
