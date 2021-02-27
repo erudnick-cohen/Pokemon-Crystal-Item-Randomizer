@@ -36,8 +36,18 @@ Changes:
         NewFlagReqs:
             - Rocket Invasion
             - Kanto Mode
-            
-            
+    -
+        Location: Vermillion Gym via Surf
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+            - Fog Badge
+    -
+        Location: Vermillion Gym via Cut
+        NewFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+            - Hive Badge
     -
         Location: Early Sabrina
         NewFlagReqs:

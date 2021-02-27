@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Vermillion city to Gym
+        Name: To Vermillion Gym via Surf
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
@@ -17,7 +17,7 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion city to Gym
+        Name: To Vermillion Gym via Cut
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
@@ -27,6 +27,36 @@ Location:
             - Hive Badge
         ItemReqs:
             - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Vermillion city to Gym
+        FileName: VermilionGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: To Vermillion Gym via Surf
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: 
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Vermillion city to Gym
+        FileName: VermilionGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: To Vermillion Gym via Cut
+        FlagReqs:
+        ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code: 
