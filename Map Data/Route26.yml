@@ -79,12 +79,7 @@ Location:
         WildTableList: 
         LocationReqs: League Gate via Route 26
         FlagReqs:
-            - 8 Badges
-            - Rising Badge
-            - Fog Badge
         ItemReqs:
-            - Surf
-            - Waterfall
         FlagsSet:
         ReachableReqs:
         Code:
@@ -120,10 +115,7 @@ Location:
         LocationReqs:
             - League Gate via Viridian
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
-            - Machine Part
         FlagsSet:
         ReachableReqs:
         Code:
