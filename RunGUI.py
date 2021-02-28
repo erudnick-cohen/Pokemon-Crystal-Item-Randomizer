@@ -54,7 +54,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.Randomize.setEnabled(False)
 			self.Randomize.setText(_translate("MainWindow", "Randomizing"))
 			QtGui.QGuiApplication.processEvents()
-			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file')
+			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.2 Rom as the base rom, or your game WILL crash.')
 			validFileName = False
 			while not validFileName:
 				file = QFileDialog.getSaveFileName(directory = '.')[0]
