@@ -21,3 +21,25 @@ Location:
             - SWIMMERF 1
             - SWIMMERF 2
         Sublocations:
+            -
+                Name: Route 40 Hidden Hyper Potion
+                FileName: Route40.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route40
+                FlagReqs:
+                    - Hidden Items
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                    - Rock Smash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    Route40HiddenHyperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

@@ -89,3 +89,22 @@ Location:
             - SAILOR 1
             - POKEFANF 6
         Sublocations:
+            -
+                Name: Route 39 Hidden Nugget
+                FileName: Route39.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 39
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: NUGGET
+                Code: |
+                    Route39HiddenNugget:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

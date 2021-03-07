@@ -165,6 +165,65 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Lake of Rage Hidden Full Restore
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    LakeOfRageHiddenFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Lake of Rage Hidden Max Potion
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    LakeOfRageHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Lake of Rage Hidden Rare Candy
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hidden Items
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: RARE_CANDY
+                Code: |
+                    LakeOfRageHiddenRareCandy:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:                
 
                 
                 

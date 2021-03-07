@@ -270,6 +270,69 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
+                    -
+                        Name: Whirl Islands Hidden Rare Candy
+                        FileName: WhirlIslandB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Whirl Islands Requires Flash
+                        FlagReqs:
+                            - Hidden Items
+                            - Glacier Badge
+                        ItemReqs:
+                            - Whirlpool
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: RARE_CANDY
+                        Code: |
+                            WhirlIslandB1FHiddenRareCandy:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Whirl Islands Hidden Ultra Ball
+                        FileName: WhirlIslandB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Whirl Islands Requires Flash
+                        FlagReqs:
+                            - Hidden Items
+                            - Glacier Badge
+                        ItemReqs:
+                            - Whirlpool
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ULTRA_BALL
+                        Code: |
+                            WhirlIslandB1FHiddenUltraBall:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Whirl Islands Hidden Full Restore
+                        FileName: WhirlIslandB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Whirl Islands Requires Flash
+                        FlagReqs:
+                            - Hidden Items
+                            - Glacier Badge
+                        ItemReqs:
+                            - Whirlpool
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        Code: |
+                            WhirlIslandB1FHiddenFullRestore:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
 
 
 

@@ -57,6 +57,25 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Mt Mortar Hidden Hyper Potion
+                FileName: MountMortar1FOutside.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    MountMortar1FOutsideHiddenHyperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Mt Mortar Inside Entry
                 FileName: MountMortar1FInside.asm
                 Type: Map
@@ -489,6 +508,63 @@ Location:
                                 ITEMLINE
                         Text:
                         TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Hidden Full Restore
+                        FileName: MountMortar2FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        Code: |
+                            MountMortar2FInsideHiddenFullRestore:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Hidden Max Revive
+                        FileName: MountMortarB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_REVIVE
+                        Code: |
+                            MountMortarB1FHiddenMaxRevive:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Hidden Max Repel
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Upper Floor
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_REPEL
+                        Code: |
+                            MountMortar1FInsideHiddenMaxRepel:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
                         Sublocations:
 
 

@@ -124,6 +124,46 @@ Location:
                 TrainerList:
                 Sublocations:
             -
+                Name: Goldenrod Tunnel Hidden Max Potion
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Tunnel
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Basement Key
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Tunnel Hidden Revive
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Tunnel
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Basement Key
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Goldenrod Tunnel Max Ether
                 FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item

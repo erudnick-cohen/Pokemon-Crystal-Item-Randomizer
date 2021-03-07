@@ -328,3 +328,66 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Tin Tower Hidden Max Potion
+                FileName: TinTower4F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Climb Tin Tower
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Clear Bell
+                    - Rainbow Wing
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    TinTower4FHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Tin Tower Hidden Full Restore
+                FileName: TinTower5F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Climb Tin Tower
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Clear Bell
+                    - Rainbow Wing
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    TinTower5FHiddenFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Tin Tower Hidden Carbos
+                FileName: TinTower5F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Climb Tin Tower
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Clear Bell
+                    - Rainbow Wing
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CARBOS
+                Code: |
+                    TinTower5FHiddenCarbos:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

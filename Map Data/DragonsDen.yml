@@ -61,6 +61,71 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Dragons Den Hidden Max Potion
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    DragonsDenB1FHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dragons Den Hidden Revive
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    DragonsDenB1FHiddenRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dragons Den Hidden Max Elixer
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ELIXER
+                Code: |
+                    DragonsDenB1FHiddenMaxElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Dragons Den Shrine
         FileName: DragonShrine.asm

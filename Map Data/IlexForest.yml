@@ -332,4 +332,61 @@ Location:
                         line "enticed by it."
                         done
                 TrainerList: 
-                Sublocations:   
+                Sublocations:
+            -
+                Name: Ilex Forest Hidden Ether
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    IlexForestHiddenEther:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations: 
+            -
+                Name: Ilex Forest Hidden Super Potion
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    IlexForestHiddenSuperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations: 
+            -
+                Name: Ilex Forest Hidden Full Heal
+                FileName: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    IlexForestHiddenFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:                 

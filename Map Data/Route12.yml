@@ -110,3 +110,43 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 12 Hidden Elixer
+                FileName: Route12.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 12
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ELIXER
+                Code: |
+                    Route12HiddenElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 13 Hidden Calcium
+                FileName: Route13.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 12
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CALCIUM
+                Code: |
+                    Route13HiddenCalcium:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

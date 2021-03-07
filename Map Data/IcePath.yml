@@ -56,6 +56,25 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Ice Path Hidden Carbos
+                FileName: IcePathB2FMahoganySide.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ice Path Part 1
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CARBOS
+                Code: |
+                    IcePathB2FMahoganySideHiddenCarbos:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Ice Path Part 2
         FileName: IcePathB1F.asm
@@ -183,6 +202,44 @@ Location:
                 NormalItem: PROTEIN
                 Code: |
                     IcePath1FProtein:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ice Path Hidden Max Potion
+                FileName: IcePathB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ice Path Part 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    IcePathB1FHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Ice Path Hidden Ice Heal
+                FileName: IcePathB2FBlackthornSide.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ice Path Part 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ICE_HEAL
+                Code: |
+                    IcePathB2FBlackthornSideHiddenIceHeal:
                         ITEMLINE
                 Text:
                 TrainerList: 

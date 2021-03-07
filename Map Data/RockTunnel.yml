@@ -178,4 +178,67 @@ Location:
                 NormalItem: REVIVE
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Rock Tunnel Hidden X Accuracy
+                FileName: RockTunnel1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rock Tunnel
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_ACCURACY
+                Code: |
+                    RockTunnel1FHiddenXAccuracy:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Rock Tunnel Hidden X Defend
+                FileName: RockTunnel1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rock Tunnel
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_DEFEND
+                Code: |
+                    RockTunnel1FHiddenXDefend:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Rock Tunnel Hidden Max Potion
+                FileName: RockTunnelB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rock Tunnel
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    RockTunnelB1FHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
 

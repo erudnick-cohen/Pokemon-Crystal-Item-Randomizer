@@ -159,3 +159,23 @@ Location:
                 Text:
                 TrainerList:
                 Sublocations:
+            -
+                Name: Olivine Port Hidden Protein
+                FileName: OlivinePort.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Olivine City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - S S Ticket
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                Code: |
+                    OlivinePortHiddenProtein:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

@@ -54,6 +54,27 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 42 Hidden Max Potion
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    Route42HiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Route 42 end
         FileName: Route42.asm

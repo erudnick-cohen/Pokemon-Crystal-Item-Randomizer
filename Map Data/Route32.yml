@@ -222,3 +222,41 @@ Location:
 
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 32 Hidden Great Ball
+                FileName: Route32.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 32
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: GREAT_BALL
+                Code: |
+                    Route32HiddenGreatBall:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 32 Hidden Super Potion
+                FileName: Route32.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 32
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    Route32HiddenSuperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

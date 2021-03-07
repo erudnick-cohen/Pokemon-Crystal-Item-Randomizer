@@ -99,3 +99,24 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+    -
+        Name: Route 45 Hidden PP Up
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 45
+        FlagReqs:
+            - Hidden Items
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: PP_UP
+        Code: |
+            Route45HiddenPpUp:
+                ITEMLINE
+        Text:
+        TrainerList: 
+        Sublocations:
