@@ -15,222 +15,241 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                    Name: Route 30 Antidote
-                    FileName: Route30.asm
-                    Type: Item
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Route 30
-                    FlagReqs:
-                    ItemReqs:
-                    FlagsSet:
-                    ReachableReqs:
-                    NormalItem: ANTIDOTE
-                    IsBall: Yes
-                    Code: |
-                        Route30Antidote:
-                            ITEMLINE
-                    Text:
-                    TrainerList: 
-                    Sublocations:
+                Name: Route 30 Antidote
+                FileName: Route30.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ANTIDOTE
+                IsBall: Yes
+                Code: |
+                    Route30Antidote:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
             -
-                    Name: Route 30 Berry Man
-                    FileName: Route30BerryHouse.asm
-                    Type: Item
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Route 30
-                    FlagReqs:
-                    ItemReqs:
-                    FlagsSet:
-                    ReachableReqs:
-                    NormalItem: BERRY
-                    Code: |
-                        Route30BerryHousePokefanMScript:
-                            faceplayer
-                            opentext
-                            checkevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
-                            iftrue .GotBerry
-                            writetext Route30BerrySpeechHouseMonEatBerriesText
-                            promptbutton
-                            ITEMLINE
-                            iffalse .NoRoom
-                            setevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
-                        .GotBerry:
-                            writetext Route30BerrySpeechHouseCheckTreesText
-                            waitbutton
-                        .NoRoom:
-                            closetext
-                            end
-                    Text: |
-                        UnknownText_0x196d82:
-                            text "You know, #MON"
-                            line "eat BERRIES."
-
-                            para "Well, my #MON"
-                            line "got healthier by"
-                            cont "eating a ITEMNAME."
-
-                            para "Here. I'll share"
-                            line "one with you!"
-                            done
-                    TrainerList: 
-                    Sublocations:
+                Name: Route 30 Hidden Potion
+                FileName: Route30.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    Route30HiddenPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
             -
-                    Name: Mr. Pokemon's Egg
-                    FileName: MrPokemonsHouse.asm
-                    Type: Item
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Route 30
-                    FlagReqs:
-                    ItemReqs:
-                    FlagsSet: Mr. Pokemon Visited
-                    ReachableReqs:
-                    Code: |
-                        .MrPokemonEvent:
-                            showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
-                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
-                            opentext
-                            writetext MrPokemonIntroText1
-                            waitbutton
-                            closetext
-                            applymovement PLAYER, MrPokemonsHouse_PlayerWalksToMrPokemon
-                            opentext
-                            writetext MrPokemonIntroText2
-                            promptbutton
-                            waitsfx
-                            ITEMLINE
-                            setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-                            blackoutmod CHERRYGROVE_CITY
-                            writetext MrPokemonIntroText3
-                            promptbutton
-                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
-                            writetext MrPokemonIntroText4
-                            promptbutton
-                            turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
-                            turnobject MRPOKEMONSHOUSE_OAK, LEFT
-                            writetext MrPokemonIntroText5
-                            waitbutton
-                            closetext
-                            sjump MrPokemonsHouse_OakScript
-                    Text: |
-                        MrPokemonsHouse_GotEggText:
-                            text "<PLAYER> received"
-                            line "ITEMNAME."
-                            done
-                    TrainerList: 
-                    Sublocations:
+                Name: Route 30 Berry Man
+                FileName: Route30BerryHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BERRY
+                Code: |
+                    Route30BerryHousePokefanMScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
+                        iftrue .GotBerry
+                        writetext Route30BerrySpeechHouseMonEatBerriesText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .NoRoom
+                        setevent EVENT_GOT_BERRY_FROM_ROUTE_30_HOUSE
+                    .GotBerry:
+                        writetext Route30BerrySpeechHouseCheckTreesText
+                        waitbutton
+                    .NoRoom:
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x196d82:
+                        text "You know, #MON"
+                        line "eat BERRIES."
+
+                        para "Well, my #MON"
+                        line "got healthier by"
+                        cont "eating a ITEMNAME."
+
+                        para "Here. I'll share"
+                        line "one with you!"
+                        done
+                TrainerList: 
+                Sublocations:
             -
-                    Name: Pokedex
-                    FileName: MrPokemonsHouse.asm
-                    Type: Item
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Route 30
-                    FlagReqs:
-                        - Impossible
-                    ItemReqs:
-                    FlagsSet:
-                    NormalItem:
-                    ReachableReqs:
-                    Code: |
-                        MrPokemonsHouse_OakScript:
-                            playmusic MUSIC_PROF_OAK
-                            applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToPlayer
-                            turnobject PLAYER, RIGHT
-                            opentext
-                            writetext MrPokemonsHouse_OakText1
-                            promptbutton
-                            waitsfx
-                            ITEMLINE
-                            writetext MrPokemonsHouse_OakText2
-                            waitbutton
-                            closetext
-                            turnobject PLAYER, DOWN
-                            applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
-                            playsound SFX_EXIT_BUILDING
-                            disappear MRPOKEMONSHOUSE_OAK
-                            waitsfx
-                            special RestartMapMusic
-                            pause 15
-                            turnobject PLAYER, UP
-                            opentext
-                            writetext MrPokemonsHouse_MrPokemonHealText
-                            waitbutton
-                            closetext
-                            special FadeBlackQuickly
-                            special ReloadSpritesNoPalettes
-                            playmusic MUSIC_HEAL
-                            special StubbedTrainerRankings_Healings
-                            special HealParty
-                            pause 60
-                            special FadeInQuickly
-                            special RestartMapMusic
-                            opentext
-                            writetext MrPokemonText_ImDependingOnYou
-                            waitbutton
-                            closetext
-                            setevent EVENT_RIVAL_NEW_BARK_TOWN
-                            setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-                            clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
-                            setscene SCENE_FINISHED
-                            setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
-                            setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
-                            specialphonecall SPECIALCALL_ROBBED
-                            clearevent EVENT_COP_IN_ELMS_LAB
-                            checkevent EVENT_GOT_TOTODILE_FROM_ELM
-                            iftrue .RivalTakesChikorita
-                            checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-                            iftrue .RivalTakesCyndaquil
-                            setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-                            end
-                    Text: |
-                    TrainerList: 
-                    Sublocations:
+                Name: Mr. Pokemon's Egg
+                FileName: MrPokemonsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                ItemReqs:
+                FlagsSet: Mr. Pokemon Visited
+                ReachableReqs:
+                Code: |
+                    .MrPokemonEvent:
+                        showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
+                        turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                        opentext
+                        writetext MrPokemonIntroText1
+                        waitbutton
+                        closetext
+                        applymovement PLAYER, MrPokemonsHouse_PlayerWalksToMrPokemon
+                        opentext
+                        writetext MrPokemonIntroText2
+                        promptbutton
+                        waitsfx
+                        ITEMLINE
+                        setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+                        blackoutmod CHERRYGROVE_CITY
+                        writetext MrPokemonIntroText3
+                        promptbutton
+                        turnobject MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
+                        writetext MrPokemonIntroText4
+                        promptbutton
+                        turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
+                        turnobject MRPOKEMONSHOUSE_OAK, LEFT
+                        writetext MrPokemonIntroText5
+                        waitbutton
+                        closetext
+                        sjump MrPokemonsHouse_OakScript
+                Text: |
+                    MrPokemonsHouse_GotEggText:
+                        text "<PLAYER> received"
+                        line "ITEMNAME."
+                        done
+                TrainerList: 
+                Sublocations:
             -
-                    Name: Mr. Pokemon's EXP Share
-                    FileName: MrPokemonsHouse.asm
-                    Type: Item
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Route 30
-                    FlagReqs: Mr. Pokemon Visited
-                    ItemReqs: Red Scale
-                    FlagsSet: 
-                    ReachableReqs:
-                    NormalItem: EXP_SHARE
-                    Code: |
-                        .RedScale:
-                            checkmbpermaoptions EXP_SPLITTING, GEN8
-                            iftrue .AlwaysNewDiscoveries
-                            writetext MrPokemonText_GimmeTheScale
-                            yesorno
-                            iffalse .refused
-                            checkmbpermaoptions EXP_SPLITTING, GEN67
-                            iftrue .Gen67ExpShare
-                            ITEMLINE
-                            iffalse .full
-                            takeitem RED_SCALE
-                            sjump .AlwaysNewDiscoveries
-                    Text: |
-                        MrPokemonText_GimmeTheScale:
-                            text "Hm? That SCALE!"
-                            line "What's that?"
-                            cont "A red GYARADOS?"
+                Name: Pokedex
+                FileName: MrPokemonsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                    - Impossible
+                ItemReqs:
+                FlagsSet:
+                NormalItem:
+                ReachableReqs:
+                Code: |
+                    MrPokemonsHouse_OakScript:
+                        playmusic MUSIC_PROF_OAK
+                        applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToPlayer
+                        turnobject PLAYER, RIGHT
+                        opentext
+                        writetext MrPokemonsHouse_OakText1
+                        promptbutton
+                        waitsfx
+                        ITEMLINE
+                        writetext MrPokemonsHouse_OakText2
+                        waitbutton
+                        closetext
+                        turnobject PLAYER, DOWN
+                        applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
+                        playsound SFX_EXIT_BUILDING
+                        disappear MRPOKEMONSHOUSE_OAK
+                        waitsfx
+                        special RestartMapMusic
+                        pause 15
+                        turnobject PLAYER, UP
+                        opentext
+                        writetext MrPokemonsHouse_MrPokemonHealText
+                        waitbutton
+                        closetext
+                        special FadeBlackQuickly
+                        special ReloadSpritesNoPalettes
+                        playmusic MUSIC_HEAL
+                        special StubbedTrainerRankings_Healings
+                        special HealParty
+                        pause 60
+                        special FadeInQuickly
+                        special RestartMapMusic
+                        opentext
+                        writetext MrPokemonText_ImDependingOnYou
+                        waitbutton
+                        closetext
+                        setevent EVENT_RIVAL_NEW_BARK_TOWN
+                        setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
+                        clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
+                        setscene SCENE_FINISHED
+                        setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
+                        setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
+                        specialphonecall SPECIALCALL_ROBBED
+                        clearevent EVENT_COP_IN_ELMS_LAB
+                        checkevent EVENT_GOT_TOTODILE_FROM_ELM
+                        iftrue .RivalTakesChikorita
+                        checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+                        iftrue .RivalTakesCyndaquil
+                        setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+                        end
+                Text: |
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mr. Pokemon's EXP Share
+                FileName: MrPokemonsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs: Mr. Pokemon Visited
+                ItemReqs: Red Scale
+                FlagsSet: 
+                ReachableReqs:
+                NormalItem: EXP_SHARE
+                Code: |
+                    .RedScale:
+                        checkmbpermaoptions EXP_SPLITTING, GEN8
+                        iftrue .AlwaysNewDiscoveries
+                        writetext MrPokemonText_GimmeTheScale
+                        yesorno
+                        iffalse .refused
+                        checkmbpermaoptions EXP_SPLITTING, GEN67
+                        iftrue .Gen67ExpShare
+                        ITEMLINE
+                        iffalse .full
+                        takeitem RED_SCALE
+                        sjump .AlwaysNewDiscoveries
+                Text: |
+                    MrPokemonText_GimmeTheScale:
+                        text "Hm? That SCALE!"
+                        line "What's that?"
+                        cont "A red GYARADOS?"
 
-                            para "That's rare! "
-                            line "I, I want it…"
+                        para "That's rare! "
+                        line "I, I want it…"
 
-                            para "<PLAY_G>, would you"
-                            line "care to trade it?"
+                        para "<PLAY_G>, would you"
+                        line "care to trade it?"
 
-                            para "I can offer this"
-                            line "ITEMNAME I got"
-                            cont "from PROF.OAK."
-                            done
-                    TrainerList: 
-                    Sublocations:                                
+                        para "I can offer this"
+                        line "ITEMNAME I got"
+                        cont "from PROF.OAK."
+                        done
+                TrainerList: 
+                Sublocations:                                
             -
                 Name: Route 30 towards Route 31
                 FileName: Route30.asm

@@ -87,6 +87,25 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+            -
+                Name: Ecruteak City Hidden Hyper Potion
+                FileName: EcruteakCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    EcruteakCityHiddenHyperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
             -    
                 Name: Dance Theatre
                 FileName: DanceTheatre.asm

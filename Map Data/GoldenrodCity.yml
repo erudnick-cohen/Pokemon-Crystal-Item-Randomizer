@@ -425,4 +425,60 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            
+            -
+                Name: Goldenrod Underground Hidden Paralyze Heal
+                FileName: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PARLYZ_HEAL
+                Code: |
+                    GoldenrodUndergroundHiddenParlyzHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Underground Hidden Super Potion
+                FileName: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    GoldenrodUndergroundHiddenSuperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Underground Hidden Antidote
+                FileName: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ANTIDOTE
+                Code: |
+                    GoldenrodUndergroundHiddenAntidote:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

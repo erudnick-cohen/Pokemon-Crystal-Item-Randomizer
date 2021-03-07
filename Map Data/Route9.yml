@@ -25,3 +25,22 @@ Location:
             - PICNICKER 13
             - HIKER 15
         Sublocations:
+            -
+                Name: Route 9 Hidden Ether
+                FileName: Route9.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 9
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    Route9HiddenEther:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

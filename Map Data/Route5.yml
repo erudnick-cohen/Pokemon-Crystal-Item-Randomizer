@@ -49,3 +49,43 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Underground Path Hidden Full Restore
+                FileName: UndergroundPath.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 5
+                FlagReqs:
+                    - Hidden Items
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    UndergroundPathHiddenFullRestore:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Underground Path Hidden X Special
+                FileName: UndergroundPath.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 5
+                FlagReqs:
+                    - Hidden Items
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_SPECIAL
+                Code: |
+                    UndergroundPathHiddenXSpecial:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

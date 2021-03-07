@@ -72,3 +72,22 @@ Location:
             - YOUNGSTER 11
             - PSYCHIC_T 3
         Sublocations:
+            -
+                Name: Route 11 Hidden Revive
+                FileName: Route11.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 11
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    Route11HiddenRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

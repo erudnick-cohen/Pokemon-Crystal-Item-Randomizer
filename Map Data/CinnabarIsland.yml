@@ -1,38 +1,36 @@
-Location:  
+Location:
     -
-        Name: Route 37
-        FileName: Route37.asm
+        Name: Cinnabar Island
+        FileName: CinnabarIsland.asm
         Type: Map
-        HasPKMN: Yes
-        WildTableList: Route_37
-        LocationReqs: Route 36 Sudowoodo Junction
+        HasPKMN: No
+        WildTableList: CINNABAR_ISLAND
+        LocationReqs:
+            - Route 21
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Bothered Blue
         ReachableReqs:
         Code:
         Text:
-        AREALV: 13
-        TrainerList:
-            - TWINS 2
-            - TWINS 3
-            - PSYCHIC_T 5
+        TrainerList: 
         Sublocations:
             -
-                Name: Route 37 Hidden Ether
-                FileName: Route37.asm
+                Name: Cinnabar Island Hidden Rare Candy
+                FileName: CinnabarIsland.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 37
+                LocationReqs: Cinnabar Island
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: ETHER
+                NormalItem: RARE_CANDY
                 Code: |
-                    Route37HiddenEther:
+                    CinnabarIslandHiddenRareCandy:
                         ITEMLINE
                 Text:
                 TrainerList: 

@@ -95,3 +95,22 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 25 Hiden Potion
+                FileName: Route25.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 25
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    Route25HiddenPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

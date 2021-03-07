@@ -113,6 +113,44 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Victory Road Hidden Max Potion
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Victory Road
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    VictoryRoadHiddenMaxPotion:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Victory Road Hidden Full Heal
+                FileName: VictoryRoad.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Victory Road
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    VictoryRoadHiddenFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Elite Four
         FileName: VictoryRoad.asm

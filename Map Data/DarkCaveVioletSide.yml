@@ -122,4 +122,27 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:  
-                
+            -
+                Name: Dark Cave Violet Hidden Elixer
+                FileName: DarkCaveVioletEntrance.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dark Cave Violet
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                    - Rock Smash
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ELIXER
+                Code: |
+                    DarkCaveVioletEntranceHiddenElixer:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

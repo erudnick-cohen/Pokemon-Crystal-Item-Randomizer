@@ -15,3 +15,25 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+            -
+                Name: Cerulean City Hidden Berserk Gene
+                FileName: CeruleanCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean City
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BERSERK_GENE
+                Code: |
+                    CeruleanCityHiddenBerserkGene:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+        

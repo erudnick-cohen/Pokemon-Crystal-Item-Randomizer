@@ -105,3 +105,22 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Behind Slowpoke Well Hidden
+                FileName: AzaleaTown.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Azalea Town
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    AzaleaTownHiddenFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

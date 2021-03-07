@@ -196,3 +196,43 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
+            -
+                Name: Vermilion City Hidden Full Heal
+                FileName: VermillionCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Vermilion City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    VermilionCityHiddenFullHeal:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Vermilion Port Hidden Iron
+                FileName: VermillionPort.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Vermilion City
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: IRON
+                Code: |
+                    VermilionPortHiddenIron:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:

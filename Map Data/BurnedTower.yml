@@ -39,6 +39,46 @@ Location:
                 AREALV:
                 TrainerList:
                 Sublocations:
+            -
+                Name: Burned Tower Hidden Ether
+                FileName: BurnedTower1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    BurnedTower1FHiddenEther:
+                        ITEMLINE
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Burned Tower Hidden Ultra Ball
+                FileName: BurnedTower1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                Code: |
+                    BurnedTower1FHiddenUltraBall:
+                        ITEMLINE
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
     -
         Name: Burned Tower Basement
         FileName: BurnedTowerB1F.asm

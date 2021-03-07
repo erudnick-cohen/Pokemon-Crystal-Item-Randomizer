@@ -17,5 +17,23 @@ Location:
         AREALV: 32
         TrainerList: 
         Sublocations:
-
+            -
+                Name: Diglett's Cave Hidden Max Revive
+                FileName: DiggletsCave.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Digglet's Cave
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_REVIVE
+                Code: |
+                    DiglettsCaveHiddenMaxRevive:
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
 
