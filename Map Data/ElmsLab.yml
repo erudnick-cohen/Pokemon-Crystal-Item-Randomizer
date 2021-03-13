@@ -16,7 +16,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: ElmAide1
+                Name: Elm Aide Potion
                 FileName: ElmsLab.asm
                 Type: Item
                 HasPKMN: No
@@ -184,3 +184,4 @@ Location:
                         waitbutton
                         closetext
                         end
+                        

@@ -131,7 +131,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Rest TM
+                Name: Ice Path Rest TM
                 FileName: IcePathB2FBlackthornSide.asm
                 Type: Item
                 HasPKMN: No
@@ -244,3 +244,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

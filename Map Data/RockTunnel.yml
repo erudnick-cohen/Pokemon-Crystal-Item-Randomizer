@@ -91,7 +91,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Steel Wing Rock Tunnel
+                Name: Rock Tunnel Steel Wing TM
                 FileName: RockTunnel1F.asm
                 Type: Item
                 HasPKMN: No
@@ -241,4 +241,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
+                

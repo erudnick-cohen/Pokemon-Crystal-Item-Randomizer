@@ -15,7 +15,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 33 actual
+        Name: Route 33 Actual
         FileName: Route33.asm
         Type: Map
         HasPKMN: Yes
@@ -30,4 +30,5 @@ Location:
         AREALV: 7
         TrainerList: 
             - HIKER 5
-        Sublocations:        
+        Sublocations:
+        

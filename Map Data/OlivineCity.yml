@@ -128,7 +128,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Fishing Guru
+                Name: Good Rod Guru
                 FileName: OlivineGoodRodHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -179,3 +179,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

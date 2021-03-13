@@ -377,7 +377,7 @@ Location:
                         TrainerList:
                         Sublocations:
                     -
-                        Name: Defense Curl TM
+                        Name: Mt Mortar Defense Curl TM
                         FileName: MountMortar2FInside.asm
                         Type: Item
                         HasPKMN: No
@@ -566,9 +566,4 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
-
-
-
-
-
                         

@@ -100,7 +100,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Detect TM
+                Name: Lake of Rage Detect TM
                 FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
@@ -121,7 +121,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Hidden Power
+                Name: Lake of Rage Hidden Power TM
                 FileName: LakeOfRageHiddenPowerHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -223,8 +223,5 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:                
-
-                
-                
+                Sublocations:
                 

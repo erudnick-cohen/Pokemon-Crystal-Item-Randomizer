@@ -1,6 +1,6 @@
 Location:
     -
-        Name: To Vermillion Gym via Surf
+        Name: Vermillion Gym via Surf
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
@@ -17,7 +17,7 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: To Vermillion Gym via Cut
+        Name: Vermillion Gym via Cut
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
@@ -34,12 +34,12 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion city to Gym
+        Name: Vermillion City to Gym
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: To Vermillion Gym via Surf
+        LocationReqs: Vermillion Gym via Surf
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -49,12 +49,12 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion city to Gym
+        Name: Vermillion City to Gym
         FileName: VermilionGym.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: To Vermillion Gym via Cut
+        LocationReqs: Vermillion Gym via Cut
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -69,7 +69,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Vermillion city to Gym
+        LocationReqs: Vermillion City to Gym
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -83,3 +83,4 @@ Location:
             - GENTLEMAN 3
             - LT_SURGE 1
         Sublocations:
+        

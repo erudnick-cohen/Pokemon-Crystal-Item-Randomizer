@@ -1,6 +1,6 @@
 Location:  
     -
-        Name: Azalea Town entrance
+        Name: Azalea Town Entrance
         FileName: AzaleaTown.asm
         Type: Map
         HasPKMN: Yes
@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Azalea Town entrance
+        LocationReqs: Azalea Town Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -124,3 +124,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

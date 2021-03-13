@@ -164,7 +164,7 @@ Location:
                     - POKEMANIAC 2
                 Sublocations:            
             -    
-                Name: Union Cave Floor 2 Swift
+                Name: Union Cave Swift TM
                 FileName: UnionCaveB1F.asm
                 Type: Item
                 HasPKMN: No
@@ -280,4 +280,5 @@ Location:
                 NormalItem: HYPER_POTION
                 IsBall: Yes
                 TrainerList: 
-                Sublocations:                  
+                Sublocations:
+                

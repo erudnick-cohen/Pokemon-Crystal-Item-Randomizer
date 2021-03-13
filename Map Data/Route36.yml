@@ -102,7 +102,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 36 Rock Smash Item
+        Name: Rock Smash Guy
         FileName: Route36.asm
         Type: Item
         HasPKMN: No
@@ -138,4 +138,5 @@ Location:
                 cont "smash 'em up!"
                 done
         TrainerList: 
-        Sublocations:          
+        Sublocations:
+        

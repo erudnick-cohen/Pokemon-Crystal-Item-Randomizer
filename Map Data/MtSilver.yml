@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Steel Wing MT Silver
+        Name: Route 28 Steel Wing TM
         FileName: Route28SteelWingHouse.asm
         Type: Item
         HasPKMN: No
@@ -54,7 +54,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Mt. Silver Hidden Full Restore
+        Name: Mt. Silver Outside Hidden Full Restore
         FileName: SilverCaveOutside.asm
         Type: Item
         HasPKMN: No
@@ -377,12 +377,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
-
-
-
-
-
-
-
                 

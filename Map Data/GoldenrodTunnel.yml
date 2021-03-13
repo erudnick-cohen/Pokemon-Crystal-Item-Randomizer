@@ -184,7 +184,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Sleep Talk TM
+                Name: Goldenrod Tunnel Sleep Talk TM
                 FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
@@ -289,3 +289,4 @@ Location:
             - BURGLAR 1
             - BURGLAR 2
         Sublocations:
+        

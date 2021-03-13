@@ -16,7 +16,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Silver Wing
+                Name: Silver Wing Old Man
                 FileName: PewterCity.asm
                 Type: Item
                 HasPKMN: No
@@ -43,3 +43,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

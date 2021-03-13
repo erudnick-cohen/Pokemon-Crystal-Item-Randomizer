@@ -68,7 +68,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Super Rod
+                Name: Super Rod Guru
                 FileName: Route12SuperRodHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -131,22 +131,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Route 13 Hidden Calcium
-                FileName: Route13.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 12
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: CALCIUM
-                Code: |
-                    Route13HiddenCalcium:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
+                

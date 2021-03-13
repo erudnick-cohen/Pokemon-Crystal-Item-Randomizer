@@ -15,7 +15,7 @@ Location:
             TrainerList: 
             Sublocations:
     -
-            Name: Route 46 upper
+            Name: Route 46 Upper
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
@@ -30,7 +30,7 @@ Location:
             TrainerList: 
             Sublocations:
     -
-            Name: Route 46 upper via Violet
+            Name: Route 46 Upper via Violet
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
@@ -48,12 +48,12 @@ Location:
             TrainerList: 
             Sublocations:
     -
-            Name: Route 46 upper
+            Name: Route 46 Upper
             FileName: Route46.asm
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Route 46 upper via Violet
+            LocationReqs: Route 46 Upper via Violet
             FlagReqs:
             ItemReqs:
             FlagsSet:
@@ -63,13 +63,13 @@ Location:
             TrainerList: 
             Sublocations:
     -
-            Name: Route 46 upper actual
+            Name: Route 46 X Speed
             FileName: Route46.asm
             Type: Item
             HasPKMN: Yes
             WildTableList: 
             LocationReqs: 
-                - Route 46 upper
+                - Route 46 Upper
             FlagReqs:
             ItemReqs:
             FlagsSet:
@@ -86,3 +86,4 @@ Location:
                 - PICNICKER 10
                 - HIKER 11                                
             Sublocations:
+            

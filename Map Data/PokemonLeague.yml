@@ -95,7 +95,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Earthquake TM
+                Name: Victory Road Earthquake TM
                 FileName: VictoryRoad.asm
                 Type: Item
                 HasPKMN: No
@@ -172,3 +172,4 @@ Location:
             - KAREN 1
             - CHAMPION 1
         Sublocations:
+        

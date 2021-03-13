@@ -86,7 +86,7 @@ Location:
             - CAMPER 2
         Sublocations:
             -
-                Name: Soft Sand
+                Name: Soft Sand Girls
                 FileName: Route34.asm
                 Type: Item
                 HasPKMN: Yes
@@ -184,9 +184,5 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:                   
-        
-        
-        
-        
-        
+                Sublocations:
+                

@@ -141,7 +141,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Pokedex
+                Name: Oak's Pokedex
                 FileName: MrPokemonsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -269,3 +269,4 @@ Location:
                     - YOUNGSTER 2
                     - BUG_CATCHER 1                           
                 Sublocations:
+                

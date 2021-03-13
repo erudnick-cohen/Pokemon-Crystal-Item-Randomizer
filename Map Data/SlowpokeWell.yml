@@ -59,7 +59,7 @@ Location:
         TrainerList:
         Sublocations:
             - 
-                Name: Kings Rock
+                Name: King's Rock Guy
                 FileName: SlowpokeWellB2F.asm
                 Type: Item
                 HasPKMN: No
@@ -111,7 +111,7 @@ Location:
                 TrainerList:
                 Sublocations:
             - 
-                Name: Rain Dance
+                Name: Slowpoke Well Rain Dance TM
                 FileName: SlowpokeWellB2F.asm
                 Type: Item
                 HasPKMN: No
@@ -133,3 +133,4 @@ Location:
                 Text: 
                 TrainerList:
                 Sublocations:
+                

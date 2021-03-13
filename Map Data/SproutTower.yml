@@ -1,7 +1,7 @@
 Location:
     -
         Name: Sprout Tower
-        FileName: SproutTower1f.asm
+        FileName: SproutTower1F.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
@@ -174,3 +174,4 @@ Location:
                     - SAGE 8
                     - SAGE 4
                     - SAGE 9
+                    

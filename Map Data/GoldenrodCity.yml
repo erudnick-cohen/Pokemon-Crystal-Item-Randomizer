@@ -79,7 +79,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Bike
+                Name: Bike Shop
                 FileName: GoldenrodBikeShop.asm
                 Type: Item
                 HasPKMN: No
@@ -165,7 +165,7 @@ Location:
                 TrainerList: 
                 Sublocations:         
             -
-                Name: Goldenrod City Flower Shop
+                Name: Flower Shop
                 FileName: GoldenrodFlowerShop.asm
                 Type: Item
                 HasPKMN: No
@@ -275,7 +275,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 2 AKA Amulet Coin
+                Name: Department Store Basement 4 - Underground
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -295,7 +295,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 3
+                Name: Department Store Basement 2
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -315,7 +315,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 4
+                Name: Department Store Basement 3
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -482,3 +482,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

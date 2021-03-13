@@ -92,7 +92,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Viridian City dream eating entrance
+                Name: Viridian City Dream Eating Entrance
                 FileName: ViridianCity.asm
                 Type: Map
                 HasPKMN: No
@@ -110,7 +110,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Viridian City dream eating entrance
+                Name: Viridian City Dream Eating Entrance
                 FileName: ViridianCity.asm
                 Type: Map
                 HasPKMN: No
@@ -128,13 +128,13 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Dream Eater
+                Name: Viridian Dream Eater TM
                 FileName: ViridianCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Viridian City dream eating entrance
+                    - Viridian City Dream Eating Entrance
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -163,3 +163,4 @@ Location:
                         line "DREAM EATER…"
                 TrainerList: 
                 Sublocations:
+                

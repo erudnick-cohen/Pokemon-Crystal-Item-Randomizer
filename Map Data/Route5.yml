@@ -17,7 +17,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Cleanse Tag
+                Name: Route 5 Cleanse Tag
                 FileName: Route5CleanseTagHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -89,3 +89,4 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                

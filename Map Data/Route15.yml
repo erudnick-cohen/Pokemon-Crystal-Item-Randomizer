@@ -1,12 +1,12 @@
 Location:
     -
-        Name: Route 15 entrance
+        Name: Route 15 Entrance
         FileName: Route15.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 13-14 entrance
+            - Route 13-14 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -16,7 +16,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 15 entrance
+        Name: Route 15 Entrance
         FileName: Route15.asm
         Type: Map
         HasPKMN: No
@@ -39,7 +39,7 @@ Location:
         WildTableList: 
             - ROUTE_15
         LocationReqs:
-            - Route 15 entrance
+            - Route 15 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -62,7 +62,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 13 and 14
+            - Route 15
         FlagReqs:
             - Hive Badge
         ItemReqs:
