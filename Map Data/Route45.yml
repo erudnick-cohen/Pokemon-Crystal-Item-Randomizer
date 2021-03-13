@@ -102,6 +102,7 @@ Location:
     -
         Name: Route 45 Hidden PP Up
         FileName: Route45.asm
+        SecondaryFile: Route45.asm
         Type: Item
         HasPKMN: No
         WildTableList:
@@ -117,6 +118,7 @@ Location:
         Code: |
             Route45HiddenPpUp:
                 ITEMLINE
+        SecondaryCode: '    bg_event 13, 80, BGEVENT_ITEM, Route45HiddenPpUp'
         Text:
         TrainerList: 
         Sublocations:

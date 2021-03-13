@@ -21,6 +21,7 @@ Location:
             -
                 Name: Route 37 Hidden Ether
                 FileName: Route37.asm
+                SecondaryFile: Route37.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -34,6 +35,7 @@ Location:
                 Code: |
                     Route37HiddenEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther'
                 Text:
                 TrainerList: 
                 Sublocations:

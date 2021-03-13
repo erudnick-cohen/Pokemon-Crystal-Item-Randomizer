@@ -108,6 +108,7 @@ Location:
             -
                 Name: Behind Slowpoke Well Hidden
                 FileName: AzaleaTown.asm
+                SecondaryFile: AzaleaTown.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -121,6 +122,7 @@ Location:
                 Code: |
                     AzaleaTownHiddenFullHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event 31,  6, BGEVENT_ITEM, AzaleaTownHiddenFullHeal'
                 Text:
                 TrainerList: 
                 Sublocations:

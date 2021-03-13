@@ -59,6 +59,7 @@ Location:
             -
                 Name: Ice Path Hidden Carbos
                 FileName: IcePathB2FMahoganySide.asm
+                SecondaryFile: IcePathB2FMahoganySide.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -72,6 +73,7 @@ Location:
                 Code: |
                     IcePathB2FMahoganySideHiddenCarbos:
                         ITEMLINE
+                SecondaryCode: '    bg_event  0, 17, BGEVENT_ITEM, IcePathB2FMahoganySideHiddenCarbos'
                 Text:
                 TrainerList: 
                 Sublocations:
@@ -209,6 +211,7 @@ Location:
             -
                 Name: Ice Path Hidden Max Potion
                 FileName: IcePathB1F.asm
+                SecondaryFile: IcePathB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -222,12 +225,14 @@ Location:
                 Code: |
                     IcePathB1FHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 17, 30, BGEVENT_ITEM, IcePathB1FHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Ice Path Hidden Ice Heal
                 FileName: IcePathB2FBlackthornSide.asm
+                SecondaryFile: IcePathB2FBlackthornSide.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -241,6 +246,7 @@ Location:
                 Code: |
                     IcePathB2FBlackthornSideHiddenIceHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event  2, 10, BGEVENT_ITEM, IcePathB2FBlackthornSideHiddenIceHeal'
                 Text:
                 TrainerList: 
                 Sublocations:

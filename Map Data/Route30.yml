@@ -36,6 +36,7 @@ Location:
             -
                 Name: Route 30 Hidden Potion
                 FileName: Route30.asm
+                SecondaryFile: Route30.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -49,6 +50,7 @@ Location:
                 Code: |
                     Route30HiddenPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 14,  9, BGEVENT_ITEM, Route30HiddenPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

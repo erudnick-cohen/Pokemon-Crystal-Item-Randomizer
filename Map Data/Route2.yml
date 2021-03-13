@@ -250,6 +250,7 @@ Location:
             -
                 Name: Route 2 Hidden Max Ether
                 FileName: Route2.asm
+                SecondaryFile: Route2.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -263,12 +264,14 @@ Location:
                 Code: |
                     Route2HiddenMaxEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Route 2 Hidden Full Heal
                 FileName: Route2.asm
+                SecondaryFile: Route2.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -282,12 +285,14 @@ Location:
                 Code: |
                     Route2HiddenFullHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, Route2HiddenFullHeal'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Route 2 Hidden Full Restore
                 FileName: Route2.asm
+                SecondaryFile: Route2.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -301,12 +306,14 @@ Location:
                 Code: |
                     Route2HiddenFullRestore:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Route 2 Hidden Revive
                 FileName: Route2.asm
+                SecondaryFile: Route2.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -320,6 +327,7 @@ Location:
                 Code: |
                     Route2HiddenRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive'
                 Text:
                 TrainerList: 
                 Sublocations:

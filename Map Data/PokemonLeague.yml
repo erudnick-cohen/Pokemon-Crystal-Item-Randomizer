@@ -116,6 +116,7 @@ Location:
             -
                 Name: Victory Road Hidden Max Potion
                 FileName: VictoryRoad.asm
+                SecondaryFile: VictoryRoad.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -129,12 +130,14 @@ Location:
                 Code: |
                     VictoryRoadHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Victory Road Hidden Full Heal
                 FileName: VictoryRoad.asm
+                SecondaryFile: VictoryRoad.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -148,6 +151,7 @@ Location:
                 Code: |
                     VictoryRoadHiddenFullHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal'
                 Text:
                 TrainerList: 
                 Sublocations:

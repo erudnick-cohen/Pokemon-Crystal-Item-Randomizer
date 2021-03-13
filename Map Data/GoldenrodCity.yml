@@ -428,6 +428,7 @@ Location:
             -
                 Name: Goldenrod Underground Hidden Paralyze Heal
                 FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -441,12 +442,14 @@ Location:
                 Code: |
                     GoldenrodUndergroundHiddenParlyzHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event  6, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Goldenrod Underground Hidden Super Potion
                 FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -460,12 +463,14 @@ Location:
                 Code: |
                     GoldenrodUndergroundHiddenSuperPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenSuperPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Goldenrod Underground Hidden Antidote
                 FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -479,6 +484,7 @@ Location:
                 Code: |
                     GoldenrodUndergroundHiddenAntidote:
                         ITEMLINE
+                SecondaryCode: '    bg_event 17,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenAntidote'
                 Text:
                 TrainerList: 
                 Sublocations:

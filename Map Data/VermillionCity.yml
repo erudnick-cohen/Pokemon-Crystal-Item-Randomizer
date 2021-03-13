@@ -199,6 +199,7 @@ Location:
             -
                 Name: Vermilion City Hidden Full Heal
                 FileName: VermillionCity.asm
+                SecondaryFile: VermillionCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -212,12 +213,14 @@ Location:
                 Code: |
                     VermilionCityHiddenFullHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event 12, 19, BGEVENT_ITEM, VermilionCityHiddenFullHeal'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Vermilion Port Hidden Iron
                 FileName: VermillionPort.asm
+                SecondaryFile: VermillionPort.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -233,6 +236,7 @@ Location:
                 Code: |
                     VermilionPortHiddenIron:
                         ITEMLINE
+                SecondaryCode: '    bg_event 16, 13, BGEVENT_ITEM, VermilionPortHiddenIron'
                 Text:
                 TrainerList: 
                 Sublocations:

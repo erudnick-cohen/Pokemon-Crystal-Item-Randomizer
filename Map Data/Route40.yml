@@ -24,6 +24,7 @@ Location:
             -
                 Name: Route 40 Hidden Hyper Potion
                 FileName: Route40.asm
+                SecondaryFile: Route40.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -40,6 +41,7 @@ Location:
                 Code: |
                     Route40HiddenHyperPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  7,  8, BGEVENT_ITEM, Route40HiddenHyperPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

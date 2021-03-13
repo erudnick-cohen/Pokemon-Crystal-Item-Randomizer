@@ -162,6 +162,7 @@ Location:
             -
                 Name: Olivine Port Hidden Protein
                 FileName: OlivinePort.asm
+                SecondaryFile: OlivinePort.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -176,6 +177,7 @@ Location:
                 Code: |
                     OlivinePortHiddenProtein:
                         ITEMLINE
+                SecondaryCode: '    bg_event  1, 22, BGEVENT_ITEM, OlivinePortHiddenProtein'
                 Text:
                 TrainerList: 
                 Sublocations:

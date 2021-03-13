@@ -132,6 +132,7 @@ Location:
             -
                 Name: Cianwood City Hidden Revive
                 FileName: CianwoodCity.asm
+                SecondaryFile: CianwoodCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -148,12 +149,14 @@ Location:
                 Code: |
                     CianwoodCityHiddenRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4, 19, BGEVENT_ITEM, CianwoodCityHiddenRevive'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Cianwood City Hidden Max Ether
                 FileName: CianwoodCity.asm
+                SecondaryFile: CianwoodCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -170,6 +173,7 @@ Location:
                 Code: |
                     CianwoodCityHiddenMaxEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event  5, 29, BGEVENT_ITEM, CianwoodCityHiddenMaxEther'
                 Text:
                 TrainerList: 
                 Sublocations:

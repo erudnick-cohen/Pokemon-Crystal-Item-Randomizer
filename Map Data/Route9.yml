@@ -28,6 +28,7 @@ Location:
             -
                 Name: Route 9 Hidden Ether
                 FileName: Route9.asm
+                SecondaryFile: Route9.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -41,6 +42,7 @@ Location:
                 Code: |
                     Route9HiddenEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event 41, 15, BGEVENT_ITEM, Route9HiddenEther'
                 Text:
                 TrainerList: 
                 Sublocations:

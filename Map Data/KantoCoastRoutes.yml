@@ -61,6 +61,7 @@ Location:
             -
                 Name: Route 13 Hidden Calcium
                 FileName: Route13.asm
+                SecondaryFile: Route13.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -74,6 +75,7 @@ Location:
                 Code: |
                     Route13HiddenCalcium:
                         ITEMLINE
+                SecondaryCode: '    bg_event 30, 13, BGEVENT_ITEM, Route13HiddenCalcium'
                 Text:
                 TrainerList: 
                 Sublocations:

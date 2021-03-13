@@ -95,6 +95,7 @@ Location:
                     -
                         Name: Rocket Base Hidden Revive
                         FileName: TeamRocketBaseB1F.asm
+                        SecondaryFile: TeamRocketBaseB1F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
@@ -108,6 +109,7 @@ Location:
                         Code: |
                             TeamRocketBaseB1FHiddenRevive:
                                 ITEMLINE
+                        SecondaryCode: '    bg_event  3, 11, BGEVENT_ITEM, TeamRocketBaseB1FHiddenRevive'
                         Text:
                         TrainerList: 
                         Sublocations:
@@ -197,6 +199,7 @@ Location:
                     -
                         Name: Rocket Base Hidden Full Heal
                         FileName: TeamRocketBaseB2F.asm
+                        SecondaryFile: TeamRocketBaseB2F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
@@ -210,6 +213,7 @@ Location:
                         Code: |
                             TeamRocketBaseB2FHiddenFullHeal:
                                 ITEMLINE
+                        SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
                         Text:
                         TrainerList: 
                         Sublocations:

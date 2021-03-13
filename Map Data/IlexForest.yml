@@ -336,6 +336,7 @@ Location:
             -
                 Name: Ilex Forest Hidden Ether
                 FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -349,12 +350,14 @@ Location:
                 Code: |
                     IlexForestHiddenEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event 11,  7, BGEVENT_ITEM, IlexForestHiddenEther'
                 Text:
                 TrainerList: 
                 Sublocations: 
             -
                 Name: Ilex Forest Hidden Super Potion
                 FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -368,12 +371,14 @@ Location:
                 Code: |
                     IlexForestHiddenSuperPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 22, 14, BGEVENT_ITEM, IlexForestHiddenSuperPotion'
                 Text:
                 TrainerList: 
                 Sublocations: 
             -
                 Name: Ilex Forest Hidden Full Heal
                 FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -387,6 +392,7 @@ Location:
                 Code: |
                     IlexForestHiddenFullHeal:
                         ITEMLINE
+                SecondaryCode: '    bg_event  1, 17, BGEVENT_ITEM, IlexForestHiddenFullHeal'
                 Text:
                 TrainerList: 
                 Sublocations:                 

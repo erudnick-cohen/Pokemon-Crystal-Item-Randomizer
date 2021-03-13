@@ -57,6 +57,7 @@ Location:
             -
                 Name: Route 42 Hidden Max Potion
                 FileName: Route42.asm
+                SecondaryFile: Route42.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -72,6 +73,7 @@ Location:
                 Code: |
                     Route42HiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

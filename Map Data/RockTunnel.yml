@@ -181,6 +181,7 @@ Location:
             -
                 Name: Rock Tunnel Hidden X Accuracy
                 FileName: RockTunnel1F.asm
+                SecondaryFile: RockTunnel1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -196,12 +197,14 @@ Location:
                 Code: |
                     RockTunnel1FHiddenXAccuracy:
                         ITEMLINE
+                SecondaryCode: '    bg_event 24,  4, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Rock Tunnel Hidden X Defend
                 FileName: RockTunnel1F.asm
+                SecondaryFile: RockTunnel1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -217,12 +220,14 @@ Location:
                 Code: |
                     RockTunnel1FHiddenXDefend:
                         ITEMLINE
+                SecondaryCode: '    bg_event 21, 15, BGEVENT_ITEM, RockTunnel1FHiddenXDefend'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Rock Tunnel Hidden Max Potion
                 FileName: RockTunnelB1F.asm
+                SecondaryFile: RockTunnelB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -238,6 +243,7 @@ Location:
                 Code: |
                     RockTunnelB1FHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, RockTunnelB1FHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

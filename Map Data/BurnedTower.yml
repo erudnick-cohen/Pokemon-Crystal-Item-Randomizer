@@ -42,6 +42,7 @@ Location:
             -
                 Name: Burned Tower Hidden Ether
                 FileName: BurnedTower1F.asm
+                SecondaryFile: BurnedTower1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -55,6 +56,7 @@ Location:
                 Code: |
                     BurnedTower1FHiddenEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event  8,  7, BGEVENT_ITEM, BurnedTower1FHiddenEther'
                 Text:
                 AREALV:
                 TrainerList:
@@ -62,6 +64,7 @@ Location:
             -
                 Name: Burned Tower Hidden Ultra Ball
                 FileName: BurnedTower1F.asm
+                SecondaryFile: BurnedTower1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -75,6 +78,7 @@ Location:
                 Code: |
                     BurnedTower1FHiddenUltraBall:
                         ITEMLINE
+                SecondaryCode: '    bg_event 13, 11, BGEVENT_ITEM, BurnedTower1FHiddenUltraBall'
                 Text:
                 AREALV:
                 TrainerList:

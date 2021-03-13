@@ -20,6 +20,7 @@ Location:
             -
                 Name: Diglett's Cave Hidden Max Revive
                 FileName: DiggletsCave.asm
+                SecondaryFile: DiggletsCave.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -33,6 +34,7 @@ Location:
                 Code: |
                     DiglettsCaveHiddenMaxRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event  6, 11, BGEVENT_ITEM, DiglettsCaveHiddenMaxRevive'
                 Text:
                 TrainerList: 
                 Sublocations:

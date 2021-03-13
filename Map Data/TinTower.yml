@@ -331,6 +331,7 @@ Location:
             -
                 Name: Tin Tower Hidden Max Potion
                 FileName: TinTower4F.asm
+                SecondaryFile: TinTower4F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -346,12 +347,14 @@ Location:
                 Code: |
                     TinTower4FHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 11,  6, BGEVENT_ITEM, TinTower4FHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Tin Tower Hidden Full Restore
                 FileName: TinTower5F.asm
+                SecondaryFile: TinTower5F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -367,12 +370,14 @@ Location:
                 Code: |
                     TinTower5FHiddenFullRestore:
                         ITEMLINE
+                SecondaryCode: '    bg_event 16, 14, BGEVENT_ITEM, TinTower5FHiddenFullRestore'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Tin Tower Hidden Carbos
                 FileName: TinTower5F.asm
+                SecondaryFile: TinTower5F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -388,6 +393,7 @@ Location:
                 Code: |
                     TinTower5FHiddenCarbos:
                         ITEMLINE
+                SecondaryCode: '    bg_event  3, 15, BGEVENT_ITEM, TinTower5FHiddenCarbos'
                 Text:
                 TrainerList: 
                 Sublocations:

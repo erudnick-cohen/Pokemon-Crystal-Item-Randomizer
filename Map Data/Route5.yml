@@ -52,6 +52,7 @@ Location:
             -
                 Name: Underground Path Hidden Full Restore
                 FileName: UndergroundPath.asm
+                SecondaryFile: UndergroundPath.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -66,12 +67,14 @@ Location:
                 Code: |
                     UndergroundPathHiddenFullRestore:
                         ITEMLINE
+                SecondaryCode: '    bg_event  3,  9, BGEVENT_ITEM, UndergroundPathHiddenFullRestore'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Underground Path Hidden X Special
                 FileName: UndergroundPath.asm
+                SecondaryFile: UndergroundPath.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -86,6 +89,7 @@ Location:
                 Code: |
                     UndergroundPathHiddenXSpecial:
                         ITEMLINE
+                SecondaryCode: '    bg_event  1, 19, BGEVENT_ITEM, UndergroundPathHiddenXSpecial'
                 Text:
                 TrainerList: 
                 Sublocations:

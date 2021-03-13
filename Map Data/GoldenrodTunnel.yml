@@ -126,6 +126,7 @@ Location:
             -
                 Name: Goldenrod Tunnel Hidden Max Potion
                 FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                SecondaryFile: GoldenrodUndergroundSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -140,12 +141,14 @@ Location:
                 Code: |
                     GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  8,  9, BGEVENT_ITEM, GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Goldenrod Tunnel Hidden Revive
                 FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                SecondaryFile: GoldenrodUndergroundSwitchRoomEntrances.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -160,6 +163,7 @@ Location:
                 Code: |
                     GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event  1,  8, BGEVENT_ITEM, GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive'
                 Text:
                 TrainerList: 
                 Sublocations:

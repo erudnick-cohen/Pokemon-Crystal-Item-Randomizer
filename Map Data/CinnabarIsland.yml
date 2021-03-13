@@ -19,6 +19,7 @@ Location:
             -
                 Name: Cinnabar Island Hidden Rare Candy
                 FileName: CinnabarIsland.asm
+                SecondaryFile: CinnabarIsland.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -32,6 +33,7 @@ Location:
                 Code: |
                     CinnabarIslandHiddenRareCandy:
                         ITEMLINE
+                SecondaryCode: '    bg_event  9,  1, BGEVENT_ITEM, CinnabarIslandHiddenRareCandy'
                 Text:
                 TrainerList: 
                 Sublocations:

@@ -125,6 +125,7 @@ Location:
             -
                 Name: Dark Cave Violet Hidden Elixer
                 FileName: DarkCaveVioletEntrance.asm
+                SecondaryFile: DarkCaveVioletEntrance.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -143,6 +144,7 @@ Location:
                 Code: |
                     DarkCaveVioletEntranceHiddenElixer:
                         ITEMLINE
+                SecondaryCode: '    bg_event 26,  3, BGEVENT_ITEM, DarkCaveVioletEntranceHiddenElixer'
                 Text:
                 TrainerList: 
                 Sublocations:

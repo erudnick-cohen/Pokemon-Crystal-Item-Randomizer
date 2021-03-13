@@ -148,6 +148,7 @@ Location:
             -
                 Name: Route 34 Hidden Rare Candy
                 FileName: Route34.asm
+                SecondaryFile: Route34.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -163,12 +164,14 @@ Location:
                 Code: |
                     Route34HiddenRareCandy:
                         ITEMLINE
+                SecondaryCode: '    bg_event  8, 32, BGEVENT_ITEM, Route34HiddenRareCandy'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Route 34 Hidden Super Potion
                 FileName: Route34.asm
+                SecondaryFile: Route34.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -182,6 +185,7 @@ Location:
                 Code: |
                     Route34HiddenSuperPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

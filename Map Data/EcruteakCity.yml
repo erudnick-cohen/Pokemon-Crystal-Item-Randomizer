@@ -90,6 +90,7 @@ Location:
             -
                 Name: Ecruteak City Hidden Hyper Potion
                 FileName: EcruteakCity.asm
+                SecondaryFile: EcruteakCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -103,6 +104,7 @@ Location:
                 Code: |
                     EcruteakCityHiddenHyperPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

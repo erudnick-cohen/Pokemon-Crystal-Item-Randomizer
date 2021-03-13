@@ -96,8 +96,9 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Route 25 Hiden Potion
+                Name: Route 25 Hidden Potion
                 FileName: Route25.asm
+                SecondaryFile: Route25.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -111,6 +112,7 @@ Location:
                 Code: |
                     Route25HiddenPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, Route25HiddenPotion'
                 Text:
                 TrainerList: 
                 Sublocations:

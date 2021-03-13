@@ -113,6 +113,7 @@ Location:
             -
                 Name: Route 12 Hidden Elixer
                 FileName: Route12.asm
+                SecondaryFile: Route12.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -128,6 +129,7 @@ Location:
                 Code: |
                     Route12HiddenElixer:
                         ITEMLINE
+                SecondaryCode: '    bg_event 14, 13, BGEVENT_ITEM, Route12HiddenElixer'
                 Text:
                 TrainerList: 
                 Sublocations:

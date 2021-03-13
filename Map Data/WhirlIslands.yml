@@ -273,6 +273,7 @@ Location:
                     -
                         Name: Whirl Islands Hidden Rare Candy
                         FileName: WhirlIslandB1F.asm
+                        SecondaryFile: WhirlIslandB1F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
@@ -288,12 +289,14 @@ Location:
                         Code: |
                             WhirlIslandB1FHiddenRareCandy:
                                 ITEMLINE
+                        SecondaryCode: '    bg_event 30,  4, BGEVENT_ITEM, WhirlIslandB1FHiddenRareCandy'
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Whirl Islands Hidden Ultra Ball
                         FileName: WhirlIslandB1F.asm
+                        SecondaryFile: WhirlIslandB1F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
@@ -309,12 +312,14 @@ Location:
                         Code: |
                             WhirlIslandB1FHiddenUltraBall:
                                 ITEMLINE
+                        SecondaryCode: '    bg_event 36, 18, BGEVENT_ITEM, WhirlIslandB1FHiddenUltraBall'
                         Text:
                         TrainerList: 
                         Sublocations:
                     -
                         Name: Whirl Islands Hidden Full Restore
                         FileName: WhirlIslandB1F.asm
+                        SecondaryFile: WhirlIslandB1F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
@@ -330,6 +335,7 @@ Location:
                         Code: |
                             WhirlIslandB1FHiddenFullRestore:
                                 ITEMLINE
+                        SecondaryCode: '    bg_event  2, 23, BGEVENT_ITEM, WhirlIslandB1FHiddenFullRestore'
                         Text:
                         TrainerList: 
                         Sublocations:

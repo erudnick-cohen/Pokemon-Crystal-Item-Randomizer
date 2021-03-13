@@ -64,6 +64,7 @@ Location:
             -
                 Name: Dragons Den Hidden Max Potion
                 FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -77,12 +78,14 @@ Location:
                 Code: |
                     DragonsDenB1FHiddenMaxPotion:
                         ITEMLINE
+                SecondaryCode: '    bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Dragons Den Hidden Revive
                 FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -100,12 +103,14 @@ Location:
                 Code: |
                     DragonsDenB1FHiddenRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive'
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Dragons Den Hidden Max Elixer
                 FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -123,6 +128,7 @@ Location:
                 Code: |
                     DragonsDenB1FHiddenMaxElixer:
                         ITEMLINE
+                SecondaryCode: '    bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer'
                 Text:
                 TrainerList: 
                 Sublocations:

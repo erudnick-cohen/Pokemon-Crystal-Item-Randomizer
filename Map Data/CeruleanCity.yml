@@ -18,6 +18,7 @@ Location:
             -
                 Name: Cerulean City Hidden Berserk Gene
                 FileName: CeruleanCity.asm
+                SecondaryFile: CeruleanCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -33,6 +34,7 @@ Location:
                 Code: |
                     CeruleanCityHiddenBerserkGene:
                         ITEMLINE
+                SecondaryCode: '    bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene'
                 Text:
                 TrainerList: 
                 Sublocations:

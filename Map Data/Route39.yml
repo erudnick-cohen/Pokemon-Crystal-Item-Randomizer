@@ -92,6 +92,7 @@ Location:
             -
                 Name: Route 39 Hidden Nugget
                 FileName: Route39.asm
+                SecondaryFile: Route39.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -105,6 +106,7 @@ Location:
                 Code: |
                     Route39HiddenNugget:
                         ITEMLINE
+                SecondaryCode: '    bg_event  5, 13, BGEVENT_ITEM, Route39HiddenNugget'
                 Text:
                 TrainerList: 
                 Sublocations:

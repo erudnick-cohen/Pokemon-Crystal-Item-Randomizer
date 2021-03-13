@@ -30,6 +30,7 @@ Location:
             -
                 Name: Route 41 Hidden Max Ether
                 FileName: Route41.asm
+                SecondaryFile: Route41.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -47,6 +48,7 @@ Location:
                 Code: |
                     Route41HiddenMaxEther:
                         ITEMLINE
+                SecondaryCode: '    bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther'
                 Text:
                 TrainerList: 
                 Sublocations:

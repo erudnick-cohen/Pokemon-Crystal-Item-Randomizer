@@ -75,6 +75,7 @@ Location:
             -
                 Name: Route 11 Hidden Revive
                 FileName: Route11.asm
+                SecondaryFile: Route11.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -88,6 +89,7 @@ Location:
                 Code: |
                     Route11HiddenRevive:
                         ITEMLINE
+                SecondaryCode: '    bg_event 32,  5, BGEVENT_ITEM, Route11HiddenRevive'
                 Text:
                 TrainerList: 
                 Sublocations:

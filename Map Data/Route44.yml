@@ -85,6 +85,7 @@ Location:
             -
                 Name: Route 44 Hidden Elixer
                 FileName: Route44.asm
+                SecondaryFile: Route44.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -100,6 +101,7 @@ Location:
                 Code: |
                     Route44HiddenElixer:
                         ITEMLINE
+                SecondaryCode: '    bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer'
                 Text:
                 TrainerList: 
                 Sublocations:
