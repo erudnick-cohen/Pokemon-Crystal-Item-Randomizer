@@ -334,7 +334,7 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
-                Name: Rocket Base Whirlpool
+                Name: Rocket Base Whirlpool HM
                 FileName: TeamRocketBaseB2F.asm
                 Type: Item
                 HasPKMN: Yes

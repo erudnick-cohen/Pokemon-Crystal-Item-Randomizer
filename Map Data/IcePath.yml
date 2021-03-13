@@ -20,7 +20,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Ice Path Waterfall
+                Name: Ice Path Waterfall HM
                 FileName: IcePath1F.asm
                 Type: Item
                 HasPKMN: No

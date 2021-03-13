@@ -86,7 +86,7 @@ Location:
         TrainerList:
         Sublocations:
             -
-                Name: Strength HM
+                Name: Olivine Strength HM
                 FileName: OlivineCafe.asm
                 Type: Item
                 HasPKMN: No

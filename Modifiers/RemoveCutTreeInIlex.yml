@@ -6,7 +6,7 @@ NewGamePatches:
 #    - Allocate Badges First
 Changes:
     -
-        Location: Vermillion City via SS Aqua
+        Location: Vermilion City via SS Aqua
         NewItemReqs:
             - S S Ticket
             - Pass

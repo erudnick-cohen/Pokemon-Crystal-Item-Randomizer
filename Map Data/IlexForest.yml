@@ -94,7 +94,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Cut HM
+                Name: Ilex Cut HM
                 FileName: IlexForest.asm
                 Type: Item
                 HasPKMN: No

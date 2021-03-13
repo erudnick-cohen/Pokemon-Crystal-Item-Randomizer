@@ -231,7 +231,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Coin Case
+                Name: Coin Case Underground
                 FileName: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: Yes
