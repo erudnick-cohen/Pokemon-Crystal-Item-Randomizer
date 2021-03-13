@@ -1,11 +1,11 @@
 Location:
     -
-        Name: Vermillion City Entrance
-        FileName: VermillionCity.asm
+        Name: Vermilion City Entrance
+        FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion via Route 6
+        LocationReqs: Vermilion via Route 6
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,8 +15,8 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion via Route 6
-        FileName: VermillionCity.asm
+        Name: Vermilion via Route 6
+        FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
@@ -31,12 +31,12 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion City Entrance
-        FileName: VermillionCity.asm
+        Name: Vermilion City Entrance
+        FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion via SS Aqua
+        LocationReqs: Vermilion via SS Aqua
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -48,8 +48,8 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion via SS Aqua
-        FileName: VermillionCity.asm
+        Name: Vermilion via SS Aqua
+        FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
@@ -67,14 +67,14 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermillion City
-        FileName: VermillionCity.asm
+        Name: Vermilion City
+        FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
              - VERMILION_PORT
              - VERMILION_CITY
-        LocationReqs: Vermillion City Entrance
+        LocationReqs: Vermilion City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -84,12 +84,12 @@ Location:
         TrainerList:
         Sublocations:
             -
-                Name: Vermillion City Fan Club President
+                Name: Vermilion City Fan Club President
                 FileName: PokemonFanClub.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Vermillion City
+                LocationReqs: Vermilion City
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -133,12 +133,12 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Vermillion City Lost Item
+                Name: Vermilion City Lost Item
                 FileName: PokemonFanClub.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Vermillion City
+                LocationReqs: Vermilion City
                 FlagReqs:
                     - Saffron City
                     - Lavender Town
@@ -198,8 +198,8 @@ Location:
                 Sublocations:
             -
                 Name: Vermilion City Hidden Full Heal
-                FileName: VermillionCity.asm
-                SecondaryFile: VermillionCity.asm
+                FileName: VermilionCity.asm
+                SecondaryFile: VermilionCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -219,8 +219,8 @@ Location:
                 Sublocations:
             -
                 Name: Vermilion Port Hidden Iron
-                FileName: VermillionPort.asm
-                SecondaryFile: VermillionPort.asm
+                FileName: VermilionPort.asm
+                SecondaryFile: VermilionPort.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -240,4 +240,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                

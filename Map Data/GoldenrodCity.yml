@@ -275,7 +275,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 4 - Underground
+                Name: Department Store Basement 4 Underground
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -488,4 +488,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                

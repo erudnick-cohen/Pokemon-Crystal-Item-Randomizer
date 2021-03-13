@@ -7,7 +7,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
-            - Vermillion City Entrance
+            - Vermilion City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -55,7 +55,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
-            - Vermillion City Entrance
+            - Vermilion City Entrance
         FlagReqs:
             - Assumed Fill
             - Fog Badge
@@ -103,7 +103,7 @@ Location:
         WildTableList: 
         LocationReqs:
             - Goldenrod City Entrance
-            - Vermillion City Entrance
+            - Vermilion City Entrance
         FlagReqs:
             - Assumed Fill
             - Hive Badge
@@ -176,7 +176,7 @@ Location:
             - Goldenrod City Entrance
             - Saffron City Gym Badge
             - Early Sabrina
-            - Vermillion City Entrance
+            - Vermilion City Entrance
         FlagReqs:
             - Assumed Fill
             - Kanto Mode
@@ -273,4 +273,3 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-        

@@ -19,12 +19,12 @@ Location:
         Sublocations:
             -
                 Name: Diglett's Cave Hidden Max Revive
-                FileName: DiggletsCave.asm
-                SecondaryFile: DiggletsCave.asm
+                FileName: DiglettsCave.asm
+                SecondaryFile: DiglettsCave.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Digglet's Cave
+                LocationReqs: Diglett's Cave
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
@@ -38,4 +38,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                

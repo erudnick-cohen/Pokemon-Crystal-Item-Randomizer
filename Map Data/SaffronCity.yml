@@ -57,7 +57,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6 via Vermillion
+        LocationReqs: Route 6 via Vermilion
         FlagReqs:
             - Kanto Mode
         ItemReqs:
@@ -322,4 +322,3 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
-                

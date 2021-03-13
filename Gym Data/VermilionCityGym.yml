@@ -1,8 +1,8 @@
 Location:
     -
-        Name: Vermillion City Gym Badge
+        Name: Vermilion City Gym Badge
         FileName: VermilionGym.asm
-        LocationReqs: Vermillion Gym
+        LocationReqs: Vermilion Gym
         HasPKMN: No
         Type: Gym
         WildTableList:

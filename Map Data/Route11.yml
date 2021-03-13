@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs: 
-            - Vermillion City Entrance
+            - Vermilion City Entrance
             - Power Plant Activated
         FlagReqs:
             - Surf
@@ -24,7 +24,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Vermillion City
+            - Vermilion City
         FlagReqs:
             - Snorlax Woken
         ItemReqs:
@@ -93,4 +93,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                

@@ -29,7 +29,7 @@ Location:
         Text:
         TrainerList: 
         Sublocations: 
-             -
+            -
                 Name: Dark Cave Violet Potion
                 FileName: DarkCaveVioletEntrance.asm
                 Type: Item
@@ -50,7 +50,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:         
-             -
+            -
                 Name: Dark Cave Violet Dire Hit
                 FileName: DarkCaveVioletEntrance.asm
                 Type: Item
@@ -74,7 +74,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:         
-             -
+            -
                 Name: Dark Cave Violet Hyper Potion
                 FileName: DarkCaveVioletEntrance.asm
                 Type: Item
@@ -98,7 +98,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:        
-             -
+            -
                 Name: Dark Cave Violet Full Heal
                 FileName: DarkCaveVioletEntrance.asm
                 Type: Item
@@ -148,4 +148,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                
