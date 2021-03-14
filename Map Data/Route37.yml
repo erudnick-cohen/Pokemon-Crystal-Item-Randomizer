@@ -1,11 +1,80 @@
 Location:  
     -
-        Name: Route 37
+        Name: Route 37 Entrance
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_37
+        LocationReqs: Route 37 via Route 36 Sudowoodo Junction
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 via Route 36 Sudowoodo Junction
         FileName: Route37.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_37
         LocationReqs: Route 36 Sudowoodo Junction
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 Entrance
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_37
+        LocationReqs: Route 37 via Ecruteak
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 via Ecruteak
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_37
+        LocationReqs: Ecruteak City via Route 38
+        FlagReqs:
+            - Hive Badge
+            - Kanto Mode
+        ItemReqs:
+            - Pass
+            - S S Ticket
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_37
+        LocationReqs: Route 37 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

@@ -222,27 +222,27 @@ Location:
 
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Route 32 Hidden Great Ball
-                FileName: Route32.asm
-                SecondaryFile: Route32.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 32
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: GREAT_BALL
-                Code: |
-                    Route32HiddenGreatBall:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
-                Text:
-                TrainerList: 
-                Sublocations:
+            # -
+                # Name: Route 32 Hidden Great Ball
+                # FileName: Route32.asm
+                # SecondaryFile: Route32.asm
+                # Type: Item
+                # HasPKMN: No
+                # WildTableList:
+                # LocationReqs: Route 32
+                # FlagReqs:
+                    # - Hidden Items
+                # ItemReqs:
+                # FlagsSet:
+                # ReachableReqs:
+                # NormalItem: GREAT_BALL
+                # Code: |
+                    # Route32HiddenGreatBall:
+                        # ITEMLINE
+                # SecondaryCode: '    bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
+                # Text:
+                # TrainerList: 
+                # Sublocations:
             -
                 Name: Route 32 Hidden Super Potion
                 FileName: Route32.asm

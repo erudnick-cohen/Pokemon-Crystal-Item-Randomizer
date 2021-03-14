@@ -30,6 +30,7 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
+                    - Bicycle
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -51,6 +52,7 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
+                    - Bicycle
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

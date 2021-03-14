@@ -229,6 +229,7 @@ Location:
                     - Hidden Items
                     - Fog Badge
                 ItemReqs:
+                    - S S Ticket
                     - Surf
                 FlagsSet:
                 ReachableReqs:

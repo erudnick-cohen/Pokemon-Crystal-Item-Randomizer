@@ -6,9 +6,27 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 10 Entrance
+            - Rock Tunnel via Route 10
         FlagReqs:
         ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rock Tunnel via Route 10
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 10 via Route 9
+        FlagReqs:
+            - Zephyr Badge
+        ItemReqs:
+            - Flash
         FlagsSet:
         ReachableReqs:
         Code:
@@ -22,9 +40,27 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Lavender Town
+            - Rock Tunnel via Lavender
         FlagReqs:
         ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Rock Tunnel via Lavender
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Lavender Town
+        FlagReqs:
+            - Zephyr Badge
+        ItemReqs:
+            - Flash
         FlagsSet:
         ReachableReqs:
         Code:

@@ -28,7 +28,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route40
+                LocationReqs: Route 40
                 FlagReqs:
                     - Hidden Items
                     - Goldenrod City Entrance

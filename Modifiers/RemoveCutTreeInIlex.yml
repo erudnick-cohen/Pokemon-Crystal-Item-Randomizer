@@ -117,3 +117,10 @@ Changes:
             - Ok
         NewFlagReqs:
             - Ok
+    -
+        Location: Route 37 via Ecruteak
+        NewItemReqs:
+            - Kanto Mode
+        NewFlagReqs:
+            - Pass
+            - S S Ticket

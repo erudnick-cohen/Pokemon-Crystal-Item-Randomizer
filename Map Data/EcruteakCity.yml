@@ -21,7 +21,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Route 37
+        LocationReqs: Route 37 via Route 36 Sudowoodo Junction
         FlagReqs:
         ItemReqs:
             - Squirtbottle
