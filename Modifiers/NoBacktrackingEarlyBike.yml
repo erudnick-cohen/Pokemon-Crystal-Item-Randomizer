@@ -2,7 +2,16 @@ Name: No backtracking early bike
 Description: Ensures that the bike is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking.
 Changes:
     -
+        Location: Hidden Items Locked
+        NewItemReqs:
+            - Bicycle
+    -
         Location: Route 37
+        NewItemReqs:
+            - Squirtbottle
+            - Bicycle
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
         NewItemReqs:
             - Squirtbottle
             - Bicycle

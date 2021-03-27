@@ -5,7 +5,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: 
+        LocationReqs:
+            - Hidden Items Locked
         FlagReqs:
             - Impossible
         ItemReqs:
@@ -15,3 +16,18 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+    -
+        Name: Hidden Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:3
