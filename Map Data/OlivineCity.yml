@@ -169,8 +169,10 @@ Location:
                 LocationReqs: Olivine City
                 FlagReqs:
                     - Hidden Items
+                    - Fog Badge
                 ItemReqs:
                     - S S Ticket
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PROTEIN

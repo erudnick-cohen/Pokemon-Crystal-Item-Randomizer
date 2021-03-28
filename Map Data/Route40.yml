@@ -1,25 +1,19 @@
 Location:  
     -
-        Name: Route 40
+        Name: Route 40 Land
         FileName: Route40.asm
         Type: Map
         HasPKMN: No
-        WildTableList: Route_40
+        WildTableList:
         LocationReqs: Olivine City
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
         AREALV: 17
         TrainerList:
-            - SWIMMERM 2
-            - SWIMMERM 3
-            - SWIMMERF 1
-            - SWIMMERF 2
         Sublocations:
             -
                 Name: Route 40 Hidden Hyper Potion
@@ -28,7 +22,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 40
+                LocationReqs: Route 40 Land
                 FlagReqs:
                     - Hidden Items
                     - Goldenrod City Entrance
@@ -45,3 +39,25 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+    -
+        Name: Route 40 Water
+        FileName: Route40.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_40
+        LocationReqs: Route 40 Land
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 17
+        TrainerList:
+            - SWIMMERM 2
+            - SWIMMERM 3
+            - SWIMMERF 1
+            - SWIMMERF 2
+        Sublocations:

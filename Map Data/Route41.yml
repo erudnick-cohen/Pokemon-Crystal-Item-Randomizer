@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_41
-        LocationReqs: Route 40
+        LocationReqs: Route 40 Water
         FlagReqs:
             - Fog Badge
         ItemReqs:
