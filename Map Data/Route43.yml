@@ -41,7 +41,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Sludge Bomb TM
+        Name: Route 43 Sludge Bomb TM
         FileName: Route43Gate.asm
         Type: Item
         HasPKMN: No
@@ -69,6 +69,3 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-
-        
-        

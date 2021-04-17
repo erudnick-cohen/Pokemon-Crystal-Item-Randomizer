@@ -61,6 +61,77 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Dragons Den Hidden Max Potion
+                FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    DragonsDenB1FHiddenMaxPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dragons Den Hidden Revive
+                FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    DragonsDenB1FHiddenRevive:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Dragons Den Hidden Max Elixer
+                FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ELIXER
+                Code: |
+                    DragonsDenB1FHiddenMaxElixer:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer'
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Dragons Den Shrine
         FileName: DragonShrine.asm

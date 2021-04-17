@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Steel Wing MT Silver
+        Name: Route 28 Steel Wing TM
         FileName: Route28SteelWingHouse.asm
         Type: Item
         HasPKMN: No
@@ -27,6 +27,56 @@ Location:
                 ITEMLINE
                 iffalse .Done
                 setevent EVENT_GOT_TM47_STEEL_WING
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 28 Hidden Rare Candy
+        FileName: Route28.asm
+        SecondaryFile: Route28.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock
+            - Became Champion
+        FlagReqs:
+            - Hidden Items
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: RARE_CANDY
+        Code: |
+            Route28HiddenRareCandy:
+                ITEMLINE
+        SecondaryCode: '    bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy'
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Outside Hidden Full Restore
+        FileName: SilverCaveOutside.asm
+        SecondaryFile: SilverCaveOutside.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock
+            - Became Champion
+        FlagReqs:
+            - Hidden Items
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: FULL_RESTORE
+        Code: |
+            SilverCaveOutsideHiddenFullRestore:
+                ITEMLINE
+        SecondaryCode: '    bg_event  9, 25, BGEVENT_ITEM, SilverCaveOutsideHiddenFullRestore'
         Text:
         TrainerList: 
         Sublocations:
@@ -268,13 +318,72 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
-
-
-
-
-
-
-
-
-                
+            -
+                Name: Mt. Silver Hidden Dire Hit
+                FileName: SilverCaveRoom1.asm
+                SecondaryFile: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mt. Silver
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: DIRE_HIT
+                Code: |
+                    SilverCaveRoom1HiddenDireHit:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 16, 23, BGEVENT_ITEM, SilverCaveRoom1HiddenDireHit'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Hidden Ultra Ball
+                FileName: SilverCaveRoom1.asm
+                SecondaryFile: SilverCaveRoom1.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mt. Silver
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                Code: |
+                    SilverCaveRoom1HiddenUltraBall:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 17, 12, BGEVENT_ITEM, SilverCaveRoom1HiddenUltraBall'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Mt. Silver Hidden Max Potion
+                FileName: SilverCaveRoom2.asm
+                SecondaryFile: SilverCaveRoom2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mt. Silver
+                FlagReqs:
+                    - Hidden Items
+                    - Zephyr Badge
+                ItemReqs:
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    SilverCaveRoom2HiddenMaxPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 14, 31, BGEVENT_ITEM, SilverCaveRoom2HiddenMaxPotion'
+                Text:
+                TrainerList: 
+                Sublocations:

@@ -57,7 +57,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6 via Vermillion
+        LocationReqs: Route 6 via Vermilion
         FlagReqs:
             - Kanto Mode
         ItemReqs:
@@ -85,7 +85,7 @@ Location:
         TrainerList:
         Sublocations:
             -
-                Name: Mr Psychic
+                Name: Mr Psychic TM
                 FileName: MrPsychicsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -174,7 +174,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Rail Pass
+                Name: Copycat Rail Pass
                 FileName: CopycatsHouse2F.asm
                 Type: Item
                 HasPKMN: No

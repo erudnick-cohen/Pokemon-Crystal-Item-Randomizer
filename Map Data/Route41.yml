@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_41
-        LocationReqs: Route 40
+        LocationReqs: Route 40 Water
         FlagReqs:
             - Fog Badge
         ItemReqs:
@@ -27,3 +27,28 @@ Location:
             - SWIMMERF 3
             - SWIMMERF 4
         Sublocations:
+            -
+                Name: Route 41 Hidden Max Ether
+                FileName: Route41.asm
+                SecondaryFile: Route41.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 41
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ETHER
+                Code: |
+                    Route41HiddenMaxEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther'
+                Text:
+                TrainerList: 
+                Sublocations:

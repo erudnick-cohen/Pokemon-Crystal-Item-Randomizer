@@ -1,11 +1,51 @@
 Location:  
     -
-        Name: Route 40
+        Name: Route 40 Land
+        FileName: Route40.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 17
+        TrainerList:
+        Sublocations:
+            -
+                Name: Route 40 Hidden Hyper Potion
+                FileName: Route40.asm
+                SecondaryFile: Route40.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 40 Land
+                FlagReqs:
+                    - Hidden Items
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                    - Rock Smash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    Route40HiddenHyperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  7,  8, BGEVENT_ITEM, Route40HiddenHyperPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
+    -
+        Name: Route 40 Water
         FileName: Route40.asm
         Type: Map
         HasPKMN: No
         WildTableList: Route_40
-        LocationReqs: Olivine City
+        LocationReqs: Route 40 Land
         FlagReqs:
             - Fog Badge
         ItemReqs:

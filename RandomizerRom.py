@@ -156,7 +156,9 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	gymOffsets = yaml.load(yamltext)
 	for i in locations:
 		if i.isItem():
-			if not i.IsSpecial:
+			if i.IsHidden:
+				WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
+			elif not i.IsSpecial:
 				WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 			else:
 				if i.Name == "Elm Aide Pokeballs":

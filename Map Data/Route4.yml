@@ -41,3 +41,24 @@ Location:
                 AREALV: 32
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 4 Hidden Ultra Ball
+                FileName: Route4.asm
+                SecondaryFile: Route4.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 4
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                Code: |
+                    Route4HiddenUltraBall:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall'
+                Text:
+                TrainerList: 
+                Sublocations:

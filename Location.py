@@ -38,6 +38,11 @@ class Location:
 			self.FlagReqs = []
 		elif isinstance(self.FlagReqs,str):
 			self.FlagReqs = [self.FlagReqs]
+		if("Hidden Items" in self.FlagReqs):
+			self.IsHidden = True
+			self.IsSpecial = True
+		else:
+			self.IsHidden = False
 		self.ItemReqs = yamlTree["ItemReqs"]
 		if self.ItemReqs is None:
 			self.ItemReqs = []

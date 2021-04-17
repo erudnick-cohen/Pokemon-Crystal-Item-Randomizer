@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 6 via Vermillion
+        LocationReqs: Route 6 via Vermilion
         FlagReqs:
         ItemReqs:
             - S S Ticket
@@ -17,12 +17,12 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Route 6 via Vermillion
+        Name: Route 6 via Vermilion
         FileName: Route6.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermillion City Entrance
+        LocationReqs: Vermilion City Entrance
         FlagReqs:
         ItemReqs:
             - S S Ticket

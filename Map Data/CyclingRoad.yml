@@ -20,6 +20,50 @@ Location:
             - BIKER 8
             - BIKER 9
         Sublocations:
+            -
+                Name: Route 17 Hidden Max Ether
+                FileName: Route17.asm
+                SecondaryFile: Route17.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cycling Road
+                FlagReqs:
+                    - Hidden Items
+                    - Bicycle
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ETHER
+                Code: |
+                    Route17HiddenMaxEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  9, 54, BGEVENT_ITEM, Route17HiddenMaxEther'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 17 Hidden Max Elixer
+                FileName: Route17.asm
+                SecondaryFile: Route17.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cycling Road
+                FlagReqs:
+                    - Hidden Items
+                    - Bicycle
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ELIXER
+                Code: |
+                    Route17HiddenMaxElixer:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  8, 77, BGEVENT_ITEM, Route17HiddenMaxElixer'
+                Text:
+                TrainerList: 
+                Sublocations:
     -
         Name: Route 18 Entrance
         FileName: Route18.asm

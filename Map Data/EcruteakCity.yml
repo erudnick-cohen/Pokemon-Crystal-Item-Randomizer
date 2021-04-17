@@ -21,7 +21,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: Route 37
+        LocationReqs: Route 37 via Route 36 Sudowoodo Junction
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -87,8 +87,29 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+            -
+                Name: Ecruteak City Hidden Hyper Potion
+                FileName: EcruteakCity.asm
+                SecondaryFile: EcruteakCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ecruteak City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    EcruteakCityHiddenHyperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 23, 14, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
             -    
-                Name: Dance Theatre
+                Name: Dance Theatre Surf HM
                 FileName: DanceTheatre.asm
                 Type: Item
                 HasPKMN: Yes
@@ -178,4 +199,3 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
-        

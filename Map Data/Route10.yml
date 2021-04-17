@@ -6,7 +6,23 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 9
+            - Route 10 via Route 9
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 10 via Route 9
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs:
+            - Route 9 via Cerulean
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -22,11 +38,27 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Rock Tunnel Entrance
+            - Route 10 via Rock Tunnel
         FlagReqs:
             - Zephyr Badge
         ItemReqs:
             - Flash
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 10 via Rock Tunnel
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Rock Tunnel via Lavender
+        FlagReqs:
+        ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code:

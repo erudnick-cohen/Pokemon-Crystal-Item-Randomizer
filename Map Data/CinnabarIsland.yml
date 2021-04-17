@@ -1,38 +1,39 @@
 Location:
     -
-        Name: Celadon City
-        FileName: CeladonCity.asm
+        Name: Cinnabar Island
+        FileName: CinnabarIsland.asm
         Type: Map
         HasPKMN: No
-        WildTableList: CELADON_CITY
+        WildTableList: CINNABAR_ISLAND
         LocationReqs:
-            - Route 7
+            - Route 21
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Bothered Blue
         ReachableReqs:
         Code:
         Text:
         TrainerList: 
         Sublocations:
             -
-                Name: Celadon City Hidden PP Up
-                FileName: CeladonCity.asm
-                SecondaryFile: CeladonCity.asm
+                Name: Cinnabar Island Hidden Rare Candy
+                FileName: CinnabarIsland.asm
+                SecondaryFile: CinnabarIsland.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Celadon City
+                LocationReqs: Cinnabar Island
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: PP_UP
+                NormalItem: RARE_CANDY
                 Code: |
-                    CeladonCityHiddenPpUp:
+                    CinnabarIslandHiddenRareCandy:
                         ITEMLINE
-                SecondaryCode: '    bg_event 37, 21, BGEVENT_ITEM, CeladonCityHiddenPpUp'
+                SecondaryCode: '    bg_event  9,  1, BGEVENT_ITEM, CinnabarIslandHiddenRareCandy'
                 Text:
                 TrainerList: 
                 Sublocations:

@@ -61,7 +61,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Chuck's Wife
+                Name: Cianwood Fly HM
                 FileName: CianwoodCity.asm
                 Type: Item
                 HasPKMN: No
@@ -128,4 +128,52 @@ Location:
                         line "have visited."
                         done
                 TrainerList:
+                Sublocations:
+            -
+                Name: Cianwood City Hidden Revive
+                FileName: CianwoodCity.asm
+                SecondaryFile: CianwoodCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cianwood City
+                FlagReqs:
+                    - Hidden Items
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                    - Rock Smash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    CianwoodCityHiddenRevive:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 19, BGEVENT_ITEM, CianwoodCityHiddenRevive'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Cianwood City Hidden Max Ether
+                FileName: CianwoodCity.asm
+                SecondaryFile: CianwoodCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cianwood City
+                FlagReqs:
+                    - Hidden Items
+                    - Goldenrod City Entrance
+                    - Rock Smash Purchaseable
+                ItemReqs:
+                    - Rock Smash
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ETHER
+                Code: |
+                    CianwoodCityHiddenMaxEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  5, 29, BGEVENT_ITEM, CianwoodCityHiddenMaxEther'
+                Text:
+                TrainerList: 
                 Sublocations:

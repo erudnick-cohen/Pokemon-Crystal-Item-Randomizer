@@ -86,7 +86,7 @@ Location:
         TrainerList:
         Sublocations:
             -
-                Name: Strength HM
+                Name: Olivine Strength HM
                 FileName: OlivineCafe.asm
                 Type: Item
                 HasPKMN: No
@@ -128,7 +128,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Fishing Guru
+                Name: Good Rod Guru
                 FileName: OlivineGoodRodHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -158,4 +158,28 @@ Location:
                         end
                 Text:
                 TrainerList:
+                Sublocations:
+            -
+                Name: Olivine Port Hidden Protein
+                FileName: OlivinePort.asm
+                SecondaryFile: OlivinePort.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Olivine City
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - S S Ticket
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                Code: |
+                    OlivinePortHiddenProtein:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  1, 22, BGEVENT_ITEM, OlivinePortHiddenProtein'
+                Text:
+                TrainerList: 
                 Sublocations:

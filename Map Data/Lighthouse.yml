@@ -121,5 +121,24 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
-    
+            -
+                Name: Lighthouse Hidden Hyper Potion
+                FileName: OlivineLighthouse5F.asm
+                SecondaryFile: OlivineLighthouse5F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Lighthouse
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs: 
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    OlivineLighthouse5FHiddenHyperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  3, 13, BGEVENT_ITEM, OlivineLighthouse5FHiddenHyperPotion'
+                Text:
+                TrainerList: 
+                Sublocations:

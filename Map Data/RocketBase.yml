@@ -93,6 +93,27 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
+                        Name: Rocket Base Hidden Revive
+                        FileName: TeamRocketBaseB1F.asm
+                        SecondaryFile: TeamRocketBaseB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 1F
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: REVIVE
+                        Code: |
+                            TeamRocketBaseB1FHiddenRevive:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event  3, 11, BGEVENT_ITEM, TeamRocketBaseB1FHiddenRevive'
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
                         Name: Trap 1
                         FileName: TeamRocketBaseB1F.asm
                         Type: Map
@@ -172,6 +193,27 @@ Location:
                         Code: |
                             TeamRocketBaseB2FTMThief:
                                 ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base Hidden Full Heal
+                        FileName: TeamRocketBaseB2F.asm
+                        SecondaryFile: TeamRocketBaseB2F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 2F
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_HEAL
+                        Code: |
+                            TeamRocketBaseB2FHiddenFullHeal:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
                         Text:
                         TrainerList: 
                         Sublocations:
@@ -292,7 +334,7 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
-                Name: Rocket Base Whirlpool
+                Name: Rocket Base Whirlpool HM
                 FileName: TeamRocketBaseB2F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -409,4 +451,3 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
-                        

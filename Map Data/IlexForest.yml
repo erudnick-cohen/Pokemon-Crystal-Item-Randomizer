@@ -69,7 +69,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Azalea Town entrance
+        LocationReqs: Azalea Town Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -94,7 +94,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Cut HM
+                Name: Ilex Cut HM
                 FileName: IlexForest.asm
                 Type: Item
                 HasPKMN: No
@@ -250,7 +250,7 @@ Location:
                 TrainerList: 
                 Sublocations:        
             -
-                Name: Headbutt
+                Name: Headbutt Guy
                 FileName: IlexForest.asm
                 Type: Item
                 HasPKMN: No
@@ -291,7 +291,7 @@ Location:
                 TrainerList: 
                 Sublocations:        
             -
-                Name: Sweet Scent
+                Name: Sweet Scent Girl
                 FileName: Route34IlexForestGate.asm
                 Type: Item
                 HasPKMN: No
@@ -332,4 +332,67 @@ Location:
                         line "enticed by it."
                         done
                 TrainerList: 
-                Sublocations:   
+                Sublocations:
+            -
+                Name: Ilex Forest Hidden Ether
+                FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    IlexForestHiddenEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 11,  7, BGEVENT_ITEM, IlexForestHiddenEther'
+                Text:
+                TrainerList: 
+                Sublocations: 
+            -
+                Name: Ilex Forest Hidden Super Potion
+                FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    IlexForestHiddenSuperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 22, 14, BGEVENT_ITEM, IlexForestHiddenSuperPotion'
+                Text:
+                TrainerList: 
+                Sublocations: 
+            -
+                Name: Ilex Forest Hidden Full Heal
+                FileName: IlexForest.asm
+                SecondaryFile: IlexForest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Forest Back
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    IlexForestHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  1, 17, BGEVENT_ITEM, IlexForestHiddenFullHeal'
+                Text:
+                TrainerList: 
+                Sublocations:

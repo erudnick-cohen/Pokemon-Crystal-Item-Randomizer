@@ -124,6 +124,50 @@ Location:
                 TrainerList:
                 Sublocations:
             -
+                Name: Goldenrod Tunnel Hidden Max Potion
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                SecondaryFile: GoldenrodUndergroundSwitchRoomEntrances.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Tunnel
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Basement Key
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  8,  9, BGEVENT_ITEM, GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Tunnel Hidden Revive
+                FileName: GoldenrodUndergroundSwitchRoomEntrances.asm
+                SecondaryFile: GoldenrodUndergroundSwitchRoomEntrances.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Tunnel
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                    - Basement Key
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  1,  8, BGEVENT_ITEM, GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Goldenrod Tunnel Max Ether
                 FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
@@ -144,7 +188,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Sleep Talk TM
+                Name: Goldenrod Tunnel Sleep Talk TM
                 FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
