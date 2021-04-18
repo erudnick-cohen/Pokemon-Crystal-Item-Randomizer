@@ -198,11 +198,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			
 	def SelectDefaultSettings(self):
 		QtWidgets.QMessageBox.about(self, 'Choose default settings', 'Select the mode which should be loaded by default when you open up the randomizer')
-		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
+		fName = QFileDialog.getOpenFileName(directory = 'Modes')[0]
 		if(fName != ''):
 			yamlfile = open('RandomizerConfig.yml')
 			yamltext = yaml.load(yamlfile)
-			yamltext['DefaultSettings'] = 'Modes/'+fName
+			yamltext['DefaultSettings'] = fName
 			with open('RandomizerConfig.yml', 'w') as f:
 				yaml.dump(yamltext, f, default_flow_style=False)
 		else:
