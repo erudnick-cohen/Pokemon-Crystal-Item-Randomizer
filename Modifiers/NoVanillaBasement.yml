@@ -1,0 +1,10 @@
+Name: No Vanilla Basement
+Description: Guarantees that the seed will not require you to enter the basement to obtain Card Key while Rockets could be active. This means that it is NEVER neccessary to enter the basement until you have the Card Key and 7 badges, meaning you should always clear Radio Tower first to avoid dealing with the Rockets in the basement.
+Changes:
+    -
+        Location: Goldenrod Tunnel
+        NewFlagReqs:
+            - Rocket Invasion
+        NewItemReqs:
+            - Card Key
+            - Basement Key
