@@ -3,6 +3,6 @@ Description: Prevents items needed to defeat red from being located in Whirl Isl
 Changes:
     -
         Location: Whirl Islands Requires Flash
-        NewLocationsReqs: 
+        NewLocationReqs: 
             - Route 41
             - Mt. Silver Unlock

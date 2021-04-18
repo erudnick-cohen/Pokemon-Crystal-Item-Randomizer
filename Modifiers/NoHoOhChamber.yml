@@ -3,7 +3,7 @@ Description: Prevents items needed to defeat red from being located in the Ho-Oh
 Changes:
     -
         Location: Ruins of Alph Ho Oh Chamber
-        NewLocationsReqs: 
+        NewLocationReqs: 
             - Union Cave
             - VS Ho-Oh
             - Mt. Silver Unlock
