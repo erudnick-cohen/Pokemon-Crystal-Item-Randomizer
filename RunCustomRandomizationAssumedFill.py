@@ -114,7 +114,10 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
-			trashItems = [x for x in res[1] if not x in keyItemMap.values()] #ensure progress items don't sneak into trash list
+			invKeyItemMap = defaultdict(lambda: '')
+			for i in keyItemMap:
+				invKeyItemMap[keyItemMap[i]] = i
+			trashItems = [x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems] #ensure progress items don't sneak into trash list
 			trashItems.extend(extraTrash)
 			if 'TrashItemList' in otherSettings:
 				trashItems = copy.copy(otherSettings['TrashItemList'])
