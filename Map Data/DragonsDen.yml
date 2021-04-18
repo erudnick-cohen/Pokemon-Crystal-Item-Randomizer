@@ -176,3 +176,23 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Clair TM Banned
+                FileName: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den Shrine
+                FlagReqs:
+                    - Glacier Badge
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: 
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
