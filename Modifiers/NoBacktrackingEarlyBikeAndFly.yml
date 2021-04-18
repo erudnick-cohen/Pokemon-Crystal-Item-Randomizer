@@ -213,6 +213,20 @@ Changes:
         NewItemReqs:
             - Bicycle
             - Fly
-
+    -
+        Location: Radio Tower Rockets Part 1
+        NewFlagReqs:
+            - Rocket Invasion
+            - Storm Badge
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Radio Tower Rockets Part 2
+        NewFlagReqs:
+            - Rocket Invasion
+            - Storm Badge
+        NewItemReqs:
+            - Card Key
+            - Bicycle
 
 

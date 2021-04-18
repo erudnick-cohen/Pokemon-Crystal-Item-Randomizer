@@ -122,6 +122,14 @@ Changes:
         Location: Goldenrod City Buy Rock Smash
         NewItemReqs:
             - Bicycle
-
+    -
+        Location: Radio Tower Rockets Part 1
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Radio Tower Rockets Part 2
+        NewItemReqs:
+            - Card Key
+            - Bicycle
 
 
