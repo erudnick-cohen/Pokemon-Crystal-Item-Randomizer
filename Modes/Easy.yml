@@ -1,5 +1,5 @@
 Name: Easy Logic
-Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings.
+Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings. Various settings are in place to makes things easier for new players.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
@@ -14,6 +14,10 @@ DefaultModifiers:
     - Modifiers/SemiProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
     - Modifiers/RegularSnorlaxRoute.yml
+    - Modifiers/BanMildlyInconvenientLocations.yml
+    - Modifiers/NoVanillaBasement.yml
+    - Modifiers/NoWhirlIslands.yml
+    - Modifiers/NoRuinsOfAlph.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver
