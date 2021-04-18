@@ -1,0 +1,64 @@
+Name: No Annoying Locations
+Description: Prevents items needed to defeat red from being located in the following locations, Ho-Oh chamber, Route 4, Tin Tower Rainbow Wing Gift, Elm's SS Ticket, Dragon's Den and Solarbeam TM. Note that this setting does not affect Clair's badge. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationsReqs: 
+            - Union Cave
+            - VS Ho-Oh
+            - Mt. Silver Unlock
+    -
+        Location: Route 4
+        NewLocationsReqs:
+            - Route 3 and Mt. Moon
+            - Mt. Silver Unlock
+    -
+        Location: Elm SS Ticket
+        NewLocationsReqs:
+            - Mt. Silver Unlock
+    -
+        Location: Rainbow Wing Gift
+        NewLocationsReqs:
+            - Tin Tower
+            - Elite Four
+            - Mt. Silver Unlock
+    -
+        Location: Clair TM Banned
+        NewLocationsReqs:
+            - Dragons Shrine
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Dragon Fang
+        NewLocationsReqs:
+            - Dragons Shrine
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Max Elixer
+        NewLocationsReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Max Elixer
+        NewLocationsReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Calcium
+        NewLocationsReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Max Potion
+        NewLocationsReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Revive
+        NewLocationsReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Route 27 Solar Beam TM
+        NewLocationsReqs:
+            - Tohjo Falls Over the Waterfall
+            - Mt. Silver Unlock
