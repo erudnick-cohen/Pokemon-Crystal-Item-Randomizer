@@ -740,6 +740,24 @@ p, li { white-space: pre-wrap; }
      <string>Clear Plando</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="DefaultSettings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select Default</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

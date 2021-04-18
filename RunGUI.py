@@ -19,7 +19,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		self.loadSettings('Modes/Standard.yml')
+		yamlfile = open('RandomizerConfig.yml')
+		yamltext = yaml.load(yamlfile)
+		self.loadSettings(yamltext['DefaultSettings'])
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
 		self.ChooseSettings.clicked.connect(self.selectLogicSettings)
 		self.LoadModifier.clicked.connect(self.loadModifier)
@@ -34,6 +36,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.PlandoData = {}
 		self.LoadPlandoFile.clicked.connect(self.SetUpPlando)
 		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
+		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
 
 	def runRandomizer(self):
 		rngSeed = str(time.time())
@@ -192,6 +195,20 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.ModifierDescription.setText(_translate("MainWindow", self.modList[row]['Description']))
 		else:
 			self.ModifierDescription.setText(_translate("MainWindow", "No modifier selected!"))
+			
+	def SelectDefaultSettings(self):
+		QtWidgets.QMessageBox.about(self, 'Choose default settings', 'Select the mode which should be loaded by default when you open up the randomizer')
+		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
+		if(fName != ''):
+			yamlfile = open('RandomizerConfig.yml')
+			yamltext = yaml.load(yamlfile)
+			yamltext['DefaultSettings'] = 'Modes/'+fName
+			with open('RandomizerConfig.yml', 'w') as f:
+				yaml.dump(yamltext, f, default_flow_style=False)
+		else:
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage('A file was not selected!')
+			error_dialog.exec_()
 def main():
 	app = QApplication(sys.argv)
 	form = RunWindow()
