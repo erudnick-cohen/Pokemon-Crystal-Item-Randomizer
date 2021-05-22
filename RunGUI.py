@@ -8,11 +8,13 @@ import string
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtWidgets import QInputDialog
 import RunCustomRandomizationAssumedFill as RunCustomRandomization
 from shutil import copyfile
 from collections import OrderedDict
 import traceback
 import hashlib
+import csv
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -37,6 +39,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.LoadPlandoFile.clicked.connect(self.SetUpPlando)
 		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
 		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
+		self.AddItem.clicked.connect(self.AddBonusItem)
+		self.itemsList = []
+		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
+			reader = csv.reader(csvfile)
+			for i in reader:
+				if(len(i)>0):
+					self.itemsList.append(i[0])
+					#self.ItemList.addItem(i[0])
 
 	def runRandomizer(self):
 		rngSeed = str(time.time())
@@ -67,6 +77,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
 			randomizedFileName = file
 			copyfile(self.romPath, randomizedFileName+'.gbc')
+			with open('SAVEDSEEDLOG.log','w') as f:
+				f.write(rngSeed)
+				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
 					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
@@ -93,7 +106,16 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog.showMessage(''.join(traceback.format_exc()))
 			error_dialog.exec_()
 
-		
+	def AddBonusItem(self):
+		(addedItem, ok1) = QInputDialog.getItem(self, "Select item you wish to add to the pool", "Select item you wish to add to the pool", self.itemsList, 0, False)
+		(nAdded, ok2) = QInputDialog.getInt(self,"Add how many?","Add how many?")
+		if not ('BonusItems' in self.settings):
+			self.settings['BonusItems'] = []
+		if ok1 and ok2:
+			for i in range(0,nAdded):
+				self.settings['BonusItems'].append(addedItem)
+		print(self.settings)
+
 	def selectRom(self):
 		_translate = QtCore.QCoreApplication.translate
 		file = QFileDialog.getOpenFileName(directory = '.')[0]
