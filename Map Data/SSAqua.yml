@@ -42,7 +42,7 @@ Location:
         HasPKMN: Yes
         WildTableList:
         LocationReqs:
-            - SS Aqua via Vermillion
+            - SS Aqua via Vermilion
         FlagReqs:
             - Kanto Mode
         ItemReqs:
@@ -54,13 +54,13 @@ Location:
         Text:
         Sublocations:
     -
-        Name: SS Aqua via Vermillion
+        Name: SS Aqua via Vermilion
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: Map
         HasPKMN: No
         WildTableList:
         LocationReqs:
-            - Vermillion via Route 6
+            - Vermilion via Route 6
         FlagReqs:
             - Kanto Mode
         ItemReqs:

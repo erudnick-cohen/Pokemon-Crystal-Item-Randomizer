@@ -2,7 +2,19 @@ Name: No backtracking early bike and fly
 Description: Ensures that the bike and the ability to use fly is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking. This setting intended for when the player wants a very fast seed
 Changes:
     -
+        Location: Hidden Items Locked
+        NewItemReqs:
+            - Bicycle
+    -
         Location: Route 37
+        NewFlagReqs:
+            - Storm Badge
+        NewItemReqs:
+            - Bicycle
+            - Fly
+            - Squirtbottle
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
         NewFlagReqs:
             - Storm Badge
         NewItemReqs:
@@ -201,6 +213,20 @@ Changes:
         NewItemReqs:
             - Bicycle
             - Fly
-
+    -
+        Location: Radio Tower Rockets Part 1
+        NewFlagReqs:
+            - Rocket Invasion
+            - Storm Badge
+        NewItemReqs:
+            - Bicycle
+    -
+        Location: Radio Tower Rockets Part 2
+        NewFlagReqs:
+            - Rocket Invasion
+            - Storm Badge
+        NewItemReqs:
+            - Card Key
+            - Bicycle
 
 

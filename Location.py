@@ -38,6 +38,11 @@ class Location:
 			self.FlagReqs = []
 		elif isinstance(self.FlagReqs,str):
 			self.FlagReqs = [self.FlagReqs]
+		if("Hidden Items" in self.FlagReqs):
+			self.IsHidden = True
+			self.IsSpecial = True
+		else:
+			self.IsHidden = False
 		self.ItemReqs = yamlTree["ItemReqs"]
 		if self.ItemReqs is None:
 			self.ItemReqs = []
@@ -154,10 +159,11 @@ class Location:
 			 i.applyModifiers(modifierDict)
 	
 	#get all trash items in this locations tree
-	def getTrashItemList(self):
+	def getTrashItemList(self, hiddenItems = False):
 		list = [];
-		if(self.NormalItem is not None and self.isItem()):
-			list.append(self.NormalItem)
-		for i in self.Sublocations:
-			list.extend(i.getTrashItemList())
+		if hiddenItems or (not ('Hidden Items' in self.FlagReqs)):
+			if(self.NormalItem is not None and self.isItem()):
+				list.append(self.NormalItem)
+			for i in self.Sublocations:
+				list.extend(i.getTrashItemList(hiddenItems))
 		return list

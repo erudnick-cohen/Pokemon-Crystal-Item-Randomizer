@@ -15,3 +15,24 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+            -
+                Name: Celadon City Hidden PP Up
+                FileName: CeladonCity.asm
+                SecondaryFile: CeladonCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PP_UP
+                Code: |
+                    CeladonCityHiddenPpUp:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 37, 21, BGEVENT_ITEM, CeladonCityHiddenPpUp'
+                Text:
+                TrainerList: 
+                Sublocations:

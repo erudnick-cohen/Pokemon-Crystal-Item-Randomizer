@@ -1,6 +1,22 @@
 Location:  
     -
-        Name: Route 37
+        Name: Route 37 Entrance
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_37
+        LocationReqs: Route 37 via Route 36 Sudowoodo Junction
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 via Route 36 Sudowoodo Junction
         FileName: Route37.asm
         Type: Map
         HasPKMN: Yes
@@ -14,7 +30,81 @@ Location:
         Text:
         AREALV: 13
         TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 Entrance
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_37
+        LocationReqs: Route 37 via Ecruteak
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37 via Ecruteak
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_37
+        LocationReqs: Ecruteak City via Route 38
+        FlagReqs:
+            - Hive Badge
+            - Kanto Mode
+        ItemReqs:
+            - Pass
+            - S S Ticket
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 37
+        FileName: Route37.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_37
+        LocationReqs: Route 37 Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 13
+        TrainerList:
             - TWINS 2
             - TWINS 3
             - PSYCHIC_T 5
         Sublocations:
+            -
+                Name: Route 37 Hidden Ether
+                FileName: Route37.asm
+                SecondaryFile: Route37.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 37
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    Route37HiddenEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4,  2, BGEVENT_ITEM, Route37HiddenEther'
+                Text:
+                TrainerList: 
+                Sublocations:

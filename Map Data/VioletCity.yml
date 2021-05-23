@@ -72,4 +72,27 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:          
+                Sublocations:
+            -
+                Name: Violet City Hidden Hyper Potion
+                FileName: VioletCity.asm
+                SecondaryFile: VioletCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet City
+                FlagReqs:
+                    - Hidden Items
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                Code: |
+                    VioletCityHiddenHyperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 37, 14, BGEVENT_ITEM, VioletCityHiddenHyperPotion'
+                Text:
+                TrainerList: 
+                Sublocations:

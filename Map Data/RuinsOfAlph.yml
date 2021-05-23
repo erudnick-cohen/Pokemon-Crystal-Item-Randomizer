@@ -40,7 +40,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -59,7 +59,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -78,7 +78,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -98,7 +98,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

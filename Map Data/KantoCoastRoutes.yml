@@ -1,12 +1,12 @@
 Location:
     -
-        Name: Route 13-14 entrance
+        Name: Route 13-14 Entrance
         FileName: Route14.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 15 entrance
+            - Route 15 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -16,7 +16,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 13-14 entrance
+        Name: Route 13-14 Entrance
         FileName: Route14.asm
         Type: Map
         HasPKMN: Yes
@@ -40,7 +40,7 @@ Location:
             - ROUTE 13
             - ROUTE 14
         LocationReqs:
-            - Route 13-14 entrance
+            - Route 13-14 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -58,3 +58,24 @@ Location:
             - POKEFANM 12
             - HIKER 16
         Sublocations:
+            -
+                Name: Route 13 Hidden Calcium
+                FileName: Route13.asm
+                SecondaryFile: Route13.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 13 and 14
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: CALCIUM
+                Code: |
+                    Route13HiddenCalcium:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 30, 13, BGEVENT_ITEM, Route13HiddenCalcium'
+                Text:
+                TrainerList: 
+                Sublocations:

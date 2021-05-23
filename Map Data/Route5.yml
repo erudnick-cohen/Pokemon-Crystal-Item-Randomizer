@@ -17,7 +17,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Cleanse Tag
+                Name: Route 5 Cleanse Tag
                 FileName: Route5CleanseTagHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -46,6 +46,50 @@ Location:
                     .NoRoom:
                         closetext
                         end
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Underground Path Hidden Full Restore
+                FileName: UndergroundPath.asm
+                SecondaryFile: UndergroundPath.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 5
+                FlagReqs:
+                    - Hidden Items
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    UndergroundPathHiddenFullRestore:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  3,  9, BGEVENT_ITEM, UndergroundPathHiddenFullRestore'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Underground Path Hidden X Special
+                FileName: UndergroundPath.asm
+                SecondaryFile: UndergroundPath.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 5
+                FlagReqs:
+                    - Hidden Items
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: X_SPECIAL
+                Code: |
+                    UndergroundPathHiddenXSpecial:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  1, 19, BGEVENT_ITEM, UndergroundPathHiddenXSpecial'
                 Text:
                 TrainerList: 
                 Sublocations:

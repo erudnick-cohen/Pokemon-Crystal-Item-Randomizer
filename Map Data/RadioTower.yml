@@ -138,7 +138,7 @@ Location:
                     - EXECUTIVEM 1
                 Sublocations:
                     -
-                        Name: Sunny Day TM
+                        Name: Radio Tower Sunny Day TM
                         FileName: RadioTower3F.asm
                         Type: Item
                         HasPKMN: No
@@ -237,6 +237,4 @@ Location:
                 ITEMLINE
         Text:
         TrainerList: 
-        Sublocations:        
-                
-                
+        Sublocations:

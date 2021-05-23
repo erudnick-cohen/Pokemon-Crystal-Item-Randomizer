@@ -165,6 +165,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, in
 						placeable = True
 						nLeft = 0
 				legal = True
+				#don't attempt to put badges in mt. silver
+				if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet):
+					placeable = False
 				#is it the right type of location?
 				#print(locList[iter].Name)
 				#print(locList[iter].Type)

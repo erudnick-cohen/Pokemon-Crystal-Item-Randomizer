@@ -16,7 +16,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: ElmAide1
+                Name: Elm Aide Potion
                 FileName: ElmsLab.asm
                 Type: Item
                 HasPKMN: No
@@ -100,7 +100,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -             
-                Name: Master Ball
+                Name: Elm Master Ball
                 FileName: ElmsLab.asm
                 Type: Item
                 HasPKMN: No
@@ -147,7 +147,7 @@ Location:
                         closetext
                         end
             -             
-                Name: SS Ticket
+                Name: Elm SS Ticket
                 FileName: ElmsLab.asm
                 Type: Item
                 HasPKMN: No

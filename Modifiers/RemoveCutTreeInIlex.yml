@@ -6,7 +6,7 @@ NewGamePatches:
 #    - Allocate Badges First
 Changes:
     -
-        Location: Vermillion City via SS Aqua
+        Location: Vermilion City via SS Aqua
         NewItemReqs:
             - S S Ticket
             - Pass
@@ -117,3 +117,10 @@ Changes:
             - Ok
         NewFlagReqs:
             - Ok
+    -
+        Location: Route 37 via Ecruteak
+        NewItemReqs:
+            - Kanto Mode
+        NewFlagReqs:
+            - Pass
+            - S S Ticket

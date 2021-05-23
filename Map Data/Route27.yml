@@ -61,7 +61,7 @@ Location:
                 TrainerList: 
                 Sublocations:
     -
-        Name: Route 27 right side
+        Name: Route 27 Right Side
         FileName: Route27.asm
         Type: Map
         HasPKMN: No
@@ -80,7 +80,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 27 right side
+        Name: Route 27 Right Side
         FileName: Route27.asm
         Type: Map
         HasPKMN: No
@@ -100,7 +100,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Route 27 right side
+        LocationReqs: Route 27 Right Side
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -116,7 +116,7 @@ Location:
             - PSYCHIC_T 10
         Sublocations:
             -
-                Name: Solar Beam TM
+                Name: Route 27 Solar Beam TM
                 FileName: Route27.asm
                 Type: Item
                 HasPKMN: No

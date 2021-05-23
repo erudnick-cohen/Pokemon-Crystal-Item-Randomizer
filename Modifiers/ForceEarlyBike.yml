@@ -2,9 +2,18 @@ Name: Force early bike
 Description: Ensures that the bike is available before the player would pass sudowoodo or take the magnet train.
 Changes:
     -
+        Location: Hidden Items Locked
+        NewItemReqs:
+            - Bicycle
+    -
         Location: Route 37
         NewItemReqs:
             - Bicycle
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
+        NewItemReqs:
+            - Bicycle
+    -
     -
         Location: Saffron City via Magnet Train
         NewItemReqs:

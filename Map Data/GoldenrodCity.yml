@@ -79,7 +79,7 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Bike
+                Name: Bike Shop
                 FileName: GoldenrodBikeShop.asm
                 Type: Item
                 HasPKMN: No
@@ -165,7 +165,7 @@ Location:
                 TrainerList: 
                 Sublocations:         
             -
-                Name: Goldenrod City Flower Shop
+                Name: Flower Shop
                 FileName: GoldenrodFlowerShop.asm
                 Type: Item
                 HasPKMN: No
@@ -231,7 +231,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Coin Case
+                Name: Coin Case Underground
                 FileName: GoldenrodUnderground.asm
                 Type: Item
                 HasPKMN: Yes
@@ -275,7 +275,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 2 AKA Amulet Coin
+                Name: Department Store Basement 4 Underground
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -295,7 +295,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 3
+                Name: Department Store Basement 2
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -315,7 +315,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Department Store Basement 4
+                Name: Department Store Basement 3
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -425,4 +425,66 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            
+            -
+                Name: Goldenrod Underground Hidden Paralyze Heal
+                FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PARLYZ_HEAL
+                Code: |
+                    GoldenrodUndergroundHiddenParlyzHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  6, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Underground Hidden Super Potion
+                FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    GoldenrodUndergroundHiddenSuperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenSuperPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Goldenrod Underground Hidden Antidote
+                FileName: GoldenrodUnderground.asm
+                SecondaryFile: GoldenrodUnderground.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ANTIDOTE
+                Code: |
+                    GoldenrodUndergroundHiddenAntidote:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 17,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenAntidote'
+                Text:
+                TrainerList: 
+                Sublocations:

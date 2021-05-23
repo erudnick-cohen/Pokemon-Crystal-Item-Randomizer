@@ -18,7 +18,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 32 actual
+        Name: Route 32 Actual
         FileName: Route32.asm
         Type: Map
         HasPKMN: Yes
@@ -66,7 +66,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Roar Dude
+                Name: Route 32 Roar Dude
                 FileName: Route32.asm
                 Type: Item
                 HasPKMN: No
@@ -160,7 +160,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Old Rod
+                Name: Old Rod Guru
                 FileName: Route32Pokecenter1F.asm
                 Type: Item
                 HasPKMN: No
@@ -220,5 +220,47 @@ Location:
                         line "your ITEMNAME."
                         done
 
+                TrainerList: 
+                Sublocations:
+            # -
+                # Name: Route 32 Hidden Great Ball
+                # FileName: Route32.asm
+                # SecondaryFile: Route32.asm
+                # Type: Item
+                # HasPKMN: No
+                # WildTableList:
+                # LocationReqs: Route 32
+                # FlagReqs:
+                    # - Hidden Items
+                # ItemReqs:
+                # FlagsSet:
+                # ReachableReqs:
+                # NormalItem: GREAT_BALL
+                # Code: |
+                    # Route32HiddenGreatBall:
+                        # ITEMLINE
+                # SecondaryCode: '    bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
+                # Text:
+                # TrainerList: 
+                # Sublocations:
+            -
+                Name: Route 32 Hidden Super Potion
+                FileName: Route32.asm
+                SecondaryFile: Route32.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 32
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                Code: |
+                    Route32HiddenSuperPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 11, 40, BGEVENT_ITEM, Route32HiddenSuperPotion'
+                Text:
                 TrainerList: 
                 Sublocations:

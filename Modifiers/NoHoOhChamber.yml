@@ -1,0 +1,9 @@
+Name: No Ho-Oh Chamber
+Description: Prevents items needed to defeat red from being located in the Ho-Oh chamber in Ruins of Alph. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationReqs: 
+            - Union Cave
+            - VS Ho-Oh
+            - Mt. Silver Unlock

@@ -82,3 +82,26 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 44 Hidden Elixer
+                FileName: Route44.asm
+                SecondaryFile: Route44.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 44
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ELIXER
+                Code: |
+                    Route44HiddenElixer:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 32,  9, BGEVENT_ITEM, Route44HiddenElixer'
+                Text:
+                TrainerList: 
+                Sublocations:

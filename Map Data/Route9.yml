@@ -1,5 +1,77 @@
 Location:
     -
+        Name: Route 9 Entrance
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 9 via Cerulean
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 9 via Cerulean
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Cerulean City
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 9 Entrance
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 9 via Route 10
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 9 via Route 10
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Route 10 via Rock Tunnel
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList: 
+        Sublocations:
+    -
         Name: Route 9
         FileName: Route9.asm
         Type: Map
@@ -7,11 +79,9 @@ Location:
         WildTableList: 
             - ROUTE_9
         LocationReqs:
-            - Cerulean City
+            - Route 9 Entrance
         FlagReqs:
-            - Hive Badge
         ItemReqs:
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -25,3 +95,24 @@ Location:
             - PICNICKER 13
             - HIKER 15
         Sublocations:
+            -
+                Name: Route 9 Hidden Ether
+                FileName: Route9.asm
+                SecondaryFile: Route9.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 9
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ETHER
+                Code: |
+                    Route9HiddenEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 41, 15, BGEVENT_ITEM, Route9HiddenEther'
+                Text:
+                TrainerList: 
+                Sublocations:

@@ -91,7 +91,7 @@ Location:
             - BIRD_KEEPER 3
         Sublocations:        
             -
-                Name: Rollout TM
+                Name: Route 35 Rollout TM
                 FileName: Route35.asm
                 Type: Item
                 HasPKMN: No
@@ -108,5 +108,4 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:           
-        
+                Sublocations:

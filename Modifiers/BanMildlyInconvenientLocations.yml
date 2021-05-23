@@ -1,0 +1,97 @@
+Name: No Mildly Inconvenient Location
+Description: Prevents items needed to defeat red from being located in the following locations, Ho-Oh chamber, Route 4, Tin Tower Rainbow Wing Gift, Elm's SS Ticket, Dragon's Den, Solarbeam TM, False Director, Items on Route 25, Left side of Tohjo Falls Items, Mystery Egg Gift, Masterball Gift, Secretpotion Gift and Soft Sand. Note that this setting does not affect Clair's badge. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationReqs: 
+            - Union Cave
+            - VS Ho-Oh
+            - Mt. Silver Unlock
+    -
+        Location: Route 4
+        NewLocationReqs:
+            - Route 3 and Mt. Moon
+            - Mt. Silver Unlock
+    -
+        Location: Elm SS Ticket
+        NewLocationReqs:
+            - Mt. Silver Unlock
+    -
+        Location: Rainbow Wing Gift
+        NewLocationReqs:
+            - Tin Tower
+            - Elite Four
+            - Mt. Silver Unlock
+    -
+        Location: Clair TM Banned
+        NewLocationReqs:
+            - Dragons Shrine
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Dragon Fang
+        NewLocationReqs:
+            - Dragons Shrine
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Max Elixer
+        NewLocationReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Max Elixer
+        NewLocationReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Calcium
+        NewLocationReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Max Potion
+        NewLocationReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Dragons Den Hidden Revive
+        NewLocationReqs:
+            - Dragons Den
+            - Mt. Silver Unlock
+    -
+        Location: Route 27 Solar Beam TM
+        NewLocationReqs:
+            - Tohjo Falls Over the Waterfall
+            - Mt. Silver Unlock
+    -
+        Location: Elm Master Ball
+        NewLocationReqs:
+            - Mt. Silver Unlock
+    -
+        Location: Elm Aide Pokeballs
+        NewLocationReqs:
+            - Mt. Silver Unlock
+    -
+        Location: Radio Tower Rockets Part 1
+        NewLocationReqs:
+            - Goldenrod City Entrance
+            - Mt. Silver Unlock
+    -
+        Location: Route 25 Nugget
+        NewLocationReqs:
+            - Route 25
+            - Mt. Silver Unlock
+    -
+        Location: Route 25 Protein
+        NewLocationReqs:
+            - Route 25
+            - Mt. Silver Unlock
+    -
+        Location: Secret Potion Man
+        NewLocationReqs:
+            - Route 41
+            - Mt. Silver Unlock
+    -
+        Location: Soft Sand Girls
+        NewLocationReqs:
+            - Route 34
+            - Mt. Silver Unlock

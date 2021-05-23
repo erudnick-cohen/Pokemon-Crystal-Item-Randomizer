@@ -1,0 +1,8 @@
+Name: No Whirl Islands
+Description: Prevents items needed to defeat red from being located in Whirl Islands. Whirl isn't really a bad check, I don't know why you want to enable this, its really not that hard an area, I promise. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Whirl Islands Requires Flash
+        NewLocationReqs: 
+            - Route 41
+            - Mt. Silver Unlock

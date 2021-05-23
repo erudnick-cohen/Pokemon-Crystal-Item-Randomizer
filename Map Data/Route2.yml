@@ -212,11 +212,9 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 2
+                    - Route 2 Post Cut
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: DIRE_HIT
@@ -235,11 +233,9 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 2
+                    - Route 2 Post Cut
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_POTION
@@ -251,6 +247,87 @@ Location:
                 AREALV: 32
                 TrainerList: 
                 Sublocations:
-
-
-
+            -
+                Name: Route 2 Hidden Max Ether
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2 Post Cut
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ETHER
+                Code: |
+                    Route2HiddenMaxEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Hidden Full Heal
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2 Post Cut
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    Route2HiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, Route2HiddenFullHeal'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Hidden Full Restore
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2 Post Cut
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    Route2HiddenFullRestore:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 2 Hidden Revive
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2 Post Cut
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    Route2HiddenRevive:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive'
+                Text:
+                TrainerList: 
+                Sublocations:

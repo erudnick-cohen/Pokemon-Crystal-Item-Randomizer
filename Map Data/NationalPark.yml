@@ -124,7 +124,7 @@ Location:
                 TrainerList: 
                 Sublocations:        
             -
-                Name: Dig TM
+                Name: National Park Dig TM
                 FileName: NationalPark.asm
                 SecondaryFile: NationalParkBugContest.asm
                 Type: Item
@@ -168,7 +168,27 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:          
-        
-        
-        
+                Sublocations:
+            # -
+                # Name: National Park Hidden Full Heal
+                # FileName: NationalPark.asm
+                # SecondaryFile: NationalParkBugContest.asm
+                # Type: Item
+                # HasPKMN: No
+                # WildTableList: 
+                # LocationReqs: National Park
+                # FlagReqs:
+                    # - Hidden Items
+                # ItemReqs:
+                # FlagsSet:
+                # ReachableReqs:
+                # NormalItem: FULL_HEAL
+                # Code: |
+                    # NationalParkHiddenFullHeal:
+                        # ITEMLINE
+                # SecondaryCode: |
+                    # NationalParkBugContestHiddenFullHeal:
+                        # ITEMLINE
+                # Text:
+                # TrainerList: 
+                # Sublocations:

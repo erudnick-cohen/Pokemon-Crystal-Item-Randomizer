@@ -1,0 +1,24 @@
+Name: No Nasty Location
+Description: Prevents items needed to defeat red from being located in the following locations, Ho-Oh chamber, Route 4, Tin Tower Rainbow Wing Gift and Elm's SS Ticket. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationReqs: 
+            - Union Cave
+            - VS Ho-Oh
+            - Mt. Silver Unlock
+    -
+        Location: Route 4
+        NewLocationReqs:
+            - Route 3 and Mt. Moon
+            - Mt. Silver Unlock
+    -
+        Location: Elm SS Ticket
+        NewLocationReqs:
+            - Mt. Silver Unlock
+    -
+        Location: Rainbow Wing Gift
+        NewLocationReqs:
+            - Tin Tower
+            - Elite Four
+            - Mt. Silver Unlock

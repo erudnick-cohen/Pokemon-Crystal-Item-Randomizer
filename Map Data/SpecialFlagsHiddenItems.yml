@@ -1,0 +1,33 @@
+Location:
+    -
+        Name: Hidden Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Hidden Items Locked
+        FlagReqs:
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Hidden Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

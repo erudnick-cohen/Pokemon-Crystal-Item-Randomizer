@@ -34,7 +34,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Route 42 middle island super potion
+                Name: Route 42 Middle Island Super Potion
                 FileName: Route42.asm
                 Type: Item
                 HasPKMN: No
@@ -54,8 +54,31 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 42 Hidden Max Potion
+                FileName: Route42.asm
+                SecondaryFile: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                    Route42HiddenMaxPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
     -
-        Name: Route 42 end
+        Name: Route 42 End
         FileName: Route42.asm
         Type: Map
         HasPKMN: No
@@ -72,7 +95,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 42 end
+        Name: Route 42 End
         FileName: Route42.asm
         Type: Map
         HasPKMN: No
@@ -92,7 +115,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_42
-        LocationReqs: Route 42 end
+        LocationReqs: Route 42 End
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -105,4 +128,3 @@ Location:
             - POKEMANIAC 4
             - HIKER 6
         Sublocations:
-                

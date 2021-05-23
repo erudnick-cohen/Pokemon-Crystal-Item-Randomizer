@@ -1,6 +1,6 @@
 Location:  
     -
-        Name: Azalea Town entrance
+        Name: Azalea Town Entrance
         FileName: AzaleaTown.asm
         Type: Map
         HasPKMN: Yes
@@ -20,7 +20,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Azalea Town entrance
+        LocationReqs: Azalea Town Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -103,5 +103,26 @@ Location:
                         line "would be happy to"
                         cont "hold that."
                         done
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Behind Slowpoke Well Hidden
+                FileName: AzaleaTown.asm
+                SecondaryFile: AzaleaTown.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Azalea Town
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    AzaleaTownHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 31,  6, BGEVENT_ITEM, AzaleaTownHiddenFullHeal'
+                Text:
                 TrainerList: 
                 Sublocations:
