@@ -13,7 +13,7 @@ import copy
 import traceback
 import random
 
-def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}, bonusTrash = []):
+def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}, bonusTrash = []):
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -119,8 +119,8 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			invKeyItemMap = defaultdict(lambda: '')
 			for i in keyItemMap:
 				invKeyItemMap[keyItemMap[i]] = i
-			trashItems = [x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems] #ensure progress items don't sneak into trash list
-			trashItems.extend(extraTrash)
+			trashItems = sorted([x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
+			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
 			if 'BonusItems' in otherSettings:
 				bonusTrash = copy.copy(otherSettings['BonusItems'])
@@ -137,17 +137,18 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			print(progressItems)
 			print(trashItems)
 			if(not "BadgeItemShuffle" in otherSettings):
-				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			else:
 				rBadgeList = []
 				for i in BadgeDict:
 					rBadgeList.append(i)
-				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict,inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
 				print('bad run, retrying')
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			traceback.print_exc()
+		seed = seed+1
 	print('-------')
 	for j in result[0]:
 		i = result[0][j]
