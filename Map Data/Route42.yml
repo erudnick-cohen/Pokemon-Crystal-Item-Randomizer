@@ -77,6 +77,76 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -   
+                Name: Route 42 Grn Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42
+                FlagReqs:
+                    -   Fog Badge
+                    -   Hive Badge
+                ItemReqs:
+                    -   Cut
+                    -   Surf
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: GRN_APRICORN
+                IsBerry: Yes
+                BerryFlag: 300
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
+            -   
+                Name: Route 42 Ylw Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42
+                FlagReqs:
+                    -   Fog Badge
+                    -   Hive Badge
+                ItemReqs:
+                    -   Cut
+                    -   Surf
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: YLW_APRICORN
+                IsBerry: Yes
+                BerryFlag: 301
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
+            -   
+                Name: Route 42 Pnk Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42
+                FlagReqs:
+                    -   Fog Badge
+                    -   Hive Badge
+                ItemReqs:
+                    -   Cut
+                    -   Surf
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PNK_APRICORN
+                IsBerry: Yes
+                BerryFlag: 302
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
     -
         Name: Route 42 End
         FileName: Route42.asm

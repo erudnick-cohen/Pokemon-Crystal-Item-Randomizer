@@ -150,6 +150,8 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 		if(i.NormalItem is not None and not i.isItem()):
 			print(i.Name)
 
+	RandomizerRom.ReplaceItems(result[0].values())
+
 	yamlfile = open("crystal-speedchoice-label-details.json")
 	yamltext = yamlfile.read()
 	addressLists = json.loads(yamltext)

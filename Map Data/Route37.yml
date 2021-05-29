@@ -108,3 +108,102 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -   
+                Name: Route 37 Red Apricorn
+                FileName: Route37.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 37
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: RED_APRICORN
+                IsBerry: Yes
+                BerryFlag: 297
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
+            -   
+                Name: Route 37 Blu Apricorn
+                FileName: Route37.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 37
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BLU_APRICORN
+                IsBerry: Yes
+                BerryFlag: 298
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
+                      
+            -   
+                Name: Route 37 Blk Apricorn
+                FileName: Route37.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 37
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BLK_APRICORN
+                IsBerry: Yes
+                BerryFlag: 299
+                Code: |
+                  Route29Potion:
+                      ITEMLINE
+              
+            -
+                Name: Route 37 Sunny
+                FileName: Route37.asm
+                SecondaryFile: Route37.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 37
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAGNET
+                Code: |
+                    .next
+                        ITEMLINE
+                        iffalse SunnyDoneScript
+                        setevent EVENT_GOT_MAGNET_FROM_SUNNY
+                        writetext SunnyGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    .SunnyGaveGiftText:
+                        text "SUNNY: That thing…"
+                        para "Um…"
+                        para "… What was it now…"
+                        para "…"
+                        para "Oh! I remember"
+                        line "now!"
+                        para "A #MON that"
+                        line "knows electric"
+                        para "moves should hold"
+                        line "it."
+                        para "My sis MONICA said"
+                        line "it powers up"
+                        cont "electric moves!"
+                        done
+                TrainerList: 
+                Sublocations:

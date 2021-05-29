@@ -93,3 +93,23 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -
+                Name: Route 11 Berry
+                FileName: Route11.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BERRY
+                IsBerry: Yes
+                BerryFlag: 281
+                Code: |
+                  Route29Potion:
+                      ITEMLINE

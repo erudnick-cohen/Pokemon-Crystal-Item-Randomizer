@@ -122,3 +122,23 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+        
+    -   
+        Name: Route 45 MysteryBerry
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 45
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: MYSTERYBERRY
+        IsBerry: Yes
+        BerryFlag: 293
+        Code: |
+          Route29Potion:
+              ITEMLINE

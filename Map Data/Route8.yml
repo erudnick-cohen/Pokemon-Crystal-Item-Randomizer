@@ -21,4 +21,23 @@ Location:
             - BIKER 5
             - SUPER_NERD 6
             - SUPER_NERD 7
-        Sublocations:
+        Sublocations:        
+            -
+                Name: Route 8 PRZCureBerry
+                FileName: Route8.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 8
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PRZCUREBERRY
+                IsBerry: Yes
+                BerryFlag: 275
+                Code: |
+                  Route29Potion:
+                      ITEMLINE

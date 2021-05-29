@@ -12,7 +12,10 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 		for file in files:
 			print("File: "+file)
 			entry = open(path+"//Map Data//"+file,'r')
-			yamlData = yaml.load(entry)
+			try:
+				yamlData = yaml.load(entry)
+			except Exception as inst:
+				raise(inst)
 			print("Locations in file are:")
 			for location in yamlData["Location"]:
 				print(location["Name"])

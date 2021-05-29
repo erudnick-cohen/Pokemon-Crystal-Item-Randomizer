@@ -1,0 +1,10 @@
+Name: Optimise Route
+Description: "Ensure no need to go to suboptimal places without key item"
+Changes:
+    -
+        Location: Radio Tower
+        NewFlagReqs:
+            - Rocket Invasion
+        NewItemReqs:
+            - Card Key
+            

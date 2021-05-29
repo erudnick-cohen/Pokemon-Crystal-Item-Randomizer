@@ -31,3 +31,23 @@ Location:
         TrainerList: 
             - HIKER 5
         Sublocations:
+        
+        -   
+            Name: Route 33 PSNCureBerry
+            FileName: Route33.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 33 Actual
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Text:
+            TrainerList:
+            NormalItem: PSNCUREBERRY
+            IsBerry: Yes
+            BerryFlag: 286
+            Code: |
+              Route29Potion:
+                  ITEMLINE

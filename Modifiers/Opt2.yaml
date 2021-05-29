@@ -1,0 +1,9 @@
+Name: Optimise Route
+Description: "Ensure no need to go to suboptimal places without key item"
+Changes:
+    -
+        Location: Diglett's Cave
+        NewItemReqs:
+            - Cut
+        NewFlagReqs:
+            - Hive Badge

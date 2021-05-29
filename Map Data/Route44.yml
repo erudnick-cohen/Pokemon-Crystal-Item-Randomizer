@@ -105,3 +105,22 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -   
+                Name: Route 44 Burnt Berry
+                FileName: Route44.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 44
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BURNT_BERRY
+                IsBerry: Yes
+                BerryFlag: 292
+                Code: |
+                  Route29Potion:
+                      ITEMLINE

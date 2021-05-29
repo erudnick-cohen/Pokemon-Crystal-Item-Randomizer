@@ -110,3 +110,23 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -   
+                Name: Route 39 Mint Berry
+                FileName: Route39.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 39
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: MINT_BERRY
+                IsBerry: Yes
+                BerryFlag: 290
+                Code: |
+                  Route29Potion:
+                      ITEMLINE

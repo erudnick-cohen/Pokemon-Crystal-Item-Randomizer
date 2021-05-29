@@ -66,6 +66,25 @@ Location:
             - PSYCHIC_T 7
             - SCHOOLBOY 11
         Sublocations:
+        -   
+            Name: Route 36 Ice Berry
+            FileName: Route36.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 36 via Goldenrod
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Text:
+            TrainerList:
+            NormalItem: ICE_BERRY
+            IsBerry: Yes
+            BerryFlag: 288
+            Code: |
+              Route29Potion:
+                  ITEMLINE
     -
         Name: Route 36 Sudowoodo Junction
         FileName: Route36.asm
@@ -139,3 +158,40 @@ Location:
                 done
         TrainerList: 
         Sublocations:
+        
+    -
+            Name: Route 36 Arthur
+            FileName: Route36.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList: 
+            LocationReqs: Route 36 via Violet
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: HARD_STONE
+            Code: |
+                .MetArthur:
+                    writetext ArthurGivesGiftText
+                    promptbutton
+                    verbosegiveitem HARD_STONE
+                    iffalse .BagFull
+                    setevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
+                    writetext ArthurGaveGiftText
+                    waitbutton
+                    closetext
+                    end
+
+            Text: |
+                .ArthurGaveGiftText:
+                    text "ARTHUR: A #MON"
+                    line "that uses rock-"
+
+                    para "type moves should"
+                    line "hold on to that."
+
+                    para "It pumps up rock-"
+                    line "type attacks."
+                    done

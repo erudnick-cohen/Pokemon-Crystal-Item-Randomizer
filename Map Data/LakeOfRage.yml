@@ -207,6 +207,40 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            
+            -
+                Name: Lake of Rage Wesley
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Lake Of Rage
+                FlagReqs:
+                    - Hive Badge
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BLACKBELT
+                Code: |
+                    .MetWesley:
+                        writetext WesleyGivesGiftText
+                        promptbutton
+                        verbosegiveitem BLACKBELT_I
+                        iffalse WesleyDoneScript
+                        setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
+                        writetext WesleyGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+
+                Text: |
+                    WesleyGaveGiftText:
+                        text "WESLEY: BLACKBELT"
+                        line "beefs up the power"
+                        cont "of fighting moves."
+                        done
+
             # -
                 # Name: Lake of Rage Hidden Rare Candy
                 # FileName: LakeOfRage.asm
