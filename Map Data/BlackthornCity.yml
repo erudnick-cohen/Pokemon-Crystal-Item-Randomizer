@@ -15,8 +15,7 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-        
-        -
+            -
                 Name: Blackthorn City Santos
                 FileName: BlackthornCity.asm
                 Type: Item
@@ -52,7 +51,5 @@ Location:
                         para "It will frighten"
                         line "you…"
                         done
-                TrainerList: 
+                TrainerList:
                 Sublocations:
-        
-        

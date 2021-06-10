@@ -1,7 +1,8 @@
-Name: Optimise Power Plant
+Name: Optimise Kenya Item
 Description: "Ensure no need to go to suboptimal places without key item"
 Changes:
     -
-        Location: Power Plant
+        Location: Route 31 Kenya Item
         NewItemReqs:
-            - Machine Part
+            - Squirtbottle
+            

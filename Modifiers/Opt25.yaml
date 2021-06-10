@@ -1,7 +1,12 @@
-Name: Optimise Route
+Name: Optimise Route 25
 Description: "Ensure no need to go to suboptimal places without key item"
 Changes:
     -
         Location: Route 25
         NewItemReqs:
             - Machine Part
+            - Cut
+            - Surf
+        NewFlagReqs:
+            - Hive Badge
+            - Fog Badge
