@@ -45,7 +45,7 @@ Changes:
             - Bicycle
             - Mystery Egg
     -
-        Location: Master Ball
+        Location: Elm Master Ball
         NewItemReqs:
             - Bicycle
     -
@@ -59,7 +59,7 @@ Changes:
             - Bicycle
             - Surf
     -
-        Location: Roar Dude
+        Location: Route 32 Roar Dude
         NewItemReqs:
             - Bicycle
             - Cut
@@ -84,7 +84,7 @@ Changes:
             - Surf
             - Strength
     -
-        Location: Soft Sand
+        Location: Soft Sand Girls
         NewItemReqs:
             - Bicycle
             - Surf
@@ -115,7 +115,7 @@ Changes:
             - Surf
             - Strength
     -
-        Location: Goldenrod City Flower Shop
+        Location: Flower Shop
         NewItemReqs:
             - Bicycle
     -

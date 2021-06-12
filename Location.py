@@ -167,10 +167,11 @@ class Location:
 			 i.applyModifiers(modifierDict)
 	
 	#get all trash items in this locations tree
-	def getTrashItemList(self):
+	def getTrashItemList(self, hiddenItems = False):
 		list = [];
-		if(self.NormalItem is not None and self.isItem()):
-			list.append(self.NormalItem)
-		for i in self.Sublocations:
-			list.extend(i.getTrashItemList())
+		if hiddenItems or (not ('Hidden Items' in self.FlagReqs)):
+			if(self.NormalItem is not None and self.isItem()):
+				list.append(self.NormalItem)
+			for i in self.Sublocations:
+				list.extend(i.getTrashItemList(hiddenItems))
 		return list

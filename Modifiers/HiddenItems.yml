@@ -1,5 +1,7 @@
 Name: Hidden Items
 Description: Adds hidden items to the randomization
+FlagsSet:
+    - Hidden Items
 Changes:
     -
         Location: Hidden Items
