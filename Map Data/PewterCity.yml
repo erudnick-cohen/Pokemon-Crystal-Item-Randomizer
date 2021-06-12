@@ -51,6 +51,7 @@ Location:
                 WildTableList:
                 LocationReqs: Pewter City
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -70,6 +71,7 @@ Location:
                 WildTableList:
                 LocationReqs: Pewter City
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

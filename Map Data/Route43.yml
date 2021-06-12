@@ -80,6 +80,7 @@ Location:
         FlagReqs:
             -   Fog Badge
             -   Hive Badge
+            -   Berry Trees
         ItemReqs:
             -   Cut
             -   Surf

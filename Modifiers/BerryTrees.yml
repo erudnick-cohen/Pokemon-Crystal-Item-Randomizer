@@ -1,0 +1,6 @@
+Name: Berry Trees
+Description: Adds berry tree items to the randomization
+Changes:
+    -
+        Location: Berry Trees
+        NewFlagReqs: []

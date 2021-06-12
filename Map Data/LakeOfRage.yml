@@ -217,6 +217,7 @@ Location:
                 LocationReqs: Lake Of Rage
                 FlagReqs:
                     - Hive Badge
+                    - Timed Events
                 ItemReqs:
                     - Cut
                 FlagsSet:

@@ -41,6 +41,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 29
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -63,6 +64,7 @@ Location:
                 LocationReqs: Route 29
                 FlagReqs:
                     - Zephyr Badge
+                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

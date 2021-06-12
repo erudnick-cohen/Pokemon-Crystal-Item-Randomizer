@@ -131,6 +131,7 @@ Location:
         WildTableList:
         LocationReqs: Route 45
         FlagReqs:
+            - Berry Trees
         ItemReqs:
         FlagsSet:
         ReachableReqs:

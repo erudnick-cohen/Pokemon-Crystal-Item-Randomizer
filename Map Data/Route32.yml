@@ -273,6 +273,7 @@ Location:
                 WildTableList: 
                 LocationReqs: Route 32
                 FlagReqs:
+                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

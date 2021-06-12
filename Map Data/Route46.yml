@@ -95,6 +95,7 @@ Location:
         WildTableList:
         LocationReqs: Route 46 Upper
         FlagReqs:
+            -   Berry Trees
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -115,6 +116,7 @@ Location:
         WildTableList:
         LocationReqs: Route 46 Upper
         FlagReqs:
+            -   Berry Trees
         ItemReqs:
         FlagsSet:
         ReachableReqs:

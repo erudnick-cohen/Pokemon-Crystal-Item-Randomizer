@@ -105,6 +105,7 @@ Location:
                 WildTableList:
                 LocationReqs: Violet City
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

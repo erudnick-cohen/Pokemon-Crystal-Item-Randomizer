@@ -47,6 +47,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 40 Land
                 FlagReqs:
+                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

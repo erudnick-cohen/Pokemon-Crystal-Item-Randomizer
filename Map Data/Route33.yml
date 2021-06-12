@@ -40,6 +40,7 @@ Location:
             WildTableList:
             LocationReqs: Route 33 Actual
             FlagReqs:
+                - Berry Trees
             ItemReqs:
             FlagsSet:
             ReachableReqs:

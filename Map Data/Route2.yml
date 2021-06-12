@@ -340,6 +340,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 2 Post Cut
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

@@ -116,6 +116,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 37
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -135,6 +136,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 37
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -155,6 +157,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 37
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -176,6 +179,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 37
                 FlagReqs:
+                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

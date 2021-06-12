@@ -135,6 +135,7 @@ Location:
                 WildTableList:
                 LocationReqs: Azalea Town
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

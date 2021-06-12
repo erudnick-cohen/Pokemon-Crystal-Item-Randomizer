@@ -23,6 +23,7 @@ Location:
                 WildTableList:
                 LocationReqs: Blackthorn City
                 FlagReqs:
+                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

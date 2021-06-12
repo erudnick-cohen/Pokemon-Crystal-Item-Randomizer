@@ -280,6 +280,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 30
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -300,6 +301,7 @@ Location:
                 WildTableList:
                 LocationReqs: Route 30
                 FlagReqs:
+                    - Berry Trees
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

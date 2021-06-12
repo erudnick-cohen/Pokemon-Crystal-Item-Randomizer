@@ -119,6 +119,7 @@ Location:
                 LocationReqs: Route 35
                 FlagReqs:
                     -   Fog Badge
+                    -   Berry Trees
                 ItemReqs:
                     -   Surf
                 FlagsSet:

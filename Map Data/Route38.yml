@@ -101,6 +101,7 @@ Location:
             WildTableList:
             LocationReqs: Route 38 Entrance
             FlagReqs:
+                - Berry Trees
             ItemReqs:
             FlagsSet:
             ReachableReqs:

@@ -57,6 +57,7 @@ Location:
         LocationReqs: Fuchsia City
         FlagReqs:
             -   Hive Badge
+            -   Berry Trees
         ItemReqs:
             -   Cut
         FlagsSet:

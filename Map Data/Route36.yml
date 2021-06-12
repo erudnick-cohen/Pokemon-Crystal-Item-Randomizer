@@ -74,6 +74,7 @@ Location:
             WildTableList:
             LocationReqs: Route 36 via Goldenrod
             FlagReqs:
+                - Berry Trees
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -167,7 +168,7 @@ Location:
             WildTableList: 
             LocationReqs: Route 36 via Violet
             FlagReqs:
-                - Zephyr Badge
+                - Timed Events
             ItemReqs:
             FlagsSet:
             ReachableReqs:
