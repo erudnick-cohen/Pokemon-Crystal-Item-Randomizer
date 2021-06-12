@@ -236,6 +236,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog.showMessage('A file was not selected!')
 			error_dialog.exec_()
 def main():
+	os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 	app = QApplication(sys.argv)
 	form = RunWindow()
 	form.show()
