@@ -4,6 +4,9 @@ import random
 import copy
 import time
 
+import RandomizeFunctions
+
+
 def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
 	random.seed(seed)
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
@@ -449,15 +452,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 			raise Exception('Did not match plando placements!!!')
 			
-	#Activate delete fly if needed
-	if('Delete Fly' in inputFlags):
-		for i in reachable.values():
-			if i.isItem():
-				#print(i.Name)
-				#print('item is: '+str(i.item))
-				if i.item == 'Fly':
-					#print('deleted fly')
-					i.item = 'BERRY'
+	RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
 
 	#print(stateDist)
 	#print(spoiler)

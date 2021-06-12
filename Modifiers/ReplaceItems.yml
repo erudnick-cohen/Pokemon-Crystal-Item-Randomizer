@@ -1,0 +1,4 @@
+Name: Replace Items
+Description: Uses the configuration file listed to replace various types of item with another version.
+FlagsSet:
+    - Replace Items
