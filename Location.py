@@ -175,7 +175,7 @@ class Location:
 			include = False
 		if 'Berry Trees' in self.FlagReqs and "Berry Trees" not in flags:
 			include = False
-		if 'Daily Events' in self.FlagReqs and "Daily Events" not in flags:
+		if 'Timed Events' in self.FlagReqs and "Timed Events" not in flags:
 			include = False
 
 		if include:

@@ -47,10 +47,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					print("-----------")
 					print("Failure in "+location["Name"])
 					raise(inst)
-	hiddenItems = 'Hidden Items' in flags
-	print('flags are')
-	print(flags)
-	print(hiddenItems)
+
 	trashList = []
 	for i in LocationList:
 		trashList.extend(i.getTrashItemList(flags))
