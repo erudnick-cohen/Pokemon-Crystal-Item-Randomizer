@@ -1,20 +1,46 @@
 import json
 
+def getOptionsForItemModifications():
+	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball"]
+
+def checkIfReplacementsConfigured(inputFlags):
+	options = getOptionsForItemModifications()
+	for option in options:
+		if option in inputFlags:
+			return True
+	return False
+
+def FlagCheckType(type, inputFlags):
+	flagExtend = "Replace " + type
+	if flagExtend in inputFlags:
+		return True
+
+	return False
 
 def HandleItemReplacement(reachable, inputFlags):
 	replacementFile = None
-	if ('Replace Items' in inputFlags):
-		item_replacement = open("ItemReplacement.json")
+
+	containsAny = checkIfReplacementsConfigured(inputFlags)
+
+	if containsAny:
+		item_replacement = open("Config/ItemReplacement.json")
 		replacements = item_replacement.read()
 		replacement_data = json.loads(replacements)
 		replacementFile = {}
 		for replacement_item in replacement_data:
 			replacement_item_name = replacement_item["item"]
 			replacement_replacement = replacement_item["replacement"]
-			replacementFile[replacement_item_name] = replacement_replacement
+			replacement_type = replacement_item["type"]
 
-	elif 'Delete Fly' in inputFlags:
-		replacementFile = {"Fly": "BERRY"}
+			useReplacement = FlagCheckType(replacement_type, inputFlags)
+			if useReplacement:
+				replacementFile[replacement_item_name] = replacement_replacement
+
+	if 'Delete Fly' in inputFlags:
+		if replacementFile is None:
+			replacementFile = {}
+
+		replacementFile["Fly"]: "BERRY"
 
 	if replacementFile is not None:
 		for i in reachable.values():
