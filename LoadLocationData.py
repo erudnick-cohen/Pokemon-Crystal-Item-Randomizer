@@ -53,7 +53,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	print(hiddenItems)
 	trashList = []
 	for i in LocationList:
-		trashList.extend(i.getTrashItemList(hiddenItems = hiddenItems))
+		trashList.extend(i.getTrashItemList(flags))
 		
 	print('NameCounts')
 	print(LocCountDict)
