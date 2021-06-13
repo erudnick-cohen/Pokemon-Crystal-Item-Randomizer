@@ -1,8 +1,0 @@
-Name: Optimise Kenya Item
-Description: "Ensure no need to go to suboptimal places without key item"
-Changes:
-    -
-        Location: Route 31 Kenya Item
-        NewItemReqs:
-            - Squirtbottle
-            

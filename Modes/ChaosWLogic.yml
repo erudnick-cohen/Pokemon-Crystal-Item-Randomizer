@@ -22,12 +22,12 @@ DefaultModifiers:
     - Modifiers/CardRandomization.yml
     - Modifiers/HiddenItems.yml
     - Modifiers/NoVanillaBasement.yml
-    - Modifiers/OptLighthouse.yaml
-    - Modifiers/OptIce.yaml
-    - Modifiers/Opt25.yaml
-    - Modifiers/OptPower.yaml
-    - Modifiers/OptRadio.yaml
-    - Modifiers/Opt2.yaml
+    - Modifiers/NoDoubleDippingLighthouse.yaml
+    - Modifiers/NoDoubleDippingRoute44.yaml
+    - Modifiers/NoDoubleDippingRoute25.yaml
+    - Modifiers/NoDoubleDippingPowerPlant.yaml
+    - Modifiers/NoDoubleDippingRadioTower.yaml
+    - Modifiers/NoDoubleDippingRoute2.yaml
     - Modifiers/ForceEarlyFlyV2.yml
 BannedLocations:
 AllowedLocations:

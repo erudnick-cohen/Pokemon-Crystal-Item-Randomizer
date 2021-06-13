@@ -18,6 +18,13 @@ DefaultModifiers:
     - Modifiers/NoVanillaBasement.yml
     - Modifiers/NoWhirlIslands.yml
     - Modifiers/NoRuinsOfAlph.yml
+    - Modifiers/NoDoubleDippingKenya.yaml
+    - Modifiers/NoDoubleDippingLighthouse.yaml
+    - Modifiers/NoDoubleDippingPowerPlant.yaml
+    - Modifiers/NoDoubleDippingRadioTower.yaml
+    - Modifiers/NoDoubleDippingRoute2.yaml
+    - Modifiers/NoDoubleDippingRoute25.yaml
+    - Modifiers/NoDoubleDippingRoute44.yaml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver

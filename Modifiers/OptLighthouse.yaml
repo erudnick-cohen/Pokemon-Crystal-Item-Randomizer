@@ -1,7 +1,0 @@
-Name: Optimise LightHouse
-Description: "Ensure no need to go to suboptimal places without key item"
-Changes:
-    -
-        Location: Lighthouse
-        NewItemReqs:
-            - Secret Potion
