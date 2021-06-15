@@ -3,5 +3,5 @@ Description: "Add logic to prevent going to the lighthouse before obtaining the 
 Changes:
     -
         Location: Lighthouse
-        NewItemReqs:
+        AddItemReqs:
             - Secret Potion

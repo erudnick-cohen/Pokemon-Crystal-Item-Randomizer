@@ -21,6 +21,7 @@ DefaultModifiers:
     - Modifiers/EnableTinTower.yml
     - Modifiers/CardRandomization.yml
     - Modifiers/HiddenItems.yml
+    - Modifiers/ForceEarlyFlyV2.yml
     - Modifiers/NoVanillaBasement.yml
     - Modifiers/NoDoubleDippingLighthouse.yaml
     - Modifiers/NoDoubleDippingRoute44.yaml
@@ -29,7 +30,6 @@ DefaultModifiers:
     - Modifiers/NoDoubleDippingRadioTower.yaml
     - Modifiers/NoDoubleDippingRoute2.yaml
     - Modifiers/NoDoubleDippingKenya.yaml
-    - Modifiers/ForceEarlyFlyV2.yml
     - Modifiers/TimeEvents.yml
     - Modifiers/BerryTrees.yml
     - Modifiers/UpgradeHealingItems.yml

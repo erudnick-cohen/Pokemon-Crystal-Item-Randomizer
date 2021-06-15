@@ -6,7 +6,8 @@
  { "item": "BERRY", "replacement":  "FULL_RESTORE", "type": "Healing"  },
  { "item": "GOLD_BERRY", "replacement":  "FULL_RESTORE", "type": "Healing"  },
  { "item": "ANTIDOTE", "replacement":  "FULL_HEAL", "type": "Healing"  },
- { "item": "PARALYZ_HEAL", "replacement":  "FULL_HEAL", "type": "Healing"  },
+ { "item": "PARLYZ_HEAL", "replacement":  "FULL_HEAL", "type": "Healing"  },
+  { "item": "AWAKENING", "replacement":  "FULL_HEAL", "type": "Healing"  },
  { "item": "ICE_HEAL", "replacement":  "FULL_HEAL", "type": "Healing"  },
  { "item": "BURN_HEAL", "replacement":  "FULL_HEAL", "type": "Healing"  },
  { "item": "PSNCUREBERRY", "replacement":  "FULL_HEAL", "type": "Healing"  },
@@ -64,5 +65,5 @@
  { "item": "BLACKGLASSES", "replacement":  "LOVE_BALL", "type": "Custom" },
  { "item": "BLACKBELT", "replacement":  "HEAVY_BALL", "type": "Custom" },
  { "item": "SOFT_SAND", "replacement":  "LOVE_BALL", "type": "Custom" },
-  { "item": "NEVERMELTICE", "replacement":  "LURE_BALL", "type": "Custom" }
+ { "item": "NEVERMELTICE", "replacement":  "LURE_BALL", "type": "Custom" }
 ]

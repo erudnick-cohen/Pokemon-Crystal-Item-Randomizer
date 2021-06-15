@@ -163,6 +163,36 @@ class Location:
 						self.LocationReqs = j['NewLocationReqs']
 					else:
 						self.LocationReqs = self.LocationReqs
+				if 'AddFlagReqs' in j:
+					toAdd = j["AddFlagReqs"]
+					for x in toAdd:
+						if x not in self.FlagReqs:
+							self.FlagReqs.append(x)
+				if 'AddItemReqs' in j:
+					toAdd = j["AddItemReqs"]
+					for x in toAdd:
+						if x not in self.ItemReqs:
+							self.ItemReqs.append(x)
+				if 'AddLocationReqs' in j:
+					toAdd = j["AddLocationReqs"]
+					for x in toAdd:
+						if x not in self.LocationReqs:
+							self.LocationReqs.append(x)
+				if 'RemoveFlagReqs' in j:
+					toRemove = j["RemoveFlagReqs"]
+					for x in toRemove:
+						if x in self.FlagReqs:
+							self.FlagReqs.remove(x)
+				if 'RemoveItemReqs' in j:
+					toRemove = j["RemoveItemReqs"]
+					for x in toRemove:
+						if x in self.ItemReqs:
+							self.ItemReqs.remove(x)
+				if 'RemoveLocationReqs' in j:
+					toRemove = j["RemoveLocationReqs"]
+					for x in toRemove:
+						if x in self.LocationReqs:
+							self.LocationReqs.remove(x)
 		for i in self.Sublocations:
 			 i.applyModifiers(modifierDict)
 	

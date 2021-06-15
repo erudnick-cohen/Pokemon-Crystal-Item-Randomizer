@@ -3,8 +3,8 @@ Description: "Add logic to prevent going to until you have the Card Key to defea
 Changes:
     -
         Location: Radio Tower
-        NewFlagReqs:
+        AddFlagReqs:
             - Rocket Invasion
-        NewItemReqs:
+        AddItemReqs:
             - Card Key
             

@@ -21,10 +21,9 @@ Changes:
             - Storm Badge
     -
         Location: Route 44
-        NewItemReqs:
+        AddItemReqs:
             - Fly
-        NewFlagReqs:
-            - Rocket Invasion
+        AddFlagReqs:
             - Storm Badge
     -
         Location: Diglett's Cave

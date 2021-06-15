@@ -334,65 +334,7 @@ Location:
                 AREALV: 
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Radio Card Quiz
-                FileName: RadioTower1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                    - Impossible
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                Code: |
-                    RadioTower1FRadioCardWomanScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_RADIO_CARD_RECEIVED
-                        iftrue .GotCard
-                        writetext RadioTower1FRadioCardWomanOfferQuizText
-                        yesorno
-                        iffalse .NoQuiz
-                        writetext RadioTower1FRadioCardWomanQuestion1Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion2Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion3Text
-                        yesorno
-                        iftrue .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion4Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion5Text
-                        yesorno
-                        iftrue .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanYouWinText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_RADIO_CARD_RECEIVED
-                    .GotCard:
-                        writetext RadioTower1FRadioCardWomanTuneInText
-                        waitbutton
-                        closetext
-                        end
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
+
             -
                 Name: Goldenrod City Buy Rock Smash
                 FileName: GoldenrodCity.asm
