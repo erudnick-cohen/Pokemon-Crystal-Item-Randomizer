@@ -454,6 +454,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			
 	RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
 
+	if len(trashItems) > 0 and not randomizerFailed:
+		print(len(trashItems), trashItems)
+
 	#print(stateDist)
 	#print(spoiler)
 	#print(nBadges)

@@ -1,6 +1,8 @@
 [
-  {"integer_values": { "old": [11], "new": [0] },"address_range": { "begin": 352390, "end": 352391 }},
-{"integer_values": { "old": [11], "new": [0] },"address_range": { "begin": 352409, "end": 352410 }},
+  {"integer_values": { "old": [6,0], "new": [7,10] },"address_range": { "begin": 352391, "end": 352393 }},
+{"integer_values": { "old": [7,0], "new": [6,10] },"address_range": { "begin": 352410, "end": 352412 }},
+{"integer_values": { "old": [149], "new": [0] },"address_range": { "begin": 352428, "end": 352429 }},
+{"integer_values": { "old": [8,222], "new": [9,203] },"address_range": { "begin": 352445, "end": 352447 }},
 {"integer_values": { "old": [6,2], "new": [7,10] },"address_range": { "begin": 434604, "end": 434606 }},
 {"integer_values": { "old": [0], "new": [10] },"address_range": { "begin": 434690, "end": 434691 }},
 {"integer_values": { "old": [1], "new": [10] },"address_range": { "begin": 434694, "end": 434695 }},
@@ -14,7 +16,12 @@
 {"integer_values": { "old": [6,3], "new": [7,10] },"address_range": { "begin": 458776, "end": 458778 }},
 {"integer_values": { "old": [7,3], "new": [6,10] },"address_range": { "begin": 459261, "end": 459263 }},
 {"integer_values": { "old": [4], "new": [5] },"address_range": { "begin": 461677, "end": 461678 }},
+{"integer_values": { "old": [4], "new": [7] },"address_range": { "begin": 466243, "end": 466244 }},
 {"integer_values": { "old": [7,1], "new": [6,10] },"address_range": { "begin": 487602, "end": 487604 }},
+{"integer_values": { "old": [4], "new": [7] },"address_range": { "begin": 487607, "end": 487608 }},
+{"integer_values": { "old": [149], "new": [0] },"address_range": { "begin": 504747, "end": 504748 }},
+{"integer_values": { "old": [1], "new": [7] },"address_range": { "begin": 508072, "end": 508073 }},
+{"integer_values": { "old": [1], "new": [7] },"address_range": { "begin": 508247, "end": 508248 }},
 {"integer_values": { "old": [6,5], "new": [7,10] },"address_range": { "begin": 1639528, "end": 1639530 }},
 {"integer_values": { "old": [7,5], "new": [6,10] },"address_range": { "begin": 1640262, "end": 1640264 }},
 {"integer_values": { "old": [12], "new": [11] },"address_range": { "begin": 1643470, "end": 1643471 }},
@@ -28,4 +35,4 @@
 {"integer_values": { "old": [7,1], "new": [6,10] },"address_range": { "begin": 1728995, "end": 1728997 }},
 {"integer_values": { "old": [6,0], "new": [7,10] },"address_range": { "begin": 1740153, "end": 1740155 }},
 {"integer_values": { "old": [7,0], "new": [6,10] },"address_range": { "begin": 1740233, "end": 1740235 }}
-]
+  ]

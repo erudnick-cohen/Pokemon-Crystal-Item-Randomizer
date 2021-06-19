@@ -222,11 +222,17 @@ Changes:
             - Bicycle
     -
         Location: Radio Tower Rockets Part 2
-        NewFlagReqs:
-            - Rocket Invasion
+        AddFlagReqs:
             - Storm Badge
-        NewItemReqs:
-            - Card Key
+        AddItemReqs:
             - Bicycle
+            - Fly
 
+    -
+        Location: Route 29 Tuscany
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Bicycle
+            - Fly
 
