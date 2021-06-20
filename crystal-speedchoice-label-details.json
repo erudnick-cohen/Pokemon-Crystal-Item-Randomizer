@@ -1,4 +1,16 @@
 [
+ {"label":"CeladonMansionCurse.ckir_BEFORECELADONMANSIONCURSE0ITEMCODE","address_range": { "begin": 466257, "end": 466260 },"integer_values":"158 193 1", "hex_values":"$9e $c1 $1"},
+ {"label":"Route27SandstormHouse.ckir_BEFOREROUTE27SANDSTORMHOUSE0ITEMCODE","address_range": { "begin": 504757, "end": 504760 },"integer_values":"158 229 1", "hex_values":"$9e $e5 $1"},
+{"label":"Route39FarmhouseSnore.ckir_BEFOREROUTE39FARMHOUSESNORE0ITEMCODE","address_range":  { "begin": 642845, "end": 642848 },"integer_values":"158 204 1", "hex_values":"$9e $cc $1"},
+ {"label":"GoldenrodDepartmentStoreReturn.ckir_BEFOREGOLDENRODDEPARTMENTSTORERETURN0ITEMCODE","address_range":  { "begin": 352442, "end": 352445 },"integer_values":"158 218 1", "hex_values":"$9e $da $1"},
+{"label":"GoldenrodDepartmentStoreFrustration.ckir_BEFOREGOLDENRODDEPARTMENTSTOREFRUSTRATION0ITEMCODE","address_range":  { "begin": 352463, "end": 352466 },"integer_values":"158 212 1", "hex_values":"$9e $d4 $1"},
+{"label":"MountMoonSquareHiddenMoonStone.ckir_BEFOREMOUNTMOONSQUAREHIDDENMOONSTONE0ITEMCODE","address_range":{ "begin": 487720, "end": 487723 },"integer_values":"236 0 8","hex_values":"$ec $0 $8"},
+ {"label":"MountMoonSquareHiddenMoonStone.ckir_BEFOREMOUNTMOONSQUAREHIDDENMOONSTONE0ITEMCODEB","address_range":{ "begin": 487812, "end": 487817},"integer_values":"7 7 7 40 113","hex_values":"$7 $7 $7 $28 $71"},
+ {"label":"Route32HiddenGreatBall.ckir_BEFOREROUTE32HIDDENGREATBALL0ITEMCODE","address_range":{ "begin": 1640326, "end": 1640329 },"integer_values":"165 0 4","hex_values":"$a5 $0 $4"},
+ {"label":"Route32HiddenGreatBall.ckir_BEFOREROUTE32HIDDENGREATBALL0ITEMCODEB","address_range":{ "begin": 1643469, "end": 1643474 },"integer_values":"67 11 7 34 42","hex_values":"$43 $b $7 $86 $47"},
+ {"label":"LakeOfRageHiddenRareCandy.ckir_BEFORELAKEOFRAGEHIDDENRARECANDY0ITEMCODE","address_range":{ "begin": 459316, "end": 459319 },"integer_values":"182 0 32","hex_values":"$b6 $0 $20"},
+ {"label":"LakeOfRageHiddenRareCandy.ckir_BEFORELAKEOFRAGEHIDDENRARECANDY0ITEMCODEB","address_range":{ "begin": 461677, "end": 461682 },"integer_values":"5 4 7 52 66","hex_values":"$5 $4 $7 $34 $42"},
+
  {"label":"Route38Berry.ckir_BEFOREROUTE38BERRY0ITEMCODE","address_range":{"begin":1711923,"end":1711925},"integer_values":"155 3", "hex_values":"$9b $3"},
 {"label":"Route38_MapEvents.ckir_BEFOREROUTE38BERRY0NPCCODE","address_range":{"begin":1713174,"end":1713187},"integer_values":"93 14 16 1 0 255 255 0 0 51 95 255 255", "hex_values":"$5d $e $10 $1 $0 $ff $ff $0 $0 $33 $5f $ff $ff"},
 

@@ -22,6 +22,17 @@
 {"integer_values": { "old": [149], "new": [0] },"address_range": { "begin": 504747, "end": 504748 }},
 {"integer_values": { "old": [1], "new": [7] },"address_range": { "begin": 508072, "end": 508073 }},
 {"integer_values": { "old": [1], "new": [7] },"address_range": { "begin": 508247, "end": 508248 }},
+{"integer_values": { "old": [145], "new": [158] },"address_range": { "begin": 513928, "end": 513929 }},
+{"integer_values": { "old": [145], "new": [158] },"address_range": { "begin": 513935, "end": 513936 }},
+{"integer_values": { "old": [162], "new": [158] },"address_range": { "begin": 513941, "end": 513942 }},
+{"integer_values": { "old": [167], "new": [171] },"address_range": { "begin": 513947, "end": 513948 }},
+{"integer_values": { "old": [122,10,8,13,144], "new": [144,122,4,10,13] },"address_range": { "begin": 513949, "end": 513954 }},
+{"integer_values": { "old": [4,10], "new": [10,12] },"address_range": { "begin": 513955, "end": 513957 }},
+{"integer_values": { "old": [144,122,10,12,13], "new": [122,10,8,13,144] },"address_range": { "begin": 513958, "end": 513963 }},
+{"integer_values": { "old": [61], "new": [118] },"address_range": { "begin": 642731, "end": 642732 }},
+{"integer_values": { "old": [9], "new": [8] },"address_range": { "begin": 642733, "end": 642734 }},
+{"integer_values": { "old": [61], "new": [118] },"address_range": { "begin": 642830, "end": 642831 }},
+{"integer_values": { "old": [9], "new": [8] },"address_range": { "begin": 642832, "end": 642833 }},
 {"integer_values": { "old": [6,5], "new": [7,10] },"address_range": { "begin": 1639528, "end": 1639530 }},
 {"integer_values": { "old": [7,5], "new": [6,10] },"address_range": { "begin": 1640262, "end": 1640264 }},
 {"integer_values": { "old": [12], "new": [11] },"address_range": { "begin": 1643470, "end": 1643471 }},
@@ -35,4 +46,4 @@
 {"integer_values": { "old": [7,1], "new": [6,10] },"address_range": { "begin": 1728995, "end": 1728997 }},
 {"integer_values": { "old": [6,0], "new": [7,10] },"address_range": { "begin": 1740153, "end": 1740155 }},
 {"integer_values": { "old": [7,0], "new": [6,10] },"address_range": { "begin": 1740233, "end": 1740235 }}
-  ]
+]

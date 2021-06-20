@@ -131,3 +131,21 @@ Location:
                 Code: |
                   Route29Potion:
                       ITEMLINE
+            -
+                Name: Route 39 Farmhouse Snore
+                FileName: Route39Farmhouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 39
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: TM_SNORE
+                Code: |
+                    Route29Potion:
+                        ITEMLINE

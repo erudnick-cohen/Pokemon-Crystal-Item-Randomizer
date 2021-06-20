@@ -242,26 +242,27 @@ Location:
                         cont "of fighting moves."
                         done
 
-            # -
-                # Name: Lake of Rage Hidden Rare Candy
-                # FileName: LakeOfRage.asm
-                # SecondaryFile: LakeOfRage.asm
-                # Type: Item
-                # HasPKMN: No
-                # WildTableList:
-                # LocationReqs: Route 43
-                # FlagReqs:
-                    # - Hidden Items
-                    # - Hive Badge
-                # ItemReqs:
-                    # - Cut
-                # FlagsSet:
-                # ReachableReqs:
-                # NormalItem: RARE_CANDY
-                # Code: |
-                    # LakeOfRageHiddenRareCandy:
-                        # ITEMLINE
-                # SecondaryCode: '    bg_event  4,  4, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
-                # Text:
-                # TrainerList: 
-                # Sublocations:
+            -
+                Name: Lake of Rage Hidden Rare Candy
+                FileName: LakeOfRage.asm
+                SecondaryFile: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Hidden Items
+                    - Hive Badge
+                    - Timed Events
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: RARE_CANDY
+                Code: |
+                    LakeOfRageHiddenRareCandy:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4,  4, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
+                Text:
+                TrainerList:
+                Sublocations:
