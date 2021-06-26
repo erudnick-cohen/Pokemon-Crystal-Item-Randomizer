@@ -4,8 +4,8 @@ import Process
 #file1="crystal-speedchoice.gbc"
 #file2="x.gbc"
 
-file1="correct.gba"
-file2="wrong.gba"
+file1="event.gbc"
+file2="event-mod.gbc"
 
 #file1="f1"
 #file2="f2"
@@ -60,6 +60,10 @@ npc_label = label_npc.format(location_name, location_name.upper(), item_name.upp
 processed={}
 ranges={}
 
+surrond_before=2
+surrond_after=2
+
+
 iterator=0
 for x in differences:
 
@@ -86,6 +90,13 @@ for x in differences:
 
 #print(ranges)
 
+if surrond_after > 0 or surrond_before > 0:
+ starting_ranges = list(ranges.keys()).copy()
+ for range_end in starting_ranges:
+  range_start = ranges[range_end]
+  del ranges[range_end]
+  ranges[range_end+surrond_after] = range_start-surrond_before
+
 
 json_patch="{{\"integer_values\": {{ \"old\": [{}], \"new\": [{}] }},"\
  "\"address_range\": {{ \"begin\": {}, \"end\": {} }}}},"
@@ -98,6 +109,6 @@ for range_end in ranges.keys():
  by_new = f_check.read(byte_size)
  
  ints_old = printBytes(by_old, "int").replace(" ",",")
- ints_new = printBytes(by_new, "int").replace(" ",",")
- j = json_patch.format(ints_old, ints_new, range_start, range_end+1)
+ hexs_old = printBytes(by_old, "hex").replace(" ",",")
+ j = json_patch.format(ints_old, hexs_old, range_start, range_end+1)
  print(j)

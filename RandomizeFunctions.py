@@ -34,7 +34,9 @@ def HandleItemReplacement(reachable, inputFlags):
 			replacement_type = replacement_item["type"]
 
 			replacement_percent = 100
-			if "chance" in replacement_item:
+			use_replacement_percent = False
+
+			if use_replacement_percent and "chance" in replacement_item:
 				replacement_percent = replacement_item["chance"]
 
 			useReplacement = FlagCheckType(replacement_type, inputFlags)
