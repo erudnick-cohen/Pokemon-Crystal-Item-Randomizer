@@ -452,7 +452,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 			raise Exception('Did not match plando placements!!!')
 			
-	RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
+	changes = RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
+
+	for change in changes.keys():
+		if change in trashSpoiler:
+			trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]
 
 	if len(trashItems) > 0 and not randomizerFailed:
 		print(len(trashItems), trashItems)

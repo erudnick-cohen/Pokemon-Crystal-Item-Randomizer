@@ -1,4 +1,5 @@
 import json
+import random
 
 def getOptionsForItemModifications():
 	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball"]
@@ -32,9 +33,13 @@ def HandleItemReplacement(reachable, inputFlags):
 			replacement_replacement = replacement_item["replacement"]
 			replacement_type = replacement_item["type"]
 
+			replacement_percent = 100
+			if "chance" in replacement_item:
+				replacement_percent = replacement_item["chance"]
+
 			useReplacement = FlagCheckType(replacement_type, inputFlags)
 			if useReplacement:
-				replacementFile[replacement_item_name] = replacement_replacement
+				replacementFile[replacement_item_name] = (replacement_replacement, replacement_percent)
 
 	if 'Delete Fly' in inputFlags:
 		if replacementFile is None:
@@ -42,15 +47,27 @@ def HandleItemReplacement(reachable, inputFlags):
 
 		replacementFile["Fly"]: "BERRY"
 
+	changes = {}
+
 	if replacementFile is not None:
 		for i in reachable.values():
-			ReplaceItem(i, replacementFile)
+			replaced = ReplaceItem(i, replacementFile)
+			if replaced:
+				changes[i.Name] = i.item
+
+	return changes
 
 
 def ReplaceItem(item, replaceFile):
+	replaced = False
 	if item.isItem():
-		# print(i.Name)
-		# print('item is: '+str(i.item))
-		if item.item in replaceFile.keys():
-			item.item = replaceFile[item.item]
-	return
+		while item.item in replaceFile.keys():
+			if item.item in replaceFile.keys():
+				replacement = replaceFile[item.item]
+				item_chance = replacement[1]
+				if item_chance >= random.random()*100:
+					item.item = replacement[0]
+					replaced = True
+				else:
+					break
+	return replaced
