@@ -618,7 +618,7 @@ def LabelItemLocation(location):
 		oldcode = re.findall(coderegexstr,filecode)[0]
 	
 	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
-	if location.IsBall:
+	if location.IsBall or location.IsBerry:
 		#find the code on the line BEFORE the one we need to modify
 		#fortunately, we have these lines already labeled, we need them to label something else
 		commandregexstr = "(\w+):"
