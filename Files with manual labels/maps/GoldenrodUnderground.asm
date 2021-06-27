@@ -69,7 +69,7 @@ GoldenrodUnderground_MapScripts:
 	disappear GOLDENRODUNDERGROUND_GRAMPS
 .ckir_BEFORE_timed_events_UNDERGROUND::
 	checktime ANYTIME
-.ckir_BEFORE_timed_events_UNDERGROUND::
+.ckir_AFTER_timed_events_UNDERGROUND::
 	iffalse .NotMondayMorning
 	appear GOLDENRODUNDERGROUND_GRAMPS
 .NotMondayMorning:
@@ -180,7 +180,7 @@ BargainMerchantScript:
 .CheckMorn:
 .ckir_BEFORE_timed_events_UNDERGROUND2::
 	checktime ANYTIME
-.ckir_BEFORE_timed_events_UNDERGROUND2::
+.ckir_AFTER_timed_events_UNDERGROUND2::
 	iffalse GoldenrodUndergroundScript_ShopClosed
 	pokemart MARTTYPE_BARGAIN, 0
 	closetext

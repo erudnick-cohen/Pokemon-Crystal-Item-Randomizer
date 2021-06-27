@@ -14,7 +14,7 @@ PokefanM_DairyFarmer:
 	opentext
 .ckir_BEFORE_timed_events_MOOMOO::
 	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-.ckir_BEFORE_timed_events_MOOMOO::
+.ckir_AFTER_timed_events_MOOMOO::
 	iffalse FarmerMScript_SellMilk
 	writetext FarmerMText_SickCow
 	waitbutton

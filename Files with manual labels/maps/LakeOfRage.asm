@@ -35,7 +35,7 @@ LakeOfRage_MapScripts:
 	readvar VAR_WEEKDAY
 .ckir_BEFORE_timed_events_WESLEY::
 	ifnotequal 10, .WesleyAppears
-.ckir_BEFORE_timed_events_WESLEY::
+.ckir_AFTER_timed_events_WESLEY::
 	disappear LAKEOFRAGE_WESLEY
 	return
 

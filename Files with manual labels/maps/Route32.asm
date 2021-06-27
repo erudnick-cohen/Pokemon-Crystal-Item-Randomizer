@@ -950,7 +950,7 @@ Route32_MapEvents:
 	bg_event 12, 73, BGEVENT_READ, Route32PokecenterSign
 .ckir_BEFORE_timed_events_FRIEDAHIDDENITEM::
 	bg_event 11, 67, BGEVENT_ITEM, Route32HiddenGreatBall
-.ckir_BEFORE_timed_events_FRIEDAHIDDENITEM::
+.ckir_AFTER_timed_events_FRIEDAHIDDENITEM::
 	bg_event 11, 40, BGEVENT_ITEM, Route32HiddenSuperPotion
 
 	db 14 ; object events

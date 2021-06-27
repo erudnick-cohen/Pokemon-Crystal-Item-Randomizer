@@ -100,7 +100,7 @@ MonicaScript:
 	readvar VAR_WEEKDAY
 .ckir_BEFORE_timed_events_MONICA2::
 	ifequal 10, .NotMonday
-.ckir_BEFORE_timed_events_MONICA2::
+.ckir_AFTER_timed_events_MONICA2::
 	checkevent EVENT_MET_MONICA_OF_MONDAY
 	iftrue .MetMonica
 	writetext MeetMonicaText

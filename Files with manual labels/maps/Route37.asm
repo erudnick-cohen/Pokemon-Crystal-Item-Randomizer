@@ -17,7 +17,7 @@ Route37_MapScripts:
 	readvar VAR_WEEKDAY
 .ckir_BEFORE_timed_events_SUNNY::
 	ifnotequal 10, .SunnyAppears
-.ckir_BEFORE_timed_events_SUNNY::
+.ckir_AFTER_timed_events_SUNNY::
 	disappear ROUTE37_SUNNY
 	return
 
