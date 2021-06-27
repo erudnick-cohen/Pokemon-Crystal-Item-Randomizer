@@ -636,7 +636,7 @@ def LabelItemLocation(location):
 		newcode = newcode.replace("    ","\t")
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
-		if(location.IsBall):
+		if(location.IsBall or location.IsBerry):
 			newfile = newfile.replace(npcSearch,labelCodeBNPC+npcSearch+labelCodeANPC)
 	else:
 		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
@@ -684,7 +684,7 @@ def LabelItemLocation(location):
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
 			oldcode = re.findall(coderegexstr,filecode)[0]
 		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
-		if location.IsBall:
+		if location.IsBall or location.IsBerry:
 			#find the code on the line BEFORE the one we need to modify
 			#fortunately, we have these lines already labeled, we need them to label something else
 			commandregexstr = "(\w+):"
