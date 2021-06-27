@@ -240,7 +240,7 @@ Location:
                 Code: |
                     Route32HiddenGreatBall:
                         ITEMLINE
-                SecondaryCode: '    bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
+                SecondaryCode: '    bg_event 11, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
                 Text:
                 TrainerList:
                 Sublocations:

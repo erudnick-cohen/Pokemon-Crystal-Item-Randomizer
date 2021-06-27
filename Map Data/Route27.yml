@@ -158,8 +158,8 @@ Location:
                 NormalItem: TM_SANDSTORM
                 Code: |
                     .Loyal:
-                            writetext SandstormHouseWomanLoyalText
-                            promptbutton
-                            ITEMLINE
-                            iffalse .Done
-                            setevent EVENT_GOT_TM37_SANDSTORM
+                        writetext SandstormHouseWomanLoyalText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_TM37_SANDSTORM

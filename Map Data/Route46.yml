@@ -105,9 +105,8 @@ Location:
         IsBerry: Yes
         BerryFlag: 294
         Code: |
-          Route46FruitTree1:
-              ITEMLINE
-              
+            Route46FruitTree1:
+                ITEMLINE
     -   
         Name: Route 46 Berry
         FileName: Route46.asm
@@ -126,5 +125,5 @@ Location:
         IsBerry: Yes
         BerryFlag: 295
         Code: |
-          Route46FruitTree2:
-              ITEMLINE
+            Route46FruitTree2:
+                ITEMLINE

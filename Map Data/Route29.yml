@@ -32,7 +32,6 @@ Location:
                 Code: |
                     Route29Potion:
                         ITEMLINE
-                        
             -
                 Name: Route 29 Berry
                 FileName: Route29.asm
@@ -53,8 +52,6 @@ Location:
                 Code: |
                     Route29FruitTree:
                         ITEMLINE
-                        
-                        
             -
                 Name: Route 29 Tuscany
                 FileName: Route29.asm

@@ -148,8 +148,8 @@ Location:
                 NormalItem: TM_SNORE
                 Code: |
                     FarmerFScript_GiveSnore:
-                            writetext FarmerFText_HealedMiltank
-                            promptbutton
-                            ITEMLINE
-                            iffalse FarmerFScript_NoRoomForSnore
-                            setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+                        writetext FarmerFText_HealedMiltank
+                        promptbutton
+                        ITEMLINE
+                        iffalse FarmerFScript_NoRoomForSnore
+                        setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM

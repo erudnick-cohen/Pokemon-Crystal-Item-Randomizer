@@ -46,8 +46,10 @@ Location:
             FlagsSet:
             NormalItem: MOON_STONE
             ReachableReqs:
-            Code:
-            SecondaryCode: '    bg_event  7,  8, BGEVENT_ITEM, Route40HiddenHyperPotion'
+            Code: |
+                MountMoonSquareHiddenMoonStone:
+                    ITEMLINE
+            SecondaryCode: '    bg_event  7,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone'
             Text:
             TrainerList:
             Sublocations:

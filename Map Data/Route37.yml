@@ -148,7 +148,6 @@ Location:
                 Code: |
                   Route37FruitTree2:
                       ITEMLINE
-                      
             -   
                 Name: Route 37 Blk Apricorn
                 FileName: Route37.asm
@@ -169,7 +168,6 @@ Location:
                 Code: |
                   Route37FruitTree3:
                       ITEMLINE
-              
             -
                 Name: Route 37 Sunny
                 FileName: Route37.asm

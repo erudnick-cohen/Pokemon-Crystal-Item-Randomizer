@@ -54,8 +54,8 @@ Location:
                 NormalItem: TM_CURSE
                 Code: |
                     .Night:
-                            writetext CeladonMansionRoofHousePharmacistStoryText
-                            promptbutton
-                            ITEMLINE
-                            iffalse .NoRoom
-                            setevent EVENT_GOT_TM03_CURSE
+                        writetext CeladonMansionRoofHousePharmacistStoryText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .NoRoom
+                        setevent EVENT_GOT_TM03_CURSE

@@ -292,7 +292,6 @@ Location:
                 Code: |
                   Route30FruitTree1:
                       ITEMLINE
-                      
             -
                 Name: Route 30 Psn Cure Berry
                 FileName: Route30.asm

@@ -262,7 +262,7 @@ Location:
                 Code: |
                     LakeOfRageHiddenRareCandy:
                         ITEMLINE
-                SecondaryCode: '    bg_event  4,  4, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
+                SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
                 Text:
                 TrainerList:
                 Sublocations:
