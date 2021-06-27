@@ -176,7 +176,7 @@ Location:
                         getitemname STRING_BUFFER_4, EVERSTONE
                         farwritetext ContestResults_PlayerWonAPrizeText
                         waitbutton
-                        verbosegiveitem ITEMLINE
+                        ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
