@@ -17,7 +17,7 @@ try:
 except OSError:
     pass
 os.chdir('..')
-shutil.copyfile(r'RandomizerRom/crystal-speedchoice-label-details.json', '.')
+shutil.copyfile(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd())
 GeneratePatches.makePatches()
 
 #DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!
