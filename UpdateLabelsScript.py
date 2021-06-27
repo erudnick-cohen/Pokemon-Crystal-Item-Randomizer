@@ -5,7 +5,10 @@ import GeneratePatches
 #import, and thus run TestLabelItemLocations
 import TestLabelItemLocations
 os.chdir('RandomizerRom')
-os.remove('pokecrystal-speedchoice.gbc')
+try:
+    os.remove('pokecrystal-speedchoice.gbc')
+except OSError:
+    pass
 os.system('ruby generate-label-details.rb')
 os.chdir('..')
 shutil.copyfile(r'RandomizerRom\crystal-speedchoice-label-details.json', '.')
