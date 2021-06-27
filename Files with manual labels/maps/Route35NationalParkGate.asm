@@ -89,9 +89,7 @@ Route35OfficerScriptContest:
 .ckir_AFTER_timed_events_BGC352::
 	faceplayer
 	opentext
-.ckir_BEFORE_RUN35_BUG_CATCHING_CONTEST::
 	checkflag ENGINE_DAILY_BUG_CONTEST
-.ckir_AFTER_RUN35_BUG_CATCHING_CONTEST::
 	iftrue Route35NationalParkGate_ContestIsOver
 	scall Route35NationalParkGate_GetDayOfWeek
 	writetext Route35NationalParkGateOfficer1AskToParticipateText
