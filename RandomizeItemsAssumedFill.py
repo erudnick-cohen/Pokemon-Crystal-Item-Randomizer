@@ -52,7 +52,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if i.Type == 'Item':
 			itemCount = itemCount+1
 	#print('Total number of items: '+str(itemCount))
-	
+
+	#if Explicit Checking is NOT in use, add an impossible location for it so it doesn't get used
+	if not 'Explicit Checking' in flagList:
+		for i in requirementsDict:
+			for j in range(0,len(requirementsDict[i])):
+				requirementsDict[i][j] = [x if x == 'Explicit Checking' else 'Impossible' for x in requirementsDict[i][j]]
+
 	#if we are in plando mode (explicit placements, only use explicit checks for locations which have the option)
 	if(len(plandoPlacements)>0):
 		for i in requirementsDict:
