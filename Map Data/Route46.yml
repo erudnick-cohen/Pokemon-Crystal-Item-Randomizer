@@ -105,7 +105,7 @@ Location:
         IsBerry: Yes
         BerryFlag: 294
         Code: |
-          Route29Potion:
+          Route46FruitTree1:
               ITEMLINE
               
     -   
@@ -126,5 +126,5 @@ Location:
         IsBerry: Yes
         BerryFlag: 295
         Code: |
-          Route29Potion:
+          Route46FruitTree2:
               ITEMLINE

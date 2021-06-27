@@ -126,7 +126,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 297
                 Code: |
-                  Route29Potion:
+                  Route37FruitTree1:
                       ITEMLINE
             -   
                 Name: Route 37 Blu Apricorn
@@ -146,7 +146,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 298
                 Code: |
-                  Route29Potion:
+                  Route37FruitTree2:
                       ITEMLINE
                       
             -   
@@ -167,7 +167,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 299
                 Code: |
-                  Route29Potion:
+                  Route37FruitTree3:
                       ITEMLINE
               
             -

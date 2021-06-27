@@ -157,5 +157,9 @@ Location:
                 TrainerList:
                 NormalItem: TM_SANDSTORM
                 Code: |
-                    Route29Potion:
-                        ITEMLINE
+                    .Loyal:
+                            writetext SandstormHouseWomanLoyalText
+                            promptbutton
+                            ITEMLINE
+                            iffalse .Done
+                            setevent EVENT_GOT_TM37_SANDSTORM

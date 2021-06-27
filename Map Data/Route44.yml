@@ -123,5 +123,5 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 292
                 Code: |
-                  Route29Potion:
+                  Route44FruitTree:
                       ITEMLINE

@@ -61,7 +61,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 283
                 Code: |
-                  Route29Potion:
+                  PewterCityFruitTree1:
                       ITEMLINE
             -   
                 Name: Pewter City Mint Berry
@@ -81,6 +81,6 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 284
                 Code: |
-                  Route29Potion:
+                  PewterCityFruitTree2:
                       ITEMLINE
           

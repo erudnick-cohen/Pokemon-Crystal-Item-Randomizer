@@ -53,5 +53,9 @@ Location:
                 TrainerList:
                 NormalItem: TM_CURSE
                 Code: |
-                    Route29Potion:
-                        ITEMLINE
+                    .Night:
+                            writetext CeladonMansionRoofHousePharmacistStoryText
+                            promptbutton
+                            ITEMLINE
+                            iffalse .NoRoom
+                            setevent EVENT_GOT_TM03_CURSE

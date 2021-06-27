@@ -84,7 +84,7 @@ Location:
             IsBerry: Yes
             BerryFlag: 288
             Code: |
-              Route29Potion:
+              Route36FruitTree:
                   ITEMLINE
     -
         Name: Route 36 Sudowoodo Junction

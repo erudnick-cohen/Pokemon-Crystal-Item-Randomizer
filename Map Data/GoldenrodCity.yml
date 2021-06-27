@@ -269,8 +269,13 @@ Location:
                 NormalItem: TM_RETURN
                 IsBall: No
                 Code: |
-                    GoldenrodDeptStoreB1FEther:
-                        ITEMLINE
+                    .VeryHappy:
+                            writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
+                            promptbutton
+                            verbosegiveitem TM_RETURN
+                            setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+                            closetext
+                            end
                 Text:
                 AREALV:
                 TrainerList:
@@ -290,8 +295,14 @@ Location:
                 NormalItem: TM_FRUSTRATION
                 IsBall: No
                 Code: |
-                    GoldenrodDeptStoreB1FEther:
-                        ITEMLINE
+                    .NotVeryHappy:
+                            writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+                            promptbutton
+                            verbosegiveitem TM_FRUSTRATION
+                            iffalse .Done
+                            setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+                            closetext
+                            end
                 Text:
                 AREALV:
                 TrainerList:

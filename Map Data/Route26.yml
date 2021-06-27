@@ -90,7 +90,7 @@ Location:
         IsBerry: Yes
         BerryFlag: 282
         Code: |
-          Route29Potion:
+          Route26FruitTree:
               ITEMLINE
     -
         Name: League Gate Entrance

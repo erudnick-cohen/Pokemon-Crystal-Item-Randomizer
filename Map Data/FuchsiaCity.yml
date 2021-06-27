@@ -68,5 +68,5 @@ Location:
         IsBerry: Yes
         BerryFlag: 285
         Code: |
-          Route29Potion:
+          FuchsiaCityFruitTree:
               ITEMLINE

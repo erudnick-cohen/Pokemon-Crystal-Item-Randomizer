@@ -100,7 +100,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 300
                 Code: |
-                  Route29Potion:
+                  Route42FruitTree1:
                       ITEMLINE
             -   
                 Name: Route 42 Ylw Apricorn
@@ -124,7 +124,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 301
                 Code: |
-                  Route29Potion:
+                  Route42FruitTree2:
                       ITEMLINE
             -   
                 Name: Route 42 Pnk Apricorn
@@ -148,7 +148,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 302
                 Code: |
-                  Route29Potion:
+                  Route42FruitTree3:
                       ITEMLINE
     -
         Name: Route 42 End

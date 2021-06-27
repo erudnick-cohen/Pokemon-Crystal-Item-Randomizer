@@ -129,7 +129,7 @@ Location:
                 IsBerry: Yes
                 BerryFlag: 290
                 Code: |
-                  Route29Potion:
+                  Route39FruitTree:
                       ITEMLINE
             -
                 Name: Route 39 Farmhouse Snore
@@ -147,5 +147,9 @@ Location:
                 TrainerList:
                 NormalItem: TM_SNORE
                 Code: |
-                    Route29Potion:
-                        ITEMLINE
+                    FarmerFScript_GiveSnore:
+                            writetext FarmerFText_HealedMiltank
+                            promptbutton
+                            ITEMLINE
+                            iffalse FarmerFScript_NoRoomForSnore
+                            setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
