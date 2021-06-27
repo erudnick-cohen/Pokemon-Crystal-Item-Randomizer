@@ -17,6 +17,11 @@ try:
 except OSError:
     pass
 os.chdir('..')
+#remove old label details
+try:
+    os.remove('crystal-speedchoice-label-details.json')
+except OSError:
+    pass
 shutil.move(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd())
 GeneratePatches.makePatches()
 
