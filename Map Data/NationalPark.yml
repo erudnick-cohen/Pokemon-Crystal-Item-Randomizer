@@ -126,6 +126,7 @@ Location:
             -
                 Name: Bug Catching Contest First Place
                 FileName: Route36NationalParkGate.asm
+                SecondaryFile: "/../engine/events/std_scripts.asm"
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -137,6 +138,13 @@ Location:
                 ReachableReqs:
                 NormalItem: SUN_STONE
                 Code: |
+                    BugContestResults_FirstPlace:
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        getitemname STRING_BUFFER_4, SUN_STONE
+                        farwritetext ContestResults_PlayerWonAPrizeText
+                        waitbutton
+                        ITEMLINE
+                SecondaryCode: |
                     .Sunstone:
                         writetext Route36NationalParkGateOfficer1HeresThePrizeText
                         promptbutton
@@ -147,6 +155,7 @@ Location:
             -
                 Name: Bug Catching Contest Second Place
                 FileName: Route36NationalParkGate.asm
+                SecondaryFile: "/../engine/events/std_scripts.asm"
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -162,12 +171,19 @@ Location:
                         writetext Route36NationalParkGateOfficer1HeresThePrizeText
                         promptbutton
                         ITEMLINE
+                SecondaryCode: |
+                    BugContestResults_SecondPlace:
+                        getitemname STRING_BUFFER_4, EVERSTONE
+                        farwritetext ContestResults_PlayerWonAPrizeText
+                        waitbutton
+                        verbosegiveitem ITEMLINE
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Bug Catching Contest Third Place
                 FileName: Route36NationalParkGate.asm
+                SecondaryFile: "/../engine/events/std_scripts.asm"
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -183,12 +199,21 @@ Location:
                         writetext Route36NationalParkGateOfficer1HeresThePrizeText
                         promptbutton
                         ITEMLINE
+                SecondaryCode: |
+                    BugContestResults_ThirdPlace:
+                        getitemname STRING_BUFFER_4, GOLD_BERRY
+                        farwritetext ContestResults_PlayerWonAPrizeText
+                        waitbutton
+                        ITEMLINE
+                        iffalse BugContestResults_NoRoomForGoldBerry
+                        sjump BugContestResults_ReturnAfterWinnersPrize
                 Text:
                 TrainerList: 
                 Sublocations:
             -
                 Name: Bug Catching Contest Last Place
                 FileName: Route36NationalParkGate.asm
+                SecondaryFile: "/../engine/events/std_scripts.asm"
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -203,6 +228,26 @@ Location:
                     .Berry:
                         writetext Route36NationalParkGateOfficer1HeresThePrizeText
                         promptbutton
+                        ITEMLINE
+                SecondaryCode: |
+                    BugContestResultsScript:
+                        clearflag ENGINE_BUG_CONTEST_TIMER
+                        clearevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
+                        clearevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
+                        clearevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
+                        clearevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
+                        clearevent EVENT_CONTEST_OFFICER_HAS_BERRY
+                        opentext
+                        farwritetext ContestResults_ReadyToJudgeText
+                        waitbutton
+                        special BugContestJudging
+                        getnum STRING_BUFFER_3
+                        ifequal 1, BugContestResults_FirstPlace
+                        ifequal 2, BugContestResults_SecondPlace
+                        ifequal 3, BugContestResults_ThirdPlace
+                        farwritetext ContestResults_ConsolationPrizeText
+                        promptbutton
+                        waitsfx
                         ITEMLINE
                 Text:
                 TrainerList: 
