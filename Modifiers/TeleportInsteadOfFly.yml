@@ -1,0 +1,6 @@
+Name: Teleport instead of fly
+Description: Makes it so that HM02 is teleport instead of fly. Storm badge is NOT required to use teleport, though the logic remains unaware of this fact. The logic otherwise treats the teleport HM as if it were the fly HM for the purposes of early fly settings.
+FlagsSet:
+    - Teleport Fly
+NewGamePatches:
+    - 'Patches/TeleportFly.json'
