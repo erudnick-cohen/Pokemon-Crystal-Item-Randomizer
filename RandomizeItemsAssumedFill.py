@@ -412,6 +412,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		else:
 			stuckCount = 0
 
+
 	#verify that plando is matched if in use
 	for i in plandoPlacements:
 		if(plandoPlacements[i] in spoiler and spoiler[plandoPlacements[i]] != i):
