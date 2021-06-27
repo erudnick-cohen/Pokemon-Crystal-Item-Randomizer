@@ -207,7 +207,8 @@ class Location:
 			include = False
 		if 'Timed Events' in self.FlagReqs and "Timed Events" not in flags:
 			include = False
-
+		if 'Pure Evil Checks' in self.FlagReqs and "Pure Evil Checks" not in flags:
+			include = False
 		if include:
 			if self.NormalItem is not None and self.isItem():
 				list.append(self.NormalItem)

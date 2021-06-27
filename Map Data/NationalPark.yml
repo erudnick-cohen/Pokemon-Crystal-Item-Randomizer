@@ -122,7 +122,93 @@ Location:
                         cont "during battle."
                         done
                 TrainerList: 
-                Sublocations:        
+                Sublocations:
+            -
+                Name: Bug Catching Contest First Place
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Pure Evil Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUN_STONE
+                Code: |
+                    .Sunstone:
+                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
+                        promptbutton
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+            -
+                Name: Bug Catching Contest Second Place
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Pure Evil Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: EVERSTONE
+                Code: |
+                    .Everstone:
+                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
+                        promptbutton
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+            -
+                Name: Bug Catching Contest Third Place
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Pure Evil Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: GOLD_BERRY
+                Code: |
+                    .GoldBerry:
+                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
+                        promptbutton
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Bug Catching Contest Last Place
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Pure Evil Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: BERRY
+                Code: |
+                    .Berry:
+                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
+                        promptbutton
+                        ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
             -
                 Name: National Park Dig TM
                 FileName: NationalPark.asm
