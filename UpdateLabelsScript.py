@@ -1,5 +1,6 @@
 import os
 import shutil
+import GeneratePatches
 
 #import, and thus run TestLabelItemLocations
 import TestLabelItemLocations
@@ -8,5 +9,6 @@ os.remove('pokecrystal-speedchoice.gbc')
 os.system('ruby generate-label-details.rb')
 os.chdir('..')
 shutil.copyfile(r'RandomizerRom\crystal-speedchoice-label-details.json', '.')
+GeneratePatches.makePatches()
 
 #DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!
