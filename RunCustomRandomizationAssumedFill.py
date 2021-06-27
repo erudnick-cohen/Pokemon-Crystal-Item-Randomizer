@@ -17,6 +17,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
+	newItems = []
+	maybeNewItems = []
+	dontReplace = []
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
@@ -36,6 +39,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				pfile = open(j)
 				ptext = pfile.read()
 				patchList.extend(json.loads(ptext))
+		if 'NewItems' in i:
+			newItems.extend(i['NewItems'])
+		if 'MaybeNewItems' in i:
+			maybeNewItems.extend(i['MaybeNewItems'])
+		if 'DontReplace' in i:
+			dontReplace.extend(i['DontReplace'])
 	print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
 
@@ -116,14 +125,24 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
 			criticalTrash = ['ENGINE_POKEDEX', 'COIN_CASE', 'ITEMFINDER', 'SILVER_WING', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD', 'BLUE_CARD']
+			criticalTrash.extend(dontReplace)
 			invKeyItemMap = defaultdict(lambda: '')
 			for i in keyItemMap:
 				invKeyItemMap[keyItemMap[i]] = i
 			trashItems = sorted([x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
-			if 'BonusItems' in otherSettings:
-				bonusTrash = copy.copy(otherSettings['BonusItems'])
+			if 'BonusItems' in otherSettings or (len(newItems)+len(maybeNewItems)) > 0:
+				if 'BonusItems' in otherSettings:
+					bonusTrash = copy.copy(otherSettings['BonusItems'])
+				else:
+					bonusTrash = []
+				bonusTrash.extend(copy.deepcopy(newItems))
+				maybeAdd = []
+				for i in maybeNewItems:
+					if not i in bonusTrash:
+						maybeAdd.append(i)
+				bonusTrash.extend(maybeAdd)
 				for i in range(0,len(trashItems)):
 					if len(bonusTrash) > 0 and (not (trashItems[i] in criticalTrash)):
 						trashItems[i] = bonusTrash.pop(0)
