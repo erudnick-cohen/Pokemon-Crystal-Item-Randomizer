@@ -20,7 +20,7 @@
  { "item": "ETHER", "replacement":  "MYSTERYBERRY", "type": "Healing", "chance": 75  },
  { "item": "MAX_ETHER", "replacement":  "ELIXER", "type": "Healing", "chance": 33  },
  { "item": "ELIXER", "replacement":  "MAX_ELIXER", "type": "Healing", "chance": 20  },
- { "item": "MYSTERYBERRY", "replacement":  "MAX ETHER", "type": "Healing", "chance": 1  },
+ { "item": "MYSTERYBERRY", "replacement":  "MAX_ETHER", "type": "Healing", "chance": 1  },
  { "item": "REVIVE", "replacement":  "MAX_REVIVE", "type": "Healing", "chance": 10  },
  { "item": "REVIVAL_HERB", "replacement":  "MAX_REVIVE", "type": "Healing", "chance": 50  },
  { "item": "MOOMOO_MILK", "replacement":  "HYPER_POTION", "type": "Healing", "chance": 5  },
