@@ -776,6 +776,24 @@ p, li { white-space: pre-wrap; }
      <string>Add An Item</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="View_Items">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>View/Remove Items</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
