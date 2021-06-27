@@ -150,7 +150,9 @@ Route36OfficerScriptContest:
 .ckir_AFTER_timed_events_BGC362::
 	faceplayer
 	opentext
+.ckir_BEFORE_RUN36_BUG_CATCHING_CONTEST::
 	checkflag ENGINE_DAILY_BUG_CONTEST
+.ckir_AFTER_RUN36_BUG_CATCHING_CONTEST::
 	iftrue Route36Officer_ContestHasConcluded
 	scall Route36ParkGate_DayToText
 	writetext Route36NationalParkGateOfficer1AskToParticipateText
@@ -161,7 +163,10 @@ Route36OfficerScriptContest:
 	special ContestDropOffMons
 	clearevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
 .ResumeStartingContest:
+.ckir_BEFORE_ID_BUG_CONTEST_TIMER::
 	setflag ENGINE_BUG_CONTEST_TIMER
+.ckir_AFTER_ID_BUG_CONTEST_TIMER::
+
 	special PlayMapMusic
 	writetext Route36NationalParkGateOfficer1GiveParkBallsText
 	promptbutton
