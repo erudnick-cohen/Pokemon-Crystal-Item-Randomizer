@@ -1,0 +1,10 @@
+Name: No Double Dipping - Radio Tower
+Description: "Add logic to prevent going to until you have the Card Key to defeat Team Rocket"
+Changes:
+    -
+        Location: Radio Tower
+        AddFlagReqs:
+            - Rocket Invasion
+        AddItemReqs:
+            - Card Key
+            

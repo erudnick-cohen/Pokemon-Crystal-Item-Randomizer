@@ -126,3 +126,24 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -   
+                Name: Azalea Town Wht Apricorn
+                FileName: AzaleaTown.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Azalea Town
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: WHT_APRICORN
+                IsBerry: Yes
+                BerryFlag: 296
+                Code: |
+                  WhiteApricornTree:
+                      ITEMLINE

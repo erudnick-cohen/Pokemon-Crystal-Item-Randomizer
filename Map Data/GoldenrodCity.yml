@@ -255,6 +255,63 @@ Location:
                     - SUPER_NERD 2
                 Sublocations:
             -
+                Name: Goldenrod Department Store Return
+                FileName: GoldenrodDeptStore5F.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_RETURN
+                IsBall: No
+                Code: |
+                    .VeryHappy:
+                        writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
+                        promptbutton
+                        ITEMLINE
+                    ckir_BEFORE_timed_events_DEPTSTORE5F4::
+                        iftrue .NotVeryHappy
+                    ckir_AFTER_timed_events_DEPTSTORE5F4::
+                        setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+                        closetext
+                        end
+                Text:
+                AREALV:
+                TrainerList:
+                    Sublocations:
+            -
+                Name: Goldenrod Department Store Frustration
+                FileName: GoldenrodDeptStore5F.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Goldenrod City
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_FRUSTRATION
+                IsBall: No
+                Code: |
+                    .NotVeryHappy:
+                        writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .Done
+                        setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+                        closetext
+                        end
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
                 Name: Department Store Basement 1
                 FileName: GoldenrodDeptStoreB1F.asm
                 Type: Item
@@ -334,65 +391,7 @@ Location:
                 AREALV: 
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Radio Card Quiz
-                FileName: RadioTower1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                    - Impossible
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                Code: |
-                    RadioTower1FRadioCardWomanScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_RADIO_CARD_RECEIVED
-                        iftrue .GotCard
-                        writetext RadioTower1FRadioCardWomanOfferQuizText
-                        yesorno
-                        iffalse .NoQuiz
-                        writetext RadioTower1FRadioCardWomanQuestion1Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion2Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion3Text
-                        yesorno
-                        iftrue .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion4Text
-                        yesorno
-                        iffalse .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanQuestion5Text
-                        yesorno
-                        iftrue .WrongAnswer
-                        playsound SFX_ELEVATOR_END
-                        waitsfx
-                        writetext RadioTower1FRadioCardWomanYouWinText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_RADIO_CARD_RECEIVED
-                    .GotCard:
-                        writetext RadioTower1FRadioCardWomanTuneInText
-                        waitbutton
-                        closetext
-                        end
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
+
             -
                 Name: Goldenrod City Buy Rock Smash
                 FileName: GoldenrodCity.asm

@@ -1,0 +1,10 @@
+Name: Time Events
+Description: Adds timed event items to the randomization. Makes daily siblings always present, moving the hidden items below them to the tile adjacent.
+FlagsSet:
+    - Timed Events
+NewGamePatches:
+    - 'Patches/DailyEventsAlways.json'
+Changes:
+    -
+        Location: Timed Events
+        NewFlagReqs: []

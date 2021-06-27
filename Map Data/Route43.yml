@@ -69,3 +69,28 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+        
+    -   
+        Name: Route 43 Bitter Berry
+        FileName: Route43.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 43
+        FlagReqs:
+            -   Fog Badge
+            -   Hive Badge
+            -   Berry Trees
+        ItemReqs:
+            -   Cut
+            -   Surf
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: BITTER_BERRY
+        IsBerry: Yes
+        BerryFlag: 291
+        Code: |
+          Route43FruitTree:
+              ITEMLINE

@@ -75,27 +75,39 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			QtGui.QGuiApplication.processEvents()
 			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.2 Rom as the base rom, or your game WILL crash.')
 			validFileName = False
+
+			base_dir = ""
+			for i in range(0, len(self.romPath.split("/"))-1):
+				if base_dir != "":
+					base_dir+="/"
+				base_dir += self.romPath.split("/")[i]
+
 			while not validFileName:
-				file = QFileDialog.getSaveFileName(directory = '.')[0]
+				file = QFileDialog.getSaveFileName(directory = base_dir)[0]
 				if file != '':
 					validFileName = True
 				else:
 					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
 			randomizedFileName = file
-			copyfile(self.romPath, randomizedFileName+'.gbc')
+
+			if not randomizedFileName.endswith(".gbc"):
+				randomizedFileName+=".gbc"
+
+			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
 				f.write(rngSeed)
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
 				outputSpoiler = {}

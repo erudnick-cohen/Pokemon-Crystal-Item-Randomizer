@@ -1,0 +1,17 @@
+Location:
+    -
+        Name: Timed Events
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

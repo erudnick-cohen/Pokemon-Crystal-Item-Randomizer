@@ -271,3 +271,44 @@ Location:
                     - YOUNGSTER 2
                     - BUG_CATCHER 1                           
                 Sublocations:
+                
+            -
+                Name: Route 30 Berry
+                FileName: Route30.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BERRY
+                IsBerry: Yes
+                BerryFlag: 273
+                Code: |
+                  Route30FruitTree1:
+                      ITEMLINE
+            -
+                Name: Route 30 Psn Cure Berry
+                FileName: Route30.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 30
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PSNCUREBERRY
+                IsBerry: Yes
+                BerryFlag: 274
+                Code: |
+                  Route30FruitTree2:
+                      ITEMLINE

@@ -1,0 +1,4 @@
+Name: Replace Custom Items
+Description: Uses the configuration file to replace custom items, if you want to modify for your own amusement.
+FlagsSet:
+    - Replace Custom

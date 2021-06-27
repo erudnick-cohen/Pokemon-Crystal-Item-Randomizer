@@ -96,3 +96,24 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -
+                Name: Violet City Prz Cure Berry
+                FileName: VioletCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet City
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PRZCUREBERRY
+                IsBerry: Yes
+                BerryFlag: 277
+                Code: |
+                  VioletCityFruitTree:
+                      ITEMLINE

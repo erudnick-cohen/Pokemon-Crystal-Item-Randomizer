@@ -86,3 +86,44 @@ Location:
                 - PICNICKER 10
                 - HIKER 11                                
             Sublocations:
+            
+    -   
+        Name: Route 46 PRZcureBerry
+        FileName: Route46.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 46 Upper
+        FlagReqs:
+            -   Berry Trees
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: PRZCUREBERRY
+        IsBerry: Yes
+        BerryFlag: 294
+        Code: |
+            Route46FruitTree1:
+                ITEMLINE
+    -   
+        Name: Route 46 Berry
+        FileName: Route46.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 46 Upper
+        FlagReqs:
+            -   Berry Trees
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: BERRY
+        IsBerry: Yes
+        BerryFlag: 295
+        Code: |
+            Route46FruitTree2:
+                ITEMLINE

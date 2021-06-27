@@ -110,3 +110,46 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -   
+                Name: Route 39 Mint Berry
+                FileName: Route39.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 39
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: MINT_BERRY
+                IsBerry: Yes
+                BerryFlag: 290
+                Code: |
+                  Route39FruitTree:
+                      ITEMLINE
+            -
+                Name: Route 39 Farmhouse Snore
+                FileName: Route39Farmhouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 39
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: TM_SNORE
+                Code: |
+                    FarmerFScript_GiveSnore:
+                        writetext FarmerFText_HealedMiltank
+                        promptbutton
+                        ITEMLINE
+                        iffalse FarmerFScript_NoRoomForSnore
+                        setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM

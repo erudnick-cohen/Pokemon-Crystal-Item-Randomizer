@@ -132,4 +132,9 @@ Changes:
             - Card Key
             - Bicycle
 
+    -
+        Location: Route 29 Tuscany
+        AddItemReqs:
+            - Bicycle
+
 

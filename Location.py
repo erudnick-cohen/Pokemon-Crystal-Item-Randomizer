@@ -20,6 +20,14 @@ class Location:
 			self.IsSpecial = yamlTree["IsSpecial"]
 		else:
 			self.IsSpecial = False
+
+		if("IsBerry" in yamlTree):
+			self.IsBerry = yamlTree["IsBerry"]
+			self.BerryFlag = yamlTree["BerryFlag"]
+		else:
+			self.IsBerry = False
+			self.BerryFlag = None
+
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem
 		self.HasPKMN = yamlTree["HasPKMN"]
@@ -155,15 +163,54 @@ class Location:
 						self.LocationReqs = j['NewLocationReqs']
 					else:
 						self.LocationReqs = self.LocationReqs
+				if 'AddFlagReqs' in j:
+					toAdd = j["AddFlagReqs"]
+					for x in toAdd:
+						if x not in self.FlagReqs:
+							self.FlagReqs.append(x)
+				if 'AddItemReqs' in j:
+					toAdd = j["AddItemReqs"]
+					for x in toAdd:
+						if x not in self.ItemReqs:
+							self.ItemReqs.append(x)
+				if 'AddLocationReqs' in j:
+					toAdd = j["AddLocationReqs"]
+					for x in toAdd:
+						if x not in self.LocationReqs:
+							self.LocationReqs.append(x)
+				if 'RemoveFlagReqs' in j:
+					toRemove = j["RemoveFlagReqs"]
+					for x in toRemove:
+						if x in self.FlagReqs:
+							self.FlagReqs.remove(x)
+				if 'RemoveItemReqs' in j:
+					toRemove = j["RemoveItemReqs"]
+					for x in toRemove:
+						if x in self.ItemReqs:
+							self.ItemReqs.remove(x)
+				if 'RemoveLocationReqs' in j:
+					toRemove = j["RemoveLocationReqs"]
+					for x in toRemove:
+						if x in self.LocationReqs:
+							self.LocationReqs.remove(x)
 		for i in self.Sublocations:
 			 i.applyModifiers(modifierDict)
 	
 	#get all trash items in this locations tree
-	def getTrashItemList(self, hiddenItems = False):
-		list = [];
-		if hiddenItems or (not ('Hidden Items' in self.FlagReqs)):
-			if(self.NormalItem is not None and self.isItem()):
+	def getTrashItemList(self, flags):
+		list = []
+		include = True
+
+		if 'Hidden Items' in self.FlagReqs and "Hidden Items" not in flags:
+			include = False
+		if 'Berry Trees' in self.FlagReqs and "Berry Trees" not in flags:
+			include = False
+		if 'Timed Events' in self.FlagReqs and "Timed Events" not in flags:
+			include = False
+
+		if include:
+			if self.NormalItem is not None and self.isItem():
 				list.append(self.NormalItem)
 			for i in self.Sublocations:
-				list.extend(i.getTrashItemList(hiddenItems))
+				list.extend(i.getTrashItemList(flags))
 		return list

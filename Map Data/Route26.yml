@@ -71,6 +71,27 @@ Location:
             - PSYCHIC_T 9
             - FISHER 21
         Sublocations:
+        
+    -
+        Name: Route 26 Ice Berry
+        FileName: Route26.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 26
+        FlagReqs:
+            - Berry Trees
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: ICE_BERRY
+        IsBerry: Yes
+        BerryFlag: 282
+        Code: |
+          Route26FruitTree:
+              ITEMLINE
     -
         Name: League Gate Entrance
         FileName: Route26.asm

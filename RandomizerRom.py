@@ -149,6 +149,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 				newmon = mon
 				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
 
+
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
 	yamlfile = open("badgeData.yml")
@@ -274,6 +275,34 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			newBallByte = int(fullNibble,2)
 			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
+	elif location.IsBerry:
+		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
+		addressDataNPC = labelData[labelCodeBNPC]
+
+
+		# need to extract the nibble out
+		# print(list(map(int, addressDataNPC["integer_values"].split(' '))))
+		# print(addressDataNPC["integer_values"].split(' '))
+		flag_bytes = location.BerryFlag.to_bytes(2, 'little')
+		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
+		# form full binary expression
+		fullByte = (10 - len(combobyte)) * '0' + combobyte[2:]
+		# split it into two nibbles
+		nb1 = fullByte[0:4]
+		nb2 = fullByte[4:8]
+		# now generate the correct nibble for the object type
+		nibbleBall = bin(commandBall)
+		# print(nibbleBall)
+		fullNibble = nb1 + ((6 - len(combobyte)) * '0' + nibbleBall[2:])
+		# print(fullNibble)
+		newBallByte = int(fullNibble, 2)
+		# print(newBallByte)
+		romMap[addressDataNPC["address_range"]["begin"] + 7] = newBallByte
+		romMap[addressDataNPC["address_range"]["begin"] + 11] = flag_bytes[0]
+		romMap[addressDataNPC["address_range"]["begin"] + 12] = flag_bytes[1]
+		romMap[addressData["address_range"]["begin"]] = nItemCode
+		romMap[addressData["address_range"]["begin"] + 1] = endVal
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
 		romMap[addressData["address_range"]["begin"]] = commandVerbose

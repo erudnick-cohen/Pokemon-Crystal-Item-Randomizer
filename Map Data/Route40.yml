@@ -39,6 +39,44 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 40 Monica
+                FileName: Route40.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 40 Land
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SHARP_BEAK
+                Code: |
+                    .MetMonica:
+                        writetext MonicaGivesGiftText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .done
+                        setevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
+                        writetext MonicaGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    .MonicaGaveGiftText:
+                        text "MONICA: It's an"
+                        line "item that raises"
+
+                        para "the power of fly-"
+                        line "ing-type moves."
+
+                        para "You should equip a"
+                        line "bird #MON with"
+                        cont "that item."
+                        done
+                TrainerList: 
+                Sublocations:
     -
         Name: Route 40 Water
         FileName: Route40.asm

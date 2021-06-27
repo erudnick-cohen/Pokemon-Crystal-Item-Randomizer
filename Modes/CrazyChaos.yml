@@ -1,0 +1,43 @@
+Name: Chaos Logic w/ Logic
+Description: Base of Tricky settings, which includes the berry and timed event conditions, with some optimisation present in Easy Logic.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+CoreProgress:
+    -'Surf'
+    -'Fog Badge'
+    -'Pass'
+    -'S S Ticket'
+    -'Squirtbottle'
+DefaultModifiers:
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/NoEarlyBasement.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/HiddenItems.yml
+    - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/NoVanillaBasement.yml
+    - Modifiers/NoDoubleDippingLighthouse.yaml
+    - Modifiers/NoDoubleDippingRoute44.yaml
+    - Modifiers/NoDoubleDippingRoute25.yaml
+    - Modifiers/NoDoubleDippingPowerPlant.yaml
+    - Modifiers/NoDoubleDippingRadioTower.yaml
+    - Modifiers/NoDoubleDippingRoute2.yaml
+    - Modifiers/NoDoubleDippingKenya.yaml
+    - Modifiers/TimeEvents.yml
+    - Modifiers/BerryTrees.yml
+    - Modifiers/UpgradeHealingItems.yml
+    - Modifiers/UpgradeValuableItems.yml
+    - Modifiers/UpgradeBalls.yml
+BannedLocations:
+AllowedLocations:
+Goal: Mt. Silver
+FlagsSet:
+    - Kanto Mode
+    - Sane Extreme E4 Access

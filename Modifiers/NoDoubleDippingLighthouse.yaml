@@ -1,0 +1,7 @@
+Name: No Double Dipping - Lighthouse
+Description: "Add logic to prevent going to the lighthouse before obtaining the SecretPotion"
+Changes:
+    -
+        Location: Lighthouse
+        AddItemReqs:
+            - Secret Potion

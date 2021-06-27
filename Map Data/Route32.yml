@@ -222,27 +222,28 @@ Location:
 
                 TrainerList: 
                 Sublocations:
-            # -
-                # Name: Route 32 Hidden Great Ball
-                # FileName: Route32.asm
-                # SecondaryFile: Route32.asm
-                # Type: Item
-                # HasPKMN: No
-                # WildTableList:
-                # LocationReqs: Route 32
-                # FlagReqs:
-                    # - Hidden Items
-                # ItemReqs:
-                # FlagsSet:
-                # ReachableReqs:
-                # NormalItem: GREAT_BALL
-                # Code: |
-                    # Route32HiddenGreatBall:
-                        # ITEMLINE
-                # SecondaryCode: '    bg_event 12, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
-                # Text:
-                # TrainerList: 
-                # Sublocations:
+            -
+                Name: Route 32 Hidden Great Ball
+                FileName: Route32.asm
+                SecondaryFile: Route32.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 32
+                FlagReqs:
+                    - Hidden Items
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: GREAT_BALL
+                Code: |
+                    Route32HiddenGreatBall:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 11, 67, BGEVENT_ITEM, Route32HiddenGreatBall'
+                Text:
+                TrainerList:
+                Sublocations:
             -
                 Name: Route 32 Hidden Super Potion
                 FileName: Route32.asm
@@ -262,5 +263,48 @@ Location:
                         ITEMLINE
                 SecondaryCode: '    bg_event 11, 40, BGEVENT_ITEM, Route32HiddenSuperPotion'
                 Text:
+                TrainerList: 
+                Sublocations:
+                
+            -
+                Name: Route 32 Freida
+                FileName: Route32.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 32
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POISON_BARB
+                Code: |
+                    .MetFrieda:
+                        writetext FriedaGivesGiftText
+                        promptbutton
+                        verbosegiveitem POISON_BARB
+                        iffalse .Done
+                        setevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
+                        writetext FriedaGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+
+                Text: |
+                    FriedaGaveGiftText:
+                        text "FRIEDA: Give it to"
+                        line "a #MON that has"
+                        cont "poison-type moves."
+
+                        para "Oh!"
+
+                        para "It's wicked!"
+
+                        para "You'll be shocked"
+                        line "how good it makes"
+                        cont "poison moves!"
+                        done
+
                 TrainerList: 
                 Sublocations:

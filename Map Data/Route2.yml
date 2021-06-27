@@ -331,3 +331,24 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -
+                Name: Route 2 Psn Cure Berry
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2 Post Cut
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PSNCUREBERRY
+                IsBerry: Yes
+                BerryFlag: 280
+                Code: |
+                  Route2FruitTree:
+                      ITEMLINE
