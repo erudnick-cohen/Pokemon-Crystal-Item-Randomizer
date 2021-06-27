@@ -125,7 +125,7 @@ Location:
                 Sublocations:
             -
                 Name: Bug Catching Contest First Place
-                FileName: NationalPark.asm
+                FileName: Route36NationalParkGate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -147,7 +147,7 @@ Location:
             -
             -
                 Name: Bug Catching Contest Second Place
-                FileName: NationalPark.asm
+                FileName: Route36NationalParkGate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -169,7 +169,7 @@ Location:
             -
             -
                 Name: Bug Catching Contest Third Place
-                FileName: NationalPark.asm
+                FileName: Route36NationalParkGate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -190,7 +190,7 @@ Location:
                 Sublocations:
             -
                 Name: Bug Catching Contest Last Place
-                FileName: NationalPark.asm
+                FileName: Route36NationalParkGate.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
