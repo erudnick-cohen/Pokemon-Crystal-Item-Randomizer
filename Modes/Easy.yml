@@ -25,6 +25,9 @@ DefaultModifiers:
     - Modifiers/NoDoubleDippingRoute2.yaml
     - Modifiers/NoDoubleDippingRoute25.yaml
     - Modifiers/NoDoubleDippingRoute44.yaml
+    - Modifiers/UpgradeHealingItems.yml
+    - Modifiers/UpgradeValuableItems.yml
+    - Modifiers/UpgradeBalls.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver
