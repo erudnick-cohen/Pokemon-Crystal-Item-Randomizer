@@ -138,16 +138,16 @@ Location:
                 ReachableReqs:
                 NormalItem: SUN_STONE
                 Code: |
+                    .Sunstone:
+                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
+                        promptbutton
+                        ITEMLINE
+                SecondaryCode: |
                     BugContestResults_FirstPlace:
                         setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
                         getitemname STRING_BUFFER_4, SUN_STONE
                         farwritetext ContestResults_PlayerWonAPrizeText
                         waitbutton
-                        ITEMLINE
-                SecondaryCode: |
-                    .Sunstone:
-                        writetext Route36NationalParkGateOfficer1HeresThePrizeText
-                        promptbutton
                         ITEMLINE
                 Text:
                 TrainerList: 
