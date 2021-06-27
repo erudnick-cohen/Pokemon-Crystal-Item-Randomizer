@@ -43,9 +43,9 @@ GoldenrodDeptStore5FReceptionistScript:
 	special GetFirstPokemonHappiness
 	writetext GoldenrodDeptStore5FReceptionistOhYourMonDotDotDotText
 	promptbutton
-ckir_BEFORE_timed_events_DEPTSTORE5F3::
+.ckir_BEFORE_timed_events_DEPTSTORE5F3::
 	ifgreater 0, .VeryHappy
-ckir_AFTER_timed_events_DEPTSTORE5F3::
+.ckir_AFTER_timed_events_DEPTSTORE5F3::
 	ifgreater 50 - 1, .SomewhatHappy
 	sjump .NotVeryHappy
 
@@ -53,9 +53,9 @@ ckir_AFTER_timed_events_DEPTSTORE5F3::
 	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
 	promptbutton
 	verbosegiveitem TM_RETURN
-ckir_BEFORE_timed_events_DEPTSTORE5F4::
+.ckir_BEFORE_timed_events_DEPTSTORE5F4::
 	iftrue .NotVeryHappy
-ckir_AFTER_timed_events_DEPTSTORE5F4::
+.ckir_AFTER_timed_events_DEPTSTORE5F4::
 	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
 	closetext
 	end
