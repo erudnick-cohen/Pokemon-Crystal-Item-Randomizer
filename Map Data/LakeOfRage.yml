@@ -227,7 +227,7 @@ Location:
                     .MetWesley:
                         writetext WesleyGivesGiftText
                         promptbutton
-                        verbosegiveitem BLACKBELT_I
+                        ITEMLINE
                         iffalse WesleyDoneScript
                         setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
                         writetext WesleyGaveGiftText
