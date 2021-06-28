@@ -14,6 +14,8 @@ import traceback
 import random
 
 def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}, bonusTrash = []):
+	print('required items are')
+	print(requiredItems)
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -155,6 +157,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			LocationList = res[0]
 			print(progressItems)
 			print(trashItems)
+			rmCore = []
+			for i in coreProgress:
+				if not i in progressItems:
+					rmCore.append(i)
+			for i in rmCore:
+				coreProgress.remove(i)
 			if(not "BadgeItemShuffle" in otherSettings):
 				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			else:

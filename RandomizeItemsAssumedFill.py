@@ -25,6 +25,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	badgeSet = list(badgeData.keys())
 	#define set of trash badges
 	trashBadges = list(frozenset(badgeData.keys()).difference(frozenset(reqBadges)))
+	#print('good badges are:')
+	#print(reqBadges)
+	#print('trash badges are:')
+	#print(trashBadges)
 	#stores current requirements for each location
 	requirementsDict = defaultdict(lambda: [])
 
@@ -57,12 +61,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if i.Type == 'Item':
 			itemCount = itemCount+1
 	#print('Total number of items: '+str(itemCount))
-
+	#print(requirementsDict)
 	#if Explicit Checking is NOT in use, add an impossible location for it so it doesn't get used
-	if not 'Explicit Checking' in flagList:
-		for i in requirementsDict:
-			for j in range(0,len(requirementsDict[i])):
-				requirementsDict[i][j] = [x if x == 'Explicit Checking' else 'Impossible' for x in requirementsDict[i][j]]
+	# if not 'Explicit Checking' in flagList:
+		# for i in requirementsDict:
+			# for j in range(0,len(requirementsDict[i])):
+				# requirementsDict[i][j] = [x if x == 'Explicit Checking' else 'Impossible' for x in requirementsDict[i][j]]
 
 	#if we are in plando mode (explicit placements, only use explicit checks for locations which have the option)
 	if(len(plandoPlacements)>0):
@@ -162,6 +166,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#print(locList[iter].Type)
 				if(locList[iter].Type == allocationType and placeable):
 					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
+					#print(locList[iter].requirementsNeeded(defaultdict(lambda: False)))
 					#do any of its dependencies depend on this item/badge?
 					randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
 					allDepsList = sorted(copy.copy(requirementsDict[locList[iter].Name][randOpt]))
@@ -395,6 +400,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					maxBadgeDist = max(maxBadgeDist,i.distance)
 					nBadges = nBadges+1
 					if(i.badge is None):
+						#print(trashBadges)
 						i.badge = badgeData[trashBadges.pop()]
 					else:
 						state[i.badge.Name] = True
