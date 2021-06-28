@@ -136,16 +136,18 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		print(self.settings)
 
 	def RemoveBonusItem(self):
-		if ('BonusItems' in self.settings): 
-			(addedItem, ok1) = QInputDialog.getItem(self, r"View/Remove Items in pool", "Select any item you wish to remove, or cancel to remove nothing", self.settings['BonusItems'], 0, False)
-		if ok1:
-			(nAdded, ok2) = QInputDialog.getInt(self,"Remove how many?","Remove how many?")
-		if not ('BonusItems' in self.settings):
+		if 'BonusItems' in self.settings and len(self.settings['BonusItems']) > 0:
 			self.settings['BonusItems'] = []
-		if ok1 and ok2:
-			for i in range(0,nAdded):
-				if addedItem in self.settings['BonusItems']:
-					self.settings['BonusItems'].remove(addedItem)
+			if ('BonusItems' in self.settings): 
+				(addedItem, ok1) = QInputDialog.getItem(self, r"View/Remove Items in pool", "Select any item you wish to remove, or cancel to remove nothing", self.settings['BonusItems'], 0, False)
+			if ok1:
+				(nAdded, ok2) = QInputDialog.getInt(self,"Remove how many?","Remove how many?")
+			if not ('BonusItems' in self.settings):
+				self.settings['BonusItems'] = []
+			if ok1 and ok2:
+				for i in range(0,nAdded):
+					if addedItem in self.settings['BonusItems']:
+						self.settings['BonusItems'].remove(addedItem)
 		print(self.settings)
 
 
