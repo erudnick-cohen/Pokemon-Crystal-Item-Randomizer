@@ -6,11 +6,11 @@ SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 BadgeItemShuffle:
 CoreProgress:
-    -'Surf'
-    -'Fog Badge'
-    -'Pass'
-    -'S S Ticket'
-    -'Squirtbottle'
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
 DefaultModifiers:
     - Modifiers/DefinitelyNoEarlySabrina.yml
     - Modifiers/NoEarlyBasement.yml

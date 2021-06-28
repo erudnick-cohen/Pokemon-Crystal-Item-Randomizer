@@ -158,6 +158,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			print(progressItems)
 			print(trashItems)
 			rmCore = []
+			print(coreProgress)
 			for i in coreProgress:
 				if not i in progressItems:
 					rmCore.append(i)

@@ -6,12 +6,12 @@ SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 BadgeItemShuffle:
 CoreProgress:
-    -'Mystery Egg'
-    -'Surf'
-    -'Fog Badge'
-    -'Pass'
-    -'S S Ticket'
-    -'Squirtbottle'
+    - 'Mystery Egg'
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
 DefaultModifiers:
     - Modifiers/DeleteFly.yml
     - Modifiers/ProgressiveRods.yml

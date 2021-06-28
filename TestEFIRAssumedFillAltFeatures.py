@@ -7,7 +7,7 @@ import random
 romPath = 'testingSeed.gbc'
 copyfile(romPath, 'Hmmm'+romPath)
 
-yamlfile = open("Modes/Crazy.yml")
+yamlfile = open("Modes/CrazyChaos.yml")
 yamltext = yamlfile.read()
 settings = yaml.load(yamltext)
 yamlfile = open(settings['BasePatch'])

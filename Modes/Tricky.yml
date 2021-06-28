@@ -5,11 +5,11 @@ RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 CoreProgress:
-    -'Surf'
-    -'Fog Badge'
-    -'Pass'
-    -'S S Ticket'
-    -'Squirtbottle'
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
 DefaultModifiers:
     - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/ForceEarlyFlyV2.yml
