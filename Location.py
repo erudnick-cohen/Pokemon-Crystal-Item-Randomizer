@@ -136,7 +136,7 @@ class Location:
 			else:
 				#this means its a map location, so we need to just make it unreachable
 				#unless its a gym, in which case nothing happens
-				#note that this only functions for the BANLISt
+				#note that this only functions for the BANLIST
 				#for the allow list, it will still be available because that would be tedious and defeating the entire point of the allow list
 				if(not self.isGym() and (not (banList is None) and self.Name in banList)):
 					self.FlagReqs.append('Impossible')
