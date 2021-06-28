@@ -41,7 +41,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
 		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
 		self.AddItem.clicked.connect(self.AddBonusItem)
-		self.RemoveBonusItem.clicked.connect(self.ViewItems)
+		self.View_Items.clicked.connect(self.RemoveBonusItem)
 
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
@@ -137,7 +137,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def RemoveBonusItem(self):
 		if ('BonusItems' in self.settings): 
-		(addedItem, ok1) = QInputDialog.getItem(self, r"View/Remove Items in pool", "Select any item you wish to remove, or cancel to remove nothing", self.settings['BonusItems'], 0, False)
+			(addedItem, ok1) = QInputDialog.getItem(self, r"View/Remove Items in pool", "Select any item you wish to remove, or cancel to remove nothing", self.settings['BonusItems'], 0, False)
 		if ok1:
 			(nAdded, ok2) = QInputDialog.getInt(self,"Remove how many?","Remove how many?")
 		if not ('BonusItems' in self.settings):

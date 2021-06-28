@@ -11,7 +11,6 @@ build/*
 dist/*
 RunGui.spec
 BuildGUILameName.bat
-BuildGUI.bat
 EKIRBUG.txt
 a_SPOILER_Set.txt
 aaa_SPOILERB.txt
