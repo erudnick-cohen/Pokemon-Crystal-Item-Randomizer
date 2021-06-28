@@ -19,6 +19,7 @@ modFileList.append('Modifiers/AllMonItemsAvailable.yml')
 modFileList.append('Modifiers/AllTypeBoostersAvailable.yml')
 modFileList.append('Modifiers/DontReplaceGoodItems.yml')
 modFileList.append('Modifiers/TeleportInsteadOfFly.yml')
+modFileList.append('Modifiers/IncludeEvilChecks.yml')
 
 
 modList = []
