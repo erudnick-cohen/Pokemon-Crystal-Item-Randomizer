@@ -8,6 +8,7 @@ DefaultModifiers:
     - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/EnsureAvailableFly.yml
+    - Modifiers/OptimiseFlow.yml
 ProgressItems:
     - Surf
     - Squirtbottle

@@ -141,8 +141,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					bonusTrash = []
 				bonusTrash.extend(copy.deepcopy(newItems))
 				maybeAdd = []
-				for i in maybeNewItems:
-					if not i in bonusTrash:
+				for i in maybeNewItems: #Change to only add MaybeNewItems if not or the ones added are likely duplicated
+					if not i in bonusTrash and not i in trashItems:
 						maybeAdd.append(i)
 				bonusTrash.extend(maybeAdd)
 				for i in range(0,len(trashItems)):

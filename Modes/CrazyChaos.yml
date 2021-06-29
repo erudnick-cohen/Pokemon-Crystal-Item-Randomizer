@@ -24,7 +24,8 @@ DefaultModifiers:
     - Modifiers/ForceEarlyFlyV2.yml
     - Modifiers/TimeEvents.yml
     - Modifiers/BerryTrees.yml
-
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/OptimiseFlow.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver

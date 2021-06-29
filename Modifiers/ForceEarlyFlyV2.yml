@@ -3,21 +3,17 @@ Description: "Ensures that the fly HM is obtainable and usable before the player
 Changes:
     -
         Location: SS Aqua via Olvine
-        NewItemReqs:
-            - S S Ticket
+        AddItemReqs:
             - Fly
             - Squirtbottle
-        NewFlagReqs:
-            - Kanto Mode
+        AddFlagReqs:
             - Storm Badge
     -
         Location: SS Aqua via Vermilion
-        NewItemReqs:
-            - S S Ticket
+        AddItemReqs:
             - Fly
             - Pass
-        NewFlagReqs:
-            - Kanto Mode
+        AddFlagReqs:
             - Storm Badge
     -
         Location: Route 44
@@ -27,31 +23,25 @@ Changes:
             - Storm Badge
     -
         Location: Diglett's Cave
-        NewItemReqs:
+        AddItemReqs:
             - Fly
-        NewFlagReqs:
+        AddFlagReqs:
             - Storm Badge
     -
         Location: League Gate via Route 26
-        NewFlagReqs:
-            - 8 Badges
-            - Rising Badge
-            - Fog Badge
+        AddFlagReqs:
             - Storm Badge
         NewItemReqs:
-            - Surf
-            - Waterfall
             - Fly
     -
         Location: Victory Road
-        NewItemReqs:
+        AddItemReqs:
             - Fly
-        NewFlagReqs:
+        AddFlagReqs:
             - Storm Badge
     -
         Location: Cerulean Gym Trainers
-        NewItemReqs:
+        AddItemReqs:
             - Fly
-        NewFlagReqs:
+        AddFlagReqs:
             - Storm Badge
-            - Date Ruined

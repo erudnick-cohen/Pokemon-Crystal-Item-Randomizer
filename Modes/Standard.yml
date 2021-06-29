@@ -13,6 +13,7 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/SemiProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/OptimiseFlow.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver
