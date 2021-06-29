@@ -28,7 +28,6 @@ DefaultModifiers:
     - Modifiers/UpgradeHealingItems.yml
     - Modifiers/UpgradeValuableItems.yml
     - Modifiers/UpgradeBalls.yml
-    - Modifiers/OptimiseFlow.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver

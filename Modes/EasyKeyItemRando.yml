@@ -14,7 +14,6 @@ DefaultModifiers:
     - Modifiers/RegularSnorlaxRoute.yml
     - Modifiers/BanMildlyInconvenientLocations.yml
     - Modifiers/NoVanillaBasement.yml
-    - Modifiers/OptimiseFlow.yml
 ProgressItems:
     - Surf
     - Squirtbottle

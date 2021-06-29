@@ -24,7 +24,6 @@ DefaultModifiers:
     - Modifiers/EnableTinTower.yml
     - Modifiers/CardRandomization.yml
     - Modifiers/NoHoOhChamber.yml
-    - Modifiers/OptimiseFlow.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver
