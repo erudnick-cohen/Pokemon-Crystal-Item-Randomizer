@@ -5,7 +5,7 @@
             "new": [1]
         },
         "address_range": {"begin":2080773,"end":2080774},
-        "label": "ItemRandoEasyClairBadge.ckir_BEFOREItemRandoEasyClairBadge",
+        "label": "ItemRandoEasyTinTower.ckir_BEFOREItemRandoEasyTinTower",
         "description": "Activates item rando rules for tin tower"
     }
 ]

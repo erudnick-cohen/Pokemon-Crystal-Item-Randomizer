@@ -12,6 +12,7 @@ CoreProgress:
     - 'S S Ticket'
     - 'Squirtbottle'
 DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/DefinitelyNoEarlySabrina.yml
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/SkipReturningToNewBark.yml
@@ -23,7 +24,7 @@ DefaultModifiers:
     - Modifiers/ForceEarlyFlyV2.yml
     - Modifiers/TimeEvents.yml
     - Modifiers/BerryTrees.yml
-    - Modifiers/OptimiseFlow.yml
+    - Modifiers/SkipE4AndFightRed.yml
 BannedLocations:
 AllowedLocations:
 Goal: Mt. Silver

@@ -11,7 +11,6 @@ DefaultModifiers:
     - Modifiers/ProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
     - Modifiers/RegularSnorlaxRoute.yml
-    - Modifiers/OptimiseFlow.yml
 ProgressItems:
     - Surf
     - Squirtbottle

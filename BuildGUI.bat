@@ -14,6 +14,7 @@ Xcopy "Gym Data" "dist/Pokemon Crystal Item Randomizer/Gym Data" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
 Xcopy "Map Data" "dist/Pokemon Crystal Item Randomizer/Map Data" /i /y
+Xcopy "Config" "dist/Pokemon Crystal Item Randomizer/Config" /i /y
 Xcopy "Modes" "dist/Pokemon Crystal Item Randomizer/Modes" /i /y
 Xcopy "Modifiers" "dist/Pokemon Crystal Item Randomizer/Modifiers" /i /y
 Xcopy "Patches" "dist/Pokemon Crystal Item Randomizer/Patches" /i /y
