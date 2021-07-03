@@ -13,6 +13,7 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        HintName: Viridian
         NormalBadge: Earth Badge
         BadgeLine: |
             ViridianGymBlueScript:

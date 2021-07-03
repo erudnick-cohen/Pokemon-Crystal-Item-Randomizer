@@ -1,5 +1,6 @@
 import LoadLocationData
 import Badge
+import RandomizeFunctions
 import RandomizeItemsAssumedFill as RandomizeItems
 import RandomizeItemsBadgesAssumedFill as RandomizeItemsBadges
 
@@ -119,10 +120,15 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	else:
 		BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 
-	result = ['Nothing', 'Here'] 
+	result = ['Nothing', 'Here']
+
+	# Don't re-load data from folder on failure!
+	fullLocationData = LoadLocationData.LoadDataFromFolder(".", banList, allowList, changeListDict, flags)
+
 	while goal not in result[0]:
 		try:
-			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict, flags)
+			res_items = fullLocationData[1].copy()
+			res_locations = fullLocationData[0].copy()
 			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
@@ -131,7 +137,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			invKeyItemMap = defaultdict(lambda: '')
 			for i in keyItemMap:
 				invKeyItemMap[keyItemMap[i]] = i
-			trashItems = sorted([x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
+			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
 			if 'BonusItems' in otherSettings or (len(newItems)+len(maybeNewItems)) > 0:
@@ -154,7 +160,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				if 'ProgressItems' in otherSettings:
 					progressItems = copy.copy(otherSettings['ProgressItems'])
 					print(otherSettings)
-			LocationList = res[0]
+			LocationList = res_locations
 			print(progressItems)
 			print(trashItems)
 			rmCore = []
@@ -196,6 +202,13 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		addressData[i['label'].split(".")[-1]] = i
 	print(addressData)
 
+	item_desc = open("ItemDescriptions.json")
+	descs = item_desc.read()
+	desc_addr = json.loads(descs)
+	desc_addr_data = {}
+	for i in desc_addr:
+		desc_addr_data[i['name'].split(".")[-1]] = i
+
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 	maxDist = max(result[2].values())
@@ -208,6 +221,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
+
+	giveHints = True
+	if giveHints:
+		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1], result[4], fullLocationData[0])
+		creation_data = RandomizeFunctions.PrepareHintMessages(desc_addr_data, hint_desc, fullLocationData[1])
+		RandomizerRom.WriteDescriptionsToMemory(romMap,creation_data)
+
+
 	RandomizerRom.ApplyGamePatches(romMap,patchList)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

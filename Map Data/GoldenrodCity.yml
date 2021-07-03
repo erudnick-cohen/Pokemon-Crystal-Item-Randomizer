@@ -76,7 +76,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Goldenrod
         Sublocations:
             -
                 Name: Bike Shop

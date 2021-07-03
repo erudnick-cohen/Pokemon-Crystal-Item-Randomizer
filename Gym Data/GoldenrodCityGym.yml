@@ -13,6 +13,7 @@ Location:
         ItemUnlock: Strength
         InfeasibleBadges:
         NormalBadge: Plain Badge
+        HintName: Goldenrod
         BadgeLine: |
             .StoppedCrying:
                 checkevent EVENT_GOT_TM45_ATTRACT

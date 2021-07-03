@@ -13,6 +13,7 @@ Location:
         ItemUnlock: Surf
         InfeasibleBadges:
         NormalBadge: Fog Badge
+        HintName: Ecruteak
         BadgeLine: |
             EcruteakGymMortyScript:
                 faceplayer

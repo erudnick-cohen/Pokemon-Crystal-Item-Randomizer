@@ -27,7 +27,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Union Cave
         Sublocations:
                 -    
                     Name: Union Cave Floor 1 Trainers
@@ -139,7 +140,8 @@ Location:
         ReachableReqs:
         Code: 
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Union
         Sublocations:     
             -    
                 Name: Union Cave Floor 2 trainers
@@ -216,7 +218,8 @@ Location:
         ReachableReqs:
         Code: 
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Union
         Sublocations:   
             -    
                 Name: Union Cave Floor 3 Trainers

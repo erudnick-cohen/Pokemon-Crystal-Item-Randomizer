@@ -236,7 +236,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		commandBall = 4
-		endVal = 176 
+		endVal = 176
 		nItemCode = 176
 	if location.IsBall:
 		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
@@ -314,7 +314,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressData2["address_range"]["begin"]+1] = nItemCode
 			romMap[addressData2["address_range"]["begin"]+2] = endVal
 
-		
+
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
@@ -380,14 +380,14 @@ def LabelAllLocations(locations):
 
 def LabelBadgeLocation(location):
 	print("Labeling "+location.Name)
-	
+
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
 	newfile = filecode
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
-	
+
 	#find the code we need to replace
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 	codeSearch = re.findall(coderegexstr,filecode)[0]
@@ -407,7 +407,7 @@ def LabelBadgeLocation(location):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
-	
+
 	if(not location.SecondaryCode is None):
 		print("Secondary Labelling "+location.Name)
 		#open the relevant file and get it as a string
@@ -416,7 +416,7 @@ def LabelBadgeLocation(location):
 		newfile = filecode
 		#constuct new script that gives the new item
 		#replace is technically deprecated, but this is more readable
-		
+
 		#find the code we need to replace
 		coderegexstr = "("+re.escape(location.SecondaryCode.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
 		codeSearch = re.findall(coderegexstr,filecode)[0]
@@ -595,7 +595,7 @@ def LabelItemLocation(location):
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
-	
+
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
 
@@ -616,8 +616,8 @@ def LabelItemLocation(location):
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
-	
-	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
+
+	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 	if location.IsBall or location.IsBerry:
 		#find the code on the line BEFORE the one we need to modify
 		#fortunately, we have these lines already labeled, we need them to label something else
@@ -655,14 +655,14 @@ def LabelItemLocation(location):
 	newfilestream.flush()
 	#os.fsync(newfilestream.fileno())
 	newfilestream.close()
-	
+
 	#if there is a secondary set of code that also needs to be written, write it
 	if(not location.SecondaryCode is None):
 		print("Secondary Labelling "+location.Name)
 		#open the relevant file and get it as a string
 		file = open("RandomizerRom/maps/"+location.SecondaryFile)
 		filecode = file.read()
-		
+
 		#constuct new script that gives the new item
 		#replace is technically deprecated, but this is more readable
 
@@ -683,7 +683,7 @@ def LabelItemLocation(location):
 		else:
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
 			oldcode = re.findall(coderegexstr,filecode)[0]
-		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
+		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 		if location.IsBall or location.IsBerry:
 			#find the code on the line BEFORE the one we need to modify
 			#fortunately, we have these lines already labeled, we need them to label something else
@@ -728,7 +728,7 @@ def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
-	
+
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
 	newcode = location.Code.replace("ITEMLINE",itemScriptLookup(location.item,location.IsBall,location.IsSpecial))
@@ -739,23 +739,23 @@ def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 	coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 	oldcode = re.findall(coderegexstr,filecode)[0]
 
-	
+
 	newtext = ""
-	if location.Text is not None: 
+	if location.Text is not None:
 		#construct a new script that updates text about the new item
 		newtext = location.Text.replace("ITEMNAME",itemTextLookup(location.item))
 		#switch spaces to tabs.....
 		newtext = newtext.replace("    ","\t")
-		
+
 		#find the text we need to replace
 		textregexstr = re.escape(location.Text.replace("    ","\t")).replace("ITEMNAME",".+")
 		oldtext = re.findall(textregexstr,filecode)[0]
 	else:
 		oldtext = ""
-	
+
 	#make new file with the new text
 	newfile = filecode.replace(oldcode,newcode).replace(oldtext,newtext)
-	
+
 	#write the new file into the files for the randomizer rom
 	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
 	newfilestream.seek(0)
@@ -767,14 +767,14 @@ def WriteLocationToRom(location, itemScriptLookup, itemTextLookup):
 
 def WriteBadgeToRom(location):
 	#print("Writing "+location.Name+" which contains "+location.badge.Name)
-	
+
 	#open the relevant file and get it as a string
 	file = open("RandomizerRom/maps/"+location.FileName)
 	filecode = file.read()
 	newfile = filecode
 	#constuct new script that gives the new item
 	#replace is technically deprecated, but this is more readable
-	
+
 	newcode = location.Code.replace("BADGELINE","ENGINE_"+location.badge.Name.replace(" ","").upper())
 	#switch spaces to tabs.....
 	newcode = newcode.replace("    ","\t")
@@ -790,9 +790,9 @@ def WriteBadgeToRom(location):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
-	
+
 	newtext = ""
-	if location.Text is not None: 
+	if location.Text is not None:
 		for i in location.Text:
 			file = open("RandomizerRom/maps/"+i["File"])
 			filecode = file.read()
@@ -812,11 +812,11 @@ def WriteBadgeToRom(location):
 			newfilestream.flush()
 			#os.fsync(newfilestream.fileno())
 			newfilestream.close()
-			
-	
+
+
 	#make new file with the new text
 	newfile = filecode.replace(oldcode,newcode).replace(oldtext,newtext)
-	
+
 	#write the new file into the files for the randomizer rom
 	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
 	newfilestream.seek(0)
@@ -825,8 +825,8 @@ def WriteBadgeToRom(location):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
-	
-	
+
+
 def WriteItemLocations(locations):
 	codeLookup = Items.makeItemCodeDict()
 	textLookup = Items.makeItemTextDict()
@@ -835,7 +835,7 @@ def WriteItemLocations(locations):
 			WriteLocationToRom(i,codeLookup,textLookup)
 		elif i.isGym():
 			WriteBadgeToRom(i)
-			
+
 def WriteTrainerLevels(locationDict, distDict, trainerData):
 	trainerfile = open("Game Files/pokecrystal-speedchoice/trainers/trainers.asm")
 	newfile = trainerfile.read()
@@ -863,7 +863,7 @@ def WriteTrainerLevels(locationDict, distDict, trainerData):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
-	
+
 def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the trainer file
 	jgfile = open("Game Files/pokecrystal-speedchoice/data/wild/johto_grass.asm")
@@ -1016,3 +1016,44 @@ def WriteSpecialWildLevels(locationDict,distDict,monFun):
 				newfilestream.flush()
 				#os.fsync(newfilestream.fileno())
 				newfilestream.close()
+
+import string
+def ByteToGBCCharacterByte(charr):
+	upper=string.ascii_uppercase
+	lower=string.ascii_lowercase
+
+	if charr in upper:
+		return 128+upper.index(charr)
+	elif charr in lower:
+		return 160+lower.index(charr)
+	elif charr == " ":
+		return 127
+	else:
+		return 160
+
+
+
+
+def WriteDescriptionsToMemory(romMap, hints):
+	for hint in hints:
+		addrData = hint[0]
+		hintData = hint[1]
+
+		for i in range(addrData.start,addrData.end):
+			byteToWrite = None
+			if i == addrData.start:
+				byteToWrite = 80 #DB
+			elif i == addrData.start + len(hintData.messages[0]):
+				byteToWrite = 78 #Next
+			else:
+				if((i-addrData.start)-1 < 0):
+					print("How?")
+				elif((i-addrData.start)-1 >= len(hintData.messages[0]+hintData.messages[1])):
+					print("How2?")
+				byte = (hintData.messages[0]+hintData.messages[1])[(i-addrData.start)-1]
+				byteToWrite = ByteToGBCCharacterByte(byte)
+
+			romMap[i] = byteToWrite
+
+
+	return

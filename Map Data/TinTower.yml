@@ -76,7 +76,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Tin Tower
         Sublocations:
             -
                 Name: Tin Tower Full Heal

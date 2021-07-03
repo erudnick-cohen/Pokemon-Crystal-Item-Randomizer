@@ -13,6 +13,7 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        HintName: Blackthorn
         NormalBadge: Rising Badge
         BadgeLine: |
             BlackthornGymClairScript:

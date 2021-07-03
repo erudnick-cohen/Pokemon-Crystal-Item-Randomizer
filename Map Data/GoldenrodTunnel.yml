@@ -82,6 +82,7 @@ Location:
             - RIVAL1 10
             - RIVAL1 11
             - RIVAL1 12
+        HintName: Goldenrod
         Sublocations:
             -
                 Name: Goldenrod Tunnel Smoke Ball
@@ -240,6 +241,7 @@ Location:
             - Basement Key
         FlagsSet:
         ReachableReqs:
+        HintName: Goldenrod
         Code: |
             GoldenrodUndergroundWarehouseDirectorScript:
                 faceplayer

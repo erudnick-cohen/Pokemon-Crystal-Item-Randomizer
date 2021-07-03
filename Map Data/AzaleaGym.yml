@@ -14,7 +14,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Azalea
         Sublocations:
             -
                 Name: Bugsy TM

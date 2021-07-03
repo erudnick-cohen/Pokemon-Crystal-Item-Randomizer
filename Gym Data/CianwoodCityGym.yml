@@ -12,6 +12,7 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        HintName: Cianwood
         NormalBadge: Storm Badge
         BadgeLine: |
             CianwoodGymChuckScript:

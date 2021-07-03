@@ -84,6 +84,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        HintName: Olivine
         Sublocations:
             -
                 Name: Olivine Strength HM

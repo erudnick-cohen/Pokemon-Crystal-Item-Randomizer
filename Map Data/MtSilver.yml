@@ -8,9 +8,9 @@ Location:
             - ROUTE_28
         LocationReqs:
             - Mt. Silver Unlock
-            - Became Champion
         FlagReqs:
             - Hive Badge
+            - Became Champion
         ItemReqs:
             - Cut
         FlagsSet:
@@ -39,10 +39,10 @@ Location:
         WildTableList:
         LocationReqs:
             - Mt. Silver Unlock
-            - Became Champion
         FlagReqs:
             - Hidden Items
             - Hive Badge
+            - Became Champion
         ItemReqs:
             - Cut
         FlagsSet:
@@ -64,10 +64,10 @@ Location:
         WildTableList:
         LocationReqs:
             - Mt. Silver Unlock
-            - Became Champion
         FlagReqs:
             - Hidden Items
             - Fog Badge
+            - Became Champion
         ItemReqs:
             - Surf
         FlagsSet:

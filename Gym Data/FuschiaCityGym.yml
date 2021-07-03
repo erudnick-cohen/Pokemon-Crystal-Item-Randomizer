@@ -14,6 +14,7 @@ Location:
         ItemUnlock:
         InfeasibleBadges:
         NormalBadge: Soul Badge
+        HintName: Fuschia
         BadgeLine: |
             FuchsiaGymJanineScript:
                 checkevent EVENT_BEAT_JANINE

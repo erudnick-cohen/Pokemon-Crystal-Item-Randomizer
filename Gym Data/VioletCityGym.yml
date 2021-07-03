@@ -13,6 +13,7 @@ Location:
         ItemUnlock: Flash
         InfeasibleBadges:
         NormalBadge: Zephyr Badge
+        HintName: Violet
         BadgeLine: |
             VioletGymFalknerScript:
                 faceplayer

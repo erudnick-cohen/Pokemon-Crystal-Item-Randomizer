@@ -14,7 +14,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Cinnabar
         Sublocations:
             -
                 Name: Cinnabar Island Hidden Rare Candy

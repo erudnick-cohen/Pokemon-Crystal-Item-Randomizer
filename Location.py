@@ -28,6 +28,11 @@ class Location:
 			self.IsBerry = False
 			self.BerryFlag = None
 
+		if("HintName" in yamlTree):
+			self.HintName = yamlTree["HintName"]
+		else:
+			self.HintName = self.Name
+
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem
 		self.HasPKMN = yamlTree["HasPKMN"]
