@@ -25,7 +25,7 @@ Oak:
 	buttonsound
 	setevent EVENT_TALKED_TO_OAK_IN_KANTO
 .CheckBadges
-	check_permaoptions EARLY_KANTO
+	checkpermaoptions EARLY_KANTO
 	iftrue .OpenMtSilver_Rocketless
 	checkcode VAR_BADGES
 .ckir_BEFORE_OAK_BADGES_CHECK::
