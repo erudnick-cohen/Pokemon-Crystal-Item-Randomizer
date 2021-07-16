@@ -1,17 +1,15 @@
-const_value set 2
+	object_const_def ; object_event constants
 	const OAKSLAB_OAK
 	const OAKSLAB_SCIENTIST1
 	const OAKSLAB_SCIENTIST2
 	const OAKSLAB_SCIENTIST3
 
-OaksLab_MapScriptHeader:
-.MapTriggers:
-	db 0
+OaksLab_MapScripts:
+	db 0 ; scene scripts
 
-.MapCallbacks:
-	db 0
+	db 0 ; callbacks
 
-.DummyTrigger:
+.DummyScene:
 	end
 
 Oak:
@@ -22,19 +20,20 @@ Oak:
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
 	iftrue .CheckBadges
 	writetext OakWelcomeKantoText
-	buttonsound
+	promptbutton
 	setevent EVENT_TALKED_TO_OAK_IN_KANTO
-.CheckBadges
+.CheckBadges:
 	checkpermaoptions EARLY_KANTO
-	iftrue .OpenMtSilver_Rocketless
-	checkcode VAR_BADGES
+	iftrue .OpenMtSilverEarlyKanto
+	readvar VAR_BADGES
 .ckir_BEFORE_OAK_BADGES_CHECK::
-	if_equal 16, .OpenMtSilver
+	ifequal NUM_BADGES, .OpenMtSilver
 .ckir_AFTER_OAK_BADGES_CHECK::
-	if_equal  8, .Complain
-	jump .AhGood
 
-.CheckPokedex
+	ifequal NUM_JOHTO_BADGES, .Complain
+	sjump .AhGood
+
+.CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
 	special ProfOaksPCBoot
@@ -43,27 +42,27 @@ Oak:
 	closetext
 	end
 
-.OpenMtSilver
+.OpenMtSilver:
 	writetext OakOpenMtSilverText
-	buttonsound
+	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
-	jump .CheckPokedex
-
-.OpenMtSilver_Rocketless
-	writetext OakOpenMtSilverText_Rocketless
-	buttonsound
+	sjump .CheckPokedex
+	
+.OpenMtSilverEarlyKanto:
+	writetext EarlyKantoOakOpenMtSilverText
+	promptbutton
 	setevent EVENT_OPENED_MT_SILVER
-	jump .CheckPokedex
+	sjump .CheckPokedex
 
-.Complain
+.Complain:
 	writetext OakNoKantoBadgesText
-	buttonsound
-	jump .CheckPokedex
+	promptbutton
+	sjump .CheckPokedex
 
-.AhGood
+.AhGood:
 	writetext OakYesKantoBadgesText
-	buttonsound
-	jump .CheckPokedex
+	promptbutton
+	sjump .CheckPokedex
 
 OaksAssistant1Script:
 	jumptextfaceplayer OaksAssistant1Text
@@ -75,7 +74,7 @@ OaksAssistant3Script:
 	jumptextfaceplayer OaksAssistant3Text
 
 OaksLabBookshelf:
-	jumpstd difficultbookshelf
+	jumpstd DifficultBookshelfScript
 
 OaksLabPoster1:
 	jumptext OaksLabPoster1Text
@@ -114,50 +113,6 @@ OakLabGoodbyeText:
 	text "If you're in the"
 	line "area, I hope you"
 	cont "come visit again."
-	done
-
-OakOpenMtSilverText_Rocketless:
-	text "OAK: Oh? Is KANTO"
-	line "not the challenge"
-
-	para "you were looking"
-	line "for?"
-
-	para "Hmm… Well, you do"
-	line "seem capable…"
-
-	para "Tell you what,"
-	line "<PLAY_G>. I'll make"
-
-	para "arrangements so"
-	line "that you can go to"
-	cont "MT.SILVER."
-
-	para "MT.SILVER is a big"
-	line "mountain that is"
-
-	para "home to many wild"
-	line "#MON."
-
-	para "It's too dangerous"
-	line "for your average"
-
-	para "trainer, so it's"
-	line "off limits. But"
-
-	para "we can make an"
-	line "exception in your"
-	cont "case, <PLAY_G>."
-
-	para "Go up to INDIGO"
-	line "PLATEAU. You can"
-
-	para "reach MT.SILVER"
-	line "from there."
-
-	para "Besides, what's the"
-	line "worst that can"
-	cont "happen? Hahaha!"
 	done
 
 OakOpenMtSilverText:
@@ -199,6 +154,50 @@ OakOpenMtSilverText:
 
 	para "reach MT.SILVER"
 	line "from there."
+	done
+
+EarlyKantoOakOpenMtSilverText:
+	text "OAK: Oh? Is KANTO"
+	line "not the challenge"
+
+	para "you were looking"
+	line "for?"
+
+	para "Hmm… Well, you do"
+	line "seem capable…"
+
+	para "Tell you what,"
+	line "<PLAY_G>. I'll make"
+
+	para "arrangements so"
+	line "that you can go to"
+	cont "MT.SILVER."
+
+	para "MT.SILVER is a big"
+	line "mountain that is"
+
+	para "home to many wild"
+	line "#MON."
+
+	para "It's too dangerous"
+	line "for your average"
+
+	para "trainer, so it's"
+	line "off limits. But"
+
+	para "we can make an"
+	line "exception in your"
+	cont "case, <PLAY_G>."
+
+	para "Go up to INDIGO"
+	line "PLATEAU. You can"
+
+	para "reach MT.SILVER"
+	line "from there."
+
+	para "Besides, what's the"
+	line "worst that can"
+	cont "happen? Hahaha!"
 	done
 
 OakNoKantoBadgesText:
@@ -279,7 +278,7 @@ OaksLabPoster2Text:
 	line "manner."
 	done
 
-OaksLabTrashcanText
+OaksLabTrashcanText:
 	text "There's nothing in"
 	line "here…"
 	done
@@ -310,40 +309,35 @@ OaksLabPCText:
 	line "TOWN 8-)"
 	done
 
-OaksLab_MapEventHeader:
-	; filler
-	db 0, 0
+OaksLab_MapEvents:
+	db 0, 0 ; filler
 
-.Warps:
-	db 2
-	warp_def $b, $4, 3, PALLET_TOWN
-	warp_def $b, $5, 3, PALLET_TOWN
+	db 2 ; warp events
+	warp_event  4, 11, PALLET_TOWN, 3
+	warp_event  5, 11, PALLET_TOWN, 3
 
-.XYTriggers:
-	db 0
+	db 0 ; coord events
 
-.Signposts:
-	db 16
-	signpost 1, 6, SIGNPOST_READ, OaksLabBookshelf
-	signpost 1, 7, SIGNPOST_READ, OaksLabBookshelf
-	signpost 1, 8, SIGNPOST_READ, OaksLabBookshelf
-	signpost 1, 9, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 0, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 1, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 2, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 3, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 6, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 7, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 8, SIGNPOST_READ, OaksLabBookshelf
-	signpost 7, 9, SIGNPOST_READ, OaksLabBookshelf
-	signpost 0, 4, SIGNPOST_READ, OaksLabPoster1
-	signpost 0, 5, SIGNPOST_READ, OaksLabPoster2
-	signpost 3, 9, SIGNPOST_READ, OaksLabTrashcan
-	signpost 1, 0, SIGNPOST_READ, OaksLabPC
+	db 16 ; bg events
+	bg_event  6,  1, BGEVENT_READ, OaksLabBookshelf
+	bg_event  7,  1, BGEVENT_READ, OaksLabBookshelf
+	bg_event  8,  1, BGEVENT_READ, OaksLabBookshelf
+	bg_event  9,  1, BGEVENT_READ, OaksLabBookshelf
+	bg_event  0,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  1,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  2,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  3,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  6,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  7,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  8,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  9,  7, BGEVENT_READ, OaksLabBookshelf
+	bg_event  4,  0, BGEVENT_READ, OaksLabPoster1
+	bg_event  5,  0, BGEVENT_READ, OaksLabPoster2
+	bg_event  9,  3, BGEVENT_READ, OaksLabTrashcan
+	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
-.PersonEvents:
-	db 4
-	person_event SPRITE_OAK, 2, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Oak, -1
-	person_event SPRITE_SCIENTIST, 8, 1, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, OaksAssistant1Script, -1
-	person_event SPRITE_SCIENTIST, 9, 8, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, OaksAssistant2Script, -1
-	person_event SPRITE_SCIENTIST, 4, 1, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, OaksAssistant3Script, -1
+	db 4 ; object events
+	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Oak, -1
+	object_event  1,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
+	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
+	object_event  1,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
