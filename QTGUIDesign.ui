@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>438</height>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,33 +17,34 @@
    <widget class="QPushButton" name="Randomize">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>300</y>
-      <width>201</width>
+      <x>580</x>
+      <y>380</y>
+      <width>211</width>
       <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Randomize Rom</string>
+     <string>Randomize
+ Rom</string>
     </property>
    </widget>
    <widget class="QPushButton" name="SelectRomFile">
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>340</y>
-      <width>211</width>
-      <height>51</height>
+      <y>410</y>
+      <width>221</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
@@ -121,33 +122,34 @@
    <widget class="QPushButton" name="ChooseSettings">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>320</x>
       <y>50</y>
-      <width>211</width>
-      <height>51</height>
+      <width>241</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Select Logic Settings</string>
+     <string>Select Logic 
+Settings</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>100</y>
-      <width>161</width>
+      <y>80</y>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="text">
@@ -181,17 +183,27 @@
    <widget class="QLabel" name="CurentSettings">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>130</y>
-      <width>231</width>
-      <height>20</height>
+      <x>580</x>
+      <y>109</y>
+      <width>211</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>No settings selected!</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
@@ -221,7 +233,7 @@
       <x>150</x>
       <y>90</y>
       <width>161</width>
-      <height>241</height>
+      <height>311</height>
      </rect>
     </property>
     <item>
@@ -259,9 +271,9 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>100</y>
-      <width>231</width>
-      <height>61</height>
+      <y>150</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -277,9 +289,9 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>170</y>
-      <width>231</width>
-      <height>61</height>
+      <y>200</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -294,7 +306,7 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>620</x>
       <y>40</y>
       <width>121</width>
       <height>31</height>
@@ -315,10 +327,10 @@
    <widget class="QLabel" name="CurrentGoal">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>560</x>
       <y>60</y>
-      <width>251</width>
-      <height>41</height>
+      <width>231</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
@@ -353,7 +365,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>230</y>
+      <y>240</y>
       <width>241</width>
       <height>31</height>
      </rect>
@@ -374,7 +386,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>330</y>
+      <y>410</y>
       <width>111</width>
       <height>61</height>
      </rect>
@@ -422,7 +434,7 @@
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>350</y>
+      <y>420</y>
       <width>181</width>
       <height>41</height>
      </rect>
@@ -450,9 +462,9 @@
     <property name="geometry">
      <rect>
       <x>323</x>
-      <y>260</y>
-      <width>251</width>
-      <height>71</height>
+      <y>280</y>
+      <width>241</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="palette">
@@ -565,7 +577,7 @@
       <x>580</x>
       <y>180</y>
       <width>211</width>
-      <height>111</height>
+      <height>181</height>
      </rect>
     </property>
     <property name="palette">
@@ -792,6 +804,26 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>View/Remove Items</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BadgesNeeded">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Change # of badges
+ to unlock Mt. Silver? 
+(Currently 16)</string>
     </property>
    </widget>
   </widget>
