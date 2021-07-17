@@ -209,6 +209,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
 	RandomizerRom.ApplyGamePatches(romMap,patchList)
+	if "SilverBadgeUnlockCount" in otherSettings:
+		RandomizerRom.WriteOakBadgeCheckNumber(otherSettings["SilverBadgeUnlockCount"], addressData, romMap)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 	#RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

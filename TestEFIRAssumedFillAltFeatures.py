@@ -10,6 +10,7 @@ copyfile(romPath, 'Hmmm'+romPath)
 yamlfile = open("Modes/CrazyChaos.yml")
 yamltext = yamlfile.read()
 settings = yaml.load(yamltext)
+settings["SilverBadgeUnlockCount"] = 3
 yamlfile = open(settings['BasePatch'])
 yamltext = yamlfile.read()
 patches = json.loads(yamltext)
@@ -18,12 +19,12 @@ modFileList.append('Modifiers/AllTMsAvailable.yml')
 modFileList.append('Modifiers/AllMonItemsAvailable.yml')
 modFileList.append('Modifiers/AllTypeBoostersAvailable.yml')
 modFileList.append('Modifiers/DontReplaceGoodItems.yml')
-modFileList.append('Modifiers/TeleportInsteadOfFly.yml')
+#modFileList.append('Modifiers/TeleportInsteadOfFly.yml')
 modFileList.append('Modifiers/IncludeEvilChecks.yml')
 
 
 modList = []
-plandoPlacements = {"Hidden Machine Part" : "Radio Card", "Route 29 Potion" : "Squirtbottle", "Route 30 Berry Man" : "OLD_ROD", "Violet City Gym Badge": "Storm Badge", "Falkner TM" : "Fly", "Route 31 Pokeball" : "Cut", 'Goldenrod City Gym' : "Hive Badge", "Route 30 Antidote" : "Pass", 'Azalea Town Gym Badge': 'Fog Badge', 'Buena Item': "GOOD_ROD"}
+plandoPlacements = {"Pokegear Gift" : "Squirtbottle", "Route 29 Potion" : "Radio Card", "Route 30 Berry Man" : "Expansion Card", "Violet City Gym Badge": "Storm Badge", "Falkner TM" : "Fly", "Route 31 Pokeball" : "Cut", 'Goldenrod City Gym' : "Hive Badge", "Route 30 Antidote" : "Pass", 'Azalea Town Gym Badge': 'Fog Badge', 'Buena Item': "Pokegear"}
 #plandoPlacements = {'Celadon City Gym Badge':'Fog Badge' }
 #plandoPlacements = {}
 #CoreProgress = ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge']

@@ -35,11 +35,12 @@ def ResetRomForLabelling():
 
 def WriteOakBadgeCheckNumber(number, addressData, gameFile):
 	#get where this is
-	start = addressData['Oak.ckir_BEFORE_OAK_BADGES_CHECK']["address_range"]["start"]
+	start = addressData['ckir_BEFORE_OAK_BADGES_CHECK']["address_range"]["begin"]
 	#Change oak to a greater than check so that the game isn't unwinnable. This value is usually 10, unless it gets changed.
-	gameFile[start] = addressData['Oak.ckir_BEFORE_OAK_BADGES_CHECK']["integer_values"][0]
-	#Write number. Badge count is 2nd value from start.
-	gameFile[start+1] = number
+	gameFile[start] = 10
+	#gameFile[start] = [int(s) for s in addressData['ckir_BEFORE_OAK_BADGES_CHECK']["integer_values"].split(' ')][0]
+	#Write number. Badge count is 2nd value from start. Minus one because its greater than
+	gameFile[start+1] = number-1
 
 
 

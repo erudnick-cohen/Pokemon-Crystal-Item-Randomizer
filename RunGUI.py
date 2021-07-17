@@ -42,6 +42,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
 		self.AddItem.clicked.connect(self.AddBonusItem)
 		self.View_Items.clicked.connect(self.RemoveBonusItem)
+		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
 
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
@@ -122,6 +123,18 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		except Exception:
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage(''.join(traceback.format_exc()))
+			error_dialog.exec_()
+
+	def SetBadgeForSilver(self):
+		(nBadge, ok2) = QInputDialog.getInt(self,"How many badges will Mt. Silver unlock with?","How many badges will Mt. Silver unlock with?")
+		if nBadge <= 16 and ok2:
+			self.settings["SilverBadgeUnlockCount"] = nBadge
+			_translate = QtCore.QCoreApplication.translate
+			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(nBadge)+")"))
+			QtGui.QGuiApplication.processEvents()
+		elif ok2:
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage("There are only 16 badges in Pokemon Crystal! You can't require more, or your game will not be completable!")
 			error_dialog.exec_()
 
 	def AddBonusItem(self):
@@ -206,7 +219,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))
 		self.CurrentGoal.setText(_translate("MainWindow", settings['Goal']))
-
+		if "SilverBadgeUnlockCount" in self.settings:
+			_translate = QtCore.QCoreApplication.translate
+			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(self.settings["SilverBadgeUnlockCount"])+")"))
+			QtGui.QGuiApplication.processEvents()
+			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
 		if(fName != ''):
