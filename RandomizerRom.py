@@ -32,6 +32,17 @@ def ResetRomForLabelling():
 			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
 	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
 	shutil.copy("Files with manual labels/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
+
+def WriteOakBadgeCheckNumber(number, addressData, gameFile):
+	#get where this is
+	start = addressData['Oak.ckir_BEFORE_OAK_BADGES_CHECK']["address_range"]["start"]
+	#Change oak to a greater than check so that the game isn't unwinnable. This value is usually 10, unless it gets changed.
+	gameFile[start] = addressData['Oak.ckir_BEFORE_OAK_BADGES_CHECK']["integer_values"][0]
+	#Write number. Badge count is 2nd value from start.
+	gameFile[start+1] = number
+
+
+
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")

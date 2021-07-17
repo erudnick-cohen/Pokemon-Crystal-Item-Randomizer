@@ -27,7 +27,7 @@ Oak:
 	iftrue .OpenMtSilverEarlyKanto
 	readvar VAR_BADGES
 .ckir_BEFORE_OAK_BADGES_CHECK::
-	if_greater_than NUM_BADGES, .OpenMtSilver
+	if_less_than NUM_BADGES, .OpenMtSilver
 .ckir_AFTER_OAK_BADGES_CHECK::
 
 	ifequal NUM_JOHTO_BADGES, .Complain
