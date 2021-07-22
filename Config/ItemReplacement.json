@@ -17,7 +17,7 @@
  { "item": "FULL_HEAL", "replacement":  "MIRACLEBERRY", "type": "Healing", "chance": 1  },
  { "item": "BITTER_BERRY", "replacement":  "MIRACLEBERRY", "type": "Healing", "chance": 100  },
  { "item": "MINT_BERRY", "replacement":  "MIRACLEBERRY", "type": "Healing", "chance": 100  },
- { "item": "ETHER", "replacement":  "MYSTERYBERRY", "type": "Healing", "chance": 75  },
+ { "item": "ETHER", "replacement":  "ELIXER", "type": "Healing", "chance": 75  },
  { "item": "MAX_ETHER", "replacement":  "ELIXER", "type": "Healing", "chance": 33  },
  { "item": "ELIXER", "replacement":  "MAX_ELIXER", "type": "Healing", "chance": 20  },
  { "item": "MYSTERYBERRY", "replacement":  "MAX_ETHER", "type": "Healing", "chance": 1  },
