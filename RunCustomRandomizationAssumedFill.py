@@ -22,6 +22,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	newItems = []
 	maybeNewItems = []
 	dontReplace = []
+	addedProgressList = []
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
@@ -33,6 +34,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			for j in i['AddedItems']:
 				if j not in requiredItemsCopy:
 					requiredItemsCopy.append(j)
+					addedProgressList.append(j)
 			#print(requiredItems)
 		if 'AddedTrash' in i:
 			extraTrash.extend(i['AddedTrash'])
@@ -150,10 +152,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 						trashItems[i] = bonusTrash.pop(0)
 			#place bonus trash replacing non-critical trash
 			if 'TrashItemList' in otherSettings:
-				trashItems = copy.copy(otherSettings['TrashItemList'])
+				trashItems = copy.deepcopy(otherSettings['TrashItemList'])
 				if 'ProgressItems' in otherSettings:
-					progressItems = copy.copy(otherSettings['ProgressItems'])
+					progressItems = copy.deepcopy(otherSettings['ProgressItems'])
+					progressItems.extend(addedProgressList)
 					print(otherSettings)
+					for i in progressItems:
+						if i in trashItems:
+							trashItems.remove(i)
 			LocationList = res[0]
 			print(progressItems)
 			print(trashItems)
