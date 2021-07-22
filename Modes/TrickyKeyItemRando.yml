@@ -1,4 +1,4 @@
-Name: Neo KIR
+Name: Tricky KIR
 Description: All HMs and Key Items are randomized. Most of the Pokegear cards and the Pokedex and Pokegear are also randomized as well. All badges are also shuffled. Rainbow wing is included in the item pool and is locked by having the clear bell and fighting the Elite 4. Fighting the Elite 4 is not required to fight Red. Fly access is less trollish than in classic KIR.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
