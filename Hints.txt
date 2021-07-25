@@ -1,0 +1,140 @@
+
+Hint Types:
+
+[thing] is required to get to [item]
+e.g. Flash is required to get Surf
+
+[thing] is in [location]
+e.g. Plain Badge is in Tin Tower
+
+[location] is NOT required
+e.g. Whirl Islands is free
+
+[location] is required
+e.g. Required to go to Lighthouse
+
+Current possible hint locations
+(Subject to change based on future changes)
+AzaleaTownIlexForestSignText ../pokecrystal-speedchoice/maps/AzaleaTown.asm
+SlowpokeWellSignText ../pokecrystal-speedchoice/maps/AzaleaTown.asm
+AzaleaGymSignText ../pokecrystal-speedchoice/maps/AzaleaTown.asm
+AzaleaTownSignText ../pokecrystal-speedchoice/maps/AzaleaTown.asm
+BattleTowerOutsideSignText ../pokecrystal-speedchoice/maps/BattleTowerOutside.asm
+CeladonGymSignText ../pokecrystal-speedchoice/maps/CeladonCity.asm
+CeladonCitySignText ../pokecrystal-speedchoice/maps/CeladonCity.asm
+CeladonCityDeptStoreSignText ../pokecrystal-speedchoice/maps/CeladonCity.asm
+CeladonMansionManagersSuiteSignText ../pokecrystal-speedchoice/maps/CeladonMansion1F.asm
+CeladonMansion3FDevRoomSignText ../pokecrystal-speedchoice/maps/CeladonMansion3F.asm
+CeruleanGymSignText ../pokecrystal-speedchoice/maps/CeruleanCity.asm
+CeruleanBikeShopSignText ../pokecrystal-speedchoice/maps/CeruleanCity.asm
+CeruleanCitySignText ../pokecrystal-speedchoice/maps/CeruleanCity.asm
+CeruleanPoliceSignText ../pokecrystal-speedchoice/maps/CeruleanCity.asm
+CherrygroveCitySignText ../pokecrystal-speedchoice/maps/CherrygroveCity.asm
+CianwoodGymSignText ../pokecrystal-speedchoice/maps/CianwoodCity.asm
+CianwoodPharmacySignText ../pokecrystal-speedchoice/maps/CianwoodCity.asm
+CianwoodPhotoStudioSignText ../pokecrystal-speedchoice/maps/CianwoodCity.asm
+CianwoodCitySignText ../pokecrystal-speedchoice/maps/CianwoodCity.asm
+CinnabarIslandSignText ../pokecrystal-speedchoice/maps/CinnabarIsland.asm
+CinnabarIslandGymSignText ../pokecrystal-speedchoice/maps/CinnabarIsland.asm
+TinTowerSignText ../pokecrystal-speedchoice/maps/EcruteakCity.asm
+BurnedTowerSignText ../pokecrystal-speedchoice/maps/EcruteakCity.asm
+EcruteakCitySignText ../pokecrystal-speedchoice/maps/EcruteakCity.asm
+EcruteakGymSignText ../pokecrystal-speedchoice/maps/EcruteakCity.asm
+FuchsiaCitySignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+SafariZoneClosedSignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+SafariZoneOfficeSignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+WardensHomeSignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+FuchsiaGymSignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+NoLitteringSignText ../pokecrystal-speedchoice/maps/FuchsiaCity.asm
+GoldenrodGymSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCityRadioTowerSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCityNameRaterSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCityGameCornerSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCityBikeShopSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodDeptStoreSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCitySignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+GoldenrodCityFlowerShopSignText ../pokecrystal-speedchoice/maps/GoldenrodCity.asm
+LakeOfRageSignText ../pokecrystal-speedchoice/maps/LakeOfRage.asm
+LavRadioTower1FPokeFluteSignText ../pokecrystal-speedchoice/maps/LavRadioTower1F.asm
+KantoRadioStationSignText ../pokecrystal-speedchoice/maps/LavenderTown.asm
+LavenderTownSignText ../pokecrystal-speedchoice/maps/LavenderTown.asm
+VolunteerPokemonHouseSignText ../pokecrystal-speedchoice/maps/LavenderTown.asm
+SoulHouseSignText ../pokecrystal-speedchoice/maps/LavenderTown.asm
+MahoganyGymSignText ../pokecrystal-speedchoice/maps/MahoganyTown.asm
+MahoganyTownRagecandybarSignText ../pokecrystal-speedchoice/maps/MahoganyTown.asm
+MahoganyTownSignText ../pokecrystal-speedchoice/maps/MahoganyTown.asm
+NewBarkTownSignText ../pokecrystal-speedchoice/maps/NewBarkTown.asm
+OlivineLighthouseSignText ../pokecrystal-speedchoice/maps/OlivineCity.asm
+OlivineCityPortSignText ../pokecrystal-speedchoice/maps/OlivineCity.asm
+OlivineGymSignText ../pokecrystal-speedchoice/maps/OlivineCity.asm
+OlivineCitySignText ../pokecrystal-speedchoice/maps/OlivineCity.asm
+OlivineCityBattleTowerSignText ../pokecrystal-speedchoice/maps/OlivineCity.asm
+PalletTownSignText ../pokecrystal-speedchoice/maps/PalletTown.asm
+PewterGymSignText ../pokecrystal-speedchoice/maps/PewterCity.asm
+PewterMuseumSignText ../pokecrystal-speedchoice/maps/PewterCity.asm
+PewterCitySignText ../pokecrystal-speedchoice/maps/PewterCity.asm
+PewterCityMtMoonGiftShopSignText ../pokecrystal-speedchoice/maps/PewterCity.asm
+PokemonFanClubListenSignText ../pokecrystal-speedchoice/maps/PokemonFanClub.asm
+PokemonFanClubBraggingSignText ../pokecrystal-speedchoice/maps/PokemonFanClub.asm
+RadioTower1FLuckyChannelSignText ../pokecrystal-speedchoice/maps/RadioTower1F.asm
+RadioTower2FOaksPKMNTalkSignText ../pokecrystal-speedchoice/maps/RadioTower2F.asm
+RadioTower2FPokemonRadioSignText ../pokecrystal-speedchoice/maps/RadioTower2F.asm
+RadioTower3FPokemonMusicSignText ../pokecrystal-speedchoice/maps/RadioTower3F.asm
+Route1SignText ../pokecrystal-speedchoice/maps/Route1.asm
+Route10SignText ../pokecrystal-speedchoice/maps/Route10South.asm
+Route12SignText ../pokecrystal-speedchoice/maps/Route12.asm
+Route13SignText ../pokecrystal-speedchoice/maps/Route13.asm
+Route13DirectionsSignText ../pokecrystal-speedchoice/maps/Route13.asm
+Route15SignText ../pokecrystal-speedchoice/maps/Route15.asm
+CyclingRoadSignText ../pokecrystal-speedchoice/maps/Route16.asm
+Route18SignText ../pokecrystal-speedchoice/maps/Route18.asm
+Route19SignText ../pokecrystal-speedchoice/maps/Route19.asm
+CarefulSwimmingSignText ../pokecrystal-speedchoice/maps/Route19.asm
+Route2SignText ../pokecrystal-speedchoice/maps/Route2.asm
+CinnabarGymSignText ../pokecrystal-speedchoice/maps/Route20.asm
+VictoryRoadEntranceSignText ../pokecrystal-speedchoice/maps/Route22.asm
+IndigoPlateauSignText ../pokecrystal-speedchoice/maps/Route23.asm
+TohjoFallsSignText ../pokecrystal-speedchoice/maps/Route27.asm
+Route3MtMoonSquareSignText ../pokecrystal-speedchoice/maps/Route3.asm
+MrPokemonsHouseDirectionsSignText ../pokecrystal-speedchoice/maps/Route30.asm
+Route30SignText ../pokecrystal-speedchoice/maps/Route30.asm
+Route31SignText ../pokecrystal-speedchoice/maps/Route31.asm
+Route32RuinsSignText ../pokecrystal-speedchoice/maps/Route32.asm
+Route32SignText ../pokecrystal-speedchoice/maps/Route32.asm
+DayCareSignText ../pokecrystal-speedchoice/maps/Route34.asm
+Route34SignText ../pokecrystal-speedchoice/maps/Route34.asm
+RuinsOfAlphNorthSignText ../pokecrystal-speedchoice/maps/Route36.asm
+Route38SignText ../pokecrystal-speedchoice/maps/Route38.asm
+Route39SignText ../pokecrystal-speedchoice/maps/Route39.asm
+MoomooFarmSignText ../pokecrystal-speedchoice/maps/Route39.asm
+MtMoonSquareSignText ../pokecrystal-speedchoice/maps/Route4.asm
+Route40SignText ../pokecrystal-speedchoice/maps/Route40.asm
+Route45SignText ../pokecrystal-speedchoice/maps/Route45.asm
+Route46SignText ../pokecrystal-speedchoice/maps/Route46.asm
+Route5UndergroundPathSignText ../pokecrystal-speedchoice/maps/Route5.asm
+HouseForSaleSignText ../pokecrystal-speedchoice/maps/Route5.asm
+Route6UndergroundPathSignText ../pokecrystal-speedchoice/maps/Route6.asm
+Route7UndergroundPathSignText ../pokecrystal-speedchoice/maps/Route7.asm
+Route8UndergroundPathSignText ../pokecrystal-speedchoice/maps/Route8.asm
+Route9SignText ../pokecrystal-speedchoice/maps/Route9.asm
+RuinsOfAlphOutsideMysteryChamberSignText ../pokecrystal-speedchoice/maps/RuinsOfAlphOutside.asm
+RuinsOfAlphResearchCenterSignText ../pokecrystal-speedchoice/maps/RuinsOfAlphOutside.asm
+RuinsOfAlphSignText ../pokecrystal-speedchoice/maps/RuinsOfAlphOutside.asm
+SilphCoSignText ../pokecrystal-speedchoice/maps/SaffronCity.asm
+SaffronGymSignText ../pokecrystal-speedchoice/maps/SaffronCity.asm
+SaffronCityMagnetTrainStationSignText ../pokecrystal-speedchoice/maps/SaffronCity.asm
+SaffronCitySignText ../pokecrystal-speedchoice/maps/SaffronCity.asm
+FightingDojoSignText ../pokecrystal-speedchoice/maps/SaffronCity.asm
+VermilionGymSignText ../pokecrystal-speedchoice/maps/VermilionCity.asm
+PokemonFanClubSignText ../pokecrystal-speedchoice/maps/VermilionCity.asm
+VermilionCitySignText ../pokecrystal-speedchoice/maps/VermilionCity.asm
+SproutTowerSignText ../pokecrystal-speedchoice/maps/VioletCity.asm
+VioletGymSignText ../pokecrystal-speedchoice/maps/VioletCity.asm
+VioletCitySignText ../pokecrystal-speedchoice/maps/VioletCity.asm
+ViridianCitySignText ../pokecrystal-speedchoice/maps/ViridianCity.asm
+ViridianCityWelcomeSignText ../pokecrystal-speedchoice/maps/ViridianCity.asm
+TrainerHouseSignText ../pokecrystal-speedchoice/maps/ViridianCity.asm
+ViridianGymSignText ../pokecrystal-speedchoice/maps/ViridianCity.asm
+
+
+

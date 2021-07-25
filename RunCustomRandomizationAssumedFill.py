@@ -209,6 +209,13 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	for i in desc_addr:
 		desc_addr_data[i['name'].split(".")[-1]] = i
 
+	sign_desc = open("Config/SignData.json")
+	s_descs = sign_desc.read()
+	sign_desc_addr = json.loads(s_descs)
+	sign_addr_data = {}
+	for i in sign_desc_addr:
+		sign_addr_data[i['name'].split(".")[-1]] = i
+
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 	maxDist = max(result[2].values())
@@ -224,8 +231,11 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 	giveHints = True
 	if giveHints:
-		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1], result[4], fullLocationData[0])
-		creation_data = RandomizeFunctions.PrepareHintMessages(desc_addr_data, hint_desc, fullLocationData[1])
+		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
+															criticalTrash, BadgeDict)
+
+		# Use signs or items?
+		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, res_items)
 		RandomizerRom.WriteDescriptionsToMemory(romMap,creation_data)
 
 

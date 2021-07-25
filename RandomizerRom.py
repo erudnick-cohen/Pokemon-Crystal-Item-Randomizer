@@ -1021,6 +1021,7 @@ import string
 def ByteToGBCCharacterByte(charr):
 	upper=string.ascii_uppercase
 	lower=string.ascii_lowercase
+	digits = "0123456789"
 
 	if charr in upper:
 		return 128+upper.index(charr)
@@ -1028,10 +1029,24 @@ def ByteToGBCCharacterByte(charr):
 		return 160+lower.index(charr)
 	elif charr == " ":
 		return 127
+	elif charr == "!":
+		return 231
+	elif charr == ".":
+		return 232
+	elif charr == "…":
+		return 117
+	elif charr in digits:
+		return 246+digits.index(charr)
+	elif charr == "#":
+		return 84
 	else:
-		return 160
+		return 127
 
-
+STATIC_DB_COMMAND = 80
+STATIC_NEXT_COMMAND = 78
+STATIC_TEXT_COMMAND = 0
+STATIC_LINE_COMMAND = 79
+STATIC_PARA_COMMAND = 81
 
 
 def WriteDescriptionsToMemory(romMap, hints):
@@ -1039,19 +1054,34 @@ def WriteDescriptionsToMemory(romMap, hints):
 		addrData = hint[0]
 		hintData = hint[1]
 
+		if hintData.totalLength != addrData.end-addrData.start:
+			print("Length decrepency: ", hintData.totalLength,addrData.end-addrData.start)
+
 		for i in range(addrData.start,addrData.end):
 			byteToWrite = None
-			if i == addrData.start:
-				byteToWrite = 80 #DB
-			elif i == addrData.start + len(hintData.messages[0]):
-				byteToWrite = 78 #Next
+
+			index = i-addrData.start
+			if index == 0:
+				byteToWrite = STATIC_TEXT_COMMAND
 			else:
-				if((i-addrData.start)-1 < 0):
-					print("How?")
-				elif((i-addrData.start)-1 >= len(hintData.messages[0]+hintData.messages[1])):
-					print("How2?")
-				byte = (hintData.messages[0]+hintData.messages[1])[(i-addrData.start)-1]
-				byteToWrite = ByteToGBCCharacterByte(byte)
+				i_dex=1
+				for msg in hintData.messages:
+					message_length = len(msg.text)
+					if index < i_dex + message_length:
+						str_index = index - i_dex
+						byteToWrite = ByteToGBCCharacterByte(msg.text[str_index])
+						break
+					i_dex+=message_length
+					if index < i_dex + msg.padding:
+						byteToWrite = ByteToGBCCharacterByte(" ")
+						break
+					i_dex+=msg.padding
+					if msg.seperator is not None:
+						if index - i_dex == 0:
+							byteToWrite = msg.seperator
+							break
+						i_dex += 1
+
 
 			romMap[i] = byteToWrite
 

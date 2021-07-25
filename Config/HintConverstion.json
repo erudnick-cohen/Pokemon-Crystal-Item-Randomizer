@@ -1,0 +1,10 @@
+{
+  "Items": [{"ENGINE_POKEDEX":"Pokedex"}],
+  "Locations": [{"Mt Mortar Upper Floor": "Mortar Waterfall" }],
+  "Flags":
+  [
+    {"Rocket Invasion": "Takeover"},
+    {"Mahogany Rockets Defeated": "Clearing Hideout"}
+
+  ]
+}

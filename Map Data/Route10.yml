@@ -98,6 +98,7 @@ Location:
                 ItemReqs:
                     - Surf
                 FlagsSet:
+                    - Power Plant
                 ReachableReqs:
                 Code:
                 Text:
