@@ -23,6 +23,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	newItems = []
 	maybeNewItems = []
 	dontReplace = []
+	addedProgressList = []
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
@@ -34,6 +35,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			for j in i['AddedItems']:
 				if j not in requiredItemsCopy:
 					requiredItemsCopy.append(j)
+					addedProgressList.append(j)
 			#print(requiredItems)
 		if 'AddedTrash' in i:
 			extraTrash.extend(i['AddedTrash'])
@@ -156,13 +158,17 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 						trashItems[i] = bonusTrash.pop(0)
 			#place bonus trash replacing non-critical trash
 			if 'TrashItemList' in otherSettings:
-				trashItems = copy.copy(otherSettings['TrashItemList'])
+				trashItems = copy.deepcopy(otherSettings['TrashItemList'])
 				if 'ProgressItems' in otherSettings:
-					progressItems = copy.copy(otherSettings['ProgressItems'])
+					progressItems = copy.deepcopy(otherSettings['ProgressItems'])
+					progressItems.extend(addedProgressList)
 					print(otherSettings)
-			LocationList = res_locations
+					for i in progressItems:
+						if i in trashItems:
+							trashItems.remove(i)
 			print(progressItems)
 			print(trashItems)
+			LocationList = res_locations
 			rmCore = []
 			print(coreProgress)
 			for i in coreProgress:
@@ -240,6 +246,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 
 	RandomizerRom.ApplyGamePatches(romMap,patchList)
+	if "SilverBadgeUnlockCount" in otherSettings:
+		RandomizerRom.WriteOakBadgeCheckNumber(otherSettings["SilverBadgeUnlockCount"], addressData, romMap)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)
 	#RandomizerRom.WriteWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 	#RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))

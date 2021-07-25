@@ -19,7 +19,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	progressSet = copy.copy(sorted(progressList))
 	coreProgress = list(sorted(frozenset(coreProgress).intersection(frozenset(progressSet))))
 	locList = LoadLocationData.FlattenLocationTree(locationTree)
-
+	#print("progress items are:")
+	#print(progressItems)
 	allocatedList = []
 	#define set of badges
 	badgeSet = list(badgeData.keys())
