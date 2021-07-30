@@ -12,6 +12,11 @@ Location:
         FlagsSet:
         ReachableReqs:
         ItemUnlock:
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Celadon
         InfeasibleBadges:
         NormalBadge: Rainbow Badge
         BadgeLine: |

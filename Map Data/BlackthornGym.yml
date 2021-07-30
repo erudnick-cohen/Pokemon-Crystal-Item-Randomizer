@@ -29,6 +29,11 @@ Location:
                 ItemReqs:
                     - Strength
                 FlagsSet:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Blackthorn
                 ReachableReqs:
                 NormalItem: TM_DRAGONBREATH
                 Code: |

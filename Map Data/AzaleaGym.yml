@@ -28,6 +28,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Azalea
                 NormalItem: TM_FURY_CUTTER
                 Code: |
                     .FightDone:

@@ -25,7 +25,13 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Morty Defeated
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Ecruteak
                 NormalItem: TM_SHADOW_BALL
                 Code: |
                     .FightDone:

@@ -1,3 +1,9 @@
+class Tag:
+	def __init__(self, treeItem):
+		self.Name = treeItem["Name"]
+		self.SubTags = treeItem["SubTags"]
+
+
 class Location:
 	def __init__(self, yamlTree):
 		print("Creating Location "+yamlTree["Name"])
@@ -32,6 +38,12 @@ class Location:
 			self.HintName = yamlTree["HintName"]
 		else:
 			self.HintName = self.Name
+
+		self.Tags = []
+		if "Tags" in yamlTree:
+			for tag in yamlTree["Tags"]:
+				self.Tags.append(Tag(tag))
+
 
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem

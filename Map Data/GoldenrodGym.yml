@@ -26,6 +26,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Goldenrod
                 NormalItem: TM_ATTRACT
                 Code: |
                     .GotPlainBadge:

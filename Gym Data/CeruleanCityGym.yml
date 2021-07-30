@@ -12,6 +12,11 @@ Location:
         FlagsSet:
         ReachableReqs:
         ItemUnlock:
+        Tags:
+          -
+            Name: Leader
+            SubTags:
+              - Cerulean
         InfeasibleBadges:
         HintName: Cerulean
         NormalBadge: Cascade Badge

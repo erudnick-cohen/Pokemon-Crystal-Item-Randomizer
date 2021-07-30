@@ -222,6 +222,21 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	for i in sign_desc_addr:
 		sign_addr_data[i['name'].split(".")[-1]] = i
 
+
+	class PriorityObject:
+		def __init__(self, name, types, key):
+			self.HintName = name
+			self.HintTypes = types
+			self.HintKey = key
+
+	pri_file = open("Config/PriorityHints.json")
+	p_d = pri_file.read()
+	priority_data = json.loads(p_d)
+	priority_list=[]
+	for i in priority_data:
+		item = PriorityObject(i["HintName"],i["HintTypes"],i["HintKey"])
+		priority_list.append(item)
+
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 	maxDist = max(result[2].values())
@@ -238,10 +253,10 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	giveHints = True
 	if giveHints:
 		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
-															criticalTrash, BadgeDict)
+															criticalTrash, BadgeDict, result[5].copy(), otherSettings)
 
 		# Use signs or items?
-		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, res_items)
+		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list)
 		RandomizerRom.WriteDescriptionsToMemory(romMap,creation_data)
 
 

@@ -27,6 +27,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Olivine
                 NormalItem: TM_IRON_TAIL
                 Code: |
                     .FightDone:

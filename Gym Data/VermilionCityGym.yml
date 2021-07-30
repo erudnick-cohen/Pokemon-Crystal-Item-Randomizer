@@ -15,6 +15,11 @@ Location:
         InfeasibleBadges:
         NormalBadge: Thunder Badge
         HintName: Vermillion
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Vermillion
         BadgeLine: |
             VermilionGymSurgeScript:
                 faceplayer

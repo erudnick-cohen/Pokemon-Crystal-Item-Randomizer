@@ -130,6 +130,7 @@ Location:
                     - Whirlpool
                 FlagsSet:
                 ReachableReqs:
+                HintName: Route 27
                 IsBall: Yes
                 NormalItem: TM_SOLARBEAM
                 Code: |
@@ -155,6 +156,7 @@ Location:
                 ReachableReqs:
                 Text:
                 TrainerList:
+                HintName: Route 27
                 NormalItem: TM_SANDSTORM
                 Code: |
                     .Loyal:

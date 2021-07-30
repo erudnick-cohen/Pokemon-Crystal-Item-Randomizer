@@ -13,6 +13,11 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Blackthorn
         HintName: Blackthorn
         NormalBadge: Rising Badge
         BadgeLine: |

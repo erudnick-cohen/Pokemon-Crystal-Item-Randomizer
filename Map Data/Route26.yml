@@ -63,6 +63,7 @@ Location:
                 ITEMLINE
         Text:
         AREALV: 28
+        HintName: Route 26
         TrainerList: 
             - COOLTRAINERF 9
             - COOLTRAINERF 8
@@ -89,6 +90,7 @@ Location:
         NormalItem: ICE_BERRY
         IsBerry: Yes
         BerryFlag: 282
+        HintName: Route 26
         Code: |
           Route26FruitTree:
               ITEMLINE

@@ -36,6 +36,11 @@ Location:
                 ItemReqs:
                     - Cut
                 FlagsSet:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Celadon
                 ReachableReqs:
                 NormalItem: TM_GIGA_DRAIN
                 Code: |

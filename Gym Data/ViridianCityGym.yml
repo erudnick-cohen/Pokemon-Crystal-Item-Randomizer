@@ -15,6 +15,11 @@ Location:
         InfeasibleBadges:
         HintName: Viridian
         NormalBadge: Earth Badge
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Viridian
         BadgeLine: |
             ViridianGymBlueScript:
                 faceplayer

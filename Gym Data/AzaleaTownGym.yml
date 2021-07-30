@@ -11,6 +11,11 @@ Location:
         FlagsSet:
         ReachableReqs:
         ItemUnlock: Cut
+        Tags:
+          -
+            Name: Leader
+            SubTags:
+              - Azalea
         InfeasibleBadges:
         NormalBadge: Hive Badge
         BadgeLine: |

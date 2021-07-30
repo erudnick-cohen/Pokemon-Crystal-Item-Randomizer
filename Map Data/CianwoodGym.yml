@@ -29,6 +29,11 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Cianwood
                 Code: |
                     .FightDone:
                         checkevent EVENT_GOT_TM01_DYNAMICPUNCH

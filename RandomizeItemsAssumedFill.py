@@ -445,4 +445,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('illegal')
 	#print('remaining')
 	#print(trashItems)
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict)
