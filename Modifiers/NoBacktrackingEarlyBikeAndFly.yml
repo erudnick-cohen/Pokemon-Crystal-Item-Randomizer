@@ -202,6 +202,7 @@ Changes:
         Location: Flower Shop
         NewFlagReqs:
             - Storm Badge
+            - Plain Badge
         NewItemReqs:
             - Bicycle
             - Fly
