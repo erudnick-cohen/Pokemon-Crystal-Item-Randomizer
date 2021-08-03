@@ -31,7 +31,7 @@ with suppress_stdout_stderr():
 
         yamlfile = open("Modes/Extreme.yml")
         yamltext = yamlfile.read()
-        settings = yaml.load(yamltext)
+        settings = yaml.load(yamltext, Loader=yaml.FullLoader)
         yamlfile = open(settings['BasePatch'])
         yamltext = yamlfile.read()
         patches = json.loads(yamltext)
@@ -43,7 +43,7 @@ with suppress_stdout_stderr():
         for i in modFileList:
                 yamlfile = open(i)
                 yamltext = yamlfile.read()
-                modList.append(yaml.load(yamltext))
+                modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 
 locs = locations_dict.locs
 print('Finished initialization')

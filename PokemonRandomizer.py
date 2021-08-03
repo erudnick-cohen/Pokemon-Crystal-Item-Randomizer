@@ -104,7 +104,7 @@ def randomizeTrainers(locations, bstrange,monFun,rivalFix = False,banMap = defau
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")
 	yamltext = yamlfile.read()
-	trainerData = yaml.load(yamltext)
+	trainerData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	
 	#for trainers who don't have moves, randomizing the trainer file is just randomizing pokemon
 	#for trainers who DO have moves, we SHUFFLE their pokemon with those of other trainers with moves
