@@ -436,6 +436,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if(plandoPlacements[i] in spoiler and spoiler[plandoPlacements[i]] != i):
 			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 			raise Exception('Did not match plando placements!!!')
+	#Activate delete fly if needed
+		if('Delete Fly' in inputFlags):
+			for i in reachable.values():
+				if i.isItem():
+					#print(i.Name)
+					#print('item is: '+str(i.item))
+					if i.item == 'Fly':
+						#print('deleted fly')
+						i.item = 'BERRY'
 
 	RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
 
