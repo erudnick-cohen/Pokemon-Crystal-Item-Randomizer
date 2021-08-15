@@ -40,6 +40,9 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: NUGGET
+                Tags:
+                    - Name: Annoying
+                      SubTags:
                 Code: |
                     TrainerCooltrainermKevin:
                         faceplayer
@@ -71,6 +74,9 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: PROTEIN
+                Tags:
+                    - Name: Annoying
+                      SubTags:
                 IsBall: Yes
                 Code: |
                     Route25Protein:

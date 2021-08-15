@@ -96,6 +96,10 @@ Location:
                     - Basement Key
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 Code: |
                     GoldenrodUndergroundSwitchRoomEntrancesSmokeBall:
                         ITEMLINE

@@ -1,5 +1,5 @@
 [
-  {"HintName": "OaksLabSignText", "HintTypes": ["conf"], "HintKey":  "MtSilver"},
+  {"HintName": "OaksLabSignText", "HintTypes": ["conf"], "HintKey":  "Mtsilver"},
   {"HintName":  "NewBarkTownSignText", "HintTypes":  ["conf"], "HintKey":  "Config"},
   {"HintName":  "IndigoPlateauSignText", "HintTypes":  ["tag"], "HintKey":  "Leader"},
   {"HintName":  "CeruleanGymSignText", "HintTypes":  ["nothingl","nothingi","nothingf",

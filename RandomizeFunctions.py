@@ -220,8 +220,8 @@ def PathToItem(item):
 					"COIN_CASE": "Coin Case",
 					"Elite Four": "Indigo Plateau",
 					"VS Ho-Oh": "Tin Tower Peak",
-					"Mt Mortar Surf Floor": "Mt Mortar Surf",
-					"Mt Mortar Upper Floor": "Mt Mortar Waterfall",
+					"Mt Mortar Surf Floor": "Mortar Surf",
+					"Mt Mortar Upper Floor": "Mortar Waterfall",
 					"Kanto Power Restored": "Kanto Power",
 					"Mahogany Rockets Defeated": "Mahogany Base Clear",
 					"Beat Team Rocket": "Saving Radio Tower",
@@ -269,7 +269,7 @@ class HintMessage():
 		self.helpful = helpful
 		self.messages = []
 		self.reword()
-		print(self)
+		#print(self)
 
 	def __str__(self):
 		return str(self.item) + " " + str(self.type) + " " + str(self.secondary)
@@ -347,6 +347,10 @@ class HintMessage():
 			elif self.type == "conf":
 				msg1.text = self.item
 				msg2.text = "="+str(self.secondary)
+			elif self.type == "attag":
+				msg1.text = self.item
+				msg2.text = "is"
+				msg3.text = self.secondary
 
 
 			messages.append(msg1)
@@ -483,7 +487,7 @@ def PrepareHintMessages(addressData, hints, priorities):
 	random.shuffle(validAddresses)
 
 	#Shortest hint locations first, so shortest hints end up at these addresses more often!
-	validAddresses = sorted(validAddresses, key=lambda x: x.length, reverse=False)
+
 
 	# test code
 	# prints signs possible to be changed sorted by location
@@ -525,7 +529,7 @@ def PrepareHintMessages(addressData, hints, priorities):
 		if x not in hintOptions:
 			hintLessOptions.append(x)
 
-
+	validAddresses = sorted(validAddresses, key=lambda x: x.length - (64 * int(x.name in priorityAddresses)), reverse=False)
 
 	for addr in validAddresses:
 		if len(hints) == 0:
@@ -544,6 +548,7 @@ def PrepareHintMessages(addressData, hints, priorities):
 				break
 
 			hintItem = False
+
 			if addr.name in priorityAddresses:
 				addressItems = list(filter(lambda x: x.HintName == addr.name,priorities))
 				possibleHints = []
@@ -558,9 +563,21 @@ def PrepareHintMessages(addressData, hints, priorities):
 					hintOptions.remove(currentHint)
 					hintItem = True
 
+
 			if hintItem:
 				hints.remove(currentHint)
 				list_readd = readd_hints_priority
+			elif len(priorityAddresses) == 0 and len(hintOptions) > 0:
+				multiHints = []
+				multiHints += hintLessOptions
+				multiHints += hintOptions
+				currentHint = multiHints.pop(0)
+				if currentHint in hintLessOptions:
+					hintLessOptions.remove(currentHint)
+				if currentHint in hintOptions:
+					hintOptions.remove(currentHint)
+				hints.remove(currentHint)
+				list_readd = readd_hints_normal
 			elif not hintItem and len(hintLessOptions) > 0:
 				currentHint = hintLessOptions.pop(0)
 				hints.remove(currentHint)
@@ -574,6 +591,9 @@ def PrepareHintMessages(addressData, hints, priorities):
 			success = currentHint.toMessages(addr.length, addr.commands)
 			if success:
 				useHints.append((addr, currentHint))
+				if hintItem:
+					priorityAddresses.remove(addr.name)
+
 			else:
 				list_readd.append(currentHint)
 
@@ -582,7 +602,7 @@ def PrepareHintMessages(addressData, hints, priorities):
 		if not success:
 			# Since small ones exist, we may also want to add code somewhere to MERGE hints into one
 			# But what to do with the extra and keep the files the same size??
-			print("Unable to assign any remaining hints to: "+addr.name)
+			#print("Unable to assign any remaining hints to: "+addr.name)
 			# Create a hint to say TOO SMALL for this seed
 			empty = HintMessage("small", None, None, False)
 			empty.toMessages(addr.length, addr.commands)
@@ -598,6 +618,8 @@ def PrepareHintMessages(addressData, hints, priorities):
 		#random.shuffle(hints)
 
 	# Debug Info
+	hintlog = open("Hints.log","w")
+
 	for hint in useHints:
 		hintAddr = hint[0]
 		hintDetail = hint[1]
@@ -606,7 +628,10 @@ def PrepareHintMessages(addressData, hints, priorities):
 		for m in hintDetail.messages:
 			message += m.text.strip() + " "
 
-		print(hintAddr.item, message)
+		hintdetail = str(hintAddr.item) + " " + str(message)
+		hintlog.write(hintdetail+"\n")
+
+	hintlog.close()
 
 	for unusedHint in hints:
 		success = unusedHint.toMessages(100, 5)
@@ -617,6 +642,63 @@ def PrepareHintMessages(addressData, hints, priorities):
 		print("unused:", message)
 
 	return useHints
+
+def removeRedundantHints(hints):
+
+	manualHintChecks = [
+		{"typeFrom":"nothingl","typeTo":"nothingf","valueFrom":
+			"Rocket Base","valueTo":"Mahogany Base Clear"},
+		{"typeFrom": "nothingl", "typeTo": "nothingf", "valueFrom":
+			"Power Plant", "valueTo": "Kanto Power"},
+		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
+			"Pewter City", "valueTo": "Route 4"},
+		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
+			"Blackthorn City", "valueTo": "Dragons Den"},
+		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
+			"Tin Tower", "valueTo": "Tin Tower Peak"},
+		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
+			"Indigo Plateau", "valueTo": "Tin Tower Peak"},
+
+	]
+
+	for item in manualHintChecks:
+		typeFrom = item["typeFrom"]
+		typeTo = item["typeTo"]
+
+		hintFind_if = list(filter(lambda x: x.type == typeFrom
+										 and x.secondary == item["valueFrom"], hints))
+
+		if len(hintFind_if) > 0:
+			hintFind_remove = list(filter(lambda x: x.type == typeTo
+										 and x.secondary == item["valueTo"],
+							   hints))
+			if len(hintFind_remove) > 0:
+				hints.remove(hintFind_remove[0])
+
+		typeFromInvert = None
+		typeToInvert = None
+		if typeFrom == "somethingl":
+			typeFromInvert = "nothingl"
+		elif typeFrom == "nothingl":
+			typeFromInvert = "somethingl"
+
+		if typeTo == "somethingf":
+			typeToInvert = "nothingf"
+		elif typeTo == "nothingf":
+			typeToInvert = "somethingf"
+
+		hintFind_if_reverse = list(filter(lambda x: x.type == typeToInvert
+											and x.secondary == item["valueTo"], hints))
+
+		if len(hintFind_if_reverse) > 0:
+			hintFind_remove_reverse = list(filter(lambda x: x.type == typeFromInvert
+													and x.secondary == item["valueFrom"],
+										  hints))
+			if len(hintFind_remove_reverse) > 0:
+				hints.remove(hintFind_remove_reverse[0])
+
+
+
 
 
 def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeDict, requirementDict, config):
@@ -646,10 +728,13 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 						 "Tin Tower", "VS Ho-Oh", "Rocket Base", "Ruins of Alph",
 						 "Cianwood City", "Blackthorn City", "Cinnabar Island",
 						 "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
-						 "Mt Mortar Upper Floor", "Elm's Lab", "Route 26", "Route 27", "Lighthouse",
-						 "Dark Cave","Dragons Den"]
+						 "Mt Mortar Upper Floor", "Elm's Lab", "Routes 26/27", "Lighthouse",
+						 "Dark Cave","Dragons Den", "Rock Tunnel", "Cerulean Cape"]
 
-	location_sim_mapping = {"Dark Cave": {"Dark Cave Violet","Dark Cave Blackthorn"}}
+	location_sim_mapping = {"Dark Cave": {"Dark Cave Violet","Dark Cave Blackthorn"},
+							"Routes 26/27": {"Route 26","Route 27","Tojho Falls"},
+							"Cerulean Cape": {"Route 24", "Route 25"}
+	 }
 
 	# Need message converter when loading these locations
 
@@ -726,8 +811,11 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 		else:
 			found_result = result[0]
 
+
 			if "Impossible" in found_result.LocationReqs:
 				continue
+
+			found_result.UpdateTags()
 
 			for tag in found_result.Tags:
 				tagName = tag.Name
@@ -781,10 +869,18 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 			parent = found_result
 			parents = list(filter(lambda x: found_result in x.Sublocations, locationList))
 			unequalHintNames = []
+
+			for tag in found_result.Tags:
+				one_location_hints.append(HintMessage("attag", key, tag.Name, True))
+
 			while parents is not None and len(parents) > 0:
 				parent = parents[0]
 				if parent.Name != parent.HintName:
 					unequalHintNames.append(parent.HintName)
+
+				for tag in parent.Tags:
+					one_location_hints.append(HintMessage("attag", key, tag.Name, True))
+
 				parents = list(filter(lambda x: parent in x.Sublocations, locationList))
 
 			# Refactor Map files to use 'Hint Name' for topmost parent to remove some ambiguity / longer names
@@ -793,6 +889,8 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 				useHintName = parent.HintName
 			else:
 				useHintName = unequalHintNames[0]
+
+
 
 
 			one_location_hints.append(HintMessage("in", key, useHintName, True))
@@ -896,8 +994,11 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 			for t in relevantTag.SubTags:
 				if t not in matchedSubTags:
 					new = True
+			if len(relevantTag.SubTags) == 0:
+				new = True
 
 			if not exclude and new:
+				print("Tagdetail:",tagKey,l.Name)
 				tagCount += 1
 				for x in relevantTag.SubTags:
 					if x not in matchedSubTags:

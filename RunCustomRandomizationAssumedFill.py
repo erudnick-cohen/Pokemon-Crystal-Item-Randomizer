@@ -254,6 +254,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if giveHints:
 		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
 															criticalTrash, BadgeDict, result[5].copy(), otherSettings)
+		RandomizeFunctions.removeRedundantHints(hint_desc)
 
 		# Use signs or items?
 		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list)

@@ -235,6 +235,10 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: IRON
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 Code: |
                     VermilionPortHiddenIron:
                         ITEMLINE

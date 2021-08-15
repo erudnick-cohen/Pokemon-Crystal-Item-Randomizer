@@ -1,7 +1,14 @@
 class Tag:
-	def __init__(self, treeItem):
-		self.Name = treeItem["Name"]
-		self.SubTags = treeItem["SubTags"]
+	def __init__(self, treeItem=None, name=None):
+		if treeItem is not None:
+			self.Name = treeItem["Name"]
+			if "SubTags" in treeItem:
+				self.SubTags = treeItem["SubTags"]
+			if self.SubTags is None:
+				self.SubTags = []
+		elif name is not None:
+			self.Name = name
+			self.SubTags = []
 
 
 class Location:
@@ -42,8 +49,7 @@ class Location:
 		self.Tags = []
 		if "Tags" in yamlTree:
 			for tag in yamlTree["Tags"]:
-				self.Tags.append(Tag(tag))
-
+				self.Tags.append(Tag(treeItem=tag))
 
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem
@@ -232,3 +238,19 @@ class Location:
 			for i in self.Sublocations:
 				list.extend(i.getTrashItemList(flags))
 		return list
+
+	def UpdateTags(self):
+		if self.IsBerry:
+			self.Tags.append(Tag(name="Berry"))
+
+		if self.IsHidden:
+			self.Tags.append(Tag(name="Hidden"))
+
+		#if self.IsBall:
+		#	self.Tags.append(Tag(name="Ball"))
+
+		if "Timed Events" in self.FlagReqs:
+			self.Tags.append(Tag(name="Time"))
+
+		if "Pure Evil Checks" in self.FlagReqs:
+			self.Tags.append(Tag(name="Evil"))

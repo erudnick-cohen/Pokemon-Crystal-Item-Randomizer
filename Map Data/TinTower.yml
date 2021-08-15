@@ -9,7 +9,6 @@ Location:
         WildTableList: 
         FlagReqs:
             - Impossible
-            - Morty Defeated
         ItemReqs:
             - Clear Bell
         FlagsSet:

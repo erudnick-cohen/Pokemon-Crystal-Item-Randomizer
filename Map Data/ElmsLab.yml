@@ -159,6 +159,10 @@ Location:
                 ItemReqs:
                 FlagsSet: 
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Annoying
+                        SubTags:
                 Text: |
                     ElmGiveTicketText1:
                         text "ELM: <PLAY_G>!"

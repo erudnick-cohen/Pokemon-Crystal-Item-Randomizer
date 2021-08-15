@@ -176,6 +176,10 @@ Location:
                     - Surf
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 NormalItem: PROTEIN
                 Code: |
                     OlivinePortHiddenProtein:

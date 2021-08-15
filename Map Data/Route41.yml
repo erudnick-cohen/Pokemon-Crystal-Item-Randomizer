@@ -42,6 +42,9 @@ Location:
                 ItemReqs:
                     - Surf
                     - Whirlpool
+                Tags:
+                    - Name: Annoying
+                      SubTags:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER

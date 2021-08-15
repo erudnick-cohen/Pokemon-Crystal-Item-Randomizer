@@ -119,6 +119,10 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 ReachableReqs:
                 Code: |
                     .GetSurf:

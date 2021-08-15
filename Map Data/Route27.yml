@@ -137,6 +137,10 @@ Location:
                     Route27TMSolarbeam:
                         ITEMLINE
                 Text:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 AREALV: 28
                 TrainerList: 
                     - BIRD_KEEPER 12
