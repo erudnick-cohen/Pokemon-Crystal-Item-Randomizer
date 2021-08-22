@@ -174,6 +174,8 @@ def IterateRequirements(location, locations, known, partial_known=[]):
 		for x in allRequiredLoc:
 			if x not in addedLocation and (len(reqData) == 1 or allRequiredLoc.count(x) == len(reqData)):
 				addedLocation.append(x)
+			elif x not in addedLocation and (allRequiredLoc.count(x) < len(reqData)):
+				print("optional loc:",x,data)
 
 		for x in allRequiredFlag:
 			if x not in addedFlag and (len(reqData) == 1 or allRequiredFlag.count(x) == len(reqData)):
@@ -212,9 +214,9 @@ def PathToItem(item):
 
 	replaceNames = {"BLUE_CARD": "Blue Card",
 					"ENGINE_POKEDEX": "Pokedex",
-					"OLD_ROD": "Rod",
-					"GOOD_ROD": "Rod",
-					"SUPER_ROD": "Rod",
+					"OLD_ROD": "Old Rod",
+					"GOOD_ROD": "Good Rod",
+					"SUPER_ROD": "Super Rod",
 					"SILVER_WING": "Silver Wing",
 					"ITEMFINDER": "ItemFinder",
 					"COIN_CASE": "Coin Case",
@@ -260,6 +262,15 @@ class HintMessage():
 			self.item = PathToItem(self.item)
 		if self.secondary is not None:
 			self.secondary = PathToItem(self.secondary)
+
+	def flagModify(self, flags):
+		if "Progressive Rods" in flags:
+			if self.secondary == "Old Rod" or \
+				self.secondary == "Good Rod" or self.secondary == "Super Rod":
+				self.secondary = "Rod"
+			if self.item == "Old Rod" or \
+				self.item == "Good Rod" or self.item == "Super Rod":
+				self.item = "Rod"
 
 
 	def __init__(self, type, item, secondary, helpful):
@@ -467,7 +478,7 @@ class AddrObject:
 		self.map = map
 
 
-def PrepareHintMessages(addressData, hints, priorities):
+def PrepareHintMessages(addressData, hints, priorities, flags):
 	# [{"start": 1870726, "end": 1870758
 	#	 , "name": "MasterBall", "commands": 2},
 
@@ -588,6 +599,8 @@ def PrepareHintMessages(addressData, hints, priorities):
 				list_readd = None
 				break
 
+			currentHint.flagModify(flags)
+
 			success = currentHint.toMessages(addr.length, addr.commands)
 			if success:
 				useHints.append((addr, currentHint))
@@ -660,6 +673,24 @@ def removeRedundantHints(hints):
 			"Indigo Plateau", "valueTo": "Tin Tower Peak"},
 
 	]
+
+	REMOVE_DUPLICATE_LOCATION_HINTS = True
+
+	byLocationMapping = {}
+	for hint in hints:
+		if hint.type == "in" or hint.type == "somethingf":
+			if hint.secondary not in byLocationMapping:
+				byLocationMapping[hint.secondary] = []
+			byLocationMapping[hint.secondary].append(hint)
+
+	multipleInstances = list(filter(lambda x:  len(x[1])>1 ,byLocationMapping.items()))
+	for instance in multipleInstances:
+		useHint = random.choice(instance[1])
+		for h in instance[1]:
+			if h != useHint:
+				hints.remove(h)
+
+
 
 	for item in manualHintChecks:
 		typeFrom = item["typeFrom"]
@@ -754,7 +785,7 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
 	notValidReqs = ["Bicycle", "Fly", "Storm Badge",
 					 "Berry Trees", "Hidden Items", "Timed Events",
-					 "Kanto Mode"]
+					 "Kanto Mode", "7 Badges"]
 
 	doNotGiveHints = []
 
