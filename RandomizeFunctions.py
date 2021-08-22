@@ -2,7 +2,7 @@ import json
 import random
 
 def getOptionsForItemModifications():
-	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball"]
+	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope"]
 
 def checkIfReplacementsConfigured(inputFlags):
 	options = getOptionsForItemModifications()
@@ -63,7 +63,7 @@ def HandleItemReplacement(reachable, inputFlags):
 def ReplaceItem(item, replaceFile):
 	replaced = False
 	if item.isItem():
-		while item.item in replaceFile.keys():
+		while item.item in replaceFile.keys() and not replaced:
 			if item.item in replaceFile.keys():
 				replacement = replaceFile[item.item]
 				item_chance = replacement[1]
