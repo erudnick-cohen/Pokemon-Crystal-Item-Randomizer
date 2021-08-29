@@ -1,4 +1,6 @@
 import sys
+
+import RandomizeFunctions
 import RandomizerGUI
 import time
 import yaml
@@ -93,6 +95,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
+
+			HINT_LEVEL = 5
+			RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, self.settings["FlagsSet"])
 
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:

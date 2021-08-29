@@ -21,76 +21,76 @@ Location:
             - POKEMANIAC 6
             - POKEMANIAC 5
         Sublocations:
-    -
-        Name: Route 43 Max Ether
-        FileName: Route43.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Route 43
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        IsBall: Yes
-        NormalItem: MAX_ETHER
-        Code: |
-            Route43MaxEther:
-                ITEMLINE
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 43 Sludge Bomb TM
-        FileName: Route43Gate.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Route 43
-        FlagReqs:
-            - Mahogany Rockets Defeated
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        NormalItem: TM_SLUDGE_BOMB
-        Code: |
-            OfficerScript_GuardWithSludgeBomb:
-                faceplayer
-                opentext
-                checkevent EVENT_GOT_TM36_SLUDGE_BOMB
-                iftrue .GotSludgeBomb
-                writetext OfficerText_FoundTM
-                promptbutton
-                ITEMLINE
-                iffalse .NoRoomForSludgeBomb
-                setevent EVENT_GOT_TM36_SLUDGE_BOMB
-                closetext
-                end
-        Text:
-        TrainerList: 
-        Sublocations:
-        
-    -   
-        Name: Route 43 Bitter Berry
-        FileName: Route43.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList:
-        LocationReqs: Route 43
-        FlagReqs:
-            -   Fog Badge
-            -   Hive Badge
-            -   Berry Trees
-        ItemReqs:
-            -   Cut
-            -   Surf
-        FlagsSet:
-        ReachableReqs:
-        Text:
-        TrainerList:
-        NormalItem: BITTER_BERRY
-        IsBerry: Yes
-        BerryFlag: 291
-        Code: |
-          Route43FruitTree:
-              ITEMLINE
+        -
+            Name: Route 43 Max Ether
+            FileName: Route43.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 43
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            IsBall: Yes
+            NormalItem: MAX_ETHER
+            Code: |
+                Route43MaxEther:
+                    ITEMLINE
+            Text:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Route 43 Sludge Bomb TM
+            FileName: Route43Gate.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 43
+            FlagReqs:
+                - Mahogany Rockets Defeated
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_SLUDGE_BOMB
+            Code: |
+                OfficerScript_GuardWithSludgeBomb:
+                    faceplayer
+                    opentext
+                    checkevent EVENT_GOT_TM36_SLUDGE_BOMB
+                    iftrue .GotSludgeBomb
+                    writetext OfficerText_FoundTM
+                    promptbutton
+                    ITEMLINE
+                    iffalse .NoRoomForSludgeBomb
+                    setevent EVENT_GOT_TM36_SLUDGE_BOMB
+                    closetext
+                    end
+            Text:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Route 43 Bitter Berry
+            FileName: Route43.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 43
+            FlagReqs:
+                -   Fog Badge
+                -   Hive Badge
+                -   Berry Trees
+            ItemReqs:
+                -   Cut
+                -   Surf
+            FlagsSet:
+            ReachableReqs:
+            Text:
+            TrainerList:
+            NormalItem: BITTER_BERRY
+            IsBerry: Yes
+            BerryFlag: 291
+            Code: |
+              Route43FruitTree:
+                  ITEMLINE

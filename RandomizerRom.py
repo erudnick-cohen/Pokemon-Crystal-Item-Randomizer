@@ -1047,6 +1047,8 @@ def ByteToGBCCharacterByte(charr):
 		return 232
 	elif charr == "…":
 		return 117
+	elif charr == "=":
+		return 61
 	elif charr in digits:
 		return 246+digits.index(charr)
 	elif charr == "#":

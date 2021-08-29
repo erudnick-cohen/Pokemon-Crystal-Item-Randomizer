@@ -4,6 +4,38 @@ import random
 
 import LoadLocationData
 
+def ConvertHintLevelToFlags(level, flag_list):
+	if level > 0:
+		flag_list.append('Use Hints')
+
+	if level >= 1:
+		flag_list.append('Max Hints Per Item = 1')
+		flag_list.append('Barren Hints')
+		flag_list.append('Not Barren Hints')
+
+	if level >= 2:
+		flag_list.append('Require Hints')
+
+	if level >= 3:
+		flag_list.append('Trash Hints')
+		flag_list.append('In Hints')
+		#flag_list.append('TM Hints')
+
+	if level >= 4:
+		flag_list.append('Max Hints Per Item = 2')
+		flag_list.append('Useless Hints')
+
+	if level >= 5: #Dev only
+		flag_list.append('Tag Hints')
+		flag_list.append('Use Small Hints')
+		flag_list.append('Use Runout Hints')
+
+	# Whilst in development, always turn on small/runout hints
+	if True:
+		flag_list.append('Use Small Hints')
+		flag_list.append('Use Runout Hints')
+
+
 
 def getOptionsForItemModifications():
 	return ["Replace Custom", "Replace Healing", "Replace Valuable", "Replace Ball"]
@@ -228,14 +260,18 @@ def PathToItem(item):
 					"Mahogany Rockets Defeated": "Mahogany Base Clear",
 					"Beat Team Rocket": "Saving Radio Tower",
 					"Rocket Invasion": "7 Badges",
-					"Mt. Silver Unlock": "Max Badges"
+					"Mt. Silver Unlock": "Max Badges",
+					"Elm's Lab": "Elms Lab",
+					"S.S. Ticket": "SS Ticket",
+					"Became Champion": "Being Champion",
+
 					}
 
 
 	if item in replaceNames:
 		return replaceNames[item]
 	else:
-		return str(item).replace("_", " ").title()
+		return str(item).replace("_", " ").replace(" Badge","").title()
 
 class Msg:
 	text = None
@@ -371,55 +407,63 @@ class HintMessage():
 			if len(msg4.text) > 0:
 				messages.append(msg4)
 
+		while len(messages) > 0 and messages[-1].seperator is not None:
+			if len(messages[-1].text) < 0:
+				messages.remove(messages[-1])
+			else:
+				messages[-1].seperator = None
+
 		#Take messages which are too long, and combine them into previous/next messages
 		messagesTooLong = list(filter(lambda x: len(x.text)>max_length_per_message, messages))
-		for tl in messagesTooLong:
-			index = messages.index(tl)
-			previousPossible = True
-			nextPossible = True
-			if index == 0:
-				previousPossible = False
-			if index == len(messages):
-				nextPossible = False
-
-			if previousPossible:
-				wordCutLeft = tl.text.split(" ")[0]
-				previous = messages[index-1]
-				previousLength = len(previous.text)
-
-				if previousLength+len(wordCutLeft)+1 < max_length_per_message:
-					previous.text += " " + wordCutLeft
-					re.sub("^"+wordCutLeft,"",tl.text)
-				else:
+		while len(messagesTooLong) > 0:
+			for tl in messagesTooLong:
+				index = messages.index(tl)
+				previousPossible = True
+				nextPossible = True
+				if index == 0:
 					previousPossible = False
-
-			nextPossible = nextPossible and len(tl.text.split(" "))>1
-
-			if nextPossible:
-				wordCutRight = tl.text.split(" ")[-1]
-				next = messages[index-1]
-				nextLength = len(next.text)
-
-				if nextLength+len(wordCutRight)+1 < max_length_per_message:
-					next.text = wordCutRight + " " + next.text
-
-					re.sub("^"+wordCutRight,"",tl.text)
-				else:
+				if index == len(messages):
 					nextPossible = False
 
-			if not nextPossible and not previousPossible:
-				newMessage = Msg()
-				wordCutRight = tl.text.split(" ")[-1]
-				newMessage.text += wordCutRight
-				re.sub(wordCutRight + "$", "", tl.text)
+				if previousPossible:
+					wordCutLeft = tl.text.split(" ")[0]
+					previous = messages[index-1]
+					previousLength = len(previous.text)
 
-				insertAt = index
-				if index == len(messages):
-					insertAt = len(messages)
-				else:
-					newMessage.seperator = 79
+					if previousLength+len(wordCutLeft)+1 < max_length_per_message:
+						previous.text += " " + wordCutLeft
+						tl.text = re.sub("^"+wordCutLeft,"",tl.text).strip()
+					else:
+						previousPossible = False
 
-				messages.insert(insertAt, newMessage)
+				nextPossible = nextPossible and len(tl.text.split(" "))>1
+
+				if nextPossible:
+					wordCutRight = tl.text.split(" ")[-1]
+					next = messages[index-1]
+					nextLength = len(next.text)
+
+					if nextLength+len(wordCutRight)+1 < max_length_per_message:
+						next.text = wordCutRight + " " + next.text
+
+						tl.text = re.sub("^"+wordCutRight,"",tl.text).strip()
+					else:
+						nextPossible = False
+
+				if not nextPossible and not previousPossible:
+					newMessage = Msg()
+					wordCutRight = tl.text.split(" ")[-1]
+					newMessage.text += wordCutRight
+					tl.text = re.sub(wordCutRight + "$", "", tl.text).strip()
+
+					insertAt = index+1
+					if index == len(messages):
+						insertAt = len(messages)
+					else:
+						newMessage.seperator = 79
+
+					messages.insert(insertAt, newMessage)
+			messagesTooLong = list(filter(lambda x: len(x.text) > max_length_per_message, messages))
 
 
 
@@ -526,15 +570,28 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
 	priorityAddresses = []
 
 	for priority in priorities:
+		hasPossible = False
 		if len(priority.HintTypes) != 0 and priority.HintKey != "":
 			matches = list(filter(lambda x: x.type in priority.HintTypes and
 								  x.item == priority.HintKey, hints))
+			hasPossible = len(matches) > 0
 			hintOptions = list(set(hintOptions) | set(matches))
 		elif priority.HintKey == "" and len(priority.HintTypes) != 0:
 			matches = list(filter(lambda x: x.type in priority.HintTypes, hints))
+			hasPossible = len(matches) > 0
 			hintOptions = list(set(hintOptions) | set(matches))
 
-		priorityAddresses.append(priority.HintName)
+		if hasPossible:
+			priorityAddresses.append(priority.HintName)
+
+
+	DEBUG_USE_RUNOUT_MESSAGES = True
+	if 'Use Runout Hints' in flags:
+		DEBUG_USE_RUNOUT_MESSAGES = True
+
+	DEBUG_USE_TOO_SMALL_MESSAGES = True
+	if 'Use Small Hints' in flags:
+		DEBUG_USE_TOO_SMALL_MESSAGES = True
 
 	for x in hints:
 		if x not in hintOptions:
@@ -544,9 +601,10 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
 
 	for addr in validAddresses:
 		if len(hints) == 0:
-			empty = HintMessage("runout", None, None, False)
-			empty.toMessages(addr.length, addr.commands)
-			useHints.append((addr,empty))
+			if DEBUG_USE_RUNOUT_MESSAGES:
+				empty = HintMessage("runout", None, None, False)
+				empty.toMessages(addr.length, addr.commands)
+				useHints.append((addr,empty))
 			continue
 		success = False
 
@@ -617,9 +675,11 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
 			# But what to do with the extra and keep the files the same size??
 			#print("Unable to assign any remaining hints to: "+addr.name)
 			# Create a hint to say TOO SMALL for this seed
-			empty = HintMessage("small", None, None, False)
-			empty.toMessages(addr.length, addr.commands)
-			useHints.append((addr, empty))
+
+			if DEBUG_USE_TOO_SMALL_MESSAGES:
+				empty = HintMessage("small", None, None, False)
+				empty.toMessages(addr.length, addr.commands)
+				useHints.append((addr, empty))
 		if len(readd_hints_normal) > 0:
 			for i in readd_hints_normal:
 				hintLessOptions.append(i)
@@ -656,9 +716,14 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
 
 	return useHints
 
-def removeRedundantHints(hints):
+def removeRedundantHints(hints, config):
 
-	manualHintChecks = [
+	manualHintChecksBarrenUse = [
+
+		#Example
+		# If Indigo Plateau is not required, Ho-Oh is also not required
+		# Reverse if also true, if Ho-Oh is required, Indigo hint is required
+
 		{"typeFrom":"nothingl","typeTo":"nothingf","valueFrom":
 			"Rocket Base","valueTo":"Mahogany Base Clear"},
 		{"typeFrom": "nothingl", "typeTo": "nothingf", "valueFrom":
@@ -670,9 +735,18 @@ def removeRedundantHints(hints):
 		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
 			"Tin Tower", "valueTo": "Tin Tower Peak"},
 		{"typeFrom": "nothingl", "typeTo": "nothingl", "valueFrom":
-			"Indigo Plateau", "valueTo": "Tin Tower Peak"},
+			"Indigo Plateau", "valueTo": "Tin Tower Peak"}
 
 	]
+
+	redundantHMBadgeHints = [{"badge":"Zephyr","hm":"Flash"},
+						{"badge":"Hive","hm":"Cut"},
+						{"badge":"Plain","hm":"Strength"},
+						{"badge":"Fog","hm":"Surf"},
+						{"badge":"Glacier","hm":"Whirlpool"},
+						{"badge": "Rising", "hm": "Waterfall"}
+						]
+
 
 	REMOVE_DUPLICATE_LOCATION_HINTS = True
 
@@ -683,16 +757,52 @@ def removeRedundantHints(hints):
 				byLocationMapping[hint.secondary] = []
 			byLocationMapping[hint.secondary].append(hint)
 
-	multipleInstances = list(filter(lambda x:  len(x[1])>1 ,byLocationMapping.items()))
-	for instance in multipleInstances:
-		useHint = random.choice(instance[1])
-		for h in instance[1]:
-			if h != useHint:
-				hints.remove(h)
+
+	MULTIPLE_HINTS_PER_ITEM = True
+	if 'No Multiple Hints' in config:
+		MULTIPLE_HINTS_PER_ITEM = False
+
+	if not MULTIPLE_HINTS_PER_ITEM:
+		multipleInstances = list(filter(lambda x:  len(x[1])>1 ,byLocationMapping.items()))
+		for instance in multipleInstances:
+			useHint = random.choice(instance[1])
+			for h in instance[1]:
+				if h != useHint:
+					hints.remove(h)
+
+	for item in redundantHMBadgeHints:
+		itemFlag = item["badge"]
+		itemItem = item["hm"]
+		filterFlag = list(filter(lambda x: x.type == "requiresf" and x.secondary.replace(" Badge", "") == itemFlag,hints))
+		filterItem = list(filter(lambda x: x.type == "requiresi" and x.secondary == itemItem,hints))
+
+		itemCrossover = {}
+		for f in filterFlag:
+			if not f.item in itemCrossover:
+				itemCrossover[f.item] = []
+			itemCrossover[f.item].append(f.item)
+		for f in filterItem:
+			if not f.item in itemCrossover:
+				itemCrossover[f.item] = []
+			itemCrossover[f.item].append(f.item)
+
+
+		for crossover in itemCrossover.values():
+			while len(crossover) > 1:
+				deleteItem = random.choice(crossover)
+				crossover.remove(deleteItem)
+				if deleteItem in hints:
+					hints.remove(deleteItem)
 
 
 
-	for item in manualHintChecks:
+
+
+
+
+
+
+	for item in manualHintChecksBarrenUse:
 		typeFrom = item["typeFrom"]
 		typeTo = item["typeTo"]
 
@@ -718,24 +828,24 @@ def removeRedundantHints(hints):
 		elif typeTo == "nothingf":
 			typeToInvert = "somethingf"
 
-		hintFind_if_reverse = list(filter(lambda x: x.type == typeToInvert
-											and x.secondary == item["valueTo"], hints))
+		if typeToInvert is not None and typeFromInvert is not None:
+			hintFind_if_reverse = list(filter(lambda x: x.type == typeToInvert
+												and x.secondary == item["valueTo"], hints))
 
-		if len(hintFind_if_reverse) > 0:
-			hintFind_remove_reverse = list(filter(lambda x: x.type == typeFromInvert
-													and x.secondary == item["valueFrom"],
-										  hints))
-			if len(hintFind_remove_reverse) > 0:
-				hints.remove(hintFind_remove_reverse[0])
+			if len(hintFind_if_reverse) > 0:
+				hintFind_remove_reverse = list(filter(lambda x: x.type == typeFromInvert
+														and x.secondary == item["valueFrom"],
+											  hints))
+				if len(hintFind_remove_reverse) > 0:
+					hints.remove(hintFind_remove_reverse[0])
 
 
 
 
 
 def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeDict, requirementDict, config):
-	useful_hint_chance = 100
 
-	# AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)
+	# AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
 	locationList = LoadLocationData.FlattenLocationTree(locations)
 
 	known = []
@@ -785,11 +895,45 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
 	notValidReqs = ["Bicycle", "Fly", "Storm Badge",
 					 "Berry Trees", "Hidden Items", "Timed Events",
-					 "Kanto Mode", "7 Badges"]
+					 "Kanto Mode",
+					"Rocket Invasion", "Mt. Silver Unlock",
+					"Goldenrod City Entrance", "Rock Smash Purchaseable",
+					"Saved Slowpokes", "Mr. Pokemon Visited"]
 
 	doNotGiveHints = []
 
-	MAX_HINTS_PER_ITEM = 2
+	if 'Max Hints Per Item = 2' in config["FlagsSet"]:
+		MAX_HINTS_PER_ITEM = 2
+	elif 'Max Hints Per Item = 1' in config["FlagsSet"]:
+		MAX_HINTS_PER_ITEM = 1
+	else:
+		MAX_HINTS_PER_ITEM = 999
+
+	if 'In Hints' in config["FlagsSet"]:
+		USE_IN_HINTS = True
+	else:
+		USE_IN_HINTS = False
+
+	if 'Require Hints' in config["FlagsSet"]:
+		USE_REQUIRE_HINTS = True
+	else:
+		USE_REQUIRE_HINTS = False
+
+
+	if 'Barren Hints' in config["FlagsSet"]:
+		USE_BARREN_HINTS = True
+	else:
+		USE_BARREN_HINTS = False
+
+	if 'Not Barren Hints' in config["FlagsSet"]:
+		USE_NOT_BARREN_HINTS = True
+	else:
+		USE_NOT_BARREN_HINTS = False
+
+	if 'Tag Hints' in config["FlagsSet"]:
+		USE_TAG_HINTS = True
+	else:
+		USE_TAG_HINTS = False
 
 	potentiallyRequiredItems = list(spoiler.keys()).copy()
 
@@ -810,9 +954,20 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 	locationMapping = {}
 	RequiredByTag = {}
 
+	if 'Trash Hints' in config["FlagsSet"]:
+		USE_TRASH_HINTS = True
+	else:
+		USE_TRASH_HINTS = False
 
+	if 'TM Hints' in config["FlagsSet"]:
+		USE_TM_HINTS = True
+	else:
+		USE_TM_HINTS = False
 
-
+	if 'Useless Hints' in config["FlagsSet"]:
+		USELESS_TRASH_HINTS = True
+	else:
+		USELESS_TRASH_HINTS = False
 
 	#spoiler_keys = list(spoiler.keys())
 	for key in all_keys:
@@ -825,11 +980,11 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 			else:
 				uselessTrash = True
 
+			if not USE_TRASH_HINTS:
+				continue
 
-
-
-		#if key.startswith("TM_"):
-		#	continue
+		if not USE_TM_HINTS and key.startswith("TM_"):
+			continue
 
 		one_location_hints = []
 
@@ -842,7 +997,6 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 		else:
 			found_result = result[0]
 
-
 			if "Impossible" in found_result.LocationReqs:
 				continue
 
@@ -854,7 +1008,7 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 					RequiredByTag[tagName] = []
 				RequiredByTag[tagName].append(found_result)
 
-			if uselessTrash:
+			if not USELESS_TRASH_HINTS and uselessTrash:
 				continue
 
 
@@ -865,17 +1019,17 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 			#		itemToReq.append((key,ix))
 
 			for ix in found_result.ItemReqs:
-				if ix not in notValidReqs:
+				if ix not in notValidReqs and USE_REQUIRE_HINTS:
 					one_location_hints.append(HintMessage("requiresi", key, ix, True))
 
 			for ix in found_result.FlagReqs:
-				if ix not in notValidReqs:
+				if ix not in notValidReqs and USE_REQUIRE_HINTS:
 					one_location_hints.append(HintMessage("requiresf", key, ix, True))
 
 
 
 			# print(key, location_name, found_result.ItemReqs, found_result.FlagReqs)
-			if not trash:
+			if not trash and not uselessTrash:
 				for i in to_check_location:
 					mapping = [i]
 					if i in location_sim_mapping:
@@ -902,7 +1056,8 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 			unequalHintNames = []
 
 			for tag in found_result.Tags:
-				one_location_hints.append(HintMessage("attag", key, tag.Name, True))
+				if USE_TAG_HINTS:
+					one_location_hints.append(HintMessage("attag", key, tag.Name, True))
 
 			while parents is not None and len(parents) > 0:
 				parent = parents[0]
@@ -910,7 +1065,8 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 					unequalHintNames.append(parent.HintName)
 
 				for tag in parent.Tags:
-					one_location_hints.append(HintMessage("attag", key, tag.Name, True))
+					if USE_TAG_HINTS:
+						one_location_hints.append(HintMessage("attag", key, tag.Name, True))
 
 				parents = list(filter(lambda x: parent in x.Sublocations, locationList))
 
@@ -924,7 +1080,8 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
 
 
-			one_location_hints.append(HintMessage("in", key, useHintName, True))
+			if USE_IN_HINTS:
+				one_location_hints.append(HintMessage("in", key, useHintName, True))
 
 			random.shuffle(one_location_hints)
 
@@ -943,11 +1100,11 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 	requiredItems = potentiallyRequiredItems.copy()
 	for x in no_free_item:
 		if x in to_check_item:
-			if x not in doNotGiveHints:
+			if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
 				itemToReq.append(HintMessage("somethingi", None, x, True))
 			to_check_item.remove(x)
 	for i in to_check_item:
-		if i not in doNotGiveHints:
+		if i not in doNotGiveHints and USE_BARREN_HINTS:
 			itemToReq.append(HintMessage("nothingi", None, i, True))
 		notRequiredItems.append(i)
 		if i in requiredItems:
@@ -961,12 +1118,12 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 	requiredFlags = []
 	for x in no_free_flag:
 		if x in to_check_flag:
-			if x not in doNotGiveHints:
+			if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
 				itemToReq.append(HintMessage("somethingf", None, x, True))
 			to_check_flag.remove(x)
 			requiredFlags.append(x)
 	for i in to_check_flag:
-		if x not in doNotGiveHints:
+		if x not in doNotGiveHints and USE_BARREN_HINTS:
 			itemToReq.append(HintMessage("nothingf", None, i, True))
 		notRequiredFlags.append(i)
 
@@ -985,57 +1142,63 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 							flagRequired = False
 				if len(requireThis) > 0 and flagRequired:
 					handledLocations.append(x)
-					if x not in doNotGiveHints:
+					if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
 						itemToReq.append(HintMessage("somethingl", None, x, True))
 					to_check_location.remove(x)
 					requiredLocations.append(x)
 
 	for i in to_check_location:
-		itemToReq.append(HintMessage("nothingl", None, i, True))
+		if USE_BARREN_HINTS:
+			itemToReq.append(HintMessage("nothingl", None, i, True))
 
 	# For badge example, could get two items in the same gym, which would break the count
 	# How to handle this?
 	# Load gymdata differently to location???
-	matchedSubTags = []
-	for tagKey in RequiredByTag.keys():
-		tagList = RequiredByTag[tagKey]
 
-		tagCount = 0
-		for l in tagList:
-			exclude = True
-			if (hasattr(l,'badge') and l.badge is not None) or l.item in requiredItems:
-				exclude = False
-			for x in l.FlagsSet:
-				if x in requiredFlags:
+
+
+
+	if USE_TAG_HINTS:
+		matchedSubTags = []
+		for tagKey in RequiredByTag.keys():
+			tagList = RequiredByTag[tagKey]
+
+			tagCount = 0
+			for l in tagList:
+				exclude = True
+				if (hasattr(l,'badge') and l.badge is not None) or l.item in requiredItems:
 					exclude = False
-					break
-			if l.Name in requiredLocations:
-				exclude = False
-			for x in l.LocationReqs:
-				if x in requiredLocations:
+				for x in l.FlagsSet:
+					if x in requiredFlags:
+						exclude = False
+						break
+				if l.Name in requiredLocations:
 					exclude = False
+				for x in l.LocationReqs:
+					if x in requiredLocations:
+						exclude = False
 
-			new = False
-			TAGS = list(filter(lambda x: x.Name == tagKey,l.Tags))
-			if len(TAGS) != 1:
-				print("Error finding tag")
-				continue
-			relevantTag = TAGS[0]
+				new = False
+				TAGS = list(filter(lambda x: x.Name == tagKey,l.Tags))
+				if len(TAGS) != 1:
+					print("Error finding tag")
+					continue
+				relevantTag = TAGS[0]
 
-			for t in relevantTag.SubTags:
-				if t not in matchedSubTags:
+				for t in relevantTag.SubTags:
+					if t not in matchedSubTags:
+						new = True
+				if len(relevantTag.SubTags) == 0:
 					new = True
-			if len(relevantTag.SubTags) == 0:
-				new = True
 
-			if not exclude and new:
-				print("Tagdetail:",tagKey,l.Name)
-				tagCount += 1
-				for x in relevantTag.SubTags:
-					if x not in matchedSubTags:
-						matchedSubTags.append(x)
+				if not exclude and new:
+					print("Tagdetail:",tagKey,l.Name)
+					tagCount += 1
+					for x in relevantTag.SubTags:
+						if x not in matchedSubTags:
+							matchedSubTags.append(x)
 
-		itemToReq.append(HintMessage("tag", tagKey, tagCount, True))
+			itemToReq.append(HintMessage("tag", tagKey, tagCount, True))
 
 	if "Name" in config.keys():
 		itemToReq.append(HintMessage("conf", "Config", config["Name"], True))
@@ -1049,8 +1212,6 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 	#	itemToReq.append(HintMessage("conf", "Red", config["RedBadgeUnlockCount"], True))
 	#else:
 	#	itemToReq.append(HintMessage("conf", "Red", "16", True))
-
-
 
 	# Reverse lookup some key items and see which are not required
 

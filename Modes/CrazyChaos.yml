@@ -27,7 +27,6 @@ DefaultModifiers:
     - Modifiers/BerryTrees.yml
     - Modifiers/SkipE4AndFightRed.yml
 BannedLocations:
-    - Rocket Base
 AllowedLocations:
 Goal: Mt. Silver
 FlagsSet:

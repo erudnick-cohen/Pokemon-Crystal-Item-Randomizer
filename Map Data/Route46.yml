@@ -105,6 +105,7 @@ Location:
         NormalItem: PRZCUREBERRY
         IsBerry: Yes
         BerryFlag: 294
+        HintName: Route 46
         Code: |
             Route46FruitTree1:
                 ITEMLINE

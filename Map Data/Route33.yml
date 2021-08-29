@@ -28,6 +28,7 @@ Location:
         Code:
         Text:
         AREALV: 7
+        HintName: Route 33
         TrainerList: 
             - HIKER 5
         Sublocations:
