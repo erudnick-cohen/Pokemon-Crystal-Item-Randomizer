@@ -1062,6 +1062,14 @@ STATIC_TEXT_COMMAND = 0
 STATIC_LINE_COMMAND = 79
 STATIC_PARA_COMMAND = 81
 
+def WriteHideUnusedSigns(romMap, deadHints):
+	for hint in deadHints:
+		#oldTile = hint[0].originalTile
+		newTile = hint[0].newTile
+		mapData = hint[0].tileAddress
+
+		romMap[mapData] = newTile
+
 
 def WriteDescriptionsToMemory(romMap, hints):
 	for hint in hints:

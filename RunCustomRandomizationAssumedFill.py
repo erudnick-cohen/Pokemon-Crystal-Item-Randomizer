@@ -260,9 +260,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 															criticalTrash, BadgeDict, result[5].copy(), otherSettings)
 		RandomizeFunctions.removeRedundantHints(hint_desc, otherSettings["FlagsSet"])
 
-		# Use signs or items?
 		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list, flags)
+
+		dead_hints = RandomizeFunctions.getHintsToRemove(creation_data)
+
 		RandomizerRom.WriteDescriptionsToMemory(romMap,creation_data)
+		RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)
 
 
 	RandomizerRom.ApplyGamePatches(romMap,patchList)

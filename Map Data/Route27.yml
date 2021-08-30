@@ -156,7 +156,9 @@ Location:
                 LocationReqs: Tohjo Falls Over the Waterfall
                 FlagReqs:
                     - Timed Events
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 Text:
