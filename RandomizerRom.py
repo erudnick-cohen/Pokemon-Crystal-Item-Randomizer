@@ -345,8 +345,8 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		nextVal = 0
-		endVal = 0
-		nItemCode = 0
+		endVal = 176
+		nItemCode = 176
 	if(itemType == 'Item'):
 		romMap[addressData["address_range"]["begin"]+6] = nItemCode
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode

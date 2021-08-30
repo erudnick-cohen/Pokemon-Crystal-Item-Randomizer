@@ -1,0 +1,4 @@
+Name: Ruin the item pool
+Description: Ruins the item pool. The item pool will primarily consist of pieces of brick, berries, bad TMs in vanilla and the occaisional meme. Note that this setting does not work for key item rando and also note that turning on this setting means you will have basically no money for much of the game.
+FlagsSet:
+    - Replace Hope
