@@ -254,6 +254,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if 'Use Hints' in otherSettings["FlagsSet"]:
 		giveHints = True
 
+	RandomizerRom.ApplyGamePatches(romMap, patchList)
 
 	if giveHints:
 		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
@@ -268,7 +269,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)
 
 
-	RandomizerRom.ApplyGamePatches(romMap,patchList)
+
 	if "SilverBadgeUnlockCount" in otherSettings:
 		RandomizerRom.WriteOakBadgeCheckNumber(otherSettings["SilverBadgeUnlockCount"], addressData, romMap)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)

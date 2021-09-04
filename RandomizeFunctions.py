@@ -111,6 +111,7 @@ def HandleItemReplacement(reachable, inputFlags):
 
 
 def ReplaceItem(item, replaceFile):
+    replaced = False
     if item.isItem():
         while item.item in replaceFile.keys():
             if item.item in replaceFile.keys():
@@ -403,11 +404,10 @@ class HintMessage():
                 msg2.text = "x" + str(self.secondary)
             elif self.type == "conf":
                 msg1.text = self.item
-                msg2.text = "=" + str(self.secondary)
+                msg2.text = "is " + str(self.secondary)
             elif self.type == "attag":
                 msg1.text = self.item
-                msg2.text = "is"
-                msg3.text = self.secondary
+                msg2.text = "is " + self.secondary
 
             messages.append(msg1)
             messages.append(msg2)
@@ -431,7 +431,7 @@ class HintMessage():
                 nextPossible = True
                 if index == 0:
                     previousPossible = False
-                if index == len(messages):
+                if index == len(messages)-1:
                     nextPossible = False
 
                 if previousPossible:
@@ -449,13 +449,13 @@ class HintMessage():
 
                 if nextPossible:
                     wordCutRight = tl.text.split(" ")[-1]
-                    next = messages[index - 1]
+                    next = messages[index + 1]
                     nextLength = len(next.text)
 
                     if nextLength + len(wordCutRight) + 1 < max_length_per_message:
                         next.text = wordCutRight + " " + next.text
 
-                        tl.text = re.sub("^" + wordCutRight, "", tl.text).strip()
+                        tl.text = re.sub(wordCutRight+"$", "", tl.text).strip()
                     else:
                         nextPossible = False
 
@@ -617,8 +617,8 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
         if x not in hintOptions:
             hintLessOptions.append(x)
 
-    validAddresses = sorted(validAddresses, key=lambda x: x.length - (64 * int(x.name in priorityAddresses)),
-                            reverse=False)
+    validAddresses = sorted(validAddresses, key=lambda x: int(x.name in priorityAddresses),
+                            reverse=True)
 
     for addr in validAddresses:
         if len(hints) == 0:
