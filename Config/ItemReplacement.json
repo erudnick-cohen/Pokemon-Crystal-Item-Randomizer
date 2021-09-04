@@ -168,7 +168,7 @@
  { "item": "LEFTOVERS", "replacement":  "BRICK_PIECE", "type": "Hope" },
  { "item": "KINGS_ROCK", "replacement":  "BRICK_PIECE", "type": "Hope" },
  { "item": "SMOKE_BALL", "replacement":  "BRICK_PIECE", "type": "Hope" },
- { "item": "BERSEK_GENE", "replacement":  "BRICK_PIECE", "type": "Hope" },
+ { "item": "BERSERK_GENE", "replacement":  "BRICK_PIECE", "type": "Hope" },
  { "item": "KINGS_ROCK", "replacement":  "BRICK_PIECE", "type": "Hope" },
  { "item": "AMULET_COIN", "replacement":  "BRICK_PIECE", "type": "Hope" },
  { "item": "CLEANSE_TAG", "replacement":  "BRICK_PIECE", "type": "Hope" },
