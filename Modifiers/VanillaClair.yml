@@ -2,6 +2,8 @@ Name: Vanilla Clair
 Description: Causes Clair to behave as she does in vanilla, meaning that you must enter the shrine in dragon's den (and thus use whirlpool to get there) in order to access Clair's badge and TM
 NewGamePatches:
     - 'Patches/VanillaClair.json'
+AddedItems:
+    - Whirlpool
 Changes:
     -
         Location: Blackthorn City Gym Badge

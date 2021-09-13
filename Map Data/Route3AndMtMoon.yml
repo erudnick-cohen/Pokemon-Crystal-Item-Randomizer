@@ -27,3 +27,29 @@ Location:
             - FIREBREATHER 1
             - FIREBREATHER 4
         Sublocations:
+        -
+            Name: Mount Moon Square Hidden Moon Stone
+            FileName: MountMoonSquare.asm
+            SecondaryFile: MountMoonSquare.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs:
+                -   Route 3 and Mt. Moon
+            FlagReqs:
+                -   Timed Events
+                -   Goldenrod City Entrance
+                -   Rock Smash Purchaseable
+                -   Hidden Items
+            ItemReqs:
+                -   Rock Smash
+            FlagsSet:
+            NormalItem: MOON_STONE
+            ReachableReqs:
+            Code: |
+                MountMoonSquareHiddenMoonStone:
+                    ITEMLINE
+            SecondaryCode: '    bg_event  7,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone'
+            Text:
+            TrainerList:
+            Sublocations:

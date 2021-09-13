@@ -1,0 +1,4 @@
+Name: Upgrade Items - Balls
+Description: Upgrades poke balls to the Ultra, and Apricorns to their respective ball to converse bag space
+FlagsSet:
+    - Replace Ball

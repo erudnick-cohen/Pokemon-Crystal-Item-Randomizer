@@ -15,3 +15,42 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+            -
+                Name: Blackthorn City Santos
+                FileName: BlackthornCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn City
+                FlagReqs:
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SPELL_TAG
+                Code: |
+                    .MetSantos:
+                        writetext SantosGivesGiftText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .Done
+                        setevent EVENT_GOT_SPELL_TAG_FROM_SANTOS
+                        writetext SantosGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+
+                Text: |
+                    SantosGaveGiftText:
+                        text "SANTOS: …"
+
+                        para "SPELL TAG…"
+
+                        para "Ghost-type moves"
+                        line "get stronger…"
+
+                        para "It will frighten"
+                        line "you…"
+                        done
+                TrainerList:
+                Sublocations:

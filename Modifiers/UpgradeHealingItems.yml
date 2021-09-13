@@ -1,0 +1,4 @@
+Name: Upgrade Items - Healing
+Description: Upgrades healing items to the highest version to converse bag space
+FlagsSet:
+    - Replace Healing

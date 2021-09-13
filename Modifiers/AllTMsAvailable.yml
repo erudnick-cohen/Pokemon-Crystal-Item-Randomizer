@@ -1,0 +1,66 @@
+Name: All TMs available
+Description: Ensures that all 50 TMs are available. TMs that appear multiple times in the vanilla game will still have multiple copies. TMs that normally appear in shops will not have additional copies added to the item pool (other than those that already exist). All game corner TMs are added to the item pool, as they are way too expensive and slow to get normally. Note that this is relative to the checks available under your current settings, thus TM03 for example might be both in the item pool and also available at night in Celadon. 
+NewItems:
+    - TM_PSYCH_UP
+    - TM_HYPER_BEAM
+    - TM_BLIZZARD
+    - TM_THUNDER
+    - TM_DOUBLE_TEAM
+    - TM_FIRE_BLAST
+
+MaybeNewItems:
+    - TM_RETURN
+    - TM_FRUSTRATION
+    - TM_CURSE
+
+DontReplace:
+    - TM_DYNAMICPUNCH
+    - TM_HEADBUTT
+    - TM_CURSE
+    - TM_ROLLOUT
+    - TM_ROAR
+    - TM_TOXIC
+    - TM_ZAP_CANNON
+    - TM_ROCK_SMASH
+    - TM_PSYCH_UP
+    - TM_HIDDEN_POWER
+    - TM_SUNNY_DAY
+    - TM_SWEET_SCENT
+    - TM_SNORE
+    - TM_BLIZZARD
+    - TM_HYPER_BEAM
+    - TM_ICY_WIND
+    - TM_PROTECT
+    - TM_RAIN_DANCE
+    - TM_GIGA_DRAIN
+    - TM_ENDURE
+    - TM_FRUSTRATION
+    - TM_SOLARBEAM
+    - TM_IRON_TAIL
+    - TM_DRAGONBREATH
+    - TM_THUNDER
+    - TM_EARTHQUAKE
+    - TM_RETURN
+    - TM_DIG
+    - TM_PSYCHIC
+    - TM_SHADOW_BALL
+    - TM_MUD_SLAP
+    - TM_DOUBLE_TEAM
+    - TM_ICE_PUNCH
+    - TM_SWAGGER
+    - TM_SLEEP_TALK
+    - TM_SLUDGE_BOMB
+    - TM_SANDSTORM
+    - TM_FIRE_BLAST
+    - TM_SWIFT
+    - TM_DEFENSE_CURL
+    - TM_THUNDERPUNCH
+    - TM_DREAM_EATER
+    - TM_DETECT
+    - TM_REST
+    - TM_ATTRACT
+    - TM_THIEF
+    - TM_STEEL_WING
+    - TM_FIRE_PUNCH
+    - TM_FURY_CUTTER
+    - TM_NIGHTMARE

@@ -43,3 +43,44 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -   
+                Name: Pewter City Ice Berry
+                FileName: PewterCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter City
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: ICE_BERRY
+                IsBerry: Yes
+                BerryFlag: 283
+                Code: |
+                  PewterCityFruitTree1:
+                      ITEMLINE
+            -   
+                Name: Pewter City Mint Berry
+                FileName: PewterCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter City
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: MINT_BERRY
+                IsBerry: Yes
+                BerryFlag: 284
+                Code: |
+                  PewterCityFruitTree2:
+                      ITEMLINE
+          

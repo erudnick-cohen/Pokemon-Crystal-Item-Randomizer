@@ -1,0 +1,12 @@
+Name: No Double Dipping - Route 25
+Description: "Add logic to prevent going to Route 25 before having access to all the items available from there"
+Changes:
+    -
+        Location: Route 25
+        AddItemReqs:
+            - Machine Part
+            - Cut
+            - Surf
+        AddFlagReqs:
+            - Hive Badge
+            - Fog Badge

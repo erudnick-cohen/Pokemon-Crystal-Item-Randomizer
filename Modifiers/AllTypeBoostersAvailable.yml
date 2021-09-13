@@ -1,0 +1,33 @@
+Name: All type boosting items available
+Description: Ensures that all items which boost the power of a certain type's moves are present in the item pool. 
+NewItems:
+    - SILVERPOWDER
+    - TWISTEDSPOON
+
+MaybeNewItems:
+    - POISON_BARB
+    - SHARP_BEAK
+    - MAGNET
+    - HARD_STONE
+    - BLACKBELT
+    - SPELL_TAG
+
+DontReplace:
+    - MAGNET
+    - METAL_COAT
+    - MIRACLE_SEED
+    - MYSTIC_WATER
+    - NEVERMELTICE
+    - PINK_BOW
+    - SHARP_BEAK
+    - SILVERPOWDER
+    - SOFT_SAND
+    - TWISTEDSPOON
+    - HARD_STONE
+    - DRAGON_FANG
+    - BLACKGLASSES
+    - BLACKBELT
+    - CHARCOAL
+    - SPELL_TAG
+    - POISON_BARB
+

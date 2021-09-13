@@ -109,3 +109,26 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                
+            -   
+                Name: Route 35 MysteryBerry
+                FileName: Route35.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 35
+                FlagReqs:
+                    -   Fog Badge
+                    -   Berry Trees
+                ItemReqs:
+                    -   Surf
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: MYSTERYBERRY
+                IsBerry: Yes
+                BerryFlag: 287
+                Code: |
+                  Route35FruitTree:
+                      ITEMLINE

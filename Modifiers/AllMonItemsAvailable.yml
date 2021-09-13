@@ -1,0 +1,16 @@
+Name: All Pokemon boosting items available
+Description: Ensures that all items which boost the power of a specific pokemon (Stick, Metal Powder, Lucky Punch, Light Ball, Thick Club) are in the item pool
+NewItems:
+    - STICK
+    - METAL_POWDER
+    - LUCKY_PUNCH
+    - LIGHT_BALL
+    - THICK_CLUB
+
+DontReplace:
+    - STICK
+    - METAL_POWDER
+    - LUCKY_PUNCH
+    - LIGHT_BALL
+    - THICK_CLUB
+

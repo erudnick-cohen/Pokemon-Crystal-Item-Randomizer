@@ -32,6 +32,18 @@ def ResetRomForLabelling():
 			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
 	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
 	shutil.copy("Files with manual labels/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
+
+def WriteOakBadgeCheckNumber(number, addressData, gameFile):
+	#get where this is
+	start = addressData['ckir_BEFORE_OAK_BADGES_CHECK']["address_range"]["begin"]
+	#Change oak to a greater than check so that the game isn't unwinnable. This value is usually 10, unless it gets changed.
+	gameFile[start] = 10
+	#gameFile[start] = [int(s) for s in addressData['ckir_BEFORE_OAK_BADGES_CHECK']["integer_values"].split(' ')][0]
+	#Write number. Badge count is 2nd value from start. Minus one because its greater than
+	gameFile[start+1] = number-1
+
+
+
 def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonus = 0, maxLevel = 100):
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")
@@ -148,6 +160,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 				#we don't bother with having restrictions on these, as in general these pokemon are potentially missable
 				newmon = mon
 				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
+
 
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
@@ -274,6 +287,34 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			newBallByte = int(fullNibble,2)
 			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
+	elif location.IsBerry:
+		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
+		addressDataNPC = labelData[labelCodeBNPC]
+
+
+		# need to extract the nibble out
+		# print(list(map(int, addressDataNPC["integer_values"].split(' '))))
+		# print(addressDataNPC["integer_values"].split(' '))
+		flag_bytes = location.BerryFlag.to_bytes(2, 'little')
+		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
+		# form full binary expression
+		fullByte = (10 - len(combobyte)) * '0' + combobyte[2:]
+		# split it into two nibbles
+		nb1 = fullByte[0:4]
+		nb2 = fullByte[4:8]
+		# now generate the correct nibble for the object type
+		nibbleBall = bin(commandBall)
+		# print(nibbleBall)
+		fullNibble = nb1 + ((6 - len(combobyte)) * '0' + nibbleBall[2:])
+		# print(fullNibble)
+		newBallByte = int(fullNibble, 2)
+		# print(newBallByte)
+		romMap[addressDataNPC["address_range"]["begin"] + 7] = newBallByte
+		romMap[addressDataNPC["address_range"]["begin"] + 11] = flag_bytes[0]
+		romMap[addressDataNPC["address_range"]["begin"] + 12] = flag_bytes[1]
+		romMap[addressData["address_range"]["begin"]] = nItemCode
+		romMap[addressData["address_range"]["begin"] + 1] = endVal
 	else:
 		#this converts giveitem commands into verbose giveitem (conveniently the same size!!)
 		romMap[addressData["address_range"]["begin"]] = commandVerbose
@@ -304,8 +345,8 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		nextVal = 0
-		endVal = 0
-		nItemCode = 0
+		endVal = 176
+		nItemCode = 176
 	if(itemType == 'Item'):
 		romMap[addressData["address_range"]["begin"]+6] = nItemCode
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
@@ -589,7 +630,7 @@ def LabelItemLocation(location):
 		oldcode = re.findall(coderegexstr,filecode)[0]
 	
 	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
-	if location.IsBall:
+	if location.IsBall or location.IsBerry:
 		#find the code on the line BEFORE the one we need to modify
 		#fortunately, we have these lines already labeled, we need them to label something else
 		commandregexstr = "(\w+):"
@@ -607,7 +648,7 @@ def LabelItemLocation(location):
 		newcode = newcode.replace("    ","\t")
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
-		if(location.IsBall):
+		if(location.IsBall or location.IsBerry):
 			newfile = newfile.replace(npcSearch,labelCodeBNPC+npcSearch+labelCodeANPC)
 	else:
 		labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
@@ -655,7 +696,7 @@ def LabelItemLocation(location):
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
 			oldcode = re.findall(coderegexstr,filecode)[0]
 		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually 
-		if location.IsBall:
+		if location.IsBall or location.IsBerry:
 			#find the code on the line BEFORE the one we need to modify
 			#fortunately, we have these lines already labeled, we need them to label something else
 			commandregexstr = "(\w+):"

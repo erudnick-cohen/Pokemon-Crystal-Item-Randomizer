@@ -1,0 +1,7 @@
+Name: No Double Dipping - Power Plant
+Description: "Add logic to prevent going to the Power Plant before having the Machine Part"
+Changes:
+    -
+        Location: Power Plant
+        AddItemReqs:
+            - Machine Part

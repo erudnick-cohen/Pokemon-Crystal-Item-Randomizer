@@ -1,0 +1,14 @@
+[
+    {
+        "integer_values": {
+            "old": [19],
+            "new": [100]
+        },
+        "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "TMHMMoves.ckir_BEFORE_FLYHMDATA",
+        "description": "Replaces Fly with Teleport"
+    }
+]

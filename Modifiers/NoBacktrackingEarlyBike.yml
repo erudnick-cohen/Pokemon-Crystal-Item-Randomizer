@@ -3,133 +3,116 @@ Description: Ensures that the bike is available before the player would pass sud
 Changes:
     -
         Location: Hidden Items Locked
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Route 37
-        NewItemReqs:
-            - Squirtbottle
+        AddItemReqs:
             - Bicycle
     -
         Location: Route 37 via Route 36 Sudowoodo Junction
-        NewItemReqs:
-            - Squirtbottle
+        AddItemReqs:
             - Bicycle
     -
         Location: Saffron City via Magnet Train
-        NewItemReqs:
-            - Pass
+        AddItemReqs:
             - Bicycle
     -
         Location: Route 31 Kenya Item
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Dark Cave Violet Potion
-        NewItemReqs:
+        AddItemReqs:
             - Flash
             - Bicycle
     -
         Location: Mr. Pokemon's EXP Share
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Red Scale
     -
         Location: Mystic Water Man
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Elm Aide Pokeballs
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Mystery Egg
     -
-        Location: Master Ball
-        NewItemReqs:
+        Location: Elm Master Ball
+        AddItemReqs:
             - Bicycle
     -
         Location: Violet City Rare Candy
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Violet City PP UP
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
-        Location: Roar Dude
-        NewItemReqs:
+        Location: Route 32 Roar Dude
+        AddItemReqs:
             - Bicycle
-            - Cut
     -
         Location: Miracle Seed Man
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Route 27
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Union Cave Floor 3
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Slowpoke Well Floor 2
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
-            - Strength
     -
-        Location: Soft Sand
-        NewItemReqs:
+        Location: Soft Sand Girls
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Route 34 Nugget
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
     -
         Location: Kenya Gate Item
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Goldenrod Tunnel
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Basement Key
     -
         Location: Ruins of Alph Light Chamber
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
-            - Flash
     -
         Location: Ruins of Alph Water Chamber
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
-            - Surf
-            - Strength
     -
-        Location: Goldenrod City Flower Shop
-        NewItemReqs:
+        Location: Flower Shop
+        AddItemReqs:
             - Bicycle
     -
         Location: Goldenrod City Buy Rock Smash
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Radio Tower Rockets Part 1
-        NewItemReqs:
+        AddItemReqs:
             - Bicycle
     -
         Location: Radio Tower Rockets Part 2
-        NewItemReqs:
-            - Card Key
+        AddItemReqs:
+            - Bicycle
+    -
+        Location: Route 29 Tuscany
+        AddItemReqs:
             - Bicycle
 
 

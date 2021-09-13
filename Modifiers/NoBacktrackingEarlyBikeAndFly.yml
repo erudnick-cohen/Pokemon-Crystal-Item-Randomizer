@@ -71,7 +71,7 @@ Changes:
             - Fly
             - Mystery Egg
     -
-        Location: Master Ball
+        Location: Elm Master Ball
         NewFlagReqs:
             - Storm Badge
             - Rising Badge
@@ -98,7 +98,7 @@ Changes:
             - Fly
             - Surf
     -
-        Location: Roar Dude
+        Location: Route 32 Roar Dude
         NewFlagReqs:
             - Storm Badge
             - Hive Badge
@@ -144,7 +144,7 @@ Changes:
             - Surf
             - Strength
     -
-        Location: Soft Sand
+        Location: Soft Sand Girls
         NewFlagReqs:
             - Storm Badge
             - Fog Badge
@@ -199,9 +199,10 @@ Changes:
             - Surf
             - Strength
     -
-        Location: Goldenrod City Flower Shop
+        Location: Flower Shop
         NewFlagReqs:
             - Storm Badge
+            - Plain Badge
         NewItemReqs:
             - Bicycle
             - Fly
@@ -222,11 +223,16 @@ Changes:
             - Bicycle
     -
         Location: Radio Tower Rockets Part 2
-        NewFlagReqs:
-            - Rocket Invasion
+        AddFlagReqs:
             - Storm Badge
-        NewItemReqs:
-            - Card Key
+        AddItemReqs:
             - Bicycle
+            - Fly
 
-
+    -
+        Location: Route 29 Tuscany
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Bicycle
+            - Fly

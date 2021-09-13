@@ -15,6 +15,7 @@ from collections import OrderedDict
 import traceback
 import hashlib
 import csv
+import os
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -40,6 +41,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
 		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
 		self.AddItem.clicked.connect(self.AddBonusItem)
+		self.View_Items.clicked.connect(self.RemoveBonusItem)
+		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
+
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
 			reader = csv.reader(csvfile)
@@ -49,13 +53,16 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					#self.ItemList.addItem(i[0])
 
 	def runRandomizer(self):
+		os.environ['PYTHONHASHSEED'] = '0'#this needs to be reproducible! so this can't be random!
 		rngSeed = str(time.time())
 		random.seed(rngSeed)
 		rngSeed = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
 		if(self.SeedInput.text() != ''):
 			rngSeed = self.SeedInput.text()
 		rngSeedBytes = rngSeed.encode('utf-8')
-		random.seed(int(hashlib.md5(rngSeedBytes).hexdigest(),16))
+		rSeed = int(hashlib.md5(rngSeedBytes).hexdigest(),16)
+		print('numeric seed is: '+str(rSeed))
+		random.seed(rSeed)
 		_translate = QtCore.QCoreApplication.translate
 		yamlfile = open(self.settings['BasePatch'])
 		yamltext = yamlfile.read()
@@ -69,27 +76,39 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			QtGui.QGuiApplication.processEvents()
 			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.2 Rom as the base rom, or your game WILL crash.')
 			validFileName = False
+
+			base_dir = ""
+			for i in range(0, len(self.romPath.split("/"))-1):
+				if base_dir != "":
+					base_dir+="/"
+				base_dir += self.romPath.split("/")[i]
+
 			while not validFileName:
-				file = QFileDialog.getSaveFileName(directory = '.')[0]
+				file = QFileDialog.getSaveFileName(directory = base_dir)[0]
 				if file != '':
 					validFileName = True
 				else:
 					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
 			randomizedFileName = file
-			copyfile(self.romPath, randomizedFileName+'.gbc')
+
+			if not randomizedFileName.endswith(".gbc"):
+				randomizedFileName+=".gbc"
+
+			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
 				f.write(rngSeed)
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName+'.gbc',self.settings['Goal'], self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
 				outputSpoiler = {}
@@ -106,15 +125,44 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog.showMessage(''.join(traceback.format_exc()))
 			error_dialog.exec_()
 
+	def SetBadgeForSilver(self):
+		(nBadge, ok2) = QInputDialog.getInt(self,"How many badges will Mt. Silver unlock with?","How many badges will Mt. Silver unlock with?")
+		if nBadge <= 16 and ok2:
+			self.settings["SilverBadgeUnlockCount"] = nBadge
+			_translate = QtCore.QCoreApplication.translate
+			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(nBadge)+")"))
+			QtGui.QGuiApplication.processEvents()
+		elif ok2:
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage("There are only 16 badges in Pokemon Crystal! You can't require more, or your game will not be completable!")
+			error_dialog.exec_()
+
 	def AddBonusItem(self):
 		(addedItem, ok1) = QInputDialog.getItem(self, "Select item you wish to add to the pool", "Select item you wish to add to the pool", self.itemsList, 0, False)
-		(nAdded, ok2) = QInputDialog.getInt(self,"Add how many?","Add how many?")
+		if ok1:
+			(nAdded, ok2) = QInputDialog.getInt(self,"Add how many?","Add how many?")
 		if not ('BonusItems' in self.settings):
 			self.settings['BonusItems'] = []
 		if ok1 and ok2:
 			for i in range(0,nAdded):
 				self.settings['BonusItems'].append(addedItem)
 		print(self.settings)
+
+	def RemoveBonusItem(self):
+		if 'BonusItems' in self.settings and len(self.settings['BonusItems']) > 0:
+			self.settings['BonusItems'] = []
+			if ('BonusItems' in self.settings): 
+				(addedItem, ok1) = QInputDialog.getItem(self, r"View/Remove Items in pool", "Select any item you wish to remove, or cancel to remove nothing", self.settings['BonusItems'], 0, False)
+			if ok1:
+				(nAdded, ok2) = QInputDialog.getInt(self,"Remove how many?","Remove how many?")
+			if not ('BonusItems' in self.settings):
+				self.settings['BonusItems'] = []
+			if ok1 and ok2:
+				for i in range(0,nAdded):
+					if addedItem in self.settings['BonusItems']:
+						self.settings['BonusItems'].remove(addedItem)
+		print(self.settings)
+
 
 	def selectRom(self):
 		_translate = QtCore.QCoreApplication.translate
@@ -171,7 +219,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))
 		self.CurrentGoal.setText(_translate("MainWindow", settings['Goal']))
-
+		if "SilverBadgeUnlockCount" in self.settings:
+			_translate = QtCore.QCoreApplication.translate
+			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(self.settings["SilverBadgeUnlockCount"])+")"))
+			QtGui.QGuiApplication.processEvents()
+			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
 		if(fName != ''):
@@ -194,8 +246,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				print(spoiler['Solution'][i])
 				newSpoiler[spoiler['Solution'][i]] = i
 			print(newSpoiler)
-			for i in spoiler['Useless Stuff']:
-				newSpoiler[i] = spoiler['Useless Stuff'][i]
+			if 'Useless Stuff' in spoiler:
+				for i in spoiler['Useless Stuff']:
+					newSpoiler[i] = spoiler['Useless Stuff'][i]
 			self.PlandoData = newSpoiler
 			self.PlandoMode = True
 			self.TurnOffPlando.setEnabled(True)
@@ -232,6 +285,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog.showMessage('A file was not selected!')
 			error_dialog.exec_()
 def main():
+	os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 	app = QApplication(sys.argv)
 	form = RunWindow()
 	form.show()

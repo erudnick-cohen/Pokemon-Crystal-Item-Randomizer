@@ -32,3 +32,57 @@ Location:
                 Code: |
                     Route29Potion:
                         ITEMLINE
+            -
+                Name: Route 29 Berry
+                FileName: Route29.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 29
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BERRY
+                IsBerry: Yes
+                BerryFlag: 272
+                Code: |
+                    Route29FruitTree:
+                        ITEMLINE
+            -
+                Name: Route 29 Tuscany
+                FileName: Route29.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 29
+                FlagReqs:
+                    - Zephyr Badge
+                    - Timed Events
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PINK_BOW
+                Code: |
+                    .MetTuscany:
+                        writetext TuscanyGivesGiftText
+                        promptbutton
+                        ITEMLINE
+                        iffalse TuscanyDoneScript
+                        setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
+                        writetext TuscanyGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+
+                Text: |
+                    .TuscanyGivesGiftText:
+                        text "By way of intro-"
+                        line "duction, please"
+
+                        para "accept this gift,"
+                        line "a PINK BOW."
+                        done
