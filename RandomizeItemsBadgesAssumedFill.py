@@ -464,6 +464,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	changes = RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
 
+
 	for change in changes.keys():
 		if change in trashSpoiler:
 			trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]

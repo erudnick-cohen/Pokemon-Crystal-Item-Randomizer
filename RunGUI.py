@@ -96,8 +96,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
 
-			HINT_LEVEL = 5
-			RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, self.settings["FlagsSet"])
+			HINT_LEVEL = 3
+			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL)
 
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
@@ -105,14 +105,36 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
+									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'],
+									 otherSettings = self.settings, plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
+									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings,
+									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
+									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
+									 coreProgress = self.settings['CoreProgress'], otherSettings = self.settings,
+									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
+									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
+									 otherSettings = self.settings, plandoPlacements = self.PlandoData,
+									 hintConfig = HintOptions)
 
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):

@@ -5,10 +5,9 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Olivine City
+        LocationReqs: Lighthouse Amphy
         FlagReqs:
         ItemReqs:
-            - Secret Potion
         FlagsSet:
         ReachableReqs:
         Code:

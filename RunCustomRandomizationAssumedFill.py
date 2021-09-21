@@ -14,7 +14,12 @@ import copy
 import traceback
 import random
 
-def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}, bonusTrash = []):
+def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
+				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
+				 wildLVBoost = 0,
+				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
+				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
+				 otherSettings = {}, bonusTrash = [],hintConfig=None):
 	print('required items are')
 	print(requiredItems)
 	requiredItemsCopy = copy.copy(requiredItems)
@@ -249,24 +254,22 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
-
-	giveHints = True
-	if 'Use Hints' in otherSettings["FlagsSet"]:
-		giveHints = True
-
 	RandomizerRom.ApplyGamePatches(romMap, patchList)
 
-	if giveHints:
-		hint_desc = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
-															criticalTrash, BadgeDict, result[5].copy(), otherSettings)
-		RandomizeFunctions.removeRedundantHints(hint_desc, otherSettings["FlagsSet"])
 
-		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list, flags)
+	if hintConfig is not None and hintConfig.UseHints:
+		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
+															criticalTrash, BadgeDict, result[5].copy(), otherSettings,
+															hintConfig)
+		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig)
 
-		dead_hints = RandomizeFunctions.getHintsToRemove(creation_data)
+		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list, flags, hintConfig,
+															   locationList)
 
-		RandomizerRom.WriteDescriptionsToMemory(romMap,creation_data)
-		RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)
+		RandomizerRom.WriteDescriptionsToMemory(romMap, creation_data)
+		if hintConfig.HideSigns:
+			dead_hints = RandomizeFunctions.getHintsToRemove(creation_data, hintConfig)
+			RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)
 
 
 

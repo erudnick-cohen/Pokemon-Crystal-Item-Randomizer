@@ -4,8 +4,112 @@ import random
 
 import LoadLocationData
 
+class HintOptions:
+    UseHints = False
+    MaximumHints = 0
+    MaxHintsPerItem = 0
 
-def getHintsToRemove(hintData):
+    BarrenHints = False
+    NotBarrenHints = False
+    RequireHints = False
+    InHints = False
+    TagHints = False
+    TrashHints = False
+    UselessHints = False
+    TMHints = False
+
+    NoMultipleHints = True
+    UselessHintChance = 0.3
+
+    HideSigns = True
+    IgnoreChamber = True
+    IgnorePoster = True
+
+
+    def __init__(self):
+        self.UseHints = False
+
+    #SmallHints = True
+    #RunoutHints = True
+
+def fileToLocation(file):
+    if "Town" in file:
+        file = file.replace("Town"," Town")
+
+    if "City" in file:
+        file = file.replace("City", " City")
+
+    if "Island" in file:
+        file = file.replace("Island", " Island")
+
+    if ".asm" in file:
+        file = file.replace(".asm", "")
+
+    if "DeptStore" in file:
+        file = file.replace("DeptStore", " City")
+
+    for i in range (1, 7):
+        floorFile = str(i)+"F"
+        if floorFile in file:
+            file = file.replace(floorFile, "")
+
+    if "Route" in file:
+        file = file.replace("Route", "Route ")
+
+    if "CeladonMansion" in file:
+        file = file.replace("CeladonMansion", "Celadon City")
+
+    if "DragonsDenB" in file:
+        file = file.replace("DragonsDenB", "Dragons Den")
+
+    if "FightingDojo" in file:
+        file = file.replace("FightingDojo", "Saffron City")
+
+    if "LakeOfRage" in file:
+        file = file.replace("LakeOfRage", "Lake Of Rage")
+
+    if "LavRadioTower" in file:
+        file = file.replace("LavRadioTower", "Lavender Town")
+
+    if "RadioTower" in file:
+        file = file.replace("RadioTower", "Radio Tower")
+
+    if "NationalPark" in file:
+        file = file.replace("NationalPark", "National Park")
+
+    if "BugContest" in file:
+        file = file.replace("BugContest", "")
+
+    if "NewBark" in file:
+        file = file.replace("NewBark", "New Bark")
+
+    if "PokemonFanClub" in file:
+        file = file.replace("PokemonFanClub", "Vermillion City")
+
+    if "South" in file:
+        file = file.replace("South", "")
+
+    if "North" in file:
+        file = file.replace("North", "")
+
+    if "RuinsOfAlph" in file:
+        file = "Ruins of Alph"
+
+    if "SilverCaveOutside" in file:
+        file = "Mt Silver"
+
+    if "MountMoonSquare" in file:
+        file = "Mt. Moon"
+
+    if "Forest" in file:
+        file = file.replace("Forest", " Forest")
+
+
+
+    return file
+
+
+def getHintsToRemove(hintData, hintOptions):
     deadHints = []
     for hint in hintData:
         if (hint[1].type == "runout" or hint[1].type == "small") \
@@ -17,37 +121,39 @@ def getHintsToRemove(hintData):
     return deadHints
 
 
-def ConvertHintLevelToFlags(level, flag_list):
-    if level > 0:
-        flag_list.append('Use Hints')
+
+def ConvertHintLevelToFlags(level):
+    Options = HintOptions()
+    if level == 0:
+        Options.UseHints = False
 
     if level >= 1:
-        flag_list.append('Max Hints Per Item = 1')
-        flag_list.append('Barren Hints')
-        flag_list.append('Not Barren Hints')
+        Options.MaximumHints = 50
+        Options.UseHints = True
+        Options.MaxHintsPerItem = 1
+        Options.BarrenHints = True
+        Options.NotBarrenHints = True
 
     if level >= 2:
-        flag_list.append('Require Hints')
+        Options.RequireHints = True
 
     if level >= 3:
         # flag_list.append('Trash Hints')
-        flag_list.append('In Hints')
+        Options.MaximumHints = 100
+        Options.InHints = True
+        Options.TrashHints = True
     # flag_list.append('TM Hints')
 
     if level >= 4:
-        flag_list.append('Max Hints Per Item = 2')
+        Options.MaximumHints = 200
+        Options.MaxHintsPerItem = 2
+        Options.UselessHints = True
     # flag_list.append('Useless Hints')
 
     if level >= 5:  # Dev only
-        flag_list.append('Tag Hints')
-        flag_list.append('Use Small Hints')
-        flag_list.append('Use Runout Hints')
+        Options.TagHints = True
 
-    # Whilst in development, always turn on small/runout hints
-    if True:
-        flag_list.append('Use Small Hints')
-        flag_list.append('Use Runout Hints')
-
+    return Options
 
 def getOptionsForItemModifications():
 	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope"]
@@ -357,12 +463,12 @@ class HintMessage():
 
             if self.type == "somethingi":
                 msg2.text = self.secondary + "."
-                msg.text = "A hero has"
+                msg.text = "A champ has"
             elif self.type == "somethingf":
-                msg.text = "Heroes do"
+                msg.text = "Champs do"
                 msg2.text = self.secondary + "."
             elif self.type == "somethingl":
-                msg.text = "Heroes go to"
+                msg.text = "Champs go to"
                 msg2.text = self.secondary + "."
             elif self.type == "nothingl":
                 msg2.text = "is barren."
@@ -386,12 +492,12 @@ class HintMessage():
             msg4 = Msg()
 
             if self.type == "requiresf":
-                msg1.text = "A hero requires"
+                msg1.text = "A champ requires"
                 msg2.text = self.secondary
                 msg3.text = "to access "
                 msg4.text = self.item
             elif self.type == "requiresi":
-                msg1.text = "A hero requires"
+                msg1.text = "A champ requires"
                 msg2.text = self.secondary
                 msg3.text = "to access"
                 msg4.text = self.item
@@ -465,6 +571,9 @@ class HintMessage():
                     newMessage.text += wordCutRight
                     tl.text = re.sub(wordCutRight + "$", "", tl.text).strip()
 
+                    if tl.seperator is None:
+                        tl.seperator = 79
+
                     insertAt = index + 1
                     if index == len(messages):
                         insertAt = len(messages)
@@ -520,6 +629,7 @@ class AddrObject:
     originalTile = None
     newTile = None
     tileAddress = None
+    locationRef = None
 
     def __init__(self, item, start, end, commands, name, map,
                  originalTile=None, newTile=None, tileAddress=None):
@@ -537,7 +647,33 @@ class AddrObject:
             self.tileAddress = tileAddress
 
 
-def PrepareHintMessages(addressData, hints, priorities, flags):
+def dropMessageLocation(locationList, currentHint, addr):
+
+    # In future versions, these will be more in-depth with complex logic handling
+
+    relevant = list(filter(lambda x: x.Name == addr.locationRef, locationList))
+    if len(relevant) == 1:
+        relevant = relevant[0]
+    else:
+        return False
+
+    for x in relevant.FlagReqs:
+        if currentHint.type == "in" and currentHint.item == x:
+            return True
+
+    for x in relevant.ItemReqs:
+        if currentHint.type == "in" and currentHint.item == x:
+            return True
+
+    for x in relevant.LocationReqs:
+        if currentHint.item == x or currentHint.secondary == x:
+            return True
+
+
+    return False
+
+
+def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locationList):
     # [{"start": 1870726, "end": 1870758
     #	 , "name": "MasterBall", "commands": 2},
 
@@ -545,14 +681,34 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
     for address in addressData.keys():
         addObj = addressData[address]
 
+        if hintConfig.IgnoreChamber and re.match(r".*ChamberDescription.*",addObj["name"]):
+            continue
+
+        if hintConfig.IgnorePoster and \
+                (re.match(r".*RadioTower.F.*", addObj["name"]) or
+                 re.match(r".*DeptStore.F.*", addObj["name"]) or
+                 re.match(r".*MansionManagersSuite.F.*", addObj["name"]) or
+                 re.match(r"..*Mansion.F.*", addObj["name"])
+                ):
+            continue
+
+        reference = fileToLocation(addObj["map"].split("/")[-1])
+
+        toAddObject = None
+
         if 'originalTile' in addObj and 'newTile' in addObj and \
                 'tileAddress' in addObj:
-            addObjects.append(
-                AddrObject(address, addObj["start"], addObj["end"], addObj["commands"], addObj["name"], addObj["map"], \
-                           addObj["originalTile"], addObj["newTile"], addObj["tileAddress"]))
+            toAddObject = AddrObject(address, addObj["start"], addObj["end"], addObj["commands"], addObj["name"], addObj["map"], \
+                           addObj["originalTile"], addObj["newTile"], addObj["tileAddress"])
         else:
-            addObjects.append(
-                AddrObject(address, addObj["start"], addObj["end"], addObj["commands"], addObj["name"], addObj["map"]))
+            toAddObject = AddrObject(address, addObj["start"], addObj["end"], addObj["commands"], addObj["name"], addObj["map"])
+
+        if toAddObject is not None:
+
+            toAddObject.locationRef = reference
+            addObjects.append(toAddObject)
+
+
 
     # avItems = []
     # for x in available:
@@ -605,13 +761,6 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
         if hasPossible:
             priorityAddresses.append(priority.HintName)
 
-    DEBUG_USE_RUNOUT_MESSAGES = True
-    if 'Use Runout Hints' in flags:
-        DEBUG_USE_RUNOUT_MESSAGES = True
-
-    DEBUG_USE_TOO_SMALL_MESSAGES = True
-    if 'Use Small Hints' in flags:
-        DEBUG_USE_TOO_SMALL_MESSAGES = True
 
     for x in hints:
         if x not in hintOptions:
@@ -620,12 +769,13 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
     validAddresses = sorted(validAddresses, key=lambda x: int(x.name in priorityAddresses),
                             reverse=True)
 
+    hintsWritten = 0
+
     for addr in validAddresses:
-        if len(hints) == 0:
-            if DEBUG_USE_RUNOUT_MESSAGES:
-                empty = HintMessage("runout", None, None, False)
-                empty.toMessages(addr.length, addr.commands)
-                useHints.append((addr, empty))
+        if len(hints) == 0 or hintsWritten >= hintConfig.MaximumHints:
+            empty = HintMessage("runout", None, None, False)
+            empty.toMessages(addr.length, addr.commands)
+            useHints.append((addr, empty))
             continue
         success = False
 
@@ -678,9 +828,16 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
 
             currentHint.flagModify(flags)
 
-            success = currentHint.toMessages(addr.length, addr.commands)
+            drop = dropMessageLocation(locationList, currentHint, addr)
+
+            if not drop:
+                success = currentHint.toMessages(addr.length, addr.commands)
+            else:
+                success = False
+
             if success:
                 useHints.append((addr, currentHint))
+                hintsWritten += 1
                 if hintItem:
                     priorityAddresses.remove(addr.name)
 
@@ -693,10 +850,9 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
             # print("Unable to assign any remaining hints to: "+addr.name)
             # Create a hint to say TOO SMALL for this seed
 
-            if DEBUG_USE_TOO_SMALL_MESSAGES:
-                empty = HintMessage("small", None, None, False)
-                empty.toMessages(addr.length, addr.commands)
-                useHints.append((addr, empty))
+            empty = HintMessage("small", None, None, False)
+            empty.toMessages(addr.length, addr.commands)
+            useHints.append((addr, empty))
         if len(readd_hints_normal) > 0:
             for i in readd_hints_normal:
                 hintLessOptions.append(i)
@@ -734,7 +890,7 @@ def PrepareHintMessages(addressData, hints, priorities, flags):
     return useHints
 
 
-def removeRedundantHints(hints, config):
+def removeRedundantHints(hints, hintConfig):
     manualHintChecksBarrenUse = [
 
         # Example
@@ -773,11 +929,8 @@ def removeRedundantHints(hints, config):
                 byLocationMapping[hint.secondary] = []
             byLocationMapping[hint.secondary].append(hint)
 
-    MULTIPLE_HINTS_PER_ITEM = True
-    if 'No Multiple Hints' in config:
-        MULTIPLE_HINTS_PER_ITEM = False
 
-    if not MULTIPLE_HINTS_PER_ITEM:
+    if not hintConfig.NoMultipleHints:
         multipleInstances = list(filter(lambda x: len(x[1]) > 1, byLocationMapping.items()))
         for instance in multipleInstances:
             useHint = random.choice(instance[1])
@@ -847,11 +1000,42 @@ def removeRedundantHints(hints, config):
                     hints.remove(hintFind_remove_reverse[0])
 
 
-def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeDict, requirementDict, config):
+
+def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=[], requiredLocations=[]):
+    if x not in locationMapping:
+        print("Error, location should be in mapping")
+        return True
+
+    requireThis = list(
+        filter(lambda a: (hasattr(a, 'badge') and a.badge is not None) or a.item not in notRequiredItems,
+               locationMapping[x]))
+    required = len(requireThis) > 0
+    for l in requireThis:
+        for m in l.FlagReqs:
+            if m in notRequiredFlags:
+                required = False
+
+        for x in l.LocationReqs:
+            if x in requiredLocations:
+                required = False
+
+    return required
+
+def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict, requirementDict, config, HintOptions):
     # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
     locationList = LoadLocationData.FlattenLocationTree(locations)
 
     known = []
+
+
+    trashItems = {}
+    for sp in spoilerTrash.keys():
+        item = spoilerTrash[sp]
+        if "->" in item:
+            trashItems[sp] = item.split("->")[1]
+        else:
+            trashItems[sp] = item
+
     for location in locationList:
 
         addedLoc, addedFlag, addedItem = IterateRequirements(location, locationList, known, partial_known=[])
@@ -884,7 +1068,7 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
     no_free_locations = []
 
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Power Plant", "Beat Team Rocket"]
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"]
     no_free_flag = []
 
     to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
@@ -905,41 +1089,41 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
     doNotGiveHints = []
 
-    if 'Max Hints Per Item = 2' in config["FlagsSet"]:
-        MAX_HINTS_PER_ITEM = 2
-    elif 'Max Hints Per Item = 1' in config["FlagsSet"]:
-        MAX_HINTS_PER_ITEM = 1
-    else:
-        MAX_HINTS_PER_ITEM = 999
-
-    if 'In Hints' in config["FlagsSet"]:
-        USE_IN_HINTS = True
-    else:
-        USE_IN_HINTS = False
-
-    if 'Require Hints' in config["FlagsSet"]:
-        USE_REQUIRE_HINTS = True
-    else:
-        USE_REQUIRE_HINTS = False
-
-    if 'Barren Hints' in config["FlagsSet"]:
-        USE_BARREN_HINTS = True
-    else:
-        USE_BARREN_HINTS = False
-
-    if 'Not Barren Hints' in config["FlagsSet"]:
-        USE_NOT_BARREN_HINTS = True
-    else:
-        USE_NOT_BARREN_HINTS = False
-
-    if 'Tag Hints' in config["FlagsSet"]:
-        USE_TAG_HINTS = True
-    else:
-        USE_TAG_HINTS = False
+    # if 'Max Hints Per Item = 2' in config["FlagsSet"]:
+    #     MAX_HINTS_PER_ITEM = 2
+    # elif 'Max Hints Per Item = 1' in config["FlagsSet"]:
+    #     MAX_HINTS_PER_ITEM = 1
+    # else:
+    #     MAX_HINTS_PER_ITEM = 999
+    #
+    # if 'In Hints' in config["FlagsSet"]:
+    #     USE_IN_HINTS = True
+    # else:
+    #     USE_IN_HINTS = False
+    #
+    # if 'Require Hints' in config["FlagsSet"]:
+    #     USE_REQUIRE_HINTS = True
+    # else:
+    #     USE_REQUIRE_HINTS = False
+    #
+    # if 'Barren Hints' in config["FlagsSet"]:
+    #     USE_BARREN_HINTS = True
+    # else:
+    #     USE_BARREN_HINTS = False
+    #
+    # if 'Not Barren Hints' in config["FlagsSet"]:
+    #     USE_NOT_BARREN_HINTS = True
+    # else:
+    #     USE_NOT_BARREN_HINTS = False
+    #
+    # if 'Tag Hints' in config["FlagsSet"]:
+    #     USE_TAG_HINTS = True
+    # else:
+    #     USE_TAG_HINTS = False
 
     potentiallyRequiredItems = list(spoiler.keys()).copy()
 
-    inverse_trash = {v: k for k, v in trashSpoiler.items()}
+    inverse_trash = {v: k for k, v in trashItems.items()}
     for i in inverse_trash.keys():
         spoiler[i] = inverse_trash[i]
 
@@ -954,22 +1138,26 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
     requiredKeys.extend(list(badgeDict.keys()))
 
     locationMapping = {}
+    itemMapping = {}
+    flagMapping = {}
+
+
     RequiredByTag = {}
 
-    if 'Trash Hints' in config["FlagsSet"]:
-        USE_TRASH_HINTS = True
-    else:
-        USE_TRASH_HINTS = False
-
-    if 'TM Hints' in config["FlagsSet"]:
-        USE_TM_HINTS = True
-    else:
-        USE_TM_HINTS = False
-
-    if 'Useless Hints' in config["FlagsSet"]:
-        USELESS_TRASH_HINTS = True
-    else:
-        USELESS_TRASH_HINTS = False
+    # if 'Trash Hints' in config["FlagsSet"]:
+    #     USE_TRASH_HINTS = True
+    # else:
+    #     USE_TRASH_HINTS = False
+    #
+    # if 'TM Hints' in config["FlagsSet"]:
+    #     USE_TM_HINTS = True
+    # else:
+    #     USE_TM_HINTS = False
+    #
+    # if 'Useless Hints' in config["FlagsSet"]:
+    #     USELESS_TRASH_HINTS = True
+    # else:
+    #     USELESS_TRASH_HINTS = False
 
     # spoiler_keys = list(spoiler.keys())
     for key in all_keys:
@@ -982,10 +1170,10 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
             else:
                 uselessTrash = True
 
-            if not USE_TRASH_HINTS:
+            if not HintOptions.TrashHints:
                 continue
 
-        if not USE_TM_HINTS and key.startswith("TM_"):
+        if not HintOptions.TMHints and key.startswith("TM_"):
             continue
 
         one_location_hints = []
@@ -1008,7 +1196,9 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
                     RequiredByTag[tagName] = []
                 RequiredByTag[tagName].append(found_result)
 
-            if not USELESS_TRASH_HINTS and uselessTrash:
+            if not HintOptions.UselessHints and uselessTrash:
+                continue
+            elif uselessTrash and random.randrange(0, 100, 1) >= (HintOptions.UselessHintChance*100):
                 continue
 
             # for ix in found_result.LocationReqs:
@@ -1016,11 +1206,11 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
             #		itemToReq.append((key,ix))
 
             for ix in found_result.ItemReqs:
-                if ix not in notValidReqs and USE_REQUIRE_HINTS:
+                if ix not in notValidReqs and HintOptions.RequireHints:
                     one_location_hints.append(HintMessage("requiresi", key, ix, True))
 
             for ix in found_result.FlagReqs:
-                if ix not in notValidReqs and USE_REQUIRE_HINTS:
+                if ix not in notValidReqs and HintOptions.RequireHints:
                     one_location_hints.append(HintMessage("requiresf", key, ix, True))
 
             # print(key, location_name, found_result.ItemReqs, found_result.FlagReqs)
@@ -1037,11 +1227,20 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
                             no_free_locations.append(i)  # Maybe M?
                 for i in to_check_flag:
                     if i in found_result.FlagReqs:
+                        if i not in flagMapping:
+                            flagMapping[i] = []
+                        flagMapping[i].append(found_result)
                         no_free_flag.append(i)
                     if found_result.FlagReqs is not None and i in found_result.FlagsSet:
+                        if i not in flagMapping:
+                            flagMapping[i] = []
+                        flagMapping[i].append(found_result)
                         no_free_flag.append(i)
                 for i in to_check_item:
                     if i in found_result.ItemReqs:
+                        if i not in itemMapping:
+                            itemMapping[i] = []
+                        itemMapping[i].append(found_result)
                         no_free_item.append(i)
 
             parent = found_result
@@ -1049,7 +1248,7 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
             unequalHintNames = []
 
             for tag in found_result.Tags:
-                if USE_TAG_HINTS:
+                if HintOptions.TagHints:
                     one_location_hints.append(HintMessage("attag", key, tag.Name, True))
 
             while parents is not None and len(parents) > 0:
@@ -1058,7 +1257,7 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
                     unequalHintNames.append(parent.HintName)
 
                 for tag in parent.Tags:
-                    if USE_TAG_HINTS:
+                    if HintOptions.TagHints:
                         one_location_hints.append(HintMessage("attag", key, tag.Name, True))
 
                 parents = list(filter(lambda x: parent in x.Sublocations, locationList))
@@ -1070,13 +1269,13 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
             else:
                 useHintName = unequalHintNames[0]
 
-            if USE_IN_HINTS:
+            if HintOptions.InHints:
                 one_location_hints.append(HintMessage("in", key, useHintName, True))
 
             random.shuffle(one_location_hints)
 
             added = 0
-            while added < MAX_HINTS_PER_ITEM and len(one_location_hints) > 0:
+            while added < HintOptions.MaxHintsPerItem and len(one_location_hints) > 0:
                 item_hint = one_location_hints.pop(0)
                 itemToReq.append(item_hint)
 
@@ -1084,86 +1283,127 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
     # print("Mostly parent of:",key,"is",parent.HintName)
 
+    # Known bug - location areas below have extra logic to check if required
+    # So Tin Tower can say barren
+    # But Rainbow Wing, etc will not
+    # Would apply to any set
+
+    maybeRequiredItems = []
+
     notRequiredItems = []
-    requiredItems = potentiallyRequiredItems.copy()
+    #requiredItems = potentiallyRequiredItems.copy()
+    requiredItems = []
     for x in no_free_item:
         if x in to_check_item:
-            if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
-                itemToReq.append(HintMessage("somethingi", None, x, True))
+            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            maybeRequiredItems.append(x)
+                #itemToReq.append(HintMessage("somethingi", None, x, True))
             to_check_item.remove(x)
     for i in to_check_item:
-        if i not in doNotGiveHints and USE_BARREN_HINTS:
+        if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingi", None, i, True))
         notRequiredItems.append(i)
-        if i in requiredItems:
-            requiredItems.remove(i)
+        #if i in requiredItems:
+            #requiredItems.remove(i)
+
+    for x in maybeRequiredItems:
+        required = isRequired(x, itemMapping,notRequiredItems)
+        if required:
+            if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+                itemToReq.append(HintMessage("somethingi", None, x, True))
+            requiredItems.append(x)
+        else:
+            if x not in doNotGiveHints and HintOptions.BarrenHints:
+                itemToReq.append(HintMessage("nothingi", None, x, True))
+            notRequiredItems.append(x)
+
 
     print(notRequiredItems)
 
     handledLocations = []
 
+    maybeRequiredFlags = []
     notRequiredFlags = []
     requiredFlags = []
     for x in no_free_flag:
         if x in to_check_flag:
-            if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
-                itemToReq.append(HintMessage("somethingf", None, x, True))
+            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            maybeRequiredFlags.append(x)
+            #itemToReq.append(HintMessage("somethingf", None, x, True))
             to_check_flag.remove(x)
-            requiredFlags.append(x)
+            #requiredFlags.append(x)
     for i in to_check_flag:
-        if x not in doNotGiveHints and USE_BARREN_HINTS:
+        if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingf", None, i, True))
         notRequiredFlags.append(i)
 
+    print(notRequiredFlags)
+
+    for x in maybeRequiredFlags:
+        flagRequired = isRequired(x, flagMapping, notRequiredItems, notRequiredFlags)
+        if flagRequired:
+            if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+                itemToReq.append(HintMessage("somethingf", None, x, True))
+            requiredFlags.append(x)
+        else:
+            if x not in doNotGiveHints and HintOptions.BarrenHints:
+                itemToReq.append(HintMessage("nothingf", None, x, True))
+            notRequiredFlags.append(x)
+
     requiredLocations = []
-    notRequiredLocations = []
     for x in no_free_locations:
         if x in to_check_location and x not in handledLocations:
             if x not in locationMapping:
                 print("Error, location should be in mapping")
             else:
-                requireThis = list(
-                    filter(lambda a: (hasattr(a, 'badge') and a.badge is not None) or a.item not in notRequiredItems,
-                           locationMapping[x]))
-                flagRequired = True
-                for l in requireThis:
-                    for m in l.FlagReqs:
-                        if m in notRequiredFlags:
-                            flagRequired = False
-                if len(requireThis) > 0 and flagRequired:
+                # requireThis = list(
+                #     filter(lambda a: (hasattr(a, 'badge') and a.badge is not None) or a.item not in notRequiredItems,
+                #            locationMapping[x]))
+                # flagRequired = True
+                # for l in requireThis:
+                #     for m in l.FlagReqs:
+                #         if m in notRequiredFlags:
+                #             flagRequired = False
+                flagRequired = isRequired(x, locationMapping, notRequiredItems, notRequiredFlags)
+                if flagRequired:
                     handledLocations.append(x)
-                    if x not in doNotGiveHints and USE_NOT_BARREN_HINTS:
+
+                    if x not in doNotGiveHints and HintOptions.NotBarrenHints:
                         itemToReq.append(HintMessage("somethingl", None, x, True))
                     to_check_location.remove(x)
                     requiredLocations.append(x)
 
+
+
     for i in to_check_location:
-        if USE_BARREN_HINTS:
+        if HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingl", None, i, True))
 
     # For badge example, could get two items in the same gym, which would break the count
     # How to handle this?
     # Load gymdata differently to location???
 
-    if USE_TAG_HINTS:
+    if HintOptions.TagHints:
         matchedSubTags = []
         for tagKey in RequiredByTag.keys():
             tagList = RequiredByTag[tagKey]
 
             tagCount = 0
             for l in tagList:
-                exclude = True
-                if (hasattr(l, 'badge') and l.badge is not None) or l.item in requiredItems:
-                    exclude = False
-                for x in l.FlagsSet:
-                    if x in requiredFlags:
-                        exclude = False
-                        break
-                if l.Name in requiredLocations:
-                    exclude = False
-                for x in l.LocationReqs:
-                    if x in requiredLocations:
-                        exclude = False
+                # exclude = True
+                # if (hasattr(l, 'badge') and l.badge is not None) or l.item in requiredItems:
+                #     exclude = False
+                # for x in l.FlagsSet:
+                #     if x in requiredFlags:
+                #         exclude = False
+                #         break
+                # if l.Name in requiredLocations:
+                #     exclude = False
+                # for x in l.LocationReqs:
+                #     if x in requiredLocations:
+                #         exclude = False
+
+                exclude = isRequired("", {"":l}, notRequiredItems, notRequiredFlags, requiredLocations)
 
                 new = False
                 TAGS = list(filter(lambda x: x.Name == tagKey, l.Tags))
@@ -1202,4 +1442,4 @@ def GenerateHintMessages(spoiler, trashSpoiler, locations, criticalTrash, badgeD
 
     # Reverse lookup some key items and see which are not required
 
-    return itemToReq
+    return itemToReq, locationList
