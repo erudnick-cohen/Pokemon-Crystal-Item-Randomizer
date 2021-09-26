@@ -1,14 +1,14 @@
 [
     {
         "integer_values": {
-            "old": [6, 14, 13, 7, 0, 255, 255, 128, 0, 3, 70, 98, 7],
-            "new": [6, 14, 13, 7, 0, 255, 255, 128, 0, 3, 70, 200, 6]
+            "old": [51, 79, 7],
+            "new": [50, 98, 7]
         },
         "address_range": {
-            "begin": 1623631,
-            "end": 1623644
+            "begin": 1684724,
+            "end": 1684727
         },
-        "label": "SilverCaveRoom3_MapEvents.ckir_BEFORE_object_event_RED",
-        "description": "Causes red to always be present at mt. silver, without needing to defeat the E4"
+        "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",
+        "description": "Causes red to be present at mt. silver by talking to Oak with enough badges, without needing to defeat the E4"
     }
 ]

@@ -26,6 +26,6 @@ DefaultModifiers:
 
 BannedLocations:
 AllowedLocations:
-Goal: Mt. Silver
+Goal: Red
 FlagsSet:
     - Kanto Mode

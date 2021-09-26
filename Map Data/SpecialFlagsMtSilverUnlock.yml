@@ -1,0 +1,266 @@
+Location:
+    -
+        Name: Mt. Silver Unlock
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Mt. Silver Unlock Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock A
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock B
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock C
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock D
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock E
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Entrance
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Mt. Silver Unlock Sure Why Not
+        FlagReqs:
+            - Explicit Checking
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock A
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Pallet Town
+            - Woke Snorlax
+        FlagReqs:
+            - All Badges
+            - Zephyr Badge
+            - Hive Badge
+            - Plain Badge
+            - Fog Badge
+            - Glacier Badge
+            - Rising Badge
+        ItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Secret Potion
+            - Card Key
+            - Squirtbottle
+            - Pass
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock B
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Pallet Town
+            - Woke Snorlax
+        FlagReqs:
+            - All Badges
+            - Zephyr Badge
+            - Hive Badge
+            - Plain Badge
+            - Fog Badge
+            - Glacier Badge
+            - Rising Badge
+        ItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Secret Potion
+            - Card Key
+            - Squirtbottle
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock C
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Pallet Town
+            - Woke Snorlax
+        FlagReqs:
+            - All Badges
+            - Zephyr Badge
+            - Hive Badge
+            - Plain Badge
+            - Fog Badge
+            - Glacier Badge
+            - Rising Badge
+        ItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Secret Potion
+            - Card Key
+            - Pass
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock D
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Pallet Town
+            - Woke Snorlax
+        FlagReqs:
+            - All Badges
+            - Item Badge Shuffle
+            - Zephyr Badge
+            - Hive Badge
+            - Plain Badge
+            - Fog Badge
+            - Glacier Badge
+            - Rising Badge
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock E
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - League Gate
+        FlagReqs:
+            - Open Mt. Silver
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mt. Silver Unlock Sure Why Not
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+        FlagReqs:
+            - Explicit Checking
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+        

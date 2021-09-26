@@ -45,7 +45,9 @@ Oak:
 .OpenMtSilver:
 	writetext OakOpenMtSilverText
 	promptbutton
+.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER::
 	setevent EVENT_OPENED_MT_SILVER
+.ckir_AFTER_setevent_EVENT_OPENED_MT_SILVER::
 	sjump .CheckPokedex
 	
 .OpenMtSilverEarlyKanto:

@@ -4,6 +4,5 @@ NewGamePatches:
     - 'Patches/RedWithoutE4.json'
 Changes:
     -
-        Location: Mt. Silver
-        NewFlagReqs:
-            - Mt. Silver Unlock
+        Location: Red
+        NewFlagReqs: []

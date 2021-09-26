@@ -1,0 +1,10 @@
+Name: Open Mt. Silver
+Description: Allows the player to access Route 28 and Mt. Silver as soon as they can access the Victory Road Gate
+NewGamePatches:
+    - 'Patches/OpenMtSilver.json'
+FlagsSet:
+    - Open Mt. Silver
+Changes:
+    -
+        Location: Open Mt. Silver
+        NewFlagReqs: []

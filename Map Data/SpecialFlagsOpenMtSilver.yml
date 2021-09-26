@@ -1,0 +1,17 @@
+Location:
+    -
+        Name: Open Mt. Silver
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
