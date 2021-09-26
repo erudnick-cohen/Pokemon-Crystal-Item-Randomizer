@@ -253,7 +253,6 @@ Location:
                 FlagReqs:
                     - Hidden Items
                     - Hive Badge
-                    - Timed Events
                 ItemReqs:
                     - Cut
                 FlagsSet:
