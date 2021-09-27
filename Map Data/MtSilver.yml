@@ -131,7 +131,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Ultra Ball
+                Name: Mt. Silver 1F Ultra Ball
                 FileName: SilverCaveRoom1.asm
                 Type: Item
                 HasPKMN: No
@@ -231,7 +231,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Other Ultra Ball
+                Name: Mt. Silver 2F Ultra Ball
                 FileName: SilverCaveRoom2.asm
                 Type: Item
                 HasPKMN: No
@@ -261,8 +261,12 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
                     - Zephyr Badge
                 ItemReqs:
+                    - Surf
+                    - Waterfall
                     - Flash
                 FlagsSet:
                 ReachableReqs:

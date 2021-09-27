@@ -14,7 +14,7 @@
 	{
         "integer_values": {
             "old": [50, 98, 7],
-            "new": [51, 79, 7]
+            "new": [51, 0, 6]
         },
         "address_range": {
             "begin": 1578110,
