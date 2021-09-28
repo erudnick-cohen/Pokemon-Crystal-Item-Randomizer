@@ -96,8 +96,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
 
-			HINT_LEVEL = 3
-			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL)
+			HINT_LEVEL = 1
+			MAX_HINTS = None
+			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
 
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:

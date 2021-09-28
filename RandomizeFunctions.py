@@ -4,10 +4,34 @@ import random
 
 import LoadLocationData
 
+def SpecialBytesConversion(text, safe, hintConfig):
+
+    conversions = {"Badge":"📛",
+                   "times":"❌"}
+    inv_conversions = {v: k for k, v in conversions.items()}
+
+    if safe:
+        conversions = inv_conversions
+
+    for conversion in conversions.items():
+        key = conversion[0]
+        replacement = conversion[1]
+
+        if hintConfig is not None and key == "Badge" and not hintConfig.BadgeIcon:
+            continue
+
+        if key in text:
+            text = text.replace(key, replacement)
+
+
+    return text
+
+
 class HintOptions:
     UseHints = False
     MaximumHints = 0
     MaxHintsPerItem = 0
+    MaxHintsPerLocation = 1
 
     BarrenHints = False
     NotBarrenHints = False
@@ -19,11 +43,14 @@ class HintOptions:
     TMHints = False
 
     NoMultipleHints = True
-    UselessHintChance = 0.3
+    UselessHintChance = 0
 
     HideSigns = True
     IgnoreChamber = True
     IgnorePoster = True
+    WriteXSigns = False
+    BadgeIcon = False
+    PriorityHintsOnly = False
 
 
     def __init__(self):
@@ -122,36 +149,48 @@ def getHintsToRemove(hintData, hintOptions):
 
 
 
-def ConvertHintLevelToFlags(level):
+def ConvertHintLevelToFlags(level, MaxHints=None):
     Options = HintOptions()
     if level == 0:
         Options.UseHints = False
 
     if level >= 1:
-        Options.MaximumHints = 50
+        Options.MaxHintsPerLocation = 1
         Options.UseHints = True
-        Options.MaxHintsPerItem = 1
         Options.BarrenHints = True
         Options.NotBarrenHints = True
+        Options.PriorityHintsOnly = True
+        Options.MaximumHints = 20
+        Options.MaxHintsPerItem = 1
 
     if level >= 2:
-        Options.RequireHints = True
+        Options.PriorityHintsOnly = False
+        Options.MaximumHints = 50
 
     if level >= 3:
-        # flag_list.append('Trash Hints')
-        Options.MaximumHints = 100
-        Options.InHints = True
-        Options.TrashHints = True
-    # flag_list.append('TM Hints')
+        Options.RequireHints = True
 
     if level >= 4:
+        Options.InHints = True
+        Options.MaximumHints = 100
+        Options.TrashHints = True
+
+    if level >= 5:
+        Options.MaxHintsPerLocation = 99
+    # flag_list.append('TM Hints')
+
+    if level >= 6:
         Options.MaximumHints = 200
         Options.MaxHintsPerItem = 2
         Options.UselessHints = True
+        Options.UselessHintChance = 0.5
     # flag_list.append('Useless Hints')
 
-    if level >= 5:  # Dev only
+    if level >= 7:  # Dev only
         Options.TagHints = True
+
+    if MaxHints is not None:
+        Options.MaximumHints = MaxHints
 
     return Options
 
@@ -387,7 +426,7 @@ def PathToItem(item):
     if item in replaceNames:
         return replaceNames[item]
     else:
-        return str(item).replace("_", " ").replace(" Badge", "").title()
+        return str(item).replace("_", " ").title()
 
 
 class Msg:
@@ -440,7 +479,7 @@ class HintMessage():
     def __str__(self):
         return str(self.item) + " " + str(self.type) + " " + str(self.secondary)
 
-    def toMessages(self, length, parts):
+    def toMessages(self, length, parts=0, hintConfig=None):
         max_length_per_message = 17
 
         messages = []
@@ -507,7 +546,7 @@ class HintMessage():
                 msg3.text = self.secondary
             elif self.type == "tag":
                 msg1.text = self.item
-                msg2.text = "x" + str(self.secondary)
+                msg2.text = "times " + str(self.secondary)
             elif self.type == "conf":
                 msg1.text = self.item
                 msg2.text = "is " + str(self.secondary)
@@ -527,6 +566,9 @@ class HintMessage():
                 messages.remove(messages[-1])
             else:
                 messages[-1].seperator = None
+
+        for message in messages:
+            message.text = SpecialBytesConversion(message.text, safe=False, hintConfig=hintConfig)
 
         # Take messages which are too long, and combine them into previous/next messages
         messagesTooLong = list(filter(lambda x: len(x.text) > max_length_per_message, messages))
@@ -647,9 +689,17 @@ class AddrObject:
             self.tileAddress = tileAddress
 
 
-def dropMessageLocation(locationList, currentHint, addr):
+def dropMessageLocation(locationList, currentHint, addr, hintConfig, hintMapping):
+
+    if addr.locationRef in hintMapping:
+        current_count = hintMapping[addr.locationRef]
+        if current_count >= hintConfig.MaxHintsPerLocation:
+            return True
+
 
     # In future versions, these will be more in-depth with complex logic handling
+
+
 
     relevant = list(filter(lambda x: x.Name == addr.locationRef, locationList))
     if len(relevant) == 1:
@@ -687,8 +737,15 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
         if hintConfig.IgnorePoster and \
                 (re.match(r".*RadioTower.F.*", addObj["name"]) or
                  re.match(r".*DeptStore.F.*", addObj["name"]) or
-                 re.match(r".*MansionManagersSuite.F.*", addObj["name"]) or
-                 re.match(r"..*Mansion.F.*", addObj["name"])
+                 re.match(r".*MansionManagersSuite.*", addObj["name"]) or
+                 re.match(r".*Mansion\dF.*", addObj["name"]) or
+                 re.match(r".*FanClub.+SignText", addObj["name"]) or
+                 re.match(r".*FightingDojo.*\d.*", addObj["name"]) or
+                 re.match(r".*TrainerHouse.*\d.*", addObj["name"])
+
+                    #TrainerHouseSign1Text
+                    #FightingDojoSign1Text
+                    #CeladonMansionManagersSuiteSignText
                 ):
             continue
 
@@ -746,6 +803,8 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
 
     priorityAddresses = []
 
+    hintMapping = {}
+
     for priority in priorities:
         hasPossible = False
         if len(priority.HintTypes) != 0 and priority.HintKey != "":
@@ -802,6 +861,8 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
                     hintOptions.remove(currentHint)
                     hintItem = True
 
+            skip = False
+
             if hintItem:
                 hints.remove(currentHint)
                 list_readd = readd_hints_priority
@@ -828,10 +889,13 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
 
             currentHint.flagModify(flags)
 
-            drop = dropMessageLocation(locationList, currentHint, addr)
+            if hintConfig.PriorityHintsOnly and not hintItem:
+                drop = True
+            else:
+                drop = dropMessageLocation(locationList, currentHint, addr, hintConfig, hintMapping)
 
             if not drop:
-                success = currentHint.toMessages(addr.length, addr.commands)
+                success = currentHint.toMessages(addr.length, addr.commands, hintConfig=hintConfig)
             else:
                 success = False
 
@@ -840,6 +904,9 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
                 hintsWritten += 1
                 if hintItem:
                     priorityAddresses.remove(addr.name)
+                if addr.locationRef not in hintMapping:
+                    hintMapping[addr.locationRef] = 0
+                hintMapping[addr.locationRef] +=1
 
             else:
                 list_readd.append(currentHint)
@@ -875,12 +942,13 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
             message += m.text.strip() + " "
 
         hintdetail = str(hintAddr.item) + " " + str(message)
-        hintlog.write(hintdetail + "\n")
+        hint_safe = SpecialBytesConversion(hintdetail, safe=True, hintConfig=hintConfig)
+        hintlog.write(hint_safe + "\n")
 
     hintlog.close()
 
     for unusedHint in hints:
-        success = unusedHint.toMessages(100, 5)
+        success = unusedHint.toMessages(100, 5, hintConfig)
         message = ""
         for m in unusedHint.messages:
             message += m.text.strip() + " "
@@ -890,7 +958,7 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
     return useHints
 
 
-def removeRedundantHints(hints, hintConfig):
+def removeRedundantHints(hints, hintConfig, locationData):
     manualHintChecksBarrenUse = [
 
         # Example
@@ -923,11 +991,30 @@ def removeRedundantHints(hints, hintConfig):
     REMOVE_DUPLICATE_LOCATION_HINTS = True
 
     byLocationMapping = {}
+    hintsToRemove = []
     for hint in hints:
+        if hint.type == "nothingl":
+            hintLocation = list(filter(lambda x: x.Name == hint.secondary, locationData))
+            if len(hintLocation) == 1:
+                flags = hintLocation[0].FlagReqs
+                if 'Mt. Silver Unlock' in flags:
+                    hintsToRemove.append(hint)
+                    continue
+                if 'Impossible' in flags:
+                    hintsToRemove.append(hint)
+                    continue
+
         if hint.type == "in" or hint.type == "somethingf":
             if hint.secondary not in byLocationMapping:
                 byLocationMapping[hint.secondary] = []
             byLocationMapping[hint.secondary].append(hint)
+
+    for hint in hintsToRemove:
+        hints.remove(hint)
+
+
+
+
 
 
     if not hintConfig.NoMultipleHints:
@@ -942,7 +1029,7 @@ def removeRedundantHints(hints, hintConfig):
         itemFlag = item["badge"]
         itemItem = item["hm"]
         filterFlag = list(
-            filter(lambda x: x.type == "requiresf" and x.secondary.replace(" Badge", "") == itemFlag, hints))
+            filter(lambda x: x.type == "requiresf" and x.secondary == itemFlag, hints))
         filterItem = list(filter(lambda x: x.type == "requiresi" and x.secondary == itemItem, hints))
 
         itemCrossover = {}
@@ -998,6 +1085,8 @@ def removeRedundantHints(hints, hintConfig):
                                                       hints))
                 if len(hintFind_remove_reverse) > 0:
                     hints.remove(hintFind_remove_reverse[0])
+
+
 
 
 
@@ -1074,7 +1163,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
                      "Secret Potion", "Basement Key", "Lost Item",
                      "Cut", "Surf", "Red Scale", "Mystery Egg", "Machine Part",
-                     "Card Key", "Rainbow Wing"]
+                     "Card Key", "Rainbow Wing", "Clear Bell"]
 
     no_free_item = []
 
@@ -1085,52 +1174,25 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                     "Kanto Mode",
                     "Rocket Invasion", "Mt. Silver Unlock",
                     "Goldenrod City Entrance", "Rock Smash Purchaseable",
-                    "Saved Slowpokes", "Mr. Pokemon Visited"]
+                    "Saved Slowpokes", "Mr. Pokemon Visited", "All Badges", "Surf",
+                    "Strength", "Flash", "Cut", "Whirlpool", "Waterfall",
+                    "Defeat Electrodes"]
 
     doNotGiveHints = []
 
-    # if 'Max Hints Per Item = 2' in config["FlagsSet"]:
-    #     MAX_HINTS_PER_ITEM = 2
-    # elif 'Max Hints Per Item = 1' in config["FlagsSet"]:
-    #     MAX_HINTS_PER_ITEM = 1
-    # else:
-    #     MAX_HINTS_PER_ITEM = 999
-    #
-    # if 'In Hints' in config["FlagsSet"]:
-    #     USE_IN_HINTS = True
-    # else:
-    #     USE_IN_HINTS = False
-    #
-    # if 'Require Hints' in config["FlagsSet"]:
-    #     USE_REQUIRE_HINTS = True
-    # else:
-    #     USE_REQUIRE_HINTS = False
-    #
-    # if 'Barren Hints' in config["FlagsSet"]:
-    #     USE_BARREN_HINTS = True
-    # else:
-    #     USE_BARREN_HINTS = False
-    #
-    # if 'Not Barren Hints' in config["FlagsSet"]:
-    #     USE_NOT_BARREN_HINTS = True
-    # else:
-    #     USE_NOT_BARREN_HINTS = False
-    #
-    # if 'Tag Hints' in config["FlagsSet"]:
-    #     USE_TAG_HINTS = True
-    # else:
-    #     USE_TAG_HINTS = False
+    discardedItems = []
+    for item in to_check_item:
+        if item not in spoiler:
+            discardedItems.append(item)
+
+    for discard in discardedItems:
+        to_check_item.remove(discard)
 
     potentiallyRequiredItems = list(spoiler.keys()).copy()
 
     inverse_trash = {v: k for k, v in trashItems.items()}
     for i in inverse_trash.keys():
         spoiler[i] = inverse_trash[i]
-
-    # for cTrash in criticalTrash:
-    #	if cTrash in inverse_trash:
-    #		cLocation = inverse_trash[cTrash]
-    #		spoiler[cTrash] = cLocation
 
     all_keys = list(spoiler.keys()).copy()
 
@@ -1144,22 +1206,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     RequiredByTag = {}
 
-    # if 'Trash Hints' in config["FlagsSet"]:
-    #     USE_TRASH_HINTS = True
-    # else:
-    #     USE_TRASH_HINTS = False
-    #
-    # if 'TM Hints' in config["FlagsSet"]:
-    #     USE_TM_HINTS = True
-    # else:
-    #     USE_TM_HINTS = False
-    #
-    # if 'Useless Hints' in config["FlagsSet"]:
-    #     USELESS_TRASH_HINTS = True
-    # else:
-    #     USELESS_TRASH_HINTS = False
-
-    # spoiler_keys = list(spoiler.keys())
     for key in all_keys:
 
         trash = False

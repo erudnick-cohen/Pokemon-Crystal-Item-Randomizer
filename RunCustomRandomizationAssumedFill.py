@@ -254,6 +254,13 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
+
+	if hintConfig is not None and hintConfig.UseHints and hintConfig.BadgeIcon:
+		badgeHintFontPatch = "Patches/BadgeSymbol.json"
+		pfile = open(badgeHintFontPatch)
+		ptext = pfile.read()
+		patchList.extend(json.loads(ptext))
+
 	RandomizerRom.ApplyGamePatches(romMap, patchList)
 
 
@@ -261,12 +268,13 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
 															criticalTrash, BadgeDict, result[5].copy(), otherSettings,
 															hintConfig)
-		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig)
+
+		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig, locationList)
 
 		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list, flags, hintConfig,
 															   locationList)
 
-		RandomizerRom.WriteDescriptionsToMemory(romMap, creation_data)
+		RandomizerRom.WriteDescriptionsToMemory(romMap, creation_data, hintConfig)
 		if hintConfig.HideSigns:
 			dead_hints = RandomizeFunctions.getHintsToRemove(creation_data, hintConfig)
 			RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)

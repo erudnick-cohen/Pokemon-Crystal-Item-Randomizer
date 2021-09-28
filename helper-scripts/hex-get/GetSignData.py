@@ -158,8 +158,11 @@ start_dir="../pokecrystal-speedchoice/maps"
 debug_file=None
 
 here="hex-get"
-command="grep -rni -e \"trainertips[A-Za-z0-9]*text:\" -e \"sign[A-Za-z0-9]*text:\" -e \"signpost[A-Za-z0-9]*text:\" -e \"SquareText:\" -e \"NoticeText\" -e \"DescriptionText:\" -e \"Directory[A-Za-z0-9]*Text:\" " + start_dir + " | grep -vi 'Signal' | grep -vi 'design' | \
-grep -vi 'unused' | grep -vi 'jumptext'"
+command="grep -rni -e \"trainertips[A-Za-z0-9]*text:\" -e \"sign[A-Za-z0-9]*text:\" " \
+        "-e \"signpost[A-Za-z0-9]*text:\" -e \"SquareText:\" " \
+        "-e \"NoticeText\" -e \"DescriptionText:\" -e \"Directory[A-Za-z0-9]*Text:\" " \
+        + start_dir + " | grep -vi 'Signal' | grep -v 'Design' | \
+        grep -vi 'unused' | grep -vi 'jumptext'"
 #command="grep -rni -e \"text:\" -e \"_text\" -e \"text_\" " + start_dir
 gitResetCommand = "cd ../pokecrystal-speedchoice; git reset --hard; " 
 Process.create(gitResetCommand)

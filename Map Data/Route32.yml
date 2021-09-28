@@ -146,9 +146,7 @@ Location:
                 WildTableList: 
                 LocationReqs: Route 32
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REPEL

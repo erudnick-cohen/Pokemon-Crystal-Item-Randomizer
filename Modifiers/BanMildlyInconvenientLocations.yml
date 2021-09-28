@@ -23,12 +23,12 @@ Changes:
     -
         Location: Clair TM Banned
         NewLocationReqs:
-            - Dragons Shrine
+            - Dragons Den Shrine
             - Mt. Silver Unlock
     -
         Location: Dragons Den Dragon Fang
         NewLocationReqs:
-            - Dragons Shrine
+            - Dragons Den Shrine
             - Mt. Silver Unlock
     -
         Location: Dragons Den Hidden Max Elixer

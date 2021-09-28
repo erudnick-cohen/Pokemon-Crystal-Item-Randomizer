@@ -51,6 +51,7 @@
 {"start":521007,"end":521068,"name":"LavRadioTower1FPokeFluteSignText","map":"../pokecrystal-speedchoice/maps/LavRadioTower1F.asm","commands":5,"originalTile":2, "newTile":4, "tileAddress":723946},
 {"start":635376,"end":635480,"name":"TrainerHouseSign1Text","map":"../pokecrystal-speedchoice/maps/TrainerHouse1F.asm","commands":9,"originalTile":41, "newTile":3, "tileAddress":723789},
 {"start":635481,"end":635580,"name":"TrainerHouseSign2Text","map":"../pokecrystal-speedchoice/maps/TrainerHouse1F.asm","commands":8,"originalTile":41, "newTile":3, "tileAddress":723789},
+{"start":654047,"end":654097,"name":"BattleTowerOutsideSignText","map":"../pokecrystal-speedchoice/maps/BattleTowerOutside.asm","commands":4,"originalTile":33, "newTile":1, "tileAddress":727717},
 {"start":1590034,"end":1590084,"name":"CeruleanCitySignText","map":"../pokecrystal-speedchoice/maps/CeruleanCity.asm","commands":4,"originalTile":8, "newTile":1, "tileAddress":703578},
 {"start":1590085,"end":1590144,"name":"CeruleanGymSignText","map":"../pokecrystal-speedchoice/maps/CeruleanCity.asm","commands":6,"originalTile":8, "newTile":1, "tileAddress":703600},
 {"start":1590145,"end":1590219,"name":"CeruleanBikeShopSignText","map":"../pokecrystal-speedchoice/maps/CeruleanCity.asm","commands":6,"originalTile":86, "newTile":119, "tileAddress":703632},

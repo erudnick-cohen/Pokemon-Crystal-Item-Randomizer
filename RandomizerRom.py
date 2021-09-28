@@ -1052,7 +1052,14 @@ def ByteToGBCCharacterByte(charr):
 	elif charr in digits:
 		return 246+digits.index(charr)
 	elif charr == "#":
-		return 84
+		return 198
+
+	#Special characters
+	elif charr == "📛":
+		return 199
+	elif charr == "❌":
+		return 241
+
 	else:
 		return 127
 
@@ -1071,10 +1078,13 @@ def WriteHideUnusedSigns(romMap, deadHints):
 		romMap[mapData] = newTile
 
 
-def WriteDescriptionsToMemory(romMap, hints):
+def WriteDescriptionsToMemory(romMap, hints, hintConfig):
 	for hint in hints:
 		addrData = hint[0]
 		hintData = hint[1]
+
+		if hintConfig.WriteXSigns and hintData.type == "runout" or hintData.type == "small":
+			continue
 
 		if hintData.totalLength != addrData.end-addrData.start:
 			print("Length decrepency: ", hintData.totalLength,addrData.end-addrData.start)
