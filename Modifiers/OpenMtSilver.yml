@@ -8,3 +8,23 @@ Changes:
     -
         Location: Open Mt. Silver
         NewFlagReqs: []
+    -
+        Location: Mt. Silver Unlock A
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Mt. Silver Unlock B
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Mt. Silver Unlock C
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Mt. Silver Unlock D
+        NewFlagReqs:
+            - Impossible
+    -
+        Location: Mt. Silver Unlock Sure Why Not
+        NewFlagReqs:
+            - Impossible
