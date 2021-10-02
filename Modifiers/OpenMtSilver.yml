@@ -28,3 +28,6 @@ Changes:
         Location: Mt. Silver Unlock Sure Why Not
         NewFlagReqs:
             - Impossible
+    -
+        Location: Red
+        NewFlagReqs: []
