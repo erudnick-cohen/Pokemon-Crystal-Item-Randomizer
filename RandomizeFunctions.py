@@ -24,7 +24,7 @@ def HandleItemReplacement(reachable, inputFlags):
 	containsAny = checkIfReplacementsConfigured(inputFlags)
 
 	if containsAny:
-		item_replacement = open("Config/ItemReplacement.json")
+		item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
 		replacements = item_replacement.read()
 		replacement_data = json.loads(replacements)
 		replacementFile = {}
