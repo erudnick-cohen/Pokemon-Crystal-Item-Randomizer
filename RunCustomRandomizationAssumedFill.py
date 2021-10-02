@@ -1,5 +1,6 @@
 import LoadLocationData
 import Badge
+import RandomizeFunctions
 import RandomizeItemsAssumedFill as RandomizeItems
 import RandomizeItemsBadgesAssumedFill as RandomizeItemsBadges
 
@@ -13,7 +14,12 @@ import copy
 import traceback
 import random
 
-def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'], plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], otherSettings = {}, bonusTrash = []):
+def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
+				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
+				 wildLVBoost = 0,
+				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
+				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
+				 otherSettings = {}, bonusTrash = [],hintConfig=None):
 	print('required items are')
 	print(requiredItems)
 	requiredItemsCopy = copy.copy(requiredItems)
@@ -121,10 +127,15 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	else:
 		BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 
-	result = ['Nothing', 'Here'] 
+	result = ['Nothing', 'Here']
+
+	# Don't re-load data from folder on failure!
+	fullLocationData = LoadLocationData.LoadDataFromFolder(".", banList, allowList, changeListDict, flags)
+
 	while goal not in result[0]:
 		try:
-			res = LoadLocationData.LoadDataFromFolder(".",banList,allowList,changeListDict, flags)
+			res_items = fullLocationData[1].copy()
+			res_locations = fullLocationData[0].copy()
 			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
@@ -133,7 +144,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			invKeyItemMap = defaultdict(lambda: '')
 			for i in keyItemMap:
 				invKeyItemMap[keyItemMap[i]] = i
-			trashItems = sorted([x for x in res[1] if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
+			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
 			if 'BonusItems' in otherSettings or (len(newItems)+len(maybeNewItems)) > 0:
@@ -160,9 +171,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					for i in progressItems:
 						if i in trashItems:
 							trashItems.remove(i)
-			LocationList = res[0]
 			print(progressItems)
 			print(trashItems)
+			LocationList = res_locations
 			rmCore = []
 			print(coreProgress)
 			for i in coreProgress:
@@ -194,13 +205,42 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		if(i.NormalItem is not None and not i.isItem()):
 			print(i.Name)
 
-	yamlfile = open("crystal-speedchoice-label-details.json")
+	yamlfile = open("crystal-speedchoice-label-details.json",encoding='utf-8')
 	yamltext = yamlfile.read()
 	addressLists = json.loads(yamltext)
 	addressData = {}
 	for i in addressLists:
 		addressData[i['label'].split(".")[-1]] = i
 	print(addressData)
+
+	item_desc = open("ItemDescriptions.json")
+	descs = item_desc.read()
+	desc_addr = json.loads(descs)
+	desc_addr_data = {}
+	for i in desc_addr:
+		desc_addr_data[i['name'].split(".")[-1]] = i
+
+	sign_desc = open("Config/SignData.json")
+	s_descs = sign_desc.read()
+	sign_desc_addr = json.loads(s_descs)
+	sign_addr_data = {}
+	for i in sign_desc_addr:
+		sign_addr_data[i['name'].split(".")[-1]] = i
+
+
+	class PriorityObject:
+		def __init__(self, name, types, key):
+			self.HintName = name
+			self.HintTypes = types
+			self.HintKey = key
+
+	pri_file = open("Config/PriorityHints.json")
+	p_d = pri_file.read()
+	priority_data = json.loads(p_d)
+	priority_list=[]
+	for i in priority_data:
+		item = PriorityObject(i["HintName"],i["HintTypes"],i["HintKey"])
+		priority_list.append(item)
 
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
@@ -214,7 +254,33 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
-	RandomizerRom.ApplyGamePatches(romMap,patchList)
+
+	if hintConfig is not None and hintConfig.UseHints and hintConfig.BadgeIcon:
+		badgeHintFontPatch = "Patches/BadgeSymbol.json"
+		pfile = open(badgeHintFontPatch)
+		ptext = pfile.read()
+		patchList.extend(json.loads(ptext))
+
+	RandomizerRom.ApplyGamePatches(romMap, patchList)
+
+
+	if hintConfig is not None and hintConfig.UseHints:
+		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
+															criticalTrash, BadgeDict, result[5].copy(), otherSettings,
+															hintConfig)
+
+		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig, locationList)
+
+		creation_data = RandomizeFunctions.PrepareHintMessages(sign_addr_data, hint_desc, priority_list, flags, hintConfig,
+															   locationList)
+
+		RandomizerRom.WriteDescriptionsToMemory(romMap, creation_data, hintConfig)
+		if hintConfig.HideSigns:
+			dead_hints = RandomizeFunctions.getHintsToRemove(creation_data, hintConfig)
+			RandomizerRom.WriteHideUnusedSigns(romMap, dead_hints)
+
+
+
 	if "SilverBadgeUnlockCount" in otherSettings:
 		RandomizerRom.WriteOakBadgeCheckNumber(otherSettings["SilverBadgeUnlockCount"], addressData, romMap)
 	#RandomizerRom.WriteTrainerLevels(result[0], result[2],newTree)

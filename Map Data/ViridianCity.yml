@@ -89,7 +89,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Viridian
         Sublocations:
             -
                 Name: Viridian City Dream Eating Entrance

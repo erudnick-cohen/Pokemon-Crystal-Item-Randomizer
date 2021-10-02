@@ -82,6 +82,7 @@ Location:
         Code: 
         Text:
         TrainerList:
+        HintName: Vermillion
         Sublocations:
             -
                 Name: Vermilion City Fan Club President
@@ -234,10 +235,44 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: IRON
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 Code: |
                     VermilionPortHiddenIron:
                         ITEMLINE
                 SecondaryCode: '    bg_event 16, 13, BGEVENT_ITEM, VermilionPortHiddenIron'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Vermilion City 16 Badges Man
+                FileName: VermilionCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Vermilion City
+                FlagReqs:
+                    - Pointless Items
+                    - All Badges
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HP_UP
+                Code: |
+                    .AllBadges:
+                        writetext VermilionCityBadgeGuyAllBadgesText
+                        promptbutton
+                        verbosegiveitem HP_UP
+                        iffalse .Done
+                        setevent EVENT_GOT_HP_UP_FROM_VERMILION_GUY
+                    .AlreadyGotItem:
+                        writetext VermilionCityBadgeGuyBattleEdgeText
+                        waitbutton
+                    .Done:
+                        closetext
+                        end
                 Text:
                 TrainerList: 
                 Sublocations:

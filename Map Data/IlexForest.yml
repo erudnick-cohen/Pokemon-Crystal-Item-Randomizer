@@ -91,7 +91,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Ilex Forest
         Sublocations:
             -
                 Name: Ilex Cut HM
@@ -124,22 +125,6 @@ Location:
                         clearevent EVENT_CHARCOAL_KILN_APPRENTICE
                         clearevent EVENT_CHARCOAL_KILN_BOSS
                         end
-                Text: |
-                    Text_CharcoalMasterOutro:
-                        text "That's the ITEMNAME HM."
-                        line "Teach that to a"
-
-                        para "#MON to clear"
-                        line "small trees."
-
-                        para "Of course, you"
-                        line "have to have the"
-
-                        para "GYM BADGE from"
-                        line "AZALEA to use it."
-                        done
-                TrainerList: 
-                Sublocations:           
                 Text: |
                     Text_CharcoalMasterOutro:
                         text "That's the ITEMNAME."
@@ -191,6 +176,7 @@ Location:
         AREALV: 7
         TrainerList: 
             - BUG_CATCHER 19
+        HintName: Ilex Forest
         Sublocations:
             -
                 Name: Ilex Forest X Attack

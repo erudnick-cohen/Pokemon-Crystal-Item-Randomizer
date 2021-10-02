@@ -13,6 +13,7 @@ Location:
         Code:
         Text:
         AREALV: 17
+        HintName: Route 40
         TrainerList:
         Sublocations:
             -
@@ -82,6 +83,7 @@ Location:
         FileName: Route40.asm
         Type: Map
         HasPKMN: No
+        HintName: Route 40
         WildTableList: Route_40
         LocationReqs: Route 40 Land
         FlagReqs:

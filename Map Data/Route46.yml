@@ -86,6 +86,7 @@ Location:
                 - PICNICKER 10
                 - HIKER 11                                
             Sublocations:
+            HintName: Route 46
             
     -   
         Name: Route 46 PRZcureBerry
@@ -104,6 +105,7 @@ Location:
         NormalItem: PRZCUREBERRY
         IsBerry: Yes
         BerryFlag: 294
+        HintName: Route 46
         Code: |
             Route46FruitTree1:
                 ITEMLINE
@@ -124,6 +126,36 @@ Location:
         NormalItem: BERRY
         IsBerry: Yes
         BerryFlag: 295
+        HintName: Route 46
         Code: |
             Route46FruitTree2:
                 ITEMLINE
+    -   
+        Name: Route 46 Picknicker Erin
+        FileName: Route46.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+            - Route 46 Upper
+            - Elite Four
+            - Power Plant Activated
+        FlagReqs:
+            - Phone Call Trainers
+        ItemReqs:
+            - Pokegear
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: CALCIUM
+        Code: |
+            .HasCalcium:
+                opentext
+                writetext PicnickerErin2BeatenText
+                waitbutton
+                ITEMLINE
+                iffalse ErinNoRoomForCalcium
+                clearevent EVENT_ERIN_CALCIUM
+                setevent EVENT_GOT_CALCIUM_FROM_ERIN
+                sjump Route46NumberAcceptedF

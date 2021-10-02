@@ -86,6 +86,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        HintName: Ecruteak
         Sublocations:
             -
                 Name: Ecruteak City Hidden Hyper Potion
@@ -118,6 +119,10 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 ReachableReqs:
                 Code: |
                     .GetSurf:

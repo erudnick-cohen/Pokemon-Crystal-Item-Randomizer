@@ -97,6 +97,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        HintName: Burned Tower
         Sublocations:
             -
                 Name: Burned Tower Strength Item

@@ -1,4 +1,6 @@
 import sys
+
+import RandomizeFunctions
 import RandomizerGUI
 import time
 import yaml
@@ -22,7 +24,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		yamlfile = open('RandomizerConfig.yml')
+		yamlfile = open('RandomizerConfig.yml',encoding='utf-8')
 		yamltext = yaml.load(yamlfile)
 		self.loadSettings(yamltext['DefaultSettings'])
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
@@ -94,20 +96,46 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
 
+			HINT_LEVEL = 1
+			MAX_HINTS = None
+			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
+
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
 				f.write(rngSeed)
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
+									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'],
+									 otherSettings = self.settings, plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
+									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings,
+									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,coreProgress = self.settings['CoreProgress'], otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
+									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
+									 coreProgress = self.settings['CoreProgress'], otherSettings = self.settings,
+									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches, banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'], modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv, otherSettings = self.settings, plandoPlacements = self.PlandoData)
+					result = RunCustomRandomization.\
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
+									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
+									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
+									 otherSettings = self.settings, plandoPlacements = self.PlandoData,
+									 hintConfig = HintOptions)
 
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):
@@ -201,11 +229,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def loadSettings(self, settingsFile):
 		_translate = QtCore.QCoreApplication.translate
-		yamlfile = open(settingsFile)
+		yamlfile = open(settingsFile,encoding='utf-8')
 		yamltext = yamlfile.read()
 		settings = yaml.load(yamltext)
 		self.settings = settings
-		yamlfile = open(settings['BasePatch'])
+		yamlfile = open(settings['BasePatch'],encoding='utf-8')
 		yamltext = yamlfile.read()
 		patches = json.loads(yamltext)
 		modFileList = settings['DefaultModifiers']
@@ -230,7 +258,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.settings['DefaultModifiers'] = []
 			for i in self.modList:
 				self.settings['DefaultModifiers'].append(i['fileName'])
-			with open(fName+'.yml', 'w') as f:
+			with open(fName+'.yml', 'w',encoding='utf-8') as f:
 				yaml.dump(self.settings, f, default_flow_style=False)
 				
 	def SetUpPlando(self):
@@ -278,7 +306,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			yamlfile = open('RandomizerConfig.yml')
 			yamltext = yaml.load(yamlfile)
 			yamltext['DefaultSettings'] = fName
-			with open('RandomizerConfig.yml', 'w') as f:
+			with open('RandomizerConfig.yml', 'w',encoding='utf-8') as f:
 				yaml.dump(yamltext, f, default_flow_style=False)
 		else:
 			error_dialog = QtWidgets.QErrorMessage()

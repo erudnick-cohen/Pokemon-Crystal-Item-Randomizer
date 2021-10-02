@@ -17,7 +17,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Ice Path
         Sublocations:
             -
                 Name: Ice Path Waterfall HM
@@ -92,7 +93,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Ice Path
         Sublocations:
             -
                 Name: Ice Path Full Heal

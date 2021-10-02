@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Cerulean
         Sublocations:
             -
                 Name: Cerulean City Hidden Berserk Gene
@@ -22,7 +23,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Cerulean City
+                LocationReqs: Route 25
                 FlagReqs:
                     - Hidden Items
                     - Fog Badge

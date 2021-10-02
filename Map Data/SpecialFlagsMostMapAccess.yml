@@ -1,0 +1,32 @@
+Location:
+    -
+        Name: Most Map Access
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Saffron City
+            - Woke Snorlax
+        FlagReqs:
+            - Rocket Invasion
+            - Hive Badge
+            - Plain Badge
+            - Fog Badge
+            - Glacier Badge
+            - Rising Badge
+        ItemReqs:
+            - Surf
+            - Cut
+            - Strength
+            - Waterfall
+            - Whirlpool
+            - Card Key
+            - Clear Bell
+            - Rainbow Wing
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:

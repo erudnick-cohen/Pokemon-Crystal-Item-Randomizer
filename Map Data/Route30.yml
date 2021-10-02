@@ -312,3 +312,39 @@ Location:
                 Code: |
                   Route30FruitTree2:
                       ITEMLINE
+            -
+                Name: Route 30 Youngster Joey HP UP
+                FileName: Route30.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: 
+                    - Route 30
+                    - Elite Four
+                    - Radio Tower Rockets Part 2
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HP_UP
+                IsBall: No
+                Code: |
+                    .LoadFight4:
+                        loadtrainer YOUNGSTER, JOEY5
+                        startbattle
+                        reloadmapafterbattle
+                        clearflag ENGINE_JOEY
+                        checkevent EVENT_JOEY_HP_UP
+                        iftrue .GiveHPUp
+                        checkevent EVENT_GOT_HP_UP_FROM_JOEY
+                        iftrue .done
+                        scall .RematchGift
+                        ITEMLINE
+                        iffalse .PackFull
+                        setevent EVENT_GOT_HP_UP_FROM_JOEY
+                        sjump .NumberAccepted
+                Text:
+                TrainerList: 
+                Sublocations:

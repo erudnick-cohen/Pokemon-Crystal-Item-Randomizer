@@ -5,15 +5,15 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Olivine City
+        LocationReqs: Lighthouse Amphy
         FlagReqs:
         ItemReqs:
-            - Secret Potion
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Olivine
         Sublocations:
             -
                 Name: Jasmine TM
@@ -26,6 +26,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Olivine
                 NormalItem: TM_IRON_TAIL
                 Code: |
                     .FightDone:

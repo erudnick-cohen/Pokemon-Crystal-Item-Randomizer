@@ -14,6 +14,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
+        HintName: Celadon
         AREALV: 32
         TrainerList:
             - TWINS 5
@@ -35,6 +36,11 @@ Location:
                 ItemReqs:
                     - Cut
                 FlagsSet:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Celadon
                 ReachableReqs:
                 NormalItem: TM_GIGA_DRAIN
                 Code: |

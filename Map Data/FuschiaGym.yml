@@ -19,6 +19,7 @@ Location:
             - CAMPER 5
             - LASS 3
             - JANINE 1
+        HintName: Fuschia
         Sublocations:
             -
                 Name: Janine TM
@@ -32,6 +33,11 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_TOXIC
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Fuschia
                 Code: |
                     .AfterBattle:
                         checkevent EVENT_GOT_TM06_TOXIC

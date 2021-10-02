@@ -1,3 +1,16 @@
+class Tag:
+	def __init__(self, treeItem=None, name=None):
+		if treeItem is not None:
+			self.Name = treeItem["Name"]
+			if "SubTags" in treeItem:
+				self.SubTags = treeItem["SubTags"]
+			if self.SubTags is None:
+				self.SubTags = []
+		elif name is not None:
+			self.Name = name
+			self.SubTags = []
+
+
 class Location:
 	def __init__(self, yamlTree):
 		print("Creating Location "+yamlTree["Name"])
@@ -27,6 +40,16 @@ class Location:
 		else:
 			self.IsBerry = False
 			self.BerryFlag = None
+
+		if("HintName" in yamlTree):
+			self.HintName = yamlTree["HintName"]
+		else:
+			self.HintName = self.Name
+
+		self.Tags = []
+		if "Tags" in yamlTree:
+			for tag in yamlTree["Tags"]:
+				self.Tags.append(Tag(treeItem=tag))
 
 		if(isinstance(self.NormalItem,str)):
 			self.NormalItem = self.NormalItem
@@ -207,7 +230,13 @@ class Location:
 			include = False
 		if 'Timed Events' in self.FlagReqs and "Timed Events" not in flags:
 			include = False
-		if 'Pure Evil Checks' in self.FlagReqs and "Pure Evil Checks" not in flags:
+		if 'Bug Catching Contest' in self.FlagReqs and 'Bug Catching Contest' not in flags:
+			include = False
+		if 'Phone Call Trainers' in self.FlagReqs and 'Phone Call Trainers' not in flags:
+			include = False
+		if 'Mon Locked Checks' in self.FlagReqs and 'Mon Locked Checks' not in flags:
+			include = False
+		if 'Pointless Items' in self.FlagReqs and "Pointless Items" not in flags:
 			include = False
 		if include:
 			if self.NormalItem is not None and self.isItem():
@@ -215,3 +244,19 @@ class Location:
 			for i in self.Sublocations:
 				list.extend(i.getTrashItemList(flags))
 		return list
+
+	def UpdateTags(self):
+		if self.IsBerry:
+			self.Tags.append(Tag(name="Berry"))
+
+		if self.IsHidden:
+			self.Tags.append(Tag(name="Hidden"))
+
+		#if self.IsBall:
+		#	self.Tags.append(Tag(name="Ball"))
+
+		if "Timed Events" in self.FlagReqs:
+			self.Tags.append(Tag(name="Time"))
+
+		if "Pure Evil Checks" in self.FlagReqs:
+			self.Tags.append(Tag(name="Evil"))

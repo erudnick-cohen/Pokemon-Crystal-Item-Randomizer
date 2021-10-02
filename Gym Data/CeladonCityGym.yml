@@ -12,6 +12,11 @@ Location:
         FlagsSet:
         ReachableReqs:
         ItemUnlock:
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Celadon
         InfeasibleBadges:
         NormalBadge: Rainbow Badge
         BadgeLine: |
@@ -54,3 +59,4 @@ Location:
                         text "<PLAYER> received"
                         line "BADGENAME."
                         done
+        HintName: Celadon

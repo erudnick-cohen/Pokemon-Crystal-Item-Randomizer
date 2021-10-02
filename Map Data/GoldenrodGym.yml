@@ -12,7 +12,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Goldenrod
         Sublocations:
             -
                 Name: Whitney TM
@@ -25,6 +26,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Goldenrod
                 NormalItem: TM_ATTRACT
                 Code: |
                     .GotPlainBadge:

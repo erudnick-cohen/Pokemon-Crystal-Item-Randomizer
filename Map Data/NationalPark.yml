@@ -132,7 +132,7 @@ Location:
                 WildTableList: 
                 LocationReqs: National Park
                 FlagReqs:
-                    - Pure Evil Checks
+                    - Bug Catching Contest
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -161,7 +161,7 @@ Location:
                 WildTableList: 
                 LocationReqs: National Park
                 FlagReqs:
-                    - Pure Evil Checks
+                    - Bug Catching Contest
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -189,7 +189,7 @@ Location:
                 WildTableList: 
                 LocationReqs: National Park
                 FlagReqs:
-                    - Pure Evil Checks
+                    - Bug Catching Contest
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -219,7 +219,7 @@ Location:
                 WildTableList: 
                 LocationReqs: National Park
                 FlagReqs:
-                    - Pure Evil Checks
+                    - Bug Catching Contest
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -249,6 +249,33 @@ Location:
                         promptbutton
                         waitsfx
                         ITEMLINE
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: National Park Pokefan Beverly Nugget
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: National Park
+                FlagReqs:
+                    - Phone Call Trainers
+                    - Mon Locked Checks
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                MonReq: Marill
+                NormalItem: NUGGET
+                IsBall: No
+                Code: |
+                    .GiveNugget:
+                        scall .Gift
+                        ITEMLINE
+                        iffalse .NoRoom
+                        clearflag ENGINE_BEVERLY_HAS_NUGGET
+                        sjump .NumberAccepted
                 Text:
                 TrainerList: 
                 Sublocations:
