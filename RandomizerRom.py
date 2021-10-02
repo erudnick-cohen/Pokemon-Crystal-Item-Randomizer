@@ -48,7 +48,7 @@ def WriteTrainerDataToMemory(locationDict,distDict,addressData,romMap, levelBonu
 	#load up the trainer data
 	yamlfile = open("TrainerData/Trainers.yaml")
 	yamltext = yamlfile.read()
-	trainerData = yaml.load(yamltext)
+	trainerData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	#loop through locations
 	for i in distDict:
 		if i in locationDict:
@@ -148,7 +148,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 		for file in files:
 			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
-			yamlData = yaml.load(entry)
+			yamlData = yaml.load(entry, Loader=yaml.FullLoader)
 			loc = yamlData["Location"]
 			if(True):
 				idTextB = "ckir_BEFORE"+"".join(loc.upper().split()).replace('.','_').replace("'","")+"0SPECIALWILD"
@@ -166,7 +166,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
 	yamlfile = open("badgeData.yml",encoding='utf-8')
 	yamltext = yamlfile.read()
-	gymOffsets = yaml.load(yamltext)
+	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in locations:
 		if i.isItem():
 			if i.IsHidden:
@@ -468,7 +468,7 @@ def LabelWild():
 	#load up the grass data
 	yamlfile = open("Wild Data/wildGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for j in wildData:
 		#print('Writing '+j)
 		areaData = wildData[j.upper()]
@@ -490,7 +490,7 @@ def LabelWild():
 	#load up the water data
 	yamlfile = open("Wild Data/surfGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for j in wildData:
 		#print('Writing '+j)
 		areaData = wildData[j.upper()]
@@ -512,7 +512,7 @@ def LabelWild():
 	#load up the swarm data
 	yamlfile = open("Wild Data/swarmGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for j in wildData:
 		#print('Writing '+j)
 		areaData = wildData[j.upper()]
@@ -541,7 +541,7 @@ def LabelSpecialWild(locationList):
 		for file in files:
 			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
-			yamlData = yaml.load(entry)
+			yamlData = yaml.load(entry, Loader=yaml.FullLoader)
 			loc = yamlData["Location"]
 			if(True):
 				fileName = locationDict[loc].FileName
@@ -896,7 +896,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the grass data
 	yamlfile = open("Wild Data/wildGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in distDict:
 		if i in locationDict:
 			location = locationDict[i]
@@ -927,7 +927,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the water data
 	yamlfile = open("Wild Data/surfGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in distDict:
 		if i in locationDict:
 			location = locationDict[i]
@@ -957,7 +957,7 @@ def WriteWildLevels(locationDict, distDict,monFun):
 	#load up the swarm data
 	yamlfile = open("Wild Data/swarmGrass.yaml")
 	yamltext = yamlfile.read()
-	wildData = yaml.load(yamltext)
+	wildData = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in distDict:
 		if i in locationDict:
 			location = locationDict[i]
@@ -991,7 +991,7 @@ def WriteSpecialWildLevels(locationDict,distDict,monFun):
 		for file in files:
 			#print("File: "+file)
 			entry = open("Special Pokemon Locations/"+file,'r')
-			yamlData = yaml.load(entry)
+			yamlData = yaml.load(entry, Loader=yaml.FullLoader)
 			loc = yamlData["Location"]
 			if(loc in locationDict):
 				fileName = locationDict[loc].FileName

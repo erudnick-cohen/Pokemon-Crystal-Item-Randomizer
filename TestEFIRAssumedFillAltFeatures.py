@@ -9,7 +9,7 @@ copyfile(romPath, 'Hmmm'+romPath)
 
 yamlfile = open("Modes/CrazyChaos.yml")
 yamltext = yamlfile.read()
-settings = yaml.load(yamltext)
+settings = yaml.load(yamltext, Loader=yaml.FullLoader)
 settings["SilverBadgeUnlockCount"] = 3
 yamlfile = open(settings['BasePatch'])
 yamltext = yamlfile.read()
@@ -32,7 +32,7 @@ plandoPlacements = {"Pokegear Gift" : "Fly"}
 for i in modFileList:
 	yamlfile = open(i)
 	yamltext = yamlfile.read()
-	modList.append(yaml.load(yamltext))
+	modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 res = RunCustomRandomization.randomizeRom('Hmmm'+romPath,settings['Goal'], random.random()*1000, settings['FlagsSet'],patches, banList = settings['BannedLocations'], allowList = settings['AllowedLocations'], modifiers = modList, plandoPlacements = plandoPlacements, otherSettings = settings)
 print(res[4])
 print(res[2])

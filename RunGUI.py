@@ -24,7 +24,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		yamlfile = open('RandomizerConfig.yml',encoding='utf-8')
+		yamlfile = open('RandomizerConfig.yml',Loader=yaml.FullLoader,encoding='utf-8')
 		yamltext = yaml.load(yamlfile)
 		self.loadSettings(yamltext['DefaultSettings'])
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
@@ -214,7 +214,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if modfile != '':
 			yamlfile = open(modfile)
 			yamltext = yamlfile.read()
-			self.modList.append(yaml.load(yamltext))
+			self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 			self.modList[-1]['fileName'] = modfile
 			self.updateModListView()
 
@@ -231,7 +231,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		_translate = QtCore.QCoreApplication.translate
 		yamlfile = open(settingsFile,encoding='utf-8')
 		yamltext = yamlfile.read()
-		settings = yaml.load(yamltext)
+		settings = yaml.load(yamltext, Loader=yaml.FullLoader)
 		self.settings = settings
 		yamlfile = open(settings['BasePatch'],encoding='utf-8')
 		yamltext = yamlfile.read()
@@ -241,7 +241,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		for i in modFileList:
 			yamlfile = open(i)
 			yamltext = yamlfile.read()
-			self.modList.append(yaml.load(yamltext))
+			self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 			self.modList[-1]['fileName'] = i
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
@@ -267,7 +267,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if file != '':
 			yamlfile = open(file)
 			yamltext = yamlfile.read()
-			spoiler = yaml.load(yamltext)
+			spoiler = yaml.load(yamltext, Loader=yaml.FullLoader)
 			newSpoiler = OrderedDict()
 			for i in sorted(spoiler['Solution'],reverse=True):
 				print(i)
@@ -304,7 +304,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		fName = QFileDialog.getOpenFileName(directory = 'Modes')[0]
 		if(fName != ''):
 			yamlfile = open('RandomizerConfig.yml')
-			yamltext = yaml.load(yamlfile)
+			yamltext = yaml.load(yamlfile, Loader=yaml.FullLoader)
 			yamltext['DefaultSettings'] = fName
 			with open('RandomizerConfig.yml', 'w',encoding='utf-8') as f:
 				yaml.dump(yamltext, f, default_flow_style=False)

@@ -13,7 +13,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 			print("File: "+file)
 			entry = open(path+"//Map Data//"+file,'r',encoding='utf-8')
 			try:
-				yamlData = yaml.load(entry)
+				yamlData = yaml.load(entry, Loader=yaml.FullLoader)
 			except Exception as inst:
 				raise(inst)
 			print("Locations in file are:")
@@ -33,8 +33,9 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	for groot, gdir, gfiles  in os.walk("Gym Data"):
 		for gfile in gfiles:
 			print("File: "+gfile)
-			entry = open(path+"//Gym Data//"+gfile,'r',encoding='utf-8')
+			entry = open(path+"//Gym Data//"+gfile,'r',Loader=yaml.FullLoader,encoding='utf-8')
 			yamlData = yaml.load(entry)
+
 			print("Locations in file are:")
 			for location in yamlData["Location"]:
 				print(location["Name"])

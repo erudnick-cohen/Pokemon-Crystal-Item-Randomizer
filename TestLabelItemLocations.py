@@ -11,7 +11,7 @@ trashItems = res[1]
 LocationList = LoadLocationData.FlattenLocationTree(res[0])
 yamlfile = open("TrainerData/Trainers.yaml")
 yamltext = yamlfile.read()
-trainerData = yaml.load(yamltext)
+trainerData = yaml.load(yamltext, Loader=yaml.FullLoader)
 RandomizerRom.ResetRomForLabelling()
 RandomizerRom.LabelAllLocations(LocationList)
 #RandomizerRom.LabelTrainerData(trainerData) #disabled because new speedchoice has different format for these

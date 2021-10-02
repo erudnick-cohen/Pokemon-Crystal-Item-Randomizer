@@ -8,7 +8,7 @@ copyfile(romPath, 'Hmmm'+romPath)
 
 yamlfile = open("Modes/EasyKeyItemRando.yml")
 yamltext = yamlfile.read()
-settings = yaml.load(yamltext)
+settings = yaml.load(yamltext, Loader=yaml.FullLoader)
 yamlfile = open(settings['BasePatch'])
 yamltext = yamlfile.read()
 patches = json.loads(yamltext)
@@ -21,7 +21,7 @@ CoreProgress = ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','
 for i in modFileList:
 	yamlfile = open(i)
 	yamltext = yamlfile.read()
-	modList.append(yaml.load(yamltext))
+	modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 res = RunCustomRandomization.randomizeRom('Hmmm'+romPath,settings['Goal'], settings['FlagsSet'],patches, banList = settings['BannedLocations'], allowList = settings['AllowedLocations'], modifiers = modList, plandoPlacements = plandoPlacements, coreProgress = CoreProgress, requiredItems = settings['ProgressItems'], otherSettings = settings)
 print(res[2])
 print(res[1])

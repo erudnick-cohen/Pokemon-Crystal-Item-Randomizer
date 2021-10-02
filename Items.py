@@ -9,15 +9,15 @@ def makeItemCodeDict():
 	#progress items
 	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"].upper()
 	
 	#trash items
-	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
+	filestream = open('ItemData/TrashItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"]
@@ -44,15 +44,15 @@ def makeRawItemCodeDict(progRod = False):
 	#progress items
 	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"].upper()
 	
 	#trash items
-	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
+	filestream = open('ItemData/TrashItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"]
@@ -88,15 +88,15 @@ def makeItemTextDict():
 	#progress items
 	filestream = open('ItemData/ProgressItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Name"]
 			
 	#trash items
-	filestream = open('ItemData/trashItems.yml',encoding='utf-8')
+	filestream = open('ItemData/TrashItems.yml',encoding='utf-8')
 	data = filestream.read()
-	yamlTree = yaml.load(data)
+	yamlTree = yaml.load(data, Loader=yaml.FullLoader)
 	if not yamlTree["Items"] is None:
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Name"].upper()
