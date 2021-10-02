@@ -169,15 +169,15 @@ Location:
             .Registered:
                 readvar VAR_KENJI_BREAK
             .ckir_BEFORE_Kenji::
-                ifnotequal 1, .ckir_END_Kenji
+                ifnotequal 1, .ckir_AFTER_Kenji
                 checktime MORN
-                iftrue .ckir_END_Kenji
+                iftrue .ckir_AFTER_Kenji
                 checktime NITE
-                iftrue .ckir_END_Kenji
+                iftrue .ckir_AFTER_Kenji
                 checkevent EVENT_KENJI_ON_BREAK
-                iffalse .ckir_END_Kenji
+                iffalse .ckir_AFTER_Kenji
                 scall Route45GiftM
-            .ckir_END_Kenji::
+            .ckir_AFTER_Kenji::
                 ITEMLINE
                 iffalse .NoRoom
                 clearevent EVENT_KENJI_ON_BREAK
