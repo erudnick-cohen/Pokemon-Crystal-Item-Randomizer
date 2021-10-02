@@ -30,6 +30,6 @@ DefaultModifiers:
     - Modifiers/UpgradeBalls.yml
 BannedLocations:
 AllowedLocations:
-Goal: Mt. Silver
+Goal: Red
 FlagsSet:
     - Kanto Mode

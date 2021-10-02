@@ -26,7 +26,7 @@ DefaultModifiers:
     - Modifiers/NoHoOhChamber.yml
 BannedLocations:
 AllowedLocations:
-Goal: Mt. Silver
+Goal: Red
 FlagsSet:
     - Kanto Mode
     - Sane Extreme E4 Access

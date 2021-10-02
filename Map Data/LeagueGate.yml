@@ -1,0 +1,87 @@
+Location:  
+    -
+        Name: League Gate Entrance
+        FileName: VictoryRoadGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: League Gate via Route 26
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate via Route 26
+        FileName: VictoryRoadGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 26
+        FlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate Entrance
+        FileName: VictoryRoadGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - League Gate via Viridian
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate via Viridian
+        FileName: VictoryRoadGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Viridian City
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+            - Machine Part
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: League Gate
+        FileName: VictoryRoadGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+        FlagReqs:
+            - League Gate Entrance
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
