@@ -412,7 +412,7 @@ Location:
                         Type: Map
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base Whirlpool
+                        LocationReqs: Rocket Base Whirlpool HM
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -427,7 +427,7 @@ Location:
                         Type: Map
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base Whirlpool
+                        LocationReqs: Rocket Base Whirlpool HM
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -442,7 +442,7 @@ Location:
                         Type: Map
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base Whirlpool
+                        LocationReqs: Rocket Base Whirlpool HM
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:

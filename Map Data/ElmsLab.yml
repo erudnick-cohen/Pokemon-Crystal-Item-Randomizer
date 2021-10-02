@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: New Bark
         Sublocations:
             -
                 Name: Elm Aide Potion
@@ -158,6 +159,10 @@ Location:
                 ItemReqs:
                 FlagsSet: 
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Annoying
+                        SubTags:
                 Text: |
                     ElmGiveTicketText1:
                         text "ELM: <PLAY_G>!"

@@ -12,7 +12,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Cianwood
         Sublocations:
             -
                 Name: Chuck TM
@@ -28,6 +29,11 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Cianwood
                 Code: |
                     .FightDone:
                         checkevent EVENT_GOT_TM01_DYNAMICPUNCH

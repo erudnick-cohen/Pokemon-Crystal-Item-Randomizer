@@ -86,6 +86,7 @@ Location:
                 - PICNICKER 10
                 - HIKER 11                                
             Sublocations:
+            HintName: Route 46
             
     -   
         Name: Route 46 PRZcureBerry
@@ -104,6 +105,7 @@ Location:
         NormalItem: PRZCUREBERRY
         IsBerry: Yes
         BerryFlag: 294
+        HintName: Route 46
         Code: |
             Route46FruitTree1:
                 ITEMLINE
@@ -124,6 +126,7 @@ Location:
         NormalItem: BERRY
         IsBerry: Yes
         BerryFlag: 295
+        HintName: Route 46
         Code: |
             Route46FruitTree2:
                 ITEMLINE

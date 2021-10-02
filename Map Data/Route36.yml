@@ -157,7 +157,8 @@ Location:
                 line "in your way, just"
                 cont "smash 'em up!"
                 done
-        TrainerList: 
+        TrainerList:
+        HintName: Route 36
         Sublocations:
         
     -

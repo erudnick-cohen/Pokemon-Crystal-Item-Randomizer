@@ -13,6 +13,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        HintName: Cerulean
         Sublocations:
             -
                 Name: Hidden Machine Part

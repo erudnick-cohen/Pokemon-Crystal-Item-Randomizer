@@ -14,7 +14,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Mahogany
         Sublocations:
             -
                 Name: Pryce TM
@@ -27,6 +28,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Mahogany
                 NormalItem: TM_ICY_WIND
                 Code: |
                     .FightDone:

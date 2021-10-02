@@ -143,6 +143,41 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Lighthouse Jasmine
+                FileName: OlivineLighthouse5F.asm
+                SecondaryFile: OlivineLighthouse5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lighthouse
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Lighthouse
+                ReachableReqs:
+                Text:
+                Code:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Lighthouse Amphy
+                FileName: OlivineLighthouse5F.asm
+                SecondaryFile: OlivineLighthouse5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lighthouse Jasmine
+                FlagReqs:
+                ItemReqs:
+                    - Secret Potion
+                FlagsSet:
+                    - Amphy Healed
+                ReachableReqs:
+                Text:
+                Code:
+                TrainerList:
+                Sublocations:
+            -
                 Name: Lighthouse Sailor Huey Water Stone
                 FileName: OlivineLighthouse2F.asm
                 Type: Item

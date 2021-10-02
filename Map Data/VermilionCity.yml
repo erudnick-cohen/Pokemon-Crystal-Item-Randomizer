@@ -82,6 +82,7 @@ Location:
         Code: 
         Text:
         TrainerList:
+        HintName: Vermillion
         Sublocations:
             -
                 Name: Vermilion City Fan Club President
@@ -234,6 +235,10 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: IRON
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 Code: |
                     VermilionPortHiddenIron:
                         ITEMLINE

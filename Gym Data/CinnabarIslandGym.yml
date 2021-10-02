@@ -13,6 +13,12 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Cinnabar
+        HintName: Cinnabar
         NormalBadge: Volcano Badge
         BadgeLine: |
             SeafoamGymBlaineScript:

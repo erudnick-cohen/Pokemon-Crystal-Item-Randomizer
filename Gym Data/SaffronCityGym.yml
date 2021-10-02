@@ -14,6 +14,12 @@ Location:
         ItemUnlock:
         InfeasibleBadges:
         NormalBadge: Marsh Badge
+        HintName: Saffron
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Saffron
         BadgeLine: |
             SaffronGymSabrinaScript:
                 faceplayer

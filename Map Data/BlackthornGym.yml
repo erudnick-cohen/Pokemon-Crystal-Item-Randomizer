@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Blackthorn
         Sublocations:
             -
                 Name: Clair TM
@@ -28,6 +29,11 @@ Location:
                 ItemReqs:
                     - Strength
                 FlagsSet:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Blackthorn
                 ReachableReqs:
                 NormalItem: TM_DRAGONBREATH
                 Code: |

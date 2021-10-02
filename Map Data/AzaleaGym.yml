@@ -14,7 +14,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Azalea
         Sublocations:
             -
                 Name: Bugsy TM
@@ -27,6 +28,11 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Azalea
                 NormalItem: TM_FURY_CUTTER
                 Code: |
                     .FightDone:

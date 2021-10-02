@@ -108,6 +108,7 @@ Location:
         Code:
         Text:
         AREALV: 28
+        HintName: Tojho Falls
         TrainerList:
             - COOLTRAINERF 11
             - COOLTRAINERF 10
@@ -130,12 +131,17 @@ Location:
                     - Whirlpool
                 FlagsSet:
                 ReachableReqs:
+                HintName: Route 27
                 IsBall: Yes
                 NormalItem: TM_SOLARBEAM
                 Code: |
                     Route27TMSolarbeam:
                         ITEMLINE
                 Text:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 AREALV: 28
                 TrainerList: 
                     - BIRD_KEEPER 12
@@ -150,11 +156,14 @@ Location:
                 LocationReqs: Tohjo Falls Over the Waterfall
                 FlagReqs:
                     - Timed Events
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 Text:
                 TrainerList:
+                HintName: Route 27
                 NormalItem: TM_SANDSTORM
                 Code: |
                     .Loyal:

@@ -40,7 +40,8 @@ Location:
             Route45Nugget:
                 ITEMLINE
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Route 45
         Sublocations:
     -
         Name: Route 45 Revive
@@ -55,6 +56,7 @@ Location:
         ReachableReqs:
         IsBall: Yes
         NormalItem: REVIVE
+        HintName: Route 45
         Code: |
             Route45Revive:
                 ITEMLINE
@@ -71,6 +73,7 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+        HintName: Route 45
         ReachableReqs:
         IsBall: Yes
         NormalItem: MAX_POTION
@@ -91,6 +94,7 @@ Location:
         ItemReqs:
         FlagsSet:
         ReachableReqs:
+        HintName: Route 45
         IsBall: Yes
         NormalItem: ELIXER
         Code: |
@@ -106,6 +110,7 @@ Location:
         Type: Item
         HasPKMN: No
         WildTableList:
+        HintName: Route 45
         LocationReqs: Route 45
         FlagReqs:
             - Hidden Items
@@ -127,6 +132,7 @@ Location:
         Name: Route 45 MysteryBerry
         FileName: Route45.asm
         Type: Item
+        HintName: Route 45
         HasPKMN: No
         WildTableList:
         LocationReqs: Route 45

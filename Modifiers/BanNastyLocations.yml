@@ -18,7 +18,5 @@ Changes:
             - Mt. Silver Unlock
     -
         Location: Rainbow Wing Gift
-        NewLocationReqs:
-            - Tin Tower
-            - Elite Four
+        AddLocationReqs:
             - Mt. Silver Unlock

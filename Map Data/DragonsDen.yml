@@ -149,7 +149,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Dragons Den
         Sublocations:
             -
                 Name: Dragons Den Dragon Fang
