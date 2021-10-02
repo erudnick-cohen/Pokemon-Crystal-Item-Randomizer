@@ -168,7 +168,7 @@ Location:
         Code: |
             .Registered:
                 readvar VAR_KENJI_BREAK
-            .ckir_BEFORE_Kenji:
+            .ckir_BEFORE_Kenji::
                 ifnotequal 1, .ckir_END_Kenji
                 checktime MORN
                 iftrue .ckir_END_Kenji
@@ -177,7 +177,7 @@ Location:
                 checkevent EVENT_KENJI_ON_BREAK
                 iffalse .ckir_END_Kenji
                 scall Route45GiftM
-            .ckir_END_Kenji:
+            .ckir_END_Kenji::
                 ITEMLINE
                 iffalse .NoRoom
                 clearevent EVENT_KENJI_ON_BREAK
