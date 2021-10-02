@@ -164,7 +164,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
-	yamlfile = open("badgeData.yml")
+	yamlfile = open("badgeData.yml",encoding='utf-8')
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext)
 	for i in locations:

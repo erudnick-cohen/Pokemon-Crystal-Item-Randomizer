@@ -121,6 +121,37 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Lake of Rage Detect TM
+                FileName: LakeOfRageMagikarpHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 43
+                FlagReqs:
+                    - Mon Locked Checks
+                    - Most Map Access
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                IsBall: No
+                NormalItem: ELIXER
+                Code: |
+                    .GetReward:
+                        writetext MagikarpLengthRaterText_Memento
+                        promptbutton
+                        ITEMLINE
+                        iffalse .NoRoom
+                        writetext MagikarpLengthRaterText_Bonus
+                        waitbutton
+                        closetext
+                        clearevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Lake of Rage Hidden Power TM
                 FileName: LakeOfRageHiddenPowerHouse.asm
                 Type: Item

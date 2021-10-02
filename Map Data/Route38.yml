@@ -92,7 +92,6 @@ Location:
             - SCHOOLBOY 10
             - BEAUTY 17
         Sublocations:
-        
         -   
             Name: Route 38 Berry
             FileName: Route38.asm
@@ -113,3 +112,27 @@ Location:
             Code: |
               Route38FruitTree:
                   ITEMLINE
+        -   
+            Name: Route 38 Lass Dana Thunderstone
+            FileName: Route38.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Route 38 Entrance
+            FlagReqs:
+                - Phone Call Trainers
+            ItemReqs:
+                - Pokegear
+            FlagsSet:
+            ReachableReqs:
+            Text:
+            TrainerList:
+            NormalItem: THUNDERSTONE
+            Code: |
+                .TryGiveThunderstone:
+                    scall .Gift
+                    ITEMLINE
+                    iffalse .NoRoomForThunderstone
+                    clearflag ENGINE_DANA_HAS_THUNDERSTONE
+                    setevent EVENT_DANA_GAVE_THUNDERSTONE
+                    sjump .NumberAccepted

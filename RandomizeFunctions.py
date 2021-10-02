@@ -218,15 +218,15 @@ def HandleItemReplacement(reachable, inputFlags):
 
     containsAny = checkIfReplacementsConfigured(inputFlags)
 
-    if containsAny:
-        item_replacement = open("Config/ItemReplacement.json")
-        replacements = item_replacement.read()
-        replacement_data = json.loads(replacements)
-        replacementFile = {}
-        for replacement_item in replacement_data:
-            replacement_item_name = replacement_item["item"]
-            replacement_replacement = replacement_item["replacement"]
-            replacement_type = replacement_item["type"]
+	if containsAny:
+		item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
+		replacements = item_replacement.read()
+		replacement_data = json.loads(replacements)
+		replacementFile = {}
+		for replacement_item in replacement_data:
+			replacement_item_name = replacement_item["item"]
+			replacement_replacement = replacement_item["replacement"]
+			replacement_type = replacement_item["type"]
 
             replacement_percent = 100
             use_replacement_percent = True

@@ -122,3 +122,154 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Bills Granpda Wants Lickitung
+                FileName: BillsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                MonReq: Lickitung
+                NormalItem: EVERSTONE
+                Code: |
+                    .ShowedLickitung:
+                        checkevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
+                        iftrue .GotEverstone
+                        scall .ReceiveItem
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Bills Granpda Wants Oddish
+                FileName: BillsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                    - Bills Granpda Wants Lickitung
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Oddish
+                ReachableReqs:
+                NormalItem: LEAF_STONE
+                Code: |
+                    .ShowedOddish:
+                        checkevent EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
+                        iftrue .GotLeafStone
+                        scall .ReceiveItem
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        closetext
+                        end
+            -
+                Name: Bills Granpda Wants Staryu
+                FileName: BillsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                    - Bills Granpda Wants Oddish
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Staryu
+                ReachableReqs:
+                NormalItem: WATER_STONE
+                Code: |
+                    .ShowedStaryu:
+                        checkevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
+                        iftrue .GotWaterStone
+                        scall .ReceiveItem
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Bills Granpda Wants Vulpix
+                FileName: BillsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                    - Bills Granpda Wants Staryu
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Vulpix
+                ReachableReqs:
+                NormalItem: FIRE_STONE
+                Code: |
+                    .ShowedGrowlitheVulpix:
+                        checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+                        iftrue .GotFireStone
+                        scall .ReceiveItem
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Bills Granpda Wants Pichu
+                FileName: BillsHouse.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Route 25
+                    - Bills Granpda Wants Vulpix
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Pichu
+                ReachableReqs:
+                NormalItem: THUNDERSTONE
+                Code: |
+                    .ShowedGrowlitheVulpix:
+                        checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+                        iftrue .GotFireStone
+                        scall .ReceiveItem
+                        ITEMLINE
+                        iffalse .BagFull
+                        setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
+                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        closetext
+                        end
+                Text:
+                TrainerList: 
+                Sublocations:

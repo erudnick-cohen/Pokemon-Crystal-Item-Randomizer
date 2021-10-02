@@ -1,4 +1,6 @@
 Name: Delete Fly
-Description: Deletes HM02 (Fly) from the game and replaces it with a berry. I don't understand why you want to do this, but OK.
+Description: Makes HM02 (Fly) become HM02 (Splash). While both Fly and Splash are moves which cause a temporary increase in altitude, Splash is perhaps a bit less useful than Fly is. I don't understand why you want to do this, but OK.
 FlagsSet:
-    - Delete Fly
+    - Splash Fly
+NewGamePatches:
+    - 'Patches/SplashFly.json'

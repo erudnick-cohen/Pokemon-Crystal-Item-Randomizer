@@ -230,7 +230,13 @@ class Location:
 			include = False
 		if 'Timed Events' in self.FlagReqs and "Timed Events" not in flags:
 			include = False
-		if 'Pure Evil Checks' in self.FlagReqs and "Pure Evil Checks" not in flags:
+		if 'Bug Catching Contest' in self.FlagReqs and 'Bug Catching Contest' not in flags:
+			include = False
+		if 'Phone Call Trainers' in self.FlagReqs and 'Phone Call Trainers' not in flags:
+			include = False
+		if 'Mon Locked Checks' in self.FlagReqs and 'Mon Locked Checks' not in flags:
+			include = False
+		if 'Pointless Items' in self.FlagReqs and "Pointless Items" not in flags:
 			include = False
 		if include:
 			if self.NormalItem is not None and self.isItem():

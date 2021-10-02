@@ -53,6 +53,80 @@ Location:
                         setevent EVENT_GOT_MYSTIC_WATER_IN_CHERRYGROVE
                 Sublocations:
             -
+                Name: Map Card
+                FileName: CherrygroveCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cherrygrove City
+                FlagReqs:
+                    - Pointless Items
+                ItemReqs:
+                FlagsSet:
+                NormalItem: ENGINE_MAP_CARD
+                ReachableReqs:
+                Text:
+                TrainerList: 
+                Code: |
+                    CherrygroveCityGuideGent:
+                        faceplayer
+                        opentext
+                        writetext GuideGentIntroText
+                        yesorno
+                        iffalse .No
+                        sjump .Yes
+                    .Yes:
+                        writetext GuideGentTourText1
+                        waitbutton
+                        closetext
+                        playmusic MUSIC_SHOW_ME_AROUND
+                        follow CHERRYGROVECITY_GRAMPS, PLAYER
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
+                        opentext
+                        writetext GuideGentPokecenterText
+                        waitbutton
+                        closetext
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement2
+                        turnobject PLAYER, UP
+                        opentext
+                        writetext GuideGentMartText
+                        waitbutton
+                        closetext
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement3
+                        turnobject PLAYER, UP
+                        opentext
+                        writetext GuideGentRoute30Text
+                        waitbutton
+                        closetext
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement4
+                        turnobject PLAYER, LEFT
+                        opentext
+                        writetext GuideGentSeaText
+                        waitbutton
+                        closetext
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement5
+                        turnobject PLAYER, UP
+                        pause 60
+                        turnobject CHERRYGROVECITY_GRAMPS, LEFT
+                        turnobject PLAYER, RIGHT
+                        opentext
+                        writetext GuideGentGiftText
+                        promptbutton
+                        ITEMLINE
+                        writetext GuideGentPokegearText
+                        waitbutton
+                        closetext
+                        stopfollow
+                        special RestartMapMusic
+                        turnobject PLAYER, UP
+                        applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement6
+                        playsound SFX_ENTER_DOOR
+                        disappear CHERRYGROVECITY_GRAMPS
+                        clearevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+                        waitsfx
+                        end
+                Sublocations:
+            -
                 Name: Rival Battle #1
                 FileName: CherrygroveCity.asm
                 Type: Map

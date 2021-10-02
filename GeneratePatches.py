@@ -11,14 +11,14 @@ def makePatches():
 	
 
 	#load the json data so that we know what the addresses actually SHOULD be
-	with open('crystal-speedchoice-label-details.json') as f:
+	with open('crystal-speedchoice-label-details.json',encoding='utf-8') as f:
 		addrText = f.read()
 		addrData = json.loads(addrText)
 
 	for root, dir, files in os.walk("Patches Base//"):
 		for i in files:
 			print("File: "+i)
-			with open("Patches Base//"+i) as f:
+			with open("Patches Base//"+i,encoding='utf-8') as f:
 				patchText = f.read()
 				patchData = json.loads(patchText)
 			for j in patchData:

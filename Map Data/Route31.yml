@@ -141,3 +141,37 @@ Location:
                 Code: |
                   Route31FruitTree:
                       ITEMLINE
+            -
+                Name: Route 31 Bug Catcher Wade Berry
+                FileName: Route31.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 31
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: Berry
+                IsBall: No
+                Code: |
+                    .Berry:
+                        ITEMLINE
+                        iffalse .PackFull
+                        sjump .Done
+                    .Psncureberry:
+                        ITEMLINE
+                        iffalse .PackFull
+                        sjump .Done
+                    .Przcureberry:
+                        ITEMLINE
+                        iffalse .PackFull
+                        sjump .Done
+                    .BitterBerry:
+                        ITEMLINE
+                        iffalse .PackFull
+                Text:
+                TrainerList: 
+                Sublocations:
