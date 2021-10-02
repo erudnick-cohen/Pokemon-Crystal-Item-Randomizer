@@ -143,3 +143,40 @@ Location:
         Code: |
           Route45FruitTree:
               ITEMLINE
+    -
+        Name: Route 45 Kenji
+        FileName: Route45.asm
+        Type: Item
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: 
+            - Route 45
+        FlagReqs:
+            - Phone Call Trainers
+        ItemReqs:
+            - Pokegear
+        FlagsSet:
+        ReachableReqs:
+        IsBall: No
+        NormalItem: PP_UP
+        Code: |
+            .Registered:
+                readvar VAR_KENJI_BREAK
+            .ckir_BEFORE_Kenji:
+                ifnotequal 1, .ckir_END_Kenji
+                checktime MORN
+                iftrue .ckir_END_Kenji
+                checktime NITE
+                iftrue .ckir_END_Kenji
+                checkevent EVENT_KENJI_ON_BREAK
+                iffalse .ckir_END_Kenji
+                scall Route45GiftM
+            .ckir_END_Kenji:
+                ITEMLINE
+                iffalse .NoRoom
+                clearevent EVENT_KENJI_ON_BREAK
+                special SampleKenjiBreakCountdown
+                sjump Route45NumberAcceptedM
+        Text:
+        TrainerList: 
+        Sublocations:

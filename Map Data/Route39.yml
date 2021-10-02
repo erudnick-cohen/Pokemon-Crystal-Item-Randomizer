@@ -153,3 +153,27 @@ Location:
                         ITEMLINE
                         iffalse FarmerFScript_NoRoomForSnore
                         setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+            -
+                Name: Route 39 Pokefan Derek Nugget
+                FileName: Route39.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: 
+                    - Route 39
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: NUGGET
+                Code: |
+                    .HasNugget:
+                        scall .Gift
+                        ITEMLINE
+                        iffalse .NoRoom
+                        clearflag ENGINE_DEREK_HAS_NUGGET
+                        sjump .NumberAccepted

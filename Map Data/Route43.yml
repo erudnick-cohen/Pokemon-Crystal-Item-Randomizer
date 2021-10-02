@@ -94,3 +94,31 @@ Location:
         Code: |
           Route43FruitTree:
               ITEMLINE
+    -
+        Name: Route 43 Picknicker Tiffany Pink Bow
+        FileName: Route43.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Route 43
+        FlagReqs:
+            - Phone Call Trainers
+            - Mon Locked Checks
+        ItemReqs:
+            - Pokegear
+        FlagsSet:
+        ReachableReqs:
+        MonReq: Clefairy
+        IsBall: No
+        NormalItem: PINK_BOW
+        Code: |
+            .HasPinkBow:
+                scall .Gift
+                ITEMLINE
+                iffalse .NoRoom
+                clearflag ENGINE_TIFFANY_HAS_PINK_BOW
+                setevent EVENT_TIFFANY_GAVE_PINK_BOW
+                sjump .NumberAccepted
+        Text:
+        TrainerList: 
+        Sublocations:

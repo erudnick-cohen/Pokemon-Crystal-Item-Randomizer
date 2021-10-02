@@ -125,3 +125,34 @@ Location:
                 Code: |
                   Route44FruitTree:
                       ITEMLINE
+            -
+                Name: Route 44 Bird Keeper Vance Carbos
+                FileName: Route44.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Route 44
+                    - Power Plant Activated
+                    - Elite Four
+                FlagReqs:
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                    - Phone Call Trainers
+                ReachableReqs:
+                IsBall: No
+                NormalItem: CARBOS
+                Code: |
+                    .Carbos:
+                        opentext
+                        writetext BirdKeeperVance2BeatenText
+                        waitbutton
+                        ITEMLINE
+                        iffalse VancePackFull
+                        clearevent EVENT_VANCE_CARBOS
+                        setevent EVENT_GOT_CARBOS_FROM_VANCE
+                        sjump Route44NumberAcceptedM
+                Text:
+                TrainerList: 
+                Sublocations:

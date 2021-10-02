@@ -163,3 +163,28 @@ Location:
                         ITEMLINE
                         iffalse .Done
                         setevent EVENT_GOT_TM37_SANDSTORM
+            -
+                Name: Route 27 Bird Keeper Jose Star_Piece
+                FileName: Route27.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tohjo Falls Over the Waterfall
+                FlagReqs:
+                    - Fog Badge
+                    - Glacier Badge
+                ItemReqs:
+                    - Surf
+                    - Whirlpool
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: STAR_PIECE
+                Code: |
+                    .HasStarPiece:
+                        scall .Gift
+                        ITEMLINE
+                        iffalse .NoRoom
+                        clearflag ENGINE_JOSE_HAS_STAR_PIECE
+                        sjump .NumberAccepted
+                Text:
+                Sublocations:
