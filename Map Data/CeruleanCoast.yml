@@ -263,14 +263,11 @@ Location:
                 ReachableReqs:
                 NormalItem: THUNDERSTONE
                 Code: |
-                    .ShowedGrowlitheVulpix:
-                        checkevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
-                        iftrue .GotFireStone
+                    .ShowedPichu:
                         scall .ReceiveItem
                         ITEMLINE
                         iffalse .BagFull
-                        setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
-                        setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                        setevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
                         closetext
                         end
                 Text:
