@@ -48,7 +48,7 @@ TrainerBlackbeltKenji:
 
 .Registered:
 	readvar VAR_KENJI_BREAK
-.ckir_BEFORE_Kenji:
+.ckir_BEFORE_Kenji::
 	ifnotequal 1, .ckir_END_Kenji
 	checktime MORN
 	iftrue .ckir_END_Kenji
@@ -57,7 +57,7 @@ TrainerBlackbeltKenji:
 	checkevent EVENT_KENJI_ON_BREAK
 	iffalse .ckir_END_Kenji
 	scall Route45GiftM
-.ckir_END_Kenji:
+.ckir_END_Kenji::
 	verbosegiveitem PP_UP
 	iffalse .NoRoom
 	clearevent EVENT_KENJI_ON_BREAK
