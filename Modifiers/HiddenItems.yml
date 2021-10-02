@@ -2,6 +2,8 @@ Name: Hidden Items
 Description: Adds hidden items to the randomization
 FlagsSet:
     - Hidden Items
+NewGamePatches:
+    - 'Patches/MoveBlockedHiddenItems.json'
 Changes:
     -
         Location: Hidden Items

@@ -1,0 +1,34 @@
+[
+	{
+		"integer_values": {
+			"old": [
+				4
+			],
+			"new": [
+				5
+			]
+		},
+		"address_range": {
+			"begin": 461677,
+			"end": 461678
+		},
+		"label": "LakeOfRage.ckir_BEFORE_timed_events_WESLEYHIDDENITEM",
+		"description": "Shifts the hidden item from under Wesley"
+	},
+	{
+		"integer_values": {
+			"old": [
+				12
+			],
+			"new": [
+				11
+			]
+		},
+		"address_range": {
+			"begin": 1643470,
+			"end": 1643471
+		},
+		"label": "Route32.ckir_BEFORE_timed_events_FRIEDAHIDDENITEM",
+		"description": "Shift hidden item away from Frieda"
+	}
+]

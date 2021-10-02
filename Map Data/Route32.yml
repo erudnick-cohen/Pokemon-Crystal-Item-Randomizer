@@ -231,7 +231,6 @@ Location:
                 LocationReqs: Route 32
                 FlagReqs:
                     - Hidden Items
-                    - Timed Events
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
