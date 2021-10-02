@@ -24,8 +24,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		super(RunWindow, self).__init__(parent)
 		self.setupUi(self)
 		_translate = QtCore.QCoreApplication.translate
-		yamlfile = open('RandomizerConfig.yml',Loader=yaml.FullLoader,encoding='utf-8')
-		yamltext = yaml.load(yamlfile)
+		yamlfile = open('RandomizerConfig.yml',encoding='utf-8')
+		yamltext = yaml.load(yamlfile,Loader=yaml.FullLoader)
 		self.loadSettings(yamltext['DefaultSettings'])
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
 		self.ChooseSettings.clicked.connect(self.selectLogicSettings)

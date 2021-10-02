@@ -33,8 +33,8 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	for groot, gdir, gfiles  in os.walk("Gym Data"):
 		for gfile in gfiles:
 			print("File: "+gfile)
-			entry = open(path+"//Gym Data//"+gfile,'r',Loader=yaml.FullLoader,encoding='utf-8')
-			yamlData = yaml.load(entry)
+			entry = open(path+"//Gym Data//"+gfile,'r',encoding='utf-8')
+			yamlData = yaml.load(entry,Loader=yaml.FullLoader)
 
 			print("Locations in file are:")
 			for location in yamlData["Location"]:
