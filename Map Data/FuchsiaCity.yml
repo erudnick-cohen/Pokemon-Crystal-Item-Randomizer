@@ -13,8 +13,31 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Fuchsia
         Sublocations:
+            -
+                Name: Fuchsia City Burnt Berry
+                FileName: FuchsiaCity.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Fuchsia City
+                FlagReqs:
+                    - Hive Badge
+                    - Berry Trees
+                ItemReqs:
+                    - Cut
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: BURNT_BERRY
+                IsBerry: Yes
+                BerryFlag: 285
+                Code: |
+                    FuchsiaCityFruitTree:
+                        ITEMLINE
     -
         Name: Fuchsia City Entrance
         FileName: FuchsiaCity.asm
@@ -48,25 +71,3 @@ Location:
         TrainerList: 
         Sublocations:
         
-    -   
-        Name: Fuchsia City Burnt Berry
-        FileName: FuchsiaCity.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList:
-        LocationReqs: Fuchsia City
-        FlagReqs:
-            -   Hive Badge
-            -   Berry Trees
-        ItemReqs:
-            -   Cut
-        FlagsSet:
-        ReachableReqs:
-        Text:
-        TrainerList:
-        NormalItem: BURNT_BERRY
-        IsBerry: Yes
-        BerryFlag: 285
-        Code: |
-          FuchsiaCityFruitTree:
-              ITEMLINE

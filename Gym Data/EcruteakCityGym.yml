@@ -13,6 +13,12 @@ Location:
         ItemUnlock: Surf
         InfeasibleBadges:
         NormalBadge: Fog Badge
+        HintName: Ecruteak
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Ecruteak
         BadgeLine: |
             EcruteakGymMortyScript:
                 faceplayer

@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: New Bark
         Sublocations:
             -
                 Name: Elm Aide Potion
@@ -158,6 +159,10 @@ Location:
                 ItemReqs:
                 FlagsSet: 
                 ReachableReqs:
+                Tags:
+                    -
+                        Name: Annoying
+                        SubTags:
                 Text: |
                     ElmGiveTicketText1:
                         text "ELM: <PLAY_G>!"
@@ -183,4 +188,32 @@ Location:
                         writetext ElmGiveTicketText2
                         waitbutton
                         closetext
+                        end
+            -             
+                Name: Elm Everstone
+                FileName: ElmsLab.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Elm's Lab
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Togepi
+                ReachableReqs:
+                Text:
+                NormalItem: EVERSTONE
+                TrainerList: 
+                Code: |
+                    ElmGiveEverstoneScript:
+                        writetext ElmGiveEverstoneText1
+                        promptbutton
+                        ITEMLINE
+                        iffalse ElmScript_NoRoomForEverstone
+                        writetext ElmGiveEverstoneText2
+                        waitbutton
+                        closetext
+                        setevent EVENT_GOT_EVERSTONE_FROM_ELM
                         end

@@ -39,7 +39,8 @@ Location:
             - FISHER 1
             - FISHER 2
             - YOUNGSTER 4
-            - BIRD_KEEPER 13         
+            - BIRD_KEEPER 13
+        HintName: Route 32
         Sublocations:
             -
                 Name: Miracle Seed Man
@@ -145,9 +146,7 @@ Location:
                 WildTableList: 
                 LocationReqs: Route 32
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REPEL

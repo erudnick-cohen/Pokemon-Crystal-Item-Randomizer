@@ -1,4 +1,4 @@
-Name: Crazy Chaos
+Name: Crazy Logic
 Description: Most items which require daily events, day-night events or happiness checks are are included under these settings. This includes the berry trees. Issues encountered with these items should be reported to Choatix, and not ERC or Vicendithas. Read the modifiers to further understand how this differs from standard and tricky. Hidden items are NOT included in the item pool. Expected completion time is between 20 minutes and 4 hours for experienced players. Items and badges are shuffled interchangably. Gyms may not be required to beat the game. This mode allows for the largest number of skips relative to any other mode. It is strongly recommended that the emotracker package for Crystal Full Item Rando is used, unless you're certain you've memorized every item location. All items and badges (item balls, gift items, TMs, HMs, key items, pokegear cards, pokedex, berry trees, etc...) in the game have their locations randomly shuffled. Remember, you can't spell crazy without any trees.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
@@ -27,7 +27,7 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
 BannedLocations:
 AllowedLocations:
-Goal: Mt. Silver
+Goal: Red
 FlagsSet:
     - Kanto Mode
     - Sane Extreme E4 Access

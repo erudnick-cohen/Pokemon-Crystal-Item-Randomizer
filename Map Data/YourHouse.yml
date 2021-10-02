@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: New Bark
         Sublocations:
             -
                 Name: Pokegear Gift

@@ -16,6 +16,7 @@ Location:
         AREALV: 16
         TrainerList:
             - MYSTICALMAN 1
+        HintName: Cianwood
         Sublocations:
             -
                 Name: Secret Potion Man

@@ -170,7 +170,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						nLeft = 0
 				legal = True
 				#don't attempt to put badges in mt. silver
-				if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet):
+				if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 					placeable = False
 				#is it the right type of location?
 				#print(locList[iter].Name)
@@ -451,8 +451,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if(plandoPlacements[i] in spoiler and spoiler[plandoPlacements[i]] != i):
 			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 			raise Exception('Did not match plando placements!!!')
-			
+
+	#Activate delete fly if needed
+		if('Delete Fly' in inputFlags):
+			for i in reachable.values():
+				if i.isItem():
+					#print(i.Name)
+					#print('item is: '+str(i.item))
+					if i.item == 'Fly':
+						#print('deleted fly')
+						i.item = 'BERRY'
+
 	changes = RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
+
 
 	for change in changes.keys():
 		if change in trashSpoiler:
@@ -467,4 +478,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('illegal')
 	#print('remaining')
 	#print(trashItems)
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict)

@@ -12,7 +12,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Dark Cave
         Sublocations: 
              -
                 Name: Dark Cave Blackthorn Revive

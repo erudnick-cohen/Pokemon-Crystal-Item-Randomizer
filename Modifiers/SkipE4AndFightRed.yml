@@ -1,9 +1,8 @@
-Name: Skip E4 and fight red
-Description: Allows the player to fight red without needing to also defeat the elite 4
+Name: Skip E4 and fight Red
+Description: Allows the player to fight Red without needing to also defeat the Elite 4. Do not use this modifier with the Open Mt. Silver modifier.
 NewGamePatches:
     - 'Patches/RedWithoutE4.json'
 Changes:
     -
-        Location: Mt. Silver
-        NewFlagReqs:
-            - Mt. Silver Unlock
+        Location: Red
+        NewFlagReqs: []

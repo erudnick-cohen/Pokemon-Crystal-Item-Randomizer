@@ -27,7 +27,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Azalea
         Sublocations:
             -
                 Name: Azalea Town Rival Battle

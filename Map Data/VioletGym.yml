@@ -12,7 +12,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        HintName: Violet
         Sublocations:
             -
                 Name: Falkner TM
@@ -26,6 +27,11 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_MUD_SLAP
+                Tags:
+                    -
+                        Name: Leader
+                        SubTags:
+                            - Violet
                 Code: |
                     .FightDone:
                         checkevent EVENT_GOT_TM31_MUD_SLAP

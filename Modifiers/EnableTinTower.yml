@@ -12,4 +12,5 @@ Changes:
             - Fog Badge
     -
         Location: Tin Tower
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible

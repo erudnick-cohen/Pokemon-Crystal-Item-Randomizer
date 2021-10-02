@@ -84,6 +84,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        HintName: Olivine
         Sublocations:
             -
                 Name: Olivine Strength HM
@@ -175,6 +176,10 @@ Location:
                     - Surf
                 FlagsSet:
                 ReachableReqs:
+                Tags:
+                      -
+                        Name: Annoying
+                        SubTags:
                 NormalItem: PROTEIN
                 Code: |
                     OlivinePortHiddenProtein:

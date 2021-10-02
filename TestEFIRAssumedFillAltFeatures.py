@@ -21,11 +21,12 @@ modFileList.append('Modifiers/AllTypeBoostersAvailable.yml')
 modFileList.append('Modifiers/DontReplaceGoodItems.yml')
 #modFileList.append('Modifiers/TeleportInsteadOfFly.yml')
 modFileList.append('Modifiers/IncludeEvilChecks.yml')
+modFileList.append('Modifiers/DeleteFly.yml')
 
 
 modList = []
 plandoPlacements = {"Pokegear Gift" : "Squirtbottle", "Route 29 Potion" : "Radio Card", "Route 30 Berry Man" : "Expansion Card", "Violet City Gym Badge": "Storm Badge", "Falkner TM" : "Fly", "Route 31 Pokeball" : "Cut", 'Goldenrod City Gym' : "Hive Badge", "Route 30 Antidote" : "Pass", 'Azalea Town Gym Badge': 'Fog Badge', 'Buena Item': "Pokegear"}
-#plandoPlacements = {'Celadon City Gym Badge':'Fog Badge' }
+plandoPlacements = {"Pokegear Gift" : "Fly"}
 #plandoPlacements = {}
 #CoreProgress = ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge']
 for i in modFileList:

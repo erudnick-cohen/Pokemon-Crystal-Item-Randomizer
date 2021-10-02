@@ -157,7 +157,8 @@ Location:
                 line "in your way, just"
                 cont "smash 'em up!"
                 done
-        TrainerList: 
+        TrainerList:
+        HintName: Route 36
         Sublocations:
         
     -
@@ -196,3 +197,26 @@ Location:
                     para "It pumps up rock-"
                     line "type attacks."
                     done
+    -
+            Name: Route 36 Schoolboy Alan Fire Stone
+            FileName: Route36.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList: 
+            LocationReqs: Route 36 via Violet
+            FlagReqs:
+                - Phone Call Trainers
+            ItemReqs:
+                - Pokegear
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FIRE_STONE
+            Code: |
+                .GiveFireStone:
+                    scall .Gift
+                    ITEMLINE
+                    iffalse .BagFull
+                    clearflag ENGINE_ALAN_HAS_FIRE_STONE
+                    setevent EVENT_ALAN_GAVE_FIRE_STONE
+                    sjump .NumberAccepted
+            Text:

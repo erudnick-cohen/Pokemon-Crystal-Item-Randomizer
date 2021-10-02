@@ -12,6 +12,12 @@ Location:
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
+        Tags:
+           -
+                Name: Leader
+                SubTags:
+                    - Cianwood
+        HintName: Cianwood
         NormalBadge: Storm Badge
         BadgeLine: |
             CianwoodGymChuckScript:

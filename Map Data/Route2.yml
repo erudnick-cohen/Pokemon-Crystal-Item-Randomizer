@@ -121,7 +121,8 @@ Location:
         Code: 
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
+        HintName: Route 2
     -
         Name: Route 2 Post Cut via Route 2
         FileName: Route2.asm
@@ -139,7 +140,8 @@ Location:
         Code: 
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
+        HintName: Route 2
     -
         Name: Route 2 Post Cut Entrance
         FileName: Route2.asm
@@ -161,6 +163,7 @@ Location:
         Code: 
         Text:
         AREALV: 32
+        HintName: Route 2
         TrainerList: 
     -
         Name: Route 2 Post Cut via Viridian
@@ -204,6 +207,7 @@ Location:
             - BUG_CATCHER 2
             - BUG_CATCHER 12
             - BUG_CATCHER 3
+        HintName: Route 2
         Sublocations:
             -
                 Name: Route 2 Dire Hit

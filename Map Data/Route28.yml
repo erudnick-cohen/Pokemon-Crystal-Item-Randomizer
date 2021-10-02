@@ -1,0 +1,71 @@
+Location:
+    -
+        Name: Route 28
+        FileName: Route28.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs:
+            - Mt. Silver Unlock
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 28 Steel Wing TM
+        FileName: Route28SteelWingHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_28
+        LocationReqs:
+            - Route 28
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: TM_STEEL_WING
+        Code: |
+            Celebrity:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_TM47_STEEL_WING
+                iftrue .AlreadyGotItem
+                writetext CelebrityText1
+                promptbutton
+                ITEMLINE
+                iffalse .Done
+                setevent EVENT_GOT_TM47_STEEL_WING
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Route 28 Hidden Rare Candy
+        FileName: Route28.asm
+        SecondaryFile: Route28.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Route 28
+        FlagReqs:
+            - Hidden Items
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: RARE_CANDY
+        Code: |
+            Route28HiddenRareCandy:
+                ITEMLINE
+        SecondaryCode: '    bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy'
+        Text:
+        TrainerList: 
+        Sublocations:

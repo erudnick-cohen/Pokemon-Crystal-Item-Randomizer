@@ -14,6 +14,12 @@ Location:
         ItemUnlock:
         InfeasibleBadges:
         NormalBadge: Boulder Badge
+        HintName: Pewter
+        Tags:
+            -
+                Name: Leader
+                SubTags:
+                    - Pewter
         BadgeLine: |
             PewterGymBrockScript:
                 faceplayer

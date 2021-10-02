@@ -142,3 +142,69 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Lighthouse Jasmine
+                FileName: OlivineLighthouse5F.asm
+                SecondaryFile: OlivineLighthouse5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lighthouse
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Lighthouse
+                ReachableReqs:
+                Text:
+                Code:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Lighthouse Amphy
+                FileName: OlivineLighthouse5F.asm
+                SecondaryFile: OlivineLighthouse5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lighthouse Jasmine
+                FlagReqs:
+                ItemReqs:
+                    - Secret Potion
+                FlagsSet:
+                    - Amphy Healed
+                ReachableReqs:
+                Text:
+                Code:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Lighthouse Sailor Huey Water Stone
+                FileName: OlivineLighthouse2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Lighthouse
+                    - Power Plant Activated
+                    - Elite Four
+                    - Radio Tower Rockets Part 2
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: Protein
+                Code: |
+                    .HasProtein:
+                        opentext
+                        writetext SailorHueyGiveProteinText
+                        waitbutton
+                        ITEMLINE
+                        iffalse .PackFull
+                        clearevent EVENT_HUEY_PROTEIN
+                        setevent EVENT_GOT_PROTEIN_FROM_HUEY
+                        sjump .NumberAccepted
+                Text:
+                TrainerList: 
+                Sublocations:

@@ -1,85 +1,44 @@
 Location:
     -
-        Name: Route 28 Steel Wing TM
-        FileName: Route28SteelWingHouse.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList:
-            - ROUTE_28
-        LocationReqs:
-            - Mt. Silver Unlock
-            - Became Champion
-        FlagReqs:
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        NormalItem: TM_STEEL_WING
-        Code: |
-            Celebrity:
-                faceplayer
-                opentext
-                checkevent EVENT_GOT_TM47_STEEL_WING
-                iftrue .AlreadyGotItem
-                writetext CelebrityText1
-                promptbutton
-                ITEMLINE
-                iffalse .Done
-                setevent EVENT_GOT_TM47_STEEL_WING
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 28 Hidden Rare Candy
-        FileName: Route28.asm
-        SecondaryFile: Route28.asm
-        Type: Item
-        HasPKMN: No
-        WildTableList:
-        LocationReqs:
-            - Mt. Silver Unlock
-            - Became Champion
-        FlagReqs:
-            - Hidden Items
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        NormalItem: RARE_CANDY
-        Code: |
-            Route28HiddenRareCandy:
-                ITEMLINE
-        SecondaryCode: '    bg_event 25,  2, BGEVENT_ITEM, Route28HiddenRareCandy'
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Mt. Silver Outside Hidden Full Restore
+        Name: Mt. Silver Outside
         FileName: SilverCaveOutside.asm
-        SecondaryFile: SilverCaveOutside.asm
-        Type: Item
+        Type: Map
         HasPKMN: No
-        WildTableList:
+        WildTableList: 
         LocationReqs:
-            - Mt. Silver Unlock
-            - Became Champion
+            - Route 28
         FlagReqs:
-            - Hidden Items
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
-        NormalItem: FULL_RESTORE
-        Code: |
-            SilverCaveOutsideHiddenFullRestore:
-                ITEMLINE
-        SecondaryCode: '    bg_event  9, 25, BGEVENT_ITEM, SilverCaveOutsideHiddenFullRestore'
+        Code:
         Text:
         TrainerList: 
         Sublocations:
+        -
+            Name: Mt. Silver Outside Hidden Full Restore
+            FileName: SilverCaveOutside.asm
+            SecondaryFile: SilverCaveOutside.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs:
+                - Mt. Silver Outside
+            FlagReqs:
+                - Hidden Items
+                - Fog Badge
+            ItemReqs:
+                - Surf
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FULL_RESTORE
+            Code: |
+                SilverCaveOutsideHiddenFullRestore:
+                    ITEMLINE
+            SecondaryCode: '    bg_event  9, 25, BGEVENT_ITEM, SilverCaveOutsideHiddenFullRestore'
+            Text:
+            TrainerList: 
+            Sublocations:
     -
         Name: Mt. Silver
         FileName: SilverCaveOutside.asm
@@ -92,10 +51,8 @@ Location:
             - SILVER_CAVE_ROOM_3
             - SILVER_CAVE_ITEM_ROOMS
         LocationReqs:
-            - Route 22
+            - Mt. Silver Outside
         FlagReqs:
-            - Mt. Silver Unlock
-            - Became Champion
             - Zephyr Badge
         ItemReqs:
             - Flash
@@ -107,7 +64,6 @@ Location:
         TrainerList: 
             - RED 1
         Sublocations:
-
             -
                 Name: Mt. Silver Max Elixer
                 FileName: SilverCaveRoom1.asm
@@ -175,7 +131,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Ultra Ball
+                Name: Mt. Silver 1F Ultra Ball
                 FileName: SilverCaveRoom1.asm
                 Type: Item
                 HasPKMN: No
@@ -275,7 +231,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Mt. Silver Other Ultra Ball
+                Name: Mt. Silver 2F Ultra Ball
                 FileName: SilverCaveRoom2.asm
                 Type: Item
                 HasPKMN: No
@@ -305,8 +261,12 @@ Location:
                 LocationReqs:
                     - Mt. Silver
                 FlagReqs:
+                    - Fog Badge
+                    - Rising Badge
                     - Zephyr Badge
                 ItemReqs:
+                    - Surf
+                    - Waterfall
                     - Flash
                 FlagsSet:
                 ReachableReqs:
@@ -384,6 +344,23 @@ Location:
                     SilverCaveRoom2HiddenMaxPotion:
                         ITEMLINE
                 SecondaryCode: '    bg_event 14, 31, BGEVENT_ITEM, SilverCaveRoom2HiddenMaxPotion'
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Red
+                FileName: SilverCaveRoom3.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs:
+                    - Mt. Silver
+                FlagReqs:
+                    - Become Champion
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
                 Text:
                 TrainerList: 
                 Sublocations:

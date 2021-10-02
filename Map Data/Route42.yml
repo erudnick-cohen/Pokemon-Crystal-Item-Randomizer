@@ -34,6 +34,31 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Route 42 Fisherman Tully 
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Route 42
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: WATER_STONE
+                Code: |
+                    .HasWaterStone:
+                        scall .Gift
+                        ITEMLINE
+                        iffalse .NoRoom
+                        clearflag ENGINE_TULLY_HAS_WATER_STONE
+                        setevent EVENT_TULLY_GAVE_WATER_STONE
+                        sjump .NumberAccepted
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
                 Name: Route 42 Middle Island Super Potion
                 FileName: Route42.asm
                 Type: Item
