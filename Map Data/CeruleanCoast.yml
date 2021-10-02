@@ -180,6 +180,9 @@ Location:
                         setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
                         closetext
                         end
+                Text:
+                TrainerList: 
+                Sublocations:
             -
                 Name: Bills Granpda Wants Staryu
                 FileName: BillsHouse.asm
