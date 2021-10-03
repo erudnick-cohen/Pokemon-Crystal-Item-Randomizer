@@ -25,8 +25,9 @@ def makePatches():
 				#find the relevant address data
 				addRange = []
 				for k in addrData:
-					if j['label'] == k["label"]:
-						j["address_range"] = k["address_range"]
+					if 'label' in j:
+						if j['label'] == k["label"]:
+							j["address_range"] = k["address_range"]
 			with open(r"Patches/"+i, 'w') as f:
 				json.dump(patchData, f)
 			
