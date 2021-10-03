@@ -154,24 +154,13 @@ Location:
                     - Pokegear
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: Berry
+                NormalItem: BERRY
                 IsBall: No
                 Code: |
                     .Berry:
                         ITEMLINE
                         iffalse .PackFull
                         sjump .Done
-                    .Psncureberry:
-                        ITEMLINE
-                        iffalse .PackFull
-                        sjump .Done
-                    .Przcureberry:
-                        ITEMLINE
-                        iffalse .PackFull
-                        sjump .Done
-                    .BitterBerry:
-                        ITEMLINE
-                        iffalse .PackFull
                 Text:
                 TrainerList: 
                 Sublocations:
