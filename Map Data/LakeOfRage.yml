@@ -121,15 +121,16 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Lake of Rage Detect TM
+                Name: Lake of Rage Big Magikarp Guy Elixer
                 FileName: LakeOfRageMagikarpHouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Route 43
+                LocationReqs:
+                    - Route 43
+                    - Most Map Access
                 FlagReqs:
                     - Mon Locked Checks
-                    - Most Map Access
                     - Fog Badge
                 ItemReqs:
                     - Surf
