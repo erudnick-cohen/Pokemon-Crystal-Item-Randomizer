@@ -129,6 +129,7 @@ Location:
                 LocationReqs:
                     - Route 43
                     - Most Map Access
+                    - Red Scale Dropped
                 FlagReqs:
                     - Mon Locked Checks
                     - Fog Badge

@@ -315,6 +315,7 @@ Location:
             -
                 Name: Route 30 Youngster Joey HP UP
                 FileName: Route30.asm
+                SecondaryFile: Route30.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -343,6 +344,16 @@ Location:
                         scall .RematchGift
                         ITEMLINE
                         iffalse .PackFull
+                        setevent EVENT_GOT_HP_UP_FROM_JOEY
+                        sjump .NumberAccepted
+                SecondaryCode: |
+                    .GiveHPUp:
+                        opentext
+                        writetext YoungsterJoeyText_GiveHPUpAfterBattle
+                        waitbutton
+                        ITEMLINE
+                        iffalse .PackFull
+                        clearevent EVENT_JOEY_HP_UP
                         setevent EVENT_GOT_HP_UP_FROM_JOEY
                         sjump .NumberAccepted
                 Text:

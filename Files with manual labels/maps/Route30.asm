@@ -69,11 +69,13 @@ TrainerYoungsterJoey:
 	scall .RematchStd
 	winlosstext YoungsterJoey1BeatenText, 0
 	readmem wJoeyFightCount
+.ckir_BEFORE_Joey
 	ifequal 4, .Fight4
-	ifequal 3, .Fight3
-	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	ifequal 3, .Fight4
+	ifequal 2, .Fight4
+	ifequal 1, .Fight4
+	ifequal 0, .Fight4
+.ckir_AFTER_Joey
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4

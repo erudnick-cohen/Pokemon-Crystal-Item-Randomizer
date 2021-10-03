@@ -160,7 +160,7 @@ Location:
                 WildTableList: 
                 LocationReqs:
                     - Route 25
-                    - Bills Granpda Wants Lickitung
+                    - Bills Grandpa Wants Lickitung
                     - Most Map Access
                 FlagReqs:
                     - Mon Locked Checks
@@ -191,7 +191,7 @@ Location:
                 WildTableList: 
                 LocationReqs:
                     - Route 25
-                    - Bills Granpda Wants Oddish
+                    - Bills Grandpa Wants Oddish
                     - Most Map Access
                 FlagReqs:
                     - Mon Locked Checks
@@ -222,7 +222,7 @@ Location:
                 WildTableList: 
                 LocationReqs:
                     - Route 25
-                    - Bills Granpda Wants Staryu
+                    - Bills Grandpa Wants Staryu
                     - Most Map Access
                 FlagReqs:
                     - Mon Locked Checks
@@ -253,7 +253,7 @@ Location:
                 WildTableList: 
                 LocationReqs:
                     - Route 25
-                    - Bills Granpda Wants Vulpix
+                    - Bills Grandpa Wants Vulpix
                     - Most Map Access
                 FlagReqs:
                     - Mon Locked Checks

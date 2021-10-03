@@ -128,6 +128,7 @@ Location:
             -
                 Name: Route 44 Bird Keeper Vance Carbos
                 FileName: Route44.asm
+                SecondaryFile: Route44.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -151,6 +152,21 @@ Location:
                         ITEMLINE
                         iffalse VancePackFull
                         clearevent EVENT_VANCE_CARBOS
+                        setevent EVENT_GOT_CARBOS_FROM_VANCE
+                        sjump Route44NumberAcceptedM
+                SecondaryCode: |
+                    .LoadFight2:
+                        loadtrainer BIRD_KEEPER, VANCE3
+                        startbattle
+                        reloadmapafterbattle
+                        clearflag ENGINE_VANCE
+                        checkevent EVENT_VANCE_CARBOS
+                        iftrue .Carbos
+                        checkevent EVENT_GOT_CARBOS_FROM_VANCE
+                        iftrue .ReceivedCarbosBefore
+                        scall Route44RematchGiftM
+                        ITEMLINE
+                        iffalse VancePackFull
                         setevent EVENT_GOT_CARBOS_FROM_VANCE
                         sjump Route44NumberAcceptedM
                 Text:

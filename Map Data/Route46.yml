@@ -133,6 +133,7 @@ Location:
     -   
         Name: Route 46 Picknicker Erin
         FileName: Route46.asm
+        SecondaryFile: Route46.asm
         Type: Item
         HasPKMN: No
         WildTableList:
@@ -157,5 +158,20 @@ Location:
                 ITEMLINE
                 iffalse ErinNoRoomForCalcium
                 clearevent EVENT_ERIN_CALCIUM
+                setevent EVENT_GOT_CALCIUM_FROM_ERIN
+                sjump Route46NumberAcceptedF
+        SecondaryCode: |
+            .LoadFight2:
+                loadtrainer PICNICKER, ERIN3
+                startbattle
+                reloadmapafterbattle
+                clearflag ENGINE_ERIN
+                checkevent EVENT_ERIN_CALCIUM
+                iftrue .HasCalcium
+                checkevent EVENT_GOT_CALCIUM_FROM_ERIN
+                iftrue .GotCalciumAlready
+                scall Route46RematchGiftF
+                ITEMLINE
+                iffalse ErinNoRoomForCalcium
                 setevent EVENT_GOT_CALCIUM_FROM_ERIN
                 sjump Route46NumberAcceptedF

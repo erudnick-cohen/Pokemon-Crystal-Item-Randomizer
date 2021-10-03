@@ -31,7 +31,8 @@ def ResetRomForLabelling():
 		for file in files:
 			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
 	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
-	shutil.copy("Files with manual labels/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
+	shutil.copy("Files with manual labels/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm")
+	shutil.copy("Files with manual labels/events/tmhm_moves.asm","RandomizerRom/data/events/magikarp_lengths.asm")
 
 def WriteOakBadgeCheckNumber(number, addressData, gameFile):
 	#get where this is

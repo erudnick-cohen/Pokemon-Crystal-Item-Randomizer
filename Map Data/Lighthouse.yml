@@ -180,6 +180,7 @@ Location:
             -
                 Name: Lighthouse Sailor Huey Protein
                 FileName: OlivineLighthouse2F.asm
+                SecondaryFile: OlivineLighthouse2F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
@@ -203,6 +204,21 @@ Location:
                         ITEMLINE
                         iffalse .PackFull
                         clearevent EVENT_HUEY_PROTEIN
+                        setevent EVENT_GOT_PROTEIN_FROM_HUEY
+                        sjump .NumberAccepted
+                SecondaryCode: |
+                    .LoadFight3:
+                        loadtrainer SAILOR, HUEY4
+                        startbattle
+                        reloadmapafterbattle
+                        clearflag ENGINE_HUEY
+                        checkevent EVENT_HUEY_PROTEIN
+                        iftrue .HasProtein
+                        checkevent EVENT_GOT_PROTEIN_FROM_HUEY
+                        iftrue .SkipGift
+                        scall .RematchGift
+                        ITEMLINE
+                        iffalse .PackFull
                         setevent EVENT_GOT_PROTEIN_FROM_HUEY
                         sjump .NumberAccepted
                 Text:
