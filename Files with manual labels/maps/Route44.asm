@@ -53,7 +53,7 @@ TrainerBirdKeeperVance1:
 	ifequal 2, .Fight2
 	ifequal 1, .Fight2
 	ifequal 0, .Fight2
-ckir_AFTER_Vance::
+.ckir_AFTER_Vance::
 .Fight2:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
