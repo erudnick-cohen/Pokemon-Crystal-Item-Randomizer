@@ -49,12 +49,12 @@ TrainerSailorHuey:
 	scall .Rematch
 	winlosstext SailorHueyBeatenText, 0
 	readmem wHueyFightCount
-.ckir_BEFORE_Huey
+.ckir_BEFORE_Huey::
 	ifequal 3, .Fight3
 	ifequal 2, .Fight3
 	ifequal 1, .Fight3
 	ifequal 0, .Fight3
-.ckir_AFTER_Huey
+.ckir_AFTER_Huey::
 .Fight3:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
