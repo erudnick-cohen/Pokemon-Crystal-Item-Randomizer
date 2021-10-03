@@ -123,15 +123,15 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Bills Granpda Wants Lickitung
+                Name: Bills Grandpa Wants Lickitung
                 FileName: BillsHouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
                     - Route 25
-                FlagReqs:
                     - Most Map Access
+                FlagReqs:
                     - Mon Locked Checks
                 ItemReqs:
                 FlagsSet:
@@ -153,7 +153,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Bills Granpda Wants Oddish
+                Name: Bills Grandpa Wants Oddish
                 FileName: BillsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -161,8 +161,8 @@ Location:
                 LocationReqs:
                     - Route 25
                     - Bills Granpda Wants Lickitung
-                FlagReqs:
                     - Most Map Access
+                FlagReqs:
                     - Mon Locked Checks
                 ItemReqs:
                 FlagsSet:
@@ -184,7 +184,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Bills Granpda Wants Staryu
+                Name: Bills Grandpa Wants Staryu
                 FileName: BillsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -192,8 +192,8 @@ Location:
                 LocationReqs:
                     - Route 25
                     - Bills Granpda Wants Oddish
-                FlagReqs:
                     - Most Map Access
+                FlagReqs:
                     - Mon Locked Checks
                 ItemReqs:
                 FlagsSet:
@@ -215,7 +215,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Bills Granpda Wants Vulpix
+                Name: Bills Grandpa Wants Vulpix
                 FileName: BillsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -223,8 +223,8 @@ Location:
                 LocationReqs:
                     - Route 25
                     - Bills Granpda Wants Staryu
-                FlagReqs:
                     - Most Map Access
+                FlagReqs:
                     - Mon Locked Checks
                 ItemReqs:
                 FlagsSet:
@@ -246,7 +246,7 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Bills Granpda Wants Pichu
+                Name: Bills Grandpa Wants Pichu
                 FileName: BillsHouse.asm
                 Type: Item
                 HasPKMN: No
@@ -254,8 +254,8 @@ Location:
                 LocationReqs:
                     - Route 25
                     - Bills Granpda Wants Vulpix
-                FlagReqs:
                     - Most Map Access
+                FlagReqs:
                     - Mon Locked Checks
                 ItemReqs:
                 FlagsSet:
