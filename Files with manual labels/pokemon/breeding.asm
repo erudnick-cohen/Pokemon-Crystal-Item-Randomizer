@@ -234,7 +234,7 @@ HatchEggs:
 	ld [wCurPartySpecies], a
 	dec a
 	call SetSeenAndCaughtMon
-.ckir_BEFORE_TOGEPIFLAG
+.ckir_BEFORE_TOGEPIFLAG::
 	ld a, [wCurPartySpecies]
 	cp TOGEPI
 	jr nz, .nottogepi
@@ -243,7 +243,7 @@ HatchEggs:
 	ld de, EVENT_TOGEPI_HATCHED
 	ld b, SET_FLAG
 	call EventFlagAction
-ckir_AFTER_TOGEPIFLAG
+.ckir_AFTER_TOGEPIFLAG::
 	pop de
 
 	ld a, [wCurPartySpecies]
