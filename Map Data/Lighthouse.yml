@@ -178,7 +178,7 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Lighthouse Sailor Huey Water Stone
+                Name: Lighthouse Sailor Huey Protein
                 FileName: OlivineLighthouse2F.asm
                 Type: Item
                 HasPKMN: No
@@ -194,7 +194,7 @@ Location:
                     - Pokegear
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: Protein
+                NormalItem: PROTEIN
                 Code: |
                     .HasProtein:
                         opentext
