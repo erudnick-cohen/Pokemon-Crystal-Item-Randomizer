@@ -30,4 +30,5 @@ Changes:
             - Impossible
     -
         Location: Red
-        NewFlagReqs: []
+        NewFlagReqs:
+            - All Badges
