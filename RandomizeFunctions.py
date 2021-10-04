@@ -953,7 +953,7 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
         for m in unusedHint.messages:
             message += m.text.strip() + " "
 
-        print("unused:", message)
+        #print("unused:", message)
 
     return useHints
 
@@ -1383,7 +1383,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
             itemToReq.append(HintMessage("nothingf", None, i, True))
         notRequiredFlags.append(i)
 
-    print(notRequiredFlags)
+    #print(notRequiredFlags)
 
     for x in maybeRequiredFlags:
         flagRequired = isRequired(x, flagMapping, notRequiredItems, notRequiredFlags)
