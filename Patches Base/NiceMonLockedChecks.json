@@ -1,0 +1,26 @@
+[
+    {
+        "integer_values": {
+            "old": [1, 0, 1, 2, 0, 2, 3, 0, 4, 4, 0, 20, 5, 0, 50, 6, 0, 100, 7, 0, 150, 8, 0, 150, 198, 127, 100, 246, 244, 50, 198, 252, 20, 186, 254, 5, 130, 255, 2, 230, 255, 1],
+            "new": [1, 0, 1, 2, 0, 2, 3, 0, 4, 4, 0, 20, 5, 0, 50, 6, 0, 100, 7, 0, 150, 8, 0, 150, 198, 127, 100, 246, 244, 50, 198, 252, 20, 186, 254, 5, 130, 255, 2, 230, 255, 1]
+        },
+        "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "MagikarpLengths.ckir_BEFORE_MAGIKARPLENGTH",
+        "description": "Lengthens Magikarps"
+    },
+    {
+        "integer_values": {
+            "old": [250, 8, 209, 254, 175, 32, 0, 17, 84, 0, 6, 1, 205, 55, 47],
+            "new": [250, 8, 209, 254, 175, 32, 0, 17, 84, 0, 6, 1, 205, 55, 47]
+        },
+        "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "HatchEggs.ckir_BEFORE_TOGEPIFLAG",
+        "description": "Makes it so you can hatch any egg, rather than just a togepi egg"
+    }
+]
