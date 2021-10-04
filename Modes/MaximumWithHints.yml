@@ -31,7 +31,7 @@ DefaultModifiers:
 BannedLocations:
 AllowedLocations:
 HintLevel: 2
-nHints: 25
+nHints: 75
 Goal: Red
 FlagsSet:
     - Kanto Mode

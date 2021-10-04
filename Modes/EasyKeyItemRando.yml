@@ -1,5 +1,5 @@
 Name: Easy KIR
-Description: All HMs and Key Items are randomized. All badges are also shuffled. The easiest possible item randomizer setting. Recommended for new players that are nervous about randomizing the entire item pool.
+Description: All HMs and Key Items are randomized. All badges are also shuffled. The easiest possible item randomizer setting. Recommended for new players that are nervous about randomizing the entire item pool. Hints are provided to help you out, these are located on signs throughout the game.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
@@ -71,5 +71,7 @@ AllowedLocations:
     - Super Rod Guru
     - Silver Wing Old Man
 Goal: Red
+HintLevel: 5
+nHints: 75
 FlagsSet:
     - Kanto Mode

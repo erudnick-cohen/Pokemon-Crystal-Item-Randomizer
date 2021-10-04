@@ -1,5 +1,5 @@
 Name: Easy Logic
-Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings. Various settings are in place to makes things easier for new players.
+Description: All items (item balls, gift items, TMs, HMs, key items, etc...) in the game have their locations randomly shuffled. All badges in the game are also shuffled as well. All items which require daily events, day-night events or happiness checks are NOT included under these settings. Various settings are in place to makes things easier for new players. Hints are provided to help you out, these are located on signs throughout the game.
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
@@ -28,6 +28,8 @@ DefaultModifiers:
     - Modifiers/UpgradeHealingItems.yml
     - Modifiers/UpgradeValuableItems.yml
     - Modifiers/UpgradeBalls.yml
+HintLevel: 5
+nHints: 75
 BannedLocations:
 AllowedLocations:
 Goal: Red
