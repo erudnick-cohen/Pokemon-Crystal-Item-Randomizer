@@ -57,8 +57,8 @@ TrainerPicnickerErin1:
 	readmem wErinFightCount
 .ckir_BEFORE_Erin::
 	ifequal 2, .Fight2
-	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	ifequal 1, .Fight2
+	ifequal 0, .Fight2
 .ckir_AFTER_Erin::
 .Fight2:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
