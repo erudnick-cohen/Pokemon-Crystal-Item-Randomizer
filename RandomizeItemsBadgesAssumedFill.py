@@ -476,7 +476,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if change in trashSpoiler:
 			trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]
 
-	if len(trashItems) > 0 and not randomizerFailed:
+	#if len(trashItems) > 0 and not randomizerFailed:
 		#print(len(trashItems), trashItems)
 
 	#print(stateDist)
