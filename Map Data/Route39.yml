@@ -161,7 +161,9 @@ Location:
                 WildTableList:
                 LocationReqs: 
                     - Route 39
+                    - Most Map Access
                 FlagReqs:
+                    - Mon Locked Checks
                     - Phone Call Trainers
                 ItemReqs:
                     - Pokegear
@@ -169,6 +171,7 @@ Location:
                 ReachableReqs:
                 Text:
                 TrainerList:
+                MonReq: Pikachu
                 NormalItem: NUGGET
                 Code: |
                     .HasNugget:
