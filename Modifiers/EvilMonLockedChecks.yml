@@ -1,0 +1,8 @@
+Name: Evil Mon Locked Checks
+Description: Adds in evil items that require you to show someone certain pokemon. These are the Big Magikarp guy at Lake of Rage (Magikarp, which are usually not long enough), Elm's Everstone (must hatch a Togepi egg), and Bill's Grandpa (Lickitung, Oddish, Staryu, Vulpix and Pichu, in that order)
+FlagsSet:
+    - Mon Locked Checks
+Changes:
+    -
+        Location: Mon Locked Checks
+        NewFlagReqs: []
