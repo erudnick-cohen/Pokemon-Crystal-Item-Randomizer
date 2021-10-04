@@ -45,6 +45,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.AddItem.clicked.connect(self.AddBonusItem)
 		self.View_Items.clicked.connect(self.RemoveBonusItem)
 		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
+		self.HintButton.clicked.connect(self.ProcessHintSettings)
 
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
@@ -95,9 +96,12 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
-
-			HINT_LEVEL = 1
-			MAX_HINTS = None
+			if 'HintLevel' in self.settings:
+				HINT_LEVEL = self.settings['HintLevel']
+				MAX_HINTS = self.settings['NHints']
+			else:
+				HINT_LEVEL = 0
+				MAX_HINTS = 0
 			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
 
 			copyfile(self.romPath, randomizedFileName)
@@ -156,6 +160,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def SetBadgeForSilver(self):
 		(nBadge, ok2) = QInputDialog.getInt(self,"How many badges will Mt. Silver unlock with?","How many badges will Mt. Silver unlock with?")
 		if nBadge <= 16 and ok2:
+			if nBadge <= 0:
+				error_dialog = QtWidgets.QErrorMessage()
+				error_dialog.showMessage("You must choose a number of badges greater than 1! Setting badge requirement to 1.")
+				error_dialog.exec_()
+				nBadge = 1
 			self.settings["SilverBadgeUnlockCount"] = nBadge
 			_translate = QtCore.QCoreApplication.translate
 			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(nBadge)+")"))
@@ -251,6 +260,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			_translate = QtCore.QCoreApplication.translate
 			self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n to unlock Mt. Silver? \n(Currently "+str(self.settings["SilverBadgeUnlockCount"])+")"))
 			QtGui.QGuiApplication.processEvents()
+		if 'HintLevel' in self.settings:
+			self.HintButton.setText(_translate("MainWindow", "Set Hints (LV: "+str(self.settings['HintLevel'])+" N"+str(self.settings['nHints'])+")"))
+			QtGui.QGuiApplication.processEvents()
 			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
@@ -312,6 +324,23 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage('A file was not selected!')
 			error_dialog.exec_()
+			
+	def ProcessHintSettings(self):
+		_translate = QtCore.QCoreApplication.translate
+		(option, ok1) = QInputDialog.getItem(self,"What hint level should be used?","What hint level should be used?",['0. No Hints', '1. Gym Signs', '2. All Signs', '3. More hints types', '4. Hint useless items'])
+		if ok1:
+			(nHints, ok2) = QInputDialog.getInt(self,"How many different hints?","How many different hints?")
+			if ok2:
+				self.settings['HintLevel'] = int(option[0])
+				self.settings['nHints'] = nHints
+				self.HintButton.setText(_translate("MainWindow", "Set Hints (LV: "+str(self.settings['HintLevel'])+" N"+str(self.settings['nHints'])+")"))
+				QtGui.QGuiApplication.processEvents()
+		else:
+			self.settings['HintLevel'] = 0
+			self.settings['nHints'] = 0
+			
+			self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
+			QtGui.QGuiApplication.processEvents()
 def main():
 	os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 	app = QApplication(sys.argv)
