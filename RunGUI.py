@@ -98,7 +98,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				randomizedFileName+=".gbc"
 			if 'HintLevel' in self.settings:
 				HINT_LEVEL = self.settings['HintLevel']
-				MAX_HINTS = self.settings['NHints']
+				MAX_HINTS = self.settings['nHints']
 			else:
 				HINT_LEVEL = 0
 				MAX_HINTS = 0
@@ -327,7 +327,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			
 	def ProcessHintSettings(self):
 		_translate = QtCore.QCoreApplication.translate
-		(option, ok1) = QInputDialog.getItem(self,"What hint level should be used?","What hint level should be used?",['0. No Hints', '1. Gym Signs', '2. All Signs', '3. More hints types', '4. Hint useless items'])
+		(option, ok1) = QInputDialog.getItem(self,"What hint level should be used?","What hint level should be used?",['0. No Hints', '1. Gym Signs', '2. Max one per location', '3. More hints types', '4. Hint useless items','5. Many hints everywhere', '6. Hints might be more useless than on 4'])
 		if ok1:
 			(nHints, ok2) = QInputDialog.getInt(self,"How many different hints?","How many different hints?")
 			if ok2 and int(option[0]) > 0:
