@@ -60,7 +60,7 @@ Location:
                 WildTableList:
                 LocationReqs: Cherrygrove City
                 FlagReqs:
-                    - Pointless Items
+                    - Pointless Checks
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ENGINE_MAP_CARD
