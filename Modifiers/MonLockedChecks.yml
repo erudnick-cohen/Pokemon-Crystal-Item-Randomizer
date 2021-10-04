@@ -1,0 +1,10 @@
+Name: Mon Locked Checks
+Description: Adds in items that require you to show someone certain pokemon. These are the Big Magikarp guy at Lake of Rage (Magikarp, now with extra length), Elm's Everstone (Togepi or Togetic and must also hatch one egg of any Pokemon), and Bill's Grandpa (Lickitung, Oddish, Staryu, Vulpix and Pichu, in that order)
+FlagsSet:
+    - Mon Locked Checks
+NewGamePatches:
+    - 'Patches/NiceMonLockedChecks.json'
+Changes:
+    -
+        Location: Mon Locked Checks
+        NewFlagReqs: []
