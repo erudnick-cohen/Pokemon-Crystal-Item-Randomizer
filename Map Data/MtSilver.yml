@@ -355,8 +355,8 @@ Location:
                 WildTableList: 
                 LocationReqs:
                     - Mt. Silver
+                    - Elite Four
                 FlagReqs:
-                    - Become Champion
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
