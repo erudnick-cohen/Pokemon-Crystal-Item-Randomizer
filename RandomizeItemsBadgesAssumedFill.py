@@ -8,6 +8,8 @@ import RandomizeFunctions
 
 
 def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
+	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
+	
 	random.seed(seed)
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
 	inputFlags.append('Ok')
@@ -401,7 +403,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							except ValueError:
 								pass
 						else:
-							i.item = trashItems.pop()
+							placeItem = trashItems.pop()
+							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):
+								oldItem = placeItem
+								placeItem = trashItems.pop()
+								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+							i.item = placeItem
 						trashSpoiler[i.Name] = i.item
 						i.IsGym = False
 						i.IsItem = True
@@ -470,7 +477,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]
 
 	if len(trashItems) > 0 and not randomizerFailed:
-		print(len(trashItems), trashItems)
+		#print(len(trashItems), trashItems)
 
 	#print(stateDist)
 	#print(spoiler)
