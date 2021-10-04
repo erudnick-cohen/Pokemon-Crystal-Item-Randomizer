@@ -7,7 +7,7 @@ This is an item (and badge) randomizer for the popular speedchoice mod of Pokemo
   * TMs + Key Items - All key items, TMs and HMs are randomized. Badges are also randomized, The goal is to defeat Red.
   * Vintage - All game behavior is (mostly) identical to vanilla Pokemon Crystal. Most item locations are randomized. Badges are also randomized. The goal is to defeat Red. 
 # Prerequisites to run the randomizer
-There is an .EXE version of the randomizer available under the releases page of this repository. If you have already downloaded this, then just run the "PokemonCrystalItemRandomize.exe" file provided in the zipped folder.
+There is an .EXE version of the randomizer available under the releases page of this repository. If you have already downloaded this, then just run the "PokemonCrystalItemRandomizer.exe" file provided in the zipped folder.
 Alternately, the randomizer can be run by installing python with the PyYAML and PyQt packages and then running "RunGUI.py", after you have downloaded the code in this branch.
 
 Note that this randomizer is ONLY compatible with the speedchoice mod of pokemon crystal, which can be obtained from the Pokemon Crystal Cinco Bingo discord page (link not provided due to legal reasons, google is your friend here). Note that if you want to also randomize the pokemon present in the game, you should use the speedchoice compatible version of the Universal Pokemon Randomizer (also available on the Pokemon Crystal Cinco Bingo discord) to randomize the ROM BEFORE you use this randomizer on it. A settings file for the Universal Pokemon Randomizer ("FullItemRandomizer.rnqs") is provided in this repository that can be used for this purpose.
