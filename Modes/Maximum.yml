@@ -1,0 +1,35 @@
+Name: Maximum Logic
+Description: Basically every item is being shuffled. All items that you buy from shops or which are hold items on pokemon are NOT randomized. Everything else is, except for the leftovers (we're working on it...). Mt. Silver can be accessed early, without 16 badges, but red will not spawn until you talk to oak with 16 badges. All seeds will be beatable.
+BasePatch: Patches/BaseModificationsSpeedchoiceEvil.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+CoreProgress:
+    - 'Mystery Egg'
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
+DefaultModifiers:
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/HiddenItems.yml
+    - Modifiers/TimeEvents.yml
+    - Modifiers/BerryTrees.yml
+    - Modifiers/PointlessChecks.yml
+    - Modifiers/BugCatchingContest.yml
+    - Modifiers/PhoneCallTrainers.yml
+    - Modifiers/MonLockedChecks.yml
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/OpenMtSilver.yml
+BannedLocations:
+AllowedLocations:
+Goal: Red
+FlagsSet:
+    - Kanto Mode
