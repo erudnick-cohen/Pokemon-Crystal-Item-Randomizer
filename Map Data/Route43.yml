@@ -100,7 +100,9 @@ Location:
         Type: Item
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 43
+        LocationReqs: 
+            - Route 43
+            - Most Map Access
         FlagReqs:
             - Phone Call Trainers
             - Mon Locked Checks
