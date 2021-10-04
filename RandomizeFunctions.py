@@ -140,9 +140,9 @@ def getHintsToRemove(hintData, hintOptions):
     deadHints = []
     for hint in hintData:
         if (hint[1].type == "runout" or hint[1].type == "small") \
-				and hasattr(hint[0], 'originalTile') and hasattr(hint[0], 'newTile') and hasattr(hint[0], 'tileAddress') \
-				and hint[0].originalTile != hint[0].newTile and \
-				hint[0].originalTile is not None and hint[0].newTile is not None and hint[0].tileAddress is not None:
+                and hasattr(hint[0], 'originalTile') and hasattr(hint[0], 'newTile') and hasattr(hint[0], 'tileAddress') \
+                and hint[0].originalTile != hint[0].newTile and \
+                hint[0].originalTile is not None and hint[0].newTile is not None and hint[0].tileAddress is not None:
             deadHints.append(hint)
 
     return deadHints
@@ -218,15 +218,15 @@ def HandleItemReplacement(reachable, inputFlags):
 
     containsAny = checkIfReplacementsConfigured(inputFlags)
 
-	if containsAny:
-		item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
-		replacements = item_replacement.read()
-		replacement_data = json.loads(replacements)
-		replacementFile = {}
-		for replacement_item in replacement_data:
-			replacement_item_name = replacement_item["item"]
-			replacement_replacement = replacement_item["replacement"]
-			replacement_type = replacement_item["type"]
+    if containsAny:
+        item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
+        replacements = item_replacement.read()
+        replacement_data = json.loads(replacements)
+        replacementFile = {}
+        for replacement_item in replacement_data:
+            replacement_item_name = replacement_item["item"]
+            replacement_replacement = replacement_item["replacement"]
+            replacement_type = replacement_item["type"]
 
             replacement_percent = 100
             use_replacement_percent = True
