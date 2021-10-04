@@ -258,7 +258,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: National Park
+                LocationReqs: 
+                    - National Park
+                    - Most Map Access
                 FlagReqs:
                     - Phone Call Trainers
                     - Mon Locked Checks
