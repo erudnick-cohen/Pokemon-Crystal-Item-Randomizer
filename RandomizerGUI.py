@@ -158,6 +158,10 @@ class Ui_MainWindow(object):
         self.SetSeedLabel.setObjectName("SetSeedLabel")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(140, 430, 181, 41))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
         self.label_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setWordWrap(True)
@@ -333,7 +337,7 @@ class Ui_MainWindow(object):
         self.SaveSettings.setText(_translate("MainWindow", "Save\n"
 " Settings"))
         self.SetSeedLabel.setText(_translate("MainWindow", "Set Seed:"))
-        self.label_6.setText(_translate("MainWindow", "Tips, tricks and things you might want to know: https://tinyurl.com/y9nsknqv "))
+        self.label_6.setText(_translate("MainWindow", "Read this to learn how to use this randomizer: https://tinyurl.com/y9nsknqv "))
         self.SettingsDescription.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -348,4 +352,4 @@ class Ui_MainWindow(object):
         self.BadgesNeeded.setText(_translate("MainWindow", "Change # of badges\n"
 " to unlock Mt. Silver? \n"
 "(Currently 16)"))
-        self.HintButton.setText(_translate("MainWindow", "Hint Settings (off)"))
+        self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))

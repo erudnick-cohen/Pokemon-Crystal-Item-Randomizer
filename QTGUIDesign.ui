@@ -439,11 +439,17 @@ Settings</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
     <property name="text">
-     <string>Tips, tricks and things you might want to know: https://tinyurl.com/y9nsknqv </string>
+     <string>Read this to learn how to use this randomizer: https://tinyurl.com/y9nsknqv </string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

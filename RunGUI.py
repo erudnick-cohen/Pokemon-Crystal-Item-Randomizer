@@ -330,7 +330,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		(option, ok1) = QInputDialog.getItem(self,"What hint level should be used?","What hint level should be used?",['0. No Hints', '1. Gym Signs', '2. All Signs', '3. More hints types', '4. Hint useless items'])
 		if ok1:
 			(nHints, ok2) = QInputDialog.getInt(self,"How many different hints?","How many different hints?")
-			if ok2:
+			if ok2 and int(option[0]) > 0:
 				self.settings['HintLevel'] = int(option[0])
 				self.settings['nHints'] = nHints
 				self.HintButton.setText(_translate("MainWindow", "Set Hints (LV: "+str(self.settings['HintLevel'])+" N"+str(self.settings['nHints'])+")"))
