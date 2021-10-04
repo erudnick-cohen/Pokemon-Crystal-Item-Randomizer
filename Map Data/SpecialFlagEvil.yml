@@ -1,13 +1,64 @@
 Location:
     -
-        Name: Pure Evil Checks
+        Name: Phone Call Trainers
         FileName: Route32.asm
         Type: Map
         HasPKMN: No
         WildTableList:
         LocationReqs:
         FlagReqs:
-            - Pure Evil Checks
+            - Phone Call Trainers
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Mon Locked Checks
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Mon Locked Checks
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Bug Catching Contest
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Bug Catching Contest
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Pointless Checks
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Pointless Checks
             - Impossible
         ItemReqs:
         FlagsSet:
