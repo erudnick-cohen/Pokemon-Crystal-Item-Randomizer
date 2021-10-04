@@ -1,0 +1,8 @@
+Name: Pointless Checks
+Description: Inlcudes items that don't really provide any benefit to the randomizer when included in it. This consists of map card and the 16 badges man in Vermilon.
+FlagsSet:
+    - Pointless Checks
+Changes:
+    -
+        Location: Pointless Checks
+        NewFlagReqs: []
