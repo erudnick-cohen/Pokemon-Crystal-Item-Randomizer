@@ -226,11 +226,11 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 	if(not isinstance(location, Gym.Gym)):
-		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	else:
-		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
 
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
@@ -252,8 +252,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		endVal = 176
 		nItemCode = 176
 	if location.IsBall:
-		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 		#need to extract the nibble out
 		#print(list(map(int, addressDataNPC["integer_values"].split(' '))))
@@ -289,8 +289,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	elif location.IsBerry:
-		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 
 
@@ -381,12 +381,13 @@ def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
+
 def LabelAllLocations(locations):
 	#codeLookup = Items.makeItemCodeDict()
 	#textLookup = Items.makeItemTextDict()
 	for i in locations:
 		#TODO, LABELING FOR SPECIAL LOCATIONS
-		if i.isItem():
+		if i.isItem() || i.Type == 'Dummy':
 			LabelItemLocation(i)
 		elif i.isGym():
 			LabelBadgeLocation(i)

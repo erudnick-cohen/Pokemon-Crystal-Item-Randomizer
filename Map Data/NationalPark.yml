@@ -327,26 +327,46 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            # -
-                # Name: National Park Hidden Full Heal
-                # FileName: NationalPark.asm
-                # SecondaryFile: NationalParkBugContest.asm
-                # Type: Item
-                # HasPKMN: No
-                # WildTableList: 
-                # LocationReqs: National Park
-                # FlagReqs:
-                    # - Hidden Items
-                # ItemReqs:
-                # FlagsSet:
-                # ReachableReqs:
-                # NormalItem: FULL_HEAL
-                # Code: |
-                    # NationalParkHiddenFullHeal:
-                        # ITEMLINE
-                # SecondaryCode: |
-                    # NationalParkBugContestHiddenFullHeal:
-                        # ITEMLINE
-                # Text:
-                # TrainerList: 
-                # Sublocations:
+            -
+                Name: National Park Hidden Full Heal
+                FileName: NationalPark.asm
+                SecondaryFile: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    NationalParkHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal"
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: National Park Hidden Full Heal BCC
+                TrueName: National Park Hidden Full Heal
+                FileName: NationalParkBugContest.asm
+                SecondaryFile: NationalParkBugContest.asm
+                Type: Dummy
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: National Park
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    NationalParkBugContestHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal"
+                Text:
+                TrainerList: 
+                Sublocations:

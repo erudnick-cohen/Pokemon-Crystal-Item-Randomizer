@@ -15,6 +15,10 @@ class Location:
 	def __init__(self, yamlTree):
 		print("Creating Location "+yamlTree["Name"])
 		self.Name = yamlTree["Name"]
+		if "TrueName" in yamlTree:
+			self.TrueName = yamlTree["TrueName"]
+		else:
+			self.TrueName = self.Name
 		self.FileName = yamlTree["FileName"]
 		self.IsItem = yamlTree["Type"]=="Item"
 		self.Type = yamlTree["Type"]
