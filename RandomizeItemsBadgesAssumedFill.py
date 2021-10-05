@@ -175,8 +175,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 					placeable = False
 				#is it the right type of location?
-				#print(locList[iter].Name)
-				#print(locList[iter].Type)
+				##print(locList[iter].Name)
+				##print(locList[iter].Type)
 				#all locations are now the same!
 				if((locList[iter].Type == 'Item' or locList[iter].Type == 'Gym') and placeable):
 					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
