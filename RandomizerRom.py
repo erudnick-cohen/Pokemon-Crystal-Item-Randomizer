@@ -329,7 +329,7 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCodeData = itemScriptLookup(location.item)
@@ -358,10 +358,10 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
-	#print('Writing'+labelCodeB)
+	print('Writing '+labelCodeB+' with '+location.item)
 	addressData = labelData[labelCodeB]
 	addressDataNPC = labelData[labelCodeBNPC]
 	nItemCodeData = itemScriptLookup(location.item)

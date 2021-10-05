@@ -4,7 +4,7 @@ import Gym
 import yaml
 from collections import defaultdict
 
-def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}, flags = []):
+def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}, flags = [], labelling = False):
 	LocationList = []
 	LocCountDict = defaultdict(lambda: 0)
 	print("Creating Locations")
@@ -51,7 +51,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 
 	trashList = []
 	for i in LocationList:
-		trashList.extend(i.getTrashItemList(flags))
+		trashList.extend(i.getTrashItemList(flags, labelling))
 		
 	print('NameCounts')
 	print(LocCountDict)

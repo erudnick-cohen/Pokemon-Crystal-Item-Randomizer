@@ -224,7 +224,7 @@ class Location:
 			 i.applyModifiers(modifierDict)
 	
 	#get all trash items in this locations tree
-	def getTrashItemList(self, flags):
+	def getTrashItemList(self, flags,labelling = False):
 		list = []
 		include = True
 
@@ -248,7 +248,7 @@ class Location:
 			for i in self.Sublocations:
 				list.extend(i.getTrashItemList(flags))
 		#if this item isn't included, then don't use it as an item location
-		else:
+		elif not labelling:
 			self.Type = 'Map'
 			self.IsItem = False
 		return list
