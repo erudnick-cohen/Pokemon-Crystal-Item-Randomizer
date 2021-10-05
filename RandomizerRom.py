@@ -387,7 +387,7 @@ def LabelAllLocations(locations):
 	#textLookup = Items.makeItemTextDict()
 	for i in locations:
 		#TODO, LABELING FOR SPECIAL LOCATIONS
-		if i.isItem() || i.Type == 'Dummy':
+		if i.isItem() or i.Type == 'Dummy':
 			LabelItemLocation(i)
 		elif i.isGym():
 			LabelBadgeLocation(i)
