@@ -1,5 +1,5 @@
 Name: Open Mt. Silver
-Description: Allows the player to access Route 28 and Mt. Silver as soon as they can access the Victory Road Gate. E4 will not spawn Red, talking to Oak with enough badges will. Do not use this modifier with the "Skip E4 and Fight Red" modifier.
+Description: Allows the player to access Route 28 and Mt. Silver as soon as they can access the Victory Road Gate. E4 will not spawn Red, talking to Oak with enough badges will. DO NOT USE THIS MODIFIER WITH THE "Skip E4 and Fight Red" MODIFIER.
 NewGamePatches:
     - 'Patches/OpenMtSilver.json'
 FlagsSet:
