@@ -246,7 +246,7 @@ class Location:
 			if self.NormalItem is not None and self.isItem():
 				list.append(self.NormalItem)
 			for i in self.Sublocations:
-				list.extend(i.getTrashItemList(flags))
+				list.extend(i.getTrashItemList(flags, labelling = labelling))
 		#if this item isn't included, then don't use it as an item location
 		elif not labelling:
 			self.Type = 'Map'
