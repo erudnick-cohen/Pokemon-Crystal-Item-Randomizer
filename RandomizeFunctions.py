@@ -258,8 +258,8 @@ def HandleItemReplacement(reachable, inputFlags):
 def ReplaceItem(item, replaceFile):
     replaced = False
     if item.isItem():
-        while item.item in replaceFile.keys():
-            if item.item in replaceFile.keys():
+        for i in replaceFile.keys():
+            if item.item == i:
                 replacement = replaceFile[item.item]
                 item_chance = replacement[1]
                 if item_chance >= random.random() * 100:
