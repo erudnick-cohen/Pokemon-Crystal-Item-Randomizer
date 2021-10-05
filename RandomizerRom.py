@@ -361,7 +361,7 @@ def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
-	print('Writing '+labelCodeB+' with '+location.item)
+	#print('Writing '+labelCodeB+' with '+location.item)
 	addressData = labelData[labelCodeB]
 	addressDataNPC = labelData[labelCodeBNPC]
 	nItemCodeData = itemScriptLookup(location.item)
@@ -379,6 +379,29 @@ def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 		nItemCode = 0
 	romMap[addressDataNPC["address_range"]["begin"]+2] = command
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
+	
+	if not location.OtherName is None:
+		labelCodeB = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+		labelCodeBNPC = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+
+		#print('Writing '+labelCodeB+' with '+location.item)
+		addressData = labelData[labelCodeB]
+		addressDataNPC = labelData[labelCodeBNPC]
+		nItemCodeData = itemScriptLookup(location.item)
+		nItemCode = nItemCodeData[0]
+		itemType = nItemCodeData[1]
+		if(itemType == 'Item'):
+			command = 7
+			nextVal = nItemCode
+		elif(itemType == 'Flag'):
+			command = 9
+			nextVal = nItemCode
+		elif(itemType == 'Rod'):
+			command = 10
+			nextVal = 0
+			nItemCode = 0
+		romMap[addressDataNPC["address_range"]["begin"]+2] = command
+		romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
 

@@ -19,6 +19,10 @@ class Location:
 			self.TrueName = yamlTree["TrueName"]
 		else:
 			self.TrueName = self.Name
+		if "OtherName" in yamlTree:
+			self.OtherName = yamlTree["OtherName"]
+		else:
+			self.OtherName = None
 		self.FileName = yamlTree["FileName"]
 		self.IsItem = yamlTree["Type"]=="Item"
 		self.Type = yamlTree["Type"]

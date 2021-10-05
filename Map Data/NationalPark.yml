@@ -329,6 +329,7 @@ Location:
                 Sublocations:
             -
                 Name: National Park Hidden Full Heal
+                OtherName: National Park Hidden Full Heal BCC
                 FileName: NationalPark.asm
                 SecondaryFile: NationalPark.asm
                 Type: Item
