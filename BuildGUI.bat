@@ -10,6 +10,10 @@ echo F|Xcopy "BadgeData.yml" "dist/Pokemon Crystal Item Randomizer/BadgeData.yml
 echo F|Xcopy "FullItemRandomizer.rnqs" "dist/Pokemon Crystal Item Randomizer/FullItemRandomizer.rnqs" /i /y
 echo F|Xcopy "README.md" "dist/Pokemon Crystal Item Randomizer/README.txt" /i /y
 echo F|Xcopy "RandomizerConfig.yml" "dist/Pokemon Crystal Item Randomizer/RandomizerConfig.yml" /i /y
+echo F|Xcopy "ItemDescriptions.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
+echo F|Xcopy "ItemDescriptions.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
+echo F|Xcopy "Config/SignData.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
+
 Xcopy "Gym Data" "dist/Pokemon Crystal Item Randomizer/Gym Data" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
@@ -20,4 +24,5 @@ Xcopy "Modifiers" "dist/Pokemon Crystal Item Randomizer/Modifiers" /i /y
 Xcopy "Patches" "dist/Pokemon Crystal Item Randomizer/Patches" /i /y
 Xcopy "Special Pokemon Locations" "dist/Pokemon Crystal Item Randomizer/Special Pokemon Locations" /i /y
 Xcopy "TrainerData" "dist/Pokemon Crystal Item Randomizer/TrainerData" /i /y
+Xcopy "Wild Data" "dist/Pokemon Crystal Item Randomizer/Wild Data" /i /y
 Xcopy "Wild Data" "dist/Pokemon Crystal Item Randomizer/Wild Data" /i /y
