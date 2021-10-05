@@ -243,6 +243,10 @@ class Location:
 				list.append(self.NormalItem)
 			for i in self.Sublocations:
 				list.extend(i.getTrashItemList(flags))
+		#if this item isn't included, then don't use it as an item location
+		else:
+			self.Type = 'Map'
+			self.IsItem = False
 		return list
 
 	def UpdateTags(self):
