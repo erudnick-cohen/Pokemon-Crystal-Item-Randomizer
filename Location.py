@@ -244,7 +244,7 @@ class Location:
 			include = False
 		if 'Mon Locked Checks' in self.FlagReqs and 'Mon Locked Checks' not in flags:
 			include = False
-		if 'Pointless Items' in self.FlagReqs and "Pointless Items" not in flags:
+		if 'Pointless Items' in self.FlagReqs and "Pointless Checks" not in flags:
 			include = False
 		if include:
 			if self.NormalItem is not None and self.isItem():
