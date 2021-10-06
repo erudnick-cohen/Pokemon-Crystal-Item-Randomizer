@@ -485,4 +485,5 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('illegal')
 	#print('remaining')
 	#print(trashItems)
+	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
 	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict)
