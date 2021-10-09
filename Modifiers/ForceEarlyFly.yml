@@ -2,7 +2,7 @@ Name: Force early fly
 Description: "Ensures that the fly HM is obtainable and usable before the player does any of the following things: 1. Takes the SS Aqua, 2. Enters route 44, 3. Enters Diglett's Cave after waking up Snorlax. 4. Enters the gate to the Pokemon League (before Victory Road)"
 Changes:
     -
-        Location: SS Aqua via Olvine
+        Location: SS Aqua via Olivine
         NewItemReqs:
             - S S Ticket
             - Fly

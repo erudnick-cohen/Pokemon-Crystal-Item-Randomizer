@@ -2,7 +2,7 @@ Name: Force early fly V2
 Description: "Ensures that the fly HM is obtainable and usable before the player is required to do any of the following things: 1. Take the SS Aqua, 2. Enter route 44, 3. Enter Diglett's Cave after waking up Snorlax. 4. Enter the gate to the Pokemon League (before Victory Road). 5. Fight Misty."
 Changes:
     -
-        Location: SS Aqua via Olvine
+        Location: SS Aqua via Olivine
         AddItemReqs:
             - Fly
             - Squirtbottle

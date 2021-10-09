@@ -53,7 +53,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: SS Aqua via Olvine
+        LocationReqs: SS Aqua via Olivine
         FlagReqs:
             - Hive Badge
         ItemReqs:
@@ -225,7 +225,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Vermilion City
+                LocationReqs: SS Aqua via Olivine
                 FlagReqs:
                     - Hidden Items
                     - Fog Badge

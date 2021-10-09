@@ -167,7 +167,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Olivine City
+                LocationReqs: SS Aqua via Vermilion
                 FlagReqs:
                     - Hidden Items
                     - Fog Badge
