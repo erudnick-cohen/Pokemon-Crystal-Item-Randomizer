@@ -355,7 +355,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		for i in activeLoc:
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
-				#print(i.Name)
+				#print(i.Name + " is " + str(i.Type))
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				#we can get somehwhere, so set this location in the state as true
@@ -406,9 +406,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if(i.isGym()):
 					maxBadgeDist = max(maxBadgeDist,i.distance)
 					nBadges = nBadges+1
-					if(i.badge is None):
+					if(not i.Name in spoiler.values()):
 						#print(trashBadges)
 						i.badge = badgeData[trashBadges.pop()]
+						spoiler[i.badge.Name] = i.Name
+						#print('Placing '+i.badge.Name +' in '+i.Name)
 					else:
 						state[i.badge.Name] = True
 						stateDist[i.badge.Name] = max(stateDist[i.badge.Name],stateDist[i.Name])
