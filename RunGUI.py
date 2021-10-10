@@ -263,6 +263,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if 'HintLevel' in self.settings:
 			self.HintButton.setText(_translate("MainWindow", "Set Hints (LV: "+str(self.settings['HintLevel'])+" N"+str(self.settings['nHints'])+")"))
 			QtGui.QGuiApplication.processEvents()
+		else:
+			self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
+			QtGui.QGuiApplication.processEvents()
 			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
