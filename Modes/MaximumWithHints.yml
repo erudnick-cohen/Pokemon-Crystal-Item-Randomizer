@@ -28,6 +28,7 @@ DefaultModifiers:
     - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/OpenMtSilver.yml
+    - Modifiers/NoEarlyBasement.yml
 BannedLocations:
 AllowedLocations:
 HintLevel: 2
