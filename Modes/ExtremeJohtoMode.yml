@@ -1,0 +1,227 @@
+Name: Extreme Johto Mode
+Description: The item randomizer is restricted to randomizing items which appear in johto. Items and badges are shuffled interchangeably.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: True
+SpecialWildLevelScalingDefault: True
+TrainerLevelScalingDefault: True
+BadgeItemShuffle:
+DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/NoEarlyBasement.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Mystery Egg
+    - Cut
+    - Strength
+    - Secret Potion
+    - Red Scale
+    - Whirlpool
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+BannedLocations:
+AllowedLocations:
+    - Buena Item
+    - Bugsy TM
+    - Burned Tower Rock Smash Item
+    - Burned Tower Strength Item
+    - Chuck TM
+    - Cianwood Fly HM
+    - Clair TM
+    - Coin Case Underground
+    - Dance Theatre Surf HM
+    - Dark Cave Black Glasses
+    - Dark Cave Blackthorn Revive
+    - Dark Cave Snore TM
+    - Dark Cave Violet Dire Hit
+    - Dark Cave Violet Full Heal
+    - Dark Cave Violet Hyper Potion
+    - Dark Cave Violet Potion
+    - Department Store Basement 2
+    - Department Store Basement 3
+    - Department Store Basement 4 Underground
+    - Dragons Den Calcium
+    - Dragons Den Dragon Fang
+    - Dragons Den Max Elixer
+    - Elm Aide Pokeballs
+    - Elm Aide Potion
+    - Elm Master Ball
+    - Falkner TM
+    - Flower Shop
+    - Goldenrod Tunnel Full Heal
+    - Goldenrod Tunnel Max Ether
+    - Goldenrod Tunnel Rocket Attack
+    - Goldenrod Tunnel Sleep Talk TM
+    - Goldenrod Tunnel Smoke Ball
+    - Goldenrod Tunnel Ultra Ball
+    - Good Rod Guru
+    - Headbutt Guy
+    - Ice Path Full Heal
+    - Ice Path Iron
+    - Ice Path Max Potion
+    - Ice Path Nevermeltice
+    - Ice Path PP Up
+    - Ice Path Protein
+    - Ice Path Rest TM
+    - Ice Path Waterfall HM
+    - Ilex Cut HM
+    - Ilex Forest Antidote
+    - Ilex Forest Ether
+    - Ilex Forest Revive
+    - Ilex Forest X Attack
+    - Itemfinder House
+    - Jasmine TM
+    - Kenya Gate Item
+    - King's Rock Guy
+    - Kurt's Lure Ball
+    - Lake of Rage Detect TM
+    - Lake Of Rage Elixer
+    - Lake of Rage Hidden Power TM
+    - Lighthouse Ether
+    - Lighthouse Rare Candy
+    - Lighthouse Super Repel
+    - Lighthouse Swagger TM
+    - Morty TM
+    - Mr. Pokemon's Egg
+    - Mr. Pokemon's EXP Share
+    - Mt Mortar Defense Curl TM
+    - Mt Mortar Dragon Scale
+    - Mt Mortar Elixer
+    - Mt Mortar Ether
+    - Mt Mortar Full Restore
+    - Mt Mortar Inner Escape Rope
+    - Mt Mortar Inner Hyper Potion
+    - Mt Mortar Iron
+    - Mt Mortar Lower Hyper Potion
+    - Mt Mortar Max Ether
+    - Mt Mortar Max Potion
+    - Mt Mortar Max Potion Number 2
+    - Mt Mortar Max Revive
+    - Mt Mortar Nugget
+    - Mt Mortar PP Up
+    - Mt Mortar Rare Candy
+    - Mt Mortar Revive
+    - Mt Mortar Ultra Ball
+    - Mt Mortar Upper Escape Rope
+    - Mystic Water Man
+    - National Park Dig TM
+    - National Park Parlyz Heal
+    - National Park Quick Claw
+    - Old Rod Guru
+    - Olivine Strength HM
+    - Pink Bow
+    - Pryce TM
+    - Radio Tower Rockets Part 1
+    - Radio Tower Rockets Part 2
+    - Radio Tower Sunny Day TM
+    - Radio Tower Ultra Ball
+    - Red Scale Dropped
+    - Rock Smash Guy
+    - Rocket Base 1F Guard Spec
+    - Rocket Base 1F Hyper Potion
+    - Rocket Base 1F Nugget
+    - Rocket Base 3F Full Heal
+    - Rocket Base 3F Ice Heal
+    - Rocket Base 3F Protein
+    - Rocket Base 3F Ultra Ball
+    - Rocket Base 3F X Special
+    - Rocket Base Whirlpool HM
+    - Route 27 Rare Candy
+    - Route 27 Solar Beam TM
+    - Route 29 Potion
+    - Route 30 Antidote
+    - Route 30 Berry Man
+    - Route 31 Kenya Item
+    - Route 31 Pokeball
+    - Route 31 Potion
+    - Route 32 Great Ball
+    - Route 32 Repel
+    - Route 34 Nugget
+    - Route 35 Rollout TM
+    - Route 42 Middle Island Super Potion
+    - Route 42 Ultra Ball
+    - Route 43 Max Ether
+    - Route 43 Sludge Bomb TM
+    - Route 44 Max Repel
+    - Route 44 Max Revive
+    - Route 44 Ultra Ball
+    - Route 45 Elixer
+    - Route 45 Max Potion
+    - Route 45 Nugget
+    - Route 45 Revive
+    - Route 46 X Speed
+    - Ruins of Alph Light Chamber 1
+    - Ruins of Alph Light Chamber 2
+    - Ruins of Alph Light Chamber 3
+    - Ruins of Alph Light Chamber 4
+    - Ruins of Alph Rope Chamber 1
+    - Ruins of Alph Rope Chamber 2
+    - Ruins of Alph Rope Chamber 3
+    - Ruins of Alph Rope Chamber 4
+    - Ruins of Alph Water Chamber 1
+    - Ruins of Alph Water Chamber 2
+    - Ruins of Alph Water Chamber 3
+    - Ruins of Alph Water Chamber 4
+    - Secret Potion Man
+    - Slowpoke Well Floor 1 Super Potion
+    - Slowpoke Well Rain Dance TM
+    - Soft Sand Girls
+    - Sprout Tower Escape Rope
+    - Sprout Tower Flash HM
+    - Sprout Tower Potion
+    - Sprout Tower X Accuracy
+    - Sweet Scent Girl
+    - Tohjo Falls Moon Stone
+    - Union Cave Floor 1 Great Ball
+    - Union Cave Floor 1 Potion
+    - Union Cave Floor 1 X Attack
+    - Union Cave Floor 3 Elixir
+    - Union Cave Floor 3 Hyper Potion
+    - Union Cave Swift TM
+    - Victory Road Earthquake TM
+    - Victory Road Full Heal
+    - Victory Road Full Restore
+    - Victory Road HP Up
+    - Violet City PP UP
+    - Violet City Rare Candy
+    - Whirl Islands B1 Full Restore
+    - Whirl Islands B2 Full Restore
+    - Whirl Islands B2 Max Elixer
+    - Whirl Islands B2 Max Revive
+    - Whirl Islands Calcium
+    - Whirl Islands Carbos
+    - Whirl Islands NE Ultra Ball
+    - Whirl Islands Nugget
+    - Whirl Islands SW Ultra Ball
+    - Whitney TM
+    - Azalea Town Gym Badge
+    - Bike Shop
+    - Blackthorn City Gym Badge
+    - Charcoal Kiln
+    - Cianwood City Gym Badge
+    - Department Store Basement 1
+    - Ecruteak City Gym Badge
+    - Goldenrod City Gym
+    - Lighthouse Super Potion
+    - Mahogany Town Gym Badge
+    - Miracle Seed Man
+    - Mt Mortar Carbos
+    - Olivine City Gym Badge
+    - Rocket Base 2F Thief TM
+    - Route 26 Max Elixer
+    - Route 32 Roar Dude
+    - Sprout Tower Parlyz Heal
+    - Union Cave Floor 1 Awakening
+    - Union Cave Floor 2 X Defend
+    - Victory Road Max Revive
+    - Violet City Gym Badge
+    - Whirl Islands Escape Rope
+Goal: Elite Four
+FlagsSet:
+    - Johto Mode
