@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs: 
-            - SS Aqua via Olvine
+            - SS Aqua via Olivine
         FlagReqs:
             - Kanto Mode
         ItemReqs:
@@ -18,7 +18,7 @@ Location:
         Text:
         Sublocations:
     -
-        Name: SS Aqua via Olvine
+        Name: SS Aqua via Olivine
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: Map
         HasPKMN: Yes
