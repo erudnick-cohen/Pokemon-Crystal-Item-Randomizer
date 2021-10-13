@@ -139,8 +139,8 @@ Location:
                 FlagReqs:
                 ItemReqs:
                     - Pokegear
-                FlagsSet:
                     - Phone Call Trainers
+                FlagsSet:
                 ReachableReqs:
                 IsBall: No
                 NormalItem: CARBOS
