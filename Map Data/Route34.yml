@@ -198,7 +198,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 34
+                LocationReqs: 
+                    - Route 34
+                    - Radio Tower Rockets Part 2
                 FlagReqs:
                     - Phone Call Trainers
                 ItemReqs:
