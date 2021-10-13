@@ -172,3 +172,28 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 44 Fisher Wilton Ball
+                FileName: Route44.asm
+                SecondaryFile: Route44.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Route 44
+                FlagReqs:
+                ItemReqs:
+                    - Pokegear
+                    - Phone Call Trainers
+                FlagsSet:
+                ReachableReqs:
+                IsBall: No
+                NormalItem: ULTRA_BALL
+                Code: |
+                    .PokeBall:
+                        ITEMLINE
+                        iffalse .Route44PackFullM
+                SecondaryCode:
+                Text:
+                TrainerList: 
+                Sublocations:
