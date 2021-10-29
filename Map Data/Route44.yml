@@ -138,9 +138,9 @@ Location:
                 FlagsSet:
                 ItemReqs:
                     - Pokegear
-                FlagsReqs:
-		    - Kanto Power Restored
-		    - Phone Call Trainers
+                FlagReqs:
+                    - Kanto Power Restored
+                    - Phone Call Trainers
                 ReachableReqs:
                 IsBall: No
                 NormalItem: CARBOS
