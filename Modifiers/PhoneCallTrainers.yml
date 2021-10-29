@@ -5,6 +5,7 @@ FlagsSet:
 NewGamePatches:
     - 'Patches/FixKenji.json'
     - 'Patches/FixWade.json'
+    - 'Patches/FixWilton.json'
     - 'Patches/EasyRematchTrainers.json'
 Changes:
     -

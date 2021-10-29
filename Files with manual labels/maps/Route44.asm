@@ -229,12 +229,14 @@ TrainerFisherWilton1:
 
 .HasItem:
 	scall Route44GiftM
+.ckir_BEFORE_WILTON::
 	checkevent EVENT_WILTON_HAS_ULTRA_BALL
-	iftrue .UltraBall
+	iftrue .PokeBall
 	checkevent EVENT_WILTON_HAS_GREAT_BALL
-	iftrue .GreatBall
+	iftrue .PokeBall
 	checkevent EVENT_WILTON_HAS_POKE_BALL
 	iftrue .PokeBall
+.ckir_AFTER_WILTON::
 .UltraBall:
 	verbosegiveitem ULTRA_BALL
 	iffalse .Route44PackFullM

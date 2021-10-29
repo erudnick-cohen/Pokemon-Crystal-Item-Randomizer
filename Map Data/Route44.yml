@@ -135,12 +135,12 @@ Location:
                 LocationReqs: 
                     - Route 44
                     - Elite Four
-                FlagReqs:
+                FlagsSet:
                 ItemReqs:
                     - Pokegear
-                FlagsSet:
-                    - Phone Call Trainers
-                    - Kanto Power Restored
+                FlagsReqs:
+		    - Kanto Power Restored
+		    - Phone Call Trainers
                 ReachableReqs:
                 IsBall: No
                 NormalItem: CARBOS
@@ -169,6 +169,31 @@ Location:
                         iffalse VancePackFull
                         setevent EVENT_GOT_CARBOS_FROM_VANCE
                         sjump Route44NumberAcceptedM
+                Text:
+                TrainerList: 
+                Sublocations:
+            -
+                Name: Route 44 Fisher Wilton Ball
+                FileName: Route44.asm
+                SecondaryFile: Route44.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: 
+                    - Route 44
+                FlagReqs:
+                ItemReqs:
+                    - Pokegear
+                    - Phone Call Trainers
+                FlagsSet:
+                ReachableReqs:
+                IsBall: No
+                NormalItem: ULTRA_BALL
+                Code: |
+                    .PokeBall:
+                        ITEMLINE
+                        iffalse .Route44PackFullM
+                SecondaryCode:
                 Text:
                 TrainerList: 
                 Sublocations:
