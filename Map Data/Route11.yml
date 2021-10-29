@@ -7,11 +7,11 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermilion City Entrance
-            - Power Plant Activated
         FlagReqs:
             - Surf
         ItemReqs:
         FlagsSet:
+            - Kanto Power Restored
         ReachableReqs:
         Code:
         Text:

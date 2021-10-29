@@ -96,6 +96,7 @@ Location:
                     - Power Plant
                 ItemReqs:
                 FlagsSet:
+                    - Date Ruined
                 ReachableReqs:
                 Code:
                 Text:

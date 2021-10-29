@@ -33,13 +33,17 @@ Changes:
             - Cut
     -
         Location: Oak Pokedex
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible
     -
         Location: Radio Card Quiz
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible
     -
         Location: Pokegear Gift
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible
     -
         Location: Expansion Card Gift
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible

@@ -140,9 +140,9 @@ Location:
         LocationReqs: 
             - Route 46 Upper
             - Elite Four
-            - Power Plant Activated
         FlagReqs:
             - Phone Call Trainers
+            - Kanto Power Restored
         ItemReqs:
             - Pokegear
         FlagsSet:

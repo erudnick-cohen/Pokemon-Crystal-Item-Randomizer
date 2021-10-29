@@ -186,11 +186,11 @@ Location:
                 WildTableList: 
                 LocationReqs: 
                     - Lighthouse
-                    - Power Plant Activated
                     - Elite Four
                     - Radio Tower Rockets Part 2
                 FlagReqs:
                     - Phone Call Trainers
+                    - Kanto Power Restored
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
