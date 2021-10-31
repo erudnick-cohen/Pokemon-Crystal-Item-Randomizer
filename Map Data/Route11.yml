@@ -11,7 +11,6 @@ Location:
             - Surf
         ItemReqs:
         FlagsSet:
-            - Kanto Power Restored
         ReachableReqs:
         Code:
         Text:

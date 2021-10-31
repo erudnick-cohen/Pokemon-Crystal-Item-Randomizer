@@ -287,6 +287,11 @@ def IterateRequirements(location, locations, known, partial_known=[]):
         allRequiredFlag = []
         allRequiredItem = []
         for data in reqData:
+
+            # This unlocks areas of the map which may otherwise not be required
+            if data.Name == "Most Map Access":
+                continue
+
             if data in known:
                 allRequiredLoc.extend(data.LocationReqs)
                 allRequiredFlag.extend(data.FlagReqs)
@@ -1188,6 +1193,7 @@ def GetItemChildren(location, locations, handled):
 
     return items,flags, new_locations
 
+# TODO: Include flag and item checks in this location too
 def AutoBarrenAreas(locations):
 
     auto_barren = []
@@ -1238,7 +1244,8 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                          "Cianwood City", "Blackthorn City", "Cinnabar Island",
                          "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
                          "Mt Mortar Upper Floor", "Elm's Lab", "Routes 26/27", "Lighthouse",
-                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape"]
+                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape",
+                         "Mt. Silver Unlock"]
 
     location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
                             "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls"},
@@ -1249,7 +1256,11 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     no_free_locations = []
 
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"]
+    # TODO:
+    # Check flags for new things are also not included on other settings, rather than just locations
+
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
+                     "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
     no_free_flag = []
 
     to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
