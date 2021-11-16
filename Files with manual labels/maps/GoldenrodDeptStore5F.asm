@@ -55,8 +55,8 @@ GoldenrodDeptStore5FReceptionistScript:
 	verbosegiveitem TM_RETURN
 .ckir_BEFORE_timed_events_DEPTSTORE5F4::
 	iftrue .NotVeryHappy
+	iffalse .NotVeryHappy
 .ckir_AFTER_timed_events_DEPTSTORE5F4::
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
 	closetext
 	end
 
