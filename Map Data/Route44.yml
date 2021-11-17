@@ -137,9 +137,9 @@ Location:
                     - Power Plant Activated
                     - Elite Four
                 FlagReqs:
+                    - Phone Call Trainers
                 ItemReqs:
                     - Pokegear
-                    - Phone Call Trainers
                 FlagsSet:
                 ReachableReqs:
                 IsBall: No
@@ -182,9 +182,10 @@ Location:
                 LocationReqs: 
                     - Route 44
                 FlagReqs:
+                    - Phone Call Trainers
+
                 ItemReqs:
                     - Pokegear
-                    - Phone Call Trainers
                 FlagsSet:
                 ReachableReqs:
                 IsBall: No
