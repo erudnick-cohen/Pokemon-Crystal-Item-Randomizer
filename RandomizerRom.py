@@ -726,6 +726,7 @@ def LabelItemLocation(location):
 			#print(codeSearch)
 		else:
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
+			print(coderegexstr)
 			oldcode = re.findall(coderegexstr,filecode)[0]
 		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 		if location.IsBall or location.IsBerry:
