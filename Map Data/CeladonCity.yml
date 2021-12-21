@@ -62,6 +62,7 @@ Location:
             -
                 Name: Celadon Cafe Leftovers
                 FileName: CeladonCafe.asm
+                SecondaryFile: CeladonCafe.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
