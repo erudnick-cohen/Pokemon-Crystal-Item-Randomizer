@@ -35,9 +35,11 @@ Red:
 	end
 
 RedSeenText:
-	text "<……>"
-	line "<……>"
+.ckir_BEFORE_RED_INTRO::
+	text "<……>              "
+	line "<……>              "
 	done
+.ckir_AFTER_RED_INTRO::
 
 RedWinLossText:
 	text "…"
