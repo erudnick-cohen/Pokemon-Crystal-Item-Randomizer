@@ -118,11 +118,11 @@ TrainerBugCatcherWade1:
 .ckir_BEFORE_WADE::
 	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_PSNCUREBERRY
+	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_PRZCUREBERRY
+	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BITTER_BERRY
+	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
 .ckir_AFTER_WADE::
 .Berry:

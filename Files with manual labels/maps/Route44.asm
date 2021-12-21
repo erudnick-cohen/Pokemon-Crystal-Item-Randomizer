@@ -231,11 +231,11 @@ TrainerFisherWilton1:
 	scall Route44GiftM
 .ckir_BEFORE_WILTON::
 	checkevent EVENT_WILTON_HAS_ULTRA_BALL
-	iftrue .PokeBall
-	checkevent EVENT_WILTON_HAS_GREAT_BALL
-	iftrue .PokeBall
-	checkevent EVENT_WILTON_HAS_POKE_BALL
-	iftrue .PokeBall
+	iftrue .UltraBall
+	checkevent EVENT_WILTON_HAS_ULTRA_BALL
+	iftrue .UltraBall
+	checkevent EVENT_WILTON_HAS_ULTRA_BALL
+	iftrue .UltraBall
 .ckir_AFTER_WILTON::
 .UltraBall:
 	verbosegiveitem ULTRA_BALL
