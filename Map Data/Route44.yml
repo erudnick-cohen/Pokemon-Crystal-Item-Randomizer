@@ -183,7 +183,6 @@ Location:
                     - Route 44
                 FlagReqs:
                     - Phone Call Trainers
-
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -191,9 +190,10 @@ Location:
                 IsBall: No
                 NormalItem: ULTRA_BALL
                 Code: |
-                    .PokeBall:
+                    .UltraBall:
                         ITEMLINE
                         iffalse .Route44PackFullM
+                        sjump .ItemReceived
                 SecondaryCode:
                 Text:
                 TrainerList: 
