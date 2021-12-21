@@ -37,7 +37,6 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
             -
                 Name: Celadon Mansion Curse
                 FileName: CeladonMansionRoofHouse.asm
@@ -60,3 +59,22 @@ Location:
                         ITEMLINE
                         iffalse .NoRoom
                         setevent EVENT_GOT_TM03_CURSE
+            -
+                Name: Celadon Cafe Leftovers
+                FileName: CeladonCafe.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon City
+                FlagReqs:
+                    - NPC Trash Can
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: LEFTOVERS
+                Code: |
+                    CeladonCafeTrashcan:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'

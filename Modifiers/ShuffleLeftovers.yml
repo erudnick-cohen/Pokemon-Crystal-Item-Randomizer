@@ -1,0 +1,8 @@
+Name: Shuffle Leftovers
+Description: Adds the leftovers in the cafe in Celadon to the randomization, which is the only NPC trash can in the game.
+FlagsSet:
+    - NPC Trash Can
+Changes:
+    -
+        Location: Celadon Cafe Leftovers
+        NewFlagReqs: []
