@@ -352,10 +352,16 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		romMap[addressData["address_range"]["begin"]+6] = nItemCode
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
 	else:
-		romMap[addressData["address_range"]["begin"]+6] = 168
+		if itemType != 'ROD':
+			romMap[addressData["address_range"]["begin"]+6] = nItemCode
+		else:
+			romMap[addressData["address_range"]["begin"]+6] = 58
 		romMap[addressData["address_range"]["begin"]+11] = commandVerbose
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
-		romMap[addressData["address_range"]["begin"]+13] = endVal
+		# romMap[addressData["address_range"]["begin"]+6] = 168
+		# romMap[addressData["address_range"]["begin"]+11] = commandVerbose
+		# romMap[addressData["address_range"]["begin"]+12] = nItemCode
+		# romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
