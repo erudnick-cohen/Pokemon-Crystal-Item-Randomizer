@@ -79,3 +79,6 @@ Location:
                     CeladonCafeTrashcan:
                         ITEMLINE
                 SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+                Text:
+                TrainerList: 
+                Sublocations:
