@@ -69,17 +69,18 @@ Location:
                 LocationReqs: Celadon City
                 FlagReqs:
                     - NPC Trash Can
-                    - Hidden Items
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 Text:
                 TrainerList:
                 NormalItem: LEFTOVERS
+                IsSpecial: Yes
                 Code: |
                     CeladonCafeTrashcan:
                         ITEMLINE
                 SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+
                 Text:
                 TrainerList: 
                 Sublocations:
