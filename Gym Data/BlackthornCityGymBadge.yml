@@ -53,6 +53,7 @@ Location:
                 jump .GiveTM
         SecondaryCode: |
             .PassedTheTest:
+                setevent EVENT_DRAGON_SHRINE_PASSED_TEST
                 writetext DragonShrinePassedTestText
                 waitbutton
                 setscene SCENE_FINISHED
