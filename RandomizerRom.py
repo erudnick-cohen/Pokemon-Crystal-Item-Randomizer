@@ -22,7 +22,7 @@ def ResetRomForLabelling():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Speedchoice Current/pokecrystal-speedchoice","RandomizerRom")
+	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 	#next overwrite the files which need custom labels
 	for root, dir, files  in os.walk("Files with manual labels/maps"):
 		for file in files:
