@@ -41,9 +41,9 @@ Randomizer_HoOhCry::
 	setevent EVENT_FOUGHT_HO_OH
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 Randomizer_HoOhSpecies::
-.ckir_BEFORE_HOOHENCOUNTER
+.ckir_BEFORE_HOOHENCOUNTER::
 	loadwildmon HO_OH, 60
-.ckir_AFTER_HOOHENCOUNTER
+.ckir_AFTER_HOOHENCOUNTER::
 	startbattle
 	disappear TINTOWERROOF_HO_OH
 	reloadmapafterbattle
