@@ -13,14 +13,14 @@
     },
     {
         "integer_values": {
-            "old": [0,0,60],
-            "new": [0,0,40]
+            "old": [93, 250, 60],
+            "new": [93, 250, 40]
         },
         "address_range": {
-            "begin": 2080771,
-            "end": 2080772
+            "begin": 3,
+            "end": 3
         },
-        "label": "Randomizer_HoOhSpecies.ckir_BEFOREHOOHENCOUNTER",
+        "label": "Randomizer_HoOhSpecies.ckir_BEFORE_HOOHENCOUNTER",
         "description": "Change Ho-Oh's level to 40"
     }
 ]
