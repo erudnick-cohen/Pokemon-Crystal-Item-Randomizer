@@ -1,0 +1,5 @@
+Name: Unsafe Plandomizer
+Description: Allows plandomizer seeds to ignore rules on logic and place seeds that aren't feasible or which the regular logic has "difficulty" in allowing you to set (i.e. very trolly seeds that are so unlikely that the randomizer has trouble confirming they're correct). Make sure you haven't screwed up when you use this modifier.
+FlagsSet:
+    - unsafePlando
+
