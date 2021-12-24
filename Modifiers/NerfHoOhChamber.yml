@@ -3,4 +3,8 @@ Description: Nerfs the Ho-Oh chamber to not require E4. Ho-Oh's level is also ne
 NewGamePatches:
     - 'Patches/OldRainbowWing.json'
 Changes:
-
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationReqs: 
+            - Union Cave
+            - Climb Tin Tower
