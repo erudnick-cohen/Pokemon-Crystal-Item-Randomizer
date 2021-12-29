@@ -1,14 +1,27 @@
 Location:
     -
-        Name: Route 20 and 19
+        Name: Route 20 Entrance
         FileName: Route20.asm
         Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-            - ROUTE_20
-            - ROUTE 19
+        HasPKMN: No
         LocationReqs:
-            - Cinnabar Island
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        WildTableList:
+        Text:
+        WarpReqs:
+            - Seafoam Gym Entrance
+            
+    -
+        Name: Route 20 Entrance
+        FileName: Route20.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Cinnabar Island
         FlagReqs:
             - Fog Badge
         ItemReqs:
@@ -17,7 +30,87 @@ Location:
         ReachableReqs:
         Code:
         Text:
+        WildTableList:
+        
+    -
+        Name: Route 20 Entrance
+        FileName: Route20.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 19
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        WildTableList:
+        
+    -
+        Name: Route 19 Entrance
+        FileName: Route19.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 20
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        WildTableList:
+    
+    -
+        Name: Route 19 Entrance
+        FileName: Route19.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Fuchsia City
+        FlagReqs:
+            - Defeated Blaine
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        WarpReqs:
+            - Route 19 Boulders
+        WildTableList:
+            
+    -
+        Name: Route 19
+        FileName: Route19.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 19 Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        WildTableList:
+            
+    
+    -
+        Name: Route 20
+        FileName: Route20.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+            - ROUTE_20
+            - ROUTE 19
+        LocationReqs:
+            - Route 20 Entrance
+        ReachableReqs:
+        Code:
+        Text:
         AREALV: 32
+        ItemReqs:
         TrainerList: 
             - SWIMMERM 17
             - SWIMMERF 14
@@ -28,3 +121,6 @@ Location:
             - SWIMMERF 12
             - SWIMMERM 14
         Sublocations:
+        FlagReqs:
+        FlagsSet:
+        

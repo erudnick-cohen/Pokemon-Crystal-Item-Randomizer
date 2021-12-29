@@ -29,7 +29,7 @@ with suppress_stdout_stderr():
         romPath = 'testTrickyAgainBase - Copy.gbc'
         copyfile(romPath, 'Hmmm'+romPath)
 
-        yamlfile = open("Modes/Extreme.yml")
+        yamlfile = open("../Modes/Extreme.yml")
         yamltext = yamlfile.read()
         settings = yaml.load(yamltext, Loader=yaml.FullLoader)
         yamlfile = open(settings['BasePatch'])

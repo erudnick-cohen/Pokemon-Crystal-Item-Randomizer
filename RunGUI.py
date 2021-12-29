@@ -32,6 +32,12 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.LoadModifier.clicked.connect(self.loadModifier)
 		self.DeleteModifier.clicked.connect(self.deleteModifier)
 		self.romPath = ''
+		self.defaultRomDirectory = "."
+		if 'BaseRomInputDirectory' in yamltext:
+			self.defaultRomDirectory = yamltext['BaseRomInputDirectory']
+		self.defaultRomOutDirectory = "."
+		if 'BaseRomOutputDirectory' in yamltext:
+			self.defaultRomOutDirectory = yamltext['BaseRomOutputDirectory']
 		self.SelectRomFile.clicked.connect(self.selectRom)
 		self.Randomize.setEnabled(False)
 		self.Randomize.setText(_translate("MainWindow", "No Rom Loaded!"))
@@ -80,19 +86,29 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.2 Rom as the base rom, or your game WILL crash.')
 			validFileName = False
 
-			base_dir = ""
-			for i in range(0, len(self.romPath.split("/"))-1):
-				if base_dir != "":
-					base_dir+="/"
-				base_dir += self.romPath.split("/")[i]
 
+			base_dir = self.defaultRomOutDirectory
+			if base_dir == ".":
+				for i in range(0, len(self.romPath.split("/"))-1):
+					if base_dir != "":
+						base_dir+="/"
+					base_dir += self.romPath.split("/")[i]
+
+			exits = 0
 			while not validFileName:
 				file = QFileDialog.getSaveFileName(directory = base_dir)[0]
 				if file != '':
 					validFileName = True
 				else:
 					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
+					exits += 1
+					if exits > 2:
+						break
 			randomizedFileName = file
+
+			if not validFileName:
+				QtWidgets.QMessageBox.about(self, 'ERROR', '3 Failed filenames, cancelling')
+				return
 
 			if not randomizedFileName.endswith(".gbc"):
 				randomizedFileName+=".gbc"
@@ -203,7 +219,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def selectRom(self):
 		_translate = QtCore.QCoreApplication.translate
-		file = QFileDialog.getOpenFileName(directory = '.')[0]
+		romDirectory = self.defaultRomDirectory
+		file = QFileDialog.getOpenFileName(directory = romDirectory)[0]
 		self.romPath = file
 		if file != '':
 			self.Randomize.setEnabled(True)

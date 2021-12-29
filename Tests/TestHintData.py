@@ -4,7 +4,7 @@ from RandomizeFunctions import fileToLocation
 
 
 def testHintData():
-    sign_desc = open("Config/SignData.json")
+    sign_desc = open("../Config/SignData.json")
     s_descs = sign_desc.read()
     sign_desc_addr = json.loads(s_descs)
     sign_addr_data = {}

@@ -102,8 +102,10 @@ Location:
                 WildTableList: 
                 LocationReqs: Ilex Forest Front 
                 FlagReqs:
+                    - Saved Slowpokes
                 ItemReqs:
                 FlagsSet:
+                    - Find Farfetchd
                 ReachableReqs:
                 Code: |
                     IlexForestCharcoalMasterScript:

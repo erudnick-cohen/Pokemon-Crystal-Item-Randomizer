@@ -1,0 +1,9 @@
+Name: Warps
+Description: Currently requires manually placing a Warps.log file from pkc-mms-rando and when enabled, uses warps as part of item randomisation
+FlagsSet:
+    - Warps
+Changes:
+    -
+        Location: Warps
+        RemoveFlagReqs:
+            - Impossible

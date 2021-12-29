@@ -3,7 +3,7 @@ import yaml
 import json
 
 romPath = 'crystal-speedchoice-v6.0.gbc'
-yamlfile = open("Modes/Standard.yml")
+yamlfile = open("../Modes/Standard.yml")
 yamltext = yamlfile.read()
 settings = yaml.load(yamltext, Loader=yaml.FullLoader)
 yamlfile = open(settings['BasePatch'])

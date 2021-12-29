@@ -3,7 +3,7 @@ import RandomizeFunctions
 
 
 def testIteration(l):
-    fullLocationData = LoadLocationData.LoadDataFromFolder(".", None, None , {}, [])
+    fullLocationData = LoadLocationData.LoadDataFromFolder("..", None, None, {}, [])
     all_locs = fullLocationData[0]
     locationList = LoadLocationData.FlattenLocationTree(all_locs)
 

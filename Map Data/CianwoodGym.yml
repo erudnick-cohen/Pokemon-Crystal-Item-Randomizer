@@ -27,6 +27,7 @@ Location:
                 ItemReqs:
                     - Strength
                 FlagsSet:
+                    - Chuck Defeated
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
                 Tags:

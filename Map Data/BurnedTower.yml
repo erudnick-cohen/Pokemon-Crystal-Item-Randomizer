@@ -93,6 +93,7 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            -   Released Beasts
         ReachableReqs:
         Code:
         Text:

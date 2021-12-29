@@ -8,7 +8,7 @@ import json
 import mmap
 from collections import defaultdict
 
-res = LoadLocationData.LoadDataFromFolder(".")
+res = LoadLocationData.LoadDataFromFolder("..")
 trashItems = res[1]
 LocationList = res[0]
 progressItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item','Pass']
@@ -89,7 +89,7 @@ for j in result[0]:
 	if(i.NormalItem is not None and not i.isItem()):
 		print(i.Name)
 
-yamlfile = open("crystal-speedchoice-label-details.json")
+yamlfile = open("../crystal-speedchoice-label-details.json")
 yamltext = yamlfile.read()
 addressLists = json.loads(yamltext)
 addressData = {}
@@ -105,7 +105,7 @@ RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap)
 RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap)
 RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap)
 RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap)
-yamlfile = open("item-randomizer-patches-diff-speedchoice.json")
+yamlfile = open("../item-randomizer-patches-diff-speedchoice.json")
 yamltext = yamlfile.read()
 patches = json.loads(yamltext)
 RandomizerRom.ApplyGamePatches(romMap,patches)

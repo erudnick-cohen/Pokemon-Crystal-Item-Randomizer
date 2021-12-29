@@ -1,12 +1,45 @@
 Location:  
     -
-        Name: Cianwood City
+        Name: Cianwood City Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CIANWOOD_CITY
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        HintName: Cianwood
+        WarpReqs:
+            - Cianwood
+    -
+        Name: Cianwood City Entrance
         FileName: CianwoodCity.asm
         Type: Map
         HasPKMN: No
         WildTableList:
             - CIANWOOD_CITY
         LocationReqs: Route 41
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        HintName: Cianwood            
+    -
+        Name: Cianwood City
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CIANWOOD_CITY
+        LocationReqs: Cianwood City Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -30,6 +63,8 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs:
+                    - Pharmacy
                 Code: |
                     CianwoodPharmacist:
                         faceplayer
@@ -67,8 +102,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Chuck TM
+                LocationReqs:
                 FlagReqs:
+                    - Chuck Defeated
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

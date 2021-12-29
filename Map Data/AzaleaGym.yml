@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Azalea Gym
+        Name: Azalea Gym Entrance
         FileName: AzaleaGym.asm
         Type: Map
         HasPKMN: No
@@ -16,6 +16,26 @@ Location:
         Text:
         TrainerList:
         HintName: Azalea
+        Sublocations:
+    
+    -
+        Name: Azalea Gym
+        FileName: AzaleaGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: 
+            - Azalea Gym Entrance
+        FlagReqs:
+            - Saved Slowpokes
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Azalea
+        WarpReqs: Azalea Gym
         Sublocations:
             -
                 Name: Bugsy TM

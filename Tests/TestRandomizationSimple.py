@@ -5,7 +5,7 @@ import RandomizerRom
 import PokemonRandomizer
 from collections import defaultdict
 
-res = LoadLocationData.LoadDataFromFolder(".")
+res = LoadLocationData.LoadDataFromFolder("..")
 trashItems = res[1]
 LocationList = res[0]
 trashItems.append('BICYCLE')#because bike is a key item if kanto is active

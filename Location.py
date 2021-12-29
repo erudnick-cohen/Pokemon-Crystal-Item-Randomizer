@@ -13,7 +13,7 @@ class Tag:
 
 class Location:
 	def __init__(self, yamlTree):
-		print("Creating Location "+yamlTree["Name"])
+		#print("Creating Location "+yamlTree["Name"])
 		self.Name = yamlTree["Name"]
 		if "TrueName" in yamlTree:
 			self.TrueName = yamlTree["TrueName"]
@@ -108,13 +108,22 @@ class Location:
 			self.Trainers = None
 		if self.Trainers is not None:
 			self.AreaLevel = yamlTree["AREALV"]
-		self.Sublocations = [];
+		self.Sublocations = []
 		if ("Sublocations" in yamlTree):
 			if (yamlTree["Sublocations"] is not None):
 				for i in yamlTree["Sublocations"]:
 					self.Sublocations.append(Location(i))
 		self.IsGym = False
 		self.IsActuallyGym = False
+
+		if "WarpReqs" in yamlTree:
+			self.WarpReqs = yamlTree["WarpReqs"]
+			if self.WarpReqs is None:
+				self.WarpReqs = []
+		else:
+			self.WarpReqs = []
+
+
 	#determine if this location is reachable
 	#reachable defined by requirements being present in state
 	#and reachable reqs NOT present in state
@@ -174,10 +183,31 @@ class Location:
 		for i in self.Sublocations:
 			 i.applyBanList(banList, allowList)
 
+
+	def applyWarpLogic(self):
+		# Remove standard requirements for warp randomisation
+		# At definition, if the original requirements are still possible even in Warp Rando, then a fork must be made
+		# e.g. Cianwood City can be warped to now, but can still be surfed from Olivine/Whirl Islands
+		# This shall not add in location logic for flags or otherwise
+		if len(self.WarpReqs) > 0:
+
+			validWarpNames = {"Cianwood"}
+
+			newLoc = []
+			for warp in self.WarpReqs:
+				if warp in validWarpNames:
+					newLoc.append(warp + " Warpie")
+
+			if len(newLoc) > 0:
+				self.LocationReqs = newLoc
+
+		for i in self.Sublocations:
+			i.applyWarpLogic()
+
 	def applyModifiers(self, modifierDict):
 		list = [];
 		if(self.Name in modifierDict):
-			print('Modifying '+self.Name)
+			#print('Modifying '+self.Name)
 			for j in modifierDict[self.Name]:
 				if 'NewItemReqs' in j:
 					if not (j['NewItemReqs'] is None):

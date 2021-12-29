@@ -189,6 +189,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rBadgeList.append(i)
 				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
+				print(result[0])
 				print('bad run, retrying')
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')

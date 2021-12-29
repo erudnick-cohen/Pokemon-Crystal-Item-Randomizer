@@ -14,6 +14,8 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+        WarpReqs:
+            - Azalea
     -
         Name: Azalea Town
         FileName: AzaleaTown.asm
@@ -50,62 +52,104 @@ Location:
                     - RIVAL1 6
                 Sublocations:
             -
-                Name: Kurt's Lure Ball
+                Name: Kurt's House
                 FileName: KurtsHouse.asm
-                Type: Item
+                Type: Map
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Slowpoke Well Floor 1
+                LocationReqs: Azalea Town
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: LURE_BALL
-                Code: |
-                    .ClearedSlowpokeWell:
-                        writetext KurtsHouseKurtHonoredToMakeBallsText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoomForBall
-                        setevent EVENT_KURT_GAVE_YOU_LURE_BALL
+                NormalItem:
+                Code:
                 Text:
                 TrainerList: 
-                Sublocations:
+                WarpReqs:
+                    - Kurt
+                Sublocations:            
+                    -
+                        Name: Kurt's Lure Ball
+                        FileName: KurtsHouse.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Kurt's House
+                        FlagReqs:
+                            - Saved Slowpokes
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: LURE_BALL
+                        Code: |
+                            .ClearedSlowpokeWell:
+                                writetext KurtsHouseKurtHonoredToMakeBallsText
+                                promptbutton
+                                ITEMLINE
+                                iffalse .NoRoomForBall
+                                setevent EVENT_KURT_GAVE_YOU_LURE_BALL
+                        Text:
+                        TrainerList: 
+                        Sublocations:                        
+                    -
+                        Name: Kurt Help
+                        FileName: KurtsHouse.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Kurt's House
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                            - Open Slowpoke Well
+                        ReachableReqs:
+                        NormalItem: LURE_BALL
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
             -
-                Name: Charcoal Kiln
-                FileName: CharcoalKiln.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Ilex Forest Front
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: CHARCOAL
-                Code: |
-                    .Thanks:
-                        writetext CharcoalKilnApprenticeText2
-                        promptbutton
-                        ITEMLINE
-                        iffalse .Done
-                        setevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN
-                        closetext
-                        end
-                Text: |
-                    CharcoalKilnApprenticeText2:
-                        text "I'm sorry--I for-"
-                        line "got to thank you."
 
-                        para "This is ITEMNAME"
-                        line "that I made."
+                    Name: Charcoal Kiln
+                    FileName: CharcoalKiln.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Azalea Town
+                    FlagReqs:
+                        - Find Farfetchd
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: CHARCOAL
+                    WarpReqs:
+                        - Charcoal Kiln
+                    Code: |
+                        .Thanks:
+                            writetext CharcoalKilnApprenticeText2
+                            promptbutton
+                            ITEMLINE
+                            iffalse .Done
+                            setevent EVENT_GOT_CHARCOAL_IN_CHARCOAL_KILN
+                            closetext
+                            end
+                    Text: |
+                        CharcoalKilnApprenticeText2:
+                            text "I'm sorry--I for-"
+                            line "got to thank you."
 
-                        para "Fire-type #MON"
-                        line "would be happy to"
-                        cont "hold that."
-                        done
-                TrainerList: 
-                Sublocations:
+                            para "This is ITEMNAME"
+                            line "that I made."
+
+                            para "Fire-type #MON"
+                            line "would be happy to"
+                            cont "hold that."
+                            done
+                    TrainerList:
+                    Sublocations:
+                
+            
             -
                 Name: Behind Slowpoke Well Hidden
                 FileName: AzaleaTown.asm

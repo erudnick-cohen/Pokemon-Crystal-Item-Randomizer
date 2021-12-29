@@ -7,6 +7,7 @@ Location:
         WildTableList: SLOWPOKE_WELL_B1F
         LocationReqs: Azalea Town
         FlagReqs:
+            - Open Slowpoke Well
         ItemReqs:
         FlagsSet:
             - Saved Slowpokes
@@ -20,6 +21,8 @@ Location:
             - GRUNTM 2
             - GRUNTM 29
         HintName: Slowpoke
+        WarpReqs:
+            - Slowpoke Well Main Entrance
         Sublocations:
             - 
                 Name: Slowpoke Well Floor 1 Super Potion
@@ -58,6 +61,8 @@ Location:
         Code:
         Text:
         TrainerList:
+        WarpReqs:
+            - Slowpoke Floor 2
         Sublocations:
             - 
                 Name: King's Rock Guy

@@ -97,6 +97,41 @@ Location:
         HintName: Ice Path
         Sublocations:
             -
+                Name: Ice Path Boulders Room
+                FileName: IcePathB2FMahoganySide.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ice Path Part 1
+                FlagReqs:                    
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                WarpReqs: Ice Path Boulders
+                Sublocations:
+                    - 
+                        Name: Ice Path Boulders Pushed
+                        FileName: IcePathB2FMahoganySide.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Ice Path Boulders Room
+                        FlagReqs:
+                            - Plain Badge
+                        ItemReqs:
+                            - Strength
+                        FlagsSet:
+                            - Ice Path Boulders 
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                
+            -
                 Name: Ice Path Full Heal
                 FileName: IcePathB2FMahoganySide.asm
                 Type: Item

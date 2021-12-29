@@ -17,68 +17,143 @@ Location:
         HintName: Blackthorn
         Sublocations:
             -
-                Name: Clair TM
+                Name: Blackthorn Gym 1F Entrance
                 FileName: BlackthornGym1F.asm
-                SecondaryFile: DragonsDenB1F.asm
-                Type: Item
+                Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Blackthorn Gym Trainers After Boulders
+                LocationReqs: Blackthorn Gym
                 FlagReqs:
-                    - Plain Badge
                 ItemReqs:
-                    - Strength
                 FlagsSet:
-                Tags:
-                    -
-                        Name: Leader
-                        SubTags:
-                            - Blackthorn
                 ReachableReqs:
-                NormalItem: TM_DRAGONBREATH
-                Code: |
-                    .GiveTM:
-                        promptbutton
-                        ITEMLINE
-                        iffalse .BagFull
-                        setevent EVENT_GOT_TM24_DRAGONBREATH
-                        writetext BlackthornGymClairText_DescribeTM24
-                        promptbutton
-                        sjump .GotTM24
-                SecondaryCode: |
-                    DragonsDenB1F_ClairScene:
-                        appear DRAGONSDENB1F_CLAIR
-                        opentext
-                        writetext ClairText_Wait
-                        pause 30
-                        closetext
-                        showemote EMOTE_SHOCK, PLAYER, 15
-                        turnobject PLAYER, LEFT
-                        playmusic MUSIC_CLAIR
-                        applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
-                        opentext
-                        writetext ClairText_GiveDragonbreathDragonDen
-                        promptbutton
-                        ITEMLINE
-                        iffalse .BagFull
-                        setevent EVENT_GOT_TM24_DRAGONBREATH
-                        writetext ClairText_DescribeDragonbreathDragonDen
-                        promptbutton
-                        writetext ClairText_WhatsTheMatterDragonDen
-                        waitbutton
-                        closetext
-                        sjump .FinishClair
-                Text: |
-                    NotifyReceiveDragonbreath:
-                        text "<PLAYER> received"
-                        line "ITEMNAME."
-                        done
-
-                    ClairText_DescribeDragonbreathDragonDen:
-                        text "That contains"
-                        line "ITEMNAME."
+                NormalItem:
+                Code:
+                Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs:
+                    - Blackthorn Gym 1F Main
+                    
+            -
+                Name: Blackthorn Gym Boulder Room
+                FileName: BlackthornGym1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Blackthorn Gym 1F Entrance
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem:
+                Code:
+                Text:
+                TrainerList: 
+                Sublocations:
+                    -
+                        Name: Blackthorn Gym Boulders
+                        FileName: BlackthornGym1F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Blackthorn Gym Boulder Room
+                        FlagReqs:
+                            - Plain Badge
+                        ItemReqs:
+                            - Strength
+                        FlagsSet:
+                            - Blackthorn Boulders
+                        ReachableReqs:
+                        NormalItem:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                WarpReqs:
+                    - Blackthorn Gym Boulders
+            
+            -
+                Name: Blackthorn Gym 1F Middle
+                FileName: BlackthornGym1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Gym Boulder Room
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs:
+                    - Blackthorn Gym Middle
+                Sublocations:
+                    -
+                        Name: Clair TM
+                        FileName: BlackthornGym1F.asm
+                        SecondaryFile: DragonsDenB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        ItemReqs:
+                        FlagReqs:
+                            - Blackthorn Boulders
+                        LocationReqs: Blackthorn Gym 1F Middle
+                        FlagsSet:
+                            - Clair Defeated
+                        Tags:
+                            -
+                                Name: Leader
+                                SubTags:
+                                    - Blackthorn
+                        ReachableReqs:
+                        NormalItem: TM_DRAGONBREATH
+                        Code: |
+                            .GiveTM:
+                                promptbutton
+                                ITEMLINE
+                                iffalse .BagFull
+                                setevent EVENT_GOT_TM24_DRAGONBREATH
+                                writetext BlackthornGymClairText_DescribeTM24
+                                promptbutton
+                                sjump .GotTM24
+                        SecondaryCode: |
+                            DragonsDenB1F_ClairScene:
+                                appear DRAGONSDENB1F_CLAIR
+                                opentext
+                                writetext ClairText_Wait
+                                pause 30
+                                closetext
+                                showemote EMOTE_SHOCK, PLAYER, 15
+                                turnobject PLAYER, LEFT
+                                playmusic MUSIC_CLAIR
+                                applymovement DRAGONSDENB1F_CLAIR, MovementDragonsDen_ClairWalksToYou
+                                opentext
+                                writetext ClairText_GiveDragonbreathDragonDen
+                                promptbutton
+                                ITEMLINE
+                                iffalse .BagFull
+                                setevent EVENT_GOT_TM24_DRAGONBREATH
+                                writetext ClairText_DescribeDragonbreathDragonDen
+                                promptbutton
+                                writetext ClairText_WhatsTheMatterDragonDen
+                                waitbutton
+                                closetext
+                                sjump .FinishClair
+                        Text: |
+                            NotifyReceiveDragonbreath:
+                                text "<PLAYER> received"
+                                line "ITEMNAME."
+                                done
+
+                            ClairText_DescribeDragonbreathDragonDen:
+                                text "That contains"
+                                line "ITEMNAME."
+                        TrainerList:
+                        Sublocations:
             -
                 Name: Blackthorn Gym Trainers Before Boulders
                 FileName: BlackthornGym1F.asm

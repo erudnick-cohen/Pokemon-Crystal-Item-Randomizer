@@ -48,6 +48,7 @@ Location:
                 ItemReqs:
                     - Surf
                 FlagsSet:
+                    - Gyarados Beaten
                 ReachableReqs:
                 Code: |
                     RedGyarados:

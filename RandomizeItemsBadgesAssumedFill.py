@@ -152,6 +152,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			nLeft = len(progressList)
 			while nLeft > 0 and not allocated:
 				#if its a plando placement, just place it, we'll complain if infeasible later on
+				# TODO Investigate this functionality, as seems to want 'Name' appended
 				if locList[iter] in plandoPlacements:
 					toAllocate = plandoPlacements[locList[iter]]
 					nLeft = 0
@@ -302,6 +303,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						loc.item = toAllocate
 						loc.IsGym = False
 						loc.IsItem = True
+						#print("Spoilers:", loc.Name, loc.item)
 						spoiler[loc.item] = loc.Name
 						#if(loc.isGym()):
 						#	loc.badge = badgeData[toAllocate]
@@ -361,7 +363,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	stateDist = defaultdict(lambda: 0)
 	stuckCount = 0
 	trashSpoiler = {}
+	stage = 0
 	while not goalReached and not randomizerFailed:
+		stage += 1
 		#track if we're stuck
 		stuck = True
 		#shuffle the list of active locations to prevent any possible biases	
@@ -369,7 +373,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		for i in activeLoc:
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
-				#print(i.Name)
+
+				#print("reachable:",i.Name, "@", stage)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				#we can get somehwhere, so set this location in the state as true
@@ -394,10 +399,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#if its an item, put an item in it
 				#double checks items to write due to bizzare bug observed only once
 				if(i.isItem() or i.isGym()):
+					#print("IsReplace", i.Name)
 					if(not i.Name in spoiler.values()):
 						if i.Name in plandoPlacements:
 							item = plandoPlacements[i.Name]
 							i.item = item
+							print("Plando", i.Name, i.item)
 							try:
 								trashItems.remove(item)
 							except ValueError:
@@ -409,6 +416,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 							i.item = placeItem
+						#print("Trash", i.Name, i.item)
 						trashSpoiler[i.Name] = i.item
 						i.IsGym = False
 						i.IsItem = True
@@ -423,6 +431,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					if(i.item in badgeSet):
 						maxBadgeDist = max(maxBadgeDist,i.distance)
 						nBadges = nBadges+1
+						#print("Not Trash", i.Name, i.item)
 						spoiler[i.item] = i.Name
 						# if(i.badge is None):
 							# i.badge = badgeData[trashBadges.pop()]

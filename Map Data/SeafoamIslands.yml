@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Route 20 and 19
+        LocationReqs: Route 20
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -16,3 +16,5 @@ Location:
         TrainerList:
             - BLAINE 1
         Sublocations:
+        WarpReqs:
+            - Seafoam Gym Entrance

@@ -1,0 +1,1620 @@
+Location:
+    -
+        Name: 28 Cut
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Silver Outside
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        FlagReqs:
+            - Hive Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Silver Outside
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: 28 Cut
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Azalea Met Kurt
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Azalea
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+            - Met Kurt
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Azalea
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Azalea Met Kurt
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+            - Met Kurt
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Azalea Saved Slowpokes
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Azalea
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+            - Saved Slowpokes
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Azalea
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Azalea Saved Slowpokes
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Azalea
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Azalea Saved Slowpokes
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn Clair Defeated Surf
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Defeated Clair
+            - Fog Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn Clair Defeated Surf
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Fog Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn Rockets Cleared
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+            FlagReqs:
+            - Beat Team Rocket
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn Rockets Cleared
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn Lower
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn Lower Still
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Blackthorn Lower
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 19 Boulders
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Seafoam
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Defeated Blaine
+            - Fog Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Seafoam
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 19 Boulders
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Defeated Blaime
+            - Fog Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Burned Tower 1F Down
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Burned Tower 1F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Burned Tower 1F
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Burned Tower 1F Down
+        ItemReqs:
+        FlagReqs:
+            - Released Beasts
+        ReachableReqs:
+        WildTableList:
+        FlagsSet:
+        Code:
+        Text:
+
+    -
+        Name: Celadon Cut North
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Celadon
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        FlagReqs:
+            - Hive Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Celadon
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Celadon Cut North
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        FlagReqs:
+            - Hive Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Celadon Gym Outside
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Celadon
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        FlagReqs:
+            - Hive Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Celadon
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Celadon Gym Outside
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        FlagReqs:
+            - Hive Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dark Cave North
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dark Cave North Block
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dark Cave North Block
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dark Cave North
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dark Cave Route 46
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dark Cave Violet
+        ItemReqs:
+            - Rock Smash
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dark Cave Route Violet
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dark Cave Route 46
+        ItemReqs:
+            - Rock Smash
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dark Cave Violet to Blackthorn
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dark Cave Violet
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Fog Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dragons Den
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dragon Den Shrine
+        ItemReqs:
+            - Whirlpool
+        FlagsSet:
+        FlagReqs:
+            - Glacier Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Dragons Den Shrine
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Dragon Den
+        ItemReqs:
+            - Whirlpool
+        FlagsSet:
+        FlagReqs:
+            - Glacier Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Escape Rope Had
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Escape Rope Chamber
+        ItemReqs:
+            - Escape Rope
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Escape Rope Chamber
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Escape Rope Had
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fast Ship B1F East
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Fast Ship B1F West
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fast Ship B1F West
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Fast Ship B1F East
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+            - Sailor Working
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Flash Chamber
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Flash Have
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Flash Have
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Flash Chamber
+        ItemReqs:
+            - Flash
+        FlagReqs:
+            - Zephyr Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Dept. Store Basement Door
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Goldenrod Dept. Store
+        FlagsSet:
+        ItemReqs:
+        FlagReqs:
+            - Director Saved
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Dept. Store
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Goldenrod Dept. Store Basement Door
+        FlagsSet:
+        ItemReqs:
+        FlagReqs:
+            - Director Saved
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Underground Basement Key
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Goldenrod Underground
+        ItemReqs:
+            - Basement Key
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Underground
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Goldenrod Underground Basement Key
+        ItemReqs:
+            - Basement Key
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Ho-Oh In Party
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: 
+            - Ho-Oh Chamber
+            - VS Ho-Oh
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ho-Oh Chamber
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ho-Oh In Party
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ho-Oh Chamber
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ho-Oh In Party
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ice Path Drop Room With Strength
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ice Path Drop Room
+        ItemReqs:
+        FlagReqs:
+            - Ice Path Boulders
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ice Path Drop Room
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ice Path Drop Room With Strength
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ilex North
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ilex South
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Ilex South
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ilex North
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Lake Of Rage Cut
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Lake of Rage
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Lake Of Rage
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Lake of Rage Cut
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Mahogany Rockets Cleared
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mahogany
+        ItemReqs:
+        FlagReqs:
+            - Mahogany Rockets Defeated
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+      
+    -
+        Name: Mahogany
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mahogany Rockets Cleared
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Mahogany
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mahogany 7 Badges
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mahogany 7 Badges
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: 
+            - Mahogany
+            - 7 Badges
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mortar Surf South
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mortar Surf North
+        ItemReqs:
+            - Surf
+            - Strength
+        FlagReqs:
+            - Plain Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mortar Waterfall Room North
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mortar Waterfall Room South
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mortar Waterfall Room South
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mortar Waterfall Room North
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Cerulean City
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mount Moon Exit
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Mount Moon Main
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mount Moon Main Ledge
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mt Mortar Middle Entrance Hall Waterfall
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mt Mortar Middle Entrance Hall
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mt Mortar Middle Entrance Hall
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mt Mortar Middle Entrance Hall Waterfall
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Radio Tower 2F Rockets
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 2F
+            - 7 Badges
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Radio Tower 2F
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 2F Rockets
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Radio Tower 3F Maybe Card Key
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 3F
+            - 7 Badges
+        ItemReqs:
+            - Card Key
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Radio Tower 3F
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 3F Maybe Card Key
+            - 7 Badges
+        ItemReqs:
+            - Card Key
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Radio Tower 3F
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 3F Maybe Card Key
+            - 7 Badges
+        ItemReqs:
+            - Card Key
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Rocket Base Entrance Open
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Rocket Base Entrance
+        ItemReqs:
+        FlagReqs:
+            - Gyarados Beaten
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Rocket Base Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Rocket Base Entrance Open
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2 Cut
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2 Cut
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2 
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2 Diglett
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2 Diglett
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2 South
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 2
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 2 South
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Cherrygrove
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 31
+        ItemReqs:
+        FlagReqs:
+            - Mystery Egg Delivered
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Cherrygrove
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 31
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 31
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Cherrygrove
+        ItemReqs:
+        FlagReqs:
+            - Mystery Egg Delivered
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 31
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Cherrygrove
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 42 West
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 42 Center
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 42 Center
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 42 West
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Mahogany
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 42 Center
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Route 42 Center
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Mahogany
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Ruins of Alph
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ruins Surf
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ruins Surf
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ruins of Alph
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Ruins Ledge Middle
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ruins Top Ledge
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    
+    -
+        Name: Ruins Surf
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Ruins Ledge Middle
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Silver Cave Room 2
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Silver Cave Left Waterfall
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Silver Cave Room 2
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Silver Cave Right Waterfall
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Silver Cave Left Waterfall
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Silver Cave Room 2
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Silver Cave Right Waterfall
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Silver Cave Room 2
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Tin Tower 5F East Down
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tin Tower 5F Start
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    
+    -
+        Name: Tin Tower 5F Up
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tin Tower 5F Start
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Tin Tower 5F West Down
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tin Tower 5F Up
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Tojho Falls West
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tojho Falls East
+        ItemReqs:
+            - Waterfall
+            - Surf
+        FlagReqs:
+            - Rising Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Tojho Falls East
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tojho Falls West
+        ItemReqs:
+            - Waterfall
+            - Surf
+        FlagReqs:
+            - Rising Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Tojho West
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tojho Exit
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: New Bark
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Tojho West
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave Pass East
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave Pass West
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave Pass West
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave Past East
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave Surf Down
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave B1F Back
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave B1F
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave B1F
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave B1F Back
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave Strength
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave B1F Back
+        ItemReqs:
+            - Strength
+        FlagReqs:
+            - Plain Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Union Cave B1F Back
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Union Cave Strength
+        ItemReqs:
+            - Strength
+        FlagReqs:
+            - Plain Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Water Stone Have
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Water Stone Chamber
+        ItemReqs:
+            - Water Stone
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Water Stone Chamber
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Water Stone Have
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
