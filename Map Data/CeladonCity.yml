@@ -69,6 +69,7 @@ Location:
                 LocationReqs: Celadon City
                 FlagReqs:
                     - NPC Trash Can
+                    - Impossible
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
