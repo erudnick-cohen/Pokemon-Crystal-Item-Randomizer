@@ -18,7 +18,8 @@
         },
         "address_range": {
             "begin": 3,
-            "end": 3
+            "end": 3,
+            "Offset":2
         },
         "label": "Randomizer_HoOhSpecies.ckir_BEFORE_HOOHENCOUNTER",
         "description": "Change Ho-Oh's level to 40"

@@ -187,9 +187,11 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 
 def ApplyGamePatches(gameFile, patches):
 	for i in patches:
-		for j in range(0,len(i['integer_values']['new'])):
-			gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
-
+		if 'Offset' not in i['address_range']:
+			for j in range(0,len(i['integer_values']['new'])):
+				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
+			for j in range(i['address_range']['Offset'],len(i['integer_values']['new'])):
+				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
