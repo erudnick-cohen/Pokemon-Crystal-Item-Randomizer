@@ -45,6 +45,7 @@ Location:
         ItemReqs:
         FlagsSet:
         ReachableReqs:
+        WarpReqs: East Kanto
         Code:
         Text:
         AREALV: 32

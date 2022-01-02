@@ -13,7 +13,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Ilex Forest Back via Route 34
@@ -93,6 +93,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ilex Forest
+        WarpReqs: Ilex South
         Sublocations:
             -
                 Name: Ilex Cut HM
@@ -179,6 +180,7 @@ Location:
         TrainerList: 
             - BUG_CATCHER 19
         HintName: Ilex Forest
+        WarpReqs: Ilex North
         Sublocations:
             -
                 Name: Ilex Forest X Attack

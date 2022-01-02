@@ -14,14 +14,23 @@ import copy
 import traceback
 import random
 
+def handleBadSpoiler(result):
+	spoiler = result[1]
+	state = result[0]
+
+	for s in spoiler.keys():
+		s_value = spoiler[s]
+		if s_value not in state:
+			print("Cannot reach:",s, s_value)
+
 def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
 				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
 				 wildLVBoost = 0,
 				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
 				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				 otherSettings = {}, bonusTrash = [],hintConfig=None):
-	print('required items are')
-	print(requiredItems)
+	#print('required items are')
+	#print(requiredItems)
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -189,8 +198,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rBadgeList.append(i)
 				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
-				print(result[0])
-				print('bad run, retrying')
+				handleBadSpoiler(result)
+				print("bad run, retrying")
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			traceback.print_exc()
@@ -212,7 +221,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	addressData = {}
 	for i in addressLists:
 		addressData[i['label'].split(".")[-1]] = i
-	print(addressData)
+	#print(addressData)
 
 	item_desc = open("ItemDescriptions.json")
 	descs = item_desc.read()
@@ -227,6 +236,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	sign_addr_data = {}
 	for i in sign_desc_addr:
 		sign_addr_data[i['name'].split(".")[-1]] = i
+
+
 
 
 	class PriorityObject:

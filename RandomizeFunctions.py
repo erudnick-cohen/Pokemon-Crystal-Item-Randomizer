@@ -111,7 +111,7 @@ def fileToLocation(file):
         file = file.replace("NewBark", "New Bark")
 
     if "PokemonFanClub" in file:
-        file = file.replace("PokemonFanClub", "Vermillion City")
+        file = file.replace("PokemonFanClub", "Vermilion City")
 
     if "South" in file:
         file = file.replace("South", "")

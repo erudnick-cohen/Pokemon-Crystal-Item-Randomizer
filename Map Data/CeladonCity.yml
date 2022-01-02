@@ -52,6 +52,7 @@ Location:
                 ReachableReqs:
                 Text:
                 TrainerList:
+                WarpReqs: Celadon Curse House
                 NormalItem: TM_CURSE
                 Code: |
                     .Night:

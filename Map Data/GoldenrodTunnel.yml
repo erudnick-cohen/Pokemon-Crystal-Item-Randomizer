@@ -72,7 +72,6 @@ Location:
         LocationReqs: Goldenrod Tunnel Entrance
         FlagReqs:
         ItemReqs:
-            - Basement Key
         FlagsSet:
         ReachableReqs:
         Code:
@@ -83,6 +82,7 @@ Location:
             - RIVAL1 11
             - RIVAL1 12
         HintName: Goldenrod
+        WarpReqs: Goldenrod Underground Switch Room
         Sublocations:
             -
                 Name: Goldenrod Tunnel Smoke Ball
@@ -93,7 +93,6 @@ Location:
                 LocationReqs: Goldenrod Tunnel
                 FlagReqs:
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 Tags:
@@ -117,7 +116,6 @@ Location:
                 LocationReqs: Goldenrod Tunnel
                 FlagReqs:
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -139,7 +137,6 @@ Location:
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_POTION
@@ -161,7 +158,6 @@ Location:
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REVIVE
@@ -172,16 +168,33 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Goldenrod Warehouse
+        FileName: GoldenrodUndergroundWarehouse.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Goldenrod Tunnel
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        HintName: Goldenrod
+        WarpReqs: Goldenrod Warehouse
+        Sublocations:
             -
+
                 Name: Goldenrod Tunnel Max Ether
                 FileName: GoldenrodUndergroundWarehouse.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Goldenrod Tunnel
+                LocationReqs: Goldenrod Warehouse
                 FlagReqs:
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -198,10 +211,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Goldenrod Tunnel
+                LocationReqs: Goldenrod Warehouse
                 FlagReqs:
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -218,10 +230,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Goldenrod Tunnel
+                LocationReqs: Goldenrod Warehouse
                 FlagReqs:
                 ItemReqs:
-                    - Basement Key
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -232,61 +243,61 @@ Location:
                 NormalItem: ULTRA_BALL
                 TrainerList:
                 Sublocations:
-    -
-        Name: Goldenrod Tunnel Rocket Attack
-        FileName: GoldenrodUndergroundWarehouse.asm
-        Type: Item
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs: Goldenrod Tunnel
-        FlagReqs:
-            - Rocket Invasion
-        ItemReqs:
-            - Basement Key
-        FlagsSet:
-        ReachableReqs:
-        HintName: Goldenrod
-        Code: |
-            GoldenrodUndergroundWarehouseDirectorScript:
-                faceplayer
-                opentext
-                checkevent EVENT_RECEIVED_CARD_KEY
-                iftrue .GotCardKey
-                checkcode VAR_BADGES
-                ifless 7, .GotCardKey
-                writetext DirectorIntroText
-                promptbutton
-                ITEMLINE
-                setevent EVENT_RECEIVED_CARD_KEY
-                setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
-                clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
-                clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
-                writetext DirectorCardKeyText
-                promptbutton
-            .GotCardKey:
-                writetext DirectorAfterText
-                waitbutton
-                closetext
-                end
-        Text: |
-            UnknownText_0x7dbc6:
-                text "DIRECTOR: Who?"
-                line "What? You came to"
-                cont "rescue me?"
+            -
+                Name: Goldenrod Tunnel Rocket Attack
+                FileName: GoldenrodUndergroundWarehouse.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Goldenrod Warehouse
+                FlagReqs:
+                    - Rocket Invasion
+                ItemReqs:
+                FlagsSet:
+                    - Director Saved
+                ReachableReqs:
+                HintName: Goldenrod
+                Code: |
+                    GoldenrodUndergroundWarehouseDirectorScript:
+                        faceplayer
+                        opentext
+                        checkevent EVENT_RECEIVED_CARD_KEY
+                        iftrue .GotCardKey
+                        checkcode VAR_BADGES
+                        ifless 7, .GotCardKey
+                        writetext DirectorIntroText
+                        promptbutton
+                        ITEMLINE
+                        setevent EVENT_RECEIVED_CARD_KEY
+                        setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
+                        clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
+                        clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
+                        writetext DirectorCardKeyText
+                        promptbutton
+                    .GotCardKey:
+                        writetext DirectorAfterText
+                        waitbutton
+                        closetext
+                        end
+                Text: |
+                    UnknownText_0x7dbc6:
+                        text "DIRECTOR: Who?"
+                        line "What? You came to"
+                        cont "rescue me?"
 
-                para "Thank you!"
+                        para "Thank you!"
 
-                para "The RADIO TOWER!"
+                        para "The RADIO TOWER!"
 
-                para "What's happening"
-                line "there?"
+                        para "What's happening"
+                        line "there?"
 
-                para "Taken over by TEAM"
-                line "ROCKET?"
+                        para "Taken over by TEAM"
+                        line "ROCKET?"
 
-                para "Here. Take this"
-                line "ITEMNAME."
-                done
+                        para "Here. Take this"
+                        line "ITEMNAME."
+                        done
         AREALV: 20
         TrainerList:
             - GRUNTF 3
@@ -298,4 +309,3 @@ Location:
             - GRUNTM 25
             - BURGLAR 1
             - BURGLAR 2
-        Sublocations:

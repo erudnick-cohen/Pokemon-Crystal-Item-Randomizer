@@ -15,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Cerulean
+        WarpReqs: Cerulean
         Sublocations:
             -
                 Name: Cerulean City Hidden Berserk Gene

@@ -1,13 +1,48 @@
 Location:
     -
+        Name: Blackthorn Gym Entrance
+        FileName: BlackthornGym1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Blackthorn City
+        FlagReqs:
+          - Beat Team Rocket
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Blackthorn
+        Sublocations:
+
+    -
+        Name: Blackthorn Gym Entrance
+        FileName: BlackthornGym1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Blackthorn
+        Sublocations:
+
+    -
         Name: Blackthorn Gym
         FileName: BlackthornGym1F.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Blackthorn City
+        LocationReqs: Blackthorn Gym Entrance
         FlagReqs:
-            - Beat Team Rocket
         ItemReqs:
         FlagsSet:
         ReachableReqs:

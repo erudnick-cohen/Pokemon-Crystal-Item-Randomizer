@@ -85,6 +85,7 @@ Location:
         Text:
         TrainerList:
         HintName: Olivine
+        WarpReqs: Olivine
         Sublocations:
             -
                 Name: Olivine Strength HM

@@ -3,6 +3,7 @@ Location:
         Name: Saffron City Gym Badge
         FileName: SaffronGym.asm
         LocationReqs: Saffron Gym
+        WarpReqs: Saffron Gym Sabrina
         HasPKMN: No
         Type: Gym
         WildTableList:

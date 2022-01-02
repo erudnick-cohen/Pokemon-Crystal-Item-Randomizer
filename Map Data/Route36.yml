@@ -1,11 +1,27 @@
-Location:  
+Location:
+    -
+        Name: Route 36 Violet Side
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_36
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
     -
         Name: Route 36 via Violet
         FileName: Route36.asm
         Type: Map
         HasPKMN: No
         WildTableList: Route_36
-        LocationReqs: Violet City
+        LocationReqs: Route 36 Violet Side
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -167,7 +183,7 @@ Location:
             Type: Item
             HasPKMN: No
             WildTableList: 
-            LocationReqs: Route 36 via Violet
+            LocationReqs: Route 36 Violet Side
             FlagReqs:
                 - Timed Events
             ItemReqs:

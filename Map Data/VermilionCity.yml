@@ -13,6 +13,7 @@ Location:
         Code: 
         Text:
         TrainerList:
+        WarpReqs: Vermilion
         Sublocations:
     -
         Name: Vermilion via Route 6
@@ -82,7 +83,7 @@ Location:
         Code: 
         Text:
         TrainerList:
-        HintName: Vermillion
+        HintName: Vermilion
         Sublocations:
             -
                 Name: Vermilion City Fan Club President

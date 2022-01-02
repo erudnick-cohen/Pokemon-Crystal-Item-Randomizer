@@ -1,11 +1,49 @@
-Location:  
+Location:
+    -
+        Name: Tin Tower Access
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: Yes
+        LocationReqs:
+            - Ecruteak City
+        WildTableList:
+        FlagReqs:
+            - Morty Defeated
+        ItemReqs:
+            - Clear Bell
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Tin Tower Access
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: Yes
+        LocationReqs:
+            - Ecruteak City
+        WildTableList:
+        FlagReqs:
+            - Beat Team Rocket
+        ItemReqs:
+            - Clear Bell
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
     -
         Name: Tin Tower
         FileName: Route36.asm
         Type: Map
         HasPKMN: Yes
         LocationReqs:
-            - Ecruteak City
+            - Tin Tower Access
         WildTableList: 
         FlagReqs:
             - Impossible
@@ -60,18 +98,55 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
     -
         Name: Climb Tin Tower
         FileName: Route36.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
-        LocationReqs: 
-            - Tin Tower
+        WildTableList:
+        LocationReqs:
+          - Tin Tower
         FlagReqs:
         ItemReqs:
-            - Clear Bell
-            - Rainbow Wing
+          - Clear Bell
+          - Rainbow Wing
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Tin Tower
+        Sublocations:
+
+    -
+        Name: Climb Tin Tower
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Tin Tower
+        Sublocations:
+
+
+    -
+        Name: Tin Tower Floors
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Climb Tin Tower
+        FlagReqs:
+        ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code:
@@ -80,321 +155,475 @@ Location:
         HintName: Tin Tower
         Sublocations:
             -
-                Name: Tin Tower Full Heal
+                Name: Tin Tower 3F
                 FileName: TinTower3F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_HEAL
-                IsBall: Yes
-                Code: |
-                    TinTower3FFullHeal:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Ultra Ball
-                FileName: TinTower4F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: ULTRA_BALL
-                IsBall: Yes
-                Code: |
-                    TinTower4FUltraBall:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower PP Up
-                FileName: TinTower4F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: PP_UP
-                IsBall: Yes
-                Code: |
-                    TinTower4FPPUp:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Escape Rope
-                FileName: TinTower4F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: ESCAPE_ROPE
-                IsBall: Yes
-                Code: |
-                    TinTower4FEscapeRope:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Rare Candy
-                FileName: TinTower5F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: RARE_CANDY
-                IsBall: Yes
-                Code: |
-                    TinTower5FRareCandy:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Max Potion
-                FileName: TinTower6F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_POTION
-                IsBall: Yes
-                Code: |
-                    TinTower6FMaxPotion:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Max Revive
-                FileName: TinTower7F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_REVIVE
-                IsBall: Yes
-                Code: |
-                    TinTower7FMaxRevive:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Nugget
-                FileName: TinTower8F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: NUGGET
-                IsBall: Yes
-                Code: |
-                    TinTower8FNugget:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Max Elixer
-                FileName: TinTower8F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_ELIXER
-                IsBall: Yes
-                Code: |
-                    TinTower8FMaxElixer:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower Full Restore
-                FileName: TinTower8F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_RESTORE
-                IsBall: Yes
-                Code: |
-                    TinTower8FFullRestore:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Tin Tower HP Up
-                FileName: TinTower9F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Climb Tin Tower
-                FlagReqs:
-                ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: HP_UP
-                IsBall: Yes
-                Code: |
-                    TinTower9FHPUp:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: VS Ho-Oh
-                FileName: TinTower9F.asm
                 Type: Map
-                HasPKMN: Yes
-                WildTableList:
-                LocationReqs:
-                    - Climb Tin Tower
-                    - Elite Four
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Climb Tin Tower
                 FlagReqs:
                 ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                WarpReqs: Tin Tower 3F
+                Sublocations:
+                    -
+                        Name: Tin Tower Full Heal
+                        FileName: TinTower3F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_HEAL
+                        IsBall: Yes
+                        Code: |
+                            TinTower3FFullHeal:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    
+            -
+                Name: Tin Tower 4F
+                FileName: TinTower3F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tin Tower 3F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                WarpReqs: Tin Tower 4F
+                Sublocations:
+                    -
+                        Name: Tin Tower Ultra Ball
+                        FileName: TinTower4F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 4F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ULTRA_BALL
+                        IsBall: Yes
+                        Code: |
+                            TinTower4FUltraBall:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Tin Tower PP Up
+                        FileName: TinTower4F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 4F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: PP_UP
+                        IsBall: Yes
+                        Code: |
+                            TinTower4FPPUp:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Tin Tower Escape Rope
+                        FileName: TinTower4F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 4F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ESCAPE_ROPE
+                        IsBall: Yes
+                        Code: |
+                            TinTower4FEscapeRope:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                        
+                    -
+                        Name: Tin Tower Hidden Max Potion
+                        FileName: TinTower4F.asm
+                        SecondaryFile: TinTower4F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Tin Tower 4F
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_POTION
+                        Code: |
+                            TinTower4FHiddenMaxPotion:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event 11,  6, BGEVENT_ITEM, TinTower4FHiddenMaxPotion'
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+             
+            -
+                Name: Tin Tower 5F
+                FileName: TinTower3F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tin Tower 4F
+                FlagReqs:
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 Code:
                 Text:
                 TrainerList: 
                 Sublocations:
+                    -
+                        Name: Tin Tower Rare Candy
+                        FileName: TinTower5F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 5F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: RARE_CANDY
+                        IsBall: Yes
+                        Code: |
+                            TinTower5FRareCandy:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                        WarpReqs: Tin Tower 5F Start
+                    
+                    -
+                        Name: Tin Tower Hidden Full Restore
+                        FileName: TinTower5F.asm
+                        SecondaryFile: TinTower5F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Tin Tower 5F
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        Code: |
+                            TinTower5FHiddenFullRestore:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event 16, 14, BGEVENT_ITEM, TinTower5FHiddenFullRestore'
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                        WarpReqs:
+                            - Tin Tower 5F East Down
+
+                    -
+                        Name: Tin Tower Hidden Carbos
+                        FileName: TinTower5F.asm
+                        SecondaryFile: TinTower5F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Tin Tower 5F
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: CARBOS
+                        Code: |
+                            TinTower5FHiddenCarbos:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event  3, 15, BGEVENT_ITEM, TinTower5FHiddenCarbos'
+                        Text:
+                        TrainerList: 
+                        WarpReqs: Tin Tower 5F West Down
+                        Sublocations:
             -
-                Name: Tin Tower Hidden Max Potion
-                FileName: TinTower4F.asm
-                SecondaryFile: TinTower4F.asm
-                Type: Item
+                Name: Tin Tower 6F
+                FileName: TinTower3F.asm
+                Type: Map
                 HasPKMN: No
-                WildTableList:
-                LocationReqs: Climb Tin Tower
+                WildTableList: 
+                LocationReqs: Tin Tower 5F
                 FlagReqs:
-                    - Hidden Items
                 ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: MAX_POTION
-                Code: |
-                    TinTower4FHiddenMaxPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 11,  6, BGEVENT_ITEM, TinTower4FHiddenMaxPotion'
+                Code:
                 Text:
                 TrainerList: 
+                WarpReqs: Tin Tower 6F
                 Sublocations:
+                    -
+                        Name: Tin Tower Max Potion
+                        FileName: TinTower6F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Climb Tin Tower
+                        FlagReqs:
+                        ItemReqs:
+                            - Clear Bell
+                            - Rainbow Wing
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_POTION
+                        IsBall: Yes
+                        Code: |
+                            TinTower6FMaxPotion:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                
             -
-                Name: Tin Tower Hidden Full Restore
-                FileName: TinTower5F.asm
-                SecondaryFile: TinTower5F.asm
-                Type: Item
+                Name: Tin Tower 7F
+                FileName: TinTower3F.asm
+                Type: Map
                 HasPKMN: No
-                WildTableList:
-                LocationReqs: Climb Tin Tower
+                WildTableList: 
+                LocationReqs: Tin Tower 6F
                 FlagReqs:
-                    - Hidden Items
                 ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: FULL_RESTORE
-                Code: |
-                    TinTower5FHiddenFullRestore:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 16, 14, BGEVENT_ITEM, TinTower5FHiddenFullRestore'
+                Code:
                 Text:
                 TrainerList: 
-                Sublocations:
+                WarpReqs: Tin Tower 7F 
+                Sublocations:                
+                    -
+                        Name: Tin Tower Max Revive
+                        FileName: TinTower7F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Climb Tin Tower
+                        FlagReqs:
+                        ItemReqs:
+                            - Clear Bell
+                            - Rainbow Wing
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_REVIVE
+                        IsBall: Yes
+                        Code: |
+                            TinTower7FMaxRevive:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                
+            
             -
-                Name: Tin Tower Hidden Carbos
-                FileName: TinTower5F.asm
-                SecondaryFile: TinTower5F.asm
-                Type: Item
+                Name: Tin Tower 8F
+                FileName: TinTower3F.asm
+                Type: Map
                 HasPKMN: No
-                WildTableList:
-                LocationReqs: Climb Tin Tower
+                WildTableList: 
+                LocationReqs: Tin Tower 7F
                 FlagReqs:
-                    - Hidden Items
                 ItemReqs:
-                    - Clear Bell
-                    - Rainbow Wing
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: CARBOS
-                Code: |
-                    TinTower5FHiddenCarbos:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  3, 15, BGEVENT_ITEM, TinTower5FHiddenCarbos'
+                Code:
                 Text:
                 TrainerList: 
+                WarpReqs: Tin Tower 8F Top
+                Sublocations:                        
+                    -
+                        Name: Tin Tower Full Restore
+                        FileName: TinTower8F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 8F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        IsBall: Yes
+                        Code: |
+                            TinTower8FFullRestore:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                
+                    -
+                    
+                        Name: Tin Tower 8F Middle
+                        FileName: TinTower3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 8F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        WarpReqs: Tin Tower 8F Item Room
+                        Sublocations:
+                            -
+                                Name: Tin Tower Max Elixer
+                                FileName: TinTower8F.asm
+                                Type: Item
+                                HasPKMN: No
+                                WildTableList: 
+                                LocationReqs: Tin Tower 8F Middle
+                                FlagReqs:
+                                ItemReqs:
+                                FlagsSet:
+                                ReachableReqs:
+                                NormalItem: MAX_ELIXER
+                                IsBall: Yes
+                                Code: |
+                                    TinTower8FMaxElixer:
+                                        ITEMLINE
+                                Text:
+                                TrainerList: 
+                                Sublocations:
+                            
+                        
+                    -
+                        Name: Tin Tower 8F Bottom
+                        FileName: TinTower3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 8F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        WarpReqs: Tin Tower 8F Item Room Ledges
+                        Sublocations:
+                            -
+                                Name: Tin Tower Nugget
+                                FileName: TinTower8F.asm
+                                Type: Item
+                                HasPKMN: No
+                                WildTableList: 
+                                LocationReqs: Tin Tower 8F Bottom
+                                FlagReqs:
+                                ItemReqs:
+                                FlagsSet:
+                                ReachableReqs:
+                                NormalItem: NUGGET
+                                IsBall: Yes
+                                Code: |
+                                    TinTower8FNugget:
+                                        ITEMLINE
+                                Text:
+                                TrainerList: 
+                                Sublocations:
+                
+            -
+                Name: Tin Tower 9F
+                FileName: TinTower3F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tin Tower 8F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                WarpReqs: Tin Tower 9F Top
                 Sublocations:
+                
+                    -
+                        Name: Tin Tower HP Up
+                        FileName: TinTower9F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList: 
+                        LocationReqs: Tin Tower 9F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: HP_UP
+                        IsBall: Yes
+                        Code: |
+                            TinTower9FHPUp:
+                                ITEMLINE
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+                
+            -
+                Name: Tin Tower Roof
+                FileName: TinTower3F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList: 
+                LocationReqs: Tin Tower 9F
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList: 
+                WarpReqs: Tin Tower Roof
+                Sublocations:
+                    - 
+                        Name: VS Ho-Oh
+                        FileName: TinTower9F.asm
+                        Type: Map
+                        HasPKMN: Yes
+                        WildTableList:
+                        LocationReqs:
+                            - Tin Tower Roof
+                            - Elite Four
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList: 
+                        Sublocations:
+            
+            

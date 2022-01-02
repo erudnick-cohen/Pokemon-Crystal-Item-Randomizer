@@ -1,6 +1,6 @@
 Location:  
     -
-        Name: Burned Tower
+        Name: Burned Tower 1F
         FileName: BurnedTower1F.asm
         Type: Map
         HasPKMN: Yes
@@ -17,6 +17,7 @@ Location:
             - RIVAL1 7
             - RIVAL1 8
             - RIVAL1 9
+        WarpReqs: Burned Tower 1F
         Sublocations:
             -
                 Name: Burned Tower Rock Smash Item
@@ -24,7 +25,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Burned Tower 1F
                 FlagReqs:
                 ItemReqs: 
                     - Rock Smash
@@ -46,7 +47,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Burned Tower 1F
                 FlagReqs:
                     - Hidden Items
                 ItemReqs: 
@@ -68,7 +69,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Burned Tower 1F
                 FlagReqs:
                     - Hidden Items
                 ItemReqs: 
@@ -93,12 +94,13 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
-            -   Released Beasts
+            - Released Beasts
         ReachableReqs:
         Code:
         Text:
         TrainerList:
         HintName: Burned Tower
+        WarpReqs: Burned Tower Basement
         Sublocations:
             -
                 Name: Burned Tower Strength Item
@@ -106,7 +108,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Burned Tower Basement
                 FlagReqs: 
                     - Plain Badge
                 ItemReqs:

@@ -8,30 +8,15 @@ Changes:
     -
         Location: Blackthorn City Gym Badge
         NewLocationReqs:
-            - Dragons Den Shrine
-            - Blackthorn Gym Trainers After Boulders
+            - Dragons Den Shrine Building
         NewFlagReqs:
-            - Plain Badge
-            - Fog Badge
-            - Glacier Badge
         NewItemReqs:
-            - Strength
-            - Surf
-            - Whirlpool
     -
         Location: Clair TM
         NewLocationReqs:
-            - Dragons Den Shrine
-            - Blackthorn Gym Trainers After Boulders
             - Clair TM Banned
         NewFlagReqs:
-            - Plain Badge
-            - Fog Badge
-            - Glacier Badge
         NewItemReqs:
-            - Strength
-            - Surf
-            - Whirlpool
     -
         Location: Dragons Den
         NewLocationReqs:

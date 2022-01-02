@@ -14,12 +14,12 @@ Location:
         ItemUnlock:
         InfeasibleBadges:
         NormalBadge: Thunder Badge
-        HintName: Vermillion
+        HintName: Vermilion
         Tags:
             -
                 Name: Leader
                 SubTags:
-                    - Vermillion
+                    - Vermilion
         BadgeLine: |
             VermilionGymSurgeScript:
                 faceplayer

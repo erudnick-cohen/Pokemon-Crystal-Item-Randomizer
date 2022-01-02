@@ -14,8 +14,10 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+        WarpReqs: Dark Cave Violet
+
     -
-        Name: Dark Cave Violet
+        Name: Dark Cave Violet Side
         FileName: DarkCaveVioletEntrance.asm
         Type: Map
         HasPKMN: Yes
@@ -36,7 +38,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Dark Cave Violet
+                LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
                 ItemReqs:
@@ -57,7 +59,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Dark Cave Violet
+                LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
                     - Goldenrod City Entrance
@@ -81,7 +83,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Dark Cave Violet
+                LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
                     - Goldenrod City Entrance
@@ -105,7 +107,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Dark Cave Violet
+                LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
                     - Goldenrod City Entrance
@@ -130,7 +132,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Dark Cave Violet
+                LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Hidden Items
                     - Zephyr Badge

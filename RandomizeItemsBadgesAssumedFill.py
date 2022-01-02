@@ -374,7 +374,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
 
-				#print("reachable:",i.Name, "@", stage)
+				print("reachable:",i.Name, "@", stage)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				#we can get somehwhere, so set this location in the state as true

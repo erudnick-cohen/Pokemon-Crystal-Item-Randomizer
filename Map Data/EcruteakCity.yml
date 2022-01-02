@@ -87,6 +87,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ecruteak
+        WarpReqs: Ecruteak
         Sublocations:
             -
                 Name: Ecruteak City Hidden Hyper Potion
@@ -149,6 +150,7 @@ Location:
                     - KIMONO_GIRL 4
                     - KIMONO_GIRL 5
                     - KIMONO_GIRL 6
+                WarpReqs: Dance Theater
                 Sublocations:
             -
                 Name: Itemfinder House
@@ -204,3 +206,4 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
+                WarpReqs: Ecruteak Itemfinder House

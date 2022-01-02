@@ -27,7 +27,6 @@ Location:
         LocationReqs: 
             - Azalea Gym Entrance
         FlagReqs:
-            - Saved Slowpokes
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -96,7 +95,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Azalea Town
+                LocationReqs: Azalea Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

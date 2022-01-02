@@ -71,6 +71,74 @@ Location:
         Code:
         Text:
         Sublocations:
+
+    -
+        Name: SS Aqua Sailor Block
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Sailor Working
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+        WarpReqs: Fast Ship B1F East
+
+    -
+        Name: SS Aqua Sailor
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Entrance
+        FlagReqs:
+            - Sailor Requested
+        ItemReqs:
+        FlagsSet:
+            - Sailor Working
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+        WarpReqs: Top Left Ship Room
+
+    -
+        Name: SS Aqua Captain Access
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Entrance
+        FlagReqs:
+          - Sailor Working
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: SS Aqua Captain
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Captain Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+        WarpReqs: Captains Room
+
     -
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
@@ -78,7 +146,7 @@ Location:
         Type: Item
         HasPKMN: No
         WildTableList:
-        LocationReqs: SS Aqua Entrance
+        LocationReqs: SS Aqua Captain
         FlagReqs:
             - Kanto Mode
         ItemReqs:

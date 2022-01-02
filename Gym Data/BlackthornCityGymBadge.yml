@@ -3,13 +3,15 @@ Location:
         Name: Blackthorn City Gym Badge
         FileName: BlackthornGym1F.asm
         SecondaryFile: DragonShrine.asm
-        LocationReqs: Clair TM
+        LocationReqs:
+            - Clair TM
         Type: Gym
         HasPKMN: No
         WildTableList:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Quiz Taken
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:

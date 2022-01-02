@@ -1,28 +1,6 @@
 import LoadLocationData
 
 
-def readTSVFile(filename):
-    file = open(filename)
-    data = file.readlines()
-
-    objs = []
-
-    first_line = True
-    for line in data:
-        if first_line:
-            field_names = line.split("\t")
-            first_line = False
-        else:
-            d = line.split("\t")
-            obj = {}
-            iterator = 0
-            for name in field_names:
-                obj[name] = d[iterator]
-                iterator += 1
-
-            objs.append(obj)
-
-    return objs
 
 
 
@@ -30,7 +8,7 @@ def readTSVFile(filename):
 
 warpFileLocation = "WarpFriendlyNames.tsv"
 
-warpGroupData = readTSVFile(warpFileLocation)
+warpGroupData = LoadLocationData.readTSVFile(warpFileLocation)
 
 fullLocationData = LoadLocationData.LoadDataFromFolder(".", None, None, {}, [])
 all_locs = fullLocationData[0]
@@ -42,7 +20,8 @@ locationList = LoadLocationData.FlattenLocationTree(all_locs)
 conflicts = []
 for item in warpGroupData:
     groupName = item["Group"]
-    res = list(filter(lambda x: x.Name == groupName and groupName not in x.WarpReqs, locationList))
+    res = list(filter(lambda x: x.Name == groupName and groupName not in x.WarpReqs \
+                      and x.Type != "Transition", locationList))
     if len(res) > 0:
         conflicts.append(groupName)
 

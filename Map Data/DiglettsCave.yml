@@ -15,7 +15,8 @@ Location:
         Code:
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Digletts Cave Main
         Sublocations:
             -
                 Name: Diglett's Cave Hidden Max Revive

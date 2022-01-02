@@ -1,14 +1,14 @@
 Location:
     -
-        Name: Mahogany Gym
+        Name: Mahogany Gym Entrance
         FileName: MahoganyGym.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
-        LocationReqs: 
-            - Mahogany Town
+        WildTableList:
+        LocationReqs:
+          - Mahogany Town
         FlagReqs:
-            - Mahogany Rockets Defeated
+          - Mahogany Rockets Defeated
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -16,6 +16,25 @@ Location:
         Text:
         TrainerList:
         HintName: Mahogany
+        Sublocations:
+
+    -
+        Name: Mahogany Gym
+        FileName: MahoganyGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: 
+            - Mahogany Gym Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Mahogany
+        WarpReqs: Mahogany Gym
         Sublocations:
             -
                 Name: Pryce TM

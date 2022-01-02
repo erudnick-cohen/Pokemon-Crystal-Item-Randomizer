@@ -5,8 +5,9 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Lighthouse Amphy
+        LocationReqs:
         FlagReqs:
+            - Amphy Healed
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -14,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Olivine
+        WarpReqs: Olivine Gym
         Sublocations:
             -
                 Name: Jasmine TM

@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Violet
+        WarpReqs: Violet Gym
         Sublocations:
             -
                 Name: Falkner TM
@@ -25,6 +26,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Falkner Defeated
                 ReachableReqs:
                 NormalItem: TM_MUD_SLAP
                 Tags:
@@ -82,7 +84,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Violet Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

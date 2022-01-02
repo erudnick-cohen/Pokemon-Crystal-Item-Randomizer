@@ -15,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Fuchsia
+        WarpReqs: Fuchsia
         Sublocations:
             -
                 Name: Fuchsia City Burnt Berry

@@ -1,3 +1,4 @@
+Start Warp Name	Start Warp Group	->	End Warp Name	End Warp Group
 ELMS_LAB Entrance	(New Bark)	->	ELMS_LAB Exit	(Elms Lab)
 PLAYERS_HOUSE_1F Entrance	(New Bark)	->	PLAYERS_HOUSE_1F Exit	(Players House)
 PLAYERS_NEIGHBORS_HOUSE Entrance	(New Bark)	->	New Bark House Exit	(New Bark House)
@@ -488,7 +489,7 @@ Silver Cave Room 2 Exit	(Silver Cave Room 2)	->	PEWTER_MART Entrance	(West Kanto
 Silver Cave Room 3 Entrance	(Silver Cave Room 2)	->	Ice Path Route 44 Side Ladder Down 	(Ice Path Route 44 Side)
 Silver Cave Left Waterfall 	(Silver Cave Left Waterfall)	->	OLIVINE_LIGHTHOUSE_1F Exit	(Lighthouse 1F)
 Silver Cave Right Waterfall 	(Silver Cave Right Waterfall)	->	BLACKTHORN_POKECENTER_1F Entrance	(Blackthorn City)
-Red's Room Exit	(Red's Room)	->	Victory Road Gate to Route 28 	(Victory Road Gate Mt Silver)
+Red's Room Exit	(Reds Room)	->	Victory Road Gate to Route 28 	(Victory Road Gate Mt Silver)
 Silver Cave Item Room North Exit	(Silver Cave Item Room 1)	->	Celadon Mansion 2F Up 	(Celadon Mansion 2F)
 Silver Cave Item Room South Exit	(Silver Cave Item Room 2)	->	Saffron Gym N SE 	(Saffron Gym South West)
 Dark Cave Violet Exit	(Dark Cave Violet)	->	Generator Room North West 	(Rocket Base B2F)
@@ -863,7 +864,7 @@ Route 2 North to Route 2 South Gate Exit	(Route 2 Gate)	->	Ecruteak Exit from Ro
 Victory Road Gate to Route 22 	(Victory Road Gate Snorlax)	->	Victory Road Gate to Route 22 	(Victory Road Gate Snorlax)
 Victory Road Gate to Route 26 	(Victory Road Gate 8 Badges)	->	Route 9 Rock Tunnel Entrance	(Route 9)
 Victory Road Entrance 	(Victory Road Gate)	->	INDIGO_PLATEAU_POKECENTER_1F Exit	(Indigo Plateau)
-Victory Road Gate to Route 28 	(Victory Road Gate Mt Silver)	->	Red's Room Exit	(Red's Room)
+Victory Road Gate to Route 28 	(Victory Road Gate Mt Silver)	->	Red's Room Exit	(Reds Room)
 ELMS_LAB Exit	(Elms Lab)	->	ELMS_LAB Entrance	(New Bark)
 PLAYERS_HOUSE_1F Exit	(Players House)	->	PLAYERS_HOUSE_1F Entrance	(New Bark)
 Players House Up 	(Players Room)	->	Players House Down Exit	(Players House 2F)

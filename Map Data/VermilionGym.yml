@@ -82,5 +82,6 @@ Location:
             - GUITARIST 2
             - GENTLEMAN 3
             - LT_SURGE 1
-        HintName: Vermillion
+        HintName: Vermilion
         Sublocations:
+        WarpReqs: Vermilion Gym

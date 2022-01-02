@@ -5,4 +5,5 @@ NewGamePatches:
 Changes:
     -
         Location: Red
-        NewFlagReqs: []
+        RemoveLocationReqs:
+            - Elite Four

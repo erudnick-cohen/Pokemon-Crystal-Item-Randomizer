@@ -5,8 +5,9 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Burned Tower
+        LocationReqs: Ecruteak City
         FlagReqs:
+            - Released Beasts
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -14,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ecruteak
+        WarpReqs: Ecruteak Gym
         Sublocations:
             -
                 Name: Morty TM
@@ -25,6 +27,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Beaten Morty
                 ReachableReqs:
                 Tags:
                     -
@@ -83,7 +86,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Ecruteak Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

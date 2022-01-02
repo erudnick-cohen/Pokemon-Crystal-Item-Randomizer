@@ -13,5 +13,40 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: West Kanto
         Sublocations:
+        -
+            Name: Oaks Lab
+            FileName: PalletTown.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs:
+              - Pallet Town
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs: Oaks Lab
+            Sublocations:
+            -
+                Name: Unlock Mt. Silver
+                FileName: PalletTown.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Oaks Lab
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Mt. Silver Unlock Required For Warp
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:

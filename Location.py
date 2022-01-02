@@ -120,6 +120,8 @@ class Location:
 			self.WarpReqs = yamlTree["WarpReqs"]
 			if self.WarpReqs is None:
 				self.WarpReqs = []
+			elif isinstance(self.WarpReqs, str):
+				self.WarpReqs = [self.WarpReqs]
 		else:
 			self.WarpReqs = []
 
@@ -191,15 +193,32 @@ class Location:
 		# This shall not add in location logic for flags or otherwise
 		if len(self.WarpReqs) > 0:
 
-			validWarpNames = {"Cianwood"}
+			validWarpNames = {}
+				#{"Cianwood"}
 
 			newLoc = []
 			for warp in self.WarpReqs:
-				if warp in validWarpNames:
+				if warp in validWarpNames or len(validWarpNames) == 0:
 					newLoc.append(warp + " Warpie")
 
 			if len(newLoc) > 0:
 				self.LocationReqs = newLoc
+
+		#Temporary code
+		if self.Type == "Transition":
+			dontChange = ["8 Badges", "7 Badges", "All Badges", "Woke Snorlax"]
+
+			if self.Name not in dontChange:
+				self.Name = self.Name + " Warpie"
+			newReqs = []
+
+			for x in self.LocationReqs:
+				if x not in dontChange:
+					newReqs.append(x + " Warpie")
+				else:
+					newReqs.append(x)
+			self.LocationReqs = newReqs
+
 
 		for i in self.Sublocations:
 			i.applyWarpLogic()
