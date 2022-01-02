@@ -187,9 +187,10 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 
 def ApplyGamePatches(gameFile, patches):
 	for i in patches:
-		if 'Offset' not in i['address_range']:
+		if not 'Offset' in i['address_range']:
 			for j in range(0,len(i['integer_values']['new'])):
 				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
+		else:
 			for j in range(i['address_range']['Offset'],len(i['integer_values']['new'])):
 				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
