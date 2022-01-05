@@ -30,13 +30,10 @@ Changes:
             - Cut
     -
         Location: Radio Card Quiz
-        RemoveFlagReqs:
-            - Impossible
+        NewFlagReqs: []
     -
         Location: Pokegear Gift
-        RemoveFlagReqs:
-            - Impossible
+        NewFlagReqs: []
     -
         Location: Expansion Card Gift
-        RemoveFlagReqs:
-            - Impossible
+        NewFlagReqs: []
