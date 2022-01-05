@@ -23,10 +23,10 @@ Location:
             HasPKMN: No
             WildTableList: 
             LocationReqs:
-                - Power Plant Activated
                 - Lavender Town
             FlagReqs:
                 - Impossible
+                - Kanto Power Restored
             ItemReqs:
             FlagsSet:
             ReachableReqs:
