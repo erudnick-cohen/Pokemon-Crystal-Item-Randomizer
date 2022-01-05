@@ -1,0 +1,14 @@
+[
+    {
+        "integer_values": {
+            "old": [1],
+            "new": [0]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772
+        },
+        "label": "ClassicRainbowWing.ckir_BEFOREClassicRainbowWing",
+        "description": "Restores old item rando/speedchoice behavior where you can get rainbow wing after talking to Lance"
+    }
+]

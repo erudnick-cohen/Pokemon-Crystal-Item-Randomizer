@@ -22,7 +22,7 @@ def ResetRomForLabelling():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Speedchoice Current/pokecrystal-speedchoice","RandomizerRom")
+	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 	#next overwrite the files which need custom labels
 	for root, dir, files  in os.walk("Files with manual labels/maps"):
 		for file in files:
@@ -187,9 +187,12 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 
 def ApplyGamePatches(gameFile, patches):
 	for i in patches:
-		for j in range(0,len(i['integer_values']['new'])):
-			gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
-
+		if not 'Offset' in i['address_range']:
+			for j in range(0,len(i['integer_values']['new'])):
+				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
+		else:
+			for j in range(i['address_range']['Offset'],len(i['integer_values']['new'])):
+				gameFile[i['address_range']['begin']+j] = i['integer_values']['new'][j]
 def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
 	labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
@@ -352,10 +355,16 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		romMap[addressData["address_range"]["begin"]+6] = nItemCode
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
 	else:
-		romMap[addressData["address_range"]["begin"]+6] = 168
+		if itemType != 'ROD':
+			romMap[addressData["address_range"]["begin"]+6] = nItemCode
+		else:
+			romMap[addressData["address_range"]["begin"]+6] = 58
 		romMap[addressData["address_range"]["begin"]+11] = commandVerbose
 		romMap[addressData["address_range"]["begin"]+12] = nItemCode
-		romMap[addressData["address_range"]["begin"]+13] = endVal
+		# romMap[addressData["address_range"]["begin"]+6] = 168
+		# romMap[addressData["address_range"]["begin"]+11] = commandVerbose
+		# romMap[addressData["address_range"]["begin"]+12] = nItemCode
+		# romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
@@ -714,11 +723,14 @@ def LabelItemLocation(location):
 		#print(coderegexstr)
 		codeSearch = None
 		if not location.IsSpecial:
+			#print(coderegexstr)
 			codeSearch = re.findall(coderegexstr,filecode)[0]
 			oldcode = codeSearch[0]
 			#print(codeSearch)
 		else:
 			coderegexstr = re.escape(location.SecondaryCode.replace("    ","\t")).replace("ITEMLINE",".+")
+			#print(repr(coderegexstr))
+			#print(repr(filecode))
 			oldcode = re.findall(coderegexstr,filecode)[0]
 		#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 		if location.IsBall or location.IsBerry:

@@ -1,0 +1,10 @@
+Name: Nerf Ho-Oh Chamber
+Description: Nerfs the Ho-Oh chamber to not require E4. Ho-Oh's level is also nerfed down to 40 (its level in Pokemon Gold) to compensate for how early it can be reached.
+NewGamePatches:
+    - 'Patches/NerfHoOhChamber.json'
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber
+        NewLocationReqs: 
+            - Union Cave
+            - Climb Tin Tower

@@ -5,6 +5,14 @@ ItemRandoActive::
 .ckir_BEFOREItemRandoActive::
 	db
 .ckir_AFTERItemRandoActive::
+HoOhChamberNerfed::
+.ckir_BEFOREHoOhChamberNerfed::
+	db 
+.ckir_AFTERHoOhChamberNerfed::
+ClassicRainbowWing::
+.ckir_BEFOREClassicRainbowWing
+	db 1
+.ckir_AFTERClassicRainbowWing
 ItemRandoRocketless::
 .ckir_BEFOREItemRandoRocketless::
 	db

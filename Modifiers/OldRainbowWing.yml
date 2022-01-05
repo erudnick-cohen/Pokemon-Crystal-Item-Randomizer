@@ -1,0 +1,4 @@
+Name: Old Rainbow Wing Behavior
+Description: Restores old item rando/speedchoice behavior where you can get rainbow wing after talking to Lance
+NewGamePatches:
+    - 'Patches/OldRainbowWing.json'
