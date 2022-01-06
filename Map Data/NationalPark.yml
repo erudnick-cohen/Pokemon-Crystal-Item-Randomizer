@@ -82,7 +82,8 @@ Location:
             - POKEFANF 1
             - SCHOOLBOY 1
             - LASS 4
-        Sublocations:        
+        WarpReqs: National Park
+        Sublocations:
             -
                 Name: National Park Quick Claw
                 FileName: NationalPark.asm

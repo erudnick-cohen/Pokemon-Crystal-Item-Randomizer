@@ -64,7 +64,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 WarpReqs:
-                    - Pharmacy
+                    - Cianwood Pharmacy
                 Code: |
                     CianwoodPharmacist:
                         faceplayer

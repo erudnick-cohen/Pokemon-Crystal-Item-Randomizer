@@ -19,6 +19,7 @@ Location:
             - PICNICKER 6
             - PICNICKER 7
             - BIRD_KEEPER 8
+        WarpReqs: Route 4
         Sublocations:
             -
                 Name: Route 4 HP UP

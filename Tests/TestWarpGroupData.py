@@ -6,7 +6,7 @@ import LoadLocationData
 
 # Add test to ensure no conflict crossover between standard warp location names and warp groups
 
-warpFileLocation = "WarpFriendlyNames.tsv"
+warpFileLocation = "Warp Data/WarpFriendlyNames.tsv"
 
 warpGroupData = LoadLocationData.readTSVFile(warpFileLocation)
 

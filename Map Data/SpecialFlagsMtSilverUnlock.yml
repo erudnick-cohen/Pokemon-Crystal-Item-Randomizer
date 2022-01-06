@@ -119,7 +119,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Pallet Town
+            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -150,7 +150,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Pallet Town
+            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -181,7 +181,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Pallet Town
+            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -212,7 +212,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Pallet Town
+            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges

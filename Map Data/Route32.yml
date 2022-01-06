@@ -79,6 +79,7 @@ Location:
                 LocationReqs: Route 32 North
                 FlagReqs:
                     - Zephyr Badge
+                    - Received Egg
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -198,6 +199,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: OLD_ROD
+                WarpReqs: Route 32 Center
                 Code: |
                     Route32Pokecenter1FFishingGuruScript:
                         faceplayer

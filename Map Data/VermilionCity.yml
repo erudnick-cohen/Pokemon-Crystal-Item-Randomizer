@@ -97,6 +97,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: RARE_CANDY
+                WarpReqs: Fan Club
                 Code: |
                     PokemonFanClubChairmanScript:
                         faceplayer
@@ -149,6 +150,7 @@ Location:
                     - Machine Part
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs: Fan Club
                 Code: |
                     .MetCopycat:
                         promptbutton

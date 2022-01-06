@@ -16,6 +16,7 @@ Location:
         Text:
         AREALV: 32
         TrainerList: 
+        WarpReqs: Route 2 Cut
         Sublocations:
             -
                 Name: Route 2 Nugget House
@@ -58,7 +59,8 @@ Location:
                         line "have to do!"
                         done
                 AREALV: 32
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Route 2 Nugget House
                 Sublocations:
             -
                 Name: Route 2 Elixer
@@ -67,11 +69,9 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 2
+                    - Route 2 Post Cut via Route 2
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: ELIXER
@@ -83,6 +83,7 @@ Location:
                 AREALV: 32
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Route 2 South
             -
                 Name: Route 2 Carbos
                 FileName: Route2.asm
@@ -208,6 +209,7 @@ Location:
             - BUG_CATCHER 12
             - BUG_CATCHER 3
         HintName: Route 2
+        WarpReqs: West Kanto
         Sublocations:
             -
                 Name: Route 2 Dire Hit

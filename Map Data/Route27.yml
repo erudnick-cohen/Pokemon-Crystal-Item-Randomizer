@@ -60,6 +60,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Tojho Falls West
     -
         Name: Route 27 Right Side
         FileName: Route27.asm
@@ -156,15 +157,14 @@ Location:
                 LocationReqs: Tohjo Falls Over the Waterfall
                 FlagReqs:
                     - Timed Events
-                    - Fog Badge
                 ItemReqs:
-                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 Text:
                 TrainerList:
                 HintName: Route 27
                 NormalItem: TM_SANDSTORM
+                WarpReqs: Route 27 Sandstorm House
                 Code: |
                     .Loyal:
                         writetext SandstormHouseWomanLoyalText

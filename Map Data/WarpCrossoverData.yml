@@ -220,7 +220,7 @@ Location:
             - Surf
         FlagsSet:
         FlagReqs:
-            - Defeated Blaime
+            - Defeated Blaine
             - Fog Badge
         ReachableReqs:
         WildTableList:
@@ -628,7 +628,7 @@ Location:
         LocationReqs: Ice Path Drop Room
         ItemReqs:
         FlagReqs:
-            - Ice Path Boulders
+            - Ice Path Boulders Pushed
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -763,9 +763,9 @@ Location:
         HasPKMN: No
         LocationReqs: 
             - Mahogany
-            - 7 Badges
         ItemReqs:
         FlagReqs:
+            - Rocket Invasion
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1474,7 +1474,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Union Cave Past East
+        LocationReqs: Union Cave Pass East
         ItemReqs:
             - Surf
         FlagReqs:
@@ -1485,6 +1485,22 @@ Location:
         Code:
         Text:
         
+    -
+        Name: Union Cave
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Union Cave Surf Down
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Union Cave Surf Down
         FileName: CianwoodCity.asm
@@ -1539,6 +1555,23 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: Union Cave B1F Back
+        ItemReqs:
+            - Strength
+        FlagReqs:
+            - Plain Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+
+    -
+        Name: Union Cave B1F Back
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Union Cave Strength
         ItemReqs:
             - Strength
         FlagReqs:
@@ -1789,21 +1822,612 @@ Location:
         Code:
         Text:
 
+    -
+        Name: Whirl Island SW Passage Surf Left
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island SW Passage Surf Right
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Whirl Island SW Passage Surf Right
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island SW Passage Surf Left
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island SW Surf
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island SW
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island SW
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island SW Surf
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island SW
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island SW Surf
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island NE Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island NE
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island NE Item
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island NE
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Waterfall Bottom
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Waterfall Top
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Waterfall Ladder
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Waterfall Bottom
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Waterfall Bottom
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Waterfall Ladder
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Waterfall Top
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Waterfall Bottom
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Boulder
+        ItemReqs:
+            - Strength
+        FlagReqs:
+            - Plain Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Main
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Ledge Cave
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 5F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse Jasmine
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 4F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 5F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 3F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 4F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 3F Middle
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 4F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 2F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 3F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 1F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 2F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod Rocket Corner Block
+        ItemReqs:
+        FlagReqs:
+            - Rocket Invasion
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod Rocket Block North
+        ItemReqs:
+        FlagReqs:
+            - Rocket Invasion
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Rocket Corner Block
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod
+        ItemReqs:
+        FlagReqs:
+            - Rocket Invasion
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Rocket Block North
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod
+        ItemReqs:
+        FlagReqs:
+            - Rocket Invasion
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Victory Road Hall 3 Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Victory Road Hall 3
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Victory Road Hall 2
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Victory Road Hall 2 Ledge
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion Power
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion
+        ItemReqs:
+        FlagReqs:
+            - Kanto Power Restored
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion Power
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Cerulean Power
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Cerulean
+        ItemReqs:
+        FlagReqs:
+            - Kanto Power Restored
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Cerulean
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Cerulean Power
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
 
+    -
+        Name: Tin Tower 1F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Tin Tower 1F Rainbow Wing
+        ItemReqs:
+        FlagReqs:
+            - Suicune Battled
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Tin Tower 1F Rainbow Wing
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Tin Tower 1F
+            - Elite Four
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Slowpoke Well HM Locked
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Slowpoke Well Main Entrance
+        ItemReqs:
+            - Surf
+            - Strength
+        FlagReqs:
+            - Fog Badge
+            - Plain Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Slowpoke Well Main Entrance
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Slowpoke Well HM Locked
+        ItemReqs:
+            - Surf
+            - Strength
+        FlagReqs:
+            - Fog Badge
+            - Plain Badge
+            - Saved Slowpokes
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Route 36
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Violet
+        ItemReqs:
+            - Squirtbottle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Violet
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 36
+        ItemReqs:
+            - Squirtbottle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Route 35
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 36
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Route 36
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 35
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
+    -
+        Name: Ecruteak
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 36
+        ItemReqs:
+            - Squirtbottle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
-
-
-
-
-
-
-
+    -
+        Name: Route 36
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Ecruteak
+        ItemReqs:
+            - Squirtbottle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:

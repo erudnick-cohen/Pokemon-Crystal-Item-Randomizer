@@ -53,6 +53,7 @@ Location:
         FlagsSet:
         ReachableReqs:
         NormalItem: TM_SLUDGE_BOMB
+        WarpReqs: Route 43 Gate
         Code: |
             OfficerScript_GuardWithSludgeBomb:
                 faceplayer

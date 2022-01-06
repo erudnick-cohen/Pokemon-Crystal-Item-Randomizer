@@ -70,6 +70,22 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+
+    -
+        Name: Olivine City Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 40 Water
+        ItemReqs:
+        FlagReqs:
+            - Warps
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Olivine City
         FileName: OlivineCity.asm
@@ -128,6 +144,7 @@ Location:
                         cont "ITEMNAME!"
                         done
                 TrainerList:
+                WarpReqs: Olivine Cafe
                 Sublocations:
             -
                 Name: Good Rod Guru
@@ -140,6 +157,7 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs: Olivine Good Rod House
                 NormalItem: GOOD_ROD
                 Code: |
                     GoodRodGuru:

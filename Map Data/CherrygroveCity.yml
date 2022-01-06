@@ -15,7 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Cherrygrove
-        WarpReqs: Cherrygove
+        WarpReqs: Cherrygrove
         Sublocations:
             -
                 Name: Mystic Water Man

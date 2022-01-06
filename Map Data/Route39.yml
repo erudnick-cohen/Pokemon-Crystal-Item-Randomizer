@@ -146,6 +146,7 @@ Location:
                 Text:
                 TrainerList:
                 NormalItem: TM_SNORE
+                WarpReqs: Farmhouse
                 Code: |
                     FarmerFScript_GiveSnore:
                         writetext FarmerFText_HealedMiltank

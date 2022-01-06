@@ -7,3 +7,13 @@ Changes:
         Location: Warps
         RemoveFlagReqs:
             - Impossible
+
+    -
+        Location: Olivine Port Hidden Protein
+        AddLocationReqs:
+            - Impossible
+
+    -
+        Location: Vermilion Port Hidden Iron
+        AddLocationReqs:
+            - Impossible

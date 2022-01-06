@@ -1,6 +1,24 @@
 Location:
     -
-        Name: Route 44
+        Name: Route 44 Entrance
+        FileName: Route44.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_44
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        WarpReqs: Mahogany 7 Badges
+
+    -
+        Name: Route 44 Entrance
         FileName: Route44.asm
         Type: Map
         HasPKMN: Yes
@@ -8,6 +26,23 @@ Location:
         LocationReqs: Mahogany Town
         FlagReqs:
             - Rocket Invasion
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+
+    -
+
+        Name: Route 44
+        FileName: Route44.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_44
+        LocationReqs: Route 44 Entrance
+        FlagReqs:
         ItemReqs:
         FlagsSet:
         ReachableReqs:

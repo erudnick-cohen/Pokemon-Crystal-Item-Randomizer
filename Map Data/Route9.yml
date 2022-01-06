@@ -71,6 +71,25 @@ Location:
         AREALV: 32
         TrainerList: 
         Sublocations:
+
+    -
+        Name: Route 9 via Route 10
+        FileName: Route9.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        WarpReqs: Route 9
+        Sublocations:
     -
         Name: Route 9
         FileName: Route9.asm

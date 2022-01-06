@@ -65,6 +65,42 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+
+    -
+        Name: Power Plant Access
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Route 10
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Power Plant Access
+        FileName: Route10North.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs: Power Plant
+
     -
         Name: Route 10
         FileName: Route10North.asm
@@ -91,18 +127,15 @@ Location:
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs:
-                    - Route 10
+                LocationReqs: Power Plant Access
                 FlagReqs:
-                    - Fog Badge
                 ItemReqs:
-                    - Surf
                 FlagsSet:
                     - Power Plant
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:
                     -            
                         Name: Power Plant Activated

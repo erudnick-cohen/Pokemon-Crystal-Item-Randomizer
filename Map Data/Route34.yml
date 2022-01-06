@@ -190,7 +190,8 @@ Location:
                         ITEMLINE
                 SecondaryCode: '    bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion'
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Day Care Outside
                 Sublocations:
             -
                 Name: Route 34 Picknicker Gina Leaf Stone

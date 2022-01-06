@@ -244,17 +244,17 @@ Location:
                 LocationReqs:
                     - Route 43
                     - Most Map Access
-                    - Red Scale Dropped
                 FlagReqs:
                     - Mon Locked Checks
-                    - Fog Badge
+                    - Mahogany Rockets Defeated
                 ItemReqs:
-                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 IsBall: No
                 NormalItem: ELIXER
-                WarpReqs: Lake of Rage Magikarp House
+                WarpReqs:
+                    - Lake of Rage Magikarp House
+                    - Most Map Access
                 Code: |
                     .GetReward:
                         writetext MagikarpLengthRaterText_Memento

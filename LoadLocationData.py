@@ -112,7 +112,7 @@ def CheckLocationData(warpLocations, locationList):
 	# This is presently defined in Warp Data/WarpCrossoverData.yml
 	# These should be usable as standard locations but not for marking as 'impossible'
 
-	accessible_groups = ["New Bark Warpie","Cherrygove Warpie"]
+	accessible_groups = ["New Bark Warpie","Cherrygrove Warpie"]
 	accessible_warp_data = []
 
 	flattened = FlattenLocationTree(locationList)
@@ -128,16 +128,22 @@ def CheckLocationData(warpLocations, locationList):
 			start = warp["Start Warp Group"][1:-1] + " Warpie"
 			end = warp["End Warp Group"][1:-1] + " Warpie"
 
-			if start in accessible_groups and end not in accessible_groups:
+			if start in accessible_groups:
 				#print("Add warp access:",start,end)
-				accessible_groups.append(end)
+
+
+				if end not in accessible_groups:
+					accessible_groups.append(end)
+					added_cycle += 1
+
 				if warp not in accessible_warp_data:
 					accessible_warp_data.append(warp)
-				added_cycle += 1
+					added_cycle += 1
+
 
 			# Is not flattened!
-			if start not in accessible_groups:
-				otherPossibilities = list(filter(lambda x: x.Type == "Transition" and \
+			elif start not in accessible_groups:
+				otherPossibilities = list(filter(lambda x: \
 					x.Name == start, flattened))
 
 				for op in otherPossibilities:
@@ -147,15 +153,13 @@ def CheckLocationData(warpLocations, locationList):
 								#print("Add warp access2:", start,end)
 								accessible_groups.append(start)
 								accessible_groups.append(end)
-								if warp not in accessible_warp_data:
-									accessible_warp_data.append(warp)
+								added_cycle += 2
+							if warp not in accessible_warp_data:
+								accessible_warp_data.append(warp)
 								added_cycle += 1
 
 		if added_cycle == 0:
 			break
-
-	# Temporary test before all warp requirements are added
-	no_warps = []
 
 	for l in locationList:
 		ImpossibleWarpRecursion(accessible_groups, l)

@@ -80,6 +80,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: SUPER_ROD
+                WarpReqs: Super Rod House
                 Code: |
                     Route12SuperRodHouseFishingGuruScript:
                         faceplayer

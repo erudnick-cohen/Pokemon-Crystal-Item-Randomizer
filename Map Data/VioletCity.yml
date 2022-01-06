@@ -34,6 +34,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Violet Center
             -
                 Name: Violet City Rare Candy
                 FileName: VioletCity.asm

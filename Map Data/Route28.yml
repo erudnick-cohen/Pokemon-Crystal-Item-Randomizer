@@ -31,6 +31,7 @@ Location:
         FlagsSet:
         ReachableReqs:
         NormalItem: TM_STEEL_WING
+        WarpReqs: Steel Wing House
         Code: |
             Celebrity:
                 faceplayer

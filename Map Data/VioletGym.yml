@@ -26,7 +26,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
-                    - Falkner Defeated
+                    - Defeated Falkner
                 ReachableReqs:
                 NormalItem: TM_MUD_SLAP
                 Tags:

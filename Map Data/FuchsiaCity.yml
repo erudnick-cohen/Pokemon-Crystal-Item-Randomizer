@@ -17,6 +17,59 @@ Location:
         HintName: Fuchsia
         WarpReqs: Fuchsia
         Sublocations:
+    -
+        Name: Fuchsia City Back Entry
+        FileName: FuchsiaCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Fuchsia City
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Fuchsia
+        Sublocations:
+    -
+        Name: Fuchsia City Back Entry
+        FileName: FuchsiaCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Fuchsia
+        WarpReqs: Fuchsia Back
+        Sublocations:
+
+    -
+        Name: Fuchsia City Back
+        FileName: FuchsiaCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Fuchsia City Back Entry
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Fuchsia
+        Sublocations:
             -
                 Name: Fuchsia City Burnt Berry
                 FileName: FuchsiaCity.asm

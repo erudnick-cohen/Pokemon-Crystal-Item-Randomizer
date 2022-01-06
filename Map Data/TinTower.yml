@@ -55,6 +55,26 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+
+            -
+                Name: Battle! Suicune
+                FileName: TinTower1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Tin Tower
+                ItemReqs:
+                FlagReqs:
+                FlagsSet:
+                    - Suicune Battled
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs:
+                    - Tin Tower 1F
             -
                 Name: Rainbow Wing Gift
                 FileName: TinTower1F.asm
@@ -65,7 +85,6 @@ Location:
                     - Tin Tower
                     - Elite Four
                 ItemReqs:
-                    - Clear Bell
                 FlagReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -98,6 +117,9 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs:
+                    - Elite Four
+                    - Tin Tower 1F
 
     -
         Name: Climb Tin Tower

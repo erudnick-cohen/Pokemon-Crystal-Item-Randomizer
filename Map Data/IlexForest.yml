@@ -292,6 +292,8 @@ Location:
                 FlagsSet:
                 NormalItem: TM_SWEET_SCENT
                 ReachableReqs:
+                WarpReqs: Ilex/Route 34 Gate
+
                 Code: |
                     Route34IlexForestGateTeacherScript:
                         faceplayer

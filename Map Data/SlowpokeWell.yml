@@ -1,13 +1,48 @@
-Location:  
+Location:
     -
+        Name: Slowpoke Well Entrance
+        FileName: SlowpokeWellB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Azalea Town
+        FlagReqs:
+          - Open Slowpoke Well
+        FlagsSet:
+        ItemReqs:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 8
+        TrainerList:
+        WarpReqs: Slowpoke Well Main Entrance
+    -
+        Name: Slowpoke Well Entrance
+        FileName: SlowpokeWellB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 8
+        TrainerList:
+        WarpReqs: Slowpoke Well Main Entrance
+
+    -
+
         Name: Slowpoke Well Floor 1
         FileName: SlowpokeWellB1F.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: SLOWPOKE_WELL_B1F
-        LocationReqs: Azalea Town
+        LocationReqs: Slowpoke Well Entrance
         FlagReqs:
-            - Open Slowpoke Well
         ItemReqs:
         FlagsSet:
             - Saved Slowpokes
@@ -22,7 +57,6 @@ Location:
             - GRUNTM 29
         HintName: Slowpoke
         WarpReqs:
-            - Slowpoke Well Main Entrance
         Sublocations:
             - 
                 Name: Slowpoke Well Floor 1 Super Potion
@@ -44,25 +78,44 @@ Location:
                 TrainerList:
                 Sublocations:
     -
+        Name: Slowpoke Well Floor 2 Access
+        FileName: SlowpokeWellB1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Slowpoke Well Floor 1
+        FlagReqs:
+            - Saved Slowpokes
+            - Plain Badge
+            - Surf
+        ItemReqs:
+            - Strength
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 8
+        TrainerList:
+
+    -
         Name: Slowpoke Well Floor 2
         FileName: SlowpokeWellB2F.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: SLOWPOKE_WELL_B2F
-        LocationReqs:  Slowpoke Well Floor 1
+        LocationReqs:  Slowpoke Well Floor 2 Access
         FlagReqs:
-            - Plain Badge
             - Fog Badge
         ItemReqs:
             - Surf
-            - Strength
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
         TrainerList:
         WarpReqs:
-            - Slowpoke Floor 2
+            - Slowpoke Well Basement
         Sublocations:
             - 
                 Name: King's Rock Guy
@@ -72,11 +125,9 @@ Location:
                 WildTableList: 
                 LocationReqs: Slowpoke Well Floor 2
                 FlagReqs:
-                    - Plain Badge
                     - Fog Badge
                 ItemReqs:
                     - Surf
-                    - Strength
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: KINGS_ROCK
@@ -124,11 +175,9 @@ Location:
                 WildTableList: 
                 LocationReqs: Slowpoke Well Floor 2
                 FlagReqs:
-                    - Plain Badge
                     - Fog Badge
                 ItemReqs:
                     - Surf
-                    - Strength
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_RAIN_DANCE

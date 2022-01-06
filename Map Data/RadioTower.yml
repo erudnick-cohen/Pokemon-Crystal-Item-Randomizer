@@ -1,11 +1,43 @@
 Location:
     -
+        Name: Radio Tower Access
+        FileName: RadioTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Radio Tower Access
+        FileName: RadioTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
         Name: Radio Tower
         FileName: RadioTower1F.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Goldenrod City Entrance
+        LocationReqs: Radio Tower Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,17 +47,53 @@ Location:
         TrainerList: 
         Sublocations:
             -
-                Name: Radio Tower Rockets Part 1
+                Name: Radio Tower Directors Room Access
                 FileName: RadioTower5F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City Entrance
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Radio Tower Directors Room
+
+            -
+                Name: Radio Tower Directors Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower
                 FlagReqs:
                     - Rocket Invasion
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Radio Tower Directors Room
+                Sublocations:
+
+            -
+                Name: Radio Tower Rockets Part 1
+                FileName: RadioTower5F.asm
+                Type: Item
+                HasPKMN: Yes
+                WildTableList: 
+                LocationReqs: Radio Tower Directors Room Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                WarpReqs:
                 Code: |
                     FakeDirectorScript:
                         turnobject RADIOTOWER5F_DIRECTOR, UP
@@ -72,17 +140,53 @@ Location:
                     - GRUNTF 2
                     - EXECUTIVEM 3
                 Sublocations:
+
+            -
+                Name: Radio Tower Top Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                    - Rocket Invasion
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Radio Tower Hub
+            -
+                Name: Radio Tower Top Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower
+                FlagReqs:
+                    - Rocket Invasion
+                ItemReqs:
+                    - Card Key
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Radio Tower Hub
+
             -
                 Name: Radio Tower Rockets Part 2
                 FileName: RadioTower5F.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Goldenrod City Entrance
+                LocationReqs: Radio Tower Top Room Access
                 FlagReqs:
-                    - Rocket Invasion
                 ItemReqs:
-                    - Card Key
                 FlagsSet:
                     - Beat Team Rocket
                 ReachableReqs:
@@ -143,13 +247,14 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Radio Tower Rockets Part 2
+                        LocationReqs: Radio Tower
                         FlagReqs:
+                            - Beat Team Rocket
                         ItemReqs:
-                            - Card Key
                         FlagsSet:
                         ReachableReqs:
                         NormalItem: TM_SUNNY_DAY
+                        WarpReqs: Radio Tower 3F
                         Code: |
                             .NoRockets:
                                 writetext RadioTower3FCooltrainerFYoureMyHeroText
@@ -176,13 +281,14 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Radio Tower Rockets Part 2
+                        LocationReqs: Radio Tower
                         FlagReqs:
+                            - Beaten Team Rocket
                         ItemReqs:
-                            - Card Key
                         FlagsSet:
                         ReachableReqs:
                         NormalItem: PINK_BOW
+                        WarpReqs: Radio Tower 4F Rocket Side
                         Code: |
                             .ClearedRockets:
                                 writetext RadioTower4FDJMaryText_ClearedRockets
@@ -238,6 +344,7 @@ Location:
                 Text:
                 TrainerList:
                 Sublocations:
+                WarpReqs: Radio Tower 2F
             -
                 Name: Radio Card Quiz
                 FileName: RadioTower1F.asm
@@ -296,4 +403,5 @@ Location:
                 Text:
                 AREALV:
                 TrainerList:
+                WarpReqs: Radio Tower 1F
                 Sublocations:
