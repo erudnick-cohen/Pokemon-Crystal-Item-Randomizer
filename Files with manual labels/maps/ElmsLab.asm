@@ -189,7 +189,7 @@ Randomizer_StarterCyndaquilOffset3::
 Randomizer_StarterCyndaquilOffset4::
 .ckir_BEFORE_STARTER1::
 	givepoke CYNDAQUIL, 5, BERRY
-.ckir_BEFORE_STARTER1::
+.ckir_AFTER_STARTER1::
 	closetext
 	readvar VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
