@@ -79,7 +79,9 @@ Location:
                 IsSpecial: Yes
                 Code: |
                     CeladonCafeTrashcan:
+                    .ckir_BEFORE_LEFTOVERS_CAN::
                         ITEMLINE
+                    .ckir_AFTER_LEFTOVERS_CAN::
                 SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
                 Text:
                 TrainerList: 
