@@ -176,7 +176,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 				WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 			else:
 				if i.Name == "Elm Aide Pokeballs":
-					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Dragons Den Dragon Fang":
 					#this just happens to work, its in the same byte offset (its also now just a regular location...)
 					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
