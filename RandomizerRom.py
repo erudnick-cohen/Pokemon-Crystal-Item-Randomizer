@@ -176,7 +176,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 				WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 			else:
 				if i.Name == "Elm Aide Pokeballs":
-					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Dragons Den Dragon Fang":
 					#this just happens to work, its in the same byte offset (its also now just a regular location...)
 					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
@@ -346,22 +346,25 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	elif(itemType == 'Flag'):
 		commandVerbose = 175
 		nextVal = nItemCode
-		endVal = 5
+		endVal = 1
 	elif(itemType == 'Rod'):
 		commandVerbose = 177
 		nextVal = 0
 		endVal = 176
 		nItemCode = 176
-	if(itemType == 'Item'):
-		romMap[addressData["address_range"]["begin"]+6] = nItemCode
-		romMap[addressData["address_range"]["begin"]+12] = nItemCode
-	else:
-		if itemType != 'ROD':
-			romMap[addressData["address_range"]["begin"]+6] = nItemCode
-		else:
-			romMap[addressData["address_range"]["begin"]+6] = 58
-		romMap[addressData["address_range"]["begin"]+11] = commandVerbose
-		romMap[addressData["address_range"]["begin"]+12] = nItemCode
+	romMap[addressData["address_range"]["begin"]] = commandVerbose
+	romMap[addressData["address_range"]["begin"]+1] = nItemCode
+	romMap[addressData["address_range"]["begin"]+2] = endVal
+	# if(itemType == 'Item'):
+		# romMap[addressData["address_range"]["begin"]+6] = nItemCode
+		# romMap[addressData["address_range"]["begin"]+12] = nItemCode
+	# else:
+		# if itemType != 'ROD':
+			# romMap[addressData["address_range"]["begin"]+6] = nItemCode
+		# else:
+			# romMap[addressData["address_range"]["begin"]+6] = 58
+		# romMap[addressData["address_range"]["begin"]+11] = commandVerbose
+		# romMap[addressData["address_range"]["begin"]+12] = nItemCode
 		# romMap[addressData["address_range"]["begin"]+6] = 168
 		# romMap[addressData["address_range"]["begin"]+11] = commandVerbose
 		# romMap[addressData["address_range"]["begin"]+12] = nItemCode
