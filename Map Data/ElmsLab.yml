@@ -82,7 +82,6 @@ Location:
                         ITEMLINE
                         writetext AideText_ExplainBalls
                         promptbutton
-                        itemnotify
                         closetext
                         setscene SCENE_ELMSLAB_NOTHING
                         end
