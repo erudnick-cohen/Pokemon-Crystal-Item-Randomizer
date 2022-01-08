@@ -2,7 +2,7 @@ import RunCustomRandomizationAssumedFill as RunCustomRandomization
 import yaml
 import json
 from shutil import copyfile
-romPath = 'testTrickyAgainBase - Copy.gbc'
+romPath = 'testingRom7p3.gbc'
 copyfile(romPath, 'Hmmm'+romPath)
 
 yamlfile = open("Modes/Extreme.yml")
@@ -12,10 +12,11 @@ yamlfile = open(settings['BasePatch'])
 yamltext = yamlfile.read()
 patches = json.loads(yamltext)
 modFileList = settings['DefaultModifiers']
+modFileList.append('Modifiers/StartWithRepel.yml')
 modList = []
 #plandoPlacements = {"Hidden Machine Part" : "Radio Card", "Route 29 Potion" : "Squirtbottle", "Route 30 Berry Man" : "OLD_ROD", "Violet City Gym Badge": "Storm Badge", "Falkner TM" : "Fly", "Route 31 Pokeball" : "Cut", 'Goldenrod City Gym' : "Hive Badge", "Route 30 Antidote" : "Pass", 'Azalea Town Gym Badge': 'Fog Badge', 'Buena Item': "GOOD_ROD"}
-#plandoPlacements = {'Celadon City Gym Badge':'Fog Badge' }
-plandoPlacements = {}
+plandoPlacements = {"Elm Aide Potion": "Mystery Egg", 'Elm Aide Pokeballs':"SUPER_ROD"}
+#plandoPlacements = {}
 seed = 50
 CoreProgress = ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle']
 for i in modFileList:
