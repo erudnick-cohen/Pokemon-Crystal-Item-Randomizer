@@ -1,0 +1,4 @@
+Name: Start with Repel
+Description: Makes it so that all starters will be holding repels
+NewGamePatches:
+    - 'Patches/StarterRepels.json'

@@ -11,6 +11,7 @@ DefaultModifiers:
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/SkipReturningToNewBark.yml
     - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
     - Mr. Pokemon's Egg

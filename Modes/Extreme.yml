@@ -24,6 +24,7 @@ DefaultModifiers:
     - Modifiers/EnableTinTower.yml
     - Modifiers/CardRandomization.yml
     - Modifiers/NerfHoOhChamber.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

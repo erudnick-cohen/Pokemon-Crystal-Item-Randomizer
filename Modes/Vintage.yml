@@ -12,6 +12,7 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/ProgressiveRods.yml
     - Modifiers/VanillaClair.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

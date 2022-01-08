@@ -22,6 +22,7 @@ DefaultModifiers:
     - Modifiers/VanillaClair.yml
     - Modifiers/EnableTinTower.yml
     - Modifiers/CardRandomization.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

@@ -72,7 +72,7 @@ Location:
                 FlagsSet:
                     - Gave Elm Egg
                 ReachableReqs:
-                IsSpecial: Yes
+                IsSpecial: No
                 NormalItem: POKE_BALL
                 Code: |
                     AideScript_GiveYouBalls:
@@ -82,7 +82,6 @@ Location:
                         ITEMLINE
                         writetext AideText_ExplainBalls
                         promptbutton
-                        itemnotify
                         closetext
                         setscene SCENE_ELMSLAB_NOTHING
                         end
