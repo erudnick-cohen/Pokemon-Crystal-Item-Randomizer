@@ -148,30 +148,7 @@ Location:
                     - BIRD_KEEPER 12
                 Sublocations:
 
-            -
-                Name: Route 27 Sandstorm House
-                FileName: Route27SandstormHouse.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Tohjo Falls Over the Waterfall
-                FlagReqs:
-                    - Timed Events
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                HintName: Route 27
-                NormalItem: TM_SANDSTORM
-                WarpReqs: Route 27 Sandstorm House
-                Code: |
-                    .Loyal:
-                        writetext SandstormHouseWomanLoyalText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .Done
-                        setevent EVENT_GOT_TM37_SANDSTORM
+
             -
                 Name: Route 27 Bird Keeper Jose Star_Piece
                 FileName: Route27.asm
@@ -199,3 +176,28 @@ Location:
                         sjump .NumberAccepted
                 Text:
                 Sublocations:
+
+    -
+        Name: Route 27 Sandstorm House
+        FileName: Route27SandstormHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Tohjo Falls Over the Waterfall
+        FlagReqs:
+            - Timed Events
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        HintName: Route 27
+        NormalItem: TM_SANDSTORM
+        WarpReqs: Route 27 Sandstorm House
+        Code: |
+            .Loyal:
+                writetext SandstormHouseWomanLoyalText
+                promptbutton
+                ITEMLINE
+                iffalse .Done
+                setevent EVENT_GOT_TM37_SANDSTORM

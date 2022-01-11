@@ -1,3 +1,6 @@
+import LoadLocationData
+
+
 class Tag:
 	def __init__(self, treeItem=None, name=None):
 		if treeItem is not None:
@@ -125,6 +128,9 @@ class Location:
 		else:
 			self.WarpReqs = []
 
+		if self.Type == "Transition":
+			self.FlagReqs.append("Warps")
+
 
 	#determine if this location is reachable
 	#reachable defined by requirements being present in state
@@ -199,22 +205,23 @@ class Location:
 			newLoc = []
 			for warp in self.WarpReqs:
 				if warp in validWarpNames or len(validWarpNames) == 0:
-					newLoc.append(warp + " Warpie")
+					newLoc.append(warp + LoadLocationData.WARP_OPTION)
 
 			if len(newLoc) > 0:
 				self.LocationReqs = newLoc
 
 		#Temporary code
-		if self.Type == "Transition":
-			dontChange = ["8 Badges", "7 Badges", "All Badges", "Woke Snorlax"]
+		if self.Type == "Transition" or self.Type == "Starting Warp":
+			dontChange = ["8 Badges", "7 Badges", "All Badges", "Woke Snorlax",
+						  "Most Map Access"]
 
 			if self.Name not in dontChange:
-				self.Name = self.Name + " Warpie"
+				self.Name = self.Name + LoadLocationData.WARP_OPTION
 			newReqs = []
 
 			for x in self.LocationReqs:
 				if x not in dontChange:
-					newReqs.append(x + " Warpie")
+					newReqs.append(x + LoadLocationData.WARP_OPTION)
 				else:
 					newReqs.append(x)
 			self.LocationReqs = newReqs

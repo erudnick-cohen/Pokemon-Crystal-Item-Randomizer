@@ -283,7 +283,7 @@ Location:
                         WildTableList: 
                         LocationReqs: Radio Tower
                         FlagReqs:
-                            - Beaten Team Rocket
+                            - Beat Team Rocket
                         ItemReqs:
                         FlagsSet:
                         ReachableReqs:

@@ -144,7 +144,6 @@ Location:
         ItemReqs:
         FlagsSet:
         FlagReqs:
-            FlagReqs:
             - Beat Team Rocket
         ReachableReqs:
         WildTableList:
@@ -1099,7 +1098,7 @@ Location:
         LocationReqs: Route 31
         ItemReqs:
         FlagReqs:
-            - Mystery Egg Delivered
+            - Gave Elm Egg
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1130,23 +1129,6 @@ Location:
         LocationReqs: Cherrygrove
         ItemReqs:
         FlagReqs:
-            - Mystery Egg Delivered
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-        
-    -
-        Name: Route 31
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Cherrygrove
-        ItemReqs:
-            - Cut
-        FlagReqs:
-            - Hive Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1922,9 +1904,7 @@ Location:
         HasPKMN: No
         LocationReqs: Whirl Island NE
         ItemReqs:
-            - Surf
         FlagReqs:
-            - Fog Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2046,7 +2026,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Lighthouse Jasmine
+        LocationReqs: Lighthouse Roof
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -2315,30 +2295,32 @@ Location:
         FlagReqs:
             - Fog Badge
             - Plain Badge
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Slowpoke Well Main Entrance
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Slowpoke Well HM Locked
-        ItemReqs:
-            - Surf
-            - Strength
-        FlagReqs:
-            - Fog Badge
-            - Plain Badge
             - Saved Slowpokes
         FlagsSet:
         ReachableReqs:
         WildTableList:
         Code:
         Text:
+
+# This transition is only reasonable with Spinner Hell active!
+#    -
+#        Name: Slowpoke Well Main Entrance
+#        FileName: CianwoodCity.asm
+#        Type: Transition
+#        HasPKMN: No
+#        LocationReqs: Slowpoke Well HM Locked
+#        ItemReqs:
+#            - Surf
+#            - Strength
+#        FlagReqs:
+#            - Fog Badge
+#            - Plain Badge
+#            - Saved Slowpokes
+#        FlagsSet:
+#        ReachableReqs:
+#        WildTableList:
+#        Code:
+#        Text:
 
     -
         Name: Route 36
@@ -2425,6 +2407,78 @@ Location:
         LocationReqs: Ecruteak
         ItemReqs:
             - Squirtbottle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Burned Tower Basement
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Burned Tower 1F
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Celadon/Cycling Road Gate West
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Celadon/Cycling Road Gate East
+        ItemReqs:
+            - Bicycle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Celadon/Cycling Road Gate East
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Celadon/Cycling Road Gate West
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fuschia/Cycling Road Gate West
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Fuschia/Cycling Road Gate East
+        ItemReqs:
+            - Bicycle
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fuschia/Cycling Road Gate East
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Fuschia/Cycling Road Gate West
+        ItemReqs:
         FlagReqs:
         FlagsSet:
         ReachableReqs:

@@ -106,7 +106,7 @@ Location:
             HasPKMN: Yes
             WildTableList: SILVER_CAVE_ROOM_1
             AREALV: 52
-            LocationReqs: Mt. Silver Outside
+            LocationReqs: Mt. Silver
             FlagReqs:
                 - Zephyr Badge
             ItemReqs:

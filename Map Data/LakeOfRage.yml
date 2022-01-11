@@ -13,7 +13,8 @@ Location:
         Code:
         Text:
         AREALV:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Lake Of Rage
         Sublocations:
             -
                 Name: Lake Of Rage Trainers
@@ -81,235 +82,235 @@ Location:
                 Sublocations:
 
 
+    -
+        Name: Lake Of Rage Back
+        FileName: LakeOfRage.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Lake Of Rage
+        FlagReqs:
+          - Hive Badge
+        ItemReqs:
+          - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
             -
-                Name: Lake Of Rage Back
+                Name: Lake of Rage Wesley
                 FileName: LakeOfRage.asm
-                Type: Map
+                Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Lake Of Rage
+                LocationReqs: Lake Of Rage Back
                 FlagReqs:
-                  - Hive Badge
+                    - Timed Events
                 ItemReqs:
-                  - Cut
                 FlagsSet:
                 ReachableReqs:
-                Code:
+                NormalItem: BLACKBELT
+                Code: |
+                    .MetWesley:
+                        writetext WesleyGivesGiftText
+                        promptbutton
+                        ITEMLINE
+                        iffalse WesleyDoneScript
+                        setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
+                        writetext WesleyGaveGiftText
+                        waitbutton
+                        closetext
+                        end
+
+                Text: |
+                    WesleyGaveGiftText:
+                      text "WESLEY: BLACKBELT"
+                      line "beefs up the power"
+                      cont "of fighting moves."
+                      done
+            -
+                Name: Lake of Rage Hidden Rare Candy
+                FileName: LakeOfRage.asm
+                SecondaryFile: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lake Of Rage Back
+                FlagReqs:
+                  - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: RARE_CANDY
+                Code: |
+                  LakeOfRageHiddenRareCandy:
+                      ITEMLINE
+                SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
                 Text:
                 TrainerList:
                 Sublocations:
-                    -
-                        Name: Lake of Rage Hidden Power TM
-                        FileName: LakeOfRageHiddenPowerHouse.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Lake Of Rage Back
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: TM_HIDDEN_POWER
-                        WarpReqs: Lake Of Rage Hidden Power House
-                        Code: |
-                          HiddenPowerGuy:
-                              faceplayer
-                              opentext
-                              checkevent EVENT_GOT_TM10_HIDDEN_POWER
-                              iftrue .AlreadyGotItem
-                              writetext HiddenPowerGuyText1
-                              promptbutton
-                              ITEMLINE
-                              iffalse .Done
-                              setevent EVENT_GOT_TM10_HIDDEN_POWER
-                              writetext HiddenPowerGuyText2
-                              waitbutton
-                              closetext
-                              end
-                        Text: |
-                          HiddenPowerGuyText2:
-                              text "Do you see it? It"
-                              line "is ITEMNAME!"
-
-                              para "It draws out the"
-                              line "power of #MON"
-                              cont "for attacking."
-
-                              para "Remember this: its"
-                              line "type and power de-"
-                              cont "pend on the #-"
-                              cont "MON using it."
-                              done
-                        TrainerList:
-                        Sublocations:
-
-                    -
-                        Name: Lake of Rage Wesley
-                        FileName: LakeOfRage.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Lake Of Rage Back
-                        FlagReqs:
-                            - Timed Events
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: BLACKBELT
-                        Code: |
-                            .MetWesley:
-                                writetext WesleyGivesGiftText
-                                promptbutton
-                                ITEMLINE
-                                iffalse WesleyDoneScript
-                                setevent EVENT_GOT_BLACKBELT_FROM_WESLEY
-                                writetext WesleyGaveGiftText
-                                waitbutton
-                                closetext
-                                end
-
-                        Text: |
-                            WesleyGaveGiftText:
-                              text "WESLEY: BLACKBELT"
-                              line "beefs up the power"
-                              cont "of fighting moves."
-                              done
-                    -
-                        Name: Lake of Rage Hidden Rare Candy
-                        FileName: LakeOfRage.asm
-                        SecondaryFile: LakeOfRage.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Lake Of Rage Back
-                        FlagReqs:
-                          - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: RARE_CANDY
-                        Code: |
-                          LakeOfRageHiddenRareCandy:
-                              ITEMLINE
-                        SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, LakeOfRageHiddenRareCandy'
-                        Text:
-                        TrainerList:
-                        Sublocations:
-
-                    -
-                        Name: Lake Of Rage Elixer
-                        FileName: LakeOfRage.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Lake Of Rage Back
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: ELIXER
-                        Code: |
-                            LakeOfRageElixer:
-                            ITEMLINE
-                        Text:
-                        TrainerList:
-                        Sublocations:
-                    -
-                        Name: Lake of Rage Detect TM
-                        FileName: LakeOfRage.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Lake Of Rage Back
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: TM_DETECT
-                        Code: |
-                            LakeOfRageTMDetect:
-                                ITEMLINE
-                        Text:
-                        TrainerList:
-                        Sublocations:
 
             -
-                Name: Lake of Rage Big Magikarp Guy Elixer
-                FileName: LakeOfRageMagikarpHouse.asm
+                Name: Lake Of Rage Elixer
+                FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Route 43
-                    - Most Map Access
+                WildTableList:
+                LocationReqs: Lake Of Rage Back
                 FlagReqs:
-                    - Mon Locked Checks
-                    - Mahogany Rockets Defeated
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                IsBall: No
+                IsBall: Yes
                 NormalItem: ELIXER
-                WarpReqs:
-                    - Lake of Rage Magikarp House
-                    - Most Map Access
                 Code: |
-                    .GetReward:
-                        writetext MagikarpLengthRaterText_Memento
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoom
-                        writetext MagikarpLengthRaterText_Bonus
-                        waitbutton
-                        closetext
-                        clearevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
-                        end
+                    LakeOfRageElixer:
+                    ITEMLINE
                 Text:
-                TrainerList: 
+                TrainerList:
+                Sublocations:
+            -
+                Name: Lake of Rage Detect TM
+                FileName: LakeOfRage.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lake Of Rage Back
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_DETECT
+                Code: |
+                    LakeOfRageTMDetect:
+                        ITEMLINE
+                Text:
+                TrainerList:
                 Sublocations:
 
-            -
-                Name: Lake of Rage Hidden Full Restore
-                FileName: LakeOfRage.asm
-                SecondaryFile: LakeOfRage.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 43
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_RESTORE
-                Code: |
-                    LakeOfRageHiddenFullRestore:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 11, 28, BGEVENT_ITEM, LakeOfRageHiddenFullRestore'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Lake of Rage Hidden Max Potion
-                FileName: LakeOfRage.asm
-                SecondaryFile: LakeOfRage.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 43
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_POTION
-                Code: |
-                    LakeOfRageHiddenMaxPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 35,  5, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion'
-                Text:
-                TrainerList: 
-                Sublocations:
+    -
+        Name: Lake of Rage Hidden Power TM
+        FileName: LakeOfRageHiddenPowerHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Lake Of Rage Back
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: TM_HIDDEN_POWER
+        WarpReqs: Lake Of Rage Hidden Power House
+        Code: |
+          HiddenPowerGuy:
+              faceplayer
+              opentext
+              checkevent EVENT_GOT_TM10_HIDDEN_POWER
+              iftrue .AlreadyGotItem
+              writetext HiddenPowerGuyText1
+              promptbutton
+              ITEMLINE
+              iffalse .Done
+              setevent EVENT_GOT_TM10_HIDDEN_POWER
+              writetext HiddenPowerGuyText2
+              waitbutton
+              closetext
+              end
+        Text: |
+          HiddenPowerGuyText2:
+              text "Do you see it? It"
+              line "is ITEMNAME!"
+
+              para "It draws out the"
+              line "power of #MON"
+              cont "for attacking."
+
+              para "Remember this: its"
+              line "type and power de-"
+              cont "pend on the #-"
+              cont "MON using it."
+              done
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Lake of Rage Big Magikarp Guy Elixer
+        FileName: LakeOfRageMagikarpHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Route 43
+            - Most Map Access
+        FlagReqs:
+            - Mon Locked Checks
+            - Mahogany Rockets Defeated
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        IsBall: No
+        NormalItem: ELIXER
+        WarpReqs:
+            - Lake of Rage Magikarp House
+            - Most Map Access
+        Code: |
+            .GetReward:
+                writetext MagikarpLengthRaterText_Memento
+                promptbutton
+                ITEMLINE
+                iffalse .NoRoom
+                writetext MagikarpLengthRaterText_Bonus
+                waitbutton
+                closetext
+                clearevent EVENT_LAKE_OF_RAGE_ELIXIR_ON_STANDBY
+                end
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Lake of Rage Hidden Full Restore
+        FileName: LakeOfRage.asm
+        SecondaryFile: LakeOfRage.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 43
+        FlagReqs:
+            - Hidden Items
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: FULL_RESTORE
+        Code: |
+            LakeOfRageHiddenFullRestore:
+                ITEMLINE
+        SecondaryCode: '    bg_event 11, 28, BGEVENT_ITEM, LakeOfRageHiddenFullRestore'
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Lake of Rage Hidden Max Potion
+        FileName: LakeOfRage.asm
+        SecondaryFile: LakeOfRage.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 43
+        FlagReqs:
+            - Hidden Items
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: MAX_POTION
+        Code: |
+            LakeOfRageHiddenMaxPotion:
+                ITEMLINE
+        SecondaryCode: '    bg_event 35,  5, BGEVENT_ITEM, LakeOfRageHiddenMaxPotion'
+        Text:
+        TrainerList:
+        Sublocations:
             

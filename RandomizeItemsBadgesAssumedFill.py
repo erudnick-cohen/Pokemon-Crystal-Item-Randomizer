@@ -7,6 +7,20 @@ import time
 import RandomizeFunctions
 
 
+def findAllSilverUnlocks(req, locList):
+	#req = "Mt. Silver Outside"
+	newFind = []
+	findSilverItems = list(filter(lambda x: req in x.LocationReqs, locList))
+	for findSilver in findSilverItems:
+		if findSilver.Type == "Item":
+			newFind.append(findSilver)
+		elif findSilver.Type == "Map":
+			newFinds = findAllSilverUnlocks(findSilver.Name, locList)
+			for find in newFinds:
+				newFind.append(find)
+
+	return newFind
+
 def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 	
@@ -30,7 +44,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#stores current requirements for each location
 	requirementsDict = defaultdict(lambda: [])
 
-	#shuffle the lists (no seriously, this is a perfectly valid randomization strategy)
+	MtSilverSubItems = findAllSilverUnlocks("Mt. Silver Outside",locList)
+
+
+#shuffle the lists (no seriously, this is a perfectly valid randomization strategy)
 	#random.shuffle(locList)
 	#random.shuffle(progressList)
 	#random.shuffle(coreProgress)
@@ -39,6 +56,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	progressList = random.sample(progressList, k=len(progressList))
 	coreProgress = random.sample(coreProgress, k=len(coreProgress))
 	trashItems = random.sample(trashItems, k=len(trashItems))
+
+
 
 	#build spoiler
 	spoiler = {}
@@ -173,8 +192,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						nLeft = 0
 				legal = True
 				#don't attempt to put badges in mt. silver
-				if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
+				#if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
+				#	placeable = False
+
+				if (locList[iter] in MtSilverSubItems and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 					placeable = False
+
+				if (locList[iter] in MtSilverSubItems and toAllocate in coreProgress):
+					placeable = False
+
 				#is it the right type of location?
 				##print(locList[iter].Name)
 				##print(locList[iter].Type)
@@ -420,6 +446,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						trashSpoiler[i.Name] = i.item
 						i.IsGym = False
 						i.IsItem = True
+
+						if i.item == "WATER_STONE" or i.item == "ESCAPE_ROPE":
+							state[i.item.replace("_"," ").title()] = True
 						#print('Placing '+i.item +' in '+i.Name)
 					else:
 						state[i.item] = True

@@ -1,6 +1,6 @@
 Location:
       -
-        Name: Rocket Base Entrance
+        Name: Rocket Base Entry
         FileName: MahoganyTown.asm
         Type: Map
         HasPKMN: No
@@ -17,7 +17,7 @@ Location:
         Sublocations:
 
       -
-        Name: Rocket Base Entrance
+        Name: Rocket Base Entry
         FileName: MahoganyTown.asm
         Type: Map
         HasPKMN: No
@@ -325,7 +325,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -345,7 +345,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:

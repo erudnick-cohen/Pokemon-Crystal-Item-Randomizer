@@ -1,11 +1,10 @@
 Location:
     -
-        Name: Route 5
+        Name: Route 5 Access
         FileName: Route5.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
-            - ROUTE_5
+        WildTableList:
         LocationReqs:
             - Saffron City Entrance
         FlagReqs:
@@ -16,6 +15,41 @@ Location:
         Text:
         TrainerList:
         WarpReqs: Cerulean
+        Sublocations:
+
+    -
+        Name: Route 5 Access
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 5
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_5
+        LocationReqs: Route 5 Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs:
         Sublocations:
             -
                 Name: Route 5 Cleanse Tag

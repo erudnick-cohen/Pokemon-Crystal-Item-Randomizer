@@ -92,6 +92,7 @@ Location:
         WildTableList:
         LocationReqs:
         FlagReqs:
+            - Warps
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -99,7 +100,7 @@ Location:
         Text:
         TrainerList:
         Sublocations:
-        WarpReqs: Power Plant
+        WarpReqs: Power Plant Building
 
     -
         Name: Route 10
@@ -143,13 +144,10 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs:
-                            - Route 10
+                        LocationReqs: Power Plant
                         FlagReqs:
-                            - Fog Badge
                         ItemReqs:
                             - Machine Part
-                            - Surf
                         FlagsSet:
                             - Kanto Power Restored
                         ReachableReqs:

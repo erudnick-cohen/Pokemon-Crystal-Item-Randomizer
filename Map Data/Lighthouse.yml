@@ -228,10 +228,10 @@ Location:
                 LocationReqs: 
                     - Lighthouse
                     - Elite Four
-                    - Radio Tower Rockets Part 2
                 FlagReqs:
                     - Phone Call Trainers
                     - Kanto Power Restored
+                    - Beat Team Rocket
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -268,4 +268,3 @@ Location:
                 WarpReqs:
                     - Lighthouse 2F
                     - Elite Four
-                    - Radio Tower Rockets Part 2

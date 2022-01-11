@@ -31,6 +31,25 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+
+    -
+        Name: Route 39 Entrance
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Olivine
+        Sublocations:
+
     -
         Name: Route 39 Entrance
         FileName: Route39.asm
@@ -131,29 +150,7 @@ Location:
                 Code: |
                   Route39FruitTree:
                       ITEMLINE
-            -
-                Name: Route 39 Farmhouse Snore
-                FileName: Route39Farmhouse.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 39
-                FlagReqs:
-                    - Timed Events
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: TM_SNORE
-                WarpReqs: Farmhouse
-                Code: |
-                    FarmerFScript_GiveSnore:
-                        writetext FarmerFText_HealedMiltank
-                        promptbutton
-                        ITEMLINE
-                        iffalse FarmerFScript_NoRoomForSnore
-                        setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+
             -
                 Name: Route 39 Pokefan Derek Nugget
                 FileName: Route39.asm
@@ -181,3 +178,27 @@ Location:
                         iffalse .NoRoom
                         clearflag ENGINE_DEREK_HAS_NUGGET
                         sjump .NumberAccepted
+
+    -
+        Name: Route 39 Farmhouse Snore
+        FileName: Route39Farmhouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 39
+        FlagReqs:
+            - Timed Events
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        NormalItem: TM_SNORE
+        WarpReqs: Farmhouse
+        Code: |
+            FarmerFScript_GiveSnore:
+                writetext FarmerFText_HealedMiltank
+                promptbutton
+                ITEMLINE
+                iffalse FarmerFScript_NoRoomForSnore
+                setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM

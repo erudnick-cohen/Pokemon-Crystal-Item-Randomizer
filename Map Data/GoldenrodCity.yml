@@ -4,6 +4,23 @@ Location:
         FileName: GoldenrodCity.asm
         Type: Map
         HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Goldenrod
+        Sublocations:
+    -
+        Name: Goldenrod City Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: No
         WildTableList: 
         LocationReqs: Goldenrod City via Route 34
         FlagReqs:

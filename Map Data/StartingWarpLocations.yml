@@ -1,8 +1,8 @@
 Location:
     -
-        Name: New Bark Warpie
+        Name: New Bark
         FileName: AzaleaGym.asm
-        Type: Map
+        Type: Starting Warp
         HasPKMN: No
         WildTableList:
         LocationReqs:
@@ -17,9 +17,9 @@ Location:
         Sublocations:
     -
 
-        Name: Cherrygrove Warpie
+        Name: Cherrygrove
         FileName: AzaleaGym.asm
-        Type: Map
+        Type: Starting Warp
         HasPKMN: No
         WildTableList:
         LocationReqs:

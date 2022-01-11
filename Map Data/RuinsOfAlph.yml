@@ -45,7 +45,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs:
         Sublocations:
             -
                 Name: Ruins of Alph Trainers
@@ -67,13 +68,50 @@ Location:
                     - SUPER_NERD 1
                     - PSYCHIC_T 1
                 Sublocations:
+
+            -
+                Name: Ruins of Alph Rope Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs:
+                Sublocations:
+
+            -
+                Name: Ruins of Alph Rope Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph
+                FlagReqs:
+                ItemReqs:
+                    - Escape Rope
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs:
+                Sublocations:
+
+
             -
                 Name: Ruins of Alph Rope Chamber
                 FileName:
                 Type: Map
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Ruins of Alph
+                LocationReqs: Ruins of Alph Rope Chamber Access
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

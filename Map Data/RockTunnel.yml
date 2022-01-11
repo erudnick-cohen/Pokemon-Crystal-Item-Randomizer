@@ -67,6 +67,43 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+
+    -
+        Name: Rock Tunnel Access
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+            - Rock Tunnel Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Rock Tunnel Access
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        Sublocations:
+
     -
         Name: Rock Tunnel
         FileName: RockTunnel1F.asm
@@ -76,7 +113,7 @@ Location:
             - ROCK_TUNNEL_1F
             - ROCK_TUNNEL_B1F
         LocationReqs:
-            - Rock Tunnel Entrance
+            - Rock Tunnel Access
         FlagReqs:
         ItemReqs:
         FlagsSet:

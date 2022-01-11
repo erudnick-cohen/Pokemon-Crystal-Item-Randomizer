@@ -29,7 +29,7 @@ Location:
         Text:
         TrainerList:
         HintName: Union Cave
-        WarpReqs: Union Cave
+        WarpReqs: Union Cave Main
         Sublocations:
                 -    
                     Name: Union Cave Floor 1 Trainers
