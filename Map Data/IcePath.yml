@@ -107,7 +107,7 @@ Location:
                 WarpReqs: Ice Path Boulders
                 Sublocations:
                 -
-                    Name: Ice Path Boulders Pushed
+                    Name: Ice Path Boulders Pushed Map
                     FileName: IcePathB2F.asm
                     Type: Map
                     HasPKMN: Yes
@@ -193,7 +193,7 @@ Location:
                 WildTableList:
                 LocationReqs: Ice Path Boulder Drop Room
                 FlagReqs:
-                    - Ice Path Boulders
+                    - Ice Path Boulders Pushed
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -202,7 +202,6 @@ Location:
                 TrainerList:
                 HintName: Ice Path
                 Sublocations:
-                WarpReqs: Ice Path Boulder Drop Room With Strength
 
             -
                 Name: Ice Path Boulder Drop Room Center Entrance

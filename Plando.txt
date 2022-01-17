@@ -1,3 +1,4 @@
-RNG Seed: NCRT20XQZ6
 Solution:
-  Surf: Cianwood Fly HM
+  Squirtbottle: Pokegear Gift
+  Pass: Route 29 Potion
+  S S Ticket: Route 30 Berry Man

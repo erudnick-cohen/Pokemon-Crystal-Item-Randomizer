@@ -202,18 +202,24 @@ class Location:
 			validWarpNames = {}
 				#{"Cianwood"}
 
+			dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
+						  "Most Map Access", "Elite Four"]
+
 			newLoc = []
 			for warp in self.WarpReqs:
 				if warp in validWarpNames or len(validWarpNames) == 0:
-					newLoc.append(warp + LoadLocationData.WARP_OPTION)
+					if warp in dontChange:
+						newLoc.append(warp)
+					else:
+						newLoc.append(warp + LoadLocationData.WARP_OPTION)
 
 			if len(newLoc) > 0:
 				self.LocationReqs = newLoc
 
 		#Temporary code
 		if self.Type == "Transition" or self.Type == "Starting Warp":
-			dontChange = ["8 Badges", "7 Badges", "All Badges", "Woke Snorlax",
-						  "Most Map Access"]
+			dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
+						  "Most Map Access", "Elite Four"]
 
 			if self.Name not in dontChange:
 				self.Name = self.Name + LoadLocationData.WARP_OPTION

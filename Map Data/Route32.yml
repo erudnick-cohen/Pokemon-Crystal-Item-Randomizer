@@ -20,27 +20,36 @@ Location:
         Name: Route 32 Entrance
         FileName: Route32.asm
         Type: Map
-        HasPKMN: Yes
-        WildTableList: Route_32
+        HasPKMN: No
+        WildTableList:
         LocationReqs: Violet City
         FlagReqs:
-          - Received Egg
+          - Received Togepi Egg
         ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
-        AREALV: 4
+        AREALV:
         TrainerList:
-          - YOUNGSTER 3
-          - PICNICKER 1
-          - CAMPER 1
-          - FISHER 5
-          - FISHER 1
-          - FISHER 2
-          - YOUNGSTER 4
-          - BIRD_KEEPER 13
-        HintName: Route 32
+        Sublocations:
+
+    -
+        Name: Route 32 Entrance
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
         WarpReqs: Route 32
         Sublocations:
 
@@ -68,7 +77,6 @@ Location:
             - YOUNGSTER 4
             - BIRD_KEEPER 13
         HintName: Route 32
-        WarpReqs: Route 32
         Sublocations:
             -
                 Name: Miracle Seed Man
@@ -79,7 +87,7 @@ Location:
                 LocationReqs: Route 32 North
                 FlagReqs:
                     - Zephyr Badge
-                    - Received Egg
+                    - Received Togepi Egg
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

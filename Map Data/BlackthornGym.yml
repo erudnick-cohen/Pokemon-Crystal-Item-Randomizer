@@ -127,10 +127,10 @@ Location:
                     - Blackthorn Gym Middle
                 Sublocations:
                     -
-                        Name: Clair TM
+                        Name: Battle Clair
                         FileName: BlackthornGym1F.asm
                         SecondaryFile: DragonsDenB1F.asm
-                        Type: Item
+                        Type: Map
                         HasPKMN: No
                         WildTableList:
                         ItemReqs:
@@ -139,6 +139,23 @@ Location:
                         LocationReqs: Blackthorn Gym 1F Middle
                         FlagsSet:
                             - Clair Defeated
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Clair TM
+                        FileName: BlackthornGym1F.asm
+                        SecondaryFile: DragonsDenB1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        ItemReqs:
+                        FlagReqs:
+                            - Clair Defeated
+                        LocationReqs: Battle Clair
+                        FlagsSet:
                         Tags:
                             -
                                 Name: Leader

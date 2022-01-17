@@ -104,10 +104,28 @@ Location:
                         FlagsSet:
                             - Open Slowpoke Well
                         ReachableReqs:
-                        NormalItem: LURE_BALL
+                        NormalItem:
                         Code:
                         Text:
                         TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Kurt Thanks
+                        FileName: KurtsHouse.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Kurt's House
+                        FlagReqs:
+                            - Rescued Slowpokes
+                        ItemReqs:
+                        FlagsSet:
+                          - Saved Slowpokes
+                        ReachableReqs:
+                        NormalItem:
+                        Code:
+                        Text:
+                        TrainerList:
                         Sublocations:
             -
 

@@ -82,13 +82,45 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet:
-            - Sailor Working
+            - Sailor Requested
         ReachableReqs:
         Code:
         Text:
         Sublocations:
         WarpReqs: Fast Ship B1F East
 
+    -
+        Name: SS Aqua Sailor Pass
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Entrance
+        FlagReqs:
+            - Sailor Working
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+        WarpReqs: Fast Ship B1F East
+
+    -
+        Name: SS Aqua Your Room
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+        WarpReqs: Top Far Left Ship Room
     -
         Name: SS Aqua Sailor
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
@@ -108,28 +140,12 @@ Location:
         WarpReqs: Top Left Ship Room
 
     -
-        Name: SS Aqua Captain Access
-        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList:
-        LocationReqs: SS Aqua Entrance
-        FlagReqs:
-          - Sailor Working
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        Sublocations:
-
-    -
         Name: SS Aqua Captain
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: SS Aqua Captain Access
+        LocationReqs: SS Aqua Sailor Pass
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -139,6 +155,78 @@ Location:
         Sublocations:
         WarpReqs: Captains Room
 
+
+    -
+        Name: SS Aqua Exit To Vermilion Port
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Fast Ship Warpie
+            - SS Aqua Captain
+            - SS Aqua Your Room
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Vermilion Port Ticket Warpie
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Exit To Vermilion Port
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Olivine Port Ticket Warpie
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: SS Aqua Exit To Olivine Port
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: SS Aqua Exit To Olivine Port
+        FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Fast Ship Warpie
+            - SS Aqua Captain
+            - Vermilion Port Warpie
+            - SS Aqua Your Room
+        FlagReqs:
+            - Warps
+        ItemReqs:
+            - S S Ticket
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
     -
         Name: SS Aqua
         FileName: FastShipCabins_SE_SSE_CaptainsCabin.asm

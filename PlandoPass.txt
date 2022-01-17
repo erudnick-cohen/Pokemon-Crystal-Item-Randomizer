@@ -1,0 +1,3 @@
+Solution:
+  Pass: Pokegear Gift
+  S S Ticket: Silph Co Upgrade

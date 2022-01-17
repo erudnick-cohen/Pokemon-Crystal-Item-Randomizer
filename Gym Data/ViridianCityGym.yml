@@ -2,7 +2,7 @@ Location:
     -
         Name: Viridian City Gym Badge
         FileName: ViridianGym.asm
-        LocationReqs: Seafoam Islands
+        LocationReqs: Viridian Gym
         HasPKMN: No
         Type: Gym
         WildTableList:

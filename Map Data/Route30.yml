@@ -231,7 +231,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 30
+                LocationReqs: Mr Pokemon's House
                 FlagReqs:
                 ItemReqs:
                 FlagsSet: Mr. Pokemon Visited
@@ -276,7 +276,7 @@ Location:
                     Type: Item
                     HasPKMN: No
                     WildTableList:
-                    LocationReqs: Route 30
+                    LocationReqs: Mr Pokemon's House
                     FlagReqs:
                         - Impossible
                     ItemReqs:
@@ -343,7 +343,7 @@ Location:
                     Type: Item
                     HasPKMN: No
                     WildTableList:
-                    LocationReqs: Route 30
+                    LocationReqs: Mr Pokemon's House
                     FlagReqs: Mr. Pokemon Visited
                     ItemReqs: Red Scale
                     FlagsSet:

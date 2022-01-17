@@ -17,10 +17,10 @@ Changes:
             - Clair TM Banned
         NewFlagReqs:
         NewItemReqs:
-    -
-        Location: Dragons Den
-        NewLocationReqs:
-            - Blackthorn Gym Trainers After Boulders
+    #-
+        #Location: Dragons Den
+        #NewLocationReqs:
+            #- Blackthorn Gym Trainers After Boulders
     - 
         Location: Mt. Silver Unlock A
         NewItemReqs:

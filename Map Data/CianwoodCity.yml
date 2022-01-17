@@ -57,7 +57,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 41
+                LocationReqs: Cianwood City
                 FlagReqs:
                     - Lighthouse
                 ItemReqs:

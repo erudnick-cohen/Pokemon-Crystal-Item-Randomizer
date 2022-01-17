@@ -73,11 +73,11 @@ Location:
         WildTableList:
         Code:
         Text:
-        WarpReqs: Whirl NW
+        WarpReqs: Whirl SW
     -
         Name: Route 41 Whirl SW
         FileName: CianwoodCity.asm
-        Type: Transition
+        Type: Map
         HasPKMN: No
         LocationReqs: Route 41 Whirl SW Access
         ItemReqs:

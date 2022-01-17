@@ -23,7 +23,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Cerulean City
+                LocationReqs: Cerulean Gym
                 FlagReqs:
                     - Power Plant
                 ItemReqs:

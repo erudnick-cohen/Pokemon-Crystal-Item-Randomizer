@@ -38,6 +38,25 @@ Location:
         Sublocations:
 
     -
+        Name: Tin Tower Access
+        FileName: Route36.asm
+        Type: Map
+        HasPKMN: Yes
+        LocationReqs:
+        WildTableList:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Tin Tower 1F
+        Sublocations:
+
+
+    -
         Name: Tin Tower
         FileName: Route36.asm
         Type: Map
@@ -118,8 +137,8 @@ Location:
                 TrainerList: 
                 Sublocations:
                 WarpReqs:
-                    - Elite Four
                     - Tin Tower 1F
+                    - Elite Four
 
     -
         Name: Climb Tin Tower
@@ -642,6 +661,7 @@ Location:
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
+                            - Encounted Ho-Oh
                         ReachableReqs:
                         Code:
                         Text:

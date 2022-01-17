@@ -35,7 +35,7 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Dark Cave Violet
+            LocationReqs: Dark Cave Violet Side
             FlagReqs:
                 - Zephyr Badge
             ItemReqs:
@@ -47,6 +47,7 @@ Location:
             Text:
             TrainerList: 
             Sublocations:
+            WarpReqs: Blackthorn Lower Still
     -
             Name: Route 46 Upper
             FileName: Route46.asm

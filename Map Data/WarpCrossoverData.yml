@@ -38,7 +38,7 @@ Location:
         ItemReqs:
         FlagsSet:
         FlagReqs:
-            - Met Kurt
+            - Open Slowpoke Well
         ReachableReqs:
         WildTableList:
         Code:
@@ -53,7 +53,7 @@ Location:
         ItemReqs:
         FlagsSet:
         FlagReqs:
-            - Met Kurt
+            - Open Slowpoke Well
         ReachableReqs:
         WildTableList:
         Code:
@@ -112,7 +112,7 @@ Location:
             - Surf
         FlagsSet:
         FlagReqs:
-            - Defeated Clair
+            - Clair Defeated
             - Fog Badge
         ReachableReqs:
         WildTableList:
@@ -400,7 +400,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Dragon Den Shrine
+        LocationReqs: Dragons Den Shrine
         ItemReqs:
             - Whirlpool
         FlagsSet:
@@ -416,12 +416,26 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Dragon Den
+        LocationReqs: Dragons Den
         ItemReqs:
             - Whirlpool
         FlagsSet:
         FlagReqs:
             - Glacier Badge
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Escape Rope Had
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Escape Rope Chamber
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
         ReachableReqs:
         WildTableList:
         Code:
@@ -582,9 +596,9 @@ Location:
         HasPKMN: No
         LocationReqs: 
             - Ho-Oh Chamber
-            - VS Ho-Oh
         ItemReqs:
         FlagReqs:
+            - Encounted Ho-Oh
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -620,11 +634,11 @@ Location:
         Text:
 
     -
-        Name: Ice Path Drop Room With Strength
+        Name: Ice Path Boulder Drop Room With Strength
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Ice Path Drop Room
+        LocationReqs: Ice Path Boulder Drop Room
         ItemReqs:
         FlagReqs:
             - Ice Path Boulders Pushed
@@ -635,11 +649,11 @@ Location:
         Text:
 
     -
-        Name: Ice Path Drop Room
+        Name: Ice Path Boulder Drop Room
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Ice Path Drop Room With Strength
+        LocationReqs: Ice Path Boulder Drop Room With Strength
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -685,7 +699,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Lake of Rage
+        LocationReqs: Lake Of Rage
         ItemReqs:
             - Cut
         FlagReqs:
@@ -701,7 +715,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Lake of Rage Cut
+        LocationReqs: Lake Of Rage Cut
         ItemReqs:
             - Cut
         FlagReqs:
@@ -890,7 +904,7 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 2F
-            - 7 Badges
+            - Rocket Invasion
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -921,7 +935,7 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 3F
-            - 7 Badges
+            - Rocket Invasion
         ItemReqs:
             - Card Key
         FlagReqs:
@@ -938,7 +952,7 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 3F Maybe Card Key
-            - 7 Badges
+            - Rocket Invasion
         ItemReqs:
             - Card Key
         FlagReqs:
@@ -955,7 +969,7 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 3F Maybe Card Key
-            - 7 Badges
+            - Rocket Invasion
         ItemReqs:
             - Card Key
         FlagReqs:
@@ -1015,7 +1029,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 2 
+        LocationReqs: Route 2
         ItemReqs:
             - Cut
         FlagReqs:
@@ -1200,7 +1214,7 @@ Location:
         Text:
         
     -
-        Name: Ruins of Alph
+        Name: Ruins of Alph Main
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -1220,7 +1234,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Ruins of Alph
+        LocationReqs: Ruins of Alph Main
         ItemReqs:
             - Surf
         FlagReqs:
@@ -1236,7 +1250,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Ruins Top Ledge
+        LocationReqs: Ruins of Alph Top Ledge
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -1434,7 +1448,22 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
+    -
+        Name: Tojho West
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: New Bark
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
     -
         Name: Union Cave Pass East
         FileName: CianwoodCity.asm
@@ -1488,7 +1517,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Union Cave
+        LocationReqs: Union Cave Main
         ItemReqs:
             - Surf
         FlagReqs:
@@ -1579,7 +1608,21 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
+    -
+        Name: Water Stone Have
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Water Stone Chamber
+        ItemReqs:
+        FlagReqs:
+            - Goldenrod Store Accessible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
     -
         Name: Water Stone Have
         FileName: CianwoodCity.asm
@@ -1688,9 +1731,9 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: Violet
-        ItemReqs:
-            - Egg Received
         FlagReqs:
+            - Received Togepi Egg
+        ItemReqs:
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1748,10 +1791,10 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs:
-          - Woke Snorlax
           - Victory Road Gate
         ItemReqs:
         FlagReqs:
+            - Snorlax Woken
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2274,8 +2317,8 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Tin Tower 1F
-            - Elite Four
         ItemReqs:
+            - Rainbow Wing
         FlagReqs:
         FlagsSet:
         ReachableReqs:
@@ -2288,7 +2331,9 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Slowpoke Well Main Entrance
+        LocationReqs:
+            - Slowpoke Well Main Entrance
+            - Kurts House
         ItemReqs:
             - Surf
             - Strength
@@ -2480,6 +2525,254 @@ Location:
         LocationReqs: Fuschia/Cycling Road Gate West
         ItemReqs:
         FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Snorlax
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Vermilion
+        ItemReqs:
+        FlagReqs:
+            - Snorlax Woken
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion Port
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion Port Ticket
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Vermilion Port Ticket
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion Port
+        ItemReqs:
+            - S S Ticket
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Fast Ship
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion Port Ticket
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Olivine Port Ticket
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine Port
+        ItemReqs:
+            - S S Ticket
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Olivine Port
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine Port Ticket
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Fast Ship
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine Port Ticket
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Saffron Station
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod Station
+        ItemReqs:
+            - Pass
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod Station
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Saffron Station
+        ItemReqs:
+            - Pass
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl NW
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl SW
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl SE
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl NE
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Cianwood
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Olivine
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Cinnabar
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: West Kanto
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Seafoam Gym Entrance
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Cinnabar
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:

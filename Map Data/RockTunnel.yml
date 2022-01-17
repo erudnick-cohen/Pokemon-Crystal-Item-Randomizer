@@ -129,7 +129,7 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Rock Tunnel via Route 9
+            LocationReqs: Rock Tunnel BF1 North
             FlagReqs:
                 - Zephyr Badge
             ItemReqs:
@@ -172,7 +172,7 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Rock Tunnel via Route 10
+            LocationReqs: Rock Tunnel BF1 South
             FlagReqs:
                 - Zephyr Badge
             ItemReqs:

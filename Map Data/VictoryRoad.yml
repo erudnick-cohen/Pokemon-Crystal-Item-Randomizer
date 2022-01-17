@@ -178,7 +178,7 @@ Location:
                     Type: Item
                     HasPKMN: No
                     WildTableList:
-                    LocationReqs: Victory Road
+                    LocationReqs: Victory Road F2
                     FlagReqs:
                     ItemReqs:
                     FlagsSet:
@@ -235,7 +235,7 @@ Location:
                     Type: Item
                     HasPKMN: No
                     WildTableList:
-                    LocationReqs: Victory Road
+                    LocationReqs: Victory Road F3
                     FlagReqs:
                         - Hidden Items
                     ItemReqs:

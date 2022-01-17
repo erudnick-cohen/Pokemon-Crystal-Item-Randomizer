@@ -25,5 +25,36 @@ for item in warpGroupData:
     if len(res) > 0:
         conflicts.append(groupName)
 
-print(conflicts)
+#TODO: May want to make different names for warp reqs that are the same as the location names
+print("Conflicting names:", conflicts)
+
+# Add a test to check for no mispelling, etc of location names vs location requirements
+
+allLocationReqs = []
+allLocationNames = []
+for x in locationList:
+    if x.Type == "Transition":
+        continue
+
+    for i in x.LocationReqs:
+        if i not in allLocationReqs and \
+                "Warpie" not in i:
+            allLocationReqs.append(i)
+    if x not in allLocationNames:
+        allLocationNames.append(x.Name)
+
+foundReqs = []
+for a in allLocationReqs:
+    if a in allLocationNames:
+        foundReqs.append(a)
+
+
+for f in foundReqs:
+    allLocationReqs.remove(f)
+
+print("Unknown location requirements:", allLocationReqs)
+
+
+
+
 

@@ -24,7 +24,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Celadon City Entrance
+        LocationReqs: Celadon Gym Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

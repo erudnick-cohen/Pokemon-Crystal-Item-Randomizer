@@ -371,6 +371,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Goldenrod Store Accessible
                 ReachableReqs:
                 Code:
                 Text:

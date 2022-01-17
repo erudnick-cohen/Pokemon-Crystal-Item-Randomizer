@@ -80,6 +80,9 @@ def LoadWarpData(locationList):
 
 
 def ImpossibleWarpRecursion(accessible_groups, l):
+	dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
+				  "Most Map Access", "Elite Four"]
+
 	for l_s in l.Sublocations:
 		ImpossibleWarpRecursion(accessible_groups,l_s)
 
@@ -107,6 +110,16 @@ def isValidWarpDesc(warpData):
 		return False
 
 	return True
+
+
+def AddLocation(location, accessible, flattened):
+	accessible.append(location)
+	otherPossibilities = list(filter(lambda x: x.Type == "Transition" and \
+											   location in x.LocationReqs, flattened))
+	for o in otherPossibilities:
+		if o.Name not in accessible:
+			AddLocation(o.Name, accessible, flattened)
+
 
 
 def CheckLocationData(warpLocations, locationList):
@@ -137,12 +150,17 @@ def CheckLocationData(warpLocations, locationList):
 
 
 				if end not in accessible_groups:
-					accessible_groups.append(end)
+					AddLocation(end, accessible_groups, flattened)
 					added_cycle += 1
 
 				if warp not in accessible_warp_data:
 					accessible_warp_data.append(warp)
 					added_cycle += 1
+
+
+				# Add logic here to find all transitions from the currently added location
+
+
 
 			else:
 				otherPossibilities = list(filter(lambda x: \
@@ -155,8 +173,8 @@ def CheckLocationData(warpLocations, locationList):
 						if lreq in accessible_groups:
 							if op.Name not in accessible_groups:
 								#print("Add warp access2:", start,end)
-								accessible_groups.append(start)
-								accessible_groups.append(end)
+								AddLocation(start, accessible_groups, flattened)
+								AddLocation(end, accessible_groups, flattened)
 								added_cycle += 2
 							if warp not in accessible_warp_data:
 								accessible_warp_data.append(warp)
@@ -169,33 +187,25 @@ def CheckLocationData(warpLocations, locationList):
 					name = w.Name
 					withExactName = list(filter(lambda x: \
 												   x.Name == name, flattened))
+
+					# Exact name still needs to check for warp requirements
 					if len(withExactName) > 1:
-						if op.Name not in accessible_groups:
-							# print("Add warp access2:", start,end)
-							accessible_groups.append(start)
-							accessible_groups.append(end)
-							added_cycle += 2
-						if warp not in accessible_warp_data:
-							accessible_warp_data.append(warp)
-							added_cycle += 1
-
-						continue
+						nonWarpOption = False
+						for wen in withExactName:
+							if wen.WarpReqs is None or len(wen.WarpReqs) == 0:
+								nonWarpOption = True
 
 
-
-				# TODO: Exclude any static flag requirements at this stage
-				# For example, Slowpoke Well transition only working on Spinner WHY
-				for op in otherPossibilities:
-					for lreq in op.LocationReqs:
-						if lreq in accessible_groups:
-							if op.Name not in accessible_groups:
+							if nonWarpOption and op.Name not in accessible_groups:
 								# print("Add warp access2:", start,end)
-								accessible_groups.append(start)
-								accessible_groups.append(end)
+								AddLocation(start, accessible_groups, flattened)
+								AddLocation(end, accessible_groups, flattened)
 								added_cycle += 2
 							if warp not in accessible_warp_data:
 								accessible_warp_data.append(warp)
 								added_cycle += 1
+
+						continue
 
 		if added_cycle == 0:
 			break

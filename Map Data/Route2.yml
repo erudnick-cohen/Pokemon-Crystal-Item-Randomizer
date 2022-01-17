@@ -16,7 +16,7 @@ Location:
         Text:
         AREALV: 32
         TrainerList: 
-        WarpReqs: Route 2 Cut
+        WarpReqs: Route 2 Diglett
         Sublocations:
             -
                 Name: Route 2 Elixer
@@ -229,7 +229,7 @@ Location:
             - BUG_CATCHER 12
             - BUG_CATCHER 3
         HintName: Route 2
-        WarpReqs: West Kanto
+        WarpReqs: Route 2
         Sublocations:
             -
                 Name: Route 2 Dire Hit

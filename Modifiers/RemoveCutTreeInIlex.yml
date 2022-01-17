@@ -124,3 +124,17 @@ Changes:
         NewFlagReqs:
             - Pass
             - S S Ticket
+
+    -
+        Location: Ilex North Warpie
+        RemoveItemReqs:
+            - Cut
+        RemoveFlagReqs:
+            - Hive Badge
+
+    -
+        Location: Ilex South Warpie
+        RemoveItemReqs:
+            - Cut
+        RemoveFlagReqs:
+            - Hive Badge

@@ -458,9 +458,9 @@ Location:
                 WildTableList:
                 LocationReqs:
                     - Union Cave
-                    - VS Ho-Oh
                 FlagReqs:
                     - Fog Badge
+                    - Encounted Ho-Oh
                     - Impossible
                 ItemReqs:
                     - Surf

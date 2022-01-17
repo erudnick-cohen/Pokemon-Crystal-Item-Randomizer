@@ -98,6 +98,7 @@ Location:
         Code:
         Text:
         TrainerList:
+        WarpReqs: Lake Of Rage Cut
         Sublocations:
             -
                 Name: Lake of Rage Wesley
@@ -254,7 +255,7 @@ Location:
         IsBall: No
         NormalItem: ELIXER
         WarpReqs:
-            - Lake of Rage Magikarp House
+            - Lake Of Rage Magikarp House
             - Most Map Access
         Code: |
             .GetReward:

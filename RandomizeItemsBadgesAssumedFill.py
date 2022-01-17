@@ -14,6 +14,7 @@ def findAllSilverUnlocks(req, locList):
 	for findSilver in findSilverItems:
 		if findSilver.Type == "Item":
 			newFind.append(findSilver)
+		# TODO: Investigate adding Transition as well as fixing warp issues
 		elif findSilver.Type == "Map":
 			newFinds = findAllSilverUnlocks(findSilver.Name, locList)
 			for find in newFinds:
@@ -201,6 +202,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if (locList[iter] in MtSilverSubItems and toAllocate in coreProgress):
 					placeable = False
 
+				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
+					break
+
 				#is it the right type of location?
 				##print(locList[iter].Name)
 				##print(locList[iter].Type)
@@ -225,6 +229,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								random.shuffle(paths)
 								#pick an option from paths which isn't a tautology!
 								tautologyCheck = True
+
 								tautIter = 0
 								#only need to pick if there are two options!
 								if(len(requirementsDict[j])>1):
@@ -235,8 +240,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 									for k in paths:
 										#print('trying potential path:')
 										#print(k)
+
 										kTrue = True
+
 										for l in k:
+											kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
 											kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
 											lTrueOr = len(requirementsDict[l]) == 0
 											for m in requirementsDict[l]:
@@ -260,6 +268,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 												#print('False because the needed flag '+ l +' is not set')
 												#print(usedFlagsList)
 												#print(inputFlags)
+										# If all requirements have already been found, then the potential path is forbidden
+										# As it may require cyclic access, especially with warp logic
+										# e.g. Ledges only being accessible by warps, but using vanilla within dungeons
+										#if len(l) > 0 and len(k) == reqInCurrent:
+										#	kTrue = False
 										if(kTrue):
 											trueOption = k
 											#print('found non-tautological path')
@@ -289,6 +302,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 										#print(revReqDict[j])
 								else:
 									jReqs = sorted(requirementsDict[j][0])
+
+									#if len(jReqs) == 1:
+										#if jReqs[0] == previousDep:
+											# Seems wrong, just means a previous chosen path is not valid
+											# This breaks plando if multiple paths to get there
+											# This also makes things very slow
+											# If possible, revert to previous branch and pick a different path instead
+										#	legal = False
+
 									#no impossible paths
 									if 'Impossible' in jReqs:
 										legal = False
@@ -301,6 +323,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							for k in jReqs:
 								if k not in allDepsList:
 									newDeps.append(k)
+
+							previousDep = j
 						allDepsList.extend(newDeps)
 						#print('Expanded dependencies of '+locList[iter].Name+' to:')
 						#print(allDepsList)
@@ -524,4 +548,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('remaining')
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList)

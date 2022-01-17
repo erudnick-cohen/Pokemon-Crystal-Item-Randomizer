@@ -18,6 +18,12 @@ def handleBadSpoiler(result):
 	spoiler = result[1]
 	state = result[0]
 
+	if len(result) > 6:
+		remainingProgressItems = result[6]
+		for s in remainingProgressItems:
+			print("Unplaced:", s)
+
+
 	for s in spoiler.keys():
 		s_value = spoiler[s]
 		if s_value not in state:

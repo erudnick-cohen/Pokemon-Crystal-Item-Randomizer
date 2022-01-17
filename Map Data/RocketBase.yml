@@ -41,7 +41,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Rocket Base Entrance
+        LocationReqs: Rocket Base Entry
         FlagReqs:
         ItemReqs:
         FlagsSet:
