@@ -18,30 +18,40 @@ GoldenrodDeptStoreB1F_MapScripts:
 .ClearBoxes:
 	checkevent EVENT_RECEIVED_CARD_KEY
 	iftrue .GotCardKey
+.ckir_BEFORE_timed_events_DEPTSTOREB1F1::
 	sjump .Layout2
+.ckir_AFTER_timed_events_DEPTSTOREB1F1::
 
 .GotCardKey:
 	changeblock 16, 4, $0d ; floor
+.ckir_BEFORE_timed_events_DEPTSTOREB1F2::
 	sjump .Layout2
+.ckir_AFTER_timed_events_DEPTSTOREB1F2::
 
 .Continue:
 	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_2
 	iftrue .Layout2
 	checkevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
 	iftrue .Layout3
+.ckir_BEFORE_timed_events_DEPTSTOREB1F3::
+.ckir_AFTER_timed_events_DEPTSTOREB1F3::
 	return
 
 .Layout2:
 	changeblock 4, 10, $0d ; floor
+.ckir_BEFORE_timed_events_DEPTSTOREB1F4::
 	changeblock 10, 12, $0d ; floor
 	changeblock 10, 8, $0d ; floor
+.ckir_AFTER_timed_events_DEPTSTOREB1F4::
 	return
 
 .Layout3:
 	return
 
 .Unblock:
+.ckir_BEFORE_timed_events_DEPTSTOREB1F5::
 	clearevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
+.ckir_AFTER_timed_events_DEPTSTOREB1F5::
 	return
 
 GoldenrodDeptStoreB1FBlackBelt1Script:
