@@ -30,7 +30,7 @@
 {"integer_values": { "old": [6,3], "new": [7,10] },"address_range": { "begin": 458776, "end": 458778 },
 "label" : "LakeOfRage_MapScripts.ckir_BEFORE_timed_events_WESLEY", "description" : "Wesley is always present"},
 {"integer_values": { "old": [7,3], "new": [6,10] },"address_range": { "begin": 459261, "end": 459263 },
-"label" : "LakeOfRage_MapScripts.ckir_BEFORE_timed_events_WESLEY2", "description" : "Wesley always gives item"},
+"label" : "WesleyScript.ckir_BEFORE_timed_events_WESLEY2", "description" : "Wesley always gives item"},
 {"integer_values": { "old": [4], "new": [5] },"address_range": { "begin": 461677, "end": 461678 },
 "label" : "LakeOfRage_MapScripts.ckir_BEFORE_timed_events_WESLEYHIDDENITEM", "description" : "Shifts the hidden item from under Wesley"},
 {"integer_values": { "old": [4], "new": [7] },"address_range": { "begin": 466243, "end": 466244 },
