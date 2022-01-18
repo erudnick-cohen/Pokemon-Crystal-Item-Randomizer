@@ -343,7 +343,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					#Impossible locations are illegal
 					if("Impossible" in allDepsList):
 						legal = False
-					if(toAllocate not in allDepsList and legal):
+					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
 						loc = locList.pop(iter)
 						valid = True
 						#print('Gave '+ toAllocate +' to '+ loc.Name)
@@ -361,7 +361,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#	spoiler[loc.badge.Name] = loc.Name
 						allocatedList.append(loc)
 						#requirementsDict[toAllocate] = requirementsDict[loc.Name]
-						requirementsDict[toAllocate] = [list(frozenset(allDepsList))]
+						if not 'unsafePlando' in inputFlags:
+							requirementsDict[toAllocate] = [list(frozenset(allDepsList))]
 						#print(spoiler)
 					else:
 						#print(locList[iter].Name+' cannot contain '+toAllocate)
@@ -408,6 +409,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#set initial flags
 	for i in inputFlags:
 		state[i] = True
+	#if unsafe plando, put everything from the plando in
+	if 'unsafePlando' in inputFlags:
+		for i in plandoPlacements:
+			state[plandoPlacements[i]] = True
 	state['Item Badge Shuffle'] = True
 	#define mapping of state to distances at which parts of state were met
 	stateDist = defaultdict(lambda: 0)

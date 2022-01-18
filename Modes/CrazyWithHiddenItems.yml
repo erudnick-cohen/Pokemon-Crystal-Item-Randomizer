@@ -26,6 +26,7 @@ DefaultModifiers:
     - Modifiers/TimeEvents.yml
     - Modifiers/BerryTrees.yml
     - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

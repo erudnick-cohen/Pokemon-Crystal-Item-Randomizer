@@ -1,0 +1,4 @@
+Name: De-Randomize Leftovers
+Description: Ensures that the leftovers in Celadon Cafe is always a leftovers
+NewGamePatches:
+    - 'Patches/DerandomizeLeftovers.json'

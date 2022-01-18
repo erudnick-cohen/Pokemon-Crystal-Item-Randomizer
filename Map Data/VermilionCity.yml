@@ -145,7 +145,7 @@ Location:
                 FlagReqs:
                     - Saffron City
                     - Lavender Town
-                    - Kanto Power Restored
+                    - Power Plant Activated
                 ItemReqs:
                     - Machine Part
                 FlagsSet:

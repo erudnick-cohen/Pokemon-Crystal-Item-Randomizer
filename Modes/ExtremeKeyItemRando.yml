@@ -15,6 +15,7 @@ DefaultModifiers:
     - Modifiers/CardRandomization.yml
     - Modifiers/EnableTinTower.yml
     - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/DerandomizeLeftovers.yml
 ProgressItems:
     - Surf
     - Squirtbottle

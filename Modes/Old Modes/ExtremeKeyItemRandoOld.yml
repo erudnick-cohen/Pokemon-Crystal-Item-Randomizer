@@ -1,0 +1,87 @@
+Name: Extreme KIR
+Description: All HMs and Key Items are randomized. Most of the Pokegear cards and the Pokedex and Pokegear are also randomized as well. All badges are also shuffled. Rainbow wing is included in the item pool and is locked by having the clear bell and fighting the Elite 4. Fighting the Elite 4 is not required to fight Red. Fly access is less trollish than in classic KIR.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/OldRainbowWing.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Cut
+    - Strength
+    - Secret Potion
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+    - S S Ticket
+    - Machine Part
+    - Lost Item
+    - Pass
+    - Clear Bell
+    - Pokegear
+    - Radio Card
+    - Expansion Card
+    - Mystery Egg
+TrashItemList:
+    - OLD_ROD
+    - BLUE_CARD
+    - COIN_CASE
+    - ITEMFINDER
+    - GOOD_ROD
+    - Red Scale
+    - Whirlpool
+    - SUPER_ROD
+    - SILVER_WING
+    - Rainbow Wing
+    - ENGINE_POKEDEX
+BannedLocations:
+AllowedLocations:
+    - Pokegear Gift
+    - Mr. Pokemon's Egg
+    - Sprout Tower Flash HM
+    - Old Rod Guru
+    - Ilex Cut HM
+    - Bike Shop
+    - Coin Case Underground
+    - Buena Item
+    - Flower Shop
+    - Dance Theatre Surf HM
+    - Itemfinder House
+    - Good Rod Guru
+    - Olivine Strength HM
+    - Secret Potion Man
+    - Cianwood Fly HM
+    - Red Scale Dropped
+    - Rocket Base Whirlpool HM
+    - Radio Tower Rockets Part 1
+    - Goldenrod Tunnel Rocket Attack
+    - Radio Tower Rockets Part 2
+    - Ice Path Waterfall HM
+    - Elm SS Ticket
+    - Vermilion City Lost Item
+    - Copycat Rail Pass
+    - Hidden Machine Part
+    - Super Rod Guru
+    - Silver Wing Old Man
+    - Rainbow Wing Gift
+    - Oak Pokedex
+    - Radio Card Quiz
+    - Expansion Card Gift
+Goal: Red
+FlagsSet:
+    - Kanto Mode

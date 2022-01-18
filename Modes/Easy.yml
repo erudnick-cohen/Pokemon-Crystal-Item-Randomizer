@@ -28,6 +28,7 @@ DefaultModifiers:
     - Modifiers/UpgradeHealingItems.yml
     - Modifiers/UpgradeValuableItems.yml
     - Modifiers/UpgradeBalls.yml
+    - Modifiers/DerandomizeLeftovers.yml
 HintLevel: 5
 nHints: 75
 BannedLocations:

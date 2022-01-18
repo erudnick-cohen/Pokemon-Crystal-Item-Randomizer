@@ -114,5 +114,8 @@ Changes:
         Location: Route 29 Tuscany
         AddItemReqs:
             - Bicycle
-
+    -
+        Location: Rock Smash Guy
+        AddItemReqs:
+            - Bicycle
 

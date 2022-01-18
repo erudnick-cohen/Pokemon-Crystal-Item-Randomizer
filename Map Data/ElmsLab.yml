@@ -73,19 +73,16 @@ Location:
                 FlagsSet:
                     - Gave Elm Egg
                 ReachableReqs:
-                IsSpecial: Yes
+                IsSpecial: No
                 NormalItem: POKE_BALL
                 Code: |
                     AideScript_GiveYouBalls:
                         opentext
                         writetext AideText_GiveYouBalls
                         promptbutton
-                        getitemname STRING_BUFFER_4, POKE_BALL
-                        scall AideScript_ReceiveTheBalls
-                        giveitem ITEMLINE, 5
+                        ITEMLINE
                         writetext AideText_ExplainBalls
                         promptbutton
-                        itemnotify
                         closetext
                         setscene SCENE_ELMSLAB_NOTHING
                         end

@@ -1,0 +1,41 @@
+[
+    {
+        "integer_values": {
+            "old": [45, 155, 5, 173, 0],
+            "new": [45, 155, 5, 20, 0]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772,
+            "Offset":3
+        },
+        "label": "Randomizer_StarterCyndaquilOffset4.ckir_BEFORE_STARTER1",
+        "description": "Equips starter with a repel"
+    },
+    {
+        "integer_values": {
+            "old": [45, 155, 5, 173, 0],
+            "new": [45, 155, 5, 20, 0]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772,
+            "Offset":3
+        },
+        "label": "Randomizer_StarterTotodileOffset4.ckir_BEFORE_STARTER2",
+        "description": "Equips starter with a repel"
+    },
+    {
+        "integer_values": {
+            "old": [45, 155, 5, 173, 0],
+            "new": [45, 155, 5, 20, 0]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772,
+            "Offset":3
+        },
+        "label": "Randomizer_StarterChikoritaOffset4.ckir_BEFORE_STARTER3",
+        "description": "Equips starter with a repel"
+    }
+]

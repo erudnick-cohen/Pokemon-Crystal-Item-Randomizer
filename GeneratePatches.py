@@ -27,7 +27,8 @@ def makePatches():
 				for k in addrData:
 					if 'label' in j:
 						if j['label'] == k["label"]:
-							j["address_range"] = k["address_range"]
+							j["address_range"]["begin"] = k["address_range"]["begin"]
+							j["address_range"]["end"] = k["address_range"]["end"]
 			with open(r"Patches/"+i, 'w') as f:
 				json.dump(patchData, f)
 			

@@ -30,6 +30,7 @@ DefaultModifiers:
     - Modifiers/OpenMtSilver.yml
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/ShuffleLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

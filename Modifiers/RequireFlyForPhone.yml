@@ -1,9 +1,0 @@
-Name: Fly Before Phone Calls
-Description: "Requires Fly/Storm before any phone call trainers, as the most convenient way to achieve this is through flying to/from and going to New Bark."
-Changes:
-    -
-        Location: Phone Call Trainers
-        AddItemReqs:
-            - Fly
-        AddFlagReqs:
-            - Storm Badge

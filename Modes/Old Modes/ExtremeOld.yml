@@ -1,0 +1,32 @@
+Name: Extreme Logic
+Description: Items and badges are shuffled interchangably. Gyms may not be required to beat the game. Expected completion time is between 20 minutes and 4 hours for experienced players. This mode allows for the largest number of skips relative to any other mode. It is strongly recommended that the emotracker package for Crystal Full Item Rando is used, unless you're certain you've memorized every item location. All items and badges (item balls, gift items, TMs, HMs, key items, pokegear cards, pokedex,etc...) in the game have their locations randomly shuffled. All items which require daily events, day-night events or happiness checks are NOT included under these settings. Read the modifiers to further understand how this differs from standard and tricky. Remember, you can't spell extreme without memes.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+CoreProgress:
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
+DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/NoEarlyBasement.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/OldRainbowWing.yml
+BannedLocations:
+AllowedLocations:
+Goal: Red
+FlagsSet:
+    - Kanto Mode
+    - Sane Extreme E4 Access

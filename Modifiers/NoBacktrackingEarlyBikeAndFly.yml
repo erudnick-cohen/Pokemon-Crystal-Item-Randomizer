@@ -228,9 +228,15 @@ Changes:
         AddItemReqs:
             - Bicycle
             - Fly
-
     -
         Location: Route 29 Tuscany
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Bicycle
+            - Fly
+    -
+        Location: Rock Smash Guy
         AddFlagReqs:
             - Storm Badge
         AddItemReqs:

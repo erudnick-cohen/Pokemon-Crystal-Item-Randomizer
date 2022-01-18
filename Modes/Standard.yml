@@ -13,6 +13,7 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/SemiProgressiveRods.yml
     - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/DerandomizeLeftovers.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red
