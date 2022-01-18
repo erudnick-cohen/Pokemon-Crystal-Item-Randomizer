@@ -96,6 +96,7 @@ Location:
                     - Power Plant
                 ItemReqs:
                 FlagsSet:
+                    - Misty In Gym
                 ReachableReqs:
                 Code:
                 Text:
