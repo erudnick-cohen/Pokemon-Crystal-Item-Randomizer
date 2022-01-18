@@ -7,9 +7,9 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermilion City Entrance
-            - Power Plant Activated
         FlagReqs:
             - Surf
+            - Kanto Power Restored
         ItemReqs:
         FlagsSet:
             - Snorlax Woken
