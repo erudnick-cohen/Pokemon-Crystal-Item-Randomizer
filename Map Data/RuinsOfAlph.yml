@@ -73,6 +73,7 @@ Location:
                         playsound SFX_ITEM
                         waitsfx
                         ITEMLINE
+                        setevent EVENT_TALKED_TO_RUINS_COWARD
                         writetext RuinsOfAlphResearchCenterScientist3Text
                         waitbutton
                         closetext
