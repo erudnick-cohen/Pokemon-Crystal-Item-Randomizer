@@ -285,7 +285,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if hintConfig is not None and hintConfig.UseHints:
 		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
 															criticalTrash, BadgeDict, result[5].copy(), otherSettings,
-															hintConfig, allowList)
+															hintConfig)
 
 		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig, locationList)
 

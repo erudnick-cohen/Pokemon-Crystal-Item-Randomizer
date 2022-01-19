@@ -229,7 +229,7 @@ def HandleItemReplacement(reachable, inputFlags):
             replacement_type = replacement_item["type"]
 
             replacement_percent = 100
-            use_replacement_percent = "Always Upgrade" not in inputFlags
+            use_replacement_percent = True
 
             if use_replacement_percent and "chance" in replacement_item:
                 replacement_percent = replacement_item["chance"]
@@ -302,18 +302,7 @@ def IterateRequirements(location, locations, known, partial_known=[]):
             locs, flags, items = IterateRequirements(data, locations, known, partial_known)
 
             # Only add one instance from requirements
-            for newReq in locs:
-                if newReq not in data.LocationReqs:
-                    data.LocationReqs.append(newReq)
 
-            for newReq in flags:
-                if newReq not in data.FlagReqs:
-                    data.FlagReqs.append(newReq)
-
-            for newReq in items:
-                if newReq not in data.ItemReqs:
-                    data.ItemReqs.append(newReq)
-                    
             allRequiredLoc.extend(locs)
             allRequiredFlag.extend(flags)
             allRequiredItem.extend(items)
@@ -1125,84 +1114,7 @@ def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=[], requir
 
     return required
 
-def containsAny(x, l):
-    for req in x.LocationReqs:
-        if req in l:
-            return True
-    return False
-
-def GetItemChildren(location, locations, handled):
-    items = []
-    flags = []
-    new_locations = []
-
-    print("Check:", location.Name)
-
-    if location.Name in handled:
-        return handled[location.Name][0] , handled[location.Name][1], handled[location.Name][2]
-
-    handled[location.Name] = (items,flags,new_locations)
-
-    if "Impossible" in location.FlagReqs:
-        return items,flags,new_locations
-
-    if location.IsItem or location.IsGym:
-        items.append(location)
-
-    if len(location.FlagsSet) > 0:
-        flags.extend(location.FlagsSet)
-
-    if len(items) > 0:
-        return items,flags, new_locations
-
-    # TODO: Use sublocational to fix Date Ruined and other location chains?
-    for sublocation in location.Sublocations:
-        new_locations.append(sublocation.Name)
-        more_items,more_flags,more_locations = GetItemChildren(sublocation, locations, handled)
-
-
-        items.extend(more_items)
-        flags.extend(more_flags)
-        new_locations.extend(more_locations)
-
-    if len(items) > 0:
-        return items, flags, new_locations
-
-    use_locations = list(filter(lambda x: location.Name in x.LocationReqs or containsAny(x,new_locations), locations))
-    for use in use_locations:
-        more_items, more_flags, more_locations = GetItemChildren(use, locations, handled)
-        items.extend(more_items)
-        flags.extend(more_flags)
-
-        if len(items) > 0:
-            return items, flags, new_locations
-
-    for flag in flags:
-        flags_set = list(filter(lambda x: flag in x.FlagReqs, locations))
-        for flagA in flags_set:
-            even_more_items, even_more_flags, even_more_locations = GetItemChildren(flagA, locations, handled)
-            items.extend(even_more_items)
-
-            for f in even_more_flags:
-                if f not in flags:
-                    flags.append(f)
-
-    return items,flags, new_locations
-
-# TODO: Include flag and item checks in this location too
-def AutoBarrenAreas(locations):
-
-    auto_barren = []
-    known = {}
-    for location in locations:
-        items,flags,new_locations = GetItemChildren(location, locations, known)
-        if len(items) == 0 and location.Name not in auto_barren:
-            auto_barren.append(location.Name)
-
-    return auto_barren
-
-def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict, requirementDict, config,
-                         HintOptions, allowList):
+def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict, requirementDict, config, HintOptions):
     # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
     locationList = LoadLocationData.FlattenLocationTree(locations)
 
@@ -1238,8 +1150,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                          "Cianwood City", "Blackthorn City", "Cinnabar Island",
                          "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
                          "Mt Mortar Upper Floor", "Elm's Lab", "Routes 26/27", "Lighthouse",
-                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape",
-                         "Mt. Silver Unlock"]
+                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape"]
 
     location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
                             "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls"},
@@ -1250,8 +1161,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     no_free_locations = []
 
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"
-                     "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"]
     no_free_flag = []
 
     to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
@@ -1281,28 +1191,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     for discard in discardedItems:
         to_check_item.remove(discard)
-
-    autoBarren = AutoBarrenAreas(locationList)
-
-    # TODO: Make a function that returns a handled allow list
-    # This should factor in all locations with NO child 'Item' locations and work out which can be removed
-    discardedLocations = []
-
-    for location in to_check_location:
-        if location in autoBarren:
-            discardedLocations.append(location)
-
-        if location in location_sim_mapping:
-            mapping = location_sim_mapping[location]
-            multi_mapping = False
-            for m in mapping:
-                if m in autoBarren:
-                    multi_mapping = True
-            if multi_mapping:
-                discardedLocations.append(location)
-
-    for discard in discardedLocations:
-        to_check_location.remove(discard)
 
     potentiallyRequiredItems = list(spoiler.keys()).copy()
 

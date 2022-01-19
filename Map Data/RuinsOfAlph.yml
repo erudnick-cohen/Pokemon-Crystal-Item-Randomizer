@@ -68,7 +68,53 @@ Location:
                     - SUPER_NERD 1
                     - PSYCHIC_T 1
                 Sublocations:
-
+            -             
+                Name: Ruins of Alph UnownDex
+                FileName: RuinsOfAlphResearchCenter.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph
+                FlagReqs:
+                    - Most Map Access
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                MonReq: Unown
+                ReachableReqs:
+                Text:
+                NormalItem: ENGINE_UNOWN_DEX
+                TrainerList: 
+                Code: |
+                    .GetUnownDexScript:
+                        applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x5926f
+                        playsound SFX_BOOT_PC
+                        pause 60
+                        playsound SFX_SWITCH_POKEMON
+                        pause 30
+                        playsound SFX_TALLY
+                        pause 30
+                        playsound SFX_TRANSACTION
+                        pause 30
+                        turnobject RUINSOFALPHRESEARCHCENTER_SCIENTIST3, DOWN
+                        opentext
+                        writetext RuinsOfAlphResearchCenterModifiedDexText
+                        waitbutton
+                        closetext
+                        applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59274
+                        opentext
+                        writetext RuinsOfAlphResearchCenterDexUpgradedText
+                        playsound SFX_ITEM
+                        waitsfx
+                        ITEMLINE
+                        setevent EVENT_TALKED_TO_RUINS_COWARD
+                        writetext RuinsOfAlphResearchCenterScientist3Text
+                        waitbutton
+                        closetext
+                        applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59276
+                        setscene SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
+                        special RestartMapMusic
+                        end
             -
                 Name: Ruins of Alph UnownDex
                 FileName: RuinsOfAlphResearchCenter.asm
