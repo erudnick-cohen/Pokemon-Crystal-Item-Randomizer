@@ -10,21 +10,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\FlagValues.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\ItemValues.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\pokedexWithHeader.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
