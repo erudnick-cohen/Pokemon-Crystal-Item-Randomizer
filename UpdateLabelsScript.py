@@ -3,6 +3,8 @@ import shutil
 import GeneratePatches
 
 #import, and thus run TestLabelItemLocations
+from Tests.TestLabelItemLocations import *
+
 os.chdir('RandomizerRom')
 try:
     os.remove('pokecrystal-speedchoice.gbc')
@@ -25,3 +27,5 @@ shutil.move(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd()
 GeneratePatches.makePatches()
 
 #DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!
+
+

@@ -73,7 +73,7 @@ PokefanF_SnoreFarmer:
 	opentext
 	checkevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
 	iftrue FarmerFScript_GotSnore
-.ckir_BEFORE_timed_events_MOOMOO3::
+.ckir_BEFORE_timed_events_MOOMOO2::
 	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	iffalse FarmerFScript_GiveSnore
 .ckir_AFTER_timed_events_MOOMOO2::

@@ -6,10 +6,10 @@ import PokemonRandomizer
 import yaml
 from collections import defaultdict
 
-res = LoadLocationData.LoadDataFromFolder("..", labelling = True)
+res = LoadLocationData.LoadDataFromFolder(".", labelling = True)
 trashItems = res[1]
 LocationList = LoadLocationData.FlattenLocationTree(res[0])
-yamlfile = open("../TrainerData/Trainers.yaml")
+yamlfile = open("./TrainerData/Trainers.yaml")
 yamltext = yamlfile.read()
 trainerData = yaml.load(yamltext, Loader=yaml.FullLoader)
 RandomizerRom.ResetRomForLabelling()

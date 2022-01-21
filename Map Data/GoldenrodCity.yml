@@ -311,7 +311,7 @@ Location:
                     NormalItem: PARLYZ_HEAL
                     Code: |
                         GoldenrodUndergroundHiddenParlyzHeal:
-                          ITEMLINE
+                            ITEMLINE
                     SecondaryCode: '    bg_event  6, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal'
                     Text:
                     TrainerList:
@@ -383,7 +383,7 @@ Location:
                     Name: Goldenrod Department Store Return
                     FileName: GoldenrodDeptStore5F.asm
                     Type: Item
-                    HasPKMN: Yes
+                    HasPKMN: No
                     WildTableList:
                     LocationReqs: Goldenrod Department Store
                     FlagReqs:
@@ -400,8 +400,8 @@ Location:
                             ITEMLINE
                         .ckir_BEFORE_timed_events_DEPTSTORE5F4::
                             iftrue .NotVeryHappy
+                            iffalse .NotVeryHappy
                         .ckir_AFTER_timed_events_DEPTSTORE5F4::
-                            setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
                             closetext
                             end
                     Text:
@@ -412,7 +412,7 @@ Location:
                     Name: Goldenrod Department Store Frustration
                     FileName: GoldenrodDeptStore5F.asm
                     Type: Item
-                    HasPKMN: Yes
+                    HasPKMN: No
                     WildTableList:
                     LocationReqs: Goldenrod Department Store
                     FlagReqs:

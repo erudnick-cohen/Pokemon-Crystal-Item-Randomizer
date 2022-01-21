@@ -168,7 +168,7 @@ Location:
                 NormalItem: ELIXER
                 Code: |
                     LakeOfRageElixer:
-                    ITEMLINE
+                        ITEMLINE
                 Text:
                 TrainerList:
                 Sublocations:

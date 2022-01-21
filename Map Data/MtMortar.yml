@@ -248,8 +248,8 @@ Location:
 
                     -
                         Name: Mt Mortar Hidden Max Repel
-                        FileName: MountMortarB1F.asm
-                        SecondaryFile: MountMortarB1F.asm
+                        FileName: MountMortar1FInside.asm
+                        SecondaryFile: MountMortar1FInside.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:

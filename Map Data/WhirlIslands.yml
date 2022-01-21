@@ -281,8 +281,8 @@ Location:
                         IsBall: Yes
                         NormalItem: MAX_ELIXER
                         Code: |
-                          WhirlIslandB2FMaxElixer:
-                            ITEMLINE
+                            WhirlIslandB2FMaxElixer:
+                                ITEMLINE
                         Text:
                         TrainerList:
                         Sublocations:
@@ -300,8 +300,8 @@ Location:
                         IsBall: Yes
                         NormalItem: FULL_RESTORE
                         Code: |
-                          WhirlIslandB2FFullRestore:
-                            ITEMLINE
+                            WhirlIslandB2FFullRestore:
+                                ITEMLINE
                         Text:
                         TrainerList:
                         Sublocations:
