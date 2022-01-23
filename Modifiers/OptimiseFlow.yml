@@ -1,4 +1,0 @@
-Name: Optimise Flow
-Description: Optimises flow when playing, such as removing the need to enter/re-enter Goldenrod Basement.
-NewGamePatches:
-    - 'Patches/GoldenrodBasement.json'

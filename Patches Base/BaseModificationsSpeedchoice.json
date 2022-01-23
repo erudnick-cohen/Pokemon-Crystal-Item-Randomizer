@@ -23,11 +23,10 @@
         "label": "ItemRandoEasyClairBadge.ckir_BEFOREItemRandoEasyClairBadge",
         "description": "Ensures clair can be easily accessed, also currently in base patch due to lack of vanilla clair support"
     },
-    {"integer_values": {"old": [145], "new": [158]}, "address_range": {"begin": 513928, "end": 513929}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"},
-    {"integer_values": {"old": [145], "new": [158]}, "address_range": {"begin": 513935, "end": 513936}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"},
-    {"integer_values": {"old": [162], "new": [158]}, "address_range": {"begin": 513941, "end": 513942}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"},
-    {"integer_values": {"old": [167], "new": [171]}, "address_range": {"begin": 513947, "end": 513948}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"},
-    {"integer_values": {"old": [122, 10, 8, 13, 144], "new": [144, 122, 4, 10, 13]}, "address_range": {"begin": 513949, "end": 513954}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"},
-    {"integer_values": {"old": [4, 10], "new": [10, 12]}, "address_range": {"begin": 513955, "end": 513957}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"}, 
-    {"integer_values": {"old": [144, 122, 10, 12, 13], "new": [122, 10, 8, 13, 144]}, "address_range": {"begin": 513958, "end": 513963}, "label": "GoldenrodDeptStoreB1F.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description": "Prevent boxes from blocking path"}
+
+     {"integer_values": { "old": [49,5,3,9,162,87,49,6,3,9,167,87], "new": [122,4,10,13,122,10,8,13,122,10,12,13] },
+    "address_range": { "begin": 513937, "end": 513949 },
+"label" : "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description" : "Prevent boxes from blocking path"}
+
+
 ]

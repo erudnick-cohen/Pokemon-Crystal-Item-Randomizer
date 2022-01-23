@@ -1,0 +1,118 @@
+Name: Extreme KIR+TMs+
+Description: Badges and all TM items shuffled into the pool.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+DefaultModifiers:
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/ForceEarlyFlyV2.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/TimeEvents.yml
+    - Modifiers/PointlessChecks.yml
+ProgressItems:
+    - Surf
+    - Squirtbottle
+    - Flash
+    - Cut
+    - Strength
+    - Secret Potion
+    - Card Key
+    - Basement Key
+    - Waterfall
+    - Bicycle
+    - Fly
+    - S S Ticket
+    - Machine Part
+    - Lost Item
+    - Pass
+    - Clear Bell
+    - Pokegear
+    - Radio Card
+    - Expansion Card
+BannedLocations:
+AllowedLocations:
+    - Pokegear Gift
+    - Mr. Pokemon's Egg
+    - Route 31 Kenya Item
+    - Sprout Tower Flash HM
+    - Falkner TM
+    - Old Rod Guru
+    - Route 32 Roar Dude
+    - Union Cave Swift TM
+    - Bugsy TM
+    - Rain Dance
+    - Ilex Cut HM
+    - Headbutt Guy
+    - Sweet Scent Girl
+    - Bike Shop
+    - Coin Case Underground
+    - Buena Item
+    - Whitney TM
+    - Flower Shop
+    - Route 35 Rollout TM
+    - National Park Dig TM
+    - Rock Smash Guy
+    - Dance Theatre Surf HM
+    - Itemfinder House
+    - Morty TM
+    - Burned Tower Strength Item
+    - Olivine Strength HM
+    - Good Rod Guru
+    - Lighthouse Swagger TM
+    - Jasmine TM
+    - Secret Potion Man
+    - Chuck TM
+    - Cianwood Fly HM
+    - Mt Mortar Defense Curl TM
+    - Route 43 Sludge Bomb TM
+    - Red Scale Dropped
+    - Lake of Rage Detect TM
+    - Lake of Rage Hidden Power TM
+    - Rocket Base 2F Thief TM
+    - Rocket Base Whirlpool HM
+    - Pryce TM
+    - Goldenrod Tunnel Sleep Talk TM
+    - Radio Tower Rockets Part 1
+    - Goldenrod Tunnel Rocket Attack
+    - Radio Tower Rockets Part 2
+    - Radio Tower Sunny Day TM
+    - Ice Path Waterfall HM
+    - Ice Path Rest TM
+    - Clair TM
+    - Dark Cave Snore TM
+    - Elm SS Ticket
+    - Route 27 Solar Beam TM
+    - Victory Road Earthquake TM
+    - Vermilion City Lost Item
+    - Mr Psychic TM
+    - Copycat Rail Pass
+    - Erika TM
+    - Janine TM
+    - Hidden Machine Part
+    - Power Plant Activated
+    - Super Rod Guru
+    - Rock Tunnel Steel Wing TM
+    - Silver Wing Old Man
+    - Viridian Dream Eater TM
+    - Route 28 Steel Wing TM
+    - Celadon Mansion Curse
+    - Goldenrod Department Store Return
+    - Goldenrod Department Store Frustration
+    - Route 39 Farmhouse Snore
+    - Route 27 Sandstorm House
+    - Oak Pokedex
+    - Radio Card Quiz
+    - Expansion Card Gift
+    - Rainbow Wing Gift
+    - Map Card
+Goal: Red
+FlagsSet:
+    - Kanto Mode

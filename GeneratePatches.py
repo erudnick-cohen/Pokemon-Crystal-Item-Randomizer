@@ -24,6 +24,7 @@ def makePatches():
 
 			for j in patchData:
 				#find the relevant address data
+				count = 0
 				addRange = []
 				for k in addrData:
 					if 'label' in j:
@@ -33,11 +34,20 @@ def makePatches():
 								len(j["integer_values"]["old"]) != len(j["integer_values"]["new"]):
 								print("Patch is the wrong expected size:",j["description"])
 
-								print(j)
-								print(k)
+								raise Exception("Wrong size patch")
 
 							j["address_range"]["begin"] = k["address_range"]["begin"]
 							j["address_range"]["end"] = k["address_range"]["end"]
+							count += 1
+
+				if "label" not in j:
+					print("Unable to find label-",i )
+				elif count != 1:
+					print("Did not find label::", j["label"])
+					raise Exception("Label not found")
+
+
+
 
 
 			with open(r"Patches/"+i, 'w') as f:

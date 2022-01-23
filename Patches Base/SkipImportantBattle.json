@@ -8,7 +8,7 @@
             "begin": 1711294,
             "end": 1711307
         },
-        "label": "Route30_MapEventHeader.ckir_BEFORE_OBJECT_EVENT_MONSTER_EVENT_ROUTE_30_BATTLE_0",
+        "label": "Route30_MapEvents.ckir_BEFORE_object_event_EVENT_ROUTE_30_BATTLE_MONSTER_0",
         "description": "Disable the important battle"
     },
     {
@@ -20,7 +20,7 @@
             "begin": 1711307,
             "end": 1711320
         },
-        "label": "Route30_MapEventHeader.ckir_BEFORE_OBJECT_EVENT_MONSTER_EVENT_ROUTE_30_BATTLE_1",
+        "label": "Route30_MapEvents.ckir_BEFORE_object_event_EVENT_ROUTE_30_BATTLE_MONSTER_1",
         "description": "Disable the important battle"
     },
     {
@@ -32,7 +32,7 @@
             "begin": 1711229,
             "end": 1711242
         },
-        "label": "Route30_MapEventHeader.ckir_BEFORE_OBJECT_EVENT_YOUNGSTER_EVENT_ROUTE_30_BATTLE",
+        "label": "Route30_MapEvents.ckir_BEFORE_object_event_EVENT_ROUTE_30_BATTLE_YOUNGSTER",
         "description": "Disable the important battle"
     },
     {
@@ -44,7 +44,7 @@
             "begin": 1711242,
             "end": 1711255
         },
-        "label": "Route30_MapEventHeader.ckir_BEFORE_EVENT_ROUTE_30_YOUNGSTER_JOEY",
+        "label": "Route30_MapEvents.ckir_BEFORE_object_event_EVENT_ROUTE_30_YOUNGSTER_JOEY",
         "description": "NOTE THAT THESE VALUES DIFFER FROM VANILLA - WHY? Make the battleable Youngster Joey appear"
     }
 ]
