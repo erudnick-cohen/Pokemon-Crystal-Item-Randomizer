@@ -16,6 +16,7 @@ DefaultModifiers:
     - Modifiers/EnableTinTower.yml
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/TimeEvents.yml
+    - Modifiers/PointlessChecks.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -111,6 +112,7 @@ AllowedLocations:
     - Radio Card Quiz
     - Expansion Card Gift
     - Rainbow Wing Gift
+    - Map Card
 Goal: Red
 FlagsSet:
     - Kanto Mode

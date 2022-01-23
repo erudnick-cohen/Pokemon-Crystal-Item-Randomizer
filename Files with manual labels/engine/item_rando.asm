@@ -10,9 +10,9 @@ HoOhChamberNerfed::
 	db 
 .ckir_AFTERHoOhChamberNerfed::
 ClassicRainbowWing::
-.ckir_BEFOREClassicRainbowWing
+.ckir_BEFOREClassicRainbowWing::
 	db 1
-.ckir_AFTERClassicRainbowWing
+.ckir_AFTERClassicRainbowWing::
 ItemRandoRocketless::
 .ckir_BEFOREItemRandoRocketless::
 	db

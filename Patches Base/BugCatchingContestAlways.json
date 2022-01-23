@@ -23,24 +23,13 @@
         "label": "Route36OfficerScriptContest.ckir_BEFORE_RUN36_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"
     },
-    {"integer_values": { "old": [6,2], "new": [7,10] },"address_range": { "begin": 434604, "end": 434606 },
-    "label" : "Route35NationalParkGate.ckir_BEFORE_timed_events_BGC35", "description" : "BGC is every day"},
-    {"integer_values": { "old": [0], "new": [10] },"address_range": { "begin": 434690, "end": 434691 },
-    "label" : "Route35NationalParkGate.ckir_BEFORE_timed_events_BGC352", "description" : "BGC is every day"},
-    {"integer_values": { "old": [1], "new": [10] },"address_range": { "begin": 434694, "end": 434695 },
-    "label" : "Route35NationalParkGate.ckir_BEFORE_timed_events_BGC353", "description" : "BGC is every day"},
-    {"integer_values": { "old": [3], "new": [10] },"address_range": { "begin": 434698, "end": 434699 },
-    "label" : "Route35NationalParkGate.ckir_BEFORE_timed_events_BGC354", "description" : "BGC is every day"},
-    {"integer_values": { "old": [5], "new": [10] },"address_range": { "begin": 434702, "end": 434703 },
-    "label" : "Route35NationalParkGate.ckir_BEFORE_timed_events_BGC355", "description" : "BGC is every day"},
-    {"integer_values": { "old": [6,2], "new": [7,10] },"address_range": { "begin": 437030, "end": 437032 },
-    "label" : "Route36NationalParkGate.ckir_BEFORE_timed_events_BGC36", "description" : "BGC is every day"},
-    {"integer_values": { "old": [0], "new": [10] },"address_range": { "begin": 437214, "end": 437215 },
-    "label" : "Route36NationalParkGate.ckir_BEFORE_timed_events_BGC362", "description" : "BGC is every day"},
-    {"integer_values": { "old": [1], "new": [10] },"address_range": { "begin": 437218, "end": 437219 },
-    "label" : "Route36NationalParkGate.ckir_BEFORE_timed_events_BGC363", "description" : "BGC is every day"},
-    {"integer_values": { "old": [3], "new": [10] },"address_range": { "begin": 437222, "end": 437223 },
-    "label" : "Route36NationalParkGate.ckir_BEFORE_timed_events_BGC364", "description" : "BGC is every day"},
-    {"integer_values": { "old": [5], "new": [10] },"address_range": { "begin": 437226, "end": 437227 },
-    "label" : "Route36NationalParkGate.ckir_BEFORE_timed_events_BGC365", "description" : "BGC is every day"}
+    {"integer_values": { "old": [6,2,197,97], "new": [7,10,197,97] },"address_range": { "begin": 434604, "end": 434606 },
+    "label" : "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35", "description" : "BGC is every day"},
+    {"integer_values": { "old": [6,0,194,98,6,0,194,98,6,0,194,98,6,0,194,98], "new": [6,10,194,98,6,10,194,98,6,10,194,98,6,10,194,98] },"address_range": { "begin": 434690, "end": 434691 },
+    "label" : "Route35OfficerScriptContest.ckir_BEFORE_timed_events_BGC352", "description" : "BGC is every day"},
+
+    {"integer_values": { "old": [6,2,61,107], "new": [7,10,61,107] },"address_range": { "begin": 437030, "end": 437032 },
+    "label" : "Route36NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC36", "description" : "BGC is every day"},
+    {"integer_values": { "old": [6,0,236,108,6,0,236,108,6,0,236,108,6,0,236,108], "new": [6,10,236,108,6,10,236,108,6,10,236,108,6,10,236,108] },"address_range": { "begin": 437214, "end": 437215 },
+    "label" : "Route36OfficerScriptContest.ckir_BEFORE_timed_events_BGC362", "description" : "BGC is every day"}
 ]
