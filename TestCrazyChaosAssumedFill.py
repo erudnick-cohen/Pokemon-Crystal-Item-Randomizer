@@ -5,7 +5,7 @@ from shutil import copyfile
 romPath = 'testingRom7p31.gbc'
 copyfile(romPath, 'Hmmm'+romPath)
 
-yamlfile = open("Modes/Extreme.yml")
+yamlfile = open("Modes/CrazyWithHiddenItems.yml")
 yamltext = yamlfile.read()
 settings = yaml.load(yamltext, Loader=yaml.FullLoader)
 yamlfile = open(settings['BasePatch'])
