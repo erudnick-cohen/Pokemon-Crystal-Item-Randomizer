@@ -21,14 +21,25 @@ def makePatches():
 			with open("Patches Base//"+i,encoding='utf-8') as f:
 				patchText = f.read()
 				patchData = json.loads(patchText)
+
 			for j in patchData:
 				#find the relevant address data
 				addRange = []
 				for k in addrData:
 					if 'label' in j:
 						if j['label'] == k["label"]:
+							actual_size = int(k["address_range"]["end"])-int(k["address_range"]["begin"])
+							if len(j["integer_values"]["old"]) != actual_size or \
+								len(j["integer_values"]["old"]) != len(j["integer_values"]["new"]):
+								print("Patch is the wrong expected size:",j["description"])
+
+								print(j)
+								print(k)
+
 							j["address_range"]["begin"] = k["address_range"]["begin"]
 							j["address_range"]["end"] = k["address_range"]["end"]
+
+
 			with open(r"Patches/"+i, 'w') as f:
 				json.dump(patchData, f)
 			
