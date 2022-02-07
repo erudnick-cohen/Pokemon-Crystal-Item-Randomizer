@@ -242,6 +242,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		item = PriorityObject(i["HintName"],i["HintTypes"],i["HintKey"])
 		priority_list.append(item)
 
+	if hintConfig is not None and hintConfig.UseHints and hintConfig.BadgeIcon:
+		badgeHintFontPatch = "Patches/BadgeSymbol.json"
+		pfile = open(badgeHintFontPatch)
+		ptext = pfile.read()
+		patchList.extend(json.loads(ptext))
+
+	RandomizerRom.ApplyGamePatches(romMap, patchList)
+
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 	maxDist = max(result[2].values())
@@ -254,15 +262,6 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
-
-	if hintConfig is not None and hintConfig.UseHints and hintConfig.BadgeIcon:
-		badgeHintFontPatch = "Patches/BadgeSymbol.json"
-		pfile = open(badgeHintFontPatch)
-		ptext = pfile.read()
-		patchList.extend(json.loads(ptext))
-
-	RandomizerRom.ApplyGamePatches(romMap, patchList)
-
 
 	if hintConfig is not None and hintConfig.UseHints:
 		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
