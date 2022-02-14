@@ -47,8 +47,10 @@ Location:
         HasPKMN: No
         LocationReqs:
         ItemReqs:
+            - Flash
         FlagReqs:
             - Warps
+            - Zephyr Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:

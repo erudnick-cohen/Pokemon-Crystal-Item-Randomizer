@@ -58,9 +58,9 @@ def LoadWarpData(locationList):
 			"Type": "Map",
 			"WildTableList": None,
 			"LocationReqs": [fromGroupName+WARP_OPTION],
-			"FlagReqs": None,
+			"FlagReqs": [],
 			"FlagsSet": None,
-			"ItemReqs": None,
+			"ItemReqs": [],
 			"Code": "",
 			"Text": "",
 			"Sublocations": None,
@@ -68,6 +68,15 @@ def LoadWarpData(locationList):
 			"ReachableReqs": None,
 			"TrainerList": None
 		}
+
+
+		darkWarpGroups = {"Silver Cave Room 1", "Whirl Island", "Rock Tunnel", "Dark Cave"}
+
+
+
+		if len(list(filter(lambda x: x in fromGroupName,darkWarpGroups))) > 0:
+			locationData["FlagReqs"].append("Zephyr Badge")
+			locationData["ItemReqs"].append("Flash")
 
 		l = Location.Location(locationData)
 

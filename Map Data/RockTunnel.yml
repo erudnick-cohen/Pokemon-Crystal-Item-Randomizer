@@ -95,7 +95,9 @@ Location:
         LocationReqs:
         FlagReqs:
             - Warps
+            - Zephyr Badge
         ItemReqs:
+            - Flash
         FlagsSet:
         ReachableReqs:
         Code:
