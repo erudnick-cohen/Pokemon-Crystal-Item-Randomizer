@@ -273,7 +273,7 @@ Location:
                     .VeryHappy:
                     	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
                     	promptbutton
-                    	verbosegiveitem TM_RETURN
+                    	ITEMLINE
                     .ckir_BEFORE_timed_events_DEPTSTORE5F4::
                     	iftrue .NotVeryHappy
                     	iffalse .NotVeryHappy
