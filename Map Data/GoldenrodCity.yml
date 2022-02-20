@@ -263,7 +263,8 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                IsBall:
+                NormalItem:
+                IsBall: No
                 Code:
                 Text:
                 AREALV:
