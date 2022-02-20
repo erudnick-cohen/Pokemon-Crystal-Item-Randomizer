@@ -7,7 +7,6 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermilion City Entrance
-            - Power Plant Activated
         FlagReqs:
             - Surf
         ItemReqs:

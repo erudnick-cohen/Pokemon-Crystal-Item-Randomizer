@@ -14,9 +14,9 @@ GoldenrodDeptStore5F_MapScripts:
 
 .CheckIfSunday:
 	readvar VAR_WEEKDAY
-.ckir_BEFORE_timed_events_DEPTSTORE5F::
+.ckir_BEFORE_timed_events_DEPTSTORE5F1::
 	ifnotequal 10, .yes
-.ckir_AFTER_timed_events_DEPTSTORE5F::
+.ckir_AFTER_timed_events_DEPTSTORE5F1::
 	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
 	return
 
@@ -55,8 +55,8 @@ GoldenrodDeptStore5FReceptionistScript:
 	verbosegiveitem TM_RETURN
 .ckir_BEFORE_timed_events_DEPTSTORE5F4::
 	iftrue .NotVeryHappy
+	iffalse .NotVeryHappy
 .ckir_AFTER_timed_events_DEPTSTORE5F4::
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
 	closetext
 	end
 
@@ -89,7 +89,7 @@ Carrie:
 	ifnotequal GBCHECK_CGB, .NotGBC ; This is a dummy check from Gold/Silver
 	writetext GoldenrodDeptStore5FCarrieMysteryGiftExplanationText
 	waitbutton
-	closetext
+    closetext
 	special UnlockMysteryGift
 	end
 
@@ -184,7 +184,6 @@ GoldenrodDeptStore5FPokefanMText:
 
 	para "The name is a re-"
 	line "flection of the"
-
 	para "original trainer's"
 	line "feelings for it."
 	done
@@ -203,7 +202,6 @@ GoldenrodDeptStore5F_MapEvents:
 	warp_event 12,  0, GOLDENROD_DEPT_STORE_4F, 1
 	warp_event 15,  0, GOLDENROD_DEPT_STORE_6F, 1
 	warp_event  2,  0, GOLDENROD_DEPT_STORE_ELEVATOR, 1
-
 	db 0 ; coord events
 
 	db 2 ; bg events
