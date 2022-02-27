@@ -118,6 +118,7 @@ class Location:
 					self.Sublocations.append(Location(i))
 		self.IsGym = False
 		self.IsActuallyGym = False
+		self.Banned = False
 
 		if "WarpReqs" in yamlTree:
 			self.WarpReqs = yamlTree["WarpReqs"]
@@ -181,6 +182,7 @@ class Location:
 			if(self.isItem()):
 				self.IsItem = False
 				self.Type = 'Map'
+				self.Banned = True
 			else:
 				#this means its a map location, so we need to just make it unreachable
 				#unless its a gym, in which case nothing happens

@@ -17,6 +17,10 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/TimeEvents.yml
     - Modifiers/PointlessChecks.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/NerfHoOhChamber.yml
+    - Modifiers/DerandomizeLeftovers.yml
+    - Modifiers/NoEarlyBasement.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -37,6 +41,63 @@ ProgressItems:
     - Pokegear
     - Radio Card
     - Expansion Card
+    - Whirlpool
+TrashItemList:
+    - OLD_ROD
+    - BLUE_CARD
+    - COIN_CASE
+    - ITEMFINDER
+    - GOOD_ROD
+    - SUPER_ROD
+    - SILVER_WING
+    - Rainbow Wing
+    - ENGINE_POKEDEX
+    - Red Scale
+    - Mystery Egg
+    - TM_DYNAMICPUNCH
+    - TM_HEADBUTT
+    - TM_CURSE
+    - TM_ROLLOUT
+    - TM_ROAR
+    - TM_TOXIC
+    - TM_ZAP_CANNON
+    - TM_ROCK_SMASH
+    - TM_HIDDEN_POWER
+    - TM_SUNNY_DAY
+    - TM_SWEET_SCENT
+    - TM_SNORE
+    - TM_SNORE
+    - TM_ICY_WIND
+    - TM_RAIN_DANCE
+    - TM_GIGA_DRAIN
+    - TM_ENDURE
+    - TM_FRUSTRATION
+    - TM_SOLARBEAM
+    - TM_IRON_TAIL
+    - TM_DRAGONBREATH
+    - TM_EARTHQUAKE
+    - TM_RETURN
+    - TM_DIG
+    - TM_PSYCHIC
+    - TM_SHADOW_BALL
+    - TM_MUD_SLAP
+    - TM_SWAGGER
+    - TM_SLEEP_TALK
+    - TM_SLUDGE_BOMB
+    - TM_SANDSTORM
+    - TM_SWIFT
+    - TM_DEFENSE_CURL
+    - TM_THUNDERPUNCH
+    - TM_DREAM_EATER
+    - TM_DETECT
+    - TM_REST
+    - TM_ATTRACT
+    - TM_THIEF
+    - TM_STEEL_WING
+    - TM_STEEL_WING
+    - TM_FURY_CUTTER
+    - TM_NIGHTMARE
+    - ENGINE_MAP_CARD
 BannedLocations:
 AllowedLocations:
     - Pokegear Gift

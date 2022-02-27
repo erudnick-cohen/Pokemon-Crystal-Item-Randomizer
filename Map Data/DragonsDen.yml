@@ -6,7 +6,7 @@ Location:
         HasPKMN: Yes
         WildTableList:
         LocationReqs:
-            - Clair TM
+            - Battle Clair
             - Blackthorn City
         FlagReqs:
             - Fog Badge

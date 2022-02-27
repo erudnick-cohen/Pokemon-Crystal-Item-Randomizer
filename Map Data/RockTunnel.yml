@@ -126,6 +126,26 @@ Location:
         TrainerList: 
         Sublocations:
         -
+            Name: Rock Tunnel North Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 North
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs:
+              - Rock Tunnel North Exit
+            Sublocations:
+
+        -
             Name: Rock Tunnel North Exit
             FileName: RockTunnel1F.asm
             Type: Map
@@ -167,6 +187,39 @@ Location:
                     Text:
                     TrainerList:
                     Sublocations:
+        -
+            Name: Rock Tunnel South Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 South
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel South Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel via Lavender
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
 
         -
             Name: Rock Tunnel South Exit
@@ -174,7 +227,7 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Rock Tunnel BF1 South
+            LocationReqs: Rock Tunnel South Entrance
             FlagReqs:
                 - Zephyr Badge
             ItemReqs:

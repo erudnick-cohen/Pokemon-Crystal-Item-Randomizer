@@ -46,6 +46,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	requirementsDict = defaultdict(lambda: [])
 
 	MtSilverSubItems = findAllSilverUnlocks("Mt. Silver Outside",locList)
+	Route28SubItems = findAllSilverUnlocks("Route 28", locList)
+
+	MtSilverSubItems.extend(Route28SubItems)
 
 
 #shuffle the lists (no seriously, this is a perfectly valid randomization strategy)
@@ -465,7 +468,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							except ValueError:
 								pass
 						else:
-							placeItem = trashItems.pop()
+							try:
+								placeItem = trashItems.pop()
+							except Exception as e:
+								print(e)
+								raise e;
 							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):
 								oldItem = placeItem
 								placeItem = trashItems.pop()
@@ -553,4 +560,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('remaining')
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList)
