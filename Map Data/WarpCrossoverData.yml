@@ -2065,90 +2065,6 @@ Location:
         Text:
 
     -
-        Name: Lighthouse 5F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse Roof
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Lighthouse 4F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse 5F
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Lighthouse 3F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse 4F
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Lighthouse 3F Middle
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse 4F
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Lighthouse 2F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse 3F
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Lighthouse 1F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Lighthouse 2F
-        ItemReqs:
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
         Name: Goldenrod
         FileName: CianwoodCity.asm
         Type: Transition
@@ -2452,20 +2368,6 @@ Location:
         LocationReqs: Ecruteak
         ItemReqs:
             - Squirtbottle
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-
-    -
-        Name: Burned Tower Basement
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Burned Tower 1F
-        ItemReqs:
         FlagReqs:
         FlagsSet:
         ReachableReqs:
@@ -2833,6 +2735,38 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: Route 9 Route
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 35 Route
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 36
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 36
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 35 Route
         ItemReqs:
             - Cut
         FlagReqs:

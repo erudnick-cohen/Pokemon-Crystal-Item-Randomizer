@@ -5,27 +5,31 @@ import yaml
 from collections import defaultdict
 
 def readTSVFile(filename):
-    file = open(filename)
-    data = file.readlines()
+	file = open(filename)
+	data = file.readlines()
 
-    objs = []
+	objs = []
 
-    first_line = True
-    for line in data:
-        if first_line:
-            field_names = line.strip().split("\t")
-            first_line = False
-        else:
-            d = line.strip().split("\t")
-            obj = {}
-            iterator = 0
-            for name in field_names:
-                obj[name] = d[iterator]
-                iterator += 1
+	first_line = True
+	for line in data:
+		if first_line:
+			field_names = line.strip().split("\t")
+			first_line = False
+		else:
+			d = line.strip().split("\t")
+			obj = {}
+			iterator = 0
 
-            objs.append(obj)
+			for name in field_names:
+				if iterator >= len(d):
+					obj[name] = ""
+				else:
+					obj[name] = d[iterator]
+				iterator += 1
 
-    return objs
+			objs.append(obj)
+
+	return objs
 
 
 WARP_OPTION=" Warpie"
@@ -102,7 +106,9 @@ def ImpossibleWarpRecursion(accessible_groups, l):
 
 
 def isValidWarpDesc(warpData):
-	invalidWarps = ["x","X","null","NULL",""]
+	invalidWarps = ["x","X","null","NULL","", "Unused"]
+
+	oneWayWarpInvalidation = ["Drop Point", "Drop Point 2"]
 
 	if warpData["End Warp Name"] in invalidWarps:
 		return False
@@ -117,6 +123,13 @@ def isValidWarpDesc(warpData):
 	warpGroup = warpData["Start Warp Group"][1:-1]
 	if warpGroup in invalidWarps:
 		return False
+
+	oneWay = list(filter(lambda x: warpData["Start Warp Name"].endswith(x), oneWayWarpInvalidation))
+				#or warpData["End Warp Name"].endswith(x), oneWayWarpInvalidation))
+
+	if len(oneWay) > 0:
+		return False
+
 
 	return True
 

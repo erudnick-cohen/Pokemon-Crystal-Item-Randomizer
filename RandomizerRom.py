@@ -662,7 +662,12 @@ def LabelItemLocation(location):
 	# print(coderegexstr)
 	codeSearch = None
 	if not location.IsSpecial:
-		codeSearch = re.findall(coderegexstr,filecode)[0]
+		try:
+			codeSearch = re.findall(coderegexstr,filecode)[0]
+		except:
+			print("fail")
+			return
+
 		oldcode = codeSearch[0]
 		#print(codeSearch)
 	else:

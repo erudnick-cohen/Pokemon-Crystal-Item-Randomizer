@@ -45,6 +45,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
+        WarpReqs:
+            - Route 36
         TrainerList:
         Sublocations:
     -

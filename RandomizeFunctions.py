@@ -1242,7 +1242,8 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                          "Mt. Silver Unlock"]
 
     location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
-                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls"},
+                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls",
+                                             "Route 27 Right Side"}, # Add inferred until complex logic
                             "Cerulean Cape": {"Route 24", "Route 25"}
                             }
 
@@ -1250,7 +1251,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     no_free_locations = []
 
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
                      "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
     no_free_flag = []
 
