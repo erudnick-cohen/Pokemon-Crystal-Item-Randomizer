@@ -1,0 +1,5 @@
+Name: No Progression Fly Warps
+Description: "When playing on warps, prevent Fly from being locked behind any progression item."
+FlagsSet:
+    - Fly Warps
+

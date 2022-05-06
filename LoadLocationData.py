@@ -34,7 +34,7 @@ def readTSVFile(filename):
 
 WARP_OPTION=" Warpie"
 
-def LoadWarpData(locationList):
+def LoadWarpData(locationList, flags):
 	warpLocations = []
 
 	# var
@@ -81,6 +81,11 @@ def LoadWarpData(locationList):
 		if len(list(filter(lambda x: x in fromGroupName,darkWarpGroups))) > 0:
 			locationData["FlagReqs"].append("Zephyr Badge")
 			locationData["ItemReqs"].append("Flash")
+
+			if "Fly Warps" in flags:
+				locationData["FlagReqs"].append("Storm Badge")
+				locationData["ItemReqs"].append("Fly")
+
 
 		l = Location.Location(locationData)
 
@@ -267,7 +272,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 				try:
 					nLoc = Location.Location(location)
 					if "Warps" in flags:
-						nLoc.applyWarpLogic()
+						nLoc.applyWarpLogic(flags)
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict)
 					LocationList.append(nLoc)
@@ -289,7 +294,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 				try:
 					nLoc = Gym.Gym(location)
 					if "Warps" in flags:
-						nLoc.applyWarpLogic()
+						nLoc.applyWarpLogic(flags)
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict)
 					LocationList.append(nLoc)
@@ -299,7 +304,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					raise(inst)
 
 	if "Warps" in flags:
-		warpData = LoadWarpData(LocationList)
+		warpData = LoadWarpData(LocationList, flags)
 		for warp in warpData:
 			LocationList.append(warp)
 

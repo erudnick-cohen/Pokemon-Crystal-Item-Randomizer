@@ -935,7 +935,6 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 3F
-            - Rocket Invasion
         ItemReqs:
             - Card Key
         FlagReqs:
@@ -952,24 +951,6 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 3F Maybe Card Key
-            - Rocket Invasion
-        ItemReqs:
-            - Card Key
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-        
-    -
-        Name: Radio Tower 3F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs:
-            - Radio Tower 3F Maybe Card Key
-            - Rocket Invasion
         ItemReqs:
             - Card Key
         FlagReqs:

@@ -194,7 +194,7 @@ class Location:
 			 i.applyBanList(banList, allowList)
 
 
-	def applyWarpLogic(self):
+	def applyWarpLogic(self, flags):
 		# Remove standard requirements for warp randomisation
 		# At definition, if the original requirements are still possible even in Warp Rando, then a fork must be made
 		# e.g. Cianwood City can be warped to now, but can still be surfed from Olivine/Whirl Islands
@@ -218,7 +218,8 @@ class Location:
 			if len(newLoc) > 0:
 				self.LocationReqs = newLoc
 
-		#Temporary code
+
+
 		if self.Type == "Transition" or self.Type == "Starting Warp":
 			dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
 						  "Most Map Access", "Elite Four"]
@@ -235,8 +236,14 @@ class Location:
 			self.LocationReqs = newReqs
 
 
+		if self.Type == "Transition":
+			if "Fly Warps" in flags:
+				self.FlagReqs.append("Storm Badge")
+				self.ItemReqs.append("Fly")
+
+
 		for i in self.Sublocations:
-			i.applyWarpLogic()
+			i.applyWarpLogic(flags)
 
 	def applyModifiers(self, modifierDict):
 		list = [];

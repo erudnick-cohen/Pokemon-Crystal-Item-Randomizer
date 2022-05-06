@@ -163,6 +163,50 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Sweet Scent Girl
+        FileName: Route34IlexForestGate.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ilex Forest Back
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        NormalItem: TM_SWEET_SCENT
+        ReachableReqs:
+        WarpReqs: Ilex/Route 34 Gate
+        Code: |
+            Route34IlexForestGateTeacherScript:
+                faceplayer
+                opentext
+                checkevent EVENT_FOREST_IS_RESTLESS
+                iftrue .ForestIsRestless
+                checkevent EVENT_GOT_TM12_SWEET_SCENT
+                iftrue .GotSweetScent
+                writetext Route34IlexForestGateTeacherText
+                promptbutton
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_TM12_SWEET_SCENT
+            .GotSweetScent:
+                writetext Route34IlexForestGateTeacher_GotSweetScent
+                waitbutton
+            .NoRoom:
+                closetext
+                end
+        TrainerList:
+        Text: |
+            UnknownText_0x62df6:
+                text "It's ITEMNAME."
+                para "Use it wherever"
+                line "#MON appear."
+                para "#MON will be"
+                line "enticed by it."
+                done
+        Sublocations:
+
     -
         Name: Ilex Forest Back 
         FileName: IlexForest.asm
@@ -280,51 +324,7 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:        
-            -
-                Name: Sweet Scent Girl
-                FileName: Route34IlexForestGate.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ilex Forest Back 
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                NormalItem: TM_SWEET_SCENT
-                ReachableReqs:
-                WarpReqs: Ilex/Route 34 Gate
 
-                Code: |
-                    Route34IlexForestGateTeacherScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_FOREST_IS_RESTLESS
-                        iftrue .ForestIsRestless
-                        checkevent EVENT_GOT_TM12_SWEET_SCENT
-                        iftrue .GotSweetScent
-                        writetext Route34IlexForestGateTeacherText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoom
-                        setevent EVENT_GOT_TM12_SWEET_SCENT
-                    .GotSweetScent:
-                        writetext Route34IlexForestGateTeacher_GotSweetScent
-                        waitbutton
-                    .NoRoom:
-                        closetext
-                        end
-                Text: |
-                    UnknownText_0x62df6:
-                        text "It's ITEMNAME."
-
-                        para "Use it wherever"
-                        line "#MON appear."
-
-                        para "#MON will be"
-                        line "enticed by it."
-                        done
-                TrainerList: 
-                Sublocations:
             -
                 Name: Ilex Forest Hidden Ether
                 FileName: IlexForest.asm

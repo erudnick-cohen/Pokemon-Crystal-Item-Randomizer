@@ -34,6 +34,10 @@ def ResetRomForLabelling():
 	shutil.copy("Files with manual labels/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm")
 	shutil.copy("Files with manual labels/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm")
 	shutil.copy("Files with manual labels/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
+	shutil.copy("Files with manual labels/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm")
+	shutil.copy("Files with manual labels/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm")
+
+	#TODO: Add test here to ensure newly added files are not missed out!
 
 def WriteOakBadgeCheckNumber(number, addressData, gameFile):
 	#get where this is
