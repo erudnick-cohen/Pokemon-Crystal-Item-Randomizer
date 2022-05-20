@@ -241,6 +241,32 @@ class Location:
 				self.FlagReqs.append("Storm Badge")
 				self.ItemReqs.append("Fly")
 
+		# TODO: Is it possible to detect all ADDED flags for this purpose?
+		yes_flags = ["Warps", "Storm Badge", "Kanto Mode", "Hidden Items", "Berry Trees", "Timed Events"]
+		yes_items = ["Fly"]
+		if "Fly Warps" in flags:
+			fly_first = False
+			for f in self.FlagReqs:
+				if f not in yes_flags:
+					fly_first = True
+			for i in self.ItemReqs:
+				if i not in yes_items:
+					fly_first = True
+
+			if fly_first:
+				self.FlagReqs.append("Storm Badge")
+				self.ItemReqs.append("Fly")
+
+		#if "Fly Warps" in flags and len(self.FlagReqs) > 0:
+		#	print("Flags", self.Name, self.FlagReqs)
+		#	self.FlagReqs.append("Storm Badge")
+		#	self.ItemReqs.append("Fly")
+
+		#if "Fly Warps" in flags and len(self.ItemReqs) > 0:
+		#	print("Items", self.Name, self.FlagReqs)
+		#	self.FlagReqs.append("Storm Badge")
+		#	self.ItemReqs.append("Fly")
+
 
 		for i in self.Sublocations:
 			i.applyWarpLogic(flags)

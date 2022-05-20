@@ -173,7 +173,8 @@ def ConvertHintLevelToFlags(level, MaxHints=None):
     if level >= 4:
         Options.InHints = True
         Options.MaximumHints = 100
-        Options.TrashHints = True
+        Options.MaxHintsPerLocation = 99
+        #Options.TrashHints = True
 
     if level >= 5:
         Options.MaxHintsPerLocation = 99

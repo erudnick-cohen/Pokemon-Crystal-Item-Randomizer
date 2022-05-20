@@ -1,5 +1,5 @@
 Name: Extreme KIR+TMs+
-Description: Badges and all TM items shuffled into the pool.
+Description: Badges and all TM items shuffled into the pool, with warp modifiers
 BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
@@ -21,6 +21,8 @@ DefaultModifiers:
     - Modifiers/NerfHoOhChamber.yml
     - Modifiers/DerandomizeLeftovers.yml
     - Modifiers/NoEarlyBasement.yml
+    - Modifiers/Warps.yml
+    - Modifiers/NoProgressionFlyWarps.yml
 ProgressItems:
     - Surf
     - Squirtbottle

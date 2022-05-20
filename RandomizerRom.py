@@ -17,6 +17,17 @@ def ResetRom():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 
+def CountFilesInDirectory(dir):
+	count = 0
+	files = os.listdir(dir)
+	for f in files:
+		if os.path.isfile(dir+"/"+f):
+			count += 1
+		elif os.path.isdir(dir+"/"+f):
+			count += CountFilesInDirectory(dir+"/"+f)
+	return count
+
+
 def ResetRomForLabelling():
 	try:
 		shutil.rmtree("RandomizerRom")
@@ -24,18 +35,38 @@ def ResetRomForLabelling():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 	#next overwrite the files which need custom labels
-	for root, dir, files  in os.walk("Files with manual labels/maps"):
+
+	manual_dir = "Files with manual labels"
+
+	counted = CountFilesInDirectory(manual_dir)
+
+	manual_copy_files = []
+
+	for root, dir, files  in os.walk(manual_dir+"/maps"):
 		for file in files:
-			shutil.copy("Files with manual labels/maps/"+file,"RandomizerRom/maps/"+file)
-	for root, dir, files  in os.walk("Files with manual labels/engine"):
-		for file in files:
-			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
-	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
-	shutil.copy("Files with manual labels/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm")
-	shutil.copy("Files with manual labels/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm")
-	shutil.copy("Files with manual labels/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
-	shutil.copy("Files with manual labels/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm")
-	shutil.copy("Files with manual labels/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm")
+			map_file = (manual_dir+"/maps/"+file,"RandomizerRom/maps/"+file)
+			manual_copy_files.append(map_file)
+	for root, dir, files  in os.walk(manual_dir+"/engine"):
+		for engine in files:
+			engine_file = (manual_dir+"/engine/"+engine,"RandomizerRom/engine/"+engine)
+			manual_copy_files.append(engine_file)
+
+
+	manual_copy_files.append((manual_dir+"/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm"))
+	manual_copy_files.append((manual_dir+"/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm"))
+	manual_copy_files.append((manual_dir+"/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm"))
+	manual_copy_files.append((manual_dir+"/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm"))
+	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
+	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
+
+	if len(manual_copy_files) != counted:
+		print(len(manual_copy_files), counted)
+		print(manual_copy_files)
+		raise Exception("Unused file in folder")
+
+	for manual_file in manual_copy_files:
+		shutil.copy(manual_file[0], manual_file[1])
+
 
 	#TODO: Add test here to ensure newly added files are not missed out!
 

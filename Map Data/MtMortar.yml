@@ -487,7 +487,9 @@ Location:
                 LocationReqs:
                 FlagReqs:
                     - Warps
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 Code:

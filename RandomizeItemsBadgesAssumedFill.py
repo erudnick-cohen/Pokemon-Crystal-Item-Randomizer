@@ -208,6 +208,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
 					break
 
+				#if "Fly Warps" in inputFlags and (toAllocate == "Fly" or toAllocate == "Storm Badge"):
+					#current = locList[iter]
+
+					# Work out a way to get this to work?
+					# Limit items to only places with multiple warp access
+					# Note, need to handle parent items and location requirements?
+
+					#placeable = True
+
+
 				#is it the right type of location?
 				##print(locList[iter].Name)
 				##print(locList[iter].Type)

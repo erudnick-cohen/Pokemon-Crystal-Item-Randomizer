@@ -97,17 +97,30 @@ def LoadWarpData(locationList, flags):
 	return warpLocations
 
 
-def ImpossibleWarpRecursion(accessible_groups, l):
+def ImpossibleWarpRecursion(accessible_groups, l, force=False):
+	flags = []
 	dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
 				  "Most Map Access", "Elite Four"]
 
 	for l_s in l.Sublocations:
-		ImpossibleWarpRecursion(accessible_groups,l_s)
+		new_flags = ImpossibleWarpRecursion(accessible_groups,l_s,force)
+		for flag in new_flags:
+			flags.append(flag)
 
-	if l.WarpReqs is not None and len(l.WarpReqs) > 0 and l.WarpReqs[0] + WARP_OPTION not in accessible_groups and \
-			"Impossible" not in l.FlagReqs:
+	if force or (l.WarpReqs is not None and len(l.WarpReqs) > 0 and l.WarpReqs[0] + WARP_OPTION not in accessible_groups and \
+			"Impossible" not in l.FlagReqs):
 		l.FlagReqs.append("Impossible")
+		for flag in l.FlagsSet:
+			flags.append(flag)
 		print("Now impossible:", l.Name)
+
+		for l_s in l.Sublocations:
+			new_flags = ImpossibleWarpRecursion(accessible_groups, l_s, force=True)
+			for flag in new_flags:
+				if flag not in flags:
+					flags.append(flag)
+
+	return flags
 
 
 def isValidWarpDesc(warpData):
@@ -139,29 +152,32 @@ def isValidWarpDesc(warpData):
 	return True
 
 
-def AddLocation(location, accessible, flattened):
+def AddLocation(location, accessible, flattened, forbiddenFlags=[]):
 	accessible.append(location)
 	otherPossibilities = list(filter(lambda x: x.Type == "Transition" and \
 											   location in x.LocationReqs, flattened))
 	for o in otherPossibilities:
+		if HasForbiddenFlag(o, forbiddenFlags):
+			continue
+
 		if o.Name not in accessible:
-			AddLocation(o.Name, accessible, flattened)
+			AddLocation(o.Name, accessible, flattened, forbiddenFlags)
 
+def HasForbiddenFlag(location, forbiddenFlags):
+	hasForbiddenFlag = False
+	for f in forbiddenFlags:
+		if f in location.FlagReqs:
+			hasForbiddenFlag = True
+			break
 
+	return hasForbiddenFlag
 
-def CheckLocationData(warpLocations, locationList):
-	# Currently ignores crossover logic
-	# This is presently defined in Warp Data/WarpCrossoverData.yml
-	# These should be usable as standard locations but not for marking as 'impossible'
-
-	accessible_groups = ["New Bark"+WARP_OPTION,"Cherrygrove"+WARP_OPTION]
+def CycleWarps(warpLocations, flattened, forbiddenFlags=[]):
+	accessible_groups = ["New Bark" + WARP_OPTION, "Cherrygrove" + WARP_OPTION]
 	accessible_warp_data = []
-
-	flattened = FlattenLocationTree(locationList)
 
 	while True:
 		added_cycle = 0
-
 
 		for warp in warpLocations:
 			if not isValidWarpDesc(warp):
@@ -173,11 +189,10 @@ def CheckLocationData(warpLocations, locationList):
 			end = warp["End Warp Group"][1:-1] + WARP_OPTION
 
 			if start in accessible_groups:
-				#print("Add warp access:",start,end)
-
+				# print("Add warp access:",start,end)
 
 				if end not in accessible_groups:
-					AddLocation(end, accessible_groups, flattened)
+					AddLocation(end, accessible_groups, flattened, forbiddenFlags)
 					added_cycle += 1
 
 				if warp not in accessible_warp_data:
@@ -185,60 +200,94 @@ def CheckLocationData(warpLocations, locationList):
 					added_cycle += 1
 
 
-				# Add logic here to find all transitions from the currently added location
-
-
+			# Add logic here to find all transitions from the currently added location
 
 			else:
 				otherPossibilities = list(filter(lambda x: \
-					x.Name == start, flattened))
+													 x.Name == start, flattened))
 
-# TODO: Exclude any static flag requirements at this stage
-# For example, Slowpoke Well transition only working on Spinner WHY
+				# TODO: Exclude any static flag requirements at this stage
+				# For example, Slowpoke Well transition only working on Spinner WHY
 				for op in otherPossibilities:
+
+					if HasForbiddenFlag(op, forbiddenFlags):
+						continue
+
 					for lreq in op.LocationReqs:
 						if lreq in accessible_groups:
 							if op.Name not in accessible_groups:
-								#print("Add warp access2:", start,end)
-								AddLocation(start, accessible_groups, flattened)
-								AddLocation(end, accessible_groups, flattened)
-								added_cycle += 2
-							if warp not in accessible_warp_data:
-								accessible_warp_data.append(warp)
-								added_cycle += 1
-
-				withWarpReqs = list(filter(lambda x: \
-													 start_groupless in x.WarpReqs, flattened))
-
-				for w in withWarpReqs:
-					name = w.Name
-					withExactName = list(filter(lambda x: \
-												   x.Name == name, flattened))
-
-					# Exact name still needs to check for warp requirements
-					if len(withExactName) > 1:
-						nonWarpOption = False
-						for wen in withExactName:
-							if wen.WarpReqs is None or len(wen.WarpReqs) == 0:
-								nonWarpOption = True
-
-
-							if nonWarpOption and op.Name not in accessible_groups:
 								# print("Add warp access2:", start,end)
-								AddLocation(start, accessible_groups, flattened)
-								AddLocation(end, accessible_groups, flattened)
+								AddLocation(start, accessible_groups, flattened, forbiddenFlags)
+								AddLocation(end, accessible_groups, flattened, forbiddenFlags)
 								added_cycle += 2
 							if warp not in accessible_warp_data:
 								accessible_warp_data.append(warp)
 								added_cycle += 1
 
-						continue
+					withWarpReqs = list(filter(lambda x: \
+												   start_groupless in x.WarpReqs, flattened))
+
+					for w in withWarpReqs:
+						name = w.Name
+						withExactName = list(filter(lambda x: \
+														x.Name == name, flattened))
+
+						# Exact name still needs to check for warp requirements
+						if len(withExactName) > 1:
+							nonWarpOption = False
+							for wen in withExactName:
+								if wen.WarpReqs is None or len(wen.WarpReqs) == 0:
+									nonWarpOption = True
+
+								if nonWarpOption and op.Name not in accessible_groups:
+									# print("Add warp access2:", start,end)
+									AddLocation(start, accessible_groups, flattened, forbiddenFlags)
+									AddLocation(end, accessible_groups, flattened, forbiddenFlags)
+									added_cycle += 2
+								if warp not in accessible_warp_data:
+									accessible_warp_data.append(warp)
+									added_cycle += 1
+
+							continue
 
 		if added_cycle == 0:
 			break
 
+	return accessible_groups, accessible_warp_data
+
+
+def CheckLocationData(warpLocations, locationList):
+	# Currently ignores crossover logic
+	# This is presently defined in Warp Data/WarpCrossoverData.yml
+	# These should be usable as standard locations but not for marking as 'impossible'
+
+	flattened = FlattenLocationTree(locationList)
+	accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened)
+
+
+	probably_impossible_flags = []
+	actually_impossible_flags = []
+
 	for l in locationList:
-		ImpossibleWarpRecursion(accessible_groups, l)
+		new_i_flags = ImpossibleWarpRecursion(accessible_groups, l)
+		for i in new_i_flags:
+			probably_impossible_flags.append(i)
+
+	impossible_flags = False
+	for flag in probably_impossible_flags:
+		flagIsSet = list(filter(lambda x: flag in x.FlagsSet, locationList))
+		flagIsSetImpossible = list(filter(lambda x: "Impossible" in x.FlagReqs, flagIsSet))
+		if len(flagIsSet) == len(flagIsSetImpossible):
+			actually_impossible_flags.append(flag)
+			impossible_flags = True
+
+
+	if impossible_flags:
+		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened, forbiddenFlags=actually_impossible_flags)
+	# if flags impossible, repeat
+		for l in locationList:
+			ImpossibleWarpRecursion(accessible_groups, l)
+
 
 
 

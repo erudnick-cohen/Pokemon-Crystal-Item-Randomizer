@@ -244,7 +244,7 @@ def getWarpGroupData():
     warpGroupData = LoadLocationData.readTSVFile(warpFileLocation)
     return warpGroupData
 
-def interpretDataForRandomisedRom(file):
+def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
     json_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
     rom_file = file
     conf_file = "Warp Data/map_ids.conf"
@@ -355,7 +355,7 @@ def interpretDataForRandomisedRom(file):
 
         resulting_data.append(newObj)
 
-    output_warp_data_file = "Warp Data/generated-warp-output.tsv"
+    output_warp_data_file = "Warp Data/" + out_file
     out_file = open(output_warp_data_file, "w")
     out_file.write("Start Warp Name\tStart Warp Group\t->\tEnd Warp Name\tEnd Warp Group\n")
 
@@ -373,10 +373,10 @@ def interpretDataForRandomisedRom(file):
 # No step yet to run ruby script to generate the changed labels file
 
 # After processing, process with map ID is each warp, may be better to generate this at another stage
-interpretDataForMapIDs()
+#interpretDataForMapIDs()
 
 # Main function to eventually be called before each rom is generated
-interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/Crystal-Rand/Crystal-Rand-2/crystal-speedchoice.gbc")
+#interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/CrystalEtc/x")
 
 
 

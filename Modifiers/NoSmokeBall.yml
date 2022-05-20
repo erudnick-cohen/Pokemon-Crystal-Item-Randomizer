@@ -1,0 +1,7 @@
+Name: No Smoke Ball
+Description: Getting the vanilla Smoke Ball in the Goldenrod Underground is a nightmare. Remove it from logic.
+Changes:
+    -
+        Location: Goldenrod Tunnel Smoke Ball
+        AddFlagReqs:
+            - Impossible

@@ -1,3 +1,4 @@
+import GenerateWarpData
 import LoadLocationData
 import Badge
 import RandomizeFunctions
@@ -72,6 +73,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			dontReplace.extend(i['DontReplace'])
 	print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
+
+	if "Warps" in flags:
+		GenerateWarpData.interpretDataForRandomisedRom(romPath)
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
