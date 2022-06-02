@@ -46,7 +46,9 @@ def LoadWarpData(locationList, flags):
 	warpOutput = "Warp Data/warp-output.tsv"
 	warpTSV = readTSVFile(warpOutput)
 
-	accepted_warps = CheckLocationData(warpTSV, locationList)
+	# TODO add to this function to deal with warp requirement chaining
+	# Then pruning is done before the object creation below
+	accepted_warps, removed_items = CheckLocationData(warpTSV, locationList)
 
 	for data in accepted_warps:
 		fromGroupName = data["Start Warp Group"][1:-1]
@@ -83,8 +85,10 @@ def LoadWarpData(locationList, flags):
 			locationData["ItemReqs"].append("Flash")
 
 			if "Fly Warps" in flags:
-				locationData["FlagReqs"].append("Storm Badge")
-				locationData["ItemReqs"].append("Fly")
+				if "Storm Badge" not in locationData["FlagReqs"]:
+					locationData["FlagReqs"].append("Storm Badge")
+				if "Fly" not in locationData["ItemReqs"]:
+					locationData["ItemReqs"].append("Fly")
 
 
 		l = Location.Location(locationData)
@@ -94,18 +98,22 @@ def LoadWarpData(locationList, flags):
 	# TODO: Investigate methods to remove inaccessible warp locations
 	# Closed loops, etc, and mark as impossible
 
-	return warpLocations
+	return warpLocations, removed_items
 
 
-def ImpossibleWarpRecursion(accessible_groups, l, force=False):
+def ImpossibleWarpRecursion(accessible_groups, fullLocations, l, force=False):
 	flags = []
+	impossible = []
 	dontChange = ["8 Badges", "Rocket Invasion", "All Badges", "Woke Snorlax",
 				  "Most Map Access", "Elite Four"]
 
 	for l_s in l.Sublocations:
-		new_flags = ImpossibleWarpRecursion(accessible_groups,l_s,force)
+		new_flags, new_impossible = ImpossibleWarpRecursion(accessible_groups, fullLocations, l_s,force)
 		for flag in new_flags:
 			flags.append(flag)
+		for imp in new_impossible:
+			if imp not in impossible:
+				impossible.append(imp)
 
 	if force or (l.WarpReqs is not None and len(l.WarpReqs) > 0 and l.WarpReqs[0] + WARP_OPTION not in accessible_groups and \
 			"Impossible" not in l.FlagReqs):
@@ -113,18 +121,36 @@ def ImpossibleWarpRecursion(accessible_groups, l, force=False):
 		for flag in l.FlagsSet:
 			flags.append(flag)
 		print("Now impossible:", l.Name)
+		if l.IsItem or (type(l) == Gym.Gym):
+			impossible.append(l)
+
+		# This risks infinite recursion due to things with the same name
+		# As this is mostly a check for Gym objects
+		# Some strange factors with badges cause issues, so if name is badge, don't recurse
+		# TODO: Fix recursion issues with boat here due to inaccessibility loop!
+		if not type(l) == Gym.Gym and "Port" not in l.Name:
+			forcedLocations = list(filter(lambda x: l.Name in x.LocationReqs, fullLocations))
+			for location in forcedLocations:
+				new_impossible = ImpossibleWarpRecursion(accessible_groups, fullLocations, location, force=True)
+				for n_imp in new_impossible:
+					if n_imp not in impossible:
+						impossible.append(n_imp)
+
 
 		for l_s in l.Sublocations:
-			new_flags = ImpossibleWarpRecursion(accessible_groups, l_s, force=True)
+			new_flags, new_impossible = ImpossibleWarpRecursion(accessible_groups, fullLocations, l_s, force=True)
 			for flag in new_flags:
 				if flag not in flags:
 					flags.append(flag)
+			for imp in new_impossible:
+				if imp not in impossible:
+					impossible.append(imp)
 
-	return flags
+	return flags, impossible
 
 
 def isValidWarpDesc(warpData):
-	invalidWarps = ["x","X","null","NULL","", "Unused"]
+	invalidWarps = ["x","X","null","NULL","", "Unused", "Pokemon Center Upstairs"]
 
 	oneWayWarpInvalidation = ["Drop Point", "Drop Point 2"]
 
@@ -255,6 +281,102 @@ def CycleWarps(warpLocations, flattened, forbiddenFlags=[]):
 
 	return accessible_groups, accessible_warp_data
 
+# May cause issues with transitions!
+def purgeWarpBidirectional(warpLocations):
+	warpsRemoved = []
+	returnRemoved = []
+	reverseSkip = []
+	newWarp = True
+	while newWarp:
+		usages = {}
+		newWarp = False
+		warpBySourceAndDestination = {}
+		# Count the warps leading OUT of each warp element
+
+		for warpLocation in warpLocations:
+
+			if warpLocation in warpsRemoved:
+				continue
+
+			if warpLocation in returnRemoved:
+				continue
+
+			if warpLocation["Start Warp Group"] == warpLocation["End Warp Group"]:
+				warpsRemoved.append(warpLocation)
+				continue
+
+			warp_key = warpLocation["Start Warp Group"]
+			warp_end = warpLocation["End Warp Group"]
+			if warp_key not in usages:
+				usages[warp_key] = []
+
+			if (warp_key,warp_end) not in warpBySourceAndDestination:
+				warpBySourceAndDestination[(warp_key,warp_end)] = []
+
+
+			usages[warp_key].append(warpLocation)
+			warpBySourceAndDestination[(warp_key,warp_end)].append(warpLocation)
+
+		duplicateRouting = list(filter(lambda x: len(x[1]) > 1, warpBySourceAndDestination.items()))
+
+		if len(duplicateRouting) > 0:
+			newWarp = True
+			for dup in duplicateRouting:
+				dup_count = len(dup[1])
+				for i in range(1, dup_count):
+					remove_dup = dup[1][i]
+					warpsRemoved.append(remove_dup)
+
+		else:
+			singulars = list(filter(lambda x: len(x[1]) == 1, usages.items()))
+
+
+			inSingular = []
+			for s in singulars:
+				warpRemoveList = s[1]
+				for w in warpRemoveList:
+					inSingular.append(w)
+
+
+			for s in singulars:
+				warpRemoveList = s[1]
+				for w in warpRemoveList:
+
+					end_group = w["End Warp Group"]
+
+					has_return = list(filter(lambda x: x["Start Warp Group"] == end_group and
+								x["End Warp Group"] == s[0]
+
+								and x not in warpsRemoved and x not in returnRemoved
+								and x not in reverseSkip
+
+								,warpLocations))
+
+					ignore_count = 0
+					for hr in has_return:
+						if hr in inSingular:
+							ignore_count += 1
+							reverseSkip.append(hr)
+
+
+
+
+
+					if (len(has_return) - ignore_count) > 0:
+						newWarp = True
+						warpsRemoved.append(w)
+
+					for w in has_return:
+						returnRemoved.append(w)
+
+
+	return warpsRemoved
+
+
+
+
+
+
 
 def CheckLocationData(warpLocations, locationList):
 	# Currently ignores crossover logic
@@ -264,12 +386,16 @@ def CheckLocationData(warpLocations, locationList):
 	flattened = FlattenLocationTree(locationList)
 	accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened)
 
-
 	probably_impossible_flags = []
 	actually_impossible_flags = []
 
+	removed_warps = []
+
 	for l in locationList:
-		new_i_flags = ImpossibleWarpRecursion(accessible_groups, l)
+		new_i_flags, r_warps = ImpossibleWarpRecursion(accessible_groups, locationList, l)
+		for r_warp in r_warps:
+			if r_warp not in removed_warps:
+				removed_warps.append(r_warp)
 		for i in new_i_flags:
 			probably_impossible_flags.append(i)
 
@@ -286,13 +412,17 @@ def CheckLocationData(warpLocations, locationList):
 		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened, forbiddenFlags=actually_impossible_flags)
 	# if flags impossible, repeat
 		for l in locationList:
-			ImpossibleWarpRecursion(accessible_groups, l)
+			ignore, r_warps = ImpossibleWarpRecursion(accessible_groups, locationList,  l)
+			for r_warp in r_warps:
+				if r_warp not in removed_warps:
+					removed_warps.append(r_warp)
 
+	#toPurge = purgeWarpBidirectional(accessible_warp_data.copy())
+	#for purge in toPurge:
+	#	print("Purge:", purge)
+	#	accessible_warp_data.remove(purge)
 
-
-
-
-	return accessible_warp_data
+	return accessible_warp_data,removed_warps
 
 
 
@@ -320,10 +450,13 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 				#print(location["Name"])
 				try:
 					nLoc = Location.Location(location)
-					if "Warps" in flags:
-						nLoc.applyWarpLogic(flags)
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict)
+					if "Warps" in flags:
+						nLoc.applyWarpLogic(flags)
+						#warpModifications = list(filter(lambda x: "Warpie" in x.Name, modifierDict))
+						nLoc.applyModifiers(modifierDict)
+
 					LocationList.append(nLoc)
 					LocCountDict[nLoc.Name] = LocCountDict[nLoc.Name]+1
 				except Exception as inst:
@@ -352,8 +485,9 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					print("Failure in "+location["Name"])
 					raise(inst)
 
+	warp_removed_items = []
 	if "Warps" in flags:
-		warpData = LoadWarpData(LocationList, flags)
+		warpData, warp_removed_items = LoadWarpData(LocationList, flags)
 		for warp in warpData:
 			LocationList.append(warp)
 
@@ -363,7 +497,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 		
 	#print('NameCounts')
 	#print(LocCountDict)
-	return (LocationList,trashList)
+	return (LocationList,trashList,warp_removed_items)
 	
 def FlattenLocationTree(locations):
 	nList = []

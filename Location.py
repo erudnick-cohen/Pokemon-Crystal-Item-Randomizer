@@ -236,10 +236,12 @@ class Location:
 			self.LocationReqs = newReqs
 
 
-		if self.Type == "Transition":
+		if self.Type == "Transition" and len(self.FlagReqs) > 0 and len(self.ItemReqs) > 0:
 			if "Fly Warps" in flags:
-				self.FlagReqs.append("Storm Badge")
-				self.ItemReqs.append("Fly")
+				if "Storm Badge" not in self.FlagReqs:
+					self.FlagReqs.append("Storm Badge")
+				if "Fly" not in self.ItemReqs:
+					self.ItemReqs.append("Fly")
 
 		# TODO: Is it possible to detect all ADDED flags for this purpose?
 		yes_flags = ["Warps", "Storm Badge", "Kanto Mode", "Hidden Items", "Berry Trees", "Timed Events"]

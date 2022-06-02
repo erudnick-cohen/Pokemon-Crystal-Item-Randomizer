@@ -927,23 +927,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
-    -
-        Name: Radio Tower 3F Maybe Card Key
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs:
-            - Radio Tower 3F
-        ItemReqs:
-            - Card Key
-        FlagReqs:
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-        
+
     -
         Name: Radio Tower 3F
         FileName: CianwoodCity.asm
@@ -2444,7 +2428,7 @@ Location:
         Code:
         Text:
     -
-        Name: Vermilion Port Ticket
+        Name: Vermilion Port With Ticket
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2472,7 +2456,7 @@ Location:
         Text:
 
     -
-        Name: Olivine Port Ticket
+        Name: Olivine Port With Ticket
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2748,6 +2732,102 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: Route 35 Route
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermillion Gym Access
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermillion Gym Access
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermilion
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermillion Gym Access
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Vermillion Gym Access
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fuchsia City Back Entry
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Fuchsia
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fuchsia
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Fuchsia City Back Entry
         ItemReqs:
             - Cut
         FlagReqs:

@@ -25,6 +25,8 @@ def ReverseWarpLabels(label):
     MapY = entry_data[3]
     MapDestName = entry_data[4].replace("##","_")
     MapDestId = entry_data[5]
+    if MapDestId == "m":
+        MapDestId = -1
     Iterator = int(entry_data[6]) + 1
 
     return {
@@ -51,12 +53,12 @@ def warpEventToLabelNames(source,entry,i):
     if ";" in warp_dest_id_form:
         warp_dest_id_form = warp_dest_id_form[0:warp_dest_id_form.index(";")]# comment_handler
 
-
     warp_dest_id = warp_dest_id_form.strip()
 
-    #warp_event  2,  5, BLACKTHORN_GYM_1F, 5 ; hole
+    if int(warp_dest_id) == -1:
+        warp_dest_id = "m"
 
-    #.ckir_BEFOREAZALEATOWNGYMBADGE0BADGECODE::
+    #warp_event  2,  5, BLACKTHORN_GYM_1F, 5 ; hole
 
     before_label = base_label.\
         format(entry_key, "BEFORE", map_source, warp_x, warp_y, warp_dest, warp_dest_id, i)
@@ -78,11 +80,11 @@ def GenerateWarpLabels():
     # warp_event  1,  3, CELADON_DEPT_STORE_1F, -1
 
 
-    regex = "\s{0,}warp_event\s{1,}\d{1,},\s{1,}\d{1,},\s{0,}[a-zA-z_0-9]{1,},\s{0,}\d{1,}\s{0,}"
+    regex = "\s{0,}warp_event\s{1,}\d{1,},\s{1,}\d{1,},\s{0,}[a-zA-z_0-9]{1,},\s{1,}(\d|-){1,}\s{0,}"
     warp_data_match = re.compile(regex)
 
-    regex_minus = "\s{0,}warp_event\s{1,}\d{1,},\s{1,}\d{1,},\s{0,}[a-zA-z_0-9]{1,},\s{0,}-\d{1,}\s{0,}"
-    warp_data_minus_match = re.compile(regex_minus)
+    #regex_minus = "\s{0,}warp_event\s{1,}\d{1,},\s{1,}\d{1,},\s{0,}[a-zA-z_0-9]{1,},\s{0,}-\d{1,}\s{0,}"
+    #warp_data_minus_match = re.compile(regex_minus)
 
     for m in map_files:
         extension = m.split(".")[-1]
@@ -98,16 +100,7 @@ def GenerateWarpLabels():
 
         not_found = list(filter(lambda x: x not in warp_events,missed_warp_events))
         for n in not_found:
-            is_minus_match = warp_data_minus_match.match(n)
-
-            if not is_minus_match:
                 print("unknown", m, n)
-
-        #.cwri_BEFOREBLACKTHORN__GYM__2F_7_9_BLACKTHORN__GYM__1F_4_1::
-        #warp_event  7,  9, BLACKTHORN_GYM_1F, 4
-#.cwri_AFTERBLACKTHORN__GYM__2F_7_9_BLACKTHORN__GYM__1F_4_1::
-#.cwri_BEFOREBLACKTHORN__GYM__2F_2_5_BLACKTHORN__GYM__1F_5 ; hole_2::
- #       warp_event  2,  5, BLACKTHORN_GYM_1F, 5 ; hole
 
         change = False
         iterator = 0
@@ -287,6 +280,10 @@ def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
         if obj is None:
             print("None", label)
             continue
+
+        if obj["MapDestId"] == -1:
+            continue
+
         #print(obj)
 
         o_map = obj["MapName"]
@@ -333,7 +330,7 @@ def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
                                                  and x['X'] == str(dest_x) and x["Y"] == str(dest_y), group_data))
 
         if len(group_data_start) != 1 or len(group_data_end) != 1:
-            print("Incorrect number found")
+            #print("Incorrect number found", dest_map_name)
             continue
 
         if len(group_data_start[0]["Group"]) == 0:
@@ -376,7 +373,7 @@ def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
 #interpretDataForMapIDs()
 
 # Main function to eventually be called before each rom is generated
-#interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/CrystalEtc/x")
+#interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/CrystalWarpRando/out.gbc")
 
 
 

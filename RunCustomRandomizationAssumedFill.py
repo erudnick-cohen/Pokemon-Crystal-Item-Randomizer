@@ -15,9 +15,16 @@ import copy
 import traceback
 import random
 
-def handleBadSpoiler(result):
+def handleBadSpoiler(result, flags):
 	spoiler = result[1]
 	state = result[0]
+
+	if "Warps" in flags:
+		# Debugging points to be aware of, due to bad warp rom at this time
+		if "Victory Road Gate "+LoadLocationData.WARP_OPTION not in state:
+			pass
+		if "Oaks Lab "+LoadLocationData.WARP_OPTION not in state:
+			pass
 
 	if len(result) > 6:
 		remainingProgressItems = result[6]
@@ -29,6 +36,47 @@ def handleBadSpoiler(result):
 		s_value = spoiler[s]
 		if s_value not in state:
 			print("Cannot reach:",s, s_value)
+
+
+
+def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
+	if len(res_removed_items) > 0:
+		unreplaced_items = []
+
+		item_counter = {}
+		for i in trashItems:
+			if i not in item_counter:
+				item_counter[i] = 0
+			item_counter[i] += 1
+
+		for ind in range(0, len(res_removed_items)):
+			# TODO Add check to NOT remove critical trash or DO NOT REPLACE items
+			# Unless you HAVE to
+			remove = True
+			while remove:
+				remove = False
+				if len(trashItems) > 0:
+
+					# TODO Prioritse items that there are more of
+					# Given that they are not in don't replace
+
+					#inv_dict = {v: k for k, v in item_counter.items()}
+					#max_value = max(inv_dict.keys())
+
+					rm_index = random.randrange(0, len(trashItems)-1)
+					removing_item = trashItems[rm_index]
+					trashItems.remove(removing_item)
+					if removing_item in criticalTrash:
+						remove = True
+						unreplaced_items.append(removing_item)
+					elif removing_item in dontReplace:
+						remove = True
+						unreplaced_items.append(removing_item)
+				else:
+					removed_item = unreplaced_items.pop()
+		trashItems.extend(unreplaced_items)
+
+	return trashItems
 
 def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
 				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
@@ -155,6 +203,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		try:
 			res_items = fullLocationData[1].copy()
 			res_locations = fullLocationData[0].copy()
+			res_removed_items = fullLocationData[2].copy()
 			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
@@ -166,6 +215,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
+
+			# This is intended to remove warp trash to keep the item balance level
+			# At first, I assumed this was the issue with items not being placed
+			# This should be included for tidiniess, but leads to less roms being created
+			# TODO Add a configuration to use this checker to remove some items from the possible trash pool
+			if "Warps" in flags:
+				trashItems = removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items)
+
 			if 'BonusItems' in otherSettings or (len(newItems)+len(maybeNewItems)) > 0:
 				if 'BonusItems' in otherSettings:
 					bonusTrash = copy.copy(otherSettings['BonusItems'])
@@ -183,6 +240,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			#place bonus trash replacing non-critical trash
 			if 'TrashItemList' in otherSettings:
 				trashItems = copy.deepcopy(otherSettings['TrashItemList'])
+				if "Warps" in flags:
+					trashItems = removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items)
 				if 'ProgressItems' in otherSettings:
 					progressItems = copy.deepcopy(otherSettings['ProgressItems'])
 					progressItems.extend(addedProgressList)
@@ -208,7 +267,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rBadgeList.append(i)
 				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			if goal not in result[0]:
-				handleBadSpoiler(result)
+				handleBadSpoiler(result, flags)
 				print("bad run, retrying")
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')

@@ -214,48 +214,50 @@ Location:
                     - GRUNTM 17
                 WarpReqs: Generator Passage
                 Sublocations:
-                    -
-                        Name: Rocket Base 2F Thief TM
-                        FileName: TeamRocketBaseB2F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Rocket Base 3F Admin
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: TM_THIEF
-                        Code: |
-                            TeamRocketBaseB2FTMThief:
-                                ITEMLINE
-                        Text:
-                        TrainerList: 
-                        Sublocations:
-                        WarpReqs: Thief Room
-                    -
-                        Name: Rocket Base Hidden Full Heal
-                        FileName: TeamRocketBaseB2F.asm
-                        SecondaryFile: TeamRocketBaseB2F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Rocket Base 2F
-                        FlagReqs:
-                            - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: FULL_HEAL
-                        Code: |
-                            TeamRocketBaseB2FHiddenFullHeal:
-                                ITEMLINE
-                        SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
-                        Text:
-                        TrainerList: 
-                        Sublocations:
-                        WarpReqs: Rocket Base B2F
+
+            -
+                Name: Rocket Base Hidden Full Heal
+                FileName: TeamRocketBaseB2F.asm
+                SecondaryFile: TeamRocketBaseB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rocket Base 2F
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    TeamRocketBaseB2FHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Rocket Base B2F
+            -
+                Name: Rocket Base 2F Thief TM
+                FileName: TeamRocketBaseB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rocket Base 3F Admin
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_THIEF
+                Code: |
+                    TeamRocketBaseB2FTMThief:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Thief Room
+
             -
 
                 Name: Rocket Base 3F Hall

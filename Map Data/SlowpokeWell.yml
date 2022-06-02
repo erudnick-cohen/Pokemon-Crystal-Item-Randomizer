@@ -106,9 +106,7 @@ Location:
         WildTableList: SLOWPOKE_WELL_B2F
         LocationReqs:  Slowpoke Well Floor 2 Access
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code:

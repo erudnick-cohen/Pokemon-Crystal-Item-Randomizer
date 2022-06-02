@@ -665,6 +665,7 @@ Location:
                             - Elite Four
                         FlagReqs:
                         ItemReqs:
+                            - Rainbow Wing
                         FlagsSet:
                             - Encounted Ho-Oh
                         ReachableReqs:

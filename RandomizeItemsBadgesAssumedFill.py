@@ -22,6 +22,108 @@ def findAllSilverUnlocks(req, locList):
 
 	return newFind
 
+# Function should be made recurisve
+# So if a dead end is somewhere in a chain, it is also removed
+def pruneWarpRequirementsTree(requirementsDict, start_element=None, previous_name=None, known=[]):
+	toPrune = []
+	partial_prunes = []
+
+
+
+	if start_element is None:
+		for req in requirementsDict.items():
+			req_key = req[0]
+			newPrune, newPartial = pruneWarpRequirementsTree(requirementsDict, req_key, None, known)
+
+			toPrune.extend(newPrune)
+
+			continue
+
+			# for path in l:
+			# 	if len(path) == 1:
+			# 		path_element = path[0]
+			# 		if path_element.endswith(LoadLocationData.WARP_OPTION):
+			# 			confirm = requirementsDict[path_element]
+			# 			if len(confirm) == 1:
+			# 				confirm_path = confirm[0]
+			# 				if len(confirm_path) == 1:
+			# 					confirm_element = confirm_path[0]
+			# 					if confirm_element == key:
+			# 						print("Should prune:", key, path)
+			# 						toPrune.append((key, path))
+	else:
+
+		if start_element in known:
+			return toPrune, partial_prunes
+
+		known.append(start_element)
+
+
+		if not start_element.endswith(LoadLocationData.WARP_OPTION):
+			return toPrune, partial_prunes
+
+		pathsHere = requirementsDict[start_element]
+
+		if len(pathsHere) == 0:
+			return toPrune, partial_prunes
+
+		duplicate_check = []
+		for path in pathsHere:
+			if path == start_element:
+				print("to pruneA:", start_element, path)
+				toPrune.append((start_element, path))
+			elif path not in duplicate_check:
+				duplicate_check.append(path)
+			else:
+				print("to pruneB:", start_element, path)
+				toPrune.append((start_element, path))
+				toPrune.append((start_element, path))
+
+		path_translation = {}
+		index = 0
+		for path in duplicate_check:
+			skipped = 0
+			for element in path:
+				if not element.endswith(LoadLocationData.WARP_OPTION):
+					pass
+				elif element == previous_name:
+					skipped += 1
+				else:
+					newPrunes, newPartialPrunes = pruneWarpRequirementsTree(requirementsDict, element, start_element, known)
+					path_translation[index] = (newPrunes, newPartialPrunes)
+
+					# TODO implement recursive cases
+
+			if skipped == len(path):
+				partial_prunes.append((start_element, path))
+
+			index += 1
+
+		for p in path_translation.items():
+			yes_prune = p[1][0]
+			maybe_prune = p[1][1]
+			for y in yes_prune:
+				if y != []:
+					toPrune.append(y)
+
+			for m in maybe_prune:
+				print("maybe?", m)
+
+
+
+
+
+
+
+
+	if start_element is None:
+		for prune in toPrune:
+			requirementsDict[prune[0]].remove(prune[1])
+		return requirementsDict
+	else:
+		return toPrune, partial_prunes
+
+
 def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 	
@@ -74,6 +176,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#build the initial requirements mappings
 	allReqsList = copy.copy(progressSet)
 	itemCount = 0
+	single_flags_set = []
+	flags_with_path = []
+
 	for i in locList:
 		#baseline requirements
 		#allReqs = i.LocationReqs+i.FlagReqs+i.itemReqs
@@ -84,8 +189,43 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		for j in sorted(i.FlagsSet):
 			requirementsDict[j].append(allReqs)
 			flagList.append(j)
+			if j in flags_with_path:
+				pass
+			elif j in single_flags_set:
+				single_flags_set.remove(j)
+				flags_with_path.append(j)
+			else:
+				single_flags_set.append(j)
+
 		if i.Type == 'Item':
 			itemCount = itemCount+1
+
+
+	# If Warps enabled, prune the requirements tree
+	# This would be to remove issues with large locations
+	# For example, Goldenrod Store has many access points
+	# The iteration here will pick a random path
+	# If a dead-end, it will fail immediately as only route to if from there
+
+	#if "Warps" in inputFlags:
+		#pruneWarpRequirementsTree(requirementsDict)
+
+
+	# Store flags set in a single location and forcibly update
+	# All instances of that flag with its requirements
+	# To resolve a placement issue
+	# e.g. Dragons Den Entrance requiring Strength due to flag changes
+
+	# However, working out the way to do this is complex
+	# Especially as those location requirements would also need updating
+	# Is there a better way to do this?
+
+	#for flag in single_flags_set:
+		#affected = list(filter(lambda x: flag in x,requirementsDict.iteritems()))
+		# do updating
+	#	pass
+
+
 	#print('Total number of items: '+str(itemCount))
 	E4Badges = random.sample(badgeSet,8)
 	#print('E4Badges')
@@ -114,16 +254,30 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	for i in coreProgress:
 		progressList.remove(i)
 	progressList = progressList+coreProgress
+
+
 	if 'Allocate Badges First' in inputFlags:
-		for i in coreProgress:
+		addEnd = []
+		for i in progressList:
 			if 'Badge' in i:
-				progressList.remove(i)
-				progressList.append(i)
+				addEnd.append(i)
+		for i in addEnd:
+			progressList.remove(i)
+			progressList.append(i)
+
+
 				
 	#put surf at the front of the list because with badges being shuffled, there is otherwise an abnormal bias towards early surf
 	progressList.remove('Surf')
 	progressList.append('Surf')
 	#print(progressList)
+
+	if "Fly Warps" in inputFlags:
+		progressList.remove('Fly')
+		progressList.remove('Storm Badge')
+		progressList.append('Storm Badge')
+		progressList.append('Fly')
+
 	
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
@@ -158,10 +312,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#progressList.reverse()
 	#print(progressList)
 	while len(progressList) > 0 and maxIter > 0:
+
+		print("iter=",maxIter, "pl:", len(progressList), progressList)
+
 		maxIter = maxIter - 1
 		valid = False
 		iter = 0
 		retryPasses = 4
+
 		#determine type of location to allocate based of progress list
 		allocationType = 'Item'
 		#if progressList[-1] in progressItems:
@@ -169,6 +327,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		#else:
 		#	allocationType = 'Gym'
 		#	toAllocate = progressList[-1] #If its a badge, we always force the allocation of THAT badge
+
+		#LocationList = list(filter(lambda x: x.Type != "Map" and x.Type != "Transition"), locList)
+
 		while not valid and iter < len(locList) and retryPasses > 0 and len(progressList) > 0:
 			#sub item allocation loop, so that locations are at least randomly given items they can actually have
 			allocated = False
@@ -206,7 +367,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					placeable = False
 
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
+					iter += 1
 					break
+
+				# Should these Impossible items be pruned earlier?
+				warpImpossibleCheck = requirementsDict[locList[iter]]
+				impossible_paths = 0
+				for path in warpImpossibleCheck:
+					path_is_impossible = "Impossible" in path
+					if path_is_impossible:
+						impossible_paths +=1
+
+				if impossible_paths > 0 and impossible_paths >= len(warpImpossibleCheck):
+					iter += 1
+					break
+
+
+
 
 				#if "Fly Warps" in inputFlags and (toAllocate == "Fly" or toAllocate == "Storm Badge"):
 					#current = locList[iter]
@@ -230,6 +407,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					oldDepsList = []
 					newDeps = allDepsList
 					addedList = [locList[iter].Name]
+					failedOnList = []
 					revReqDict = defaultdict(lambda: [])
 					while oldDepsList != allDepsList and legal:
 						oldDepsList = allDepsList
@@ -254,28 +432,48 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 										#print('trying potential path:')
 										#print(k)
 
+										# Tiny optimisation, break out of path if contains the item to be allocated in the path
+										# Previously, continued through each step in the path requirements
+										if toAllocate in k:
+											continue
+
 										kTrue = True
 
 										for l in k:
-											kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
-											kTrue = kTrue and (l not in revReqDict[j]) and toAllocate not in k
+											#print("Check element l in k", l)
+											#kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
+											#if not kTrue:
+											#	print("Debug: A")
+											kTrue = kTrue and (l not in revReqDict[j])
+											#if not kTrue:
+											#	print("Debug: B")
 											lTrueOr = len(requirementsDict[l]) == 0
 											for m in requirementsDict[l]:
 												lTrueOr = lTrueOr or toAllocate not in m
 											kTrue = kTrue and lTrueOr
+											#if not kTrue:
+											#	print("Debug: C")
 											#also make sure the location doesn't literally require it
 											kTrue = kTrue and l != toAllocate
+											#if not kTrue:
+											#	print("Debug: D")
 											#also make sure its not impossible
 											kTrue = kTrue and l != 'Impossible'
+											#if not kTrue:
+											#	print("Debug: E")
 											#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
 											if(len(requirementsDict[l]) != 0):
 												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0])
+											#	if not kTrue:
+											#		print("Debug: F")
 											if not lTrueOr:
 												1+1
 												#print('False because '+l+' requires:')
 												#print(requirementsDict[l])
 											#if a flag we don't have is needed, we can't use that path
 											kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
+											#if not kTrue:
+											#	print("Debug: G")
 											if (l in usedFlagsList and l not in inputFlags):
 												1+1
 												#print('False because the needed flag '+ l +' is not set')
@@ -308,6 +506,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											#print(revReqDict)
 									else:
 										legal = False
+										failedOnList.append(paths)
 										#this is not a legal item location! because it involves a tautology!
 										#print('Illegal tautology:')
 										#print(paths)
@@ -338,7 +537,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 									newDeps.append(k)
 
 							previousDep = j
+						#print("Decided dependencies:", newDeps)
 						allDepsList.extend(newDeps)
+						#print("New dependencies:", allDepsList)
+						#print("")
+
 						#print('Expanded dependencies of '+locList[iter].Name+' to:')
 						#print(allDepsList)
 						newDeps = []
