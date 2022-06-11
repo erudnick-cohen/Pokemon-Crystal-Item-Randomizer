@@ -80,7 +80,8 @@ def LoadWarpData(locationList, flags):
 
 
 
-		if len(list(filter(lambda x: x in fromGroupName,darkWarpGroups))) > 0:
+		if "No Flash" not in flags and\
+				len(list(filter(lambda x: x in fromGroupName,darkWarpGroups))) > 0:
 			locationData["FlagReqs"].append("Zephyr Badge")
 			locationData["ItemReqs"].append("Flash")
 
@@ -89,7 +90,6 @@ def LoadWarpData(locationList, flags):
 					locationData["FlagReqs"].append("Storm Badge")
 				if "Fly" not in locationData["ItemReqs"]:
 					locationData["ItemReqs"].append("Fly")
-
 
 		l = Location.Location(locationData)
 
@@ -116,11 +116,11 @@ def ImpossibleWarpRecursion(accessible_groups, fullLocations, l, force=False):
 				impossible.append(imp)
 
 	if force or (l.WarpReqs is not None and len(l.WarpReqs) > 0 and l.WarpReqs[0] + WARP_OPTION not in accessible_groups and \
-			"Impossible" not in l.FlagReqs):
-		l.FlagReqs.append("Impossible")
+			"Unreachable" not in l.FlagReqs):
+		l.FlagReqs.append("Unreachable")
 		for flag in l.FlagsSet:
 			flags.append(flag)
-		print("Now impossible:", l.Name)
+		print("Now Unreachable:", l.Name)
 		if l.IsItem or (type(l) == Gym.Gym):
 			impossible.append(l)
 
@@ -128,7 +128,7 @@ def ImpossibleWarpRecursion(accessible_groups, fullLocations, l, force=False):
 		# As this is mostly a check for Gym objects
 		# Some strange factors with badges cause issues, so if name is badge, don't recurse
 		# TODO: Fix recursion issues with boat here due to inaccessibility loop!
-		if not type(l) == Gym.Gym and "Port" not in l.Name:
+		if not type(l) == Gym.Gym and "Port" not in l.Name and "Route 18" not in l.Name:
 			forcedLocations = list(filter(lambda x: l.Name in x.LocationReqs, fullLocations))
 			for location in forcedLocations:
 				new_impossible = ImpossibleWarpRecursion(accessible_groups, fullLocations, location, force=True)
@@ -402,7 +402,7 @@ def CheckLocationData(warpLocations, locationList):
 	impossible_flags = False
 	for flag in probably_impossible_flags:
 		flagIsSet = list(filter(lambda x: flag in x.FlagsSet, locationList))
-		flagIsSetImpossible = list(filter(lambda x: "Impossible" in x.FlagReqs, flagIsSet))
+		flagIsSetImpossible = list(filter(lambda x: "Unreachable" in x.FlagReqs, flagIsSet))
 		if len(flagIsSet) == len(flagIsSetImpossible):
 			actually_impossible_flags.append(flag)
 			impossible_flags = True
@@ -451,11 +451,12 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 				try:
 					nLoc = Location.Location(location)
 					nLoc.applyBanList(banList,allowList)
-					nLoc.applyModifiers(modifierDict)
+					nLoc.applyModifiers(modifierDict, flags)
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)
 						#warpModifications = list(filter(lambda x: "Warpie" in x.Name, modifierDict))
-						nLoc.applyModifiers(modifierDict)
+						nLoc.applyModifiers(modifierDict, flags)
+
 
 					LocationList.append(nLoc)
 					LocCountDict[nLoc.Name] = LocCountDict[nLoc.Name]+1
@@ -478,7 +479,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)
 					nLoc.applyBanList(banList,allowList)
-					nLoc.applyModifiers(modifierDict)
+					nLoc.applyModifiers(modifierDict, flags)
 					LocationList.append(nLoc)
 				except Exception as inst:
 					print("-----------")

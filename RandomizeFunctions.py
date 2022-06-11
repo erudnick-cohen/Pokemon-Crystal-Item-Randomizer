@@ -1,3 +1,4 @@
+import csv
 import json
 import math
 import random
@@ -219,8 +220,11 @@ def HandleItemReplacement(reachable, inputFlags):
 
     containsAny = checkIfReplacementsConfigured(inputFlags)
 
+    #item_replacement_file = "Config/ItemReplacementChoatix.json"
+    item_replacement_file = "Config/ItemReplacement.json"
+
     if containsAny:
-        item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
+        item_replacement = open(item_replacement_file,encoding='utf-8')
         replacements = item_replacement.read()
         replacement_data = json.loads(replacements)
         replacementFile = {}
@@ -237,7 +241,9 @@ def HandleItemReplacement(reachable, inputFlags):
 
             useReplacement = FlagCheckType(replacement_type, inputFlags)
             if useReplacement:
-                replacementFile[replacement_item_name] = (replacement_replacement, replacement_percent)
+                if not replacement_item_name in replacementFile:
+                    replacementFile[replacement_item_name] = []
+                replacementFile[replacement_item_name].append((replacement_replacement, replacement_percent))
 
     if 'Delete Fly' in inputFlags:
         if replacementFile is None:
@@ -259,15 +265,20 @@ def HandleItemReplacement(reachable, inputFlags):
 def ReplaceItem(item, replaceFile):
     replaced = False
     if item.isItem():
-        for i in replaceFile.keys():
-            if item.item == i:
-                replacement = replaceFile[item.item]
-                item_chance = replacement[1]
+        while item.item in replaceFile:
+            replace_cycle = False
+            possibilities = replaceFile[item.item]
+            random.shuffle(possibilities)
+            for p in possibilities:
+                item_chance = p[1]
                 if item_chance >= random.random() * 100:
-                    item.item = replacement[0]
+                    item.item = p[0]
                     replaced = True
-                else:
+                    replace_cycle = True
                     break
+            if not replace_cycle:
+                break
+
     return replaced
 
 
@@ -277,7 +288,7 @@ def IterateRequirements(location, locations, known, partial_known=[]):
     addedItem = []
 
     for req in location.LocationReqs:
-        if req == "Impossible":
+        if req == "Impossible" or req == "Unreachable" or req == "Banned":
             continue
         reqData = list(filter(lambda x: x.Name == req, locations))
         if len(reqData) == 0:
@@ -1016,7 +1027,7 @@ def removeRedundantHints(hints, hintConfig, locationData):
                 if 'Mt. Silver Unlock' in flags:
                     hintsToRemove.append(hint)
                     continue
-                if 'Impossible' in flags:
+                if 'Impossible' in flags or "Banned" in flags or "Unreachable" in flags:
                     hintsToRemove.append(hint)
                     continue
 
@@ -1144,7 +1155,7 @@ def GetItemChildren(location, locations, handled):
 
     handled[location.Name] = (items,flags,new_locations)
 
-    if "Impossible" in location.FlagReqs:
+    if "Impossible" in location.FlagReqs or "Banned" in location.FlagReqs or "Unreachable" in location.FlagReqs:
         return items,flags,new_locations
 
     if location.IsItem or location.IsGym:
@@ -1349,7 +1360,9 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
         else:
             found_result = result[0]
 
-            if "Impossible" in found_result.LocationReqs:
+            if "Impossible" in found_result.LocationReqs or\
+                "Banned" in found_result.LocationReqs or\
+                "Unreachable" in found_result.LocationReqs:
                 continue
 
             found_result.UpdateTags()
@@ -1607,3 +1620,104 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     # Reverse lookup some key items and see which are not required
 
     return itemToReq, locationList
+
+class Item:
+    Name = ""
+    Price = 0
+    HoldType = None
+    Parameter = None
+    Property = None
+    Pocket = None
+    Field = None
+    Battle = None
+
+class RandomItemProcessor:
+
+    itemsList = []
+    dontReplace = []
+
+    def readAttributesFile(self, file):
+        items = []
+        attr_file = open(file)
+        lines = attr_file.readlines()
+        attr_file.close()
+        start=False
+        item_name=True
+        currentObj = None
+        for line in lines:
+            line = line.strip()
+            if start:
+                if line == "; entries correspond to item ids":
+                    continue
+                if item_name:
+                    name = line[2:]
+                    item_name = False
+                    currentObj = Item()
+                    currentObj.Name = name
+                else:
+                    sp = line.split(",")
+                    maybe_price = sp[0].replace("item_attribute","").strip()
+
+                    if maybe_price.startswith("$"):
+                        maybe_price = 0
+
+                    currentObj.Price = int(maybe_price)
+                    currentObj.Pocket = sp[4].strip()
+
+                    items.append(currentObj)
+                    currentObj = None
+                    item_name = True
+            else:
+                if line == "ItemAttributes:":
+                    start = True
+                    item_name = True
+
+        return items
+
+    def replaceRenames(self):
+        # Handle TMs if you like
+        for item in self.itemsList:
+            if item.Name == "BLACKBELT_I":
+                item.Name = "BLACKBELT"
+
+    def limitItems(self, itemObjects):
+        notTheseItems = ["BRICK_PIECE","SILVER_LEAF","GOLD_LEAF"]
+        data = open("Data/BannedItems")
+        banned_items = []
+        for l in data.readlines():
+            banned_items.append(l.strip().upper())
+        data.close()
+        return list(filter(lambda x:
+            x.Price > 0 and x.Pocket != "KEY_ITEM" and x.Pocket != "TM_HM"
+                           and x.Name not in notTheseItems
+                           and x.Name not in banned_items
+            ,itemObjects))
+
+    def __init__(self, dontReplace=[]):
+        self.itemsTest = []
+        self.dontReplace = dontReplace
+        with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
+            reader = csv.reader(csvfile)
+            for i in reader:
+                if (len(i) > 0):
+                    self.itemsTest.append(i[0])
+
+        items = self.readAttributesFile("Data/attributes.asm")
+        self.itemsList = self.limitItems(items)
+
+        self.replaceRenames()
+
+        for item in self.itemsList:
+            if item.Name not in self.itemsTest:
+                print("Error with item:",item.Name)
+
+        return
+
+    def GetRandomItem(self,normal_item=None,bad_allowed=True):
+        if normal_item is not None and normal_item in self.dontReplace:
+            return normal_item
+
+        if normal_item == "Leftovers":
+            return normal_item
+
+        return random.choice(self.itemsList).Name

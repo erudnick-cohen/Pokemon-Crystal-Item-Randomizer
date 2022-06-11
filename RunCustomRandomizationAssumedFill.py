@@ -63,7 +63,7 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 					#inv_dict = {v: k for k, v in item_counter.items()}
 					#max_value = max(inv_dict.keys())
 
-					rm_index = random.randrange(0, len(trashItems)-1)
+					rm_index = random.randrange(0, len(trashItems))
 					removing_item = trashItems[rm_index]
 					trashItems.remove(removing_item)
 					if removing_item in criticalTrash:
@@ -124,6 +124,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 	if "Warps" in flags:
 		GenerateWarpData.interpretDataForRandomisedRom(romPath)
+
+	if "Start With Bike" in flags:
+		requiredItemsCopy.remove("Bicycle")
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
@@ -265,7 +268,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				rBadgeList = []
 				for i in BadgeDict:
 					rBadgeList.append(i)
-				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
 			if goal not in result[0]:
 				handleBadSpoiler(result, flags)
 				print("bad run, retrying")

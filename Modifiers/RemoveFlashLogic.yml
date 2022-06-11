@@ -1,0 +1,10 @@
+Name: Remove Flash Logic
+Description: Remove logic for Flash, meaning player may need to traverse through areas in the dark without other modifiers.
+FlagsSet:
+    - No Flash
+    - Always Flash
+Changes:
+    -
+        Location: Ruins of Alph Light Chamber Access
+        NewFlagReqs:
+            - Always Flash

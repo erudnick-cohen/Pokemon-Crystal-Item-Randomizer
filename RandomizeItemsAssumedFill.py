@@ -207,10 +207,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											#also make sure the location doesn't literally require it
 											kTrue = kTrue and l != toAllocate
 											#also make sure its not impossible
-											kTrue = kTrue and l != 'Impossible'
-											#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
+											kTrue = kTrue and (l != 'Impossible' and l != "Banned" and l != "Unreachable")
+															   #also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
 											if(len(requirementsDict[l]) != 0):
-												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0])
+												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0] or
+																	   'Banned' in requirementsDict[l][0] or
+																	   'Unreachable' in requirementsDict[l][0])
 											if not lTrueOr:
 												1+1
 												#print('False because '+l+' requires:')
@@ -252,7 +254,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								else:
 									jReqs = sorted(requirementsDict[j][0])
 									#no impossible paths
-									if 'Impossible' in jReqs:
+									if 'Impossible' in jReqs or 'Banned' in jReqs or 'Unreachable' in jReqs:
 										legal = False
 										#print('but its impossible!')
 									else:
@@ -279,7 +281,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
 						#print(set(allDepsList).intersection(set(usedFlagsList)))
 					#Impossible locations are illegal
-					if("Impossible" in allDepsList):
+					if("Impossible" in allDepsList or "Banned" in allDepsList or "Unreachable" in allDepsList):
 						legal = False
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
 						loc = locList.pop(iter)

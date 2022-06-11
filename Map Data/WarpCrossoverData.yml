@@ -197,12 +197,12 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Seafoam
+        LocationReqs: Seafoam Gym Entrance
         ItemReqs:
             - Surf
         FlagsSet:
         FlagReqs:
-            - Defeated Blaine
+            - Accessed Route 20
             - Fog Badge
         ReachableReqs:
         WildTableList:
@@ -210,7 +210,7 @@ Location:
         Text:
 
     -
-        Name: Seafoam
+        Name: Seafoam Gym Entrance
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -219,7 +219,7 @@ Location:
             - Surf
         FlagsSet:
         FlagReqs:
-            - Defeated Blaine
+            - Accessed Route 20
             - Fog Badge
         ReachableReqs:
         WildTableList:
@@ -929,12 +929,12 @@ Location:
         Text:
 
     -
-        Name: Radio Tower 3F
+        Name: Radio Tower 3F Maybe Card Key
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
         LocationReqs:
-            - Radio Tower 3F Maybe Card Key
+            - Radio Tower 3F
         ItemReqs:
             - Card Key
         FlagReqs:
@@ -2037,7 +2037,7 @@ Location:
         LocationReqs: Goldenrod Rocket Corner Block
         ItemReqs:
         FlagReqs:
-            - Rocket Invasion
+            - Beat Team Rocket
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2052,7 +2052,7 @@ Location:
         LocationReqs: Goldenrod Rocket Block North
         ItemReqs:
         FlagReqs:
-            - Rocket Invasion
+            - Beat Team Rocket
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2067,7 +2067,7 @@ Location:
         LocationReqs: Goldenrod
         ItemReqs:
         FlagReqs:
-            - Rocket Invasion
+            - Beat Team Rocket
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2082,7 +2082,7 @@ Location:
         LocationReqs: Goldenrod
         ItemReqs:
         FlagReqs:
-            - Rocket Invasion
+            - Beat Team Rocket
         FlagsSet:
         ReachableReqs:
         WildTableList:

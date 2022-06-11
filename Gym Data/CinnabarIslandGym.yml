@@ -10,7 +10,6 @@ Location:
             - Kanto Mode
         ItemReqs:
         FlagsSet:
-            - Defeated Blaine
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:

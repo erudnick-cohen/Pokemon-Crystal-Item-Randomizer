@@ -1,23 +1,4 @@
 Location:
-
-    -
-        Name: Route 9 Entrance
-        FileName: Route9.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList:
-        LocationReqs:
-        FlagReqs:
-            - Warps
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        AREALV: 32
-        TrainerList:
-        WarpReqs: Route 9 Route
-        Sublocations:
     -
         Name: Route 9 Entrance
         FileName: Route9.asm

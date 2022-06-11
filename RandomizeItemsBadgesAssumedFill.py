@@ -124,7 +124,11 @@ def pruneWarpRequirementsTree(requirementsDict, start_element=None, previous_nam
 		return toPrune, partial_prunes
 
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
+				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
+				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
+				   plandoPlacements = {},
+				   dontReplace = []):
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 	
 	random.seed(seed)
@@ -162,8 +166,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	progressList = random.sample(progressList, k=len(progressList))
 	coreProgress = random.sample(coreProgress, k=len(coreProgress))
 	trashItems = random.sample(trashItems, k=len(trashItems))
-
-
 
 	#build spoiler
 	spoiler = {}
@@ -374,7 +376,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				warpImpossibleCheck = requirementsDict[locList[iter]]
 				impossible_paths = 0
 				for path in warpImpossibleCheck:
-					path_is_impossible = "Impossible" in path
+					path_is_impossible = ("Impossible" in path) or ("Unreachable" in path) or ("Banned" in path)
 					if path_is_impossible:
 						impossible_paths +=1
 
@@ -458,12 +460,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											#if not kTrue:
 											#	print("Debug: D")
 											#also make sure its not impossible
-											kTrue = kTrue and l != 'Impossible'
+											kTrue = kTrue and l != 'Impossible' and l != "Banned" and l != "Unreachable"
 											#if not kTrue:
 											#	print("Debug: E")
 											#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
 											if(len(requirementsDict[l]) != 0):
-												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0])
+												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0] or\
+																	   'Banned' in requirementsDict[l][0] or\
+																	   'Unreachable' in requirementsDict[l][0])
 											#	if not kTrue:
 											#		print("Debug: F")
 											if not lTrueOr:
@@ -524,7 +528,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 										#	legal = False
 
 									#no impossible paths
-									if 'Impossible' in jReqs:
+									if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
 										legal = False
 										#print('but its impossible!')
 									else:
@@ -557,7 +561,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
 						#print(set(allDepsList).intersection(set(usedFlagsList)))
 					#Impossible locations are illegal
-					if("Impossible" in allDepsList):
+					if("Impossible" in allDepsList or "Banned" in jReqs or "Unreachable" in jReqs):
 						legal = False
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
 						loc = locList.pop(iter)
@@ -601,6 +605,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	#print('----')
 
+	# This should be moved to prevent it running on each attempt through!
+	if "RandomiseItems" in inputFlags:
+		handles = list(filter(lambda x: len(x.Handles) > 0, locList))
+		for handle in handles:
+			if "ImpossibleRandomise" in handle.Handles and "Impossible" in handle.FlagReqs:
+				specialFlagName = handle.Name
+				toHandle = list(filter(lambda x: specialFlagName in x.FlagReqs, locList))
+				for h in toHandle:
+					h.FlagReqs.append("ImpossibleRandomise")
+
+	if "RandomiseItems" in inputFlags:
+		item_processor = RandomizeFunctions.RandomItemProcessor(dontReplace)
+	else:
+		item_processor = None
+
+
+
 	#traverse seed to both confirm beatability, allocate "trash" items and determine location distances
 	#define the set of active initial locations to consider
 	rodList = ['OLD_ROD','GOOD_ROD','SUPER_ROD']
@@ -612,18 +633,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				trashItems[i] = rodList.pop()
 		#print('---')
 		#print(trashItems)
-	activeLoc = copy.copy(locationTree)
+
+	# Due to changes to items, such as becoming items from banlist, do deep copy?
+	activeLoc = copy.deepcopy(locationTree)
 	goalReached = False
 	randomizerFailed = False
 	#Initially we have no badges
 	nBadges = 0
 	#define the dict of currently accesible locations
 	reachable = {}
+
 	#define max distance of each badge
 	maxBadgeDist = 0
 	state = defaultdict(lambda: False)
 	#set initial flags
 	for i in inputFlags:
+		if i == "Replace Bike":
+			state["Bicycle"] = True
 		state[i] = True
 	#if unsafe plando, put everything from the plando in
 	if 'unsafePlando' in inputFlags:
@@ -635,6 +661,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	stuckCount = 0
 	trashSpoiler = {}
 	stage = 0
+
+	addAfter = []
+	randomizedExtra = {}
+
 	while not goalReached and not randomizerFailed:
 		stage += 1
 		#track if we're stuck
@@ -698,7 +728,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 						if i.item == "WATER_STONE" or i.item == "ESCAPE_ROPE":
 							state[i.item.replace("_"," ").title()] = True
-						#print('Placing '+i.item +' in '+i.Name)
+						# Do this to ensure items are all overwritable with other requirements
+						# Even if the item is trash
+						elif i.item == "Red Scale" or i.item == "Mystery Egg" or i.item == "Rainbow Wing" or\
+							i.item == "COIN_CASE" or i.item == "BLUE_CARD" or i.item == "ITEMFINDER":
+								state[i.item] = True
+
+
 					else:
 						state[i.item] = True
 						stateDist[i.item] = max(stateDist[i.item],stateDist[i.Name])
@@ -726,6 +762,25 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						if(nBadges == 16):
 							state['All Badges'] = True
 							stateDist['All Badges'] = maxBadgeDist
+				elif "RandomiseItems" in inputFlags and i.Banned and i.wasItem():
+					i.item = item_processor.GetRandomItem(i.NormalItem)
+					i.IsItem = True
+					i.Type = "Item"
+					randomizedExtra[i.Name] = i.item
+			elif "Warps" in inputFlags and "Unreachable" in i.FlagReqs and i.Name not in reachable and i not in addAfter:
+				if i.isItem() or i.isGym() or i.wasItem():
+					i.item = "BRICK_PIECE"
+					addAfter.append(i)
+				else:
+					activeLoc.extend(i.Sublocations)
+			elif "ImpossibleRandomise" in i.FlagReqs\
+				and i.Name not in reachable and i not in addAfter:
+				if (i.isItem() or i.isGym() or i.wasItem()):
+					i.item = item_processor.GetRandomItem(i.NormalItem)
+					addAfter.append(i)
+				else:
+					activeLoc.extend(i.Sublocations)
+
 		if(stuckCount == 4):
 			randomizerFailed = True
 			for j in activeLoc:
@@ -746,22 +801,50 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 			raise Exception('Did not match plando placements!!!')
 
+	for item in addAfter:
+		if item.wasItem():
+			item.IsItem = True
+			item.Type = 'Item'
+			reachable[item.Name] = item
+			randomizedExtra[item.Name] = item.item
+
+	# TODO: Handle any items deemed not possible to reach even after all remaining processing
+	# Preferably all to one item to make this obvious to find/identify bugs
+
+	remainingItems = True
+	while "RandomiseItems" in inputFlags and remainingItems:
+		remainingItems = False
+		for i in activeLoc:
+			if i.Name not in reachable and (i.isItem() or i.isGym() or i.wasItem()) \
+					and "Impossible" not in i.FlagReqs:
+				remainingItems = True
+				activeLoc.extend(i.Sublocations)
+				i.item = "SILVER_LEAF"
+				i.IsItem = True
+				i.Type = "Item"
+				reachable[i.Name] = i
+				randomizedExtra[i.Name] = i.item
+				print(i.Name,"now","Silver Leaf")
+
+
+
 	#Activate delete fly if needed
-		if('Delete Fly' in inputFlags):
-			for i in reachable.values():
-				if i.isItem():
-					#print(i.Name)
-					#print('item is: '+str(i.item))
-					if i.item == 'Fly':
-						#print('deleted fly')
-						i.item = 'BERRY'
+	if('Delete Fly' in inputFlags):
+		for i in reachable.values():
+			if i.isItem():
+				#print(i.Name)
+				#print('item is: '+str(i.item))
+				if i.item == 'Fly':
+					#print('deleted fly')
+					i.item = 'BERRY'
 
 	changes = RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
-
 
 	for change in changes.keys():
 		if change in trashSpoiler:
 			trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]
+		if change in randomizedExtra:
+			randomizedExtra[change] = randomizedExtra[change] + "->" + changes[change]
 
 	#if len(trashItems) > 0 and not randomizerFailed:
 		#print(len(trashItems), trashItems)
@@ -773,4 +856,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('remaining')
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList, randomizedExtra)

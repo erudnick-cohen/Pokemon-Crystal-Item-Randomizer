@@ -183,10 +183,10 @@ ROUTE_18	2	7	ROUTE_17_ROUTE_18_GATE	9	5	Fuchsia	Route 18 to Route 17 Gate Entran
 ROUTE_17	17	82	ROUTE_17_ROUTE_18_GATE	0	4	Cycling Road	Route 17 to Route 18 Gate Entrance
 ROUTE_17	17	83	ROUTE_17_ROUTE_18_GATE	0	5	Cycling Road	Route 17 to Route 18 Gate Entrance 2
 ROUTE_16	3	1	ROUTE_16_FUCHSIA_SPEECH_HOUSE	2	7	Celadon Cut North	ROUTE_16_FUCHSIA_SPEECH_HOUSE Entrance
-ROUTE_16	14	6	ROUTE_16_GATE	9	4	Cycling Road	Route 16 to Celadon Gate Entrance
-ROUTE_16	14	7	ROUTE_16_GATE	9	5	Cycling Road	Route 16 to Celadon Gate Entrance 2
-ROUTE_16	9	6	ROUTE_16_GATE	0	4	Celadon	Celadon to Route 16 Gate Entrance
-ROUTE_16	9	7	ROUTE_16_GATE	0	5	Celadon	Celadon to Route 16 Gate Entrance 2
+ROUTE_16	14	6	ROUTE_16_GATE	9	4	Celadon	Celadon to Route 16 Gate Entrance
+ROUTE_16	14	7	ROUTE_16_GATE	9	5	Celadon	Celadon to Route 16 Gate Entrance 2
+ROUTE_16	9	6	ROUTE_16_GATE	0	4	Cycling Road	Route 16 to Celadon Gate Entrance
+ROUTE_16	9	7	ROUTE_16_GATE	0	5	Cycling Road	Route 16 to Celadon Gate Entrance 2
 CELADON_CITY	4	9	CELADON_DEPT_STORE_1F	7	7	Celadon	CELADON_DEPT_STORE_1F Entrance
 CELADON_CITY	16	9	CELADON_MANSION_1F	6	9	Celadon	Celadon Mansion Front  Entrance
 CELADON_CITY	16	3	CELADON_MANSION_1F	3	0	Celadon	Celadon Mansion Back Entrance
@@ -1126,8 +1126,8 @@ CELADON_GAME_CORNER_PRIZE_ROOM	2	5	CELADON_CITY	23	19	Celadon Prize Corner	CELAD
 CELADON_GAME_CORNER_PRIZE_ROOM	3	5	CELADON_CITY	23	19	Celadon Prize Corner	CELADON_GAME_CORNER_PRIZE_ROOM Exit 2
 CELADON_GYM	4	17	CELADON_CITY	10	29	Celadon Gym	CELADON_GYM Exit
 CELADON_GYM	5	17	CELADON_CITY	10	29	Celadon Gym	CELADON_GYM Exit 2
-CELADON_CAFE	6	7	CELADON_CITY	25	29	Celadon Caf?	CELADON_CAFE Exit
-CELADON_CAFE	7	7	CELADON_CITY	25	29	Celadon Caf?	CELADON_CAFE Exit 2
+CELADON_CAFE	6	7	CELADON_CITY	25	29	Celadon Cafe	CELADON_CAFE Exit
+CELADON_CAFE	7	7	CELADON_CITY	25	29	Celadon Cafe	CELADON_CAFE Exit 2
 ROUTE_16_FUCHSIA_SPEECH_HOUSE	2	7	ROUTE_16	3	1	Route 16 Hidden House	Route 16 Hidden House Exit
 ROUTE_16_FUCHSIA_SPEECH_HOUSE	3	7	ROUTE_16	3	1	Route 16 Hidden House	Route 16 Hidden House Exit 2
 ROUTE_16_GATE	0	4	ROUTE_16	9	6	Celadon/Cycling Road Gate West	Celadon to Route 16 Gate Exit

@@ -28,8 +28,10 @@ class Location:
 			self.OtherName = None
 		self.FileName = yamlTree["FileName"]
 		self.IsItem = yamlTree["Type"]=="Item"
+		self.WasItem = False
 		self.Type = yamlTree["Type"]
 		self.item = None
+		self.Handles = []
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this
 		if("NormalItem" in yamlTree):
@@ -169,6 +171,10 @@ class Location:
 	#returns if this is an item or not
 	def isItem(self):
 		return self.IsItem
+
+	# returns if this is an item or not
+	def wasItem(self):
+		return self.WasItem
 	
 	#return if this is a gym or not
 	#Gym class overloads this to return true
@@ -181,6 +187,7 @@ class Location:
 			print('Banning '+self.Name)
 			if(self.isItem()):
 				self.IsItem = False
+				self.WasItem = True
 				self.Type = 'Map'
 				self.Banned = True
 			else:
@@ -189,7 +196,7 @@ class Location:
 				#note that this only functions for the BANLIST
 				#for the allow list, it will still be available because that would be tedious and defeating the entire point of the allow list
 				if(not self.isGym() and (not (banList is None) and self.Name in banList)):
-					self.FlagReqs.append('Impossible')
+					self.FlagReqs.append('Banned')
 		for i in self.Sublocations:
 			 i.applyBanList(banList, allowList)
 
@@ -273,7 +280,7 @@ class Location:
 		for i in self.Sublocations:
 			i.applyWarpLogic(flags)
 
-	def applyModifiers(self, modifierDict):
+	def applyModifiers(self, modifierDict, flags):
 		list = [];
 		if(self.Name in modifierDict):
 			#print('Modifying '+self.Name)
@@ -323,8 +330,23 @@ class Location:
 					for x in toRemove:
 						if x in self.LocationReqs:
 							self.LocationReqs.remove(x)
+				if 'AddHandle' in j:
+					toAdd = j["AddHandle"]
+					for x in toAdd:
+						if x not in self.Handles:
+							self.Handles.append(x)
+
+		if "No Flash" in flags:
+			if "Zephyr Badge" in self.FlagReqs and "Flash" in self.ItemReqs and \
+					"Always Flash" not in self.FlagReqs:
+				self.FlagReqs.remove("Zephyr Badge")
+				self.ItemReqs.remove("Flash")
+		if "Start With Bike" in flags:
+			if "Bicycle" in self.ItemReqs:
+				self.ItemReqs.remove("Bicycle")
+
 		for i in self.Sublocations:
-			 i.applyModifiers(modifierDict)
+			 i.applyModifiers(modifierDict, flags)
 	
 	#get all trash items in this locations tree
 	def getTrashItemList(self, flags,labelling = False):

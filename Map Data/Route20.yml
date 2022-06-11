@@ -71,7 +71,7 @@ Location:
         HasPKMN: No
         LocationReqs: Fuchsia City
         FlagReqs:
-            - Defeated Blaine
+            - Accessed Route 20
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -123,4 +123,5 @@ Location:
         Sublocations:
         FlagReqs:
         FlagsSet:
+            - Accessed Route 20
         

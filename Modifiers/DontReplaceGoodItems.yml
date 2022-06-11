@@ -57,3 +57,6 @@ DontReplace:
     - MAX_ELIXER
     - MAX_POTION
     - MAX_REVIVE
+    - RARE_CANDY
+    - ESCAPE_ROPE
+    - LEFTOVERS

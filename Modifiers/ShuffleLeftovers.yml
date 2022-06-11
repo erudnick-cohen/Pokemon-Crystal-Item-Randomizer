@@ -5,4 +5,5 @@ FlagsSet:
 Changes:
     -
         Location: Celadon Cafe Leftovers
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Impossible
