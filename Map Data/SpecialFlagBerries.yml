@@ -8,7 +8,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Berry Trees
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:

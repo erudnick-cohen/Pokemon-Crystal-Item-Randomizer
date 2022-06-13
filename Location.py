@@ -377,6 +377,7 @@ class Location:
 		#if this item isn't included, then don't use it as an item location
 		elif not labelling and self.isItem():
 			self.Type = 'Map'
+			self.WasItem = True
 			self.IsItem = False
 		return list
 

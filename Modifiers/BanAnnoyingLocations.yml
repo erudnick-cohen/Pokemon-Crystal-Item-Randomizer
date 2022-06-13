@@ -6,57 +6,57 @@ Changes:
         NewLocationReqs: 
             - Union Cave
             - VS Ho-Oh
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 4
         NewLocationReqs:
             - Route 3 and Mt. Moon
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Elm SS Ticket
         NewLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Rainbow Wing Gift
         AddLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Clair TM Banned
         NewLocationReqs:
             - Dragons Den Shrine
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Dragon Fang
         NewLocationReqs:
             - Dragons Den Shrine
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Max Elixer
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Max Elixer
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Calcium
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Max Potion
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Revive
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 27 Solar Beam TM
         NewLocationReqs:
             - Tohjo Falls Over the Waterfall
-            - Mt. Silver Unlock
+            - Red

@@ -219,6 +219,8 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Hidden Machine Part":
 					WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
+				if i.Name == "Celadon Cafe Leftovers":
+					WriteMachinePartToRomMemory(i, addressData, codeLookup, gameFile)
 		elif i.isGym():
 			WriteBadgeToRomMemory(i,addressData,gymOffsets,gameFile)
 

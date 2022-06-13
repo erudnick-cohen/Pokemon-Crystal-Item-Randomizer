@@ -233,7 +233,7 @@ def getMapLookupForById(addressData):
     return res
 
 def getWarpGroupData():
-    warpFileLocation = "Warp Data/W3.tsv"
+    warpFileLocation = "Warp Data/WarpFriendlyNames.tsv"
     warpGroupData = LoadLocationData.readTSVFile(warpFileLocation)
     return warpGroupData
 

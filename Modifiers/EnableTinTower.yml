@@ -7,10 +7,10 @@ AddedItems:
     - Rainbow Wing
 Changes:
     -
-        Location: Ruins of Alph Ho Oh Chamber
-        NewFlagReqs:
-            - Fog Badge
+        Location: Ruins of Alph Ho Oh Chamber Access
+        RemoveFlagReqs:
+            - Banned
     -
         Location: Tin Tower
         RemoveFlagReqs:
-            - Impossible
+            - Banned

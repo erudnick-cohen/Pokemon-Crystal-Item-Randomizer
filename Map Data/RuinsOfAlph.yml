@@ -586,7 +586,7 @@ Location:
                 FlagReqs:
                     - Fog Badge
                     - Encounted Ho-Oh
-                    - Impossible
+                    - Banned
                 ItemReqs:
                     - Surf
                 FlagsSet:

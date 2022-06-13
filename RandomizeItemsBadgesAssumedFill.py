@@ -7,16 +7,19 @@ import time
 import RandomizeFunctions
 
 
-def findAllSilverUnlocks(req, locList):
+def findAllSilverUnlocks(req, locList, handled=[]):
 	#req = "Mt. Silver Outside"
 	newFind = []
 	findSilverItems = list(filter(lambda x: req in x.LocationReqs, locList))
 	for findSilver in findSilverItems:
+		if findSilver in handled:
+			continue
+		handled.append(findSilver)
 		if findSilver.Type == "Item":
 			newFind.append(findSilver)
 		# TODO: Investigate adding Transition as well as fixing warp issues
 		elif findSilver.Type == "Map":
-			newFinds = findAllSilverUnlocks(findSilver.Name, locList)
+			newFinds = findAllSilverUnlocks(findSilver.Name, locList, handled)
 			for find in newFinds:
 				newFind.append(find)
 
@@ -385,18 +388,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					break
 
 
-
-
-				#if "Fly Warps" in inputFlags and (toAllocate == "Fly" or toAllocate == "Storm Badge"):
-					#current = locList[iter]
-
-					# Work out a way to get this to work?
-					# Limit items to only places with multiple warp access
-					# Note, need to handle parent items and location requirements?
-
-					#placeable = True
-
-
 				#is it the right type of location?
 				##print(locList[iter].Name)
 				##print(locList[iter].Type)
@@ -414,6 +405,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					while oldDepsList != allDepsList and legal:
 						oldDepsList = allDepsList
 						for j in newDeps:
+							# Break out before continuing if item is locked to Red due to modifiers
+							if "Red" in newDeps:
+								legal = False
+								break
+
 							jReqs = []
 							if(len(requirementsDict[j])>0):
 								#print('Choosing non-tautological path for '+j)
@@ -609,7 +605,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	if "RandomiseItems" in inputFlags:
 		handles = list(filter(lambda x: len(x.Handles) > 0, locList))
 		for handle in handles:
-			if "ImpossibleRandomise" in handle.Handles and "Impossible" in handle.FlagReqs:
+			if "ImpossibleRandomise" in handle.Handles and "Banned" in handle.FlagReqs:
 				specialFlagName = handle.Name
 				toHandle = list(filter(lambda x: specialFlagName in x.FlagReqs, locList))
 				for h in toHandle:
@@ -762,7 +758,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						if(nBadges == 16):
 							state['All Badges'] = True
 							stateDist['All Badges'] = maxBadgeDist
-				elif "RandomiseItems" in inputFlags and i.Banned and i.wasItem():
+				elif "RandomiseItems" in inputFlags and i.Banned and \
+						(i.wasItem() or i.isItem()) \
+						and "Impossible" not in i.FlagReqs:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 					i.IsItem = True
 					i.Type = "Item"
@@ -774,7 +772,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				else:
 					activeLoc.extend(i.Sublocations)
 			elif "ImpossibleRandomise" in i.FlagReqs\
-				and i.Name not in reachable and i not in addAfter:
+				and i.Name not in reachable and i not in addAfter and \
+				"Impossible" not in i.FlagReqs:
 				if (i.isItem() or i.isGym() or i.wasItem()):
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 					addAfter.append(i)
@@ -802,7 +801,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			raise Exception('Did not match plando placements!!!')
 
 	for item in addAfter:
-		if item.wasItem():
+		if item.wasItem() or item.isItem():
 			item.IsItem = True
 			item.Type = 'Item'
 			reachable[item.Name] = item
@@ -816,7 +815,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		remainingItems = False
 		for i in activeLoc:
 			if i.Name not in reachable and (i.isItem() or i.isGym() or i.wasItem()) \
-					and "Impossible" not in i.FlagReqs:
+					and "Impossible" not in i.FlagReqs: # Impossible means NEVER overwrite
+														# e.g. Not randomising Pokegear
 				remainingItems = True
 				activeLoc.extend(i.Sublocations)
 				i.item = "SILVER_LEAF"

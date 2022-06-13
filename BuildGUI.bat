@@ -1,5 +1,16 @@
-"C:\Users\Eliot\AppData\Local\Programs\Python\Python36-32\Scripts\pyuic5.exe" QTGUIDesign.ui -o RandomizerGUI.py
-pyinstaller --windowed --noconsole --clean --noconfirm --clean --win-private-assemblies --onefile RunGUIBuild.spec
+pyuic5.exe QTGUIDesign.ui -o RandomizerGUI.py
+if errorlevel 1 (
+   echo Failure Reason Given is %errorlevel%
+   exit /b %errorlevel%
+)
+
+pyinstaller RunGUIBuild.spec
+if errorlevel 1 (
+   echo Failure Reason Given is %errorlevel%
+   exit /b %errorlevel%
+)
+
+rm "Warp Data/warp-output.tsv"
 rm -r "dist/Pokemon Crystal Item Randomizer"
 rename "dist/RunGUI" "Pokemon Crystal Item Randomizer"
 echo F|Xcopy "crystal-speedchoice-label-details.json" "dist/Pokemon Crystal Item Randomizer/crystal-speedchoice-label-details.json" /i /y
@@ -11,9 +22,11 @@ echo F|Xcopy "FullItemRandomizer.rnqs" "dist/Pokemon Crystal Item Randomizer/Ful
 echo F|Xcopy "README.md" "dist/Pokemon Crystal Item Randomizer/README.txt" /i /y
 echo F|Xcopy "RandomizerConfig.yml" "dist/Pokemon Crystal Item Randomizer/RandomizerConfig.yml" /i /y
 echo F|Xcopy "ItemDescriptions.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
-echo F|Xcopy "ItemDescriptions.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
-echo F|Xcopy "Config/SignData.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
 
+::echo F|Xcopy "Config/SignData.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
+
+Xcopy "Data" "dist/Pokemon Crystal Item Randomizer/Data" /i /y
+Xcopy "Warp Data" "dist/Pokemon Crystal Item Randomizer/Warp Data" /i /y
 Xcopy "Gym Data" "dist/Pokemon Crystal Item Randomizer/Gym Data" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
 Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y

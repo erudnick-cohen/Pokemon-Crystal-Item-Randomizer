@@ -6,90 +6,90 @@ Changes:
         NewLocationReqs: 
             - Union Cave
             - VS Ho-Oh
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 4
         NewLocationReqs:
             - Route 3 and Mt. Moon
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Elm SS Ticket
         NewLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Rainbow Wing Gift
         AddLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Clair TM Banned
         NewLocationReqs:
             - Dragons Den Shrine
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Dragon Fang
         NewLocationReqs:
             - Dragons Den Shrine
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Max Elixer
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Max Elixer
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Calcium
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Max Potion
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Dragons Den Hidden Revive
         NewLocationReqs:
             - Dragons Den
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 27 Solar Beam TM
         NewLocationReqs:
             - Tohjo Falls Over the Waterfall
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Elm Master Ball
         NewLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Elm Aide Pokeballs
         NewLocationReqs:
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Radio Tower Rockets Part 1
         NewLocationReqs:
             - Goldenrod City Entrance
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 25 Nugget
         NewLocationReqs:
             - Route 25
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Route 25 Protein
         NewLocationReqs:
             - Route 25
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Secret Potion Man
         NewLocationReqs:
             - Route 41
-            - Mt. Silver Unlock
+            - Red
     -
         Location: Soft Sand Girls
         NewLocationReqs:
             - Route 34
-            - Mt. Silver Unlock
+            - Red

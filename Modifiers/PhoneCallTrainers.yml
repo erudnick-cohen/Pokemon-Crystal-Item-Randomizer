@@ -10,4 +10,5 @@ NewGamePatches:
 Changes:
     -
         Location: Phone Call Trainers
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned

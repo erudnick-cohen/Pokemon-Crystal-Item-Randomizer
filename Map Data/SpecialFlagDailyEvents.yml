@@ -7,7 +7,7 @@ Location:
         WildTableList:
         LocationReqs:
         FlagReqs:
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:

@@ -7,4 +7,5 @@ NewGamePatches:
 Changes:
     -
         Location: Mon Locked Checks
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned

@@ -31,8 +31,8 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
-                    - Bicycle
                 ItemReqs:
+                    - Bicycle
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER
@@ -53,8 +53,8 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
-                    - Bicycle
                 ItemReqs:
+                    - Bicycle
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ELIXER

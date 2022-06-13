@@ -8,7 +8,7 @@ Location:
         LocationReqs:
             - Hidden Items Locked
         FlagReqs:
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:

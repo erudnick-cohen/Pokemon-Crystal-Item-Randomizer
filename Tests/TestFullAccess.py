@@ -64,7 +64,9 @@ for location in locationList:
 		permittedExclusion = True
 	if 'Warps' in location.FlagReqs and "Warps" not in settings["FlagsSet"]:
 		permittedExclusion = True
-	if 'Impossible' in location.LocationReqs:
+	if 'Impossible' in location.LocationReqs \
+		or 'Banned' in location.LocationReqs \
+		or 'Unreachable' in location.LocationReqs:
 		permittedExclusion = True
 
 

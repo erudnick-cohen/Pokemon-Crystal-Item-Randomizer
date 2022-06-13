@@ -65,7 +65,7 @@ Location:
             - Tin Tower Access
         WildTableList: 
         FlagReqs:
-            - Impossible
+            - Banned
         ItemReqs:
             - Clear Bell
         FlagsSet:

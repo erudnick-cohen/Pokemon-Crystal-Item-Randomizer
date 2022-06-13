@@ -62,6 +62,7 @@ Location:
                 LocationReqs: Cherrygrove City
                 FlagReqs:
                     - Pointless Checks
+                    - Impossible
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ENGINE_MAP_CARD

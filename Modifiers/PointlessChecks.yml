@@ -5,4 +5,9 @@ FlagsSet:
 Changes:
     -
         Location: Pointless Checks
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned
+    -
+        Location: Map Card
+        RemoveFlagReqs:
+            - Impossible

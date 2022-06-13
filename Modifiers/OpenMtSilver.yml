@@ -7,7 +7,8 @@ FlagsSet:
 Changes:
     -
         Location: Open Mt. Silver
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned
     -
         Location: Mt. Silver Unlock A
         NewFlagReqs:
@@ -32,3 +33,5 @@ Changes:
         Location: Red
         AddFlagReqs:
             - All Badges
+        RemoveLocationReqs:
+            - Elite Four

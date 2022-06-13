@@ -5,4 +5,5 @@ FlagsSet:
 Changes:
     -
         Location: Berry Trees
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned
