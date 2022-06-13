@@ -208,7 +208,7 @@ Location:
                     Type: Item
                     HasPKMN: No
                     WildTableList:
-                    LocationReqs: Rock Tunnel North Exit
+                    LocationReqs: Rock Tunnel North
                     FlagReqs:
                         - Hidden Items
                         - Zephyr Badge

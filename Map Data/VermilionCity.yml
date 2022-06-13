@@ -36,7 +36,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermilion via SS Aqua
+        LocationReqs: Vermilion City via SS Aqua
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -48,7 +48,7 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermilion via SS Aqua
+        Name: Vermilion City via SS Aqua
         FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
