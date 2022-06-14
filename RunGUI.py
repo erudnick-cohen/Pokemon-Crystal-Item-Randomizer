@@ -123,18 +123,22 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
 				f.write(rngSeed)
+
+			# Fix issue with flags NOT resetting on running a second rom!
+			# This will be appended to by modifiers, so ensure a copy is made, not the original!
+			flagSettings = self.settings["FlagsSet"].copy()
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
 					result = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
 									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'],
 									 otherSettings = self.settings, plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
 					result = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
 									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'], otherSettings = self.settings,
@@ -142,7 +146,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			else:
 				if 'CoreProgress' in self.settings:
 					result = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
 									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
@@ -150,7 +154,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
 					result = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, self.settings['FlagsSet'],patches,
+						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
 									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,

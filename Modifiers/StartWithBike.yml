@@ -2,3 +2,5 @@ Name: Start With Bike
 Description: Remove Bike from randomiser. Assumes 'Starts with Bike' is enabled.
 FlagsSet:
     - Start With Bike
+AddedTrash:
+    - RARE_CANDY

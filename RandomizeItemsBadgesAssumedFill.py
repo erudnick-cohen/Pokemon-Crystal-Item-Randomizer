@@ -661,6 +661,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	addAfter = []
 	randomizedExtra = {}
 
+	allocatedCount = 0
+
 	while not goalReached and not randomizerFailed:
 		stage += 1
 		#track if we're stuck
@@ -696,6 +698,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#if its an item, put an item in it
 				#double checks items to write due to bizzare bug observed only once
 				if(i.isItem() or i.isGym()):
+					allocatedCount += 1
 					#print("IsReplace", i.Name)
 					if(not i.Name in spoiler.values()):
 						if i.Name in plandoPlacements:
@@ -711,24 +714,26 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								placeItem = trashItems.pop()
 							except Exception as e:
 								print(e)
-								raise e;
+								i.item = "GOLD_LEAF"
+								addAfter.append(i)
 							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):
 								oldItem = placeItem
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 							i.item = placeItem
 						#print("Trash", i.Name, i.item)
-						trashSpoiler[i.Name] = i.item
-						i.IsGym = False
-						i.IsItem = True
+						if i.item != "GOLD_LEAF":
+							trashSpoiler[i.Name] = i.item
+							i.IsGym = False
+							i.IsItem = True
 
-						if i.item == "WATER_STONE" or i.item == "ESCAPE_ROPE":
-							state[i.item.replace("_"," ").title()] = True
-						# Do this to ensure items are all overwritable with other requirements
-						# Even if the item is trash
-						elif i.item == "Red Scale" or i.item == "Mystery Egg" or i.item == "Rainbow Wing" or\
-							i.item == "COIN_CASE" or i.item == "BLUE_CARD" or i.item == "ITEMFINDER":
-								state[i.item] = True
+							if i.item == "WATER_STONE" or i.item == "ESCAPE_ROPE":
+								state[i.item.replace("_"," ").title()] = True
+							# Do this to ensure items are all overwritable with other requirements
+							# Even if the item is trash
+							elif i.item == "Red Scale" or i.item == "Mystery Egg" or i.item == "Rainbow Wing" or\
+								i.item == "COIN_CASE" or i.item == "BLUE_CARD" or i.item == "ITEMFINDER":
+									state[i.item] = True
 
 
 					else:
@@ -762,9 +767,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						(i.wasItem() or i.isItem()) \
 						and "Impossible" not in i.FlagReqs:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
-					i.IsItem = True
-					i.Type = "Item"
-					randomizedExtra[i.Name] = i.item
+					addAfter.append(i)
+
 			elif "Warps" in inputFlags and "Unreachable" in i.FlagReqs and i.Name not in reachable and i not in addAfter:
 				if i.isItem() or i.isGym() or i.wasItem():
 					i.item = "BRICK_PIECE"
