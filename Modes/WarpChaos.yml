@@ -20,13 +20,13 @@ DefaultModifiers:
 - Modifiers/HiddenItems.yml
 - Modifiers/TimeEvents.yml
 - Modifiers/BerryTrees.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/OpenMtSilver.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/ShuffleLeftovers.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/NerfHoOhChamber.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/Warps.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/NoProgressionFlyWarps.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/PhoneCallTrainers.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/RequireFlyForPhone.yml
+- Modifiers/OpenMtSilver.yml
+- Modifiers/ShuffleLeftovers.yml
+- Modifiers/NerfHoOhChamber.yml
+- Modifiers/Warps.yml
+- Modifiers/NoProgressionFlyWarps.yml
+- Modifiers/PhoneCallTrainers.yml
+- Modifiers/RequireFlyForPhone.yml
 Description: Most items which require daily events, day-night events or happiness
   checks are are included under these settings. This includes the berry trees. Note
   that this mode includes additional hidden items, any hidden item hidden under a

@@ -19,6 +19,9 @@ import hashlib
 import csv
 import os
 
+import Version
+
+
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
 		super(RunWindow, self).__init__(parent)
@@ -53,6 +56,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
 		self.HintButton.clicked.connect(self.ProcessHintSettings)
 
+		self.version.setText(_translate("MainWindow", "Version "+Version.GetVersion()))
+
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
 			reader = csv.reader(csvfile)
@@ -60,6 +65,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				if(len(i)>0):
 					self.itemsList.append(i[0])
 					#self.ItemList.addItem(i[0])
+
+	def getVersion(self):
+		return "7.0.0"
 
 	def runRandomizer(self):
 		os.environ['PYTHONHASHSEED'] = '0'#this needs to be reproducible! so this can't be random!
@@ -169,6 +177,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				outputSpoiler['Useless Stuff'] = result[4]
 				if len(result) > 8:
 					outputSpoiler["Xtra Stuff"] = result[8]
+
+				outputSpoiler["CIR Version"] = Version.GetVersion()
+				outputSpoiler["Mode"] = self.CurentSettings.text()
+				outputSpoiler["Modifiers"] = self.GetSettingsMD5()
+
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
@@ -350,6 +363,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage('A file was not selected!')
 			error_dialog.exec_()
+
+	def GetSettingsMD5(self):
+		mods = self.modList
+		full_string = ";"
+		for mod in mods:
+			full_string += mod["Name"] + ";"
+
+		return hashlib.md5(full_string.encode()).hexdigest()
+
 			
 	def ProcessHintSettings(self):
 		_translate = QtCore.QCoreApplication.translate

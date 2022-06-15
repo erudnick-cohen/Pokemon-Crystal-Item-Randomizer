@@ -92,7 +92,7 @@ DefaultModifiers:
 - Modifiers/NoEarlyBasement.yml
 - Modifiers/Warps.yml
 - Modifiers/NoProgressionFlyWarps.yml
-- C:/Users/Alex/Development/Pokemon-Crystal-Item-Randomizer/Modifiers/NoE4.yml
+- Modifiers/NoE4.yml
 Description: Badges and all TM items shuffled into the pool, with warp modifiers
 FlagsSet:
 - Kanto Mode
