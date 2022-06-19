@@ -66,9 +66,6 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					self.itemsList.append(i[0])
 					#self.ItemList.addItem(i[0])
 
-	def getVersion(self):
-		return "7.0.0"
-
 	def runRandomizer(self):
 		os.environ['PYTHONHASHSEED'] = '0'#this needs to be reproducible! so this can't be random!
 		rngSeed = str(time.time())
