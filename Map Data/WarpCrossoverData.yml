@@ -904,9 +904,9 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Radio Tower 2F
-            - Rocket Invasion
         ItemReqs:
         FlagReqs:
+            - Rocket Invasion
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2832,6 +2832,102 @@ Location:
             - Cut
         FlagReqs:
             - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Fuchsia
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Fuchsia City Back Entry
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod Rocket Block North
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Goldenrod
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Goldenrod Rocket Corner Block
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lake Of Rage
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lake Of Rage Cut
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Celadon
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Celadon Gym Outside
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Blackthorn
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Blackthorn Clair Defeated Surf
+        ItemReqs:
+            - Fly
+        FlagReqs:
+            - Storm Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:

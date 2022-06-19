@@ -143,8 +143,6 @@ Location:
                 WildTableList:
                 LocationReqs: Vermilion City
                 FlagReqs:
-                    - Saffron City
-                    - Lavender Town
                     - Kanto Power Restored
                 ItemReqs:
                     - Machine Part

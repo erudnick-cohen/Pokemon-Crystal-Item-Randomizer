@@ -102,9 +102,9 @@ Location:
                 WildTableList: 
                 LocationReqs: 
                     - Tin Tower
-                    - Elite Four
                 ItemReqs:
                 FlagReqs:
+                    - Became Champion
                 FlagsSet:
                 ReachableReqs:
                 Code: |
@@ -143,7 +143,6 @@ Location:
                 Sublocations:
                 WarpReqs:
                     - Tin Tower 1F
-                    - Elite Four
 
     -
         Name: Climb Tin Tower
@@ -439,8 +438,6 @@ Location:
                         LocationReqs: Climb Tin Tower
                         FlagReqs:
                         ItemReqs:
-                            - Clear Bell
-                            - Rainbow Wing
                         FlagsSet:
                         ReachableReqs:
                         NormalItem: MAX_POTION
@@ -477,8 +474,6 @@ Location:
                         LocationReqs: Climb Tin Tower
                         FlagReqs:
                         ItemReqs:
-                            - Clear Bell
-                            - Rainbow Wing
                         FlagsSet:
                         ReachableReqs:
                         NormalItem: MAX_REVIVE
@@ -662,8 +657,8 @@ Location:
                         WildTableList:
                         LocationReqs:
                             - Tin Tower Roof
-                            - Elite Four
                         FlagReqs:
+                            - Became Champion
                         ItemReqs:
                             - Rainbow Wing
                         FlagsSet:

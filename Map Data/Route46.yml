@@ -140,10 +140,10 @@ Location:
         WildTableList:
         LocationReqs: 
             - Route 46 Upper
-            - Elite Four
         FlagReqs:
             - Phone Call Trainers
             - Kanto Power Restored
+            - Became Champion
         ItemReqs:
             - Pokegear
         FlagsSet:

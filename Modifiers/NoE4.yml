@@ -2,6 +2,6 @@ Name: No Elite Four
 Description: Ensures E4 is not required.
 Changes:
     -
-        Location: Elite Four
+        Location: Lance
         AddLocationReqs:
             - Red

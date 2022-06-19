@@ -23,7 +23,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 2 Post Cut via Route 2
+            - Route 2
         FlagReqs:
             - Hive Badge
             - Fog Badge
@@ -61,11 +61,11 @@ Location:
         WildTableList: 
         LocationReqs:
             - League Gate via Route 26
-            - Woke Snorlax
         FlagReqs:
             - 8 Badges
             - Rising Badge
             - Fog Badge
+            - Snorlax Woken
         ItemReqs:
             - Surf
             - Waterfall

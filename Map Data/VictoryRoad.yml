@@ -252,25 +252,3 @@ Location:
                     Sublocations:
             WarpReqs: Victory Road Hall 3
 
-    -
-        Name: Elite Four
-        FileName: VictoryRoad.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs: Victory Road F3
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        AREALV: 33
-        TrainerList:
-            - WILL 1
-            - KOGA 1
-            - BRUNO 1
-            - KAREN 1
-            - CHAMPION 1
-        Sublocations:
-        WarpReqs: Indigo Plateau

@@ -1,10 +1,27 @@
 Location:
     -
-        Name: Route 2
+        Name: Route 2 North Access
         FileName: Route2.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList:
+        LocationReqs:
+            - Route 2 Center
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+    -
+        Name: Route 2 North Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
             - ROUTE_2
         LocationReqs:
             - Diglett's Cave
@@ -14,39 +31,35 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        AREALV: 32
-        TrainerList: 
+        TrainerList:
         WarpReqs: Route 2 Diglett
         Sublocations:
-            -
-                Name: Route 2 Elixer
-                FileName: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Route 2 Post Cut via Route 2
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: ELIXER
-                IsBall: Yes
-                Code: |
-                    Route2Elixer:
-                        ITEMLINE
-                Text:
-                AREALV: 32
-                TrainerList: 
-                Sublocations:
+
+    -
+        Name: Route 2 North
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 North Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
             -
                 Name: Route 2 Carbos
                 FileName: Route2.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: 
+                WildTableList:
                 LocationReqs:
-                    - Route 2
+                    - Route 2 North
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -58,8 +71,358 @@ Location:
                         ITEMLINE
                 Text:
                 AREALV: 32
-                TrainerList: 
+                TrainerList:
                 Sublocations:
+
+    -
+        Name: Route 2 South
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 Center
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Route 2 South
+        Sublocations:
+            -
+                Name: Route 2 Elixer
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 2 South
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ELIXER
+                IsBall: Yes
+                Code: |
+                    Route2Elixer:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList:
+                Sublocations:
+
+    -
+        Name: Route 2 Center
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 North
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Route 2 Cut
+        Sublocations:
+
+    -
+        Name: Route 2 Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 North
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 2 Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 South
+        FlagReqs:
+            - Hive Badge
+        ItemReqs:
+            - Cut
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+
+    -
+        Name: Route 2 Post Cut via Viridian
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+            - Viridian City via League Gate
+        FlagReqs:
+            - 8 Badges
+            - Rising Badge
+            - Fog Badge
+            - Snorlax Woken
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 2 Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 Post Cut via Viridian
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 2 Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Pewter City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 2 Access
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Viridian City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 2
+        FileName: Route2.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+            - ROUTE_2
+        LocationReqs:
+            - Route 2 Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+            - BUG_CATCHER 2
+            - BUG_CATCHER 12
+            - BUG_CATCHER 3
+        HintName: Route 2
+        Sublocations:
+            -
+                Name: Route 2 Dire Hit
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: DIRE_HIT
+                IsBall: Yes
+                Code: |
+                    Route2DireHit:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList:
+                Sublocations:
+            -
+                Name: Route 2 Max Potion
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 2
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                IsBall: Yes
+                Code: |
+                    Route2MaxPotion:
+                        ITEMLINE
+                Text:
+                AREALV: 32
+                TrainerList:
+                Sublocations:
+            -
+                Name: Route 2 Hidden Max Ether
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ETHER
+                Code: |
+                    Route2HiddenMaxEther:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther'
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Route 2 Hidden Full Heal
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    Route2HiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, Route2HiddenFullHeal'
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Route 2 Hidden Full Restore
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                Code: |
+                    Route2HiddenFullRestore:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore'
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Route 2 Hidden Revive
+                FileName: Route2.asm
+                SecondaryFile: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                    Route2HiddenRevive:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive'
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Route 2 Psn Cure Berry
+                FileName: Route2.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 2
+                FlagReqs:
+                    - Berry Trees
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PSNCUREBERRY
+                IsBerry: Yes
+                BerryFlag: 280
+                Code: |
+                  Route2FruitTree:
+                      ITEMLINE
+
+
     -
         Name: Route 2 Nugget House
         FileName: Route2NuggetHouse.asm
@@ -67,7 +430,7 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
-            - Route 2
+            - Route 2 North
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -105,276 +468,3 @@ Location:
         WarpReqs: Route 2 Nugget House
         Sublocations:
 
-    -
-        Name: Route 2 Post Cut Entrance
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs:
-            - Route 2 Post Cut via Route 2
-        FlagReqs:
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        Code: 
-        Text:
-        AREALV: 32
-        TrainerList:
-        HintName: Route 2
-
-    -
-        Name: Route 2 Post Cut via Route 2
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList:
-        LocationReqs:
-        FlagReqs:
-            - Warps
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        AREALV: 32
-        TrainerList:
-        HintName: Route 2
-        WarpReqs: Route 2 South
-
-    -
-        Name: Route 2 Post Cut via Route 2
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs:
-            - Route 2
-        FlagReqs:
-            - Hive Badge
-        ItemReqs:
-            - Cut
-        FlagsSet:
-        ReachableReqs:
-        Code: 
-        Text:
-        AREALV: 32
-        TrainerList:
-        HintName: Route 2
-    -
-        Name: Route 2 Post Cut Entrance
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs:
-            - Route 2 Post Cut via Viridian
-            - Woke Snorlax
-        FlagReqs:
-            - 8 Badges
-            - Rising Badge
-            - Fog Badge
-        ItemReqs:
-            - Surf
-            - Waterfall
-        FlagsSet:
-        ReachableReqs:
-        Code: 
-        Text:
-        AREALV: 32
-        HintName: Route 2
-        TrainerList: 
-    -
-        Name: Route 2 Post Cut via Viridian
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs:
-            - Viridian City via League Gate
-            - Woke Snorlax
-        FlagReqs:
-            - 8 Badges
-            - Rising Badge
-            - Fog Badge
-        ItemReqs:
-            - Surf
-            - Waterfall
-        FlagsSet:
-        ReachableReqs:
-        Code: 
-        Text:
-        AREALV: 32
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 2 Post Cut
-        FileName: Route2.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs:
-            - Route 2 Post Cut Entrance
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code: 
-        Text:
-        AREALV: 32
-        TrainerList: 
-            - BUG_CATCHER 2
-            - BUG_CATCHER 12
-            - BUG_CATCHER 3
-        HintName: Route 2
-        WarpReqs: Route 2
-        Sublocations:
-            -
-                Name: Route 2 Dire Hit
-                FileName: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Route 2 Post Cut
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: DIRE_HIT
-                IsBall: Yes
-                Code: |
-                    Route2DireHit:
-                        ITEMLINE
-                Text:
-                AREALV: 32
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 2 Max Potion
-                FileName: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Route 2 Post Cut
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_POTION
-                IsBall: Yes
-                Code: |
-                    Route2MaxPotion:
-                        ITEMLINE
-                Text:
-                AREALV: 32
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 2 Hidden Max Ether
-                FileName: Route2.asm
-                SecondaryFile: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 2 Post Cut
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_ETHER
-                Code: |
-                    Route2HiddenMaxEther:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 2 Hidden Full Heal
-                FileName: Route2.asm
-                SecondaryFile: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 2 Post Cut
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_HEAL
-                Code: |
-                    Route2HiddenFullHeal:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, Route2HiddenFullHeal'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 2 Hidden Full Restore
-                FileName: Route2.asm
-                SecondaryFile: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 2 Post Cut
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_RESTORE
-                Code: |
-                    Route2HiddenFullRestore:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 2 Hidden Revive
-                FileName: Route2.asm
-                SecondaryFile: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 2 Post Cut
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: REVIVE
-                Code: |
-                    Route2HiddenRevive:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive'
-                Text:
-                TrainerList: 
-                Sublocations:
-                
-            -
-                Name: Route 2 Psn Cure Berry
-                FileName: Route2.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 2 Post Cut
-                FlagReqs:
-                    - Berry Trees
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: PSNCUREBERRY
-                IsBerry: Yes
-                BerryFlag: 280
-                Code: |
-                  Route2FruitTree:
-                      ITEMLINE

@@ -1,3 +1,6 @@
+rm -r build
+rm -r dist
+
 pyuic5.exe QTGUIDesign.ui -o RandomizerGUI.py
 if errorlevel 1 (
    echo Failure Reason Given is %errorlevel%

@@ -124,10 +124,10 @@ Location:
                 WildTableList:
                 LocationReqs: 
                     - Route 30
-                    - Elite Four
                 FlagReqs:
                     - Phone Call Trainers
                     - Beat Team Rocket
+                    - Became Champion
                 ItemReqs:
                     - Pokegear
                 FlagsSet:

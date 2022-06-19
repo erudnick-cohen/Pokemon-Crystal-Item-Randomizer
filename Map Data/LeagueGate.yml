@@ -76,8 +76,8 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-        FlagReqs:
             - League Gate Entrance
+        FlagReqs:
         ItemReqs:
         FlagsSet:
         ReachableReqs:

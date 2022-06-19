@@ -86,6 +86,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				 otherSettings = {}, bonusTrash = [],hintConfig=None):
 	#print('required items are')
 	#print(requiredItems)
+
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -202,6 +203,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	# Don't re-load data from folder on failure!
 	fullLocationData = LoadLocationData.LoadDataFromFolder(".", banList, allowList, changeListDict, flags)
 
+	seedIncrements = 0
+
 	while goal not in result[0]:
 		try:
 			res_items = fullLocationData[1].copy()
@@ -276,7 +279,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			print('Failed with error: '+str(err)+' retrying...')
 			traceback.print_exc()
 		seed = seed+1
+		seedIncrements += 1
 	print('-------')
+
+	print("Seed increments:",seedIncrements)
+
+
 	for j in result[0]:
 		i = result[0][j]
 		if(i.NormalItem is None and i.isItem()):

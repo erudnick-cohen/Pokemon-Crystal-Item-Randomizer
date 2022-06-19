@@ -23,9 +23,9 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
-          - Red Scale Dropped
           - Mahogany Town
         FlagReqs:
+            - Gyarados Beaten
         ItemReqs:
         FlagsSet:
         ReachableReqs:

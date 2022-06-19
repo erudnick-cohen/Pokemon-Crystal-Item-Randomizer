@@ -124,6 +124,143 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+
+            -
+                Name: National Park Pokefan Beverly Nugget
+                FileName: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - National Park
+                    - Most Map Access
+                FlagReqs:
+                    - Phone Call Trainers
+                    - Mon Locked Checks
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                ReachableReqs:
+                MonReq: Marill
+                NormalItem: NUGGET
+                IsBall: No
+                Code: |
+                    .GiveNugget:
+                        scall .Gift
+                        ITEMLINE
+                        iffalse .NoRoom
+                        clearflag ENGINE_BEVERLY_HAS_NUGGET
+                        sjump .NumberAccepted
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: National Park Dig TM
+                FileName: NationalPark.asm
+                SecondaryFile: NationalParkBugContest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: National Park
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_DIG
+                IsBall: Yes
+                Code: |
+                    NationalParkTMDig:
+                        ITEMLINE
+                SecondaryCode: |
+                    NationalParkBugContestTMDig:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: National Park Parlyz Heal
+                FileName: NationalPark.asm
+                SecondaryFile: NationalParkBugContest.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: National Park
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PARLYZ_HEAL
+                IsBall: Yes
+                Code: |
+                    NationalParkParlyzHeal:
+                        ITEMLINE
+                SecondaryCode: |
+                    NationalParkBugContestParlyzHeal:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: National Park Hidden Full Heal
+                OtherName: National Park Hidden Full Heal BCC
+                FileName: NationalPark.asm
+                SecondaryFile: NationalPark.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: National Park
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    NationalParkHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal"
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: National Park Hidden Full Heal BCC
+                TrueName: National Park Hidden Full Heal
+                FileName: NationalParkBugContest.asm
+                SecondaryFile: NationalParkBugContest.asm
+                Type: Dummy
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: National Park
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    NationalParkBugContestHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal"
+                Text:
+                TrainerList:
+                Sublocations:
+    -
+        Name: Bug Catching Contest Entry
+        FileName: NationalPark.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: National Park
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 12
+        TrainerList:
+        WarpReqs: National Park/Route 36 Gate
+        Sublocations:
             -
                 Name: Bug Catching Contest First Place
                 FileName: Route36NationalParkGate.asm
@@ -131,7 +268,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: National Park
+                LocationReqs: Bug Catching Contest Entry
                 FlagReqs:
                     - Bug Catching Contest
                 ItemReqs:
@@ -160,7 +297,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: National Park
+                LocationReqs: Bug Catching Contest Entry
                 FlagReqs:
                     - Bug Catching Contest
                 ItemReqs:
@@ -188,7 +325,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: National Park
+                LocationReqs: Bug Catching Contest Entry
                 FlagReqs:
                     - Bug Catching Contest
                 ItemReqs:
@@ -218,7 +355,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: National Park
+                LocationReqs: Bug Catching Contest Entry
                 FlagReqs:
                     - Bug Catching Contest
                 ItemReqs:
@@ -250,125 +387,6 @@ Location:
                         promptbutton
                         waitsfx
                         ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: National Park Pokefan Beverly Nugget
-                FileName: NationalPark.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: 
-                    - National Park
-                    - Most Map Access
-                FlagReqs:
-                    - Phone Call Trainers
-                    - Mon Locked Checks
-                ItemReqs:
-                    - Pokegear
-                FlagsSet:
-                ReachableReqs:
-                MonReq: Marill
-                NormalItem: NUGGET
-                IsBall: No
-                Code: |
-                    .GiveNugget:
-                        scall .Gift
-                        ITEMLINE
-                        iffalse .NoRoom
-                        clearflag ENGINE_BEVERLY_HAS_NUGGET
-                        sjump .NumberAccepted
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: National Park Dig TM
-                FileName: NationalPark.asm
-                SecondaryFile: NationalParkBugContest.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: National Park
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: TM_DIG
-                IsBall: Yes
-                Code: |
-                    NationalParkTMDig:
-                        ITEMLINE
-                SecondaryCode: |
-                    NationalParkBugContestTMDig:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:            
-            -
-                Name: National Park Parlyz Heal
-                FileName: NationalPark.asm
-                SecondaryFile: NationalParkBugContest.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: National Park
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: PARLYZ_HEAL
-                IsBall: Yes
-                Code: |
-                    NationalParkParlyzHeal:
-                        ITEMLINE
-                SecondaryCode: |
-                    NationalParkBugContestParlyzHeal:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: National Park Hidden Full Heal
-                OtherName: National Park Hidden Full Heal BCC
-                FileName: NationalPark.asm
-                SecondaryFile: NationalPark.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: National Park
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_HEAL
-                Code: |
-                    NationalParkHiddenFullHeal:
-                        ITEMLINE
-                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkHiddenFullHeal"
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: National Park Hidden Full Heal BCC
-                TrueName: National Park Hidden Full Heal
-                FileName: NationalParkBugContest.asm
-                SecondaryFile: NationalParkBugContest.asm
-                Type: Dummy
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: National Park
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: FULL_HEAL
-                Code: |
-                    NationalParkBugContestHiddenFullHeal:
-                        ITEMLINE
-                SecondaryCode: "    bg_event  6, 47, BGEVENT_ITEM, NationalParkBugContestHiddenFullHeal"
                 Text:
                 TrainerList: 
                 Sublocations:

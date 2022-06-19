@@ -33,5 +33,5 @@ Changes:
         Location: Red
         AddFlagReqs:
             - All Badges
-        RemoveLocationReqs:
-            - Elite Four
+        RemoveFlagReqs:
+            - Became Champion

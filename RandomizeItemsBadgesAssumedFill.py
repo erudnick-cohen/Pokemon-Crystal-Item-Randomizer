@@ -316,9 +316,17 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	maxIter = len(progressList)
 	#progressList.reverse()
 	#print(progressList)
+	previousCount = 0
 	while len(progressList) > 0 and maxIter > 0:
 
 		print("iter=",maxIter, "pl:", len(progressList), progressList)
+
+		if previousCount == len(progressList):
+			remainingLocations = list(filter(lambda x: x.Type == "Item" or x.Type == "Gym", locList))
+			for r in remainingLocations:
+				print(r.Name)
+
+		previousCount = len(progressList)
 
 		maxIter = maxIter - 1
 		valid = False
@@ -361,6 +369,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						placeable = True
 						nLeft = 0
 				legal = True
+				illegalReason = None
 				#don't attempt to put badges in mt. silver
 				#if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 				#	placeable = False
@@ -371,12 +380,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if (locList[iter] in MtSilverSubItems and toAllocate in coreProgress):
 					placeable = False
 
+				# Unlikely to be the culprit?
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
-					iter += 1
 					break
 
 				# Should these Impossible items be pruned earlier?
-				warpImpossibleCheck = requirementsDict[locList[iter]]
+				# TODO
+				# Check if this works correctly?!
+				warpImpossibleCheck = requirementsDict[locList[iter].Name]
 				impossible_paths = 0
 				for path in warpImpossibleCheck:
 					path_is_impossible = ("Impossible" in path) or ("Unreachable" in path) or ("Banned" in path)
@@ -384,7 +395,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						impossible_paths +=1
 
 				if impossible_paths > 0 and impossible_paths >= len(warpImpossibleCheck):
-					iter += 1
+					#print("Impossible:", locList[iter].Name + ' cannot contain ' + toAllocate)
 					break
 
 
@@ -400,13 +411,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					oldDepsList = []
 					newDeps = allDepsList
 					addedList = [locList[iter].Name]
-					failedOnList = []
 					revReqDict = defaultdict(lambda: [])
 					while oldDepsList != allDepsList and legal:
 						oldDepsList = allDepsList
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
 							if "Red" in newDeps:
+								illegalReason = "Red"
 								legal = False
 								break
 
@@ -414,84 +425,109 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							if(len(requirementsDict[j])>0):
 								#print('Choosing non-tautological path for '+j)
 								#choose a random path through dependencies that IS NOT A TAUTOLOGY!
+
+								# If a path has no requirements, choose this one as means always available
+								# Similarly, if a path only contains 'Warps'
+								# Otherwise X% chance of failure on each run through
+
+
+
 								paths = copy.copy(requirementsDict[j])
 								random.shuffle(paths)
+
+								defaultPath = None
+								for check in paths:
+									if len(check) == 0:
+										defaultPath = check
+									# If Warps option enabled, always pick this one!
+									elif len(check) == 1 and check[0] in inputFlags:
+										defaultPath = check
+
 								#pick an option from paths which isn't a tautology!
 								tautologyCheck = True
 
 								tautIter = 0
 								#only need to pick if there are two options!
 								if(len(requirementsDict[j])>1):
-									#better strategy, if you choose option A from the multiple options, then the locations required by A CANNOT require j!
-									#so when choosing a path to the locations required by A, we CANNOT choose an option with j as a dependency!
-									#also, we don't pick paths that require the item we're trying to allocate, for obvious reasons
-									trueOption = None
-									for k in paths:
-										#print('trying potential path:')
-										#print(k)
 
-										# Tiny optimisation, break out of path if contains the item to be allocated in the path
-										# Previously, continued through each step in the path requirements
-										if toAllocate in k:
-											continue
+									# better strategy, if you choose option A from the multiple options, then the locations required by A CANNOT require j!
+									# so when choosing a path to the locations required by A, we CANNOT choose an option with j as a dependency!
+									# also, we don't pick paths that require the item we're trying to allocate, for obvious reasons
+									trueOption = defaultPath
 
-										kTrue = True
-
-										for l in k:
-											#print("Check element l in k", l)
-											#kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
-											#if not kTrue:
-											#	print("Debug: A")
-											kTrue = kTrue and (l not in revReqDict[j])
-											#if not kTrue:
-											#	print("Debug: B")
-											lTrueOr = len(requirementsDict[l]) == 0
-											for m in requirementsDict[l]:
-												lTrueOr = lTrueOr or toAllocate not in m
-											kTrue = kTrue and lTrueOr
-											#if not kTrue:
-											#	print("Debug: C")
-											#also make sure the location doesn't literally require it
-											kTrue = kTrue and l != toAllocate
-											#if not kTrue:
-											#	print("Debug: D")
-											#also make sure its not impossible
-											kTrue = kTrue and l != 'Impossible' and l != "Banned" and l != "Unreachable"
-											#if not kTrue:
-											#	print("Debug: E")
-											#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
-											if(len(requirementsDict[l]) != 0):
-												kTrue = kTrue and not ('Impossible' in requirementsDict[l][0] or\
-																	   'Banned' in requirementsDict[l][0] or\
-																	   'Unreachable' in requirementsDict[l][0])
-											#	if not kTrue:
-											#		print("Debug: F")
-											if not lTrueOr:
-												1+1
-												#print('False because '+l+' requires:')
-												#print(requirementsDict[l])
-											#if a flag we don't have is needed, we can't use that path
-											kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
-											#if not kTrue:
-											#	print("Debug: G")
-											if (l in usedFlagsList and l not in inputFlags):
-												1+1
-												#print('False because the needed flag '+ l +' is not set')
-												#print(usedFlagsList)
-												#print(inputFlags)
-										# If all requirements have already been found, then the potential path is forbidden
-										# As it may require cyclic access, especially with warp logic
-										# e.g. Ledges only being accessible by warps, but using vanilla within dungeons
-										#if len(l) > 0 and len(k) == reqInCurrent:
-										#	kTrue = False
-										if(kTrue):
-											trueOption = k
-											#print('found non-tautological path')
+									if trueOption is None:
+										for k in paths:
+											#print('trying potential path:')
 											#print(k)
-											break
-										else:
-											1+1
-											#print('Path is false')
+
+											# Tiny optimisation, break out of path if contains the item to be allocated in the path
+											# Previously, continued through each step in the path requirements
+											if toAllocate in k:
+												continue
+
+											kTrue = True
+
+											for l in k:
+												#print("Check element l in k", l)
+												#kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
+												#if not kTrue:
+												#	print("Debug: A")
+												kTrue = kTrue and (l not in revReqDict[j])
+												#if not kTrue:
+												#	print("Debug: B")
+												lTrueOr = len(requirementsDict[l]) == 0
+												for m in requirementsDict[l]:
+													lTrueOr = lTrueOr or toAllocate not in m
+												kTrue = kTrue and lTrueOr
+												#if not kTrue:
+												#	print("Debug: C")
+												#also make sure the location doesn't literally require it
+												kTrue = kTrue and l != toAllocate
+												#if not kTrue:
+												#	print("Debug: D")
+												#also make sure its not impossible
+												kTrue = kTrue and l != 'Impossible' and l != "Banned" and l != "Unreachable"
+												#if not kTrue:
+												#	print("Debug: E")
+												#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
+												if(len(requirementsDict[l]) != 0):
+													kTrue = kTrue and not ('Impossible' in requirementsDict[l][0] or\
+																		   'Banned' in requirementsDict[l][0] or\
+																		   'Unreachable' in requirementsDict[l][0])
+												#	if not kTrue:
+												#		print("Debug: F")
+												if not lTrueOr:
+													1+1
+													#print('False because '+l+' requires:')
+													#print(requirementsDict[l])
+												#if a flag we don't have is needed, we can't use that path
+												kTrue = kTrue and not (l in usedFlagsList and l not in inputFlags)
+
+												# Warps are bi-directional, so add clause here to prevent automatic tautology
+												#if l.endswith(LoadLocationData.WARP_OPTION):
+												#	kTrue = kTrue and (l not in allDepsList)
+
+
+												#if not kTrue:
+												#	print("Debug: G")
+												if (l in usedFlagsList and l not in inputFlags):
+													1+1
+													#print('False because the needed flag '+ l +' is not set')
+													#print(usedFlagsList)
+													#print(inputFlags)
+											# If all requirements have already been found, then the potential path is forbidden
+											# As it may require cyclic access, especially with warp logic
+											# e.g. Ledges only being accessible by warps, but using vanilla within dungeons
+											#if len(l) > 0 and len(k) == reqInCurrent:
+											#	kTrue = False
+											if(kTrue):
+												trueOption = k
+												#print('found non-tautological path')
+												#print(k)
+												break
+											else:
+												1+1
+												#print('Path is false')
 									#if new choice is none, ignore it because this is a true tautology
 									#e.g. trying to place the squirtbottle at the sudowoodo junction
 									if(not trueOption is None):
@@ -506,7 +542,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											#print(revReqDict)
 									else:
 										legal = False
-										failedOnList.append(paths)
+										illegalReason = allDepsList.copy()
 										#this is not a legal item location! because it involves a tautology!
 										#print('Illegal tautology:')
 										#print(paths)
@@ -525,6 +561,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 									#no impossible paths
 									if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
+										illegalReason = "Impossible Path"
 										legal = False
 										#print('but its impossible!')
 									else:
@@ -558,6 +595,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#print(set(allDepsList).intersection(set(usedFlagsList)))
 					#Impossible locations are illegal
 					if("Impossible" in allDepsList or "Banned" in jReqs or "Unreachable" in jReqs):
+						illegalReason = "Impossible 2"
 						legal = False
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
 						loc = locList.pop(iter)

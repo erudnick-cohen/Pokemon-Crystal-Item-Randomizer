@@ -375,9 +375,7 @@ Location:
                 WildTableList:
                 LocationReqs: Whirl Islands Requires Flash
                 FlagReqs:
-                    - Glacier Badge
                 ItemReqs:
-                    - Whirlpool
                 FlagsSet:
                 ReachableReqs:
                 IsBall: Yes

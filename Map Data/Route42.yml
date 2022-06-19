@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Route 42
+        Name: Route 42 Access
         FileName: Route42.asm
         Type: Map
         HasPKMN: No
@@ -12,7 +12,57 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 42 Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Mahogany Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 42 Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 42 West
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Route 42 West
         Sublocations:
             -
                 Name: Route 42 Ultra Ball
@@ -20,7 +70,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Route 42
+                LocationReqs: Route 42 West
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -33,13 +83,260 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Route 42 Center Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 West
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+
+    -
+        Name: Route 42 Center Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 East
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+
+    -
+        Name: Route 42 Center Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Route 42 Center
+
+    -
+        Name: Route 42 Center
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 Center Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+            -
+                Name: Route 42 Middle Island Super Potion
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42 Center
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: SUPER_POTION
+                Code: |
+                    Route42SuperPotion:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Route 42 Hidden Max Potion
+                FileName: Route42.asm
+                SecondaryFile: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42 Center
+                FlagReqs:
+                  - Hidden Items
+                  - Fog Badge
+                ItemReqs:
+                  - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_POTION
+                Code: |
+                  Route42HiddenMaxPotion:
+                      ITEMLINE
+                SecondaryCode: '    bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion'
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Route 42 Grn Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42 Center
+                FlagReqs:
+                    -   Hive Badge
+                    -   Berry Trees
+                ItemReqs:
+                    -   Cut
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: GRN_APRICORN
+                IsBerry: Yes
+                BerryFlag: 300
+                Code: |
+                  Route42FruitTree1:
+                      ITEMLINE
+
+            -
+                Name: Route 42 Ylw Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42 Center
+                FlagReqs:
+                    -   Hive Badge
+                    -   Berry Trees
+                ItemReqs:
+                    -   Cut
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: YLW_APRICORN
+                IsBerry: Yes
+                BerryFlag: 301
+                Code: |
+                  Route42FruitTree2:
+                      ITEMLINE
+
+            -
+                Name: Route 42 Pnk Apricorn
+                FileName: Route42.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 42 Center
+                FlagReqs:
+                    -   Hive Badge
+                    -   Berry Trees
+                ItemReqs:
+                    -   Cut
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                NormalItem: PNK_APRICORN
+                IsBerry: Yes
+                BerryFlag: 302
+                Code: |
+                  Route42FruitTree3:
+                      ITEMLINE
+
+    -
+        Name: Route 42 East Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 Center
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+
+    -
+        Name: Route 42 East Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Mt Mortar
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+
+    -
+        Name: Route 42 East Access
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Mahogany
+
+    -
+        Name: Route 42 East
+        FileName: Route42.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: Route_42
+        LocationReqs: Route 42 East Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 16
+        TrainerList:
+            - FISHER 7
+            - POKEMANIAC 4
+            - HIKER 6
+        Sublocations:
             -
                 Name: Route 42 Fisherman Tully 
                 FileName: Route42.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Route 42
+                LocationReqs: Route 42 East
                 FlagReqs:
                     - Phone Call Trainers
                 ItemReqs:
@@ -58,171 +355,3 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Route 42 Middle Island Super Potion
-                FileName: Route42.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Route 42
-                FlagReqs:
-                    - Fog Badge
-                ItemReqs:
-                    - Surf
-                FlagsSet:
-                ReachableReqs:
-                IsBall: Yes
-                NormalItem: SUPER_POTION
-                Code: |
-                    Route42SuperPotion:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Route 42 Hidden Max Potion
-                FileName: Route42.asm
-                SecondaryFile: Route42.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 42
-                FlagReqs:
-                    - Hidden Items
-                    - Fog Badge
-                ItemReqs:
-                    - Surf
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_POTION
-                Code: |
-                    Route42HiddenMaxPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion'
-                Text:
-                TrainerList: 
-                Sublocations:
-                
-            -   
-                Name: Route 42 Grn Apricorn
-                FileName: Route42.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 42
-                FlagReqs:
-                    -   Fog Badge
-                    -   Hive Badge
-                    -   Berry Trees
-                ItemReqs:
-                    -   Cut
-                    -   Surf
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: GRN_APRICORN
-                IsBerry: Yes
-                BerryFlag: 300
-                Code: |
-                  Route42FruitTree1:
-                      ITEMLINE
-            -   
-                Name: Route 42 Ylw Apricorn
-                FileName: Route42.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 42
-                FlagReqs:
-                    -   Fog Badge
-                    -   Hive Badge
-                    -   Berry Trees
-                ItemReqs:
-                    -   Cut
-                    -   Surf
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: YLW_APRICORN
-                IsBerry: Yes
-                BerryFlag: 301
-                Code: |
-                  Route42FruitTree2:
-                      ITEMLINE
-            -   
-                Name: Route 42 Pnk Apricorn
-                FileName: Route42.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 42
-                FlagReqs:
-                    -   Fog Badge
-                    -   Hive Badge
-                    -   Berry Trees
-                ItemReqs:
-                    -   Cut
-                    -   Surf
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: PNK_APRICORN
-                IsBerry: Yes
-                BerryFlag: 302
-                Code: |
-                  Route42FruitTree3:
-                      ITEMLINE
-    -
-        Name: Route 42 End
-        FileName: Route42.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Route 42
-        FlagReqs:
-            - Fog Badge
-        ItemReqs:
-            - Surf
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 42 End
-        FileName: Route42.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Mt Mortar
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
-    -
-        Name: Route 42 Mahogany Side
-        FileName: Route42.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: Route_42
-        LocationReqs: Route 42 End
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        AREALV: 16
-        TrainerList:
-            - FISHER 7
-            - POKEMANIAC 4
-            - HIKER 6
-        Sublocations:

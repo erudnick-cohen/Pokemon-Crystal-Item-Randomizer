@@ -3,4 +3,17 @@ Description: "When playing on warps, prevent Fly from being locked behind any pr
 FlagsSet:
     - Fly Warps
     - Allocate Badges First
+Changes:
+    -
+        Location: Route 45
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly
 
+    -
+        Location: Mt Mortar Inside Top
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly

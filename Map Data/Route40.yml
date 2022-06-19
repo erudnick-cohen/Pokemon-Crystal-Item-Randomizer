@@ -26,7 +26,7 @@ Location:
                 LocationReqs: Route 40 Land
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
+                    - Goldenrod Store Accessible
                     - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash

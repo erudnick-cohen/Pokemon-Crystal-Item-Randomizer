@@ -351,7 +351,7 @@ Location:
                 Type: Item
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs:
+                LocationReqs: Radio Tower
                 FlagReqs:
                     - Impossible
                 ItemReqs:

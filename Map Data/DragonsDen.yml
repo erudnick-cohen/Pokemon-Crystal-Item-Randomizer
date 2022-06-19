@@ -6,9 +6,9 @@ Location:
         HasPKMN: Yes
         WildTableList:
         LocationReqs:
-            - Battle Clair
             - Blackthorn City
         FlagReqs:
+            - Clair Defeated
             - Fog Badge
         ItemReqs:
             - Surf

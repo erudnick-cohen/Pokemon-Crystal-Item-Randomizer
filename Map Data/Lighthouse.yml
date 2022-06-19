@@ -120,7 +120,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-                WarpReqs: Lighthouse 4F Middle
+                WarpReqs: Lighthouse 5F Center
             -
                 Name: Lighthouse Rare Candy
                 FileName: OlivineLighthouse5F.asm
@@ -227,10 +227,10 @@ Location:
                 WildTableList: 
                 LocationReqs: 
                     - Lighthouse
-                    - Power Plant Activated
-                    - Elite Four
                 FlagReqs:
                     - Phone Call Trainers
+                    - Became Champion
+                    - Kanto Power Restored
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -266,4 +266,3 @@ Location:
                 Sublocations:
                 WarpReqs:
                     - Lighthouse 2F
-                    - Elite Four

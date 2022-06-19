@@ -5,5 +5,5 @@ NewGamePatches:
 Changes:
     -
         Location: Red
-        RemoveLocationReqs:
-            - Elite Four
+        RemoveFlagReqs:
+            - Became Champion

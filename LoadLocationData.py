@@ -417,6 +417,12 @@ def CheckLocationData(warpLocations, locationList):
 				if r_warp not in removed_warps:
 					removed_warps.append(r_warp)
 
+	# TODO
+	# This is still incomplete so disabled
+	# Fixing and enabling this will speed up processing
+	# As dead-end paths won't happen as often when processing them
+	# However, at present it over-purges
+
 	#toPurge = purgeWarpBidirectional(accessible_warp_data.copy())
 	#for purge in toPurge:
 	#	print("Purge:", purge)
@@ -499,7 +505,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	#print('NameCounts')
 	#print(LocCountDict)
 	return (LocationList,trashList,warp_removed_items)
-	
+	al
 def FlattenLocationTree(locations):
 	nList = []
 	aList = []

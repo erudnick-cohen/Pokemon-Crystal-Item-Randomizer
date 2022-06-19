@@ -7,7 +7,7 @@ Location:
         WildTableList: 
             - MOUNT_MORTAR_1F_OUTSIDE
             - MOUNT_MORTAR_1F_INSIDE
-        LocationReqs: Route 42
+        LocationReqs: Route 42 West
         FlagReqs:
         ItemReqs:
         FlagsSet:

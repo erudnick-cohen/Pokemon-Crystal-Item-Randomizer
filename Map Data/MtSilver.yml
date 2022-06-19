@@ -338,8 +338,8 @@ Location:
                 WildTableList:
                 LocationReqs:
                   - Mt. Silver Room 3
-                  - Elite Four
                 FlagReqs:
+                    - Became Champion
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

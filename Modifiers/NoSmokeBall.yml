@@ -3,5 +3,5 @@ Description: Getting the vanilla Smoke Ball in the Goldenrod Underground is a ni
 Changes:
     -
         Location: Goldenrod Tunnel Smoke Ball
-        AddLocationRequirements:
+        AddLocationReqs:
             - Red

@@ -154,7 +154,7 @@ Location:
                         ItemReqs:
                         FlagReqs:
                             - Clair Defeated
-                        LocationReqs: Battle Clair
+                        LocationReqs: Blackthorn Gym 1F Middle
                         FlagsSet:
                         Tags:
                             -

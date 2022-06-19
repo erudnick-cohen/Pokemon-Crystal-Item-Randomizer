@@ -332,10 +332,11 @@ Location:
         WildTableList: 
         LocationReqs:
             - Route 26
+            - Saffron City Gym Badge
         FlagReqs:
             - Assumed Fill
             - Fog Badge
-            - Saffron City Gym Badge
+
         ItemReqs:
             - Surf
             - Pass

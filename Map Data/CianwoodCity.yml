@@ -52,57 +52,13 @@ Location:
         HintName: Cianwood
         Sublocations:
             -
-                Name: Secret Potion Man
-                FileName: CianwoodPharmacy.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Cianwood City
-                FlagReqs:
-                    - Lighthouse
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                WarpReqs:
-                    - Cianwood Pharmacy
-                Code: |
-                    CianwoodPharmacist:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
-                        iftrue .Mart
-                        checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
-                        iffalse .Mart
-                        writetext PharmacistGiveSecretpotionText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
-                        writetext PharmacistDescribeSecretpotionText
-                        waitbutton
-                        closetext
-                        end
-                Text: |
-                    ReceivedSecretpotionText:
-                        text "<PLAYER> received"
-                        line "ITEMNAME."
-                        done
-
-                    PharmacistDescribeSecretpotionText:
-                        text "My ITEMNAME is"
-                        line "a tad too strong."
-
-                        para "I only offer it in"
-                        line "an emergency."
-                        done
-                TrainerList:
-                Sublocations:
-            -
                 Name: Cianwood Fly HM
                 FileName: CianwoodCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
                 LocationReqs:
+                    - Cianwood City
                 FlagReqs:
                     - Chuck Defeated
                 ItemReqs:
@@ -176,7 +132,7 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
+                    - Goldenrod Store Accessible
                     - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash
@@ -200,7 +156,7 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
+                    - Goldenrod Store Accessible
                     - Rock Smash Purchaseable
                 ItemReqs:
                     - Rock Smash
@@ -214,3 +170,49 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Secret Potion Man
+        FileName: CianwoodPharmacy.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Cianwood City
+        FlagReqs:
+          - Lighthouse
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs:
+          - Cianwood Pharmacy
+        Code: |
+          CianwoodPharmacist:
+              faceplayer
+              opentext
+              checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+              iftrue .Mart
+              checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
+              iffalse .Mart
+              writetext PharmacistGiveSecretpotionText
+              promptbutton
+              ITEMLINE
+              setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+              writetext PharmacistDescribeSecretpotionText
+              waitbutton
+              closetext
+              end
+        Text: |
+          ReceivedSecretpotionText:
+              text "<PLAYER> received"
+              line "ITEMNAME."
+              done
+
+          PharmacistDescribeSecretpotionText:
+              text "My ITEMNAME is"
+              line "a tad too strong."
+
+              para "I only offer it in"
+              line "an emergency."
+              done
+        TrainerList:
+        Sublocations:
