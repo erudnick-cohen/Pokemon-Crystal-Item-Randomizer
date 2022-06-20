@@ -7,3 +7,5 @@ Changes:
             - Fly
         NewFlagReqs:
             - Storm Badge
+IncompatibleWith:
+    - 'Delete Fly'

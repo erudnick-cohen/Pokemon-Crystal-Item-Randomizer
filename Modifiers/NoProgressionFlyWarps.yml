@@ -17,3 +17,6 @@ Changes:
             - Storm Badge
         AddItemReqs:
             - Fly
+IncompatibleWith:
+    - 'Delete Fly'
+    - 'Teleport instead of fly'

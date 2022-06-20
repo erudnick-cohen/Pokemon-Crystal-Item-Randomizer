@@ -384,9 +384,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
 					break
 
-				# Should these Impossible items be pruned earlier?
-				# TODO
-				# Check if this works correctly?!
 				warpImpossibleCheck = requirementsDict[locList[iter].Name]
 				impossible_paths = 0
 				for path in warpImpossibleCheck:
@@ -417,8 +414,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
 							if "Red" in newDeps:
-								illegalReason = "Red"
+								#illegalReason = "Red"
 								legal = False
+								break
+
+							if not legal:
 								break
 
 							jReqs = []
@@ -551,33 +551,43 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								else:
 									jReqs = sorted(requirementsDict[j][0])
 
-									#if len(jReqs) == 1:
-										#if jReqs[0] == previousDep:
-											# Seems wrong, just means a previous chosen path is not valid
-											# This breaks plando if multiple paths to get there
-											# This also makes things very slow
-											# If possible, revert to previous branch and pick a different path instead
-										#	legal = False
+									# Due to some behaviour with Warps, need this requirements check
+									# Even with a single path as could be randomised
+									# Into a tautology (potentially at a previous path)
 
-									#no impossible paths
-									if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
-										illegalReason = "Impossible Path"
-										legal = False
-										#print('but its impossible!')
+									if len(paths) > 0:
+										singleTrue = True
+										for l in paths[0]:
+											singleTrue = singleTrue and (l not in revReqDict[j])
+											lTrueOr = len(requirementsDict[l]) == 0
+											for m in requirementsDict[l]:
+												lTrueOr = lTrueOr or toAllocate not in m
+											singleTrue = singleTrue and lTrueOr
+											singleTrue = singleTrue and l != toAllocate
+
+											singleTrue = singleTrue and l != 'Impossible' and l != "Banned" and l != "Unreachable"
+											if (len(requirementsDict[l]) != 0):
+												singleTrue = singleTrue and not ('Impossible' in requirementsDict[l][0] or \
+																	   'Banned' in requirementsDict[l][0] or \
+																	   'Unreachable' in requirementsDict[l][0])
+
+											if not lTrueOr:
+												1 + 1
+
+											singleTrue = singleTrue and not (l in usedFlagsList and l not in inputFlags)
+
+										if not singleTrue:
+											legal = False
 									else:
-										1+1
-										#print('found non-tautological path')
-										#print(jReqs)
+										if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
+											legal = False
 									addedList.append(j)
 							for k in jReqs:
 								if k not in allDepsList:
 									newDeps.append(k)
 
-							previousDep = j
-						#print("Decided dependencies:", newDeps)
 						allDepsList.extend(newDeps)
 						#print("New dependencies:", allDepsList)
-						#print("")
 
 						#print('Expanded dependencies of '+locList[iter].Name+' to:')
 						#print(allDepsList)
@@ -843,7 +853,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			raise Exception('Did not match plando placements!!!')
 
 	for item in addAfter:
-		if item.wasItem() or item.isItem():
+		if item.wasItem() or item.isItem() or item.isGym():
 			item.IsItem = True
 			item.Type = 'Item'
 			reachable[item.Name] = item
@@ -853,6 +863,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	# Preferably all to one item to make this obvious to find/identify bugs
 
 	remainingItems = True
+	# If RandomiseItems is off, these items will instead be vanilla
 	while "RandomiseItems" in inputFlags and remainingItems:
 		remainingItems = False
 		for i in activeLoc:

@@ -1,0 +1,7 @@
+Name: Upgrade Everything
+Description: Uses the configuration file to replace and improve items in general. Upgrades healing items, pokeballs, and money items. Also changes the type items.
+FlagsSet:
+    - Replace Valuable
+    - Replace Healing
+    - Replace Ball
+    - Replace Custom

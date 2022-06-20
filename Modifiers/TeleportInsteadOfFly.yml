@@ -4,3 +4,7 @@ FlagsSet:
     - Teleport Fly
 NewGamePatches:
     - 'Patches/TeleportFly.json'
+IncompatibleWith:
+    - 'Delete Fly'
+    - 'Fly Before Phone Calls'
+    - 'No Progression Fly Warps'

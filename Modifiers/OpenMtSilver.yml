@@ -35,3 +35,5 @@ Changes:
             - All Badges
         RemoveFlagReqs:
             - Became Champion
+IncompatibleWith:
+    - 'Skip E4 and fight Red'

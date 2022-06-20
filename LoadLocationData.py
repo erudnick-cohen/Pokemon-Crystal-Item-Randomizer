@@ -85,11 +85,13 @@ def LoadWarpData(locationList, flags):
 			locationData["FlagReqs"].append("Zephyr Badge")
 			locationData["ItemReqs"].append("Flash")
 
-			if "Fly Warps" in flags:
+
+			if "Fly Warps" in flags and "Delete Fly" not in flags:
 				if "Storm Badge" not in locationData["FlagReqs"]:
 					locationData["FlagReqs"].append("Storm Badge")
 				if "Fly" not in locationData["ItemReqs"]:
 					locationData["ItemReqs"].append("Fly")
+
 
 		l = Location.Location(locationData)
 
@@ -198,7 +200,7 @@ def HasForbiddenFlag(location, forbiddenFlags):
 
 	return hasForbiddenFlag
 
-def CycleWarps(warpLocations, flattened, forbiddenFlags=[]):
+def CycleWarps(warpLocations, flattened, forbiddenFlags=["Impossible"]):
 	accessible_groups = ["New Bark" + WARP_OPTION, "Cherrygrove" + WARP_OPTION]
 	accessible_warp_data = []
 

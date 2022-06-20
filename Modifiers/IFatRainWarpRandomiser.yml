@@ -1,0 +1,54 @@
+Name: IFatRain Warp Randomiser
+Description: Changes warp logic to handle specifics for IFatRain Warp Randomiser. This removes ledges in the Ruins of Alph, removes Basement Key from being required, allows entry to Vermilion via Snorlax and Blackthorn via Dragons Den Exit, passage past the right guard at Victory Road Gate, director always gives item and Ice Path Boulders already pushed.
+Changes:
+    -
+        Location: Ruins of Alph Top Ledge
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Ruins Ledge Middle Warpie
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Goldenrod Underground Basement Key Warpie
+        RemoveItemReqs:
+            - Basement Key
+
+    -
+        Location: Goldenrod Underground Basement Key Warpie
+        RemoveItemReqs:
+            - Basement Key
+
+    -
+        Location: Vermilion Via Snorlax Warpie
+        RemoveItemReqs:
+            - Impossible
+
+    -
+        Location: Blackthorn Via Dragons Den Entrance Warpie
+        RemoveItemReqs:
+            - Surf
+        RemoveFlagReqs:
+            - Fog Badge
+
+    -
+        Location: Victory Road Gate Snorlax Warpie
+        RemoveFlagReqs:
+            - Snorlax Woken
+
+    -
+        Location: Victory Road Gate Warpie
+        RemoveFlagReqs:
+            - Snorlax Woken
+
+    -
+        Location: Goldenrod Tunnel Rocket Attack
+        RemoveFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Ice Path Boulder Drop Room With Strength Warpie
+        RemoveFlagReqs:
+            - Ice Path Boulders Pushed

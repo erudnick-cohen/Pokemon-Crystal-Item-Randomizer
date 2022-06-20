@@ -7,3 +7,6 @@ Changes:
             - Fly
         AddFlagReqs:
             - Storm Badge
+IncompatibleWith:
+    - 'Delete Fly'
+    - 'Teleport instead of fly'

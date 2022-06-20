@@ -242,3 +242,5 @@ Changes:
         AddItemReqs:
             - Bicycle
             - Fly
+IncompatibleWith:
+    - 'Delete Fly'

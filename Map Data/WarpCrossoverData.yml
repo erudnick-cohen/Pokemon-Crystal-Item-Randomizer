@@ -124,6 +124,20 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
+        LocationReqs: Blackthorn Via Dragons Den Entrance
+        ItemReqs:
+        FlagsSet:
+        FlagReqs:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+            -
+    -
+        Name: Blackthorn Via Dragons Den Entrance
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
         LocationReqs: Blackthorn Clair Defeated Surf
         ItemReqs:
             - Surf
@@ -1223,7 +1237,37 @@ Location:
         WildTableList:
         Code:
         Text:
-    
+
+    -
+        Name: Ruins of Alph Top Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Ruins Ledge Middle
+        ItemReqs:
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Ruins Ledge Middle
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Ruins Surf
+        ItemReqs:
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Ruins Surf
         FileName: CianwoodCity.asm
@@ -2408,6 +2452,38 @@ Location:
         ItemReqs:
         FlagReqs:
             - Snorlax Woken
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Vermilion
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Vermilion Via Snorlax
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+
+    -
+        Name: Vermilion Via Snorlax
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Snorlax
+        ItemReqs:
+        FlagReqs:
+            - Impossible
         FlagsSet:
         ReachableReqs:
         WildTableList:

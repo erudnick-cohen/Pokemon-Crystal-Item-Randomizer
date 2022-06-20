@@ -252,13 +252,43 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.loadSettings(file)
 
 	def loadModifier(self):
-		modfile = QFileDialog.getOpenFileName(directory = 'Modifiers')[0]
-		if modfile != '':
-			yamlfile = open(modfile)
-			yamltext = yamlfile.read()
-			self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
-			self.modList[-1]['fileName'] = modfile
+		modfiles = QFileDialog.getOpenFileNames(directory = 'Modifiers')[0]
+		if len(modfiles) > 0:
+			for modfile in modfiles:
+				yamlfile = open(modfile)
+				yamltext = yamlfile.read()
+
+				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+				currentModifierNames = [obj["Name"] for obj in self.modList]
+
+
+				if loadedYaml["Name"] in currentModifierNames:
+					message = loadedYaml["Name"] + " is already loaded!"
+					error_dialog = QtWidgets.QErrorMessage()
+					error_dialog.showMessage(message)
+					error_dialog.exec_()
+
+					continue
+
+
+				is_incompatible = False
+				if "IncompatibleWith" in loadedYaml:
+					for incomp in loadedYaml["IncompatibleWith"]:
+						if incomp in currentModifierNames:
+							is_incompatible = True
+							message = loadedYaml["Name"] + "/" + incomp
+							error_dialog = QtWidgets.QErrorMessage()
+							error_dialog.showMessage('Invalid modifier chosen for selector:'+"\n"+message)
+							error_dialog.exec_()
+
+				if not is_incompatible:
+					self.modList.append(loadedYaml)
+					runningDirectory = os.getcwd().replace("\\","/")+"/"
+					safeFile = modfile.replace(runningDirectory, "")
+					self.modList[-1]['fileName'] = safeFile
+
 			self.updateModListView()
+
 
 	def deleteModifier(self):
 		row = self.modifierList.currentRow()
@@ -361,8 +391,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog.showMessage('A file was not selected!')
 			error_dialog.exec_()
 
+	def yamlSortFunction(self, y):
+		return y["Name"]
+
+
 	def GetSettingsMD5(self):
 		mods = self.modList
+		mods.sort(key=self.yamlSortFunction)
 		full_string = ";"
 		for mod in mods:
 			full_string += mod["Name"] + ";"

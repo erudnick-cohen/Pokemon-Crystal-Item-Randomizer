@@ -345,6 +345,9 @@ class Location:
 			if "Bicycle" in self.ItemReqs:
 				self.ItemReqs.remove("Bicycle")
 
+		if "Delete Fly" in flags and "Fly" in self.ItemReqs:
+			self.FlagReqs.append("Impossible")
+
 		for i in self.Sublocations:
 			 i.applyModifiers(modifierDict, flags)
 	

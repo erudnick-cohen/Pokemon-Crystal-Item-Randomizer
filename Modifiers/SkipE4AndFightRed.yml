@@ -7,3 +7,5 @@ Changes:
         Location: Red
         RemoveFlagReqs:
             - Became Champion
+IncompatibleWith:
+    - 'Open Mt. Silver'
