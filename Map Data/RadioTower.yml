@@ -247,7 +247,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Radio Tower
+                        LocationReqs: Radio Tower Rockets Part 2
                         FlagReqs:
                             - Beat Team Rocket
                         ItemReqs:
@@ -281,7 +281,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Radio Tower
+                        LocationReqs: Radio Tower Rockets Part 2
                         FlagReqs:
                             - Beat Team Rocket
                         ItemReqs:

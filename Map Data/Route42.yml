@@ -32,23 +32,6 @@ Location:
         Sublocations:
 
     -
-        Name: Route 42 Access
-        FileName: Route42.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: Route_42
-        LocationReqs:
-        FlagReqs:
-            - Warps
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList:
-        Sublocations:
-
-    -
         Name: Route 42 West
         FileName: Route42.asm
         Type: Map

@@ -281,6 +281,19 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 							error_dialog.showMessage('Invalid modifier chosen for selector:'+"\n"+message)
 							error_dialog.exec_()
 
+				if "IncompatibleWithout" in loadedYaml:
+					options = loadedYaml["IncompatibleWithout"]
+					optionFound = False
+					for option in options:
+						if option in currentModifierNames:
+							optionFound = True
+					if not optionFound:
+						is_incompatible = True
+						message = loadedYaml["Name"] + ":" + '/'.join(options)
+						error_dialog = QtWidgets.QErrorMessage()
+						error_dialog.showMessage('Modifier chosen invalid without other:' + "\n" + message)
+						error_dialog.exec_()
+
 				if not is_incompatible:
 					self.modList.append(loadedYaml)
 					runningDirectory = os.getcwd().replace("\\","/")+"/"

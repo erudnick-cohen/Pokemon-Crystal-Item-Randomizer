@@ -4,6 +4,7 @@ import RandomizeFunctions
 
 def testLocations():
     fullLocationData = LoadLocationData.LoadDataFromFolder(".", None, None , {}, [])
+
     all_locs = fullLocationData[0]
     locationList = LoadLocationData.FlattenLocationTree(all_locs)
 
@@ -11,7 +12,15 @@ def testLocations():
     recursiveLocations = []
     unfoundLocations = []
 
+    noSuperLocation = []
+
     for loc in locationList:
+
+        if loc.SuperLocation is not None and loc.SuperLocation not in loc.LocationReqs and \
+            loc.Type == "Item":
+            noSuperLocation.append(loc.Name)
+
+
         if loc.Name in unfoundLocations:
             foundLocations.append(loc.Name)
             unfoundLocations.remove(loc.Name)
@@ -31,7 +40,9 @@ def testLocations():
 
     print("Unfound:",unfoundLocations)
     print("Recusive:", recursiveLocations)
+    print("Superlocation:", noSuperLocation) # Superlocations do not need an assert, this must be manually reviewed
 
+    #assert (len(noSuperLocation) == 0)
     assert(len(unfoundLocations)==0)
     assert(len(recursiveLocations)==0)
 

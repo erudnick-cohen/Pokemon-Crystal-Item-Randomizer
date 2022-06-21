@@ -5,3 +5,6 @@ Changes:
         Location: Lance
         AddLocationReqs:
             - Red
+IncompatibleWithout:
+    - 'Skip E4 and fight Red'
+    - 'Open Mt. Silver'

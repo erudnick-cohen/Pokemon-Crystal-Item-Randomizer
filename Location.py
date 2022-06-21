@@ -32,6 +32,8 @@ class Location:
 		self.Type = yamlTree["Type"]
 		self.item = None
 		self.Handles = []
+		self.SuperLocation = None
+		self.YmlFile = None
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this
 		if("NormalItem" in yamlTree):

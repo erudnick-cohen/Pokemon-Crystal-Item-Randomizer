@@ -435,7 +435,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Climb Tin Tower
+                        LocationReqs: Tin Tower 6F
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -471,7 +471,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Climb Tin Tower
+                        LocationReqs: Tin Tower 7F
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:

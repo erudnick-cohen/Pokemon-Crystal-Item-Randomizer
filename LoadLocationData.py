@@ -441,7 +441,8 @@ def CheckLocationData(warpLocations, locationList):
 
 
 
-def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}, flags = [], labelling = False):
+def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}, flags = [], labelling = False,
+					   loadWarpData = True):
 	LocationList = []
 	LocCountDict = defaultdict(lambda: 0)
 	print("Creating Locations")
@@ -458,6 +459,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 				#print(location["Name"])
 				try:
 					nLoc = Location.Location(location)
+					nLoc.YmlFile = file
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict, flags)
 					if "Warps" in flags:
@@ -495,7 +497,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					raise(inst)
 
 	warp_removed_items = []
-	if "Warps" in flags:
+	if "Warps" in flags and loadWarpData:
 		warpData, warp_removed_items = LoadWarpData(LocationList, flags)
 		for warp in warpData:
 			LocationList.append(warp)
@@ -507,7 +509,6 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	#print('NameCounts')
 	#print(LocCountDict)
 	return (LocationList,trashList,warp_removed_items)
-	al
 def FlattenLocationTree(locations):
 	nList = []
 	aList = []
@@ -519,6 +520,7 @@ def FlattenLocationTree(locations):
 			nList.append(i)
 			#print('Flattened :'+i.Name)
 			for j in i.Sublocations:
+				j.SuperLocation = i.Name
 				aList.append(j)
 				done = False
 		locations = aList

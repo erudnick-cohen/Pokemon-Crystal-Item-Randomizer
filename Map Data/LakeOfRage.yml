@@ -43,7 +43,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 43
+                LocationReqs: Lake Of Rage
                 FlagReqs:
                     - Fog Badge
                 ItemReqs:

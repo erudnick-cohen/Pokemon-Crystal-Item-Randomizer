@@ -20,7 +20,7 @@ Location:
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Route 10 via Route 9
         FlagReqs:
@@ -31,7 +31,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Rock Tunnel Entrance
@@ -54,7 +54,7 @@ Location:
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Lavender Town
         FlagReqs:
@@ -65,7 +65,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
 
     -
@@ -111,7 +111,7 @@ Location:
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
+        WildTableList:
             - ROCK_TUNNEL_1F
             - ROCK_TUNNEL_B1F
         LocationReqs:
@@ -123,7 +123,7 @@ Location:
         Code:
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
         Sublocations:
         -
             Name: Rock Tunnel North Access
@@ -150,31 +150,9 @@ Location:
             HasPKMN: No
             WildTableList:
             LocationReqs:
-            FlagReqs:
-              - Zephyr Badge
-              - Warps
-            ItemReqs:
-              - Flash
-            FlagsSet:
-            ReachableReqs:
-            Code:
-            Text:
-            TrainerList:
-            WarpReqs:
-              - Rock Tunnel North Exit
-            Sublocations:
-
-        -
-            Name: Rock Tunnel North Access
-            FileName: RockTunnel1F.asm
-            Type: Map
-            HasPKMN: No
-            WildTableList:
-            LocationReqs:
                 Rock Tunnel via Route 10
             FlagReqs:
               - Zephyr Badge
-              - Warps
             ItemReqs:
               - Flash
             FlagsSet:
@@ -200,6 +178,7 @@ Location:
             Code:
             Text:
             TrainerList:
+            WarpReqs: Rock Tunnel North Exit
             Sublocations:
                 -
                     Name: Rock Tunnel Hidden X Accuracy
@@ -275,7 +254,6 @@ Location:
             Code:
             Text:
             TrainerList:
-            WarpReqs: Rock Tunnel South Exit
 
         -
             Name: Rock Tunnel South Exit
@@ -293,6 +271,7 @@ Location:
             Code:
             Text:
             TrainerList:
+            WarpReqs: Rock Tunnel South Exit
             Sublocations:
                 -
                     Name: Rock Tunnel Elixer
@@ -378,24 +357,6 @@ Location:
             Text:
             TrainerList:
 
-        -
-            Name: Rock Tunnel BF1 South Access
-            FileName: RockTunnel1F.asm
-            Type: Map
-            HasPKMN: No
-            WildTableList:
-            LocationReqs:
-            FlagReqs:
-                - Zephyr Badge
-                - Warps
-            ItemReqs:
-                - Flash
-            FlagsSet:
-            ReachableReqs:
-            Code:
-            Text:
-            TrainerList:
-            WarpReqs: Rock Tunnel BF1 South
 
         -
             Name: Rock Tunnel BF1 South Access
@@ -430,6 +391,7 @@ Location:
             Code:
             Text:
             TrainerList:
+            WarpReqs: Rock Tunnel BF1 South
             Sublocations:
                 -
                     Name: Rock Tunnel PP UP
@@ -520,26 +482,6 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs:
-            FlagReqs:
-                - Zephyr Badge
-                - Warps
-            ItemReqs:
-                - Flash
-            FlagsSet:
-            ReachableReqs:
-            Code:
-            Text:
-            TrainerList:
-            WarpReqs:
-                - Rock Tunnel BF1 North
-
-        -
-            Name: Rock Tunnel BF1 North Access
-            FileName: RockTunnel1F.asm
-            Type: Map
-            HasPKMN: No
-            WildTableList:
             LocationReqs: Rock Tunnel Passage
             FlagReqs:
                 - Zephyr Badge
@@ -567,6 +509,7 @@ Location:
             Code:
             Text:
             TrainerList:
+            WarpReqs: Rock Tunnel BF1 North
             Sublocations:
                   -
                     Name: Rock Tunnel Iron
@@ -625,8 +568,6 @@ Location:
             Code:
             Text:
             TrainerList:
-            WarpReqs:
-                - Rock Tunnel 1F Passage
 
         -
             Name: Rock Tunnel Passage
@@ -643,4 +584,5 @@ Location:
             ReachableReqs:
             Code:
             Text:
+            WarpReqs: Rock Tunnel BF1 North
             TrainerList:

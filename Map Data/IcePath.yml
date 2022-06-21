@@ -377,7 +377,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Ice Path Island Room
+                        LocationReqs: Ice Path Access
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
