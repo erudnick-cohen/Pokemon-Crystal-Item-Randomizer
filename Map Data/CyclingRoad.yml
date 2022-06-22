@@ -19,7 +19,7 @@ Location:
             - BIKER 6
             - BIKER 8
             - BIKER 9
-        WarpReqs: Cycling Road
+        WarpReqs: Cycling Road North
         Sublocations:
             -
                 Name: Route 17 Hidden Max Ether

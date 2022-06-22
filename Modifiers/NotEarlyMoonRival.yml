@@ -1,0 +1,25 @@
+Name: Not Early Moon Rival
+Description: Remove logic which forces the player to traverse Mt Moon warps until the player has at least 7 badges.
+Changes:
+    -
+        Location: Mount Moon Main
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Mount Moon Shop Passage In
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Mount Moon Main Ledge
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Mount Moon Shop Passage Out
+        AddFlagReqs:
+            - Rocket Invasion
+
+IncompatibleWithout:
+    - 'Warps'

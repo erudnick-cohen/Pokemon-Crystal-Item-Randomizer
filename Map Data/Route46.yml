@@ -47,7 +47,7 @@ Location:
             Text:
             TrainerList: 
             Sublocations:
-            WarpReqs: Blackthorn Lower Still
+            WarpReqs: Blackthorn Lowest
     -
             Name: Route 46 Upper
             FileName: Route46.asm

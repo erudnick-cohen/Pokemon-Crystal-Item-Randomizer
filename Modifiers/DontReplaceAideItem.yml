@@ -1,0 +1,7 @@
+Name: Dont Replace Aide Item
+Description: For supporting warp rando changing the first item to 5 Balls instead of random item, remove Aide Potion from logic
+Changes:
+    -
+        Location: Elm Aide Potion
+        AddFlagReqs:
+            - Impossible

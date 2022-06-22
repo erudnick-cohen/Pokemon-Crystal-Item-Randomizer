@@ -1,0 +1,104 @@
+Name: No Early Strong Fights
+Description: Prevents fighting any trainer with ~Lv40 Pokemon. Excludes Moon Rival as this is separate modifier.
+Changes:
+    -
+        Location: Saffron City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Cinnabar Island Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Viridian City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Pewter City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Cerulean City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Celadon City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Erika TM
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Vermilion City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Fuchsia City Gym Badge
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Janine TM
+        AddFlagReqs:
+            - Fuchsia City Gym Badge
+    -
+        Location: Lance
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Battle Clair
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Victory Road Hall 3
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Victory Road Hall 3 Exit
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Cycling Road North
+        AddFlagReqs:
+            - Rocket Invasion
+    -
+        Location: Cycling Road South
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Route 26 North
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Route 26
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Fuchsia
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Fuchsia West
+        AddFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Early Sabrina
+        NewFlagReqs:
+            - Impossible
+        NewLocationsReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible
+IncompatibleWithout:
+    - 'Warps'
+
+

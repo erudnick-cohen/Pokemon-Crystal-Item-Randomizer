@@ -3,8 +3,14 @@ Description: Guarantees that the seed will not require you to enter the basement
 Changes:
     -
         Location: Goldenrod Tunnel
-        NewFlagReqs:
+        AddFlagReqs:
             - Rocket Invasion
-        NewItemReqs:
+        AddItemReqs:
             - Card Key
-            - Basement Key
+
+    -
+        Location: Goldenrod Warehouse
+        AddFlagReqs:
+            - Rocket Invasion
+        AddItemReqs:
+            - Card Key

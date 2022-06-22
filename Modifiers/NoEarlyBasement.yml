@@ -3,11 +3,12 @@ Description: Prevents the basement in goldenrod from having the squirtbottle or 
 Changes:
     -
         Location: Goldenrod Tunnel Entrance A
-        NewItemReqs:
-            - Basement Key
+        AddItemReqs:
             - Squirtbottle
     -
         Location: Goldenrod Tunnel Entrance B
-        NewItemReqs:
-            - Basement Key
+        AddItemReqs:
             - Pass
+
+IncompatibleWith:
+    - 'Warps'

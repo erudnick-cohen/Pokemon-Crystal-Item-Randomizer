@@ -245,10 +245,10 @@ Location:
         WildTableList:
         LocationReqs:
             - Route 43
-            - Most Map Access
         FlagReqs:
             - Mon Locked Checks
             - Mahogany Rockets Defeated
+            - Most Map Access
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -256,7 +256,6 @@ Location:
         NormalItem: ELIXER
         WarpReqs:
             - Lake Of Rage Magikarp House
-            - Most Map Access
         Code: |
             .GetReward:
                 writetext MagikarpLengthRaterText_Memento

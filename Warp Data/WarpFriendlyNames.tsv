@@ -90,7 +90,7 @@ BLACKTHORN_CITY	36	9	ICE_PATH_1F	36	27	Blackthorn	Blackthorn City Ice Path Entra
 BLACKTHORN_CITY	20	1	DRAGONS_DEN_1F	3	5	Blackthorn Clair Defeated Surf	DRAGONS_DEN_1F Entrance
 SILVER_CAVE_OUTSIDE	23	19	SILVER_CAVE_POKECENTER_1F	3	7	Silver Outside	SILVER_CAVE_POKECENTER_1F Entrance
 SILVER_CAVE_OUTSIDE	18	11	SILVER_CAVE_ROOM_1	9	33	Silver Outside	SILVER_CAVE_ROOM_1 Entrance
-ROUTE_26	7	5	VICTORY_ROAD_GATE	9	17	Route 26	Route 26 North to Victory Road Gate Entrance
+ROUTE_26	7	5	VICTORY_ROAD_GATE	9	17	Route 26 North	Route 26 North to Victory Road Gate Entrance
 ROUTE_26	15	57	ROUTE_26_HEAL_HOUSE	2	7	Route 26	ROUTE_26_HEAL_HOUSE Entrance
 ROUTE_26	5	71	DAY_OF_WEEK_SIBLINGS_HOUSE	2	7	Route 26	DAY_OF_WEEK_SIBLINGS_HOUSE Entrance
 ROUTE_27	33	7	ROUTE_27_SANDSTORM_HOUSE	2	7	Tojho Exit	ROUTE_27_SANDSTORM_HOUSE Entrance
@@ -180,13 +180,13 @@ FUCHSIA_CITY	7	35	ROUTE_19_FUCHSIA_GATE	4	0	Fuchsia	Fuchsia To Route 19 Gate Ent
 FUCHSIA_CITY	8	35	ROUTE_19_FUCHSIA_GATE	5	0	Fuchsia	Fuchsia To Route 19 Gate Entrance 2
 ROUTE_18	2	6	ROUTE_17_ROUTE_18_GATE	9	4	Fuchsia	Route 18 to Route 17 Gate Entrance
 ROUTE_18	2	7	ROUTE_17_ROUTE_18_GATE	9	5	Fuchsia	Route 18 to Route 17 Gate Entrance 2
-ROUTE_17	17	82	ROUTE_17_ROUTE_18_GATE	0	4	Cycling Road	Route 17 to Route 18 Gate Entrance
-ROUTE_17	17	83	ROUTE_17_ROUTE_18_GATE	0	5	Cycling Road	Route 17 to Route 18 Gate Entrance 2
+ROUTE_17	17	82	ROUTE_17_ROUTE_18_GATE	0	4	Cycling Road South	Route 17 to Route 18 Gate Entrance
+ROUTE_17	17	83	ROUTE_17_ROUTE_18_GATE	0	5	Cycling Road South	Route 17 to Route 18 Gate Entrance 2
 ROUTE_16	3	1	ROUTE_16_FUCHSIA_SPEECH_HOUSE	2	7	Celadon Cut North	ROUTE_16_FUCHSIA_SPEECH_HOUSE Entrance
 ROUTE_16	14	6	ROUTE_16_GATE	9	4	Celadon	Celadon to Route 16 Gate Entrance
 ROUTE_16	14	7	ROUTE_16_GATE	9	5	Celadon	Celadon to Route 16 Gate Entrance 2
-ROUTE_16	9	6	ROUTE_16_GATE	0	4	Cycling Road	Route 16 to Celadon Gate Entrance
-ROUTE_16	9	7	ROUTE_16_GATE	0	5	Cycling Road	Route 16 to Celadon Gate Entrance 2
+ROUTE_16	9	6	ROUTE_16_GATE	0	4	Cycling Road North	Route 16 to Celadon Gate Entrance
+ROUTE_16	9	7	ROUTE_16_GATE	0	5	Cycling Road North	Route 16 to Celadon Gate Entrance 2
 CELADON_CITY	4	9	CELADON_DEPT_STORE_1F	7	7	Celadon	CELADON_DEPT_STORE_1F Entrance
 CELADON_CITY	16	9	CELADON_MANSION_1F	6	9	Celadon	Celadon Mansion Front  Entrance
 CELADON_CITY	16	3	CELADON_MANSION_1F	3	0	Celadon	Celadon Mansion Back Entrance
@@ -680,7 +680,7 @@ VICTORY_ROAD	17	33	VICTORY_ROAD	17	19	Victory Road Hall 2 Ledge	Victory Road 2F 
 VICTORY_ROAD	17	19	VICTORY_ROAD	17	33	Victory Road Hall 3 Ledge	Victory Road 3F Ledge Down 
 VICTORY_ROAD	0	11	VICTORY_ROAD	0	27	Victory Road Hall 3	Victory Road 3F Hole
 VICTORY_ROAD	0	27	VICTORY_ROAD	0	11	Victory Road Hall 2 Ledge TM	Victory Road 3F Hole Drop Point
-VICTORY_ROAD	13	5	ROUTE_23	9	13	Victory Road Hall 3	VICTORY_ROAD Exit
+VICTORY_ROAD	13	5	ROUTE_23	9	13	Victory Road Hall 3 Exit	VICTORY_ROAD Exit
 ECRUTEAK_TIN_TOWER_ENTRANCE	4	17	ECRUTEAK_CITY	18	11	Tin Tower Access Entrance	Tin Tower Access Exit
 ECRUTEAK_TIN_TOWER_ENTRANCE	5	17	ECRUTEAK_CITY	18	11	Tin Tower Access Entrance	Tin Tower Access Exit 2
 ECRUTEAK_TIN_TOWER_ENTRANCE	5	3	ECRUTEAK_TIN_TOWER_ENTRANCE	17	15	Tin Tower Access North	Tin Tower Access Corridor Entrance
