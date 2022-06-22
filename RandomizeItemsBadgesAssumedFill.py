@@ -319,12 +319,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	previousCount = 0
 	while len(progressList) > 0 and maxIter > 0:
 
-		print("iter=",maxIter, "pl:", len(progressList), progressList)
+		#print("iter=",maxIter, "pl:", len(progressList), progressList)
 
 		if previousCount == len(progressList):
 			remainingLocations = list(filter(lambda x: x.Type == "Item" or x.Type == "Gym", locList))
 			for r in remainingLocations:
-				print(r.Name)
+				print("r=",r.Name)
 
 		previousCount = len(progressList)
 
@@ -468,6 +468,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											kTrue = True
 
 											for l in k:
+												# Warps add edge case where warps can lead to themselves!
+												kTrue = kTrue and (l != j)
 												#print("Check element l in k", l)
 												#kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
 												#if not kTrue:
@@ -536,7 +538,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											revReqDict[k].extend(sorted(revReqDict[j]))
 											revReqDict[k].append(j)
 										jReqs = trueOption
-										addedList.append(j)
+										if j not in addedList:
+											addedList.append(j)
 										if len(paths)>1:
 											1+1
 											#print(revReqDict)
@@ -558,6 +561,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 									if len(paths) > 0:
 										singleTrue = True
 										for l in paths[0]:
+											singleTrue = singleTrue and (l != j)
 											singleTrue = singleTrue and (l not in revReqDict[j])
 											lTrueOr = len(requirementsDict[l]) == 0
 											for m in requirementsDict[l]:
@@ -578,10 +582,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 										if not singleTrue:
 											legal = False
+										else:
+											for l in paths[0]:
+												revReqDict[l].extend(sorted(revReqDict[j]))
+												revReqDict[l].append(j)
 									else:
 										if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
 											legal = False
-									addedList.append(j)
+									if j not in addedList:
+										addedList.append(j)
 							for k in jReqs:
 								if k not in allDepsList:
 									newDeps.append(k)
@@ -721,7 +730,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
 
-				print("reachable:",i.Name, "@", stage)
+				#print("reachable:",i.Name, "@", stage)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
 				#we can get somehwhere, so set this location in the state as true
@@ -761,7 +770,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							try:
 								placeItem = trashItems.pop()
 							except Exception as e:
-								print(e)
+								print("exception",e)
 								i.item = "GOLD_LEAF"
 								addAfter.append(i)
 							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):

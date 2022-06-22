@@ -1,5 +1,52 @@
 Location:
     -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 42 West
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 42 East
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+
+    -
         Name: Mt Mortar
         FileName: MountMortar1FOutside.asm
         Type: Map
@@ -7,7 +54,7 @@ Location:
         WildTableList: 
             - MOUNT_MORTAR_1F_OUTSIDE
             - MOUNT_MORTAR_1F_INSIDE
-        LocationReqs: Route 42 West
+        LocationReqs: Mt Mortar Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -131,7 +178,8 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Mt Mortar Middle
                 Sublocations:
             -
                 Name: Mt Mortar Inside Entry
@@ -139,7 +187,7 @@ Location:
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Mt Mortar
+                LocationReqs: Mt Mortar Inside Top
                 FlagReqs:
                     - Rising Badge
                     - Fog Badge
@@ -150,7 +198,8 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Mt Mortar Middle Waterfall
                 Sublocations:
             -
                 Name: Mt Mortar Inside

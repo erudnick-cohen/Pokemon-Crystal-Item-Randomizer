@@ -60,8 +60,8 @@ def ResetRomForLabelling():
 	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
 
 	if len(manual_copy_files) != counted:
-		print(len(manual_copy_files), counted)
-		print(manual_copy_files)
+		print("Manual copied files:", len(manual_copy_files), counted)
+		print("Copied files", manual_copy_files)
 		raise Exception("Unused file in folder")
 
 	for manual_file in manual_copy_files:

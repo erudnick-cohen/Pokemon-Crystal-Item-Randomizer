@@ -6,5 +6,10 @@ FlagsSet:
 Changes:
     -
         Location: Ruins of Alph Light Chamber Access
-        NewFlagReqs:
+        AddFlagReqs:
+            - Always Flash
+
+    -
+        Location: Flash Have
+        AddFlagReqs:
             - Always Flash

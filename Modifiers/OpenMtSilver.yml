@@ -35,5 +35,11 @@ Changes:
             - All Badges
         RemoveFlagReqs:
             - Became Champion
+
+    -
+        Location: Victory Road Gate Mt Silver
+        RemoveFlagReqs:
+            - All Badges
+
 IncompatibleWith:
     - 'Skip E4 and fight Red'

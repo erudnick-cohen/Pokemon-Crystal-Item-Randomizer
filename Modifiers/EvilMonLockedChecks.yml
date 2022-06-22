@@ -5,4 +5,5 @@ FlagsSet:
 Changes:
     -
         Location: Mon Locked Checks
-        NewFlagReqs: []
+        RemoveFlagReqs:
+            - Banned

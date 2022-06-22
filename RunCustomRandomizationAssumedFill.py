@@ -120,7 +120,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			maybeNewItems.extend(i['MaybeNewItems'])
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
-	print(changeListDict)
+	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
 
 	if "Warps" in flags:
@@ -251,15 +251,15 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				if 'ProgressItems' in otherSettings:
 					progressItems = copy.deepcopy(otherSettings['ProgressItems'])
 					progressItems.extend(addedProgressList)
-					print(otherSettings)
+					#print(otherSettings)
 					for i in progressItems:
 						if i in trashItems:
 							trashItems.remove(i)
-			print(progressItems)
-			print(trashItems)
+			#print(progressItems)
+			#print(trashItems)
 			LocationList = res_locations
 			rmCore = []
-			print(coreProgress)
+			#print(coreProgress)
 			for i in coreProgress:
 				if not i in progressItems:
 					rmCore.append(i)
@@ -282,18 +282,20 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		seedIncrements += 1
 	print('-------')
 
-	print("Seed increments:",seedIncrements)
+	print("Seed increments:",seedIncrements-1)
 
 
 	for j in result[0]:
 		i = result[0][j]
 		if(i.NormalItem is None and i.isItem()):
-			print(i.Name)
+			pass
+			#print(i.Name)
 	print('-------')
 	for j in result[0]:
 		i = result[0][j]
 		if(i.NormalItem is not None and not i.isItem()):
-			print(i.Name)
+			pass
+			#print(i.Name)
 
 	yamlfile = open("crystal-speedchoice-label-details.json",encoding='utf-8')
 	yamltext = yamlfile.read()

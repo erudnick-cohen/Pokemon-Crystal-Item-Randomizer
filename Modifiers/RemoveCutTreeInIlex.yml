@@ -126,14 +126,14 @@ Changes:
             - S S Ticket
 
     -
-        Location: Ilex North Warpie
+        Location: Ilex North
         RemoveItemReqs:
             - Cut
         RemoveFlagReqs:
             - Hive Badge
 
     -
-        Location: Ilex South Warpie
+        Location: Ilex South
         RemoveItemReqs:
             - Cut
         RemoveFlagReqs:

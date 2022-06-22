@@ -17,6 +17,17 @@ Changes:
             - Storm Badge
         AddItemReqs:
             - Fly
+
+    -
+        Location: Tin Tower 5F Start
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly
+
+
 IncompatibleWith:
     - 'Delete Fly'
     - 'Teleport instead of fly'
+IncompatibleWithout:
+    - 'Warps'

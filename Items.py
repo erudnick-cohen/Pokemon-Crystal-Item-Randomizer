@@ -60,7 +60,7 @@ def makeRawItemCodeDict(progRod = False):
 	with open('ItemValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
-			print(i)
+			#print(i)
 			if(len(i)>0):
 				if('ROD' in i[0] and progRod):
 					rawTable[i[0]] = (int(i[1]), 'Rod')
@@ -69,11 +69,11 @@ def makeRawItemCodeDict(progRod = False):
 	with open('FlagValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
-			print(i)
+			#print(i)
 			if(len(i)>0):
 				rawTable[i[0]] = (int(i[1]), 'Flag')
-	print(rawTable)
-	print(keyItemMap)
+	#print(rawTable)
+	#print(keyItemMap)
 
 	def lookupItemCode(item):
 		if item not in itemCodeDict:

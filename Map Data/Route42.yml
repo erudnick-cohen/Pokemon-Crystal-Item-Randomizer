@@ -308,6 +308,7 @@ Location:
         Code:
         Text:
         AREALV: 16
+        WarpReqs: Mahogany
         TrainerList:
             - FISHER 7
             - POKEMANIAC 4

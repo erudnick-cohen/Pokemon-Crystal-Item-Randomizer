@@ -81,7 +81,7 @@ def LoadWarpData(locationList, flags):
 
 
 		if "No Flash" not in flags and\
-				len(list(filter(lambda x: x in fromGroupName,darkWarpGroups))) > 0:
+				len(list(filter(lambda x: x in fromGroupName or x in toGroupName,darkWarpGroups))) > 0:
 			locationData["FlagReqs"].append("Zephyr Badge")
 			locationData["ItemReqs"].append("Flash")
 
@@ -91,6 +91,8 @@ def LoadWarpData(locationList, flags):
 					locationData["FlagReqs"].append("Storm Badge")
 				if "Fly" not in locationData["ItemReqs"]:
 					locationData["ItemReqs"].append("Fly")
+
+
 
 
 		l = Location.Location(locationData)

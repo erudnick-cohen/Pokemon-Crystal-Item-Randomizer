@@ -1084,30 +1084,14 @@ Location:
         Text:
         
     -
-        Name: Cherrygrove
+        Name: Route 31
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 31
+        LocationReqs: Cherrygrove
         ItemReqs:
         FlagReqs:
             - Gave Elm Egg
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
-        
-    -
-        Name: Cherrygrove
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs: Route 31
-        ItemReqs:
-            - Cut
-        FlagReqs:
-            - Hive Badge
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1120,6 +1104,22 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: Cherrygrove
+        ItemReqs:
+            - Cut
+        FlagReqs:
+            - Hive Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        
+    -
+        Name: Cherrygrove
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 31
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -1846,10 +1846,10 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs:
-            - All Badges
             - Victory Road Gate
         ItemReqs:
         FlagReqs:
+            - All Badges
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -3004,6 +3004,36 @@ Location:
             - Fly
         FlagReqs:
             - Storm Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 4F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 4F Middle
+        ItemReqs:
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Lighthouse 4F Middle
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Lighthouse 4F
+        ItemReqs:
+        FlagReqs:
+            - Impossible
         FlagsSet:
         ReachableReqs:
         WildTableList:

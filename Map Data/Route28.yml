@@ -19,7 +19,7 @@ Location:
         Sublocations:
 
     -
-        Name: Route 28 Steel Wing House
+        Name: Route 28 Cut Access
         FileName: Route28SteelWingHouse.asm
         Type: Map
         HasPKMN: No
@@ -36,26 +36,25 @@ Location:
         Code:
         Text:
         ReachableReqs:
+        WarpReqs: 28 Cut
         Sublocations:
 
     -
-        Name: Route 28 Steel Wing House
+        Name: Route 28 Cut Access
         FileName: Route28SteelWingHouse.asm
         Type: Map
         HasPKMN: No
         WildTableList:
             - ROUTE_28
         LocationReqs:
-            - Route 28
         FlagReqs:
-            - Warps
-        Code:
-        Text:
         ItemReqs:
         FlagsSet:
         TrainerList:
-        WarpReqs: Steel Wing House
+        Code:
+        Text:
         ReachableReqs:
+        WarpReqs: 28 Cut
         Sublocations:
 
     -
@@ -67,7 +66,7 @@ Location:
         FlagReqs:
         ItemReqs:
         LocationReqs:
-            - Route 28 Steel Wing House
+            - Route 28 Cut Access
         FlagsSet:
         ReachableReqs:
         NormalItem: TM_STEEL_WING
@@ -83,8 +82,10 @@ Location:
                 iffalse .Done
                 setevent EVENT_GOT_TM47_STEEL_WING
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Steel Wing House
         Sublocations:
+
     -
         Name: Route 28 Hidden Rare Candy
         FileName: Route28.asm
@@ -93,7 +94,7 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
-            - Route 28 Steel Wing House
+            - Route 28 Cut Access
         FlagReqs:
             - Hidden Items
         ItemReqs:

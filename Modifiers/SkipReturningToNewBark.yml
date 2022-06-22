@@ -8,6 +8,6 @@ Changes:
         NewFlagReqs: []
 
     -
-        Location: Route 31 Warpie
+        Location: Route 31
         RemoveFlagReqs:
             - Gave Elm Egg

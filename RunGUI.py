@@ -215,7 +215,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if ok1 and ok2:
 			for i in range(0,nAdded):
 				self.settings['BonusItems'].append(addedItem)
-		print(self.settings)
+		#print(self.settings)
 
 	def RemoveBonusItem(self):
 		if 'BonusItems' in self.settings and len(self.settings['BonusItems']) > 0:
@@ -230,7 +230,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				for i in range(0,nAdded):
 					if addedItem in self.settings['BonusItems']:
 						self.settings['BonusItems'].remove(addedItem)
-		print(self.settings)
+		#print(self.settings)
 
 
 	def selectRom(self):
@@ -361,7 +361,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			spoiler = yaml.load(yamltext, Loader=yaml.FullLoader)
 			newSpoiler = OrderedDict()
 			for i in sorted(spoiler['Solution'],reverse=True):
-				print(i)
+				print("Plando:",i)
 				print(spoiler['Solution'][i])
 				newSpoiler[spoiler['Solution'][i]] = i
 			print(newSpoiler)
@@ -409,7 +409,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 
 	def GetSettingsMD5(self):
-		mods = self.modList
+		mods = self.modList.copy()
 		mods.sort(key=self.yamlSortFunction)
 		full_string = ";"
 		for mod in mods:
