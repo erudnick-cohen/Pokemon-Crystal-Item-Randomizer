@@ -23,7 +23,7 @@ Changes:
 
     -
         Location: Vermilion Via Snorlax
-        RemoveItemReqs:
+        RemoveFlagReqs:
             - Impossible
 
     -

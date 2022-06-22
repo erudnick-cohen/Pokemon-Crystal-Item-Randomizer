@@ -1819,6 +1819,7 @@ Location:
           - Victory Road Gate Snorlax
         ItemReqs:
         FlagReqs:
+            - Snorlax Woken
         FlagsSet:
         ReachableReqs:
         WildTableList:

@@ -78,6 +78,9 @@ def LoadWarpData(locationList, flags):
 
 		darkWarpGroups = {"Silver Cave Room 1", "Whirl Island", "Rock Tunnel", "Dark Cave"}
 
+		# For warps loaded in, modifiers must use Warpie in their description
+		# For transitions, either/or is valid technically!
+
 
 
 		if "No Flash" not in flags and\
