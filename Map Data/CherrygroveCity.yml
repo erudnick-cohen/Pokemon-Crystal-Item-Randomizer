@@ -147,3 +147,39 @@ Location:
                     - RIVAL1 3
                 Code: 
                 Sublocations:
+
+    -
+        Name: Cherrygrove Mart
+        FileName: CherrygroveCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CHERRYGROVE_CITY
+        LocationReqs: Cherrygrove City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Cherrygrove
+        WarpReqs: Cherrygrove Mart
+        Sublocations:
+            -
+                Name: Cherrygrove Mart Poke Ball
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_BALL
+                Sublocations:

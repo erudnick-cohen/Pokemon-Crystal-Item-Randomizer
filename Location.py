@@ -34,6 +34,13 @@ class Location:
 		self.Handles = []
 		self.SuperLocation = None
 		self.YmlFile = None
+
+		if self.Type == "Shop":
+			self.IsItem = True
+			self.IsShop = True
+		else:
+			self.IsShop = False
+
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this
 		if("NormalItem" in yamlTree):
@@ -401,3 +408,6 @@ class Location:
 
 		if "Pure Evil Checks" in self.FlagReqs:
 			self.Tags.append(Tag(name="Evil"))
+
+	def isShop(self):
+		return self.IsShop

@@ -7,7 +7,7 @@ ItemRandoActive::
 .ckir_AFTERItemRandoActive::
 HoOhChamberNerfed::
 .ckir_BEFOREHoOhChamberNerfed::
-	db 
+	db
 .ckir_AFTERHoOhChamberNerfed::
 ClassicRainbowWing::
 .ckir_BEFOREClassicRainbowWing::
@@ -29,4 +29,12 @@ ItemRandoEasyTinTower::
 .ckir_BEFOREItemRandoEasyTinTower::
 	db
 .ckir_AFTERItemRandoEasyTinTower::
+ItemRandoBetterMarts::
+.ckir_BEFOREItemRandoBetterMarts::
+    db 1
+.ckir_AFTERItemRandoBetterMarts::
+ItemRandoStartWithBike::
+.ckir_BEFOREItemRandoStartWithBike::
+    db
+.ckir_AFTERItemRandoStartWithBike::
 ItemRandoDataEnd::

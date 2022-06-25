@@ -81,9 +81,7 @@ def main
   end.sort_by { |details| details["label"] }
 
   label_details << ilex_forest_diff
-
-  File.write(OUT_FILE, label_details.to_json)
-
+  File.write(OUT_FILE, JSON.pretty_generate(label_details))
   STDERR.puts "generated #{OUT_FILE}"
 end
 

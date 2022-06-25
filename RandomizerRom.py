@@ -205,7 +205,9 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in locations:
-		if i.isItem():
+		if i.isShop():
+			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
+		elif i.isItem():
 			if i.IsHidden:
 				WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
 			elif not i.IsSpecial:
@@ -371,6 +373,22 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressData2["address_range"]["begin"]+2] = endVal
 
 
+def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
+	beforeLabel = "ckir_BEFORE"+ \
+				  (("".join(location.Name.split())+"0ITEMCODE").upper())
+	addressData = labelData[beforeLabel]
+
+	nItemCodeData = itemScriptLookup(location.item)
+	nItemCode = nItemCodeData[0]
+	itemType = nItemCodeData[1]
+	if itemType == "Item":
+		romMap[addressData["address_range"]["begin"] + 1] = nItemCode
+	else:
+		# This will write the other byte of shopitem macro in future
+		# This is not yet supported by speedchoice engine changes
+		raise Exception("Not yet supported")
+
+
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
@@ -461,8 +479,9 @@ def LabelAllLocations(locations):
 	#codeLookup = Items.makeItemCodeDict()
 	#textLookup = Items.makeItemTextDict()
 	for i in locations:
-		#TODO, LABELING FOR SPECIAL LOCATIONS
-		if i.isItem() or i.Type == 'Dummy':
+		if i.isShop():
+			LabelShopLocation(i)
+		elif i.isItem() or i.Type == 'Dummy':
 			LabelItemLocation(i)
 		elif i.isGym():
 			LabelBadgeLocation(i)
@@ -677,6 +696,42 @@ def LabelTrainerData(trainerData):
 	newfilestream.flush()
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
+
+
+def LabelShopLocation(location):
+	print("Labelling", location.Name)
+	mart_data_file = "RandomizerRom/data/items/marts.asm"
+	file = open(mart_data_file)
+	filecode = file.read()
+	file.close()
+
+	shopName = location.FileName
+	shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n){1,}\tdb -1, -1"+")"
+	currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
+	shopDetail = currentShopDesc[0][0]
+
+	itemRegex = "shopitem,\t\d{1,}, "+location.NormalItem+"\n"
+	itemDesc = re.findall(itemRegex, shopDetail)
+	beforeLabel = ".ckir_BEFORE"+"".join(location.Name.upper().split())+"0ITEMCODE::\n"
+	afterLabel = ".ckir_AFTER"+"".join(location.Name.upper().split())+"0ITEMCODE::\n"
+	toReplace = "\t" + itemDesc[0]
+	replacement = beforeLabel + toReplace + afterLabel
+
+	shopDetailReplaced = shopDetail.replace(toReplace, replacement)
+	changedCode = filecode.replace(shopDetail, shopDetailReplaced)
+
+	newfilestream = open(mart_data_file, "w")
+	newfilestream.seek(0)
+	newfilestream.write(changedCode)
+	newfilestream.truncate()
+	newfilestream.flush()
+	newfilestream.close()
+
+	return
+
+
+
+
 
 #currently only labels "regular" items
 def LabelItemLocation(location):
