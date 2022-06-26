@@ -122,3 +122,192 @@ Location:
                 Code: |
                   VioletCityFruitTree:
                       ITEMLINE
+    -
+        Name: Violet Mart
+        FileName: VioletCity.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+            - VIOLET_CITY
+        LocationReqs: Violet City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Violet
+        WarpReqs: Violet Mart
+        Sublocations:
+            -
+                Name: Violet Mart Poke Ball
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_BALL
+                Sublocations:
+            -
+                Name: Violet Mart Escape Rope
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Impossible
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ESCAPE_ROPE
+                Sublocations:
+            -
+                Name: Violet Mart Repel
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REPEL
+                Sublocations:
+            -
+                Name: Violet Mart Antidote
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+                Sublocations:
+            -
+                Name: Violet Mart Parlyz Heal
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+                Sublocations:
+            -
+                Name: Violet Mart Awakening
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+                Sublocations:
+            -
+                Name: Violet Mart Ice Heal
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ICE_HEAL
+                Sublocations:
+            -
+                Name: Violet Mart X Defend
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_DEFEND
+                Sublocations:
+            -
+                Name: Violet Mart X Attack
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_ATTACK
+                Sublocations:
+            -
+                Name: Violet Mart X Speed
+                FileName: MartVioletBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Violet Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_SPEED
+                Sublocations:

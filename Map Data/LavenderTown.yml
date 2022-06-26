@@ -17,32 +17,186 @@ Location:
         HintName: Lavender
         WarpReqs: East Kanto
         Sublocations:
-        -
-            Name: Expansion Card Gift
-            FileName: LavRadioTower1F.asm
-            Type: Item
-            HasPKMN: No
-            WildTableList: 
-            LocationReqs:
-                - Lavender Town
-            FlagReqs:
-                - Impossible
-                - Kanto Power Restored
-            ItemReqs:
-            FlagsSet:
-            ReachableReqs:
-            Code: |
-                .ReturnedMachinePart:
-                    writetext LavRadioTower1FGentlemanText_ReturnedMachinePart
-                    promptbutton
-                    ITEMLINE
-                    setevent EVENT_EXPN_CARD_RECEIVED
-                .GotExpnCard:
-                    writetext LavRadioTower1FGentlemanText_GotExpnCard
-                    waitbutton
-                    closetext
-                    end
-            Text:
-            TrainerList: 
-            Sublocations:
-            WarpReqs: Lavender Radio Tower
+    -
+        Name: Expansion Card Gift
+        FileName: LavRadioTower1F.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Lavender Town
+        FlagReqs:
+            - Impossible
+            - Kanto Power Restored
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: |
+            .ReturnedMachinePart:
+                writetext LavRadioTower1FGentlemanText_ReturnedMachinePart
+                promptbutton
+                ITEMLINE
+                setevent EVENT_EXPN_CARD_RECEIVED
+            .GotExpnCard:
+                writetext LavRadioTower1FGentlemanText_GotExpnCard
+                waitbutton
+                closetext
+                end
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs: Lavender Radio Tower
+
+    -
+        Name: Lavender Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Lavender Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Lavender
+        WarpReqs: Lavender Mart
+        Sublocations:
+            -
+                Name: Lavender Mart Great Ball
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+                Sublocations:
+            -
+                Name: Lavender Mart Potion
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POTION
+                Sublocations:
+            -
+                Name: Lavender Mart Super Potion
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_POTION
+                Sublocations:
+            -
+                Name: Lavender Mart Max Repel
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: MAX_REPEL
+                Sublocations:
+            -
+                Name: Lavender Mart Antidote
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+                Sublocations:
+            -
+                Name: Lavender Mart Parlyz Heal
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+                Sublocations:
+            -
+                Name: Lavender Mart Awakening
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+                Sublocations:
+            -
+                Name: Lavender Mart Burn Heal
+                FileName: MartLavender
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Lavender Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: BURN_HEAL
+                Sublocations:

@@ -1,0 +1,9 @@
+Name: Shopsanity
+Description: Adds shop items into logic.
+FlagsSet:
+    - Shopsanity
+Changes:
+    -
+        Location: Shopsanity
+        RemoveFlagReqs:
+            - Banned

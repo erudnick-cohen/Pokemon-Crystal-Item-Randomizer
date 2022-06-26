@@ -62,6 +62,8 @@ for location in locationList:
 		permittedExclusion = True
 	if 'NPC Trash Can' in location.FlagReqs and "NPC Trash Can" not in settings['FlagsSet']:
 		permittedExclusion = True
+	if 'Shopsanity' in location.FlagReqs and "Shopsanity" not in settings['FlagsSet']:
+		permittedExclusion = True
 	if 'Warps' in location.FlagReqs and "Warps" not in settings["FlagsSet"]:
 		permittedExclusion = True
 	if 'Impossible' in location.LocationReqs \

@@ -40,3 +40,174 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Cerulean Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Cerulean City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Cerulean
+        WarpReqs: Cerulean Mart
+        Sublocations:
+            -
+                Name: Cerulean Mart Great Ball
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+                Sublocations:
+            -
+                Name: Cerulean Mart Ultra Ball
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ULTRA_BALL
+                Sublocations:
+            -
+                Name: Cerulean Mart Super Potion
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_POTION
+                Sublocations:
+            -
+                Name: Cerulean Mart Super Repel
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_REPEL
+                Sublocations:
+            -
+                Name: Cerulean Mart Full Heal
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FULL_HEAL
+                Sublocations:
+            -
+                Name: Cerulean Mart X Defend
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_DEFEND
+                Sublocations:
+            -
+                Name: Cerulean Mart X Attack
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_ATTACK
+                Sublocations:
+            -
+                Name: Cerulean Mart Dire Hit
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: DIRE_HIT
+                Sublocations:
+            -
+                Name: Cerulean Mart Surf Mail
+                FileName: MartCerulean
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Cerulean Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SURF_MAIL
+                Sublocations:

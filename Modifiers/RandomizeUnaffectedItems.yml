@@ -42,3 +42,7 @@ Changes:
         Location: Pointless Checks
         AddHandle:
             - ImpossibleRandomise
+    -
+        Location: Shopsanity
+        AddHandle:
+            - ImpossibleRandomise

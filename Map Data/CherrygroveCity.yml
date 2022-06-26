@@ -175,6 +175,7 @@ Location:
                     - CHERRYGROVE_CITY
                 LocationReqs: Cherrygrove Mart
                 FlagReqs:
+                    - Shopsanity
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -182,4 +183,115 @@ Location:
                 Text:
                 TrainerList:
                 NormalItem: POKE_BALL
+                Sublocations:
+            -
+                Name: Cherrygrove Mart Potion
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POTION
+                Sublocations:
+            -
+                Name: Cherrygrove Mart Repel
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REPEL
+                Sublocations:
+            -
+                Name: Cherrygrove Mart ANTIDOTE
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Parlyz Heal
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Awakening
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Ice Heal
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ICE_HEAL
                 Sublocations:

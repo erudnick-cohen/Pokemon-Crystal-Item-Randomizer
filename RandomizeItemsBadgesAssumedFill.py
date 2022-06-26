@@ -380,6 +380,12 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if (locList[iter] in MtSilverSubItems and toAllocate in coreProgress):
 					placeable = False
 
+				if locList[iter].isShop() and \
+						(toAllocate in badgeSet or toAllocate in \
+					[ "Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX" ]):
+					# Shopsanity does not yet support flags in shops
+					placeable = False
+
 				# Unlikely to be the culprit?
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
 					break
@@ -777,6 +783,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								oldItem = placeItem
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+							while placeItem in [ "Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD", "SUPER_ROD" ] and \
+									i.isShop():
+								oldItem = placeItem
+								placeItem = trashItems.pop()
+								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
 							i.item = placeItem
 						#print("Trash", i.Name, i.item)
 						if i.item != "GOLD_LEAF":

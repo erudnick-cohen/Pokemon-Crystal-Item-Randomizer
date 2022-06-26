@@ -706,7 +706,7 @@ def LabelShopLocation(location):
 	file.close()
 
 	shopName = location.FileName
-	shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n){1,}\tdb -1, -1"+")"
+	shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
 	currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
 	shopDetail = currentShopDesc[0][0]
 

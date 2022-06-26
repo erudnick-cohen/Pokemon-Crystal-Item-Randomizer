@@ -117,3 +117,121 @@ Location:
             - LANCE 1
         Sublocations:
         WarpReqs: Lances Room
+    -
+        Name: Indigo Plateau Shop
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Indigo Plateau
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Indigo Plateau
+        Sublocations:
+        -
+            Name: Indigo Plateau Shop Ultra Ball
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Max Repel
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_REPEL
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Max Potion
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_POTION
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Full Restore
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_RESTORE
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Revive
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Full Heal
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_HEAL
+            Sublocations:

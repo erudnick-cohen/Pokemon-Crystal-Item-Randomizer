@@ -381,6 +381,8 @@ class Location:
 			include = False
 		if 'NPC Trash Can' in self.FlagReqs and "NPC Trash Can" not in flags:
 			include = False
+		if 'Shopsanity' in self.FlagReqs and "Shopsanity" not in flags:
+			include = False
 		if include:
 			if self.NormalItem is not None and self.isItem():
 				list.append(self.NormalItem)

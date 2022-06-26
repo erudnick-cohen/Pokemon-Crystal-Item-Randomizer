@@ -207,3 +207,173 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+    -
+        Name: Olivine Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Olivine
+        WarpReqs: Olivine Mart
+        Sublocations:
+        -
+            Name: Olivine Mart Great Ball
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: GREAT_BALL
+            Sublocations:
+        -
+            Name: Olivine Mart Super Potion
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Olivine Mart Hyper Potion
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Olivine Mart Antidote
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ANTIDOTE
+            Sublocations:
+        -
+            Name: Olivine Mart Parlyz Heal
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PARLYZ_HEAL
+            Sublocations:
+        -
+            Name: Olivine Mart Awakening
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: AWAKENING
+            Sublocations:
+        -
+            Name: Olivine Mart Ice Heal
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ICE_HEAL
+            Sublocations:
+        -
+            Name: Olivine Mart Super Repel
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_REPEL
+            Sublocations:
+        -
+            Name: Olivine Mart Surf Mail
+            FileName: MartOlivine
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Olivine Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SURF_MAIL
+            Sublocations:

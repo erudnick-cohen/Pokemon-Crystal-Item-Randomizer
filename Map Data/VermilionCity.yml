@@ -277,3 +277,157 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Vermilion Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Vermilion City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Vermilion
+        WarpReqs: Vermilion Mart
+        Sublocations:
+        -
+            Name: Vermilion Mart Ultra Ball
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Vermilion Mart Super Potion
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Vermilion Mart Hyper Potion
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Vermilion Mart Revive
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:
+        -
+            Name: Vermilion Mart Parlyz Heal
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PARLYZ_HEAL
+            Sublocations:
+        -
+            Name: Vermilion Mart Awakening
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: AWAKENING
+            Sublocations:
+        -
+            Name: Vermilion Mart Burn Heal
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: BURN_HEAL
+            Sublocations:
+        -
+            Name: Vermilion Mart Lite Blue Mail
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: LITEBLUEMAIL
+            Sublocations:

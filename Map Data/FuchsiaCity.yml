@@ -78,10 +78,8 @@ Location:
                 WildTableList:
                 LocationReqs: Fuchsia City
                 FlagReqs:
-                    - Hive Badge
                     - Berry Trees
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 ReachableReqs:
                 Text:
@@ -124,4 +122,141 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+
+    -
+        Name: Fuchsia Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Fuchsia City Back
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Fuchsia
+        WarpReqs: Fuchsia Mart
+        Sublocations:
+        -
+            Name: Fuchsia Mart Great Ball
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: GREAT_BALL
+            Sublocations:
+        -
+            Name: Fuchsia Mart Ultra Ball
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Fuchsia Mart Super Potion
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Fuchsia Mart Hyper Potion
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Fuchsia Mart Full Heal
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_HEAL
+            Sublocations:
+        -
+            Name: Fuchsia Mart Max Repel
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_REPEL
+            Sublocations:
+        -
+            Name: Fuchsia Mart Flower Mail
+            FileName: MartFuchsia
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Fuchsia Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FLOWER_MAIL
+            Sublocations:
         
