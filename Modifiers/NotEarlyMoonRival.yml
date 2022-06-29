@@ -1,5 +1,5 @@
 Name: Not Early Moon Rival
-Description: Remove logic which forces the player to traverse Mt Moon warps until the player has at least 7 badges.
+Description: Preventing requiring to take the warp transitions through Mt Moon until you have 7 Badges. However, rival fight will still happen, so save frequently.
 Changes:
     -
         Location: Mount Moon Main Warpie

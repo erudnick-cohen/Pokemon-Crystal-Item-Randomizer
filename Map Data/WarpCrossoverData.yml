@@ -120,9 +120,9 @@ Location:
         Text:
 
     -
-        Name: Blackthorn
+        Name: Blackthorn Warpie
         FileName: CianwoodCity.asm
-        Type: Transition
+        Type: Map
         HasPKMN: No
         LocationReqs: Blackthorn Via Dragons Den Entrance
         ItemReqs:
@@ -136,9 +136,9 @@ Location:
     -
         Name: Blackthorn Via Dragons Den Entrance
         FileName: CianwoodCity.asm
-        Type: Transition
+        Type: Map
         HasPKMN: No
-        LocationReqs: Blackthorn Clair Defeated Surf
+        LocationReqs: Blackthorn Warpie
         ItemReqs:
             - Surf
         FlagsSet:
@@ -193,7 +193,7 @@ Location:
         Text:
 
     -
-        Name: Blackthorn Lower Still
+        Name: Blackthorn Lowest
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -247,7 +247,7 @@ Location:
         HasPKMN: No
         LocationReqs: Burned Tower 1F
         ItemReqs:
-        FlagReqs:        
+        FlagReqs:
             - Released Beasts
         FlagsSet:
         ReachableReqs:
@@ -347,6 +347,24 @@ Location:
         WildTableList:
         Code:
         Text:
+
+    -
+        Name: Dark Cave North
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Dark Cave North Block
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        FlagReqs:
+            - Fog Badge
+            - Impossible
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Dark Cave Violet
         FileName: CianwoodCity.asm
@@ -602,13 +620,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Ho-Oh In Party
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: 
+        LocationReqs:
             - Ho-Oh Chamber
         ItemReqs:
         FlagReqs:
@@ -691,7 +709,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Ilex South
         FileName: CianwoodCity.asm
@@ -707,7 +725,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Lake Of Rage Cut
         FileName: CianwoodCity.asm
@@ -723,7 +741,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Lake Of Rage
         FileName: CianwoodCity.asm
@@ -754,7 +772,7 @@ Location:
         WildTableList:
         Code:
         Text:
-      
+
     -
         Name: Mahogany
         FileName: CianwoodCity.asm
@@ -782,13 +800,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mahogany 7 Badges
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: 
+        LocationReqs:
             - Mahogany
         ItemReqs:
         FlagReqs:
@@ -798,7 +816,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mortar Surf South
         FileName: CianwoodCity.asm
@@ -816,7 +834,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mortar Waterfall Room North
         FileName: CianwoodCity.asm
@@ -832,7 +850,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mortar Waterfall Room South
         FileName: CianwoodCity.asm
@@ -848,13 +866,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
-        Name: Cerulean City
+        Name: Cerulean
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Mount Moon Exit
+        LocationReqs: Route 4
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -876,7 +894,22 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
+    -
+        Name: Mount Moon Main Ledge
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Mount Moon Main
+        ItemReqs:
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Mt Mortar Middle Entrance Hall Waterfall
         FileName: CianwoodCity.asm
@@ -894,7 +927,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mt Mortar Middle Entrance Hall
         FileName: CianwoodCity.asm
@@ -910,7 +943,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Radio Tower 2F Rockets
         FileName: CianwoodCity.asm
@@ -926,7 +959,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Radio Tower 2F
         FileName: CianwoodCity.asm
@@ -957,7 +990,24 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
+    -
+        Name: Radio Tower 3F
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Radio Tower 3F Maybe Card Key
+        ItemReqs:
+            - Card Key
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: Rocket Base Entrance Open
         FileName: CianwoodCity.asm
@@ -972,7 +1022,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Rocket Base Entrance
         FileName: CianwoodCity.asm
@@ -986,9 +1036,9 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
-        Name: Route 2
+        Name: West Kanto
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -1002,13 +1052,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 2 Cut
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 2
+        LocationReqs: West Kanto
         ItemReqs:
             - Cut
         FlagReqs:
@@ -1018,13 +1068,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 2 Diglett
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 2
+        LocationReqs: West Kanto
         ItemReqs:
             - Cut
         FlagReqs:
@@ -1034,9 +1084,9 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
-        Name: Route 2
+        Name: West Kanto
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -1050,13 +1100,13 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 2 South
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 2
+        LocationReqs: West Kanto
         ItemReqs:
             - Cut
         FlagReqs:
@@ -1066,9 +1116,9 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
-        Name: Route 2
+        Name: West Kanto
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -1082,7 +1132,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 31
         FileName: CianwoodCity.asm
@@ -1097,7 +1147,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 31
         FileName: CianwoodCity.asm
@@ -1113,7 +1163,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Cherrygrove
         FileName: CianwoodCity.asm
@@ -1127,7 +1177,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 42 West
         FileName: CianwoodCity.asm
@@ -1143,7 +1193,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 42 Center
         FileName: CianwoodCity.asm
@@ -1159,7 +1209,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Mahogany
         FileName: CianwoodCity.asm
@@ -1175,7 +1225,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Route 42 Center
         FileName: CianwoodCity.asm
@@ -1191,7 +1241,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Ruins of Alph Main
         FileName: CianwoodCity.asm
@@ -1223,7 +1273,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Ruins Ledge Middle
         FileName: CianwoodCity.asm
@@ -1297,7 +1347,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Silver Cave Room 2
         FileName: CianwoodCity.asm
@@ -1313,7 +1363,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Silver Cave Left Waterfall
         FileName: CianwoodCity.asm
@@ -1331,7 +1381,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Silver Cave Right Waterfall
         FileName: CianwoodCity.asm
@@ -1349,7 +1399,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tin Tower 5F East Down
         FileName: CianwoodCity.asm
@@ -1363,7 +1413,7 @@ Location:
         WildTableList:
         Code:
         Text:
-    
+
     -
         Name: Tin Tower 5F Up
         FileName: CianwoodCity.asm
@@ -1377,7 +1427,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tin Tower 5F West Down
         FileName: CianwoodCity.asm
@@ -1391,7 +1441,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tojho Falls West
         FileName: CianwoodCity.asm
@@ -1409,7 +1459,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tojho Falls East
         FileName: CianwoodCity.asm
@@ -1427,7 +1477,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tojho West
         FileName: CianwoodCity.asm
@@ -1441,7 +1491,39 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
+    -
+        Name: Tojho Exit
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 26
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Tojho Exit
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Route 26
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
     -
         Name: New Bark
         FileName: CianwoodCity.asm
@@ -1488,7 +1570,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Union Cave Pass West
         FileName: CianwoodCity.asm
@@ -1504,9 +1586,9 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
-        Name: Union Cave
+        Name: Union Cave Main
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -1536,7 +1618,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Union Cave B1F Back
         FileName: CianwoodCity.asm
@@ -1552,7 +1634,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Union Cave B1F
         FileName: CianwoodCity.asm
@@ -1568,7 +1650,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Union Cave Strength
         FileName: CianwoodCity.asm
@@ -1601,7 +1683,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Union Cave B1F Back
         FileName: CianwoodCity.asm
@@ -1660,7 +1742,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tin Tower Access Entrance
         FileName: CianwoodCity.asm
@@ -1674,7 +1756,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tin Tower Access North
         FileName: CianwoodCity.asm
@@ -1689,7 +1771,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Tin Tower Access North
         FileName: CianwoodCity.asm
@@ -1704,7 +1786,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Wise Trio West
         FileName: CianwoodCity.asm
@@ -1718,7 +1800,7 @@ Location:
         WildTableList:
         Code:
         Text:
-        
+
     -
         Name: Wise Trio East
         FileName: CianwoodCity.asm
@@ -1733,7 +1815,7 @@ Location:
         WildTableList:
         Code:
         Text:
-      
+
     -
         Name: Route 32
         FileName: CianwoodCity.asm
@@ -1770,9 +1852,9 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Victory Road Gate 8 Badges
-            - 8 Badges
         ItemReqs:
         FlagReqs:
+            - 8 Badges
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -1937,11 +2019,11 @@ Location:
         Text:
 
     -
-        Name: Whirl Island NE Ledge
+        Name: Whirl Island NE East
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Whirl Island NE
+        LocationReqs: Whirl Island NE West
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -1955,7 +2037,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Whirl Island NE
+        LocationReqs: Whirl Island NE West
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -2054,6 +2136,21 @@ Location:
         LocationReqs: Whirl Island Main
         ItemReqs:
         FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Whirl Island Main
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Whirl Island Ledge
+        ItemReqs:
+        FlagReqs:
+            - Impossible
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -2259,7 +2356,6 @@ Location:
         HasPKMN: No
         LocationReqs:
             - Slowpoke Well Main Entrance
-            - Kurts House
         ItemReqs:
             - Surf
             - Strength
@@ -2273,25 +2369,25 @@ Location:
         Code:
         Text:
 
-# This transition is only reasonable with Spinner Hell active!
-#    -
-#        Name: Slowpoke Well Main Entrance
-#        FileName: CianwoodCity.asm
-#        Type: Transition
-#        HasPKMN: No
-#        LocationReqs: Slowpoke Well HM Locked
-#        ItemReqs:
-#            - Surf
-#            - Strength
-#        FlagReqs:
-#            - Fog Badge
-#            - Plain Badge
-#            - Saved Slowpokes
-#        FlagsSet:
-#        ReachableReqs:
-#        WildTableList:
-#        Code:
-#        Text:
+    -
+        Name: Slowpoke Well Main Entrance
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs:
+            - Slowpoke Well HM Locked
+        ItemReqs:
+            - Surf
+            - Strength
+        FlagReqs:
+            - Fog Badge
+            - Plain Badge
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
 
     -
         Name: Route 36
@@ -2324,7 +2420,7 @@ Location:
         Text:
 
     -
-        Name: Route 35
+        Name: Route 35 Route
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2344,7 +2440,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 35
+        LocationReqs: Route 35 Route
         ItemReqs:
             - Cut
         FlagReqs:
@@ -2448,8 +2544,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs:
-            - Vermilion
+        LocationReqs: Vermilion
         ItemReqs:
         FlagReqs:
             - Snorlax Woken
@@ -2462,7 +2557,7 @@ Location:
     -
         Name: Vermilion
         FileName: CianwoodCity.asm
-        Type: Transition
+        Type: Map
         HasPKMN: No
         LocationReqs:
             - Vermilion Via Snorlax
@@ -2478,10 +2573,10 @@ Location:
     -
         Name: Vermilion Via Snorlax
         FileName: CianwoodCity.asm
-        Type: Transition
+        Type: Map
         HasPKMN: No
         LocationReqs:
-            - Snorlax
+            - Snorlax Warpie
         ItemReqs:
         FlagReqs:
             - Impossible
@@ -2505,7 +2600,7 @@ Location:
         Code:
         Text:
     -
-        Name: Vermilion Port With Ticket
+        Name: Vermilion Port Ticket
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2533,7 +2628,7 @@ Location:
         Text:
 
     -
-        Name: Olivine Port With Ticket
+        Name: Olivine Port Ticket
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2697,6 +2792,22 @@ Location:
         Type: Transition
         HasPKMN: No
         LocationReqs: West Kanto
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: West Kanto
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Cinnabar
         ItemReqs:
             - Surf
         FlagReqs:
@@ -2884,7 +2995,7 @@ Location:
         Text:
 
     -
-        Name: Fuchsia City Back Entry
+        Name: Fuchsia Back
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
@@ -2904,7 +3015,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Fuchsia City Back Entry
+        LocationReqs: Fuchsia Back
         ItemReqs:
             - Cut
         FlagReqs:
@@ -2920,7 +3031,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Fuchsia City Back Entry
+        LocationReqs: Fuchsia Back
         ItemReqs:
             - Fly
         FlagReqs:
@@ -3102,7 +3213,7 @@ Location:
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No
-        LocationReqs: Route 26 South
+        LocationReqs: Route 26
         ItemReqs:
         FlagReqs:
         FlagsSet:
@@ -3112,7 +3223,7 @@ Location:
         Text:
 
     -
-        Name: Route 26 South
+        Name: Route 26
         FileName: CianwoodCity.asm
         Type: Transition
         HasPKMN: No

@@ -1,4 +1,5 @@
 from LoadLocationData import purgeWarpBidirectional as purge
+from RandomizeFunctions import RandomItemProcessor
 
 warpLocationsTest1 = [
     {"Start Warp Group": "A",
@@ -132,6 +133,7 @@ warpLocationsTest4 = [
 
 ]
 
+items = RandomItemProcessor()
 
 removalsTest1 = purge(warpLocationsTest1)
 assert len(removalsTest1) == 3

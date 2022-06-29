@@ -289,7 +289,10 @@ def CycleWarps(warpLocations, flattened, forbiddenFlags=["Impossible"]):
 	return accessible_groups, accessible_warp_data
 
 # May cause issues with transitions!
-def purgeWarpBidirectional(warpLocations):
+def purgeWarpBidirectional(warpLocations, locationList):
+	# Load data to get transitions
+	transitions = list(filter(lambda x: x.Type == "Transition", locationList))
+
 	warpsRemoved = []
 	returnRemoved = []
 	reverseSkip = []
@@ -302,6 +305,7 @@ def purgeWarpBidirectional(warpLocations):
 
 		for warpLocation in warpLocations:
 
+			# If warp already removed, treat all other warps as if it doesn't exist
 			if warpLocation in warpsRemoved:
 				continue
 
@@ -320,9 +324,29 @@ def purgeWarpBidirectional(warpLocations):
 			if (warp_key,warp_end) not in warpBySourceAndDestination:
 				warpBySourceAndDestination[(warp_key,warp_end)] = []
 
-
 			usages[warp_key].append(warpLocation)
 			warpBySourceAndDestination[(warp_key,warp_end)].append(warpLocation)
+
+		# In theory, would we want to also remove transitions in the other direction to,
+		# for the same reason?
+
+		# Check for any warp reqs which have other location requirements
+		# Currently the warp transition purging will fail on one-way transitions
+		# As deems only one way to get there
+		# For sensible transitions of this type, ensure an impossible route back
+		# So this code does not purge, but also if a feature change is added later
+		for warpTransition in transitions:
+			transitionTo = warpTransition.Name
+			transitionFrom = "("+warpTransition.LocationReqs[0]+")"
+
+			# Since loading from normal loc list, remove the warp option
+			warp_key = transitionFrom.replace(WARP_OPTION, "")
+
+			if warp_key not in usages:
+				usages[warp_key] = []
+
+			usages[warp_key].append(warpTransition)
+
 
 		duplicateRouting = list(filter(lambda x: len(x[1]) > 1, warpBySourceAndDestination.items()))
 
@@ -338,6 +362,7 @@ def purgeWarpBidirectional(warpLocations):
 			singulars = list(filter(lambda x: len(x[1]) == 1, usages.items()))
 
 
+			# TODO Work out what this code is doing?
 			inSingular = []
 			for s in singulars:
 				warpRemoveList = s[1]
@@ -349,6 +374,9 @@ def purgeWarpBidirectional(warpLocations):
 				warpRemoveList = s[1]
 				for w in warpRemoveList:
 
+					if isinstance(w, Location.Location):
+						continue
+
 					end_group = w["End Warp Group"]
 
 					has_return = list(filter(lambda x: x["Start Warp Group"] == end_group and
@@ -359,15 +387,12 @@ def purgeWarpBidirectional(warpLocations):
 
 								,warpLocations))
 
+					# TODO Work out what is code is doing
 					ignore_count = 0
 					for hr in has_return:
 						if hr in inSingular:
 							ignore_count += 1
 							reverseSkip.append(hr)
-
-
-
-
 
 					if (len(has_return) - ignore_count) > 0:
 						newWarp = True
@@ -430,10 +455,13 @@ def CheckLocationData(warpLocations, locationList):
 	# As dead-end paths won't happen as often when processing them
 	# However, at present it over-purges
 
-	#toPurge = purgeWarpBidirectional(accessible_warp_data.copy())
-	#for purge in toPurge:
-	#	print("Purge:", purge)
-	#	accessible_warp_data.remove(purge)
+	usePurge = True
+
+	if usePurge:
+		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
+		for purge in toPurge:
+			#print("Purge:", purge)
+			accessible_warp_data.remove(purge)
 
 	return accessible_warp_data,removed_warps
 
@@ -505,6 +533,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 	if "Warps" in flags and loadWarpData:
 		warpData, warp_removed_items = LoadWarpData(LocationList, flags)
 		for warp in warpData:
+			warp.applyModifiers(modifierDict, flags)
 			LocationList.append(warp)
 
 	trashList = []

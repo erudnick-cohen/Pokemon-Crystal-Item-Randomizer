@@ -25,106 +25,183 @@ def findAllSilverUnlocks(req, locList, handled=[]):
 
 	return newFind
 
-# Function should be made recurisve
-# So if a dead end is somewhere in a chain, it is also removed
-def pruneWarpRequirementsTree(requirementsDict, start_element=None, previous_name=None, known=[]):
-	toPrune = []
-	partial_prunes = []
+
+def LoopWarpSet(startingGroups, warpLocations, inputFlags):
+
+	newSet = []
+	newSet.extend(startingGroups.copy())
+
+	state = defaultdict(lambda: False)
+	for flag in inputFlags:
+		state[flag] = True
+
+	dupes = []
+
+	for group in newSet:
+		state[group] = True
+		possibilities = list(filter(lambda x: group in x.LocationReqs, warpLocations))
+
+		for poss in possibilities:
+			requirements = poss.requirementsNeeded(state)
+			if len(requirements) == 0:
+				if poss.Name not in newSet:
+					newSet.append(poss.Name)
+
+				warpLocations.remove(poss)
+
+				# Also remove other locations with the same name, for closed loop scenarios!
+
+				othersWithSameName = list(filter(lambda x: x.Name == poss.Name, warpLocations))
+				for other in othersWithSameName:
+					dupes.append(other)
 
 
 
-	if start_element is None:
-		for req in requirementsDict.items():
-			req_key = req[0]
-			newPrune, newPartial = pruneWarpRequirementsTree(requirementsDict, req_key, None, known)
+	for dupe in dupes:
+		if dupe in warpLocations:
+			warpLocations.remove(dupe)
 
-			toPrune.extend(newPrune)
-
-			continue
-
-			# for path in l:
-			# 	if len(path) == 1:
-			# 		path_element = path[0]
-			# 		if path_element.endswith(LoadLocationData.WARP_OPTION):
-			# 			confirm = requirementsDict[path_element]
-			# 			if len(confirm) == 1:
-			# 				confirm_path = confirm[0]
-			# 				if len(confirm_path) == 1:
-			# 					confirm_element = confirm_path[0]
-			# 					if confirm_element == key:
-			# 						print("Should prune:", key, path)
-			# 						toPrune.append((key, path))
-	else:
-
-		if start_element in known:
-			return toPrune, partial_prunes
-
-		known.append(start_element)
+	return newSet
 
 
-		if not start_element.endswith(LoadLocationData.WARP_OPTION):
-			return toPrune, partial_prunes
+def GetWarpGroupsSets(locList, inputFlags):
+	# Check all the locations in the list
+	# Where you can get to with no requirements
+	# Then, we can assume no requirements from then on
 
-		pathsHere = requirementsDict[start_element]
+	# Must be done at processing level due to potential changes with modifiers, etc.
 
-		if len(pathsHere) == 0:
-			return toPrune, partial_prunes
 
-		duplicate_check = []
-		for path in pathsHere:
-			if path == start_element:
-				print("to pruneA:", start_element, path)
-				toPrune.append((start_element, path))
-			elif path not in duplicate_check:
-				duplicate_check.append(path)
+	# May also be able to turn this into 'warp sets', so that all the warps you can reach
+	# With a given additional requirement
+	# To condense these down massively!
+
+	# This does not yet factor in 'free' transitions
+	# Or transitations at all which can now be deemed a transition between sets!
+
+
+	warpSets = []
+
+	warpSpace = list(filter(lambda x: x.Type == "Map" and x.Name.endswith(LoadLocationData.WARP_OPTION),locList)).copy()
+
+	startWarpGroups = list(filter(lambda x: x.Type == "Starting Warp",locList))
+	groupList = [ x.Name for x in startWarpGroups ]
+
+	startingGroup = LoopWarpSet(groupList, warpSpace, inputFlags)
+	warpSets.append(startingGroup)
+
+	skips = []
+	previouslySkipped = []
+	while len(warpSpace) > 0:
+		nextCheckItem = warpSpace.pop(0)
+
+		if nextCheckItem in previouslySkipped:
+			break
+
+		if nextCheckItem in skips:
+			break
+
+		nextCheck = [nextCheckItem.Name]
+		nextGroup = LoopWarpSet(nextCheck, warpSpace, inputFlags)
+
+		for item in nextGroup:
+			if item in skips:
+				skips.remove(item)
+
+		if len(nextGroup) > 1:
+			# These may be issues solely to do with purging!
+			warpSets.append(nextGroup)
+		else:
+			previouslySkipped.append(nextCheckItem)
+			skips.append(nextCheckItem)
+			warpSpace.append(nextCheckItem)
+
+
+	# Anything left over is a seperate singleton group
+	# Many of these may be exclusive to transitions
+
+	for item in skips:
+		isContainedWithin = [ x for x in warpSets if item.Name in x ]
+		if not isContainedWithin:
+			warpSets.append([item.Name])
+
+	riskDuplicates = []
+	reverseWarpSet = {}
+	for set in warpSets:
+		for setItem in set:
+			if setItem in reverseWarpSet:
+				print("Work out way to handle these duplicates on the reverse...:", setItem)
+				if setItem not in riskDuplicates:
+					riskDuplicates.append(setItem)
 			else:
-				print("to pruneB:", start_element, path)
-				toPrune.append((start_element, path))
-				toPrune.append((start_element, path))
+				reverseWarpSet[setItem] = set
 
-		path_translation = {}
-		index = 0
-		for path in duplicate_check:
-			skipped = 0
-			for element in path:
-				if not element.endswith(LoadLocationData.WARP_OPTION):
-					pass
-				elif element == previous_name:
-					skipped += 1
-				else:
-					newPrunes, newPartialPrunes = pruneWarpRequirementsTree(requirementsDict, element, start_element, known)
-					path_translation[index] = (newPrunes, newPartialPrunes)
+	# Remove the duplicate cases to avoid potential issues with extensions after
+	for dup in riskDuplicates:
+		if dup in reverseWarpSet:
+			del reverseWarpSet[dup]
 
-					# TODO implement recursive cases
+	transitionSpace = list(
+		filter(lambda x: x.Type == "Transition" and x.Name.endswith(LoadLocationData.WARP_OPTION), locList)).copy()
 
-			if skipped == len(path):
-				partial_prunes.append((start_element, path))
+	extensions = []
+	state = defaultdict(lambda: False)
+	for flag in inputFlags:
+		state[flag] = True
 
-			index += 1
+	for transition in transitionSpace:
+		transitionReqs = [ x for x in transition.requirementsNeeded(state) if not x.endswith(LoadLocationData.WARP_OPTION) ]
+		# May be recommended to handle whether a transition is reversible or not here
+		# This shouldn't be done here, but at warp-loaded
 
-		for p in path_translation.items():
-			yes_prune = p[1][0]
-			maybe_prune = p[1][1]
-			for y in yes_prune:
-				if y != []:
-					toPrune.append(y)
+		# However, if not loaded, it may mark groups together which AREN'T possible
+		# Such as jumping a ledge and there is nothing to say which way you came from here
 
-			for m in maybe_prune:
-				print("maybe?", m)
+		extStart = transition.LocationReqs[0]
+		extEnd = transition.Name
+
+		reverseTransitions = list(filter(lambda x: len(x.LocationReqs) > 0 and x.LocationReqs[0] == extEnd
+												  and x.Name == extStart, transitionSpace))
+
+		reverseTransitionReqs = ["Impossible"]
+
+		if len(reverseTransitions) > 0:
+			reverseTransition = reverseTransitions[0]
+			reverseTransitionReqs = [x for x in reverseTransition.requirementsNeeded(state) if
+							  not x.endswith(LoadLocationData.WARP_OPTION)]
+
+		if len(transitionReqs) == 0 and len(reverseTransitionReqs) == 0:
+			extensions.append(transition)
+
+	for ext in extensions:
+		extStart = ext.LocationReqs[0]
+		extEnd = ext.Name
+
+		if extStart not in reverseWarpSet and extEnd not in reverseWarpSet:
+			print("Cannot find either", extStart, "or", extEnd)
+		elif extStart not in reverseWarpSet:
+			print("Cannot find", extStart, "with", extEnd)
+		elif extEnd not in reverseWarpSet:
+			print("Cannot find", extEnd, "with", extStart)
+		else:
+
+			groupA = reverseWarpSet[extStart]
+			groupB = reverseWarpSet[extEnd]
+
+			# Transition may lead to itself
+			if groupA != groupB:
+				mergeInto = groupA if groupB != startingGroup else groupB
+				removeGroup = groupB if mergeInto == groupA else groupA
+
+				for rm in removeGroup:
+					mergeInto.append(rm)
+					reverseWarpSet[rm] = mergeInto
 
 
 
+				warpSets.remove(removeGroup)
 
-
-
-
-
-	if start_element is None:
-		for prune in toPrune:
-			requirementsDict[prune[0]].remove(prune[1])
-		return requirementsDict
-	else:
-		return toPrune, partial_prunes
+	return warpSets
 
 
 def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
@@ -153,6 +230,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	trashItems.sort()
 	#stores current requirements for each location
 	requirementsDict = defaultdict(lambda: [])
+	bannedPaths = {}
 
 	MtSilverSubItems = findAllSilverUnlocks("Mt. Silver Outside",locList)
 	Route28SubItems = findAllSilverUnlocks("Route 28", locList)
@@ -204,16 +282,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 		if i.Type == 'Item':
 			itemCount = itemCount+1
-
-
-	# If Warps enabled, prune the requirements tree
-	# This would be to remove issues with large locations
-	# For example, Goldenrod Store has many access points
-	# The iteration here will pick a random path
-	# If a dead-end, it will fail immediately as only route to if from there
-
-	#if "Warps" in inputFlags:
-		#pruneWarpRequirementsTree(requirementsDict)
 
 
 	# Store flags set in a single location and forcibly update
@@ -283,6 +351,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		progressList.append('Storm Badge')
 		progressList.append('Fly')
 
+
+	if 'Warps' in inputFlags:
+		warp_sets = GetWarpGroupsSets(locList, inputFlags)
+		for group in warp_sets[0]:
+			# This is the starting group so you can get to all of these warp groups with no other requirements
+			# Just finding the right path!
+			requirementsDict[group] = []
+
+		# Otherwise, each other warp group set means no requirements once reaching ANY of those
+		# This doesn't 'save as much time' however
+
+		# Skip for now, need to ensure the above method works correctly
+		#for nonStartSet in warp_sets[1:]:
+			# Standard warps use a 2-for-2 system so no optimisation with these
+		#	if len(nonStartSet) > 2:
+
+
 	
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
@@ -324,7 +409,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if previousCount == len(progressList):
 			remainingLocations = list(filter(lambda x: x.Type == "Item" or x.Type == "Gym", locList))
 			for r in remainingLocations:
-				print("r=",r.Name)
+				pass
+				#print("r=",r.Name)
+			#print("--")
+			print(progressList)
 
 		previousCount = len(progressList)
 
@@ -442,12 +530,21 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								random.shuffle(paths)
 
 								defaultPath = None
+								removedPaths = []
 								for check in paths:
 									if len(check) == 0:
 										defaultPath = check
 									# If Warps option enabled, always pick this one!
 									elif len(check) == 1 and check[0] in inputFlags:
 										defaultPath = check
+									elif j in bannedPaths:
+										jBanned = bannedPaths[j]
+										if check in jBanned:
+											removedPaths.append(check)
+
+								for path in removedPaths:
+									paths.remove(path)
+
 
 								#pick an option from paths which isn't a tautology!
 								tautologyCheck = True
@@ -474,8 +571,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											kTrue = True
 
 											for l in k:
+												if not kTrue:
+													break
+
 												# Warps add edge case where warps can lead to themselves!
-												kTrue = kTrue and (l != j)
+												# But exclude input flags from this check
+												isFlag = l in inputFlags
+												if not isFlag:
+													# Only have this check for flag names
+													kTrue = kTrue and (l != j)
+
 												#print("Check element l in k", l)
 												#kTrue = not (len(requirementsDict[l]) == 1 and j in requirementsDict[l][0])
 												#if not kTrue:
@@ -484,9 +589,24 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 												#if not kTrue:
 												#	print("Debug: B")
 												lTrueOr = len(requirementsDict[l]) == 0
+												lPathOr = len(requirementsDict[l]) == 0
+
+												# Add warp edge case, only route back is to itself
 												for m in requirementsDict[l]:
 													lTrueOr = lTrueOr or toAllocate not in m
+
+													allInputFlags = len(m) > 0
+													for pFlag in m:
+														allInputFlags = allInputFlags and pFlag in inputFlags
+
+													if allInputFlags:
+														lPathOr = True
+													else:
+														lPathOr = lPathOr or (j not in m)
+
 												kTrue = kTrue and lTrueOr
+												kTrue = kTrue and lPathOr
+
 												#if not kTrue:
 												#	print("Debug: C")
 												#also make sure the location doesn't literally require it
@@ -498,14 +618,26 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 												#if not kTrue:
 												#	print("Debug: E")
 												#also make sure the requirements aren't impossible (accounts for multi-entrances, which can never be impossible)
+
+												#TODO investigate this as sub-optimal!
+												if len(requirementsDict[l]) != 0:
+													lPossible = False
+													for m in requirementsDict[l]:
+														lPossible = lPossible or \
+																	not ('Banned' in m or
+																	 'Impossible' in m or
+																	 'Unreachable' in m)
+
+													kTrue = kTrue and lPossible
+
 												if(len(requirementsDict[l]) != 0):
 													kTrue = kTrue and not ('Impossible' in requirementsDict[l][0] or\
 																		   'Banned' in requirementsDict[l][0] or\
 																		   'Unreachable' in requirementsDict[l][0])
 												#	if not kTrue:
 												#		print("Debug: F")
-												if not lTrueOr:
-													1+1
+												#if not lTrueOr:
+												#	1+1
 													#print('False because '+l+' requires:')
 													#print(requirementsDict[l])
 												#if a flag we don't have is needed, we can't use that path
@@ -567,19 +699,52 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 									if len(paths) > 0:
 										singleTrue = True
 										for l in paths[0]:
-											singleTrue = singleTrue and (l != j)
+											if not singleTrue:
+												break
+
+											isFlag = l in inputFlags
+											if not isFlag:
+												# Only have this check for flag names
+												singleTrue = singleTrue and (l != j)
+
 											singleTrue = singleTrue and (l not in revReqDict[j])
 											lTrueOr = len(requirementsDict[l]) == 0
+											lPathOr = len(requirementsDict[l]) == 0
+
 											for m in requirementsDict[l]:
 												lTrueOr = lTrueOr or toAllocate not in m
+												allInputFlags = len(m) > 0
+												for pFlag in m:
+													allInputFlags = allInputFlags and pFlag in inputFlags
+
+												if allInputFlags:
+													lPathOr = True
+												else:
+													lPathOr = lPathOr or (j not in m)
+
+											singleTrue = singleTrue and lPathOr
 											singleTrue = singleTrue and lTrueOr
 											singleTrue = singleTrue and l != toAllocate
 
+											# TODO investigate this as sub-optimal!
+											#  e.g. impossible route to Radio Tower 3F Sunny Day
+											# The thing preventing it from being removed!
 											singleTrue = singleTrue and l != 'Impossible' and l != "Banned" and l != "Unreachable"
-											if (len(requirementsDict[l]) != 0):
-												singleTrue = singleTrue and not ('Impossible' in requirementsDict[l][0] or \
-																	   'Banned' in requirementsDict[l][0] or \
-																	   'Unreachable' in requirementsDict[l][0])
+
+											if len(requirementsDict[l]) != 0:
+												lPossible = False
+												for m in requirementsDict[l]:
+													lPossible = lPossible or \
+																not ('Banned' in m or
+																	 'Impossible' in m or
+																	 'Unreachable' in m)
+
+												singleTrue = singleTrue and lPossible
+
+											#if (len(requirementsDict[l]) != 0):
+											#	singleTrue = singleTrue and not ('Impossible' in requirementsDict[l][0] or \
+											#						   'Banned' in requirementsDict[l][0] or \
+											#						   'Unreachable' in requirementsDict[l][0])
 
 											if not lTrueOr:
 												1 + 1
