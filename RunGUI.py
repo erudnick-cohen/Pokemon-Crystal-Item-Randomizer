@@ -33,6 +33,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.modifierList.itemSelectionChanged.connect(self.updateModifierDescription)
 		self.ChooseSettings.clicked.connect(self.selectLogicSettings)
 		self.LoadModifier.clicked.connect(self.loadModifier)
+		self.LoadPack.clicked.connect(self.loadPack)
 		self.DeleteModifier.clicked.connect(self.deleteModifier)
 		self.romPath = ''
 		self.defaultRomDirectory = "."
@@ -67,6 +68,32 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					#self.ItemList.addItem(i[0])
 
 	def runRandomizer(self):
+
+		# First, check no warps interfere with one another
+
+		conflicts = []
+		modNames = [ mod['Name'] for mod in self.modList ]
+
+		for mod in self.modList:
+			if 'IncompatibleWith' in mod:
+				for item in mod['IncompatibleWith']:
+					if item in modNames:
+						conflicts.append(mod['Name'] + item)
+
+			if 'IncompatibleWithout' in mod:
+				for item in mod['IncompatibleWithout']:
+					if item not in modNames:
+						conflicts.append(mod['Name'] +  item)
+
+
+		if len(conflicts) > 0:
+			message = "Mod config error with: "+ ','.join(conflicts)
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage('Incompatible modifiers found' + "\n" + message)
+			error_dialog.exec_()
+			return
+
+
 		os.environ['PYTHONHASHSEED'] = '0'#this needs to be reproducible! so this can't be random!
 		rngSeed = str(time.time())
 		random.seed(rngSeed)
@@ -251,6 +278,32 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if file != '':
 			self.loadSettings(file)
 
+	def loadPack(self):
+		packfiles = QFileDialog.getOpenFileNames(directory = 'Packs')[0]
+		if len(packfiles) > 0:
+			currentModifierFiles = [obj["fileName"] for obj in self.modList]
+			modifiersToLoad = []
+			for packfile in packfiles:
+				yamlfile = open(packfile)
+				yamltext = yamlfile.read()
+
+				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+
+				if 'Modifiers' in loadedYaml:
+					for mod in loadedYaml['Modifiers']:
+						if mod not in modifiersToLoad and mod not in currentModifierFiles:
+							modifiersToLoad.append(mod)
+
+			for mod in modifiersToLoad:
+				yamlfile = open(mod)
+				yamltext = yamlfile.read()
+
+				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+				self.modList.append(loadedYaml)
+				self.modList[-1]['fileName'] = self.makeFileNameSafe(mod)
+
+			self.updateModListView()
+
 	def loadModifier(self):
 		modfiles = QFileDialog.getOpenFileNames(directory = 'Modifiers')[0]
 		if len(modfiles) > 0:
@@ -296,9 +349,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 				if not is_incompatible:
 					self.modList.append(loadedYaml)
-					runningDirectory = os.getcwd().replace("\\","/")+"/"
-					safeFile = modfile.replace(runningDirectory, "")
-					self.modList[-1]['fileName'] = safeFile
+					self.modList[-1]['fileName'] = self.makeFileNameSafe(modfile)
 
 			self.updateModListView()
 
@@ -310,6 +361,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.modList.pop(row)
 			self.updateModListView()
 
+	def makeFileNameSafe(self, mod):
+		runningDirectory = os.getcwd().replace("\\", "/") + "/"
+		safeFile = mod.replace(runningDirectory, "")
+		return safeFile
 
 
 	def loadSettings(self, settingsFile):
@@ -327,7 +382,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			yamlfile = open(i)
 			yamltext = yamlfile.read()
 			self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
-			self.modList[-1]['fileName'] = i
+			self.modList[-1]['fileName'] = self.makeFileNameSafe(i)
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))

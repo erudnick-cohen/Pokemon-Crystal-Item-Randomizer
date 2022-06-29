@@ -204,9 +204,11 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	fullLocationData = LoadLocationData.LoadDataFromFolder(".", banList, allowList, changeListDict, flags)
 
 	seedIncrements = 0
+	completeResult = False
 
-	while goal not in result[0]:
+	while goal not in result[0] or not completeResult:
 		try:
+			completeResult = True
 			res_items = fullLocationData[1].copy()
 			res_locations = fullLocationData[0].copy()
 			res_removed_items = fullLocationData[2].copy()
@@ -275,14 +277,24 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			if goal not in result[0]:
 				handleBadSpoiler(result, flags)
 				print("bad run, retrying")
+			elif len(result) > 6:
+				remainingProgressItems = result[6]
+				if len(remainingProgressItems) > 0:
+					print("Successful seed, but not all items placed...")
+					handleBadSpoiler(result, flags)
+					print("bad run, retrying")
+					completeResult = False
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
+			completeResult = False
 			traceback.print_exc()
 		seed = seed+1
 		seedIncrements += 1
 	print('-------')
 
 	print("Seed increments:",seedIncrements-1)
+
+
 
 
 	for j in result[0]:

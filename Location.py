@@ -186,7 +186,7 @@ class Location:
 	def applyBanList(self, banList, allowList):
 		list = [];
 		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):
-			print('Banning '+self.Name)
+			#print('Banning '+self.Name)
 			if(self.isItem()):
 				self.IsItem = False
 				self.WasItem = True
@@ -244,29 +244,27 @@ class Location:
 					newReqs.append(x)
 			self.LocationReqs = newReqs
 
-
-		if self.Type == "Transition" and len(self.FlagReqs) > 0 and len(self.ItemReqs) > 0:
+		notInputFlags = [x for x in self.FlagReqs if x not in flags]
+		if self.Type == "Transition" and len(notInputFlags) > 0 and len(self.ItemReqs) > 0:
 			if "Fly Warps" in flags:
 				if "Storm Badge" not in self.FlagReqs:
 					self.FlagReqs.append("Storm Badge")
 				if "Fly" not in self.ItemReqs:
 					self.ItemReqs.append("Fly")
 
-		# TODO: Is it possible to detect all ADDED flags for this purpose?
-		yes_flags = ["Warps", "Storm Badge", "Kanto Mode", "Hidden Items", "Berry Trees", "Timed Events"]
-		yes_items = ["Fly"]
 		if "Fly Warps" in flags:
 			fly_first = False
-			for f in self.FlagReqs:
-				if f not in yes_flags:
-					fly_first = True
-			for i in self.ItemReqs:
-				if i not in yes_items:
-					fly_first = True
+			if len(notInputFlags) > 0:
+				fly_first = True
+			if len(self.ItemReqs):
+				fly_first = True
 
 			if fly_first:
-				self.FlagReqs.append("Storm Badge")
-				self.ItemReqs.append("Fly")
+				if "Storm Badge" not in self.FlagReqs:
+					self.FlagReqs.append("Storm Badge")
+
+				if "Fly" not in self.ItemReqs:
+					self.ItemReqs.append("Fly")
 
 		#if "Fly Warps" in flags and len(self.FlagReqs) > 0:
 		#	print("Flags", self.Name, self.FlagReqs)

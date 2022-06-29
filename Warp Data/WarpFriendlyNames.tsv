@@ -178,8 +178,8 @@ FUCHSIA_CITY	37	22	ROUTE_15_FUCHSIA_GATE	0	4	Fuchsia	Fuchsia To Route 15 Gate En
 FUCHSIA_CITY	37	23	ROUTE_15_FUCHSIA_GATE	0	5	Fuchsia	Fuchsia To Route 15 Gate Entrance 2
 FUCHSIA_CITY	7	35	ROUTE_19_FUCHSIA_GATE	4	0	Fuchsia	Fuchsia To Route 19 Gate Entrance
 FUCHSIA_CITY	8	35	ROUTE_19_FUCHSIA_GATE	5	0	Fuchsia	Fuchsia To Route 19 Gate Entrance 2
-ROUTE_18	2	6	ROUTE_17_ROUTE_18_GATE	9	4	Fuchsia	Route 18 to Route 17 Gate Entrance
-ROUTE_18	2	7	ROUTE_17_ROUTE_18_GATE	9	5	Fuchsia	Route 18 to Route 17 Gate Entrance 2
+ROUTE_18	2	6	ROUTE_17_ROUTE_18_GATE	9	4	Fuchsia West	Route 18 to Route 17 Gate Entrance
+ROUTE_18	2	7	ROUTE_17_ROUTE_18_GATE	9	5	Fuchsia West	Route 18 to Route 17 Gate Entrance 2
 ROUTE_17	17	82	ROUTE_17_ROUTE_18_GATE	0	4	Cycling Road South	Route 17 to Route 18 Gate Entrance
 ROUTE_17	17	83	ROUTE_17_ROUTE_18_GATE	0	5	Cycling Road South	Route 17 to Route 18 Gate Entrance 2
 ROUTE_16	3	1	ROUTE_16_FUCHSIA_SPEECH_HOUSE	2	7	Celadon Cut North	ROUTE_16_FUCHSIA_SPEECH_HOUSE Entrance
@@ -553,8 +553,8 @@ WHIRL_ISLAND_NW	5	7	ROUTE_41	12	17	Whirl Island NW Exit	WHIRL_ISLAND_NW Exit
 WHIRL_ISLAND_NW	5	3	WHIRL_ISLAND_B1F	5	5	Whirl Island NW Exit	Whirl Island NW Ladder 
 WHIRL_ISLAND_NW	3	15	WHIRL_ISLAND_SW	3	15	Whirl Island NW Passage	Whirl Island NW Passage Left 
 WHIRL_ISLAND_NW	7	15	WHIRL_ISLAND_CAVE	3	13	Whirl Island NW Passage	Whirl Island NW Passage Right 
-WHIRL_ISLAND_NE	3	13	ROUTE_41	36	19	Whirl Island NE	WHIRL_ISLAND_NE Exit
-WHIRL_ISLAND_NE	17	3	WHIRL_ISLAND_B1F	35	3	Whirl Island NE Ledge	Whirl Island NE Ledge 
+WHIRL_ISLAND_NE	3	13	ROUTE_41	36	19	Whirl Island NE West	WHIRL_ISLAND_NE Exit
+WHIRL_ISLAND_NE	17	3	WHIRL_ISLAND_B1F	35	3	Whirl Island NE East	Whirl Island NE Ledge
 WHIRL_ISLAND_NE	13	11	WHIRL_ISLAND_B1F	29	9	Whirl Island NE Item	Whirl Island NE Item 
 WHIRL_ISLAND_SW	5	7	ROUTE_41	12	37	Whirl Island SW	WHIRL_ISLAND_SW Exit
 WHIRL_ISLAND_SW	17	3	WHIRL_ISLAND_B1F	23	31	Whirl Island SW Surf	Whirl Island SW Surf 

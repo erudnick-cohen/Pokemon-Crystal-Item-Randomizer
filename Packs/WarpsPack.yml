@@ -1,0 +1,10 @@
+Name: Warps Pack
+Modifiers:
+    - Modifiers/Warps.yml
+    - Modifiers/StartWithBike.yml
+    - Modifiers/NotEarlyMoonRival.yml
+    - Modifiers/NoProgressionFlyWarps.yml
+    - Modifiers/IFatRainWarpRandomiser.yml
+    - Modifiers/NoEarlyStrongFights.yml
+    - Modifiers/RemoveFlashLogic.yml
+    - Modifiers/DontReplaceAideItem.yml
