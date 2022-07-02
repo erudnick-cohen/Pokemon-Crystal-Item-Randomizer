@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: Route_32
-        LocationReqs:
+        LocationReqs: Violet City
         FlagReqs:
         ItemReqs:
         FlagsSet:

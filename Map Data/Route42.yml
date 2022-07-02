@@ -109,6 +109,7 @@ Location:
         WildTableList: Route_42
         LocationReqs:
         FlagReqs:
+            - Warps
         ItemReqs:
         FlagsSet:
         ReachableReqs:

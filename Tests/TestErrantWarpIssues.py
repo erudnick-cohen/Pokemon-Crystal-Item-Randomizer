@@ -3,8 +3,8 @@ import RandomizeFunctions
 
 #TODO Also review TestWarpGroupData
 
-def testWarpLocations():
-    fullLocationData = LoadLocationData.LoadDataFromFolder(".", flags=["Warps"], loadWarpData=False)
+def testWarpLocations(flags = []):
+    fullLocationData = LoadLocationData.LoadDataFromFolder(".", flags=flags, loadWarpData=False)
     all_locs = fullLocationData[0]
     locationList = LoadLocationData.FlattenLocationTree(all_locs)
 
@@ -12,7 +12,7 @@ def testWarpLocations():
 
     lookup = {}
 
-    acceptableYmls = ["Route29.yml","YourHouse.yml","StartingWarpLocations.yml", "Route27.yml"]
+    acceptableYmls = ["Route29.yml","YourHouse.yml","StartingWarpLocations.yml", "Route27.yml", "ElmsLab.yml"]
 
     alwaysAvailable = []
 
@@ -26,6 +26,7 @@ def testWarpLocations():
                 checking.append(locReq)
         while len(checking) > 0:
             toCheck = checking.pop(0)
+            #print("checking:",toCheck)
 
             #print("Checking requirement:", toCheck)
             if toCheck in lookup:
@@ -36,11 +37,16 @@ def testWarpLocations():
                 options = list(filter(lambda x: x.Name == toCheck, locationList))
                 lookup[toCheck] = options
 
+                lockingFlags = ['Warps','Explicit Checking']
+
                 for option in options:
                     if len(option.LocationReqs) == 0 and \
                             option.YmlFile not in acceptableYmls:
-                        print("Issue with:", option.Name, option.YmlFile)
-                        newAlways.append(option)
+
+                        locked = [ flag for flag in option.FlagReqs if flag in lockingFlags ]
+                        if len(locked) == 0:
+                            print("Issue with:", option.Name, option.YmlFile)
+                            newAlways.append(option)
 
                     for req in option.LocationReqs:
                         if req not in checking:
@@ -62,4 +68,5 @@ def testWarpLocations():
 
 
 
-testWarpLocations()
+testWarpLocations(flags=["Warps"])
+testWarpLocations(flags=[])
