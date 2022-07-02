@@ -437,6 +437,100 @@ Location:
             NormalItem: REVIVAL_HERB
             Sublocations:
 
+        -
+            Name: Underground Bargain Shop Nugget
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+                - Banned
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: NUGGET
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Pearl
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+                - Banned
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PEARL
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Big Pearl
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+                - Banned
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: BIG_PEARL
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Stardust
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+                - Banned
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: STARDUST
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Star Piece
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+                - Banned
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: STAR_PIECE
+            Sublocations:
 
     -
         Name: Goldenrod Department Store
@@ -1261,7 +1355,244 @@ Location:
             TrainerList:
             Sublocations:
 
-                  
+        -
+            Name: Goldenrod Department Store Rooftop Sale
+            FileName: MartGoldenrod3F
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_ACCURACY
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            WarpReqs: Goldenrod Dept. Store Roof
+            Sublocations:
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Poke Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POKE_BALL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Great Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: GREAT_BALL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Super Potion
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SUPER_POTION
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Full Heal
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Revive
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Hyper Potion
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Full Restore
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Full Heal
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Ultra Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Protein
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
     -
         Name: Goldenrod Eevee Gift
         FileName: GoldenrodBillsHouse.asm

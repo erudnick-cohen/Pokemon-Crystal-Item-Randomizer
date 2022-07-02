@@ -38,6 +38,9 @@ class Location:
 		if self.Type == "Shop":
 			self.IsItem = True
 			self.IsShop = True
+		elif self.Type == "BargainShop":
+			self.IsItem = True
+			self.IsShop = True
 		else:
 			self.IsShop = False
 
@@ -190,8 +193,20 @@ class Location:
 	def isGym(self):
 		return self.IsGym
 	
-	def applyBanList(self, banList, allowList):
+	def applyBanList(self, banList, allowList, flags=[]):
 		list = [];
+		# Some location to be banned from being used by default
+		# Need to NOT run this on generation
+		if "Banned" in self.FlagReqs and "No Ban" not in flags and self.IsItem:
+			self.IsItem = False
+			self.WasItem = True
+			self.Type = 'Map'
+			self.Banned = True
+			for i in self.Sublocations:
+				i.applyBanList(banList, allowList, flags)
+
+			return
+
 		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):
 			#print('Banning '+self.Name)
 			if(self.isItem()):
@@ -207,7 +222,7 @@ class Location:
 				if(not self.isGym() and (not (banList is None) and self.Name in banList)):
 					self.FlagReqs.append('Banned')
 		for i in self.Sublocations:
-			 i.applyBanList(banList, allowList)
+			 i.applyBanList(banList, allowList, flags)
 
 
 	def applyWarpLogic(self, flags):

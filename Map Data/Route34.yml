@@ -200,7 +200,26 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-
+            -
+                Name: Route 34 Camper Todd Sale
+                FileName: Route34.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 34
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                    - Possible Sale
+                ReachableReqs:
+                IsBall: No
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
     -
         Name: Route 34 Hidden Super Potion
         FileName: Route34.asm

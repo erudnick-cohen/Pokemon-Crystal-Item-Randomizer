@@ -382,7 +382,12 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 	nItemCode = nItemCodeData[0]
 	itemType = nItemCodeData[1]
 	if itemType == "Item":
-		romMap[addressData["address_range"]["begin"] + 1] = nItemCode
+
+		if(location.Type == "BargainShop"):
+			# Bargain shop item contains price also, so is different
+			romMap[addressData["address_range"]["begin"]] = nItemCode
+		else:
+			romMap[addressData["address_range"]["begin"] + 1] = nItemCode
 	else:
 		# This will write the other byte of shopitem macro in future
 		# This is not yet supported by speedchoice engine changes
@@ -698,8 +703,49 @@ def LabelTrainerData(trainerData):
 	newfilestream.close()
 
 
+def LabelBargainShopLocation(location):
+
+	multiData = location.FileName
+	shopFilename = multiData.split("/")[0]
+	shopName = multiData.split("/")[1]
+
+	shopFile = "RandomizerRom/data/items/" + shopFilename
+	file = open(shopFile)
+	filecode_unreplaced = file.read()
+	filecode = filecode_unreplaced.replace("    ", "\t")
+	file.close()
+
+	shopRegex = "(" + shopName + ":\n\tdb \d(.*)\n(\tdbw (.*){1,},(\s){1,}(\d){1,},(\s){1,}(\d){1,}\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1, -1" + ")"
+	currentShopDesc = re.findall(shopRegex, filecode)
+	shopDetail = currentShopDesc[0][0]
+
+	itemRegex = "dbw " + location.NormalItem + ",\s{1,}\d{1,},\s{1,}\d{1,}\n"
+	itemDesc = re.findall(itemRegex, shopDetail)
+
+	beforeLabel = ".ckir_BEFORE" + "".join(location.Name.upper().split()) + "0ITEMCODE::\n"
+	afterLabel = ".ckir_AFTER" + "".join(location.Name.upper().split()) + "0ITEMCODE::\n"
+	toReplace = "\t" + itemDesc[0]
+	replacement = beforeLabel + toReplace + afterLabel
+
+	shopSave = shopDetail.replace(toReplace, replacement)
+
+	changedCode = filecode.replace(shopDetail, shopSave)
+
+	newfilestream = open(shopFile, "w")
+	newfilestream.seek(0)
+	newfilestream.write(changedCode)
+	newfilestream.truncate()
+	newfilestream.flush()
+	newfilestream.close()
+
 def LabelShopLocation(location):
 	print("Labelling", location.Name)
+
+	if location.Type == "BargainShop":
+		LabelBargainShopLocation(location)
+		return
+
+
 	mart_data_file = "RandomizerRom/data/items/marts.asm"
 	file = open(mart_data_file)
 	filecode = file.read()
