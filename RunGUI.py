@@ -80,10 +80,17 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					if item in modNames:
 						conflicts.append(mod['Name'] + item)
 
+			withoutRequired = False
+			potentialConflicts = []
 			if 'IncompatibleWithout' in mod:
 				for item in mod['IncompatibleWithout']:
 					if item not in modNames:
-						conflicts.append(mod['Name'] +  item)
+						potentialConflicts.append(mod['Name'] +  item)
+					else:
+						withoutRequired = True
+
+				if not withoutRequired:
+					conflicts.extend(potentialConflicts)
 
 
 		if len(conflicts) > 0:

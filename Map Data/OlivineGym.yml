@@ -6,6 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
+            - Olivine City
         FlagReqs:
             - Amphy Healed
         ItemReqs:

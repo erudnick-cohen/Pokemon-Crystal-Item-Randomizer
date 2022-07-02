@@ -48,6 +48,7 @@ Location:
             - ROUTE_28
         LocationReqs:
         FlagReqs:
+            - Warps
         ItemReqs:
         FlagsSet:
         TrainerList:
