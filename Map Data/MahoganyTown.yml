@@ -22,9 +22,8 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 42 East
+        LocationReqs: Mahogany Town
         FlagReqs:
-            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -171,6 +170,7 @@ Location:
                 LocationReqs: Mahogany Mart
                 FlagReqs:
                     - Shopsanity
+                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -187,6 +187,7 @@ Location:
                 LocationReqs: Mahogany Mart
                 FlagReqs:
                     - Shopsanity
+                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -203,6 +204,7 @@ Location:
                 LocationReqs: Mahogany Mart
                 FlagReqs:
                     - Shopsanity
+                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -219,6 +221,7 @@ Location:
                 LocationReqs: Mahogany Mart
                 FlagReqs:
                     - Shopsanity
+                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -235,6 +238,7 @@ Location:
                 LocationReqs: Mahogany Mart
                 FlagReqs:
                     - Shopsanity
+                    - Beat Team Rocket
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

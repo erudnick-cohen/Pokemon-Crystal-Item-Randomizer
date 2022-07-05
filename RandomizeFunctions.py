@@ -1721,3 +1721,36 @@ class RandomItemProcessor:
             return normal_item
 
         return random.choice(self.itemsList).Name
+
+
+REPEL_ITEMS = ["REPEL", "SUPER_REPEL", "MAX_REPEL"]
+
+def ShopRepelCheck(i, locList, reachable, addAfter=None):
+    if i.isShop():
+        shopElements = list(filter(lambda x: x.FileName == i.FileName, locList))
+        shopElementNames = [x.Name for x in shopElements]
+        # Find these from old copy
+        # Then find instances in activeLoc & reachable
+
+
+        reaches = reachable.copy()
+        if addAfter is not None:
+            for a in addAfter:
+                reaches[a.Name] = a
+
+        # activeShop = list(filter(lambda x: x.Name in shopElementNames, activeLoc))
+        reachShop = list(filter(lambda x: x[0] in shopElementNames, reaches.items()))
+
+        # Currently works, prioritising early locations
+        # This is generally suitable
+        # However, could improve by removing per shop for department stores!
+
+        hasRepel = False
+        for element in reachShop:
+            if element[1].item is not None:
+                if element[1].item in REPEL_ITEMS:
+                    hasRepel = True
+
+        return hasRepel
+
+    return True

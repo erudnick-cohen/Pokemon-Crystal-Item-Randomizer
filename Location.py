@@ -38,11 +38,14 @@ class Location:
 		if self.Type == "Shop":
 			self.IsItem = True
 			self.IsShop = True
+			self.IsBargainShop = False
 		elif self.Type == "BargainShop":
 			self.IsItem = True
 			self.IsShop = True
+			self.IsBargainShop = True
 		else:
 			self.IsShop = False
+			self.IsBargainShop = False
 
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this
@@ -193,17 +196,22 @@ class Location:
 	def isGym(self):
 		return self.IsGym
 	
-	def applyBanList(self, banList, allowList, flags=[]):
+	def applyBanList(self, banList, allowList, flags=[], banned=False):
 		list = [];
 		# Some location to be banned from being used by default
 		# Need to NOT run this on generation
-		if "Banned" in self.FlagReqs and "No Ban" not in flags and self.IsItem:
-			self.IsItem = False
-			self.WasItem = True
-			self.Type = 'Map'
-			self.Banned = True
+		if banned or "Banned" in self.FlagReqs and "No Ban" not in flags:
+			if self.IsItem:
+				self.IsItem = False
+				self.WasItem = True
+				self.Type = 'Map'
+				self.Banned = True
+				# Maybe?
+				if "Banned" in self.FlagReqs:
+					self.FlagReqs.remove("Banned")
+
 			for i in self.Sublocations:
-				i.applyBanList(banList, allowList, flags)
+				i.applyBanList(banList, allowList, flags, banned=True)
 
 			return
 
@@ -426,3 +434,6 @@ class Location:
 
 	def isShop(self):
 		return self.IsShop
+
+	def isBargainShop(self):
+		return self.IsBargainShop

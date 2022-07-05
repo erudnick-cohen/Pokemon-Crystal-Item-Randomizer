@@ -63,7 +63,6 @@ Location:
         WildTableList:
         LocationReqs: Route 3 and Mt. Moon
         FlagReqs:
-            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:

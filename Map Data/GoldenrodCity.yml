@@ -373,7 +373,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -391,7 +390,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -409,7 +407,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -427,7 +424,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -446,7 +442,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -465,7 +460,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -484,7 +478,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -503,7 +496,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -522,7 +514,6 @@ Location:
             LocationReqs: Goldenrod Underground
             FlagReqs:
                 - Shopsanity
-                - Banned
             ItemReqs:
             FlagsSet:
             ReachableReqs:
@@ -1357,7 +1348,7 @@ Location:
 
         -
             Name: Goldenrod Department Store Rooftop Sale
-            FileName: MartGoldenrod3F
+            FileName:
             Type: Map
             HasPKMN: No
             WildTableList:
@@ -1366,7 +1357,6 @@ Location:
             ItemReqs:
             FlagsSet:
             ReachableReqs:
-            NormalItem: X_ACCURACY
             IsBall: No
             Code:
             Text:

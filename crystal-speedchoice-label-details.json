@@ -81,24 +81,6 @@
     "hex_values": "$6 $1f $7 $31 $41"
   },
   {
-    "label": "BargainMerchantScript.ckir_BEFORE_timed_events_UNDERGROUND",
-    "address_range": {
-      "begin": 508239,
-      "end": 508243
-    },
-    "integer_values": "7 10 86 65",
-    "hex_values": "$7 $a $56 $41"
-  },
-  {
-    "label": "BargainMerchantScript.ckir_BEFORE_timed_events_UNDERGROUND2",
-    "address_range": {
-      "begin": 508246,
-      "end": 508248
-    },
-    "integer_values": "43 7",
-    "hex_values": "$2b $7"
-  },
-  {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPBIGPEARL0ITEMCODE",
     "address_range": {
       "begin": 89086,
@@ -1145,8 +1127,8 @@
   {
     "label": "GoldenrodDeptStoreB1FAmuletCoin.ckir_BEFOREDEPARTMENTSTOREBASEMENT4UNDERGROUND0ITEMCODE",
     "address_range": {
-      "begin": 513989,
-      "end": 513991
+      "begin": 514022,
+      "end": 514024
     },
     "integer_values": "91 1",
     "hex_values": "$5b $1"
@@ -1154,8 +1136,8 @@
   {
     "label": "GoldenrodDeptStoreB1FBurnHeal.ckir_BEFOREDEPARTMENTSTOREBASEMENT20ITEMCODE",
     "address_range": {
-      "begin": 513991,
-      "end": 513993
+      "begin": 514024,
+      "end": 514026
     },
     "integer_values": "10 1",
     "hex_values": "$a $1"
@@ -1163,8 +1145,8 @@
   {
     "label": "GoldenrodDeptStoreB1FEther.ckir_BEFOREDEPARTMENTSTOREBASEMENT10ITEMCODE",
     "address_range": {
-      "begin": 513987,
-      "end": 513989
+      "begin": 514020,
+      "end": 514022
     },
     "integer_values": "63 1",
     "hex_values": "$3f $1"
@@ -1172,8 +1154,8 @@
   {
     "label": "GoldenrodDeptStoreB1FUltraBall.ckir_BEFOREDEPARTMENTSTOREBASEMENT30ITEMCODE",
     "address_range": {
-      "begin": 513993,
-      "end": 513995
+      "begin": 514026,
+      "end": 514028
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -1181,44 +1163,44 @@
   {
     "label": "GoldenrodDeptStoreB1F_MapEvents.ckir_BEFOREDEPARTMENTSTOREBASEMENT10NPCCODE",
     "address_range": {
-      "begin": 514275,
-      "end": 514288
+      "begin": 514308,
+      "end": 514321
     },
-    "integer_values": "84 19 14 1 0 255 255 1 0 195 87 117 6",
-    "hex_values": "$54 $13 $e $1 $0 $ff $ff $1 $0 $c3 $57 $75 $6"
+    "integer_values": "84 19 14 1 0 255 255 1 0 228 87 117 6",
+    "hex_values": "$54 $13 $e $1 $0 $ff $ff $1 $0 $e4 $57 $75 $6"
   },
   {
     "label": "GoldenrodDeptStoreB1F_MapEvents.ckir_BEFOREDEPARTMENTSTOREBASEMENT20NPCCODE",
     "address_range": {
-      "begin": 514301,
-      "end": 514314
+      "begin": 514334,
+      "end": 514347
     },
-    "integer_values": "84 7 10 1 0 255 255 1 0 199 87 119 6",
-    "hex_values": "$54 $7 $a $1 $0 $ff $ff $1 $0 $c7 $57 $77 $6"
+    "integer_values": "84 7 10 1 0 255 255 1 0 232 87 119 6",
+    "hex_values": "$54 $7 $a $1 $0 $ff $ff $1 $0 $e8 $57 $77 $6"
   },
   {
     "label": "GoldenrodDeptStoreB1F_MapEvents.ckir_BEFOREDEPARTMENTSTOREBASEMENT30NPCCODE",
     "address_range": {
-      "begin": 514314,
-      "end": 514327
+      "begin": 514347,
+      "end": 514360
     },
-    "integer_values": "84 19 19 1 0 255 255 1 0 201 87 120 6",
-    "hex_values": "$54 $13 $13 $1 $0 $ff $ff $1 $0 $c9 $57 $78 $6"
+    "integer_values": "84 19 19 1 0 255 255 1 0 234 87 120 6",
+    "hex_values": "$54 $13 $13 $1 $0 $ff $ff $1 $0 $ea $57 $78 $6"
   },
   {
     "label": "GoldenrodDeptStoreB1F_MapEvents.ckir_BEFOREDEPARTMENTSTOREBASEMENT4UNDERGROUND0NPCCODE",
     "address_range": {
-      "begin": 514288,
-      "end": 514301
+      "begin": 514321,
+      "end": 514334
     },
-    "integer_values": "84 6 18 1 0 255 255 1 0 197 87 118 6",
-    "hex_values": "$54 $6 $12 $1 $0 $ff $ff $1 $0 $c5 $57 $76 $6"
+    "integer_values": "84 6 18 1 0 255 255 1 0 230 87 118 6",
+    "hex_values": "$54 $6 $12 $1 $0 $ff $ff $1 $0 $e6 $57 $76 $6"
   },
   {
     "label": "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F",
     "address_range": {
-      "begin": 513937,
-      "end": 513949
+      "begin": 513970,
+      "end": 513982
     },
     "integer_values": "122 4 10 13 122 10 12 13 122 10 12 13",
     "hex_values": "$7a $4 $a $d $7a $a $c $d $7a $a $c $d"
@@ -1244,8 +1226,8 @@
   {
     "label": "GoldenrodUndergroundCoinCase.ckir_BEFORECOINCASEUNDERGROUND0ITEMCODE",
     "address_range": {
-      "begin": 508678,
-      "end": 508680
+      "begin": 508711,
+      "end": 508713
     },
     "integer_values": "54 1",
     "hex_values": "$36 $1"
@@ -1253,8 +1235,8 @@
   {
     "label": "GoldenrodUndergroundHiddenAntidote.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENANTIDOTE0ITEMCODE",
     "address_range": {
-      "begin": 508689,
-      "end": 508692
+      "begin": 508722,
+      "end": 508725
     },
     "integer_values": "141 0 9",
     "hex_values": "$8d $0 $9"
@@ -1262,8 +1244,8 @@
   {
     "label": "GoldenrodUndergroundHiddenParlyzHeal.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENPARALYZEHEAL0ITEMCODE",
     "address_range": {
-      "begin": 508683,
-      "end": 508686
+      "begin": 508716,
+      "end": 508719
     },
     "integer_values": "139 0 13",
     "hex_values": "$8b $0 $d"
@@ -1271,8 +1253,8 @@
   {
     "label": "GoldenrodUndergroundHiddenSuperPotion.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENSUPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 508686,
-      "end": 508689
+      "begin": 508719,
+      "end": 508722
     },
     "integer_values": "140 0 17",
     "hex_values": "$8c $0 $11"
@@ -1280,8 +1262,8 @@
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrancesFullHeal.ckir_BEFOREGOLDENRODTUNNELFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 511615,
-      "end": 511617
+      "begin": 511648,
+      "end": 511650
     },
     "integer_values": "38 1",
     "hex_values": "$26 $1"
@@ -1289,8 +1271,8 @@
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrancesHiddenMaxPotion.ckir_BEFOREGOLDENRODTUNNELHIDDENMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 511617,
-      "end": 511620
+      "begin": 511650,
+      "end": 511653
     },
     "integer_values": "142 0 15",
     "hex_values": "$8e $0 $f"
@@ -1298,8 +1280,8 @@
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrancesHiddenRevive.ckir_BEFOREGOLDENRODTUNNELHIDDENREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 511620,
-      "end": 511623
+      "begin": 511653,
+      "end": 511656
     },
     "integer_values": "143 0 39",
     "hex_values": "$8f $0 $27"
@@ -1307,8 +1289,8 @@
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrancesSmokeBall.ckir_BEFOREGOLDENRODTUNNELSMOKEBALL0ITEMCODE",
     "address_range": {
-      "begin": 511613,
-      "end": 511615
+      "begin": 511646,
+      "end": 511648
     },
     "integer_values": "106 1",
     "hex_values": "$6a $1"
@@ -1316,44 +1298,44 @@
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFOREGOLDENRODTUNNELFULLHEAL0NPCCODE",
     "address_range": {
-      "begin": 513887,
-      "end": 513900
+      "begin": 513920,
+      "end": 513933
     },
-    "integer_values": "84 13 18 1 0 255 255 1 0 127 78 116 6",
-    "hex_values": "$54 $d $12 $1 $0 $ff $ff $1 $0 $7f $4e $74 $6"
+    "integer_values": "84 13 18 1 0 255 255 1 0 160 78 116 6",
+    "hex_values": "$54 $d $12 $1 $0 $ff $ff $1 $0 $a0 $4e $74 $6"
   },
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFOREGOLDENRODTUNNELHIDDENMAXPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 513759,
-      "end": 513764
+      "begin": 513792,
+      "end": 513797
     },
-    "integer_values": "9 8 7 129 78",
-    "hex_values": "$9 $8 $7 $81 $4e"
+    "integer_values": "9 8 7 162 78",
+    "hex_values": "$9 $8 $7 $a2 $4e"
   },
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFOREGOLDENRODTUNNELHIDDENREVIVE0ITEMCODEB",
     "address_range": {
-      "begin": 513764,
-      "end": 513769
+      "begin": 513797,
+      "end": 513802
     },
-    "integer_values": "8 1 7 132 78",
-    "hex_values": "$8 $1 $7 $84 $4e"
+    "integer_values": "8 1 7 165 78",
+    "hex_values": "$8 $1 $7 $a5 $4e"
   },
   {
     "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFOREGOLDENRODTUNNELSMOKEBALL0NPCCODE",
     "address_range": {
-      "begin": 513874,
-      "end": 513887
+      "begin": 513907,
+      "end": 513920
     },
-    "integer_values": "84 16 5 1 0 255 255 1 0 125 78 115 6",
-    "hex_values": "$54 $10 $5 $1 $0 $ff $ff $1 $0 $7d $4e $73 $6"
+    "integer_values": "84 16 5 1 0 255 255 1 0 158 78 115 6",
+    "hex_values": "$54 $10 $5 $1 $0 $ff $ff $1 $0 $9e $4e $73 $6"
   },
   {
     "label": "GoldenrodUndergroundWarehouseDirectorScript.ckir_BEFOREGOLDENRODTUNNELROCKETATTACK0ITEMCODE",
     "address_range": {
-      "begin": 514513,
-      "end": 514516
+      "begin": 514546,
+      "end": 514549
     },
     "integer_values": "158 127 1",
     "hex_values": "$9e $7f $1"
@@ -1361,8 +1343,8 @@
   {
     "label": "GoldenrodUndergroundWarehouseMaxEther.ckir_BEFOREGOLDENRODTUNNELMAXETHER0ITEMCODE",
     "address_range": {
-      "begin": 514538,
-      "end": 514540
+      "begin": 514571,
+      "end": 514573
     },
     "integer_values": "64 1",
     "hex_values": "$40 $1"
@@ -1370,8 +1352,8 @@
   {
     "label": "GoldenrodUndergroundWarehouseTMSleepTalk.ckir_BEFOREGOLDENRODTUNNELSLEEPTALKTM0ITEMCODE",
     "address_range": {
-      "begin": 514540,
-      "end": 514542
+      "begin": 514573,
+      "end": 514575
     },
     "integer_values": "227 1",
     "hex_values": "$e3 $1"
@@ -1379,8 +1361,8 @@
   {
     "label": "GoldenrodUndergroundWarehouseUltraBall.ckir_BEFOREGOLDENRODTUNNELULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 514542,
-      "end": 514544
+      "begin": 514575,
+      "end": 514577
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -1388,74 +1370,65 @@
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFOREGOLDENRODTUNNELMAXETHER0NPCCODE",
     "address_range": {
-      "begin": 515539,
-      "end": 515552
+      "begin": 515572,
+      "end": 515585
     },
-    "integer_values": "84 19 22 1 0 255 255 1 0 234 89 121 6",
-    "hex_values": "$54 $13 $16 $1 $0 $ff $ff $1 $0 $ea $59 $79 $6"
+    "integer_values": "84 19 22 1 0 255 255 1 0 11 90 121 6",
+    "hex_values": "$54 $13 $16 $1 $0 $ff $ff $1 $0 $b $5a $79 $6"
   },
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFOREGOLDENRODTUNNELSLEEPTALKTM0NPCCODE",
     "address_range": {
-      "begin": 515552,
-      "end": 515565
+      "begin": 515585,
+      "end": 515598
     },
-    "integer_values": "84 13 17 1 0 255 255 1 0 236 89 122 6",
-    "hex_values": "$54 $d $11 $1 $0 $ff $ff $1 $0 $ec $59 $7a $6"
+    "integer_values": "84 13 17 1 0 255 255 1 0 13 90 122 6",
+    "hex_values": "$54 $d $11 $1 $0 $ff $ff $1 $0 $d $5a $7a $6"
   },
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFOREGOLDENRODTUNNELULTRABALL0NPCCODE",
     "address_range": {
-      "begin": 515565,
-      "end": 515578
+      "begin": 515598,
+      "end": 515611
     },
-    "integer_values": "84 5 6 1 0 255 255 1 0 238 89 85 6",
-    "hex_values": "$54 $5 $6 $1 $0 $ff $ff $1 $0 $ee $59 $55 $6"
+    "integer_values": "84 5 6 1 0 255 255 1 0 15 90 85 6",
+    "hex_values": "$54 $5 $6 $1 $0 $ff $ff $1 $0 $f $5a $55 $6"
   },
   {
     "label": "GoldenrodUnderground_MapEvents.ckir_BEFORECOINCASEUNDERGROUND0NPCCODE",
     "address_range": {
-      "begin": 510375,
-      "end": 510388
+      "begin": 510408,
+      "end": 510421
     },
-    "integer_values": "84 29 11 1 0 255 255 1 0 6 67 114 6",
-    "hex_values": "$54 $1d $b $1 $0 $ff $ff $1 $0 $6 $43 $72 $6"
+    "integer_values": "84 29 11 1 0 255 255 1 0 39 67 114 6",
+    "hex_values": "$54 $1d $b $1 $0 $ff $ff $1 $0 $27 $43 $72 $6"
   },
   {
     "label": "GoldenrodUnderground_MapEvents.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENANTIDOTE0ITEMCODEB",
     "address_range": {
-      "begin": 510317,
-      "end": 510322
+      "begin": 510350,
+      "end": 510355
     },
-    "integer_values": "8 17 7 17 67",
-    "hex_values": "$8 $11 $7 $11 $43"
+    "integer_values": "8 17 7 50 67",
+    "hex_values": "$8 $11 $7 $32 $43"
   },
   {
     "label": "GoldenrodUnderground_MapEvents.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENPARALYZEHEAL0ITEMCODEB",
     "address_range": {
-      "begin": 510307,
-      "end": 510312
+      "begin": 510340,
+      "end": 510345
     },
-    "integer_values": "13 6 7 11 67",
-    "hex_values": "$d $6 $7 $b $43"
+    "integer_values": "13 6 7 44 67",
+    "hex_values": "$d $6 $7 $2c $43"
   },
   {
     "label": "GoldenrodUnderground_MapEvents.ckir_BEFOREGOLDENRODUNDERGROUNDHIDDENSUPERPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 510312,
-      "end": 510317
+      "begin": 510345,
+      "end": 510350
     },
-    "integer_values": "18 4 7 14 67",
-    "hex_values": "$12 $4 $7 $e $43"
-  },
-  {
-    "label": "GoldenrodUnderground_MapScripts.ckir_BEFORE_timed_events_UNDERGROUND",
-    "address_range": {
-      "begin": 508071,
-      "end": 508073
-    },
-    "integer_values": "43 7",
-    "hex_values": "$2b $7"
+    "integer_values": "18 4 7 47 67",
+    "hex_values": "$12 $4 $7 $2f $43"
   },
   {
     "label": "GoodRodGuru.ckir_BEFOREGOODRODGURU0ITEMCODE",
@@ -1505,8 +1478,8 @@
   {
     "label": "IcePath1FHMWaterfall.ckir_BEFOREICEPATHWATERFALLHM0ITEMCODE",
     "address_range": {
-      "begin": 517240,
-      "end": 517242
+      "begin": 517273,
+      "end": 517275
     },
     "integer_values": "249 1",
     "hex_values": "$f9 $1"
@@ -1514,8 +1487,8 @@
   {
     "label": "IcePath1FPPUp.ckir_BEFOREICEPATHPPUP0ITEMCODE",
     "address_range": {
-      "begin": 517242,
-      "end": 517244
+      "begin": 517275,
+      "end": 517277
     },
     "integer_values": "62 1",
     "hex_values": "$3e $1"
@@ -1523,8 +1496,8 @@
   {
     "label": "IcePath1FProtein.ckir_BEFOREICEPATHPROTEIN0ITEMCODE",
     "address_range": {
-      "begin": 517244,
-      "end": 517246
+      "begin": 517277,
+      "end": 517279
     },
     "integer_values": "27 1",
     "hex_values": "$1b $1"
@@ -1532,35 +1505,35 @@
   {
     "label": "IcePath1F_MapEvents.ckir_BEFOREICEPATHPPUP0NPCCODE",
     "address_range": {
-      "begin": 517285,
-      "end": 517298
+      "begin": 517318,
+      "end": 517331
     },
-    "integer_values": "84 27 36 1 0 255 255 1 0 122 100 137 6",
-    "hex_values": "$54 $1b $24 $1 $0 $ff $ff $1 $0 $7a $64 $89 $6"
+    "integer_values": "84 27 36 1 0 255 255 1 0 155 100 137 6",
+    "hex_values": "$54 $1b $24 $1 $0 $ff $ff $1 $0 $9b $64 $89 $6"
   },
   {
     "label": "IcePath1F_MapEvents.ckir_BEFOREICEPATHPROTEIN0NPCCODE",
     "address_range": {
-      "begin": 517298,
-      "end": 517311
+      "begin": 517331,
+      "end": 517344
     },
-    "integer_values": "84 13 39 1 0 255 255 1 0 124 100 190 7",
-    "hex_values": "$54 $d $27 $1 $0 $ff $ff $1 $0 $7c $64 $be $7"
+    "integer_values": "84 13 39 1 0 255 255 1 0 157 100 190 7",
+    "hex_values": "$54 $d $27 $1 $0 $ff $ff $1 $0 $9d $64 $be $7"
   },
   {
     "label": "IcePath1F_MapEvents.ckir_BEFOREICEPATHWATERFALLHM0NPCCODE",
     "address_range": {
-      "begin": 517272,
-      "end": 517285
+      "begin": 517305,
+      "end": 517318
     },
-    "integer_values": "84 11 35 1 0 255 255 1 0 120 100 136 6",
-    "hex_values": "$54 $b $23 $1 $0 $ff $ff $1 $0 $78 $64 $88 $6"
+    "integer_values": "84 11 35 1 0 255 255 1 0 153 100 136 6",
+    "hex_values": "$54 $b $23 $1 $0 $ff $ff $1 $0 $99 $64 $88 $6"
   },
   {
     "label": "IcePathB1FHiddenMaxPotion.ckir_BEFOREICEPATHHIDDENMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 517397,
-      "end": 517400
+      "begin": 517430,
+      "end": 517433
     },
     "integer_values": "148 0 15",
     "hex_values": "$94 $0 $f"
@@ -1568,8 +1541,8 @@
   {
     "label": "IcePathB1FIron.ckir_BEFOREICEPATHIRON0ITEMCODE",
     "address_range": {
-      "begin": 517395,
-      "end": 517397
+      "begin": 517428,
+      "end": 517430
     },
     "integer_values": "28 1",
     "hex_values": "$1c $1"
@@ -1577,26 +1550,26 @@
   {
     "label": "IcePathB1F_MapEvents.ckir_BEFOREICEPATHHIDDENMAXPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 517472,
-      "end": 517477
+      "begin": 517505,
+      "end": 517510
     },
-    "integer_values": "30 17 7 21 101",
-    "hex_values": "$1e $11 $7 $15 $65"
+    "integer_values": "30 17 7 54 101",
+    "hex_values": "$1e $11 $7 $36 $65"
   },
   {
     "label": "IcePathB1F_MapEvents.ckir_BEFOREICEPATHIRON0NPCCODE",
     "address_range": {
-      "begin": 517530,
-      "end": 517543
+      "begin": 517563,
+      "end": 517576
     },
-    "integer_values": "84 39 9 1 0 255 255 1 0 19 101 138 6",
-    "hex_values": "$54 $27 $9 $1 $0 $ff $ff $1 $0 $13 $65 $8a $6"
+    "integer_values": "84 39 9 1 0 255 255 1 0 52 101 138 6",
+    "hex_values": "$54 $27 $9 $1 $0 $ff $ff $1 $0 $34 $65 $8a $6"
   },
   {
     "label": "IcePathB2FBlackthornSideHiddenIceHeal.ckir_BEFOREICEPATHHIDDENICEHEAL0ITEMCODE",
     "address_range": {
-      "begin": 517710,
-      "end": 517713
+      "begin": 517743,
+      "end": 517746
     },
     "integer_values": "150 0 11",
     "hex_values": "$96 $0 $b"
@@ -1604,8 +1577,8 @@
   {
     "label": "IcePathB2FBlackthornSideTMRest.ckir_BEFOREICEPATHRESTTM0ITEMCODE",
     "address_range": {
-      "begin": 517708,
-      "end": 517710
+      "begin": 517741,
+      "end": 517743
     },
     "integer_values": "236 1",
     "hex_values": "$ec $1"
@@ -1613,26 +1586,26 @@
   {
     "label": "IcePathB2FBlackthornSide_MapEvents.ckir_BEFOREICEPATHHIDDENICEHEAL0ITEMCODEB",
     "address_range": {
-      "begin": 517728,
-      "end": 517733
+      "begin": 517761,
+      "end": 517766
     },
-    "integer_values": "10 2 7 78 102",
-    "hex_values": "$a $2 $7 $4e $66"
+    "integer_values": "10 2 7 111 102",
+    "hex_values": "$a $2 $7 $6f $66"
   },
   {
     "label": "IcePathB2FBlackthornSide_MapEvents.ckir_BEFOREICEPATHRESTTM0NPCCODE",
     "address_range": {
-      "begin": 517734,
-      "end": 517747
+      "begin": 517767,
+      "end": 517780
     },
-    "integer_values": "84 20 12 1 0 255 255 1 0 76 102 141 6",
-    "hex_values": "$54 $14 $c $1 $0 $ff $ff $1 $0 $4c $66 $8d $6"
+    "integer_values": "84 20 12 1 0 255 255 1 0 109 102 141 6",
+    "hex_values": "$54 $14 $c $1 $0 $ff $ff $1 $0 $6d $66 $8d $6"
   },
   {
     "label": "IcePathB2FMahoganySideFullHeal.ckir_BEFOREICEPATHFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 517548,
-      "end": 517550
+      "begin": 517581,
+      "end": 517583
     },
     "integer_values": "38 1",
     "hex_values": "$26 $1"
@@ -1640,8 +1613,8 @@
   {
     "label": "IcePathB2FMahoganySideHiddenCarbos.ckir_BEFOREICEPATHHIDDENCARBOS0ITEMCODE",
     "address_range": {
-      "begin": 517552,
-      "end": 517555
+      "begin": 517585,
+      "end": 517588
     },
     "integer_values": "149 0 29",
     "hex_values": "$95 $0 $1d"
@@ -1649,8 +1622,8 @@
   {
     "label": "IcePathB2FMahoganySideMaxPotion.ckir_BEFOREICEPATHMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 517550,
-      "end": 517552
+      "begin": 517583,
+      "end": 517585
     },
     "integer_values": "15 1",
     "hex_values": "$f $1"
@@ -1658,35 +1631,35 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.ckir_BEFOREICEPATHFULLHEAL0NPCCODE",
     "address_range": {
-      "begin": 517680,
-      "end": 517693
+      "begin": 517713,
+      "end": 517726
     },
-    "integer_values": "84 13 12 1 0 255 255 1 0 172 101 139 6",
-    "hex_values": "$54 $d $c $1 $0 $ff $ff $1 $0 $ac $65 $8b $6"
+    "integer_values": "84 13 12 1 0 255 255 1 0 205 101 139 6",
+    "hex_values": "$54 $d $c $1 $0 $ff $ff $1 $0 $cd $65 $8b $6"
   },
   {
     "label": "IcePathB2FMahoganySide_MapEvents.ckir_BEFOREICEPATHHIDDENCARBOS0ITEMCODEB",
     "address_range": {
-      "begin": 517622,
-      "end": 517627
+      "begin": 517655,
+      "end": 517660
     },
-    "integer_values": "17 0 7 176 101",
-    "hex_values": "$11 $0 $7 $b0 $65"
+    "integer_values": "17 0 7 209 101",
+    "hex_values": "$11 $0 $7 $d1 $65"
   },
   {
     "label": "IcePathB2FMahoganySide_MapEvents.ckir_BEFOREICEPATHMAXPOTION0NPCCODE",
     "address_range": {
-      "begin": 517693,
-      "end": 517706
+      "begin": 517726,
+      "end": 517739
     },
-    "integer_values": "84 6 4 1 0 255 255 1 0 174 101 140 6",
-    "hex_values": "$54 $6 $4 $1 $0 $ff $ff $1 $0 $ae $65 $8c $6"
+    "integer_values": "84 6 4 1 0 255 255 1 0 207 101 140 6",
+    "hex_values": "$54 $6 $4 $1 $0 $ff $ff $1 $0 $cf $65 $8c $6"
   },
   {
     "label": "IcePathB3FNevermeltice.ckir_BEFOREICEPATHNEVERMELTICE0ITEMCODE",
     "address_range": {
-      "begin": 517749,
-      "end": 517751
+      "begin": 517782,
+      "end": 517784
     },
     "integer_values": "107 1",
     "hex_values": "$6b $1"
@@ -1694,11 +1667,11 @@
   {
     "label": "IcePathB3F_MapEvents.ckir_BEFOREICEPATHNEVERMELTICE0NPCCODE",
     "address_range": {
-      "begin": 517770,
-      "end": 517783
+      "begin": 517803,
+      "end": 517816
     },
-    "integer_values": "84 11 9 1 0 255 255 1 0 117 102 142 6",
-    "hex_values": "$54 $b $9 $1 $0 $ff $ff $1 $0 $75 $66 $8e $6"
+    "integer_values": "84 11 9 1 0 255 255 1 0 150 102 142 6",
+    "hex_values": "$54 $b $9 $1 $0 $ff $ff $1 $0 $96 $66 $8e $6"
   },
   {
     "label": "IlexForestAntidote.ckir_BEFOREILEXFORESTANTIDOTE0ITEMCODE",
@@ -2036,8 +2009,8 @@
   {
     "label": "LavRadioTower1FGentlemanScript.ckir_BEFOREEXPANSIONCARDGIFT0ITEMCODE",
     "address_range": {
-      "begin": 519818,
-      "end": 519821
+      "begin": 519851,
+      "end": 519854
     },
     "integer_values": "175 3 0",
     "hex_values": "$af $3 $0"
@@ -2077,6 +2050,24 @@
     },
     "integer_values": "158 207 1",
     "hex_values": "$9e $cf $1"
+  },
+  {
+    "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOPOPEN",
+    "address_range": {
+      "begin": 443250,
+      "end": 443256
+    },
+    "integer_values": "3 120 67 9 126 67",
+    "hex_values": "$3 $78 $43 $9 $7e $43"
+  },
+  {
+    "label": "MahoganyMart1F_MapEvents.ckir_BEFORE_shop_events_ROCKETSHOP",
+    "address_range": {
+      "begin": 443935,
+      "end": 443948
+    },
+    "integer_values": "75 7 8 6 0 255 255 0 0 112 67 218 6",
+    "hex_values": "$4b $7 $8 $6 $0 $ff $ff $0 $0 $70 $43 $da $6"
   },
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTANTIDOTE0ITEMCODE",
@@ -4032,6 +4023,15 @@
     "hex_values": "$6 $a $d $62"
   },
   {
+    "label": "MountMoonGiftShop_MapEvents.ckir_BEFORE_shop_events_MOONSHOP",
+    "address_range": {
+      "begin": 487943,
+      "end": 487956
+    },
+    "integer_values": "47 7 8 6 0 255 255 0 0 184 113 255 255",
+    "hex_values": "$2f $7 $8 $6 $0 $ff $ff $0 $0 $b8 $71 $ff $ff"
+  },
+  {
     "label": "MountMoonSquareHiddenMoonStone.ckir_BEFOREMOUNTMOONSQUAREHIDDENMOONSTONE0ITEMCODE",
     "address_range": {
       "begin": 487720,
@@ -4052,8 +4052,8 @@
   {
     "label": "MountMortar1FInsideEscapeRope.ckir_BEFOREMTMORTARINNERESCAPEROPE0ITEMCODE",
     "address_range": {
-      "begin": 515714,
-      "end": 515716
+      "begin": 515747,
+      "end": 515749
     },
     "integer_values": "19 1",
     "hex_values": "$13 $1"
@@ -4061,8 +4061,8 @@
   {
     "label": "MountMortar1FInsideHiddenMaxRepel.ckir_BEFOREMTMORTARHIDDENMAXREPEL0ITEMCODE",
     "address_range": {
-      "begin": 515728,
-      "end": 515731
+      "begin": 515761,
+      "end": 515764
     },
     "integer_values": "145 0 43",
     "hex_values": "$91 $0 $2b"
@@ -4070,8 +4070,8 @@
   {
     "label": "MountMortar1FInsideHyperPotion.ckir_BEFOREMTMORTARINNERHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 515718,
-      "end": 515720
+      "begin": 515751,
+      "end": 515753
     },
     "integer_values": "16 1",
     "hex_values": "$10 $1"
@@ -4079,8 +4079,8 @@
   {
     "label": "MountMortar1FInsideIron.ckir_BEFOREMTMORTARIRON0ITEMCODE",
     "address_range": {
-      "begin": 515724,
-      "end": 515726
+      "begin": 515757,
+      "end": 515759
     },
     "integer_values": "28 1",
     "hex_values": "$1c $1"
@@ -4088,8 +4088,8 @@
   {
     "label": "MountMortar1FInsideMaxPotion.ckir_BEFOREMTMORTARMAXPOTIONNUMBER20ITEMCODE",
     "address_range": {
-      "begin": 515720,
-      "end": 515722
+      "begin": 515753,
+      "end": 515755
     },
     "integer_values": "15 1",
     "hex_values": "$f $1"
@@ -4097,8 +4097,8 @@
   {
     "label": "MountMortar1FInsideMaxRevive.ckir_BEFOREMTMORTARMAXREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 515716,
-      "end": 515718
+      "begin": 515749,
+      "end": 515751
     },
     "integer_values": "40 1",
     "hex_values": "$28 $1"
@@ -4106,8 +4106,8 @@
   {
     "label": "MountMortar1FInsideNugget.ckir_BEFOREMTMORTARNUGGET0ITEMCODE",
     "address_range": {
-      "begin": 515722,
-      "end": 515724
+      "begin": 515755,
+      "end": 515757
     },
     "integer_values": "36 1",
     "hex_values": "$24 $1"
@@ -4115,8 +4115,8 @@
   {
     "label": "MountMortar1FInsideUltraBall.ckir_BEFOREMTMORTARULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 515726,
-      "end": 515728
+      "begin": 515759,
+      "end": 515761
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -4124,80 +4124,80 @@
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARHIDDENMAXREPEL0ITEMCODEB",
     "address_range": {
-      "begin": 516166,
-      "end": 516171
+      "begin": 516199,
+      "end": 516204
     },
-    "integer_values": "11 30 7 144 94",
-    "hex_values": "$b $1e $7 $90 $5e"
+    "integer_values": "11 30 7 177 94",
+    "hex_values": "$b $1e $7 $b1 $5e"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARINNERESCAPEROPE0NPCCODE",
     "address_range": {
-      "begin": 516185,
-      "end": 516198
+      "begin": 516218,
+      "end": 516231
     },
-    "integer_values": "84 42 39 1 0 255 255 1 0 130 94 125 6",
-    "hex_values": "$54 $2a $27 $1 $0 $ff $ff $1 $0 $82 $5e $7d $6"
+    "integer_values": "84 42 39 1 0 255 255 1 0 163 94 125 6",
+    "hex_values": "$54 $2a $27 $1 $0 $ff $ff $1 $0 $a3 $5e $7d $6"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARINNERHYPERPOTION0NPCCODE",
     "address_range": {
-      "begin": 516211,
-      "end": 516224
+      "begin": 516244,
+      "end": 516257
     },
-    "integer_values": "84 31 14 1 0 255 255 1 0 134 94 127 6",
-    "hex_values": "$54 $1f $e $1 $0 $ff $ff $1 $0 $86 $5e $7f $6"
+    "integer_values": "84 31 14 1 0 255 255 1 0 167 94 127 6",
+    "hex_values": "$54 $1f $e $1 $0 $ff $ff $1 $0 $a7 $5e $7f $6"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARIRON0NPCCODE",
     "address_range": {
-      "begin": 516276,
-      "end": 516289
+      "begin": 516309,
+      "end": 516322
     },
-    "integer_values": "84 20 12 1 0 255 255 1 0 140 94 200 7",
-    "hex_values": "$54 $14 $c $1 $0 $ff $ff $1 $0 $8c $5e $c8 $7"
+    "integer_values": "84 20 12 1 0 255 255 1 0 173 94 200 7",
+    "hex_values": "$54 $14 $c $1 $0 $ff $ff $1 $0 $ad $5e $c8 $7"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARMAXPOTIONNUMBER20NPCCODE",
     "address_range": {
-      "begin": 516224,
-      "end": 516237
+      "begin": 516257,
+      "end": 516270
     },
-    "integer_values": "84 24 26 1 0 255 255 1 0 136 94 166 7",
-    "hex_values": "$54 $18 $1a $1 $0 $ff $ff $1 $0 $88 $5e $a6 $7"
+    "integer_values": "84 24 26 1 0 255 255 1 0 169 94 166 7",
+    "hex_values": "$54 $18 $1a $1 $0 $ff $ff $1 $0 $a9 $5e $a6 $7"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARMAXREVIVE0NPCCODE",
     "address_range": {
-      "begin": 516198,
-      "end": 516211
+      "begin": 516231,
+      "end": 516244
     },
-    "integer_values": "84 14 20 1 0 255 255 1 0 132 94 126 6",
-    "hex_values": "$54 $e $14 $1 $0 $ff $ff $1 $0 $84 $5e $7e $6"
+    "integer_values": "84 14 20 1 0 255 255 1 0 165 94 126 6",
+    "hex_values": "$54 $e $14 $1 $0 $ff $ff $1 $0 $a5 $5e $7e $6"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARNUGGET0NPCCODE",
     "address_range": {
-      "begin": 516237,
-      "end": 516250
+      "begin": 516270,
+      "end": 516283
     },
-    "integer_values": "84 23 39 1 0 255 255 1 0 138 94 167 7",
-    "hex_values": "$54 $17 $27 $1 $0 $ff $ff $1 $0 $8a $5e $a7 $7"
+    "integer_values": "84 23 39 1 0 255 255 1 0 171 94 167 7",
+    "hex_values": "$54 $17 $27 $1 $0 $ff $ff $1 $0 $ab $5e $a7 $7"
   },
   {
     "label": "MountMortar1FInside_MapEvents.ckir_BEFOREMTMORTARULTRABALL0NPCCODE",
     "address_range": {
-      "begin": 516289,
-      "end": 516302
+      "begin": 516322,
+      "end": 516335
     },
-    "integer_values": "84 21 21 1 0 255 255 1 0 142 94 201 7",
-    "hex_values": "$54 $15 $15 $1 $0 $ff $ff $1 $0 $8e $5e $c9 $7"
+    "integer_values": "84 21 21 1 0 255 255 1 0 175 94 201 7",
+    "hex_values": "$54 $15 $15 $1 $0 $ff $ff $1 $0 $af $5e $c9 $7"
   },
   {
     "label": "MountMortar1FOutsideEther.ckir_BEFOREMTMORTARETHER0ITEMCODE",
     "address_range": {
-      "begin": 515580,
-      "end": 515582
+      "begin": 515613,
+      "end": 515615
     },
     "integer_values": "63 1",
     "hex_values": "$3f $1"
@@ -4205,8 +4205,8 @@
   {
     "label": "MountMortar1FOutsideHiddenHyperPotion.ckir_BEFOREMTMORTARHIDDENHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 515584,
-      "end": 515587
+      "begin": 515617,
+      "end": 515620
     },
     "integer_values": "144 0 16",
     "hex_values": "$90 $0 $10"
@@ -4214,8 +4214,8 @@
   {
     "label": "MountMortar1FOutsideRevive.ckir_BEFOREMTMORTARREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 515582,
-      "end": 515584
+      "begin": 515615,
+      "end": 515617
     },
     "integer_values": "39 1",
     "hex_values": "$27 $1"
@@ -4223,35 +4223,35 @@
   {
     "label": "MountMortar1FOutside_MapEvents.ckir_BEFOREMTMORTARETHER0NPCCODE",
     "address_range": {
-      "begin": 515643,
-      "end": 515656
+      "begin": 515676,
+      "end": 515689
     },
-    "integer_values": "84 19 17 1 0 255 255 1 0 252 93 123 6",
-    "hex_values": "$54 $13 $11 $1 $0 $ff $ff $1 $0 $fc $5d $7b $6"
+    "integer_values": "84 19 17 1 0 255 255 1 0 29 94 123 6",
+    "hex_values": "$54 $13 $11 $1 $0 $ff $ff $1 $0 $1d $5e $7b $6"
   },
   {
     "label": "MountMortar1FOutside_MapEvents.ckir_BEFOREMTMORTARHIDDENHYPERPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 515637,
-      "end": 515642
+      "begin": 515670,
+      "end": 515675
     },
-    "integer_values": "22 25 7 0 94",
-    "hex_values": "$16 $19 $7 $0 $5e"
+    "integer_values": "22 25 7 33 94",
+    "hex_values": "$16 $19 $7 $21 $5e"
   },
   {
     "label": "MountMortar1FOutside_MapEvents.ckir_BEFOREMTMORTARREVIVE0NPCCODE",
     "address_range": {
-      "begin": 515656,
-      "end": 515669
+      "begin": 515689,
+      "end": 515702
     },
-    "integer_values": "84 22 35 1 0 255 255 1 0 254 93 124 6",
-    "hex_values": "$54 $16 $23 $1 $0 $ff $ff $1 $0 $fe $5d $7c $6"
+    "integer_values": "84 22 35 1 0 255 255 1 0 31 94 124 6",
+    "hex_values": "$54 $16 $23 $1 $0 $ff $ff $1 $0 $1f $5e $7c $6"
   },
   {
     "label": "MountMortar2FInsideDragonScale.ckir_BEFOREMTMORTARDRAGONSCALE0ITEMCODE",
     "address_range": {
-      "begin": 516330,
-      "end": 516332
+      "begin": 516363,
+      "end": 516365
     },
     "integer_values": "151 1",
     "hex_values": "$97 $1"
@@ -4259,8 +4259,8 @@
   {
     "label": "MountMortar2FInsideElixer.ckir_BEFOREMTMORTARELIXER0ITEMCODE",
     "address_range": {
-      "begin": 516332,
-      "end": 516334
+      "begin": 516365,
+      "end": 516367
     },
     "integer_values": "65 1",
     "hex_values": "$41 $1"
@@ -4268,8 +4268,8 @@
   {
     "label": "MountMortar2FInsideEscapeRope.ckir_BEFOREMTMORTARUPPERESCAPEROPE0ITEMCODE",
     "address_range": {
-      "begin": 516334,
-      "end": 516336
+      "begin": 516367,
+      "end": 516369
     },
     "integer_values": "19 1",
     "hex_values": "$13 $1"
@@ -4277,8 +4277,8 @@
   {
     "label": "MountMortar2FInsideHiddenFullRestore.ckir_BEFOREMTMORTARHIDDENFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 516336,
-      "end": 516339
+      "begin": 516369,
+      "end": 516372
     },
     "integer_values": "146 0 14",
     "hex_values": "$92 $0 $e"
@@ -4286,8 +4286,8 @@
   {
     "label": "MountMortar2FInsideMaxPotion.ckir_BEFOREMTMORTARMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 516324,
-      "end": 516326
+      "begin": 516357,
+      "end": 516359
     },
     "integer_values": "15 1",
     "hex_values": "$f $1"
@@ -4295,8 +4295,8 @@
   {
     "label": "MountMortar2FInsideRareCandy.ckir_BEFOREMTMORTARRARECANDY0ITEMCODE",
     "address_range": {
-      "begin": 516326,
-      "end": 516328
+      "begin": 516359,
+      "end": 516361
     },
     "integer_values": "32 1",
     "hex_values": "$20 $1"
@@ -4304,8 +4304,8 @@
   {
     "label": "MountMortar2FInsideTMDefenseCurl.ckir_BEFOREMTMORTARDEFENSECURLTM0ITEMCODE",
     "address_range": {
-      "begin": 516328,
-      "end": 516330
+      "begin": 516361,
+      "end": 516363
     },
     "integer_values": "232 1",
     "hex_values": "$e8 $1"
@@ -4313,71 +4313,71 @@
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARDEFENSECURLTM0NPCCODE",
     "address_range": {
-      "begin": 516537,
-      "end": 516550
+      "begin": 516570,
+      "end": 516583
     },
-    "integer_values": "84 21 23 1 0 255 255 1 0 232 96 130 6",
-    "hex_values": "$54 $15 $17 $1 $0 $ff $ff $1 $0 $e8 $60 $82 $6"
+    "integer_values": "84 21 23 1 0 255 255 1 0 9 97 130 6",
+    "hex_values": "$54 $15 $17 $1 $0 $ff $ff $1 $0 $9 $61 $82 $6"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARDRAGONSCALE0NPCCODE",
     "address_range": {
-      "begin": 516550,
-      "end": 516563
+      "begin": 516583,
+      "end": 516596
     },
-    "integer_values": "84 9 20 1 0 255 255 1 0 234 96 131 6",
-    "hex_values": "$54 $9 $14 $1 $0 $ff $ff $1 $0 $ea $60 $83 $6"
+    "integer_values": "84 9 20 1 0 255 255 1 0 11 97 131 6",
+    "hex_values": "$54 $9 $14 $1 $0 $ff $ff $1 $0 $b $61 $83 $6"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARELIXER0NPCCODE",
     "address_range": {
-      "begin": 516563,
-      "end": 516576
+      "begin": 516596,
+      "end": 516609
     },
-    "integer_values": "84 15 13 1 0 255 255 1 0 236 96 132 6",
-    "hex_values": "$54 $f $d $1 $0 $ff $ff $1 $0 $ec $60 $84 $6"
+    "integer_values": "84 15 13 1 0 255 255 1 0 13 97 132 6",
+    "hex_values": "$54 $f $d $1 $0 $ff $ff $1 $0 $d $61 $84 $6"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARHIDDENFULLRESTORE0ITEMCODEB",
     "address_range": {
-      "begin": 516505,
-      "end": 516510
+      "begin": 516538,
+      "end": 516543
     },
-    "integer_values": "8 24 7 240 96",
-    "hex_values": "$8 $18 $7 $f0 $60"
+    "integer_values": "8 24 7 17 97",
+    "hex_values": "$8 $18 $7 $11 $61"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARMAXPOTION0NPCCODE",
     "address_range": {
-      "begin": 516511,
-      "end": 516524
+      "begin": 516544,
+      "end": 516557
     },
-    "integer_values": "84 26 32 1 0 255 255 1 0 228 96 128 6",
-    "hex_values": "$54 $1a $20 $1 $0 $ff $ff $1 $0 $e4 $60 $80 $6"
+    "integer_values": "84 26 32 1 0 255 255 1 0 5 97 128 6",
+    "hex_values": "$54 $1a $20 $1 $0 $ff $ff $1 $0 $5 $61 $80 $6"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARRARECANDY0NPCCODE",
     "address_range": {
-      "begin": 516524,
-      "end": 516537
+      "begin": 516557,
+      "end": 516570
     },
-    "integer_values": "84 37 6 1 0 255 255 1 0 230 96 129 6",
-    "hex_values": "$54 $25 $6 $1 $0 $ff $ff $1 $0 $e6 $60 $81 $6"
+    "integer_values": "84 37 6 1 0 255 255 1 0 7 97 129 6",
+    "hex_values": "$54 $25 $6 $1 $0 $ff $ff $1 $0 $7 $61 $81 $6"
   },
   {
     "label": "MountMortar2FInside_MapEvents.ckir_BEFOREMTMORTARUPPERESCAPEROPE0NPCCODE",
     "address_range": {
-      "begin": 516576,
-      "end": 516589
+      "begin": 516609,
+      "end": 516622
     },
-    "integer_values": "84 9 32 1 0 255 255 1 0 238 96 133 6",
-    "hex_values": "$54 $9 $20 $1 $0 $ff $ff $1 $0 $ee $60 $85 $6"
+    "integer_values": "84 9 32 1 0 255 255 1 0 15 97 133 6",
+    "hex_values": "$54 $9 $20 $1 $0 $ff $ff $1 $0 $f $61 $85 $6"
   },
   {
     "label": "MountMortarB1FCarbos.ckir_BEFOREMTMORTARCARBOS0ITEMCODE",
     "address_range": {
-      "begin": 516680,
-      "end": 516682
+      "begin": 516713,
+      "end": 516715
     },
     "integer_values": "29 1",
     "hex_values": "$1d $1"
@@ -4385,8 +4385,8 @@
   {
     "label": "MountMortarB1FFullRestore.ckir_BEFOREMTMORTARFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 516682,
-      "end": 516684
+      "begin": 516715,
+      "end": 516717
     },
     "integer_values": "14 1",
     "hex_values": "$e $1"
@@ -4394,8 +4394,8 @@
   {
     "label": "MountMortarB1FHiddenMaxRevive.ckir_BEFOREMTMORTARHIDDENMAXREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 516688,
-      "end": 516691
+      "begin": 516721,
+      "end": 516724
     },
     "integer_values": "147 0 40",
     "hex_values": "$93 $0 $28"
@@ -4403,8 +4403,8 @@
   {
     "label": "MountMortarB1FHyperPotion.ckir_BEFOREMTMORTARLOWERHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 516678,
-      "end": 516680
+      "begin": 516711,
+      "end": 516713
     },
     "integer_values": "16 1",
     "hex_values": "$10 $1"
@@ -4412,8 +4412,8 @@
   {
     "label": "MountMortarB1FMaxEther.ckir_BEFOREMTMORTARMAXETHER0ITEMCODE",
     "address_range": {
-      "begin": 516684,
-      "end": 516686
+      "begin": 516717,
+      "end": 516719
     },
     "integer_values": "64 1",
     "hex_values": "$40 $1"
@@ -4421,8 +4421,8 @@
   {
     "label": "MountMortarB1FPPUp.ckir_BEFOREMTMORTARPPUP0ITEMCODE",
     "address_range": {
-      "begin": 516686,
-      "end": 516688
+      "begin": 516719,
+      "end": 516721
     },
     "integer_values": "62 1",
     "hex_values": "$3e $1"
@@ -4430,56 +4430,56 @@
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARCARBOS0NPCCODE",
     "address_range": {
-      "begin": 517160,
-      "end": 517173
+      "begin": 517193,
+      "end": 517206
     },
-    "integer_values": "84 20 8 1 0 255 255 1 0 72 98 135 6",
-    "hex_values": "$54 $14 $8 $1 $0 $ff $ff $1 $0 $48 $62 $87 $6"
+    "integer_values": "84 20 8 1 0 255 255 1 0 105 98 135 6",
+    "hex_values": "$54 $14 $8 $1 $0 $ff $ff $1 $0 $69 $62 $87 $6"
   },
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARFULLRESTORE0NPCCODE",
     "address_range": {
-      "begin": 517199,
-      "end": 517212
+      "begin": 517232,
+      "end": 517245
     },
-    "integer_values": "84 28 38 1 0 255 255 1 0 74 98 202 7",
-    "hex_values": "$54 $1c $26 $1 $0 $ff $ff $1 $0 $4a $62 $ca $7"
+    "integer_values": "84 28 38 1 0 255 255 1 0 107 98 202 7",
+    "hex_values": "$54 $1c $26 $1 $0 $ff $ff $1 $0 $6b $62 $ca $7"
   },
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARHIDDENMAXREVIVE0ITEMCODEB",
     "address_range": {
-      "begin": 517141,
-      "end": 517146
+      "begin": 517174,
+      "end": 517179
     },
-    "integer_values": "6 4 7 80 98",
-    "hex_values": "$6 $4 $7 $50 $62"
+    "integer_values": "6 4 7 113 98",
+    "hex_values": "$6 $4 $7 $71 $62"
   },
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARLOWERHYPERPOTION0NPCCODE",
     "address_range": {
-      "begin": 517147,
-      "end": 517160
+      "begin": 517180,
+      "end": 517193
     },
-    "integer_values": "84 16 33 1 0 255 255 1 0 70 98 134 6",
-    "hex_values": "$54 $10 $21 $1 $0 $ff $ff $1 $0 $46 $62 $86 $6"
+    "integer_values": "84 16 33 1 0 255 255 1 0 103 98 134 6",
+    "hex_values": "$54 $10 $21 $1 $0 $ff $ff $1 $0 $67 $62 $86 $6"
   },
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARMAXETHER0NPCCODE",
     "address_range": {
-      "begin": 517212,
-      "end": 517225
+      "begin": 517245,
+      "end": 517258
     },
-    "integer_values": "84 7 36 1 0 255 255 1 0 76 98 203 7",
-    "hex_values": "$54 $7 $24 $1 $0 $ff $ff $1 $0 $4c $62 $cb $7"
+    "integer_values": "84 7 36 1 0 255 255 1 0 109 98 203 7",
+    "hex_values": "$54 $7 $24 $1 $0 $ff $ff $1 $0 $6d $62 $cb $7"
   },
   {
     "label": "MountMortarB1F_MapEvents.ckir_BEFOREMTMORTARPPUP0NPCCODE",
     "address_range": {
-      "begin": 517225,
-      "end": 517238
+      "begin": 517258,
+      "end": 517271
     },
-    "integer_values": "84 30 25 1 0 255 255 1 0 78 98 204 7",
-    "hex_values": "$54 $1e $19 $1 $0 $ff $ff $1 $0 $4e $62 $cc $7"
+    "integer_values": "84 30 25 1 0 255 255 1 0 111 98 204 7",
+    "hex_values": "$54 $1e $19 $1 $0 $ff $ff $1 $0 $6f $62 $cc $7"
   },
   {
     "label": "MrPokemonsHouse_MapScripts.ckir_BEFOREMR_POKEMONSEGG0ITEMCODE",
@@ -4718,8 +4718,8 @@
   {
     "label": "OlivineLighthouse5FHiddenHyperPotion.ckir_BEFORELIGHTHOUSEHIDDENHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 395766,
-      "end": 395769
+      "begin": 395767,
+      "end": 395770
     },
     "integer_values": "133 0 16",
     "hex_values": "$85 $0 $10"
@@ -4727,8 +4727,8 @@
   {
     "label": "OlivineLighthouse5FRareCandy.ckir_BEFORELIGHTHOUSERARECANDY0ITEMCODE",
     "address_range": {
-      "begin": 395760,
-      "end": 395762
+      "begin": 395761,
+      "end": 395763
     },
     "integer_values": "32 1",
     "hex_values": "$20 $1"
@@ -4736,8 +4736,8 @@
   {
     "label": "OlivineLighthouse5FSuperRepel.ckir_BEFORELIGHTHOUSESUPERREPEL0ITEMCODE",
     "address_range": {
-      "begin": 395762,
-      "end": 395764
+      "begin": 395763,
+      "end": 395765
     },
     "integer_values": "42 1",
     "hex_values": "$2a $1"
@@ -4745,8 +4745,8 @@
   {
     "label": "OlivineLighthouse5FTMSwagger.ckir_BEFORELIGHTHOUSESWAGGERTM0ITEMCODE",
     "address_range": {
-      "begin": 395764,
-      "end": 395766
+      "begin": 395765,
+      "end": 395767
     },
     "integer_values": "226 1",
     "hex_values": "$e2 $1"
@@ -4754,44 +4754,44 @@
   {
     "label": "OlivineLighthouse5F_MapEvents.ckir_BEFORELIGHTHOUSEHIDDENHYPERPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 396174,
-      "end": 396179
+      "begin": 396175,
+      "end": 396180
     },
-    "integer_values": "13 3 7 246 73",
-    "hex_values": "$d $3 $7 $f6 $49"
+    "integer_values": "13 3 7 247 73",
+    "hex_values": "$d $3 $7 $f7 $49"
   },
   {
     "label": "OlivineLighthouse5F_MapEvents.ckir_BEFORELIGHTHOUSERARECANDY0NPCCODE",
     "address_range": {
-      "begin": 396206,
-      "end": 396219
+      "begin": 396207,
+      "end": 396220
     },
-    "integer_values": "84 16 19 1 0 255 255 1 0 240 73 101 6",
-    "hex_values": "$54 $10 $13 $1 $0 $ff $ff $1 $0 $f0 $49 $65 $6"
+    "integer_values": "84 16 19 1 0 255 255 1 0 241 73 101 6",
+    "hex_values": "$54 $10 $13 $1 $0 $ff $ff $1 $0 $f1 $49 $65 $6"
   },
   {
     "label": "OlivineLighthouse5F_MapEvents.ckir_BEFORELIGHTHOUSESUPERREPEL0NPCCODE",
     "address_range": {
-      "begin": 396219,
-      "end": 396232
+      "begin": 396220,
+      "end": 396233
     },
-    "integer_values": "84 19 10 1 0 255 255 1 0 242 73 102 6",
-    "hex_values": "$54 $13 $a $1 $0 $ff $ff $1 $0 $f2 $49 $66 $6"
+    "integer_values": "84 19 10 1 0 255 255 1 0 243 73 102 6",
+    "hex_values": "$54 $13 $a $1 $0 $ff $ff $1 $0 $f3 $49 $66 $6"
   },
   {
     "label": "OlivineLighthouse5F_MapEvents.ckir_BEFORELIGHTHOUSESWAGGERTM0NPCCODE",
     "address_range": {
-      "begin": 396232,
-      "end": 396245
+      "begin": 396233,
+      "end": 396246
     },
-    "integer_values": "84 17 6 1 0 255 255 1 0 244 73 103 6",
-    "hex_values": "$54 $11 $6 $1 $0 $ff $ff $1 $0 $f4 $49 $67 $6"
+    "integer_values": "84 17 6 1 0 255 255 1 0 245 73 103 6",
+    "hex_values": "$54 $11 $6 $1 $0 $ff $ff $1 $0 $f5 $49 $67 $6"
   },
   {
     "label": "OlivineLighthouse6FSuperPotion.ckir_BEFORELIGHTHOUSESUPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 396463,
-      "end": 396465
+      "begin": 396464,
+      "end": 396466
     },
     "integer_values": "17 1",
     "hex_values": "$11 $1"
@@ -4799,11 +4799,11 @@
   {
     "label": "OlivineLighthouse6F_MapEvents.ckir_BEFORELIGHTHOUSESUPERPOTION0NPCCODE",
     "address_range": {
-      "begin": 397259,
-      "end": 397272
+      "begin": 397260,
+      "end": 397273
     },
-    "integer_values": "84 8 7 1 0 255 255 1 0 175 76 104 6",
-    "hex_values": "$54 $8 $7 $1 $0 $ff $ff $1 $0 $af $4c $68 $6"
+    "integer_values": "84 8 7 1 0 255 255 1 0 176 76 104 6",
+    "hex_values": "$54 $8 $7 $1 $0 $ff $ff $1 $0 $b0 $4c $68 $6"
   },
   {
     "label": "OlivinePortHiddenProtein.ckir_BEFOREOLIVINEPORTHIDDENPROTEIN0ITEMCODE",
@@ -4952,8 +4952,8 @@
   {
     "label": "RadioTower5FRocketBossScene.ckir_BEFORERADIOTOWERROCKETSPART20ITEMCODE",
     "address_range": {
-      "begin": 393468,
-      "end": 393471
+      "begin": 393469,
+      "end": 393472
     },
     "integer_values": "158 70 1",
     "hex_values": "$9e $46 $1"
@@ -4961,8 +4961,8 @@
   {
     "label": "RadioTower5FUltraBall.ckir_BEFORERADIOTOWERULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 393524,
-      "end": 393526
+      "begin": 393525,
+      "end": 393527
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -4970,11 +4970,11 @@
   {
     "label": "RadioTower5F_MapEvents.ckir_BEFORERADIOTOWERULTRABALL0NPCCODE",
     "address_range": {
-      "begin": 395705,
-      "end": 395718
+      "begin": 395706,
+      "end": 395719
     },
-    "integer_values": "84 9 12 1 0 255 255 1 0 52 65 205 7",
-    "hex_values": "$54 $9 $c $1 $0 $ff $ff $1 $0 $34 $41 $cd $7"
+    "integer_values": "84 9 12 1 0 255 255 1 0 53 65 205 7",
+    "hex_values": "$54 $9 $c $1 $0 $ff $ff $1 $0 $35 $41 $cd $7"
   },
   {
     "label": "Randomizer_HoOhSpecies.ckir_BEFORE_HOOHENCOUNTER",
@@ -5348,8 +5348,8 @@
   {
     "label": "Route12SuperRodHouseFishingGuruScript.ckir_BEFORESUPERRODGURU0ITEMCODE",
     "address_range": {
-      "begin": 521369,
-      "end": 521372
+      "begin": 521402,
+      "end": 521405
     },
     "integer_values": "158 61 1",
     "hex_values": "$9e $3d $1"
@@ -6149,8 +6149,8 @@
   {
     "label": "Route34IlexForestGateTeacherScript.ckir_BEFORESWEETSCENTGIRL0ITEMCODE",
     "address_range": {
-      "begin": 404926,
-      "end": 404929
+      "begin": 404927,
+      "end": 404930
     },
     "integer_values": "158 203 1",
     "hex_values": "$9e $cb $1"

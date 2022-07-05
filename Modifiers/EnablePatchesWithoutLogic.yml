@@ -3,3 +3,4 @@ Description: Enable logic patches for item randomization without including in lo
 NewGamePatches:
     - 'Patches/DailyEventsAlways.json'
     - 'Patches/BugCatchingContestAlways.json'
+    - 'Patches/ShopsAlways.json'

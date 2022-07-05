@@ -438,8 +438,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			while nLeft > 0 and not allocated:
 				#if its a plando placement, just place it, we'll complain if infeasible later on
 				# TODO Investigate this functionality, as seems to want 'Name' appended
-				if locList[iter] in plandoPlacements:
-					toAllocate = plandoPlacements[locList[iter]]
+				if locList[iter].Name in plandoPlacements:
+					toAllocate = plandoPlacements[locList[iter].Name]
 					nLeft = 0
 					placeable = True
 				else:
@@ -494,7 +494,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				##print(locList[iter].Name)
 				##print(locList[iter].Type)
 				#all locations are now the same!
-				if((locList[iter].Type == 'Item' or locList[iter].Type == 'Gym') and placeable):
+				if((locList[iter].Type == 'Item' or locList[iter].Type == 'Gym' \
+					or locList[iter].isShop()) and placeable):
 					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
 					#do any of its dependencies depend on this item/badge?
 					randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
@@ -833,10 +834,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	if "RandomiseItems" in inputFlags:
 		handles = list(filter(lambda x: len(x.Handles) > 0, locList))
 		for handle in handles:
+			extraFlags = []
 			if "ImpossibleRandomise" in handle.Handles and "Banned" in handle.FlagReqs:
 				specialFlagName = handle.Name
 				toHandle = list(filter(lambda x: specialFlagName in x.FlagReqs, locList))
 				for h in toHandle:
+					h.FlagReqs.append("ImpossibleRandomise")
+					for flag in h.FlagsSet:
+						if flag not in extraFlags:
+							extraFlags.append(flag)
+
+			for extraFlag in extraFlags:
+				toHandleFlag = list(filter(lambda x: extraFlag in x.FlagReqs, locList))
+				for h in toHandleFlag:
 					h.FlagReqs.append("ImpossibleRandomise")
 
 	if "RandomiseItems" in inputFlags:
@@ -890,6 +900,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	randomizedExtra = {}
 
 	allocatedCount = 0
+
+	assigned = []
 
 	while not goalReached and not randomizerFailed:
 		stage += 1
@@ -955,6 +967,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 
+							hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable)
+							if not hasRepel:
+								trashRepels = list(filter(lambda x: x in RandomizeFunctions.REPEL_ITEMS, trashItems))
+								if len(trashRepels) > 0:
+									while placeItem not in RandomizeFunctions.REPEL_ITEMS:
+										oldItem = placeItem
+										placeItem = trashItems.pop()
+										trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
 							i.item = placeItem
 						#print("Trash", i.Name, i.item)
 						if i.item != "GOLD_LEAF":
@@ -1002,6 +1023,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						(i.wasItem() or i.isItem()) \
 						and "Impossible" not in i.FlagReqs:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
+
+					hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable, addAfter)
+					if not hasRepel:
+						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
+
 					addAfter.append(i)
 
 			elif "Warps" in inputFlags and "Unreachable" in i.FlagReqs and i.Name not in reachable and i not in addAfter:
@@ -1015,6 +1041,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				"Impossible" not in i.FlagReqs:
 				if (i.isItem() or i.isGym() or i.wasItem()):
 					i.item = item_processor.GetRandomItem(i.NormalItem)
+					hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable, addAfter)
+					if not hasRepel:
+						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
 					addAfter.append(i)
 				else:
 					activeLoc.extend(i.Sublocations)
@@ -1051,12 +1080,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
-	while "RandomiseItems" in inputFlags and remainingItems:
+	while ("RandomiseItems" in inputFlags or "SilverLeafDebug" in inputFlags )and remainingItems:
 		remainingItems = False
 		for i in activeLoc:
-			if i.Name not in reachable and (i.isItem() or i.isGym() or i.wasItem()) \
-					and "Impossible" not in i.FlagReqs: # Impossible means NEVER overwrite
-														# e.g. Not randomising Pokegear
+
+			meet_condition = True
+
+			if "RandomiseItems" not in inputFlags:
+				meet_condition = i.Name not in reachable and (i.isItem() or i.isGym()) and "Impossible" not in i.FlagReqs
+			else:
+				meet_condition = i.Name not in reachable and (i.isItem() or i.isGym() or i.wasItem()) \
+					and "Impossible" not in i.FlagReqs # Impossible means NEVER overwrite
+
+			if meet_condition:											# e.g. Not randomising Pokegear
 				remainingItems = True
 				activeLoc.extend(i.Sublocations)
 				i.item = "SILVER_LEAF"
@@ -1065,6 +1101,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				print(i.Name,"now","Silver Leaf")
+
+			if i.Type == "Map":
+				activeLoc.extend(i.Sublocations)
 
 
 

@@ -34,7 +34,7 @@ def handleBadSpoiler(result, flags):
 
 	for s in spoiler.keys():
 		s_value = spoiler[s]
-		if s_value not in state:
+		if s_value not in state or state[s_value].item == "SILVER_LEAF":
 			print("Cannot reach:",s, s_value)
 
 
