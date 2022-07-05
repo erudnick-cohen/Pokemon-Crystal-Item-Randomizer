@@ -777,8 +777,6 @@ def LabelShopLocation(location):
 
 
 
-
-
 #currently only labels "regular" items
 def LabelItemLocation(location):
 	print("Labelling "+location.Name)
