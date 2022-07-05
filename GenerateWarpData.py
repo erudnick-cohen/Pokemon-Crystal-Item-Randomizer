@@ -87,6 +87,7 @@ def GenerateWarpLabels():
     #warp_data_minus_match = re.compile(regex_minus)
 
     for m in map_files:
+
         extension = m.split(".")[-1]
         if extension != "asm":
             continue
@@ -96,6 +97,9 @@ def GenerateWarpLabels():
         map_file_data.close()
 
         warp_events = list(filter(warp_data_match.match, data))
+
+        print("Labelling {} warps in: {}",len(warp_events),m)
+
         missed_warp_events = list(filter(lambda x: "warp_event" in x, data))
 
         not_found = list(filter(lambda x: x not in warp_events,missed_warp_events))
@@ -130,9 +134,9 @@ def BytesToEasyString(bytes):
     return s
 
 
-def interpretDataForMapIDs():
+def interpretDataForMapIDs(rom="RandomizerRom/crystal-speedchoice.gbc"):
     json_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
-    rom_file = "warp-test.gbc" # For this function, needs vanilla rom
+    rom_file = rom
     output_file = "Warp Data/map_ids.conf"
 
     f = open(rom_file, 'r+b')

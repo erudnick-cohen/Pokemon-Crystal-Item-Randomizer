@@ -702,9 +702,7 @@ def LabelTrainerData(trainerData):
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
 
-
 def LabelBargainShopLocation(location):
-
 	multiData = location.FileName
 	shopFilename = multiData.split("/")[0]
 	shopName = multiData.split("/")[1]
@@ -741,10 +739,9 @@ def LabelBargainShopLocation(location):
 def LabelShopLocation(location):
 	print("Labelling", location.Name)
 
-	if location.isBargainShop:
+	if location.isBargainShop():
 		LabelBargainShopLocation(location)
 		return
-
 
 	mart_data_file = "RandomizerRom/data/items/marts.asm"
 	file = open(mart_data_file)
