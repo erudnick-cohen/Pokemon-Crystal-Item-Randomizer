@@ -991,22 +991,6 @@ Location:
         Code:
         Text:
 
-    -
-        Name: Radio Tower 3F
-        FileName: CianwoodCity.asm
-        Type: Transition
-        HasPKMN: No
-        LocationReqs:
-            - Radio Tower 3F Maybe Card Key
-        ItemReqs:
-            - Card Key
-        FlagReqs:
-            - Impossible
-        FlagsSet:
-        ReachableReqs:
-        WildTableList:
-        Code:
-        Text:
 
     -
         Name: Rocket Base Entrance Open
