@@ -383,7 +383,7 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 	itemType = nItemCodeData[1]
 	if itemType == "Item":
 
-		if(location.Type == "BargainShop"):
+		if location.isBargainShop():
 			# Bargain shop item contains price also, so is different
 			romMap[addressData["address_range"]["begin"]] = nItemCode
 		else:
@@ -741,7 +741,7 @@ def LabelBargainShopLocation(location):
 def LabelShopLocation(location):
 	print("Labelling", location.Name)
 
-	if location.Type == "BargainShop":
+	if location.isBargainShop:
 		LabelBargainShopLocation(location)
 		return
 

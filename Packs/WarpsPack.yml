@@ -8,3 +8,4 @@ Modifiers:
     - Modifiers/NoEarlyStrongFights.yml
     - Modifiers/RemoveFlashLogic.yml
     - Modifiers/DontReplaceAideItem.yml
+    - Modifiers/SilverLeafDebugMode.yml

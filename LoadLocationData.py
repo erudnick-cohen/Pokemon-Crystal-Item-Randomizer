@@ -293,6 +293,7 @@ def purgeWarpBidirectional(warpLocations, locationList):
 	# Load data to get transitions
 	transitions = list(filter(lambda x: x.Type == "Transition", locationList))
 
+	dupeSet = []
 	warpsRemoved = []
 	returnRemoved = []
 	reverseSkip = []
@@ -357,18 +358,19 @@ def purgeWarpBidirectional(warpLocations, locationList):
 				for i in range(1, dup_count):
 					remove_dup = dup[1][i]
 					warpsRemoved.append(remove_dup)
+					dupeSet.append(remove_dup)
 
 		else:
 			singulars = list(filter(lambda x: len(x[1]) == 1, usages.items()))
 
 
 			# TODO Work out what this code is doing?
+			# This may just be looking at what is IN the list potentially about to remove
 			inSingular = []
 			for s in singulars:
 				warpRemoveList = s[1]
 				for w in warpRemoveList:
 					inSingular.append(w)
-
 
 			for s in singulars:
 				warpRemoveList = s[1]
@@ -389,17 +391,28 @@ def purgeWarpBidirectional(warpLocations, locationList):
 
 					# TODO Work out what is code is doing
 					ignore_count = 0
+					ignore_this_one = False
 					for hr in has_return:
 						if hr in inSingular:
 							ignore_count += 1
 							reverseSkip.append(hr)
 
+					for warpTransition in transitions:
+						transitionTo = "("+warpTransition.Name+")"
+						# Since loading from normal loc list, remove the warp option
+						warp_key = transitionTo.replace(WARP_OPTION, "")
+
+						if w["Start Warp Group"] == warp_key:
+							ignore_count += 1
+							ignore_this_one = True
+
 					if (len(has_return) - ignore_count) > 0:
 						newWarp = True
 						warpsRemoved.append(w)
 
-					for w in has_return:
-						returnRemoved.append(w)
+					if not ignore_this_one:
+						for w in has_return:
+							returnRemoved.append(w)
 
 
 	return warpsRemoved
@@ -459,6 +472,7 @@ def CheckLocationData(warpLocations, locationList):
 
 	if usePurge:
 		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
+		print("Purge count==",len(toPurge))
 		for purge in toPurge:
 			#print("Purge:", purge)
 			accessible_warp_data.remove(purge)
