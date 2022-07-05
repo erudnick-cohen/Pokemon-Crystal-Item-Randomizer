@@ -371,28 +371,6 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressData2["address_range"]["begin"]+2] = endVal
 
 
-<<<<<<< HEAD
-=======
-def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
-	beforeLabel = "ckir_BEFORE"+ \
-				  (("".join(location.Name.split())+"0ITEMCODE").upper())
-	addressData = labelData[beforeLabel]
-
-	nItemCodeData = itemScriptLookup(location.item)
-	nItemCode = nItemCodeData[0]
-	itemType = nItemCodeData[1]
-	if itemType == "Item":
-
-		if location.isBargainShop():
-			# Bargain shop item contains price also, so is different
-			romMap[addressData["address_range"]["begin"]] = nItemCode
-		else:
-			romMap[addressData["address_range"]["begin"] + 1] = nItemCode
-	else:
-		# This will write the other byte of shopitem macro in future
-		# This is not yet supported by speedchoice engine changes
-		raise Exception("Not yet supported")
-
 
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
