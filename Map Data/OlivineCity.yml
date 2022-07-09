@@ -190,6 +190,7 @@ Location:
                 FlagReqs:
                     - Hidden Items
                     - Fog Badge
+                    - Ship Sidequest
                 ItemReqs:
                     - S S Ticket
                     - Surf

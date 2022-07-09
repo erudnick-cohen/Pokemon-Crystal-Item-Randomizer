@@ -25,6 +25,13 @@ Changes:
         AddItemReqs:
             - Fly
 
+    -
+        Location: Route 46 Upper
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly
+
 
 IncompatibleWith:
     - 'Delete Fly'

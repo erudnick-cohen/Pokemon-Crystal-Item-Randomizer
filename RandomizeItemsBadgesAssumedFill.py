@@ -156,6 +156,7 @@ def GetWarpGroupsSets(locList, inputFlags):
 
 		# However, if not loaded, it may mark groups together which AREN'T possible
 		# Such as jumping a ledge and there is nothing to say which way you came from here
+		# This may be caused by purge level
 
 		extStart = transition.LocationReqs[0]
 		extEnd = transition.Name
@@ -176,6 +177,9 @@ def GetWarpGroupsSets(locList, inputFlags):
 	for ext in extensions:
 		extStart = ext.LocationReqs[0]
 		extEnd = ext.Name
+
+		# Cannot find implies group could not be reached by any other means
+		# e.g. Rocket Block North is otherwise unreachable via base walk on vanilla
 
 		if extStart not in reverseWarpSet and extEnd not in reverseWarpSet:
 			print("Cannot find either", extStart, "or", extEnd)
