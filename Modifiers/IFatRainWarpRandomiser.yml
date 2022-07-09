@@ -63,5 +63,38 @@ Changes:
         RemoveFlagReqs:
             - Impossible
 
+    -
+        Location: Victory Road Hall 2 Ledge TM
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Goldenrod
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+    -
+        Location: Goldenrod Rocket Block North
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+    -
+        Location: Goldenrod Rocket Corner Block
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+    -
+        Location: Mahogany 7 Badges
+        RemoveFlagReqs:
+            - Rocket Invasion
+
+    -
+        Location: Route 32
+        RemoveFlagReqs:
+            - Received Togepi Egg
+
+
+
+
 IncompatibleWithout:
     - 'Warps'

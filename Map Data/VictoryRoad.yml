@@ -151,6 +151,7 @@ Location:
             Text:
             AREALV: 32
             TrainerList:
+            WarpReqs: Victory Road F2
             Sublocations:
                 -
                     Name: Victory Road Full Restore
@@ -191,7 +192,6 @@ Location:
                     Text:
                     TrainerList:
                     Sublocations:
-            WarpReqs: Victory Road Hall 2
         -
             Name: Victory Road F3
             FileName: VictoryRoad.asm
@@ -207,6 +207,7 @@ Location:
             Text:
             AREALV: 32
             TrainerList:
+            WarpReqs: Victory Road Hall 3
             Sublocations:
                 -
                     Name: Victory Road Earthquake TM
@@ -250,5 +251,5 @@ Location:
                     Text:
                     TrainerList:
                     Sublocations:
-            WarpReqs: Victory Road Hall 3
+                    WarpReqs: Victory Road Hall 2 Ledge TM
 

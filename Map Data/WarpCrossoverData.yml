@@ -3247,3 +3247,32 @@ Location:
         WildTableList:
         Code:
         Text:
+
+    -
+        Name: Victory Road F2
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Victory Road Hall 2 Ledge TM
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Victory Road Hall 2 Ledge TM
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Victory Road Hall 2
+        ItemReqs:
+        FlagReqs:
+            - Impossible
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:

@@ -168,6 +168,7 @@ Location:
         ItemReqs:
             - S S Ticket
         FlagsSet:
+            - Ship Sidequest
         ReachableReqs:
         NormalItem: METAL_COAT
         Code: |
