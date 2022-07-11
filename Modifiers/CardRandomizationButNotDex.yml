@@ -28,6 +28,7 @@ Changes:
         Location: League Gate via Viridian
         NewItemReqs:
             - Cut
+
     -
         Location: Radio Card Quiz
         RemoveFlagReqs:

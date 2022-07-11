@@ -10,7 +10,8 @@ def UpdateLabels(wsl=False, delete_file=False):
         pass
 
     make_command = 'make'
-    ruby_commands = 'ruby ../generate-label-details.rb; ruby ../warp_data_labels.rb'
+    ruby_commands = 'ruby ../generate-label-details.rb; ruby ../warp_data_labels.rb ;' \
+                    'ruby ../generate-hint-details.rb; ruby ../block-labels.rb'
 
     if wsl:
         make_command = "wsl " + make_command
@@ -29,10 +30,14 @@ def UpdateLabels(wsl=False, delete_file=False):
     try:
         os.remove('Warp Data/crystal-speedchoice-warp-label-details.json')
         os.remove('crystal-speedchoice-label-details.json')
+        os.remove('Config/crystal-speedchoice-hint-details.json')
+        os.remove('Config/crystal-speedchoice-block-details.json')
     except OSError:
         pass
     shutil.move(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd())
     shutil.move(r'RandomizerRom/crystal-speedchoice-warp-label-details.json', os.getcwd()+"/Warp Data")
+    shutil.move(r'RandomizerRom/crystal-speedchoice-hint-details.json', os.getcwd()+"/Config")
+    shutil.move(r'RandomizerRom/crystal-speedchoice-block-details.json', os.getcwd()+"/Config")
 
     # DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!
 

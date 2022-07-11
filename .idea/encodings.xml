@@ -2,5 +2,6 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Warp Data/WarpFriendlyNames.tsv" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/warp_data_labels.rb" charset="UTF-8" />
   </component>
 </project>

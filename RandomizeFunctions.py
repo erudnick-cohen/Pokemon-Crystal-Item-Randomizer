@@ -325,7 +325,7 @@ def IterateRequirements(location, locations, known, partial_known=[]):
             for newReq in items:
                 if newReq not in data.ItemReqs:
                     data.ItemReqs.append(newReq)
-                    
+
             allRequiredLoc.extend(locs)
             allRequiredFlag.extend(flags)
             allRequiredItem.extend(items)
@@ -1213,8 +1213,9 @@ def AutoBarrenAreas(locations):
 
     return auto_barren
 
-def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict, requirementDict, config,
-                         HintOptions, allowList):
+
+def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict,
+                         requirementDict, config, HintOptions, allowList):
     # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
     locationList = LoadLocationData.FlattenLocationTree(locations)
 
@@ -1265,6 +1266,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
                      "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
+
     no_free_flag = []
 
     to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",

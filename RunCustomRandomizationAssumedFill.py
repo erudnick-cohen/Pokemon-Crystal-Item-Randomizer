@@ -324,7 +324,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	for i in desc_addr:
 		desc_addr_data[i['name'].split(".")[-1]] = i
 
-	sign_desc = open("Config/SignData.json")
+	sign_desc = open("Config/NewSignData.json")
 	s_descs = sign_desc.read()
 	sign_desc_addr = json.loads(s_descs)
 	sign_addr_data = {}
