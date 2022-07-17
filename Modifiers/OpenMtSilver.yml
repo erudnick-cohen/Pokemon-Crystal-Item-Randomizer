@@ -33,6 +33,7 @@ Changes:
         Location: Red
         AddFlagReqs:
             - All Badges
+            - Oak Opens Mt Silver
         RemoveFlagReqs:
             - Became Champion
 

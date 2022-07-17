@@ -119,7 +119,6 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -129,6 +128,7 @@ Location:
             - Fog Badge
             - Glacier Badge
             - Rising Badge
+            - Oak Opens Mt Silver
         ItemReqs:
             - Cut
             - Surf
@@ -150,7 +150,6 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -160,6 +159,7 @@ Location:
             - Fog Badge
             - Glacier Badge
             - Rising Badge
+            - Oak Opens Mt Silver
         ItemReqs:
             - Cut
             - Surf
@@ -181,7 +181,6 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -191,6 +190,7 @@ Location:
             - Fog Badge
             - Glacier Badge
             - Rising Badge
+            - Oak Opens Mt Silver
         ItemReqs:
             - Cut
             - Surf
@@ -212,7 +212,6 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Oaks Lab
             - Woke Snorlax
         FlagReqs:
             - All Badges
@@ -223,6 +222,7 @@ Location:
             - Fog Badge
             - Glacier Badge
             - Rising Badge
+            - Oak Opens Mt Silver
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -263,4 +263,20 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
-        
+
+    -
+        Name: Mt. Silver Is Open
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Oak Opens Mt Silver
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

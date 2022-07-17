@@ -193,7 +193,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
-                    - Lighthouse
+                    - Lighthouse Visited
                 ReachableReqs:
                 Text:
                 Code:

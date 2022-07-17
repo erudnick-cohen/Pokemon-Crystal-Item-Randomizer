@@ -5,6 +5,7 @@ Changes:
         Location: Goldenrod Tunnel
         AddFlagReqs:
             - Rocket Invasion
+            - Beat Team Rocket
         AddItemReqs:
             - Card Key
 
@@ -12,5 +13,6 @@ Changes:
         Location: Goldenrod Warehouse
         AddFlagReqs:
             - Rocket Invasion
+            - Beat Team Rocket
         AddItemReqs:
             - Card Key

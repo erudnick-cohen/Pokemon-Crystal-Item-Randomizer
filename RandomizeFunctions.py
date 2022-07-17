@@ -4,6 +4,8 @@ import math
 import random
 
 import LoadLocationData
+import RandomizeItemsBadgesAssumedFill
+
 
 def SpecialBytesConversion(text, safe, hintConfig):
 
@@ -564,6 +566,11 @@ class HintMessage():
                 msg4.text = self.item
             elif self.type == "requiresi":
                 msg1.text = "A champ requires"
+                msg2.text = self.secondary
+                msg3.text = "to access"
+                msg4.text = self.item
+            elif self.type == "requiresl":
+                msg1.text = "A champ vists"
                 msg2.text = self.secondary
                 msg3.text = "to access"
                 msg4.text = self.item
@@ -1214,68 +1221,11 @@ def AutoBarrenAreas(locations):
     return auto_barren
 
 
-def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict,
-                         requirementDict, config, HintOptions, allowList):
-    # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
-    locationList = LoadLocationData.FlattenLocationTree(locations)
-
-    known = []
-
-
-    trashItems = {}
-    for sp in spoilerTrash.keys():
-        item = spoilerTrash[sp]
-        if "->" in item:
-            trashItems[sp] = item.split("->")[1]
-        else:
-            trashItems[sp] = item
-
-    for location in locationList:
-
-        addedLoc, addedFlag, addedItem = IterateRequirements(location, locationList, known, partial_known=[])
-
-        for req in addedLoc:
-            if req not in location.LocationReqs:
-                location.LocationReqs.append(req)
-
-        for req in addedItem:
-            if req not in location.ItemReqs:
-                location.ItemReqs.append(req)
-
-        for req in addedFlag:
-            if req not in location.FlagReqs:
-                location.FlagReqs.append(req)
-
-    to_check_location = ["Elite Four", "Whirl Islands",
-                         "Tin Tower", "VS Ho-Oh", "Rocket Base", "Ruins of Alph",
-                         "Cianwood City", "Blackthorn City", "Cinnabar Island",
-                         "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
-                         "Mt Mortar Upper Floor", "Elm's Lab", "Routes 26/27", "Lighthouse",
-                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape",
-                         "Mt. Silver Unlock"]
-
-    location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
-                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls",
-                                             "Route 27 Right Side"}, # Add inferred until complex logic
-                            "Cerulean Cape": {"Route 24", "Route 25"}
-                            }
-
-    # Need message converter when loading these locations
-
-    no_free_locations = []
-
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
-                     "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
-
-    no_free_flag = []
-
-    to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
-                     "Secret Potion", "Basement Key", "Lost Item",
-                     "Cut", "Surf", "Red Scale", "Mystery Egg", "Machine Part",
-                     "Card Key", "Rainbow Wing", "Clear Bell"]
+def OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badgeDict, location_sim_mapping,
+                  trashItems, criticalTrash, to_check_flag):
 
     no_free_item = []
-
+    known = []
     itemToReq = []
 
     notValidReqs = ["Bicycle", "Fly", "Storm Badge",
@@ -1288,6 +1238,27 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                     "Defeat Electrodes"]
 
     doNotGiveHints = []
+
+    no_free_locations = []
+    no_free_flag = []
+    iterateRequirements = True
+
+    if iterateRequirements:
+        for location in locationList:
+
+            addedLoc, addedFlag, addedItem = IterateRequirements(location, locationList, known, partial_known=[])
+
+            for req in addedLoc:
+                if req not in location.LocationReqs:
+                    location.LocationReqs.append(req)
+
+            for req in addedItem:
+                if req not in location.ItemReqs:
+                    location.ItemReqs.append(req)
+
+            for req in addedFlag:
+                if req not in location.FlagReqs:
+                    location.FlagReqs.append(req)
 
     discardedItems = []
     for item in to_check_item:
@@ -1319,8 +1290,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     for discard in discardedLocations:
         to_check_location.remove(discard)
 
-    potentiallyRequiredItems = list(spoiler.keys()).copy()
-
     inverse_trash = {v: k for k, v in trashItems.items()}
     for i in inverse_trash.keys():
         spoiler[i] = inverse_trash[i]
@@ -1333,7 +1302,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     locationMapping = {}
     itemMapping = {}
     flagMapping = {}
-
 
     RequiredByTag = {}
 
@@ -1362,9 +1330,9 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
         else:
             found_result = result[0]
 
-            if "Impossible" in found_result.LocationReqs or\
-                "Banned" in found_result.LocationReqs or\
-                "Unreachable" in found_result.LocationReqs:
+            if "Impossible" in found_result.FlagReqs or \
+                    "Banned" in found_result.FlagReqs or \
+                    "Unreachable" in found_result.FlagReqs:
                 continue
 
             found_result.UpdateTags()
@@ -1377,7 +1345,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
             if not HintOptions.UselessHints and uselessTrash:
                 continue
-            elif uselessTrash and random.randrange(0, 100, 1) >= (HintOptions.UselessHintChance*100):
+            elif uselessTrash and random.randrange(0, 100, 1) >= (HintOptions.UselessHintChance * 100):
                 continue
 
             # for ix in found_result.LocationReqs:
@@ -1470,23 +1438,23 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     maybeRequiredItems = []
 
     notRequiredItems = []
-    #requiredItems = potentiallyRequiredItems.copy()
+    # requiredItems = potentiallyRequiredItems.copy()
     requiredItems = []
     for x in no_free_item:
         if x in to_check_item:
-            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            # if x not in doNotGiveHints and HintOptions.NotBarrenHints:
             maybeRequiredItems.append(x)
-                #itemToReq.append(HintMessage("somethingi", None, x, True))
+            # itemToReq.append(HintMessage("somethingi", None, x, True))
             to_check_item.remove(x)
     for i in to_check_item:
         if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingi", None, i, True))
         notRequiredItems.append(i)
-        #if i in requiredItems:
-            #requiredItems.remove(i)
+        # if i in requiredItems:
+        # requiredItems.remove(i)
 
     for x in maybeRequiredItems:
-        required = isRequired(x, itemMapping,notRequiredItems)
+        required = isRequired(x, itemMapping, notRequiredItems)
         if required:
             if x not in doNotGiveHints and HintOptions.NotBarrenHints:
                 itemToReq.append(HintMessage("somethingi", None, x, True))
@@ -1495,7 +1463,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
             if x not in doNotGiveHints and HintOptions.BarrenHints:
                 itemToReq.append(HintMessage("nothingi", None, x, True))
             notRequiredItems.append(x)
-
 
     print(notRequiredItems)
 
@@ -1506,17 +1473,17 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     requiredFlags = []
     for x in no_free_flag:
         if x in to_check_flag:
-            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            # if x not in doNotGiveHints and HintOptions.NotBarrenHints:
             maybeRequiredFlags.append(x)
-            #itemToReq.append(HintMessage("somethingf", None, x, True))
+            # itemToReq.append(HintMessage("somethingf", None, x, True))
             to_check_flag.remove(x)
-            #requiredFlags.append(x)
+            # requiredFlags.append(x)
     for i in to_check_flag:
         if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingf", None, i, True))
         notRequiredFlags.append(i)
 
-    #print(notRequiredFlags)
+    # print(notRequiredFlags)
 
     for x in maybeRequiredFlags:
         flagRequired = isRequired(x, flagMapping, notRequiredItems, notRequiredFlags)
@@ -1551,8 +1518,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                         itemToReq.append(HintMessage("somethingl", None, x, True))
                     to_check_location.remove(x)
                     requiredLocations.append(x)
-
-
 
     for i in to_check_location:
         if HintOptions.BarrenHints:
@@ -1606,13 +1571,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
             itemToReq.append(HintMessage("tag", tagKey, tagCount, True))
 
-    if "Name" in config.keys():
-        itemToReq.append(HintMessage("conf", "Config", config["Name"], True))
 
-    if "SilverBadgeUnlockCount" in config.keys():
-        itemToReq.append(HintMessage("conf", "MtSilver", config["SilverBadgeUnlockCount"], True))
-    else:
-        itemToReq.append(HintMessage("conf", "MtSilver", "16", True))
 
     # if "RedBadgeUnlockCount" in config.keys():
     #	itemToReq.append(HintMessage("conf", "Red", config["RedBadgeUnlockCount"], True))
@@ -1622,6 +1581,253 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     # Reverse lookup some key items and see which are not required
 
     return itemToReq, locationList
+
+
+#def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
+#					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
+#					 assign_trash=True, forbidden=[]):
+
+def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
+                       badgeSet, goal, input_variables=[]):
+
+    variables = []
+    for var in input_variables:
+        variables.append(var)
+    if variable is not None:
+        variables.append(variable)
+    result = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
+                                                     None, None, None, locList,
+                                                     badgeSet, None, assign_trash=False,
+                                                     forbidden=variables)
+
+    if goal in result[0]:
+        return False
+
+    return True
+
+
+
+
+
+
+def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict,
+                         requirementDict, config, HintOptions, allowList, fullTree,
+                         inputFlags, goal):
+    # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
+    #locationList = LoadLocationData.FlattenLocationTree(locations)
+
+    locationList = fullTree
+
+    #TODO
+    # Re run beatability checks for items deemed barren
+    # This will confirm that the item isn't locked behind some form of locked path
+    # Just change spoiler to remove required items from pool for items
+    # Locations/flags a little harder
+
+    trashItems = {}
+    for sp in spoilerTrash.keys():
+        item = spoilerTrash[sp]
+        if "->" in item:
+            trashItems[sp] = item.split("->")[1]
+        else:
+            trashItems[sp] = item
+
+    to_check_location = ["Whirl Islands",
+                         "Tin Tower", "Rocket Base", "Ruins of Alph",
+                         "Cianwood City", "Blackthorn City", "Cinnabar Island",
+                         "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
+                         "Mt Mortar Upper Floor", "Elm's Lab",
+                         #"Routes 26/27", "Dark Cave","Cerulean Cape"
+                         "Lighthouse","Dragons Den", "Rock Tunnel"]
+
+    location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
+                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls",
+                                             "Route 27 Right Side"}, # Add inferred until complex logic
+                            "Cerulean Cape": {"Route 24", "Route 25"}
+                            }
+
+    # Need message converter when loading these locations
+
+
+    # TODO Check some against input flags
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
+                     "Became Champion", "Released Beasts","Ship Sidequest","Encounted Ho-Oh"
+                     ]
+
+
+    valid_input_flags = ["Shopsanity","Hidden Items","Mon Locked Checks","Bug Catching Contest",
+                         "Phone Call Trainers","Timed Events", "Berry Trees", "Open Mt. Silver"]
+
+    for flag in inputFlags:
+        if flag in valid_input_flags:
+            to_check_flag.append(flag)
+
+    #to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
+     #                "Secret Potion", "Basement Key", "Lost Item",
+      #               "Cut", "Surf", "Red Scale", "Mystery Egg", "Machine Part",
+       #              "Card Key", "Rainbow Wing", "Clear Bell", "Squirtbottle",
+        #             "S S Ticket", "Pass", "Fly"]
+
+    to_check_item = list(spoiler.keys())
+    to_check_item.append("Rock Smash")
+
+    hintList = []
+
+    sanityCheckFailure = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, goal)
+    if sanityCheckFailure:
+        raise Exception("Invalid created base conditions")
+
+
+    # New method does not yet implement 'requires' or 'in' hint types!
+    # Should use the reverse requirements elements from generation for these?
+
+    use_old_method = False
+    if use_old_method:
+        hintList, locationList = OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badgeDict, location_sim_mapping,
+                          trashItems, criticalTrash, to_check_flag)
+
+    else:
+        reqQuickLookup = {}
+        for item in to_check_item:
+            if item in requirementDict:
+                reqRequirements = requirementDict[item]
+                reqQuickLookup[item] = reqRequirements
+
+        for flag in to_check_flag:
+            if flag in requirementDict:
+                reqRequirements = requirementDict[flag]
+                reqQuickLookup[flag] = reqRequirements
+
+        for location in to_check_location:
+            if location in requirementDict:
+                reqRequirements = requirementDict[location]
+                reqQuickLookup[location] = reqRequirements
+
+        for badge in badgeDict:
+            if badge in requirementDict:
+                reqRequirements = requirementDict[badge]
+                reqQuickLookup[badge] = reqRequirements
+
+        #HintOptions.RequireHints = False
+        if HintOptions.RequireHints:
+            for itemReq in requirementDict.items():
+                item = itemReq[0]
+                reqs = itemReq[1]
+
+                if item in spoiler:
+                    removeReqs = []
+                    for req in reqs:
+                        if req in reqQuickLookup:
+                            toRemove = reqQuickLookup[req]
+                            for r in toRemove:
+                                if r not in removeReqs:
+                                    removeReqs.append(r)
+                    validReqs = set([ x for x in reqs if x not in removeReqs
+                                  and (x in to_check_flag or x in to_check_location
+                                       or x in to_check_item or x in badgeDict) ])
+
+
+                    for valid in validReqs:
+                        # Check also re-run the check that this item can be obtained
+                        # By removing this single new requirement
+                        # Optimisation required as this now has a lot of calls to confirm requirements
+                        required = IsVariableRequired(valid, spoiler, locations, inputFlags, fullTree, badgeDict, spoiler[item])
+                        if required:
+                            hint_type = "requiresi"
+                            if valid in to_check_location:
+                                hint_type = "requiresl"
+                            elif valid in to_check_flag:
+                                hint_type = "requiresf"
+                            hintList.append(HintMessage(hint_type, item, valid, True))
+
+        # This is added to be able to use Mt Silver early as a test rom, as Mt Silver is required anyway
+        # Same applies to Flash, you don't need it to get all the badges, but do through Silver Room 1
+        unlock_goal = goal if goal != "Red" else "Mt. Silver Is Open"
+
+        for item in to_check_item:
+            if item in badgeDict:
+                continue
+            required = IsVariableRequired(item, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+            if not required:
+                if HintOptions.BarrenHints:
+                    hintList.append(HintMessage("nothingi", None, item, True))
+            else:
+                if HintOptions.NotBarrenHints:
+                    hintList.append(HintMessage("somethingi", None, item, True))
+
+
+        for flag in to_check_flag:
+            required = IsVariableRequired(flag, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+            if not required:
+                if HintOptions.BarrenHints:
+                    hintList.append(HintMessage("nothingf", None, flag, True))
+            else:
+                if HintOptions.NotBarrenHints:
+                    hintList.append(HintMessage("somethingf", None, flag, True))
+
+
+        if "Warps" not in inputFlags:
+            for location in to_check_location:
+                required = IsVariableRequired(location, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location, True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location, True))
+            for location in location_sim_mapping.items():
+                required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, location[1])
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location[0], True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location[0], True))
+        else:
+            # TODO: Work out warp hubs, and then process whether you have to travel through them all
+            # Could hardcode the cities list
+            # Would be preferred to custom-define a hub by the number of elements
+            # And then work out that
+            # Preferred to also handle the free-warp transitions from modifiers
+            # (e.g. Goldenrod Rockets, Mahgoney, Route 31...)
+            pass
+
+        if HintOptions.InHints:
+            spoilerLocations = list(filter(lambda x: x.Name in spoiler.values(), locationList))
+            for loc in spoilerLocations:
+                iter = loc
+                found = False
+                name = None
+                while not found:
+                    if iter.HintName != iter.Name:
+                        found = True
+                        name = iter.HintName
+                    elif len(iter.LocationReqs) == 1:
+                        reqs = list(filter(lambda x: x.Name == iter.LocationReqs[0], locationList))
+                        if len(reqs) > 1:
+                            break
+                        elif len(reqs) == 0:
+                            break
+                        else:
+                            iter = reqs[0]
+                    else:
+                        break
+
+                if name is not None:
+                    hintList.append(HintMessage("in", loc.item, name, True))
+
+
+
+
+    if "Name" in config.keys():
+        hintList.append(HintMessage("conf", "Config", config["Name"], True))
+
+    if "SilverBadgeUnlockCount" in config.keys():
+        hintList.append(HintMessage("conf", "MtSilver", config["SilverBadgeUnlockCount"], True))
+    else:
+        hintList.append(HintMessage("conf", "MtSilver", "16", True))
+
+    return hintList, locationList
 
 class Item:
     Name = ""

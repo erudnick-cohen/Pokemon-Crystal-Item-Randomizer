@@ -197,7 +197,7 @@ Location:
             WildTableList:
             LocationReqs: Cianwood Pharmacy
             FlagReqs:
-              - Lighthouse
+              - Lighthouse Visited
             ItemReqs:
             FlagsSet:
             ReachableReqs:
