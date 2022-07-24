@@ -335,17 +335,20 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 
 	class PriorityObject:
-		def __init__(self, name, types, key):
+		def __init__(self, name, types, keys):
 			self.HintName = name
 			self.HintTypes = types
-			self.HintKey = key
+			self.HintKeys = keys
 
 	pri_file = open("Config/PriorityHints.json")
 	p_d = pri_file.read()
 	priority_data = json.loads(p_d)
 	priority_list=[]
 	for i in priority_data:
-		item = PriorityObject(i["HintName"],i["HintTypes"],i["HintKey"])
+		hintTypes = i["HintTypes"] if "HintTypes" in i else []
+		hintKeys = i["HintKeys"] if "HintKeys" in i else []
+		print("HINTKEYS:", hintTypes, hintKeys)
+		item = PriorityObject(i["HintName"],hintTypes,hintKeys)
 		priority_list.append(item)
 
 	if hintConfig is not None and hintConfig.UseHints and hintConfig.BadgeIcon:

@@ -461,8 +461,8 @@
   {
     "label": "FightingDojoSign1Text.ctir_BEFORE_FightingDojoSign1Text",
     "address_range": {
-      "begin": 1612756,
-      "end": 1612788
+      "begin": 1612821,
+      "end": 1612853
     },
     "integer_values": "0 150 167 160 179 127 166 174 164 178 127 160 177 174 180 173 163 79 162 174 172 164 178 127 160 177 174 180 173 163 231 87",
     "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a6 $ae $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $4f $a2 $ae $ac $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $e7 $57"
@@ -470,8 +470,8 @@
   {
     "label": "FightingDojoSign2Text.ctir_BEFORE_FightingDojoSign2Text",
     "address_range": {
-      "begin": 1612788,
-      "end": 1612812
+      "begin": 1612853,
+      "end": 1612877
     },
     "integer_values": "0 132 173 164 172 168 164 178 127 174 173 127 164 181 164 177 184 79 178 168 163 164 231 87",
     "hex_values": "$0 $84 $ad $a4 $ac $a8 $a4 $b2 $7f $ae $ad $7f $a4 $b5 $a4 $b1 $b8 $4f $b2 $a8 $a3 $a4 $e7 $57"

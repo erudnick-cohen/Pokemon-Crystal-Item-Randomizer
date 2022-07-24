@@ -362,10 +362,30 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	if 'Warps' in inputFlags:
 		warp_sets = GetWarpGroupsSets(locList, inputFlags)
-		for group in warp_sets[0]:
+
+		hubs = RandomizeFunctions.GetWarpHubs(locList, inputFlags)
+		hubSize = 5
+		warpHubsForHints = [x[0] for x in hubs.items() if x[1] > hubSize]
+
+		hubsInBaseGroup = [ group for group in warp_sets[0] if group in warpHubsForHints ]
+		for hub in hubsInBaseGroup:
+			requirementsDict[hub] = []
+
 			# This is the starting group so you can get to all of these warp groups with no other requirements
 			# Just finding the right path!
-			requirementsDict[group] = []
+
+			# Change this behaviour to be just as optimal (ish)
+			# But also work with hints
+			# Detect any area as a 'Hub' and remove THESE from having requirements!
+
+		# Should still be massively preferred
+
+
+
+
+
+
+
 
 		# Otherwise, each other warp group set means no requirements once reaching ANY of those
 		# This doesn't 'save as much time' however
@@ -869,6 +889,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra = checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList, badgeSet, item_processor)
 
+
+	for f in requirementsDict.items():
+		if f[0] not in fullDependenciesList:
+			fullDependenciesList[f[0]] = f[1]
+
 	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, fullDependenciesList, progressList, locList, randomizedExtra)
 
 
@@ -907,7 +932,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 		if i not in forbidden:
 			state[i] = True
 	#if unsafe plando, put everything from the plando in
-	if 'unsafePlando' in inputFlags:
+	if 'unsafePlando' in inputFlags and plandoPlacements is not None:
 		for i in plandoPlacements:
 			state[plandoPlacements[i]] = True
 	state['Item Badge Shuffle'] = True
@@ -965,8 +990,6 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					if(not i.Name in spoiler.values()):
 						if plandoPlacements is not None and i.Name in plandoPlacements:
 							item = plandoPlacements[i.Name]
-							i.item = item
-							print("Plando", i.Name, i.item)
 							try:
 								trashItems.remove(item)
 							except ValueError:

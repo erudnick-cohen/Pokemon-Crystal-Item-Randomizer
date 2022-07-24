@@ -440,15 +440,15 @@
         "tileAddress": 710057
     },
     {
-        "start": 1612756,
-        "end": 1612787,
+        "start": 1612821,
+        "end": 1612852,
         "name": "FightingDojoSign1Text",
         "map": "FightingDojo.asm",
         "commands": 3
     },
     {
-        "start": 1612788,
-        "end": 1612811,
+        "start": 1612853,
+        "end": 1612876,
         "name": "FightingDojoSign2Text",
         "map": "FightingDojo.asm",
         "commands": 3

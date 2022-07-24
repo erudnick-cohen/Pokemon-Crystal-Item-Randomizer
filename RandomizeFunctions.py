@@ -2,6 +2,7 @@ import csv
 import json
 import math
 import random
+from collections import defaultdict
 
 import LoadLocationData
 import RandomizeItemsBadgesAssumedFill
@@ -445,12 +446,14 @@ def PathToItem(item):
                     "Mahogany Rockets Defeated": "Mahogany Base Clear",
                     "Beat Team Rocket": "Saving Radio Tower",
                     "Rocket Invasion": "7 Badges",
-                    "Mt. Silver Unlock": "Max Badges",
+                    "Open Mt. Silver": "Mt. Silver Early",
                     "Elm's Lab": "Elms Lab",
                     "S.S. Ticket": "SS Ticket",
                     "Became Champion": "Being Champion",
 
                     }
+
+    item = item.replace(LoadLocationData.WARP_OPTION, "W")
 
     if item in replaceNames:
         return replaceNames[item]
@@ -494,6 +497,14 @@ class HintMessage():
             if self.item == "Old Rod" or \
                     self.item == "Good Rod" or self.item == "Super Rod":
                 self.item = "Rod"
+
+    def nothingToMaybe(self):
+        if self.type == "nothingf":
+            self.type = "nothingmf"
+        elif self.type == "nothingl":
+            self.type = "nothingml"
+        elif self.type == "nothingi":
+            self.type = "nothingmi"
 
     def __init__(self, type, item, secondary, helpful):
         self.type = type
@@ -544,6 +555,14 @@ class HintMessage():
                 msg2.text = "is a fools toy."
             elif self.type == "nothingf":
                 msg.text = "Fools do"
+                msg2.text = self.secondary
+
+            elif self.type == "nothingml":
+                msg2.text = "may be barren."
+            elif self.type == "nothingmi":
+                msg2.text = "may be a fools toy."
+            elif self.type == "nothingmf":
+                msg.text = "Fools may do"
                 msg2.text = self.secondary
 
             messages.append(msg)
@@ -841,12 +860,12 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
 
     for priority in priorities:
         hasPossible = False
-        if len(priority.HintTypes) != 0 and priority.HintKey != "":
+        if len(priority.HintTypes) != 0 and len(priority.HintKeys) > 0:
             matches = list(filter(lambda x: x.type in priority.HintTypes and
-                                            x.item == priority.HintKey, hints))
+                                            x.item in priority.HintKeys, hints))
             hasPossible = len(matches) > 0
             hintOptions = list(set(hintOptions) | set(matches))
-        elif priority.HintKey == "" and len(priority.HintTypes) != 0:
+        elif len(priority.HintKeys) == 0 and len(priority.HintTypes) != 0:
             matches = list(filter(lambda x: x.type in priority.HintTypes, hints))
             hasPossible = len(matches) > 0
             hintOptions = list(set(hintOptions) | set(matches))
@@ -886,8 +905,8 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
                 possibleHints = []
                 for a in addressItems:
                     matchHints = list(filter(lambda x: \
-                                                 (a.HintKey == "" and x.type in a.HintTypes) or \
-                                                 (a.HintKey != "" and x.type in a.HintTypes and a.HintKey == x.item) \
+                                                 (len(a.HintKeys) == 0 and x.type in a.HintTypes) or \
+                                                 (len(a.HintKeys) > 0 and x.type in a.HintTypes and x.item in a.HintKeys) \
                                              , hintOptions))
                     possibleHints = list(set(matchHints) | set(possibleHints))
                 if len(possibleHints) > 0:
@@ -1044,6 +1063,7 @@ def removeRedundantHints(hints, hintConfig, locationData):
             byLocationMapping[hint.secondary].append(hint)
 
     for hint in hintsToRemove:
+        print("Remove hint:", str(hint))
         hints.remove(hint)
 
 
@@ -1609,6 +1629,71 @@ def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
 
 
 
+def GetWarpHubs(locationTree, inputFlags):
+    startWarpGroups = list(filter(lambda x: x.Type == "Starting Warp", locationTree))
+    startingList = [x.Name for x in startWarpGroups]
+    # Ignore these warps for the most part, as obviously required!
+
+    warpSpace = list(
+        filter(lambda x: x.Type == "Map" and x.Name.endswith(LoadLocationData.WARP_OPTION), locationTree)).copy()
+
+    transitionSpace = list(
+        filter(lambda x: x.Type == "Transition" and x.Name.endswith(LoadLocationData.WARP_OPTION), locationTree)).copy()
+
+    state = defaultdict(lambda: False)
+    for flag in inputFlags:
+        state[flag] = True
+
+    warpCount = {}
+
+    for warp in warpSpace:
+        if len(warp.LocationReqs) == 1:
+            name = warp.LocationReqs[0]
+            if name not in warpCount:
+                warpCount[name] = 0
+            warpCount[name] += 1
+
+    transitionPairs = {}
+    for transition in transitionSpace:
+        if transition not in transitionPairs.values() and \
+            len(transition.LocationReqs) == 1:
+            option = list(filter(lambda x: x.Name == transition.LocationReqs[0] and
+                                           len(x.LocationReqs) == 1 and x.LocationReqs[0] == transition.Name ,transitionSpace))
+
+            if len(option) == 1:
+                transitionPairs[transition] = option[0]
+                transitionPairs[option[0]] = transition
+
+    for transition in transitionSpace:
+        if len(transition.LocationReqs[0]) == 1 and transition.Name in warpCount:
+            if transition in transitionPairs:
+                pair = transitionPairs[transition]
+
+                if pair.Name not in warpCount:
+                    continue
+
+                transitionFrom = transition.LocationReqs[0]
+                transitionTo = transition.Name
+
+                required = transition.requirementsNeeded(state)
+                pairReq = pair.requirementsNeeded(state)
+
+                if len(required) == 0 and len(pairReq) == 0:
+
+                    warpCountFrom = warpCount[transitionFrom]
+                    warpCountTo = warpCount[transitionTo]
+
+                    if warpCountFrom >= warpCountTo:
+                        warpCount[transitionFrom] += warpCountTo
+                        del warpCount[transitionTo]
+
+    for start in startingList:
+        if start in warpCount:
+            del warpCount[start]
+
+
+    return warpCount
+
 
 def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict,
                          requirementDict, config, HintOptions, allowList, fullTree,
@@ -1616,7 +1701,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
     #locationList = LoadLocationData.FlattenLocationTree(locations)
 
-    locationList = fullTree
+    locationList = LoadLocationData.FlattenLocationTree(fullTree)
 
     #TODO
     # Re run beatability checks for items deemed barren
@@ -1639,6 +1724,9 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                          "Mt Mortar Upper Floor", "Elm's Lab",
                          #"Routes 26/27", "Dark Cave","Cerulean Cape"
                          "Lighthouse","Dragons Den", "Rock Tunnel"]
+
+    warp_hub_locations = []
+
 
     location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
                             "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls",
@@ -1688,6 +1776,47 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     else:
         reqQuickLookup = {}
+
+        typesToCheck = {}
+
+        unlock_goal = goal if goal != "Red" else "Mt. Silver Is Open"
+
+        if "Warps" not in inputFlags:
+            for location in to_check_location:
+                required = IsVariableRequired(location, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location, True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location, True))
+            for location in location_sim_mapping.items():
+                required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, location[1])
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location[0], True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location[0], True))
+        else:
+            warpCounts = GetWarpHubs(locationList, inputFlags)
+
+            hubSizeForHints = 5
+            warpHubsForHints = [ x[0] for x in warpCounts.items() if x[1] > hubSizeForHints ]
+
+            warp_hub_locations.extend(warpHubsForHints)
+
+            for hub in warp_hub_locations: #warpHubsForHints:
+                required = IsVariableRequired(hub, spoiler, locations, inputFlags, fullTree, badgeDict,
+                                              unlock_goal)
+                hub_hint_name = hub.replace(LoadLocationData.WARP_OPTION, "")
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, hub_hint_name, True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, hub_hint_name, True))
+
         for item in to_check_item:
             if item in requirementDict:
                 reqRequirements = requirementDict[item]
@@ -1703,6 +1832,11 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                 reqRequirements = requirementDict[location]
                 reqQuickLookup[location] = reqRequirements
 
+        for warpHub in warp_hub_locations:
+            if warpHub in requirementDict:
+                reqRequirements = requirementDict[location]
+                reqQuickLookup[location] = reqRequirements
+
         for badge in badgeDict:
             if badge in requirementDict:
                 reqRequirements = requirementDict[badge]
@@ -1715,6 +1849,14 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                 reqs = itemReq[1]
 
                 if item in spoiler:
+
+                    # If using warps, load from locList (one step only)
+                    # And see if any of the requirements is a Hub
+                    # If so, include it! (Issue is default warp group removes all requirements!)
+                    # But same issue as before, what about duplicates (eg Route 32 entrance and Violet Transition)?
+                    # Map only?
+                    # What if picks the wrong one and then the hint is wrong?
+
                     removeReqs = []
                     for req in reqs:
                         if req in reqQuickLookup:
@@ -1724,7 +1866,8 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                                     removeReqs.append(r)
                     validReqs = set([ x for x in reqs if x not in removeReqs
                                   and (x in to_check_flag or x in to_check_location
-                                       or x in to_check_item or x in badgeDict) ])
+                                       or x in to_check_item or x in badgeDict or x in warp_hub_locations) ])
+
 
 
                     for valid in validReqs:
@@ -1733,16 +1876,22 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                         # Optimisation required as this now has a lot of calls to confirm requirements
                         required = IsVariableRequired(valid, spoiler, locations, inputFlags, fullTree, badgeDict, spoiler[item])
                         if required:
-                            hint_type = "requiresi"
+                            hint_type = None
                             if valid in to_check_location:
                                 hint_type = "requiresl"
                             elif valid in to_check_flag:
                                 hint_type = "requiresf"
-                            hintList.append(HintMessage(hint_type, item, valid, True))
+                            elif valid in to_check_item:
+                                hint_type = "requiresi"
+                            elif valid in warp_hub_locations:
+                                hint_type = "requiresl"
+
+                            if hint_type is not None:
+                                hintList.append(HintMessage(hint_type, item, valid, True))
 
         # This is added to be able to use Mt Silver early as a test rom, as Mt Silver is required anyway
         # Same applies to Flash, you don't need it to get all the badges, but do through Silver Room 1
-        unlock_goal = goal if goal != "Red" else "Mt. Silver Is Open"
+
 
         for item in to_check_item:
             if item in badgeDict:
@@ -1766,55 +1915,64 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                     hintList.append(HintMessage("somethingf", None, flag, True))
 
 
-        if "Warps" not in inputFlags:
-            for location in to_check_location:
-                required = IsVariableRequired(location, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
-                if not required:
-                    if HintOptions.BarrenHints:
-                        hintList.append(HintMessage("nothingl", None, location, True))
-                else:
-                    if HintOptions.NotBarrenHints:
-                        hintList.append(HintMessage("somethingl", None, location, True))
-            for location in location_sim_mapping.items():
-                required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, location[1])
-                if not required:
-                    if HintOptions.BarrenHints:
-                        hintList.append(HintMessage("nothingl", None, location[0], True))
-                else:
-                    if HintOptions.NotBarrenHints:
-                        hintList.append(HintMessage("somethingl", None, location[0], True))
-        else:
-            # TODO: Work out warp hubs, and then process whether you have to travel through them all
-            # Could hardcode the cities list
-            # Would be preferred to custom-define a hub by the number of elements
-            # And then work out that
-            # Preferred to also handle the free-warp transitions from modifiers
-            # (e.g. Goldenrod Rockets, Mahgoney, Route 31...)
-            pass
+
 
         if HintOptions.InHints:
+            #print("Look for IN Hints")
             spoilerLocations = list(filter(lambda x: x.Name in spoiler.values(), locationList))
             for loc in spoilerLocations:
+                #print("Look for IN Hints for::", loc.Name)
                 iter = loc
                 found = False
                 name = None
+
+                # If this fails, look for a hint name to use
                 while not found:
                     if iter.HintName != iter.Name:
                         found = True
                         name = iter.HintName
+                        print("Found HintName", name, loc.Name)
+                        break
                     elif len(iter.LocationReqs) == 1:
+                        if iter.LocationReqs[0] in to_check_location or \
+                                iter.LocationReqs[0] in warp_hub_locations:
+                            found = True
+                            name = iter.LocationReqs[0]
+                            #print("Found expected::", name, loc.Name)
+                            break
                         reqs = list(filter(lambda x: x.Name == iter.LocationReqs[0], locationList))
                         if len(reqs) > 1:
-                            break
+                                #print("Break out on 1", iter.Name, iter.LocationReqs, reqs)
+                                break
                         elif len(reqs) == 0:
+                            #print("Break out on 0", iter.Name, iter.LocationReqs, reqs)
                             break
                         else:
                             iter = reqs[0]
                     else:
+                        #print("Break out on >1", iter.Name, iter.LocationReqs)
                         break
 
                 if name is not None:
+                    #print("Add:::", name, loc.item)
                     hintList.append(HintMessage("in", loc.item, name, True))
+
+
+
+    # Do some extra checks to confirm combinations
+
+    barrenHints = list(filter(lambda x: "nothing" in x.type, hintList))
+    allBarren = [ x.secondary for x in barrenHints ]
+    print("allBarren", allBarren)
+
+    required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal,
+                                  input_variables=allBarren)
+    print("allBarren", required)
+
+    if required:
+        for barren in barrenHints:
+            barren.nothingToMaybe()
+
 
 
 

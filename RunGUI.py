@@ -429,7 +429,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			print(newSpoiler)
 			if 'Useless Stuff' in spoiler:
 				for i in spoiler['Useless Stuff']:
-					newSpoiler[i] = spoiler['Useless Stuff'][i]
+					iValue = spoiler['Useless Stuff'][i]
+					itemSplit = iValue.split("->")
+					if len(itemSplit) > 1:
+						itemUse = itemSplit[0]
+					else:
+						itemUse = itemSplit[0]
+					print("Plando-load", i, itemUse)
+					newSpoiler[i] = itemUse
 			self.PlandoData = newSpoiler
 			self.PlandoMode = True
 			self.TurnOffPlando.setEnabled(True)
