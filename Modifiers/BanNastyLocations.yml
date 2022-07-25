@@ -3,20 +3,17 @@ Description: Prevents items needed to defeat red from being located in the follo
 Changes:
     -
         Location: Ruins of Alph Ho Oh Chamber
-        NewLocationReqs: 
-            - Union Cave
-            - VS Ho-Oh
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Route 4
-        NewLocationReqs:
-            - Route 3 and Mt. Moon
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Elm SS Ticket
-        NewLocationReqs:
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Rainbow Wing Gift
-        AddLocationReqs:
-            - Red
+        AddFlagReqs:
+            - Defeated Red

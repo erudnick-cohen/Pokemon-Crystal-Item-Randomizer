@@ -3,6 +3,5 @@ Description: Prevents items needed to defeat red from being located Ruins of Alp
 Changes:
     -
         Location: Ruins of Alph
-        NewLocationReqs: 
-            - Violet City
-            - Red
+        AddFlagReqs:
+            - Defeated Red

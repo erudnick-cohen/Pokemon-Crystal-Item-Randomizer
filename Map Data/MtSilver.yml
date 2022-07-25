@@ -342,6 +342,7 @@ Location:
                     - Became Champion
                 ItemReqs:
                 FlagsSet:
+                    - Defeated Red
                 ReachableReqs:
                 Code:
                 Text:
