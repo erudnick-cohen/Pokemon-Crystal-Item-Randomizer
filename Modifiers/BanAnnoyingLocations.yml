@@ -3,60 +3,49 @@ Description: Prevents items needed to defeat red from being located in the follo
 Changes:
     -
         Location: Ruins of Alph Ho Oh Chamber
-        NewLocationReqs: 
-            - Union Cave
-            - VS Ho-Oh
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Route 4
-        NewLocationReqs:
-            - Route 3 and Mt. Moon
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Elm SS Ticket
-        NewLocationReqs:
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Rainbow Wing Gift
-        AddLocationReqs:
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Clair TM Banned
-        NewLocationReqs:
-            - Dragons Den Shrine
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Dragon Fang
-        NewLocationReqs:
-            - Dragons Den Shrine
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Hidden Max Elixer
-        NewLocationReqs:
-            - Dragons Den
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Max Elixer
-        NewLocationReqs:
-            - Dragons Den
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Calcium
-        NewLocationReqs:
-            - Dragons Den
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Hidden Max Potion
-        NewLocationReqs:
-            - Dragons Den
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Dragons Den Hidden Revive
-        NewLocationReqs:
-            - Dragons Den
-            - Red
+        AddFlagReqs:
+            - Defeated Red
     -
         Location: Route 27 Solar Beam TM
-        NewLocationReqs:
-            - Tohjo Falls Over the Waterfall
-            - Red
+        AddFlagReqs:
+            - Defeated Red

@@ -4,7 +4,6 @@ NewGamePatches:
     - 'Patches/NerfHoOhChamber.json'
 Changes:
     -
-        Location: Ruins of Alph Ho Oh Chamber
-        NewLocationReqs: 
-            - Union Cave
-            - Climb Tin Tower
+        Location: VS Ho-Oh
+        RemoveFlagReqs:
+            - Became Champion

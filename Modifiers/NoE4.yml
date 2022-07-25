@@ -3,8 +3,8 @@ Description: Ensures E4 is not required.
 Changes:
     -
         Location: Lance
-        AddLocationReqs:
-            - Red
+        AddFlagReqs:
+            - Defeated Red
 IncompatibleWithout:
     - 'Skip E4 and fight Red'
     - 'Open Mt. Silver'
