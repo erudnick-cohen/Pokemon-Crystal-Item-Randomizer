@@ -1,0 +1,4 @@
+Name: Upgrade Items - Mail
+Description: Upgrades Mail Items to Nuggets
+FlagsSet:
+    - Replace Mail

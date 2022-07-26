@@ -209,6 +209,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				if len(result) > 8:
 					outputSpoiler["Xtra Stuff"] = result[8]
 
+				if len(result) > 9:
+					outputSpoiler["Xtra Upgrades"] = result[9]
+
 				outputSpoiler["CIR Version"] = Version.GetVersion()
 				outputSpoiler["Mode"] = self.CurentSettings.text()
 				outputSpoiler["Modifiers"] = self.GetSettingsMD5()

@@ -218,7 +218,7 @@ def FlagCheckType(type, inputFlags):
     return False
 
 
-def HandleItemReplacement(reachable, inputFlags):
+def HandleItemReplacement(trashList, inputFlags):
     replacementFile = None
 
     containsAny = checkIfReplacementsConfigured(inputFlags)
@@ -254,35 +254,36 @@ def HandleItemReplacement(reachable, inputFlags):
 
         replacementFile["Fly"]: "BERRY"
 
-    changes = {}
+    changes = []
 
     if replacementFile is not None:
-        for i in reachable.values():
-            replaced = ReplaceItem(i, replacementFile)
-            if replaced:
-                changes[i.Name] = i.item
+        for itemName in trashList:
+            replaced = ReplaceItem(itemName, replacementFile)
+            if replaced is not None:
+                changes.append((itemName, replaced))
 
     return changes
 
 
-def ReplaceItem(item, replaceFile):
-    replaced = False
-    if item.isItem():
-        while item.item in replaceFile:
-            replace_cycle = False
-            possibilities = replaceFile[item.item]
-            random.shuffle(possibilities)
-            for p in possibilities:
-                item_chance = p[1]
-                if item_chance >= random.random() * 100:
-                    item.item = p[0]
-                    replaced = True
-                    replace_cycle = True
-                    break
-            if not replace_cycle:
+def ReplaceItem(itemIn, replaceFile):
+    itemName = itemIn
+    while itemName in replaceFile:
+        replace_cycle = False
+        possibilities = replaceFile[itemName]
+        random.shuffle(possibilities)
+        for p in possibilities:
+            item_chance = p[1]
+            if item_chance >= random.random() * 100:
+                itemName = p[0]
+                replace_cycle = True
                 break
+        if not replace_cycle:
+            break
 
-    return replaced
+    if itemIn != itemName:
+        return itemName
+
+    return None
 
 
 def IterateRequirements(location, locations, known, partial_known=[]):
@@ -2090,8 +2091,13 @@ class RandomItemProcessor:
 
 
 REPEL_ITEMS = ["REPEL", "SUPER_REPEL", "MAX_REPEL"]
+BALL_ITEMS = ["POKE_BALL", "GREAT_BALL", "ULTRA_BALL", "FAST_BALL", "HEAVY_BALL",
+              "MOON_BALL", "MASTER_BALL", "PARK_BALL", "LOVE_BALL",
+              "FRIEND_BALL", "LEVEL_BALL", "LURE_BALL"]
 
-def ShopRepelCheck(i, locList, reachable, addAfter=None):
+X_ITEMS = ["X_ATTACK", "X_DEFEND", "X_SPEED", "X_SPECIAL", "DIRE_HIT", "X_ACCURACY", "GUARD_SPEC"]
+
+def ShopItemGroupCheck(i, locList, reachable, itemList, addAfter=None):
     if i.isShop():
         shopElements = list(filter(lambda x: x.FileName == i.FileName, locList))
         shopElementNames = [x.Name for x in shopElements]
@@ -2111,12 +2117,30 @@ def ShopRepelCheck(i, locList, reachable, addAfter=None):
         # This is generally suitable
         # However, could improve by removing per shop for department stores!
 
-        hasRepel = False
+        hasItemType = False
         for element in reachShop:
             if element[1].item is not None:
-                if element[1].item in REPEL_ITEMS:
-                    hasRepel = True
+                if element[1].item in itemList:
+                    hasItemType = True
 
-        return hasRepel
+        return hasItemType
 
     return True
+
+def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocation):
+    # Potential issue, need to check if there IS a shop remaining -- if there isn't, will have to settle
+    # If not settled, can force a re-do seed
+    if currentLocation.isShop():
+        return True
+    if currentItem in itemList:
+        remainingOf = [ trash for trash in trashList if trash == currentItem ]
+        if len(remainingOf) == 0:
+            r = list(filter(lambda x: x[1].item == currentItem and x[1].isShop() and \
+                            "Banned" not in x[1].FlagReqs and "Impossible" not in x[1].FlagReqs and \
+                            "Unreachable" not in x[1].FlagReqs, reachable.items()))
+            return len(r) != 0
+
+    return True
+
+
+

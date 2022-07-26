@@ -662,7 +662,7 @@ Location:
                         ItemReqs:
                             - Rainbow Wing
                         FlagsSet:
-                            - Encounted Ho-Oh
+                            - Encountered Ho-Oh
                         ReachableReqs:
                         Code:
                         Text:

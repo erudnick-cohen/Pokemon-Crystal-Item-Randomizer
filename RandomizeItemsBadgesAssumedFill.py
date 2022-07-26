@@ -537,7 +537,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						oldDepsList = allDepsList
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
-							if "Red" in newDeps:
+							if "Red" in newDeps or "Defeated Red" in newDeps:
 								#illegalReason = "Red"
 								legal = False
 								break
@@ -814,7 +814,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#print(locList[iter].Name + ' is not legal because it needs flags that are not set')
 						#print(set(allDepsList).intersection(set(usedFlagsList)))
 					#Impossible locations are illegal
-					if("Impossible" in allDepsList or "Banned" in jReqs or "Unreachable" in jReqs):
+					if("Impossible" in allDepsList or "Banned" in allDepsList or "Unreachable" in allDepsList):
 						illegalReason = "Impossible 2"
 						legal = False
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
@@ -887,14 +887,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		item_processor = None
 
 
-	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra = checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList, badgeSet, item_processor)
+	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems = \
+		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList, badgeSet, item_processor)
 
 
 	for f in requirementsDict.items():
 		if f[0] not in fullDependenciesList:
 			fullDependenciesList[f[0]] = f[1]
 
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, fullDependenciesList, progressList, locList, randomizedExtra)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, fullDependenciesList, progressList, locList,
+			randomizedExtra, upgradedItems)
 
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
@@ -912,6 +914,38 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				trashItems[i] = rodList.pop()
 		#print('---')
 		#print(trashItems)
+
+	# Upgrade trash items beforehand for some of the shopsanity logic
+	changes = {}
+	if assign_trash:
+		# Now a list of tuples
+		trashChanges = RandomizeFunctions.HandleItemReplacement(trashItems,inputFlags)
+
+		changeDetails = {}
+
+		for change in trashChanges:
+			changeFrom = change[0]
+			changeTo = change[1]
+
+			trashItems.remove(changeFrom)
+			trashItems.append(changeTo)
+
+			if changeFrom not in changeDetails:
+				changeDetails[changeFrom] = []
+			changeDetails[changeFrom].append(changeTo)
+
+		for changeList in changeDetails.items():
+			changeFromKey = changeList[0]
+			changeToList = changeList[1]
+
+			counter = {}
+			for item in changeToList:
+				if item not in counter:
+					counter[item] = 0
+				counter[item] += 1
+
+			changes[changeFromKey] = counter
+
 
 	# Due to changes to items, such as becoming items from banlist, do deep copy?
 	activeLoc = copy.deepcopy(locationTree)
@@ -1012,7 +1046,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 
-							hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable)
+							hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, RandomizeFunctions.REPEL_ITEMS)
 							if not hasRepel:
 								trashRepels = list(filter(lambda x: x in RandomizeFunctions.REPEL_ITEMS, trashItems))
 								if len(trashRepels) > 0:
@@ -1020,6 +1054,32 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 										oldItem = placeItem
 										placeItem = trashItems.pop()
 										trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+
+							hasBall = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable,
+																			 RandomizeFunctions.BALL_ITEMS)
+							if not hasBall:
+								trashBalls = list(filter(lambda x: x in RandomizeFunctions.BALL_ITEMS, trashItems))
+								if len(trashBalls) > 0:
+									while placeItem not in RandomizeFunctions.BALL_ITEMS:
+										oldItem = placeItem
+										placeItem = trashItems.pop()
+										trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+
+							# If shop enabled
+							# Ensure each type of X Item is available in at least 1 shop
+							#def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocation):
+
+							acceptable_placement = RandomizeFunctions.AtLeastOneInAShop(RandomizeFunctions.X_ITEMS, trashItems,
+																 reachable, placeItem,i)
+							while not acceptable_placement:
+								oldItem = placeItem
+								placeItem = trashItems.pop()
+								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+								acceptable_placement = RandomizeFunctions.AtLeastOneInAShop(RandomizeFunctions.X_ITEMS,
+																							trashItems,
+																							reachable, placeItem, i)
 
 							i.item = placeItem
 						#print("Trash", i.Name, i.item)
@@ -1071,7 +1131,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 						and "Impossible" not in i.FlagReqs and assign_trash:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 
-					hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable, addAfter)
+					hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, \
+													RandomizeFunctions.REPEL_ITEMS, addAfter)
 					if not hasRepel:
 						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
 
@@ -1088,7 +1149,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				"Impossible" not in i.FlagReqs and assign_trash:
 				if (i.isItem() or i.isGym() or i.wasItem()):
 					i.item = item_processor.GetRandomItem(i.NormalItem)
-					hasRepel = RandomizeFunctions.ShopRepelCheck(i, locList, reachable, addAfter)
+					hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, RandomizeFunctions.REPEL_ITEMS, addAfter)
 					if not hasRepel:
 						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
 					addAfter.append(i)
@@ -1165,14 +1226,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					#print('deleted fly')
 					i.item = 'BERRY'
 
-	if assign_trash:
-		changes = RandomizeFunctions.HandleItemReplacement(reachable,inputFlags)
 
-		for change in changes.keys():
-			if change in trashSpoiler:
-				trashSpoiler[change] = trashSpoiler[change] + "->" + changes[change]
-			if change in randomizedExtra:
-				randomizedExtra[change] = randomizedExtra[change] + "->" + changes[change]
 
 	# if len(trashItems) > 0 and not randomizerFailed:
 	# print(len(trashItems), trashItems)
@@ -1185,4 +1239,4 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	# print(trashItems)
 	# print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
 
-	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra
+	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes

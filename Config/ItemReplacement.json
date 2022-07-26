@@ -50,6 +50,17 @@
  { "item": "SLOWPOKETAIL", "replacement":  "NUGGET", "type": "Valuable", "chance": 5 },
  { "item": "STAR_PIECE", "replacement":  "NUGGET", "type": "Valuable", "chance": 5},
 
+ { "item": "FLOWER_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "SURF_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "LOVELY_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "EON_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "MORPH_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "BLUESKY_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "MUSIC_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "MIRAGE_MAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "LITEBLUEMAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+ { "item": "PORTRAITMAIL", "replacement":  "NUGGET", "type": "Mail", "chance": 100 },
+
  { "item": "HARD_STONE", "replacement":  "HEAVY_BALL", "type": "Custom"},
  { "item": "MYSTIC_WATER", "replacement":  "LURE_BALL", "type": "Custom" },
  { "item": "MAGNET", "replacement":  "FAST_BALL", "type": "Custom" },
