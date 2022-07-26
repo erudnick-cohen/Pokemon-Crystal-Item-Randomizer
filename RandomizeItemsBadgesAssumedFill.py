@@ -505,7 +505,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						oldDepsList = allDepsList
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
-							if "Red" in newDeps:
+							if "Red" in newDeps or "Defeated Red" in newDeps:
 								#illegalReason = "Red"
 								legal = False
 								break
