@@ -1132,8 +1132,6 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 						maxBadgeDist = max(maxBadgeDist,i.distance)
 						nBadges = nBadges+1
 
-						if len(forbidden) == 1 and forbidden[0] == "Strength":
-							print(i.item, "is a badge", "at", i.Name, "increment badge count", nBadges)
 						#print("Not Trash", i.Name, i.item)
 						#spoiler[i.item] = i.Name
 					# if(i.badge is None):
