@@ -867,7 +867,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Version 7.0.7</string>
+     <string>Version 7.0.8</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
