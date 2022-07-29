@@ -1,2 +1,2 @@
 def GetVersion():
-    return "7.0.7"
+    return "7.0.8"
