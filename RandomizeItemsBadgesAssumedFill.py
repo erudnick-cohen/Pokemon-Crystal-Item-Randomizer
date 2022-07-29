@@ -993,6 +993,32 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable and i.Name not in forbidden):
 
+				maxdist = max([stateDist[x] for x in i.requirementsNeeded(defaultdict(lambda: False))], default=0)
+				if i.HasPKMN:
+					maxdist = maxdist + 1
+				pre_distance = maxdist
+
+				preState = {}
+				preStateDist = {}
+				isForbidden = False
+				for j in i.getFlagList():
+					if j not in forbidden:
+						preState[j] = True
+						preStateDist[j] = pre_distance
+					else:
+						isForbidden = True
+
+				# If the flag which is set is forbidden, also make the location impossible
+				if isForbidden:
+					continue
+
+				for item in preState.items():
+					state[item[0]] = item[1]
+				for item in preStateDist.items():
+					state[item[0]] = item[1]
+
+				i.distance = pre_distance
+
 				#print("reachable:",i.Name, "@", stage)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
@@ -1004,17 +1030,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				reachable[i.Name] = i
 				activeLoc.remove(i)
 				#set distance of this location
-				maxdist = max([stateDist[x] for x in i.requirementsNeeded(defaultdict(lambda: False))],default = 0)
-				if i.HasPKMN:
-					maxdist = maxdist+1
-				i.distance = maxdist
+
 				#set distance of location
 				stateDist[i.Name] = i.distance
 				#set all relevant flags this location sets
-				for j in i.getFlagList():
-					if j not in forbidden:
-						state[j] = True
-						stateDist[j] = i.distance
+
 				#perform appropriate behaviors for location
 				#if its an item, put an item in it
 				#double checks items to write due to bizzare bug observed only once
@@ -1082,6 +1102,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 																							reachable, placeItem, i)
 
 							i.item = placeItem
+						else:
+							i.item = None
 						#print("Trash", i.Name, i.item)
 						if i.item != "GOLD_LEAF":
 							trashSpoiler[i.Name] = i.item
@@ -1109,6 +1131,9 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					if(i.item in badgeSet):
 						maxBadgeDist = max(maxBadgeDist,i.distance)
 						nBadges = nBadges+1
+
+						if len(forbidden) == 1 and forbidden[0] == "Strength":
+							print(i.item, "is a badge", "at", i.Name, "increment badge count", nBadges)
 						#print("Not Trash", i.Name, i.item)
 						#spoiler[i.item] = i.Name
 					# if(i.badge is None):
