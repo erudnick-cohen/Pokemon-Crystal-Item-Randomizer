@@ -634,7 +634,7 @@ Location:
             - Ho-Oh Chamber
         ItemReqs:
         FlagReqs:
-            - Encounted Ho-Oh
+            - Encountered Ho-Oh
         FlagsSet:
         ReachableReqs:
         WildTableList:

@@ -104,14 +104,13 @@ Location:
                 Sublocations:
 
             -
-                Name: Route 5 Underground Entrance
+                Name: Underground Path NS
                 FileName: Route5.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList:
-                LocationReqs:
+                LocationReqs: Route 5 Underground Entrance
                 FlagReqs:
-                    - Warps
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -128,7 +127,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 5 Underground Entrance
+                LocationReqs: Underground Path NS
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
@@ -150,7 +149,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 5 Underground Entrance
+                LocationReqs: Underground Path NS
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
