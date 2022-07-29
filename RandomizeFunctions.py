@@ -1616,6 +1616,7 @@ def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
         variables.append(var)
     if variable is not None:
         variables.append(variable)
+
     result = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
                                                      None, None, None, locList,
                                                      badgeSet, None, assign_trash=False,
@@ -1740,7 +1741,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     # TODO Check some against input flags
     to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
-                     "Became Champion", "Released Beasts","Ship Sidequest","Encounted Ho-Oh"
+                     "Became Champion", "Released Beasts","Ship Sidequest","Encountered Ho-Oh"
                      ]
 
 
