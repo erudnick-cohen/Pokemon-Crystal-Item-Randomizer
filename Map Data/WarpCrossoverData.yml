@@ -435,9 +435,11 @@ Location:
         LocationReqs: Dragons Den Shrine
         ItemReqs:
             - Whirlpool
+            - Surf
         FlagsSet:
         FlagReqs:
             - Glacier Badge
+            - Fog Badge
         ReachableReqs:
         WildTableList:
         Code:
@@ -451,9 +453,11 @@ Location:
         LocationReqs: Dragons Den
         ItemReqs:
             - Whirlpool
+            - Surf
         FlagsSet:
         FlagReqs:
             - Glacier Badge
+            - Fog Badge
         ReachableReqs:
         WildTableList:
         Code:
