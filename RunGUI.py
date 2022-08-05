@@ -108,6 +108,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if(self.SeedInput.text() != ''):
 			rngSeed = self.SeedInput.text()
 		rngSeedBytes = rngSeed.encode('utf-8')
+
 		rSeed = int(hashlib.md5(rngSeedBytes).hexdigest(),16)
 		print('numeric seed is: '+str(rSeed))
 		random.seed(rSeed)
@@ -160,8 +161,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
 
 			copyfile(self.romPath, randomizedFileName)
-			with open('SAVEDSEEDLOG.log','w') as f:
-				f.write(rngSeed)
+			with open('SAVEDSEEDLOG.log','a+') as f:
+				f.write(rngSeed+"\n")
 
 			# Fix issue with flags NOT resetting on running a second rom!
 			# This will be appended to by modifiers, so ensure a copy is made, not the original!

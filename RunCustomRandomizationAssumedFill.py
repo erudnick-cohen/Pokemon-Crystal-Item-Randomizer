@@ -206,6 +206,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	seedIncrements = 0
 	completeResult = False
 
+	KEEP_GOING = False
+
 	while goal not in result[0] or not completeResult:
 		try:
 			completeResult = True
@@ -284,6 +286,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					handleBadSpoiler(result, flags)
 					print("bad run, retrying")
 					completeResult = False
+			if KEEP_GOING and goal in result[0]:
+				print("Keep going...")
+				completeResult = False
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			completeResult = False
@@ -347,7 +352,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	for i in priority_data:
 		hintTypes = i["HintTypes"] if "HintTypes" in i else []
 		hintKeys = i["HintKeys"] if "HintKeys" in i else []
-		print("HINTKEYS:", hintTypes, hintKeys)
+		#print("HINTKEYS:", hintTypes, hintKeys)
 		item = PriorityObject(i["HintName"],hintTypes,hintKeys)
 		priority_list.append(item)
 
