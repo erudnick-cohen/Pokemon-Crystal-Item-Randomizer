@@ -7,8 +7,10 @@ import time
 import RandomizeFunctions
 
 
-def findAllSilverUnlocks(req, locList, handled=[]):
+def findAllSilverUnlocks(req, locList, handled=None):
 	#req = "Mt. Silver Outside"
+	if handled is None:
+		handled = []
 	newFind = []
 	findSilverItems = list(filter(lambda x: req in x.LocationReqs, locList))
 	for findSilver in findSilverItems:
@@ -212,9 +214,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
 				   plandoPlacements = {},
-				   dontReplace = []):
+				   dontReplace = None):
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
-	
+	if dontReplace is None:
+		dontReplace = []
+
 	random.seed(seed)
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
 	inputFlags.append('Ok')
@@ -508,7 +512,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 							if "Red" in newDeps or "Defeated Red" in newDeps:
 								#illegalReason = "Red"
 								legal = False
-								break
+
+							if j == "Mt. Silver Unlock":
+								if toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags:
+									legal = False
 
 							if not legal:
 								break

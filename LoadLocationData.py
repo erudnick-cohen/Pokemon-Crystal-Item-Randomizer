@@ -185,7 +185,9 @@ def isValidWarpDesc(warpData):
 	return True
 
 
-def AddLocation(location, accessible, flattened, forbiddenFlags=[]):
+def AddLocation(location, accessible, flattened, forbiddenFlags=None):
+	if forbiddenFlags is None:
+		forbiddenFlags = []
 	accessible.append(location)
 	otherPossibilities = list(filter(lambda x: x.Type == "Transition" and \
 											   location in x.LocationReqs, flattened))

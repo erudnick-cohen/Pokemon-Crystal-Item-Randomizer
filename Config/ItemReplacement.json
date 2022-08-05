@@ -75,7 +75,6 @@
  { "item": "HYPER_POTION", "replacement":  "BERRY", "type": "Hope", "chance": 100  },
  { "item": "MAX_POTION", "replacement":  "BERRY", "type": "Hope", "chance": 100  },
  { "item": "FULL_RESTORE", "replacement":  "MIRACLEBERRY", "type": "Hope", "chance": 100  },
- { "item": "BERRY", "replacement":  "BERRY", "type": "Hope", "chance": 100  },
  { "item": "GOLD_BERRY", "replacement":  "BERRY", "type": "Hope", "chance": 100  },
  { "item": "ANTIDOTE", "replacement":  "PSNCUREBERRY", "type": "Hope", "chance": 100  },
  { "item": "PARLYZ_HEAL", "replacement":  "PRZCUREBERRY", "type": "Hope", "chance": 100  },

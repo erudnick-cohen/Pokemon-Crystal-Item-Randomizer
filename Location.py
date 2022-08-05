@@ -182,7 +182,7 @@ class Location:
 	#Gym class overloads this to return true
 	def isGym(self):
 		return self.IsGym
-	
+
 	def applyBanList(self, banList, allowList):
 		list = [];
 		if((not (banList is None) and self.Name in banList) or (not (allowList is None) and self.Name not in allowList)):

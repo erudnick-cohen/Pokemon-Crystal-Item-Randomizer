@@ -76,7 +76,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Fuchsia City
+                LocationReqs: Fuchsia City Back
                 FlagReqs:
                     - Hive Badge
                     - Berry Trees
