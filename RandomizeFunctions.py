@@ -1609,7 +1609,10 @@ def OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badge
 #					 assign_trash=True, forbidden=[]):
 
 def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
-                       badgeSet, goal, input_variables=[]):
+                       badgeSet, goal, input_variables=None):
+
+    if input_variables is None:
+        input_variables = []
 
     variables = []
     for var in input_variables:
@@ -2061,7 +2064,9 @@ class RandomItemProcessor:
                            and x.Name not in banned_items
             ,itemObjects))
 
-    def __init__(self, dontReplace=[]):
+    def __init__(self, dontReplace=None):
+        if dontReplace is None:
+            dontReplace = []
         self.itemsTest = []
         self.dontReplace = dontReplace
         with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
@@ -2105,7 +2110,6 @@ def ShopItemGroupCheck(i, locList, reachable, itemList, addAfter=None):
         # Find these from old copy
         # Then find instances in activeLoc & reachable
 
-
         reaches = reachable.copy()
         if addAfter is not None:
             for a in addAfter:
@@ -2128,20 +2132,90 @@ def ShopItemGroupCheck(i, locList, reachable, itemList, addAfter=None):
 
     return True
 
-def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocation):
+def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocation, addAfter=None):
+    if addAfter is None:
+        addAfter = []
     # Potential issue, need to check if there IS a shop remaining -- if there isn't, will have to settle
     # If not settled, can force a re-do seed
-    if currentLocation.isShop():
+    if not currentLocation.isShop():
         return True
+
+    reachCopy = []
+    reachCopy.extend(reachable)
+    reachCopy.extend(addAfter)
+
     if currentItem in itemList:
         remainingOf = [ trash for trash in trashList if trash == currentItem ]
         if len(remainingOf) == 0:
             r = list(filter(lambda x: x[1].item == currentItem and x[1].isShop() and \
                             "Banned" not in x[1].FlagReqs and "Impossible" not in x[1].FlagReqs and \
-                            "Unreachable" not in x[1].FlagReqs, reachable.items()))
+                            "Unreachable" not in x[1].FlagReqs, reachCopy.items()))
             return len(r) != 0
 
     return True
 
+
+def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, addAfter=None, force=False):
+    if addAfter is None:
+        addAfter = []
+    replacedItem = None
+    baseItem = placeItem
+
+    if not itemLocation.isShop():
+        return None
+
+    hasRepel = ShopItemGroupCheck(itemLocation, locList, reachable, REPEL_ITEMS, addAfter=addAfter)
+    if not hasRepel:
+        if force:
+            replacedItem = random.choice(REPEL_ITEMS)
+        else:
+            trashRepels = list(filter(lambda x: x in REPEL_ITEMS, trashItems))
+            if len(trashRepels) > 0:
+                while baseItem not in REPEL_ITEMS:
+                    oldItem = baseItem
+                    baseItem = trashItems.pop()
+                    replacedItem = baseItem
+                    trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+    hasBall = ShopItemGroupCheck(itemLocation, locList, reachable,BALL_ITEMS, addAfter=addAfter)
+    if not hasBall:
+        if force:
+            replacedItem = random.choice(BALL_ITEMS)
+        else:
+            trashBalls = list(filter(lambda x: x in BALL_ITEMS, trashItems))
+            if len(trashBalls) > 0:
+                while baseItem not in BALL_ITEMS:
+                    oldItem = baseItem
+                    baseItem = trashItems.pop()
+                    replacedItem = baseItem
+                    trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+    # If shop enabled
+    # Ensure each type of X Item is available in at least 1 shop
+
+    acceptable_placement = AtLeastOneInAShop(X_ITEMS, trashItems,
+                                             reachable, replacedItem, itemLocation,
+                                             addAfter=addAfter)
+    if not acceptable_placement and force:
+        # Not yet handled for randomise unaffected items (force)
+        replacedItem = itemLocation.item
+    else:
+        while not acceptable_placement:
+            oldItem = baseItem
+            baseItem = trashItems.pop()
+            replacedItem = baseItem
+            trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+            acceptable_placement = AtLeastOneInAShop(X_ITEMS,trashItems,reachable, replacedItem, itemLocation)
+
+    # Maintain list of flags and such here
+
+    while baseItem in ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
+                        "SUPER_ROD"] and itemLocation.isShop():
+        oldItem = baseItem
+        baseItem = trashItems.pop()
+        replacedItem = baseItem
+        trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+    return replacedItem
 
 

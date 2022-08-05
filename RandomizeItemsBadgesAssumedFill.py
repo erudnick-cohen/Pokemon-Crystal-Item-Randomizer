@@ -7,8 +7,11 @@ import time
 import RandomizeFunctions
 
 
-def findAllSilverUnlocks(req, locList, handled=[]):
+def findAllSilverUnlocks(req, locList, handled=None):
 	#req = "Mt. Silver Outside"
+	if handled is None:
+		handled = []
+
 	newFind = []
 	findSilverItems = list(filter(lambda x: req in x.LocationReqs, locList))
 	for findSilver in findSilverItems:
@@ -212,7 +215,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
 				   plandoPlacements = {},
-				   dontReplace = []):
+				   dontReplace = None):
+	if dontReplace is None:
+		dontReplace = []
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 	
 	random.seed(seed)
@@ -395,7 +400,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			# Standard warps use a 2-for-2 system so no optimisation with these
 		#	if len(nonStartSet) > 2:
 
-
 	
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
@@ -535,12 +539,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					revReqDict = defaultdict(lambda: [])
 					while oldDepsList != allDepsList and legal:
 						oldDepsList = allDepsList
+
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
 							if "Red" in newDeps or "Defeated Red" in newDeps:
 								#illegalReason = "Red"
 								legal = False
-								break
+
+							if j == "Mt. Silver Unlock":
+								if toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags:
+									legal = False
 
 							if not legal:
 								break
@@ -862,6 +870,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	#print('----')
 
+	print("spoiler is: ", spoiler)
+
 	# This should be moved to prevent it running on each attempt through!
 	if "RandomiseItems" in inputFlags:
 		handles = list(filter(lambda x: len(x.Handles) > 0, locList))
@@ -901,7 +911,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
-					 assign_trash=True, forbidden=[]):
+					 assign_trash=True, forbidden=None):
+
+	if forbidden is None:
+		forbidden = []
 
 	#traverse seed to both confirm beatability, allocate "trash" items and determine location distances
 	#define the set of active initial locations to consider
@@ -1049,57 +1062,22 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 							except ValueError:
 								pass
 						elif assign_trash:
+							placeItem = None
 							try:
 								placeItem = trashItems.pop()
 							except Exception as e:
 								print("exception",e)
-								i.item = "GOLD_LEAF"
+								placeItem = "GOLD_LEAF"
 								addAfter.append(i)
 							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):
+								print("Mon locked loop")
 								oldItem = placeItem
 								placeItem = trashItems.pop()
 								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 
-							while placeItem in [ "Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD", "SUPER_ROD" ] and \
-									i.isShop():
-								oldItem = placeItem
-								placeItem = trashItems.pop()
-								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
-
-							hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, RandomizeFunctions.REPEL_ITEMS)
-							if not hasRepel:
-								trashRepels = list(filter(lambda x: x in RandomizeFunctions.REPEL_ITEMS, trashItems))
-								if len(trashRepels) > 0:
-									while placeItem not in RandomizeFunctions.REPEL_ITEMS:
-										oldItem = placeItem
-										placeItem = trashItems.pop()
-										trashItems.insert(random.randint(0, len(trashItems)), oldItem)
-
-
-							hasBall = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable,
-																			 RandomizeFunctions.BALL_ITEMS)
-							if not hasBall:
-								trashBalls = list(filter(lambda x: x in RandomizeFunctions.BALL_ITEMS, trashItems))
-								if len(trashBalls) > 0:
-									while placeItem not in RandomizeFunctions.BALL_ITEMS:
-										oldItem = placeItem
-										placeItem = trashItems.pop()
-										trashItems.insert(random.randint(0, len(trashItems)), oldItem)
-
-
-							# If shop enabled
-							# Ensure each type of X Item is available in at least 1 shop
-							#def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocation):
-
-							acceptable_placement = RandomizeFunctions.AtLeastOneInAShop(RandomizeFunctions.X_ITEMS, trashItems,
-																 reachable, placeItem,i)
-							while not acceptable_placement:
-								oldItem = placeItem
-								placeItem = trashItems.pop()
-								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
-								acceptable_placement = RandomizeFunctions.AtLeastOneInAShop(RandomizeFunctions.X_ITEMS,
-																							trashItems,
-																							reachable, placeItem, i)
+							replacedItem = RandomizeFunctions.HandleShopLimitations(placeItem, i, locList, reachable, trashItems)
+							if replacedItem is not None:
+								placeItem = replacedItem
 
 							i.item = placeItem
 						else:
@@ -1154,10 +1132,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 						and "Impossible" not in i.FlagReqs and assign_trash:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 
-					hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, \
-													RandomizeFunctions.REPEL_ITEMS, addAfter)
-					if not hasRepel:
-						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
+					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
+																			addAfter=addAfter, force=True)
+
+					if replacedItem is not None:
+						i.item = replacedItem
 
 					addAfter.append(i)
 
@@ -1172,9 +1151,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				"Impossible" not in i.FlagReqs and assign_trash:
 				if (i.isItem() or i.isGym() or i.wasItem()):
 					i.item = item_processor.GetRandomItem(i.NormalItem)
-					hasRepel = RandomizeFunctions.ShopItemGroupCheck(i, locList, reachable, RandomizeFunctions.REPEL_ITEMS, addAfter)
-					if not hasRepel:
-						i.item = random.choice(RandomizeFunctions.REPEL_ITEMS)
+					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
+																			addAfter=addAfter, force=True)
+					if replacedItem is not None:
+						i.item = replacedItem
+
 					addAfter.append(i)
 				else:
 					activeLoc.extend(i.Sublocations)
