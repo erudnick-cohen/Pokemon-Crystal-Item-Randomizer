@@ -196,8 +196,10 @@ class Location:
 	def isGym(self):
 		return self.IsGym
 	
-	def applyBanList(self, banList, allowList, flags=[], banned=False):
+	def applyBanList(self, banList, allowList, flags=None, banned=False):
 		list = [];
+		if flags is None:
+			flags = []
 		# Some location to be banned from being used by default
 		# Need to NOT run this on generation
 		if banned or "Banned" in self.FlagReqs and "No Ban" not in flags:

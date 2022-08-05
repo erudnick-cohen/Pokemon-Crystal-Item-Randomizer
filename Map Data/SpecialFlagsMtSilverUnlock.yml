@@ -256,6 +256,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Explicit Checking
+            - Oak Opens Mt Silver
         ItemReqs:
         FlagsSet:
         ReachableReqs:
