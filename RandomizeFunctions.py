@@ -197,7 +197,8 @@ def ConvertHintLevelToFlags(level, MaxHints=None):
     return Options
 
 def getOptionsForItemModifications():
-	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope"]
+	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope",
+            "Replace Type", "Replace Repel"]
 
 def checkIfReplacementsConfigured(inputFlags):
     options = getOptionsForItemModifications()
@@ -325,7 +326,7 @@ def IterateRequirements(location, locations, known, partial_known=[]):
             for newReq in items:
                 if newReq not in data.ItemReqs:
                     data.ItemReqs.append(newReq)
-                    
+
             allRequiredLoc.extend(locs)
             allRequiredFlag.extend(flags)
             allRequiredItem.extend(items)
