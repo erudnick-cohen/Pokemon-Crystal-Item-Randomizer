@@ -455,7 +455,10 @@ def PathToItem(item):
 
                     }
 
-    item = item.replace(LoadLocationData.WARP_OPTION, "W")
+    if type(item) == str:
+        item = item.replace(LoadLocationData.WARP_OPTION, "W")
+    else:
+        print("Type", type(item), item)
 
     if item in replaceNames:
         return replaceNames[item]
