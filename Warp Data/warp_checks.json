@@ -1,0 +1,19 @@
+[
+  {
+    "FriendlyName": "Ho-Oh Always Available",
+    "LabelName": "ckir_BEFORE_ALWAYSHOOHSETTING1",
+    "ExpectedOffValues": [3, "ckir_BEFORE_ALWAYSHOOHSETTING4", null],
+    "ExpectedOnValues": [3, "ckir_BEFORE_ALWAYSHOOHSETTING3", null],
+    "ModifierChanges": [
+      {
+        "Add": [
+          ""
+        ]
+      }
+    ]
+  }
+
+
+
+
+]
