@@ -93,6 +93,15 @@ Changes:
         RemoveFlagReqs:
             - Received Togepi Egg
 
+    -
+        Location: Goldenrod Dept. Store Basement Door
+        RemoveFlagReqs:
+            - Director Saved
+
+    -
+        Location: Goldenrod Dept. Store
+        RemoveFlagReqs:
+            - Director Saved
 
 
 

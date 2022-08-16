@@ -87,6 +87,11 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	#print('required items are')
 	#print(requiredItems)
 
+	# This may need to be moved earlier!+
+
+	if "Warps" in flags:
+		GenerateWarpData.InterpretWarpChanges(romPath)
+
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -122,6 +127,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			dontReplace.extend(i['DontReplace'])
 	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
+
+
 
 	if "Warps" in flags:
 		GenerateWarpData.interpretDataForRandomisedRom(romPath)
@@ -284,6 +291,20 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					handleBadSpoiler(result, flags)
 					print("bad run, retrying")
 					completeResult = False
+				# Check for other requirements for FULL completion 
+				# This DOESN'T check possibility before Red however
+				E4Found = ["Will", "Koga", "Bruno", "Karen", "Lance"]
+				foundAll = True
+				for mapReach in E4Found:
+					if mapReach not in result[0]:
+						foundAll = False
+						break
+				if not foundAll:
+					print("Successful seed, but cannot reach all E4...")
+					completeResult = False
+
+
+
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			completeResult = False

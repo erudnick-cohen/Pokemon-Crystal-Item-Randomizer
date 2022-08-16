@@ -5,6 +5,162 @@ import mmap
 
 import LoadLocationData
 
+# A function which detects known possible warp changes and automatically enabled other modifiers
+
+# This function is used for taking an address from a label and working out the values used to jump to it
+# Ignore the bank as can assumed to not be needed for jumping within a script
+# Return the 2-part address value
+def AddressToIntValues(address):
+    bytes = address.to_bytes(3, byteorder='little')
+    return bytes[0:2]
+
+
+def InterpretWarpChanges(file):
+    json_file_1 = "Warp Data/crystal-speedchoice-warp-label-details.json"
+    rom_file = file
+
+    default_label_file = "crystal-speedchoice-label-details.json"
+
+    f = open(rom_file, 'r+b')
+    romMap = mmap.mmap(f.fileno(), 0)
+
+    yamlfile1 = open(json_file_1, encoding='utf-8')
+    yamltext1 = yamlfile1.read()
+    addressLists1 = json.loads(yamltext1)
+    addressData1 = {}
+    for i in addressLists1:
+        addressData1[i['label'].split(".")[-1]] = i
+
+    #interpretableMapDetails = list(filter(lambda x: x != None, addressData1))
+
+    json_file_2 = default_label_file
+
+    yamlfile2 = open(json_file_2, encoding='utf-8')
+    yamltext2 = yamlfile2.read()
+    addressLists2 = json.loads(yamltext2)
+    addressData2 = {}
+    for i in addressLists2:
+        addressData2[i['label'].split(".")[-1]] = i
+
+
+
+    json_file_checks = "Warp Data/warp_checks.json"
+    yamlfileF = open(json_file_checks, encoding='utf-8')
+    yamltextF = yamlfileF.read()
+    addressListsF = json.loads(yamltextF)
+
+
+    for check in addressListsF:
+        print(check)
+
+        LabelName = check["LabelName"]
+        if "ckir" in LabelName:
+            labelData = addressData2
+        else:
+            labelData = addressData1
+
+        expectedOnValues = check["ExpectedOnValues"]
+        expectedOffValues = check["ExpectedOffValues"]
+
+        iterator=0
+        for value in expectedOnValues:
+            if type(value) != int:
+                # TODO Lookup the value in the label as refers to a label address
+                addressForOn = labelData[value]["address_range"]["begin"]
+                jumpBytes = AddressToIntValues(addressForOn)
+                expectedOnValues[iterator] = jumpBytes[0]
+                expectedOnValues[iterator + 1] = jumpBytes[1]
+                iterator += 1
+
+            iterator += 1
+
+        iterator = 0
+        for value in expectedOffValues:
+            if type(value) != int:
+                # TODO Lookup the value in the label as refers to a label address
+                addressForOff = labelData[value]["address_range"]["begin"]
+                jumpBytes = AddressToIntValues(addressForOff)
+                expectedOffValues[iterator] = jumpBytes[0]
+                expectedOffValues[iterator + 1] = jumpBytes[1]
+                iterator += 1
+
+            iterator += 1
+
+
+        lookupLabel = labelData[LabelName]
+
+        if len(lookupLabel) != len(expectedOnValues) != len(expectedOffValues):
+            print("unequal lookup values")
+        else:
+            romAddress = lookupLabel["address_range"]
+            lookValues = list(romMap[romAddress["begin"]:romAddress["end"]])
+
+            isOn = True
+            isOff = True
+
+            iterator=0
+            while iterator < len(lookupLabel):
+                lookupI = lookValues[iterator]
+                if lookupI != expectedOnValues[iterator]:
+                    isOn = False
+                if lookupI != expectedOffValues[iterator]:
+                    isOff = False
+
+                iterator += 1
+
+            if not isOn and not isOff:
+                print("Error: Neither on nor off")
+            elif isOn:
+                print("On")
+            elif isOff:
+                print("Off")
+
+
+
+
+
+
+
+
+def GenerateWarpMapDataLabels():
+    romDirectory = "RandomizerRom"
+    mapsDataFile = "data/maps/maps.asm"
+
+    mapsFile = romDirectory + "/" + mapsDataFile
+
+    # warp_event  1,  3, CELADON_DEPT_STORE_1F, -1
+
+    # map WhirlIslandNW, TILESET_DARK_CAVE, CAVE, LANDMARK_WHIRL_ISLANDS, MUSIC_UNION_CAVE, TRUE, PALETTE_DARK, FISHG$
+    regex = "\s{0,}map [a-zA-Z_0-9]{1,}, TILESET_[a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, " \
+            "[a-zA-Z_0-9]{1,}, PALETTE_DARK, [a-zA-Z_0-9]{1,}"
+    warp_data_match = re.compile(regex)
+
+    map_file_data = open(mapsFile, encoding="utf8")
+    data = map_file_data.readlines()
+    map_file_data.close()
+
+    dark_maps = list(filter(warp_data_match.match, data))
+
+    iterator = 0
+    for dark in dark_maps:
+        where = data.index(dark)
+
+        darkData = dark.split(",")
+        darkName = darkData[0].split(" ")[1]
+
+        before, after = mapEventToLabelNames(darkName, iterator)
+
+        iterator += 1
+
+        if data[where - 1].strip() != before and data[where + 1].strip() != after:
+            data.insert(where, before + "\n")
+            data.insert(where + 2, after + "\n")
+
+    map_file_data = open(mapsFile, "w", encoding="utf8")
+    map_file_data.writelines(data)
+    map_file_data.close()
+
+
 
 def ReverseWarpLabels(label):
     entry_key = "cwri"
@@ -37,6 +193,21 @@ def ReverseWarpLabels(label):
         "MapDestId": MapDestId,
         "Iterator": Iterator
     }
+
+def mapEventToLabelNames(source,i):
+
+    entry_key = "cwri"
+    base_label = ".{}_{}_mapdetail_{}_{}::"
+
+    map_source = source.replace("_","__").upper()
+
+    before_label = base_label.\
+        format(entry_key, "BEFORE", map_source, i)
+
+    after_label = base_label. \
+        format(entry_key, "AFTER", map_source, i)
+
+    return before_label, after_label
 
 def warpEventToLabelNames(source,entry,i):
 
@@ -366,7 +537,10 @@ def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
 
 
 
-#GenerateWarpLabels()
+#GenerateWarpMapDataLabels()
+#InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\noho.gbc")
+InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\ho2.gbc")
+
 # No step yet to run ruby script to generate the changed labels file
 
 # After processing, process with map ID is each warp, may be better to generate this at another stage

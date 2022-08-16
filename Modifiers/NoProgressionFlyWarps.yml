@@ -19,6 +19,14 @@ Changes:
             - Fly
 
     -
+      Location: Mt Mortar Inside
+      AddFlagReqs:
+          - Storm Badge
+      AddItemReqs:
+          - Fly
+
+
+    -
         Location: Tin Tower 5F Start Warpie
         AddFlagReqs:
             - Storm Badge
