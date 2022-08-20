@@ -1,4 +1,7 @@
+import json
 import os
+
+import GenerateWarpData
 import Location
 import Gym
 import yaml
@@ -50,6 +53,8 @@ def LoadWarpData(locationList, flags):
 	# Then pruning is done before the object creation below
 	accepted_warps, removed_items = CheckLocationData(warpTSV, locationList)
 
+	special_cases = GenerateWarpData.LoadSpecialCaseWarps()
+
 	for data in accepted_warps:
 		fromGroupName = data["Start Warp Group"][1:-1]
 		toGroupName = data["End Warp Group"][1:-1]
@@ -65,7 +70,7 @@ def LoadWarpData(locationList, flags):
 			"WildTableList": None,
 			"LocationReqs": [fromGroupName+WARP_OPTION],
 			"FlagReqs": [],
-			"FlagsSet": None,
+			"FlagsSet": [],
 			"ItemReqs": [],
 			"Code": "",
 			"Text": "",
@@ -74,6 +79,8 @@ def LoadWarpData(locationList, flags):
 			"ReachableReqs": None,
 			"TrainerList": None
 		}
+
+		GenerateWarpData.handleSpecialCases(data, locationData, special_cases)
 
 
 		darkWarpGroups = {"Silver Cave Room 1", "Whirl Island", "Rock Tunnel", "Dark Cave"}
@@ -456,7 +463,8 @@ def CheckLocationData(warpLocations, locationList):
 
 
 	if impossible_flags:
-		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened, forbiddenFlags=actually_impossible_flags)
+		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened,
+															 forbiddenFlags=actually_impossible_flags)
 	# if flags impossible, repeat
 		for l in locationList:
 			ignore, r_warps = ImpossibleWarpRecursion(accessible_groups, locationList,  l)
@@ -511,6 +519,8 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					nLoc.YmlFile = file
 					nLoc.applyBanList(banList,allowList)
 					nLoc.applyModifiers(modifierDict, flags)
+					nLoc.applyBanList(banList,allowList)
+
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)
 						#warpModifications = list(filter(lambda x: "Warpie" in x.Name, modifierDict))

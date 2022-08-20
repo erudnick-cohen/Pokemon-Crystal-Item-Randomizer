@@ -1,0 +1,15 @@
+Name: Goldenrod Dept Store Basement Door
+Description: Remove meeting Director with door at the bottom of Goldenrod Dept. Store.
+Changes:
+    -
+        Location: Goldenrod Dept. Store Basement Door
+        RemoveFlagReqs:
+            - Director Saved
+
+    -
+        Location: Goldenrod Dept. Store
+        RemoveFlagReqs:
+            - Director Saved
+
+IncompatibleWithout:
+    - 'Warps'

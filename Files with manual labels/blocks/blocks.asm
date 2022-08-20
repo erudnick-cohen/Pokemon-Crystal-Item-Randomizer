@@ -789,9 +789,7 @@ SlowpokeWellB2F_Blocks:
 	INCBIN "maps/SlowpokeWellB2F.blk"
 
 IlexForest_Blocks:
-.ckir_BEFORE_IlexForest_Blocks::
 	INCBIN "maps/IlexForest.blk"
-.ckir_AFTER_IlexForest_Blocks::
 
 DarkCaveVioletEntrance_Blocks:
 	INCBIN "maps/DarkCaveVioletEntrance.blk"

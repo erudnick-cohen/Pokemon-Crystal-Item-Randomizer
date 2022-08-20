@@ -78,34 +78,15 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 
 	return trashItems
 
-def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
-				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
-				 wildLVBoost = 0,
-				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
-				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
-				 otherSettings = {}, bonusTrash = [],hintConfig=None):
-	#print('required items are')
-	#print(requiredItems)
-
-	# This may need to be moved earlier!+
-
-	if "Warps" in flags:
-		GenerateWarpData.InterpretWarpChanges(romPath)
-
-	requiredItemsCopy = copy.copy(requiredItems)
-	changeListDict = defaultdict(lambda: [])
-	extraTrash = []
-	newItems = []
-	maybeNewItems = []
-	dontReplace = []
-	addedProgressList = []
+def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+					 newItems, maybeNewItems, dontReplace):
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
 			flags.extend(i['FlagsSet'])
 		if 'Changes' in i:
 			for j in i['Changes']:
-				changeListDict[j['Location']].append(j) 
+				changeListDict[j['Location']].append(j)
 		if 'AddedItems' in i:
 			for j in i['AddedItems']:
 				if j not in requiredItemsCopy:
@@ -125,13 +106,49 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			maybeNewItems.extend(i['MaybeNewItems'])
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
+
+
+def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
+				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
+				 wildLVBoost = 0,
+				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
+				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
+				 otherSettings = {}, bonusTrash = [],hintConfig=None):
+	#print('required items are')
+	#print(requiredItems)
+
+	# This may need to be moved earlier!+
+
+
+
+	requiredItemsCopy = copy.copy(requiredItems)
+	changeListDict = defaultdict(lambda: [])
+	extraTrash = []
+	newItems = []
+	maybeNewItems = []
+	dontReplace = []
+	addedProgressList = []
+
+	ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, dontReplace)
+
+	if "Warps" in flags:
+		mod_changes = GenerateWarpData.InterpretWarpChanges(romPath)
+
+		ProcessModifiers(mod_changes, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, dontReplace)
+
 	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
 
-
-
 	if "Warps" in flags:
 		GenerateWarpData.interpretDataForRandomisedRom(romPath)
+
+		warpOutput = "Warp Data/warp-output.tsv"
+		warpTSVData = LoadLocationData.readTSVFile(warpOutput)
+
+		
+
 
 	if "Start With Bike" in flags:
 		requiredItemsCopy.remove("Bicycle")

@@ -1,0 +1,10 @@
+Name: Route 44 Access From Mahogany
+Description: Add the ability to travel between Mahogany & Route 44 freely with the required warp change.
+Changes:
+    -
+        Location: Mahogany 7 Badges
+        RemoveFlagReqs:
+            - Rocket Invasion
+
+IncompatibleWithout:
+    - 'Warps'

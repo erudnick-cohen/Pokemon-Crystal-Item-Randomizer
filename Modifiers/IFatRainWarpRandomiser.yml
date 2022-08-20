@@ -1,57 +1,6 @@
 Name: IFatRain Warp Randomiser
 Description: Changes warp logic to handle specifics for IFatRain Warp Randomiser. This removes ledges in the Ruins of Alph, removes Basement Key from being required, allows entry to Vermilion via Snorlax and Blackthorn via Dragons Den Exit, passage past the right guard at Victory Road Gate, director always gives item and Ice Path Boulders already pushed.
 Changes:
-    -
-        Location: Ruins of Alph Top Ledge
-        RemoveFlagReqs:
-            - Impossible
-
-    -
-        Location: Ruins Ledge Middle
-        RemoveFlagReqs:
-            - Impossible
-
-    -
-        Location: Goldenrod Underground Basement Key
-        RemoveItemReqs:
-            - Basement Key
-
-    -
-        Location: Goldenrod Underground Basement Key
-        RemoveItemReqs:
-            - Basement Key
-
-    -
-        Location: Vermilion Via Snorlax
-        RemoveFlagReqs:
-            - Impossible
-
-    -
-        Location: Blackthorn Via Dragons Den Entrance
-        RemoveItemReqs:
-            - Surf
-        RemoveFlagReqs:
-            - Fog Badge
-
-    -
-        Location: Victory Road Gate Snorlax
-        RemoveFlagReqs:
-            - Snorlax Woken
-
-    -
-        Location: Victory Road Gate
-        RemoveFlagReqs:
-            - Snorlax Woken
-
-    -
-        Location: Goldenrod Tunnel Rocket Attack
-        RemoveFlagReqs:
-            - Rocket Invasion
-
-    -
-        Location: Ice Path Boulder Drop Room With Strength
-        RemoveFlagReqs:
-            - Ice Path Boulders Pushed
 
     -
         Location: Lighthouse 4F
@@ -62,46 +11,6 @@ Changes:
         Location: Lighthouse 4F Middle
         RemoveFlagReqs:
             - Impossible
-
-    -
-        Location: Victory Road Hall 2 Ledge TM
-        RemoveFlagReqs:
-            - Impossible
-
-    -
-        Location: Goldenrod
-        RemoveFlagReqs:
-            - Beat Team Rocket
-
-    -
-        Location: Goldenrod Rocket Block North
-        RemoveFlagReqs:
-            - Beat Team Rocket
-
-    -
-        Location: Goldenrod Rocket Corner Block
-        RemoveFlagReqs:
-            - Beat Team Rocket
-
-    -
-        Location: Mahogany 7 Badges
-        RemoveFlagReqs:
-            - Rocket Invasion
-
-    -
-        Location: Route 32
-        RemoveFlagReqs:
-            - Received Togepi Egg
-
-    -
-        Location: Goldenrod Dept. Store Basement Door
-        RemoveFlagReqs:
-            - Director Saved
-
-    -
-        Location: Goldenrod Dept. Store
-        RemoveFlagReqs:
-            - Director Saved
 
 
 

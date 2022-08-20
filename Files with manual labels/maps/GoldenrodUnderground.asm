@@ -46,7 +46,9 @@ GoldenrodUnderground_MapScripts:
 	return
 
 .LockBasementDoor:
+.ckir_BEFORE_LockBasementDoor::
 	changeblock 18, 6, $3d ; locked door
+.ckir_AFTER_LockBasementDoor::
 	return
 
 .CheckDayOfWeek:

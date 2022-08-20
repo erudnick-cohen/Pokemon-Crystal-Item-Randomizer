@@ -43,6 +43,7 @@ Location:
         WildTableList: SLOWPOKE_WELL_B1F
         LocationReqs: Slowpoke Well Entrance
         FlagReqs:
+            - Open Slowpoke Well
         ItemReqs:
         FlagsSet:
             - Rescued Slowpokes

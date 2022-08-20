@@ -1,0 +1,10 @@
+Name: Ice Path Boulders Removed
+Description: Remove restrictions with the boulders in Ice Path.
+Changes:
+    -
+        Location: Ice Path Boulder Drop Room With Strength
+        RemoveFlagReqs:
+            - Ice Path Boulders Pushed
+
+IncompatibleWithout:
+    - 'Warps'

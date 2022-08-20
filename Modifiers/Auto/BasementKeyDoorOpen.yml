@@ -1,0 +1,15 @@
+Name: Basement Key Door Open
+Description: Remove restrictions on Basement Key door.
+Changes:
+    -
+        Location: Goldenrod Underground Basement Key
+        RemoveItemReqs:
+            - Basement Key
+
+    -
+        Location: Goldenrod Underground
+        RemoveItemReqs:
+            - Basement Key
+
+IncompatibleWithout:
+    - 'Warps'

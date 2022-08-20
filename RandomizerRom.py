@@ -57,6 +57,7 @@ def ResetRomForLabelling():
 	manual_copy_files.append((manual_dir+"/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm"))
 	manual_copy_files.append((manual_dir+"/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm"))
 	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
+	manual_copy_files.append((manual_dir + "/events/std_scripts.asm", "RandomizerRom/engine/events/std_scripts.asm"))
 	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
 
 	if len(manual_copy_files) != counted:

@@ -3,7 +3,4 @@ Modifiers:
     - Modifiers/Warps.yml
     - Modifiers/StartWithBike.yml
     - Modifiers/NoProgressionFlyWarps.yml
-    - Modifiers/IFatRainWarpRandomiser.yml
-    - Modifiers/RemoveFlashLogic.yml
-    - Modifiers/DontReplaceAideItem.yml
     - Modifiers/SilverLeafDebugMode.yml

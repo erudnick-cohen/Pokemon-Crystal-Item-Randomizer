@@ -3,6 +3,8 @@ import os
 import re
 import mmap
 
+import yaml
+
 import LoadLocationData
 
 # A function which detects known possible warp changes and automatically enabled other modifiers
@@ -49,6 +51,8 @@ def InterpretWarpChanges(file):
     yamltextF = yamlfileF.read()
     addressListsF = json.loads(yamltextF)
 
+    addModifiers = []
+
 
     for check in addressListsF:
         print(check)
@@ -88,18 +92,19 @@ def InterpretWarpChanges(file):
 
 
         lookupLabel = labelData[LabelName]
+        romAddress = lookupLabel["address_range"]
+        lookValues = list(romMap[romAddress["begin"]:romAddress["end"]])
+        labelValuesCount = len(lookValues)
 
-        if len(lookupLabel) != len(expectedOnValues) != len(expectedOffValues):
+        if labelValuesCount != len(expectedOnValues) or labelValuesCount != len(expectedOffValues):
             print("unequal lookup values")
+            print(lookValues)
         else:
-            romAddress = lookupLabel["address_range"]
-            lookValues = list(romMap[romAddress["begin"]:romAddress["end"]])
-
             isOn = True
             isOff = True
 
             iterator=0
-            while iterator < len(lookupLabel):
+            while iterator < labelValuesCount:
                 lookupI = lookValues[iterator]
                 if lookupI != expectedOnValues[iterator]:
                     isOn = False
@@ -110,55 +115,31 @@ def InterpretWarpChanges(file):
 
             if not isOn and not isOff:
                 print("Error: Neither on nor off")
+            elif isOn and isOff:
+                print("On AND Off... broken!")
             elif isOn:
                 print("On")
+                modifierChanges = check["ModifierChanges"]
+                if "Add" in  modifierChanges:
+                    addModifiers.extend(modifierChanges["Add"])
             elif isOff:
                 print("Off")
 
 
 
+    print(addModifiers)
+
+    newModData = []
+
+    for mod in addModifiers:
+        yamlfile = open(mod)
+        yamltext = yamlfile.read()
+
+        loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+        newModData.append(loadedYaml)
 
 
-
-
-
-def GenerateWarpMapDataLabels():
-    romDirectory = "RandomizerRom"
-    mapsDataFile = "data/maps/maps.asm"
-
-    mapsFile = romDirectory + "/" + mapsDataFile
-
-    # warp_event  1,  3, CELADON_DEPT_STORE_1F, -1
-
-    # map WhirlIslandNW, TILESET_DARK_CAVE, CAVE, LANDMARK_WHIRL_ISLANDS, MUSIC_UNION_CAVE, TRUE, PALETTE_DARK, FISHG$
-    regex = "\s{0,}map [a-zA-Z_0-9]{1,}, TILESET_[a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, [a-zA-Z_0-9]{1,}, " \
-            "[a-zA-Z_0-9]{1,}, PALETTE_DARK, [a-zA-Z_0-9]{1,}"
-    warp_data_match = re.compile(regex)
-
-    map_file_data = open(mapsFile, encoding="utf8")
-    data = map_file_data.readlines()
-    map_file_data.close()
-
-    dark_maps = list(filter(warp_data_match.match, data))
-
-    iterator = 0
-    for dark in dark_maps:
-        where = data.index(dark)
-
-        darkData = dark.split(",")
-        darkName = darkData[0].split(" ")[1]
-
-        before, after = mapEventToLabelNames(darkName, iterator)
-
-        iterator += 1
-
-        if data[where - 1].strip() != before and data[where + 1].strip() != after:
-            data.insert(where, before + "\n")
-            data.insert(where + 2, after + "\n")
-
-    map_file_data = open(mapsFile, "w", encoding="utf8")
-    map_file_data.writelines(data)
-    map_file_data.close()
+    return newModData
 
 
 
@@ -195,8 +176,7 @@ def ReverseWarpLabels(label):
     }
 
 def mapEventToLabelNames(source,i):
-
-    entry_key = "cwri"
+    entry_key = "ckir"
     base_label = ".{}_{}_mapdetail_{}_{}::"
 
     map_source = source.replace("_","__").upper()
@@ -239,6 +219,32 @@ def warpEventToLabelNames(source,entry,i):
 
     return before_label, after_label
 
+
+def LoadSpecialCaseWarps():
+    special_cases_file = open("Warp Data/warp_special_cases.json")
+    special_cases = json.loads(special_cases_file.read())
+    special_cases_file.close()
+
+    return special_cases
+
+
+def handleSpecialCases(warpData, warpLocation, special_cases):
+
+    for case in special_cases:
+        if "From" in case:
+            pass
+
+        if "To" in case:
+            toCase = case["To"]
+            if warpData["Start Warp Name"] == toCase["WarpName"]:
+                for change in toCase["Changes"].items():
+                    if change[0] == "FlagsSet":
+                        for setFlag in change[1]:
+                            warpLocation["FlagsSet"].append(setFlag)
+
+    return
+
+
 def GenerateWarpLabels():
     romDirectory = "RandomizerRom"
     mapsDirectory = "maps"
@@ -249,6 +255,8 @@ def GenerateWarpLabels():
     map_mapping = getMapAttributesMapping()
 
     # warp_event  1,  3, CELADON_DEPT_STORE_1F, -1
+
+    special_cases = []
 
 
     regex = "\s{0,}warp_event\s{1,}\d{1,},\s{1,}\d{1,},\s{0,}[a-zA-z_0-9]{1,},\s{1,}(\d|-){1,}\s{0,}"
@@ -289,10 +297,58 @@ def GenerateWarpLabels():
 
                 change = True
 
+            # Future version to check tile, and therefore hole checking etc
+            # If this field is a hole, then add a special case
+
+            # For now, just hard-code the Lighthouse 4F Central Holes
+            # Lighthouse 4F 8,3 & 9,3
+
+            interpreted_label = ReverseWarpLabels(before.replace("::", ""))
+            print(interpreted_label)
+
+            if interpreted_label["MapName"] == "OLIVINE_LIGHTHOUSE_4F" and \
+                interpreted_label["MapY"] == "3" and interpreted_label["MapX"] in ("8"):
+                warpCase = {
+                    "To":
+                        {
+                            "WarpName": "Lighthouse 4F North Drop",
+                            "Changes":
+                                {
+                                    "FlagsSet": ["Lighthouse4FHoles"]
+                                }
+
+                        }
+                }
+
+                special_cases.append(warpCase)
+
+            if interpreted_label["MapName"] == "OLIVINE_LIGHTHOUSE_4F" and \
+                    interpreted_label["MapY"] == "3" and interpreted_label["MapX"] in ("9"):
+                warpCase = {
+                    "To":
+                        {
+                            "WarpName": "Lighthouse 4F North Drop 2",
+                            "Changes":
+                                {
+                                    "FlagsSet": ["Lighthouse4FHoles"]
+                                }
+
+                        }
+                }
+
+                special_cases.append(warpCase)
+
+
+
         if change:
             map_file_data = open(mapFiles + "/" + m, "w", encoding="utf8")
             map_file_data.writelines(data)
             map_file_data.close()
+
+    if len(special_cases) > 0:
+        warp_special_cases = open("Warp Data/warp_special_cases.json", "w")
+        warp_special_cases.writelines(json.dumps(special_cases, indent=4))
+        map_file_data.close()
 
 def BytesToEasyString(bytes):
     s = ""
@@ -534,20 +590,20 @@ def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
     out_file.flush()
     out_file.close()
 
+if __name__ == '__main__':
+    pass
+    #InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\base.gbc")
+    #InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\triggers.gbc")
 
+    GenerateWarpLabels()
 
+    # No step yet to run ruby script to generate the changed labels file
 
-#GenerateWarpMapDataLabels()
-#InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\noho.gbc")
-InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\ho2.gbc")
+    # After processing, process with map ID is each warp, may be better to generate this at another stage
+    #interpretDataForMapIDs()
 
-# No step yet to run ruby script to generate the changed labels file
-
-# After processing, process with map ID is each warp, may be better to generate this at another stage
-#interpretDataForMapIDs()
-
-# Main function to eventually be called before each rom is generated
-#interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/CrystalWarpRando/out.gbc")
+    # Main function to eventually be called before each rom is generated
+    #interpretDataForRandomisedRom(file="C:/Users/Alex/Downloads/CrystalWarpRando/out.gbc")
 
 
 

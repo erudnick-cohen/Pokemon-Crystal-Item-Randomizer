@@ -1,0 +1,20 @@
+Name: Slowpoke Well Open
+Description: To prevent softlocks, handle Slowpoke Well always being open.
+Changes:
+    -
+        Location: Slowpoke Well Floor 1
+        RemoveFlagReqs:
+            - Open Slowpoke Well
+
+    -
+        Location: Azalea Met Kurt
+        RemoveFlagReqs:
+            - Open Slowpoke Well
+
+    -
+        Location: Azalea
+        RemoveFlagReqs:
+            - Open Slowpoke Well
+
+IncompatibleWithout:
+    - 'Warps'
