@@ -594,8 +594,9 @@ if __name__ == '__main__':
     pass
     #InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\base.gbc")
     #InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\triggers.gbc")
+    #InterpretWarpChanges("C:\\Users\\Alex\\Downloads\\CrystalEtc\\debugfix\\flashless.gbc")
 
-    GenerateWarpLabels()
+    #GenerateWarpLabels()
 
     # No step yet to run ruby script to generate the changed labels file
 

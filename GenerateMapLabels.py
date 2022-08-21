@@ -93,7 +93,7 @@ def CreateMapPatches():
 
         # map WhirlIslandNW, TILESET_DARK_CAVE, CAVE, LANDMARK_WHIRL_ISLANDS, MUSIC_UNION_CAVE, TRUE, PALETTE_DARK, FISHG$
 
-        NO_LONGER_PALETTE_DARK = 12
+        NO_LONGER_PALETTE_DARK = 18
         ints_new[7] = NO_LONGER_PALETTE_DARK
 
         obj = {
