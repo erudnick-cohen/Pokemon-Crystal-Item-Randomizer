@@ -282,9 +282,14 @@ class Location:
 
 	def applyModifiers(self, modifierDict, flags):
 		list = [];
-		if(self.Name in modifierDict):
+
+		warpLessModiferName = self.Name
+		if LoadLocationData.WARP_OPTION in warpLessModiferName:
+			warpLessModiferName = warpLessModiferName.replace(LoadLocationData.WARP_OPTION, "")
+
+		if(warpLessModiferName in modifierDict):
 			#print('Modifying '+self.Name)
-			for j in modifierDict[self.Name]:
+			for j in modifierDict[warpLessModiferName]:
 				if 'NewItemReqs' in j:
 					if not (j['NewItemReqs'] is None):
 						self.ItemReqs = j['NewItemReqs']

@@ -65,6 +65,146 @@ def LabelAllBlocks():
     map_file_data.close()
 
 
+def NPCEventToLabels(map, event, iterator):
+    label_base = ".ckir_{}_TrainerEvent_{}_{}::"
+
+    map_source = map.replace("_","__")
+
+    return label_base.format("BEFORE", map_source, iterator), label_base.format("AFTER", map_source, iterator)
+
+SPRITEMOVEDATA_STANDING_DOWN = 6
+SPRITEMOVEDATA_STANDING_UP = 7
+SPRITEMOVEDATA_STANDING_LEFT = 8
+SPRITEMOVEDATA_STANDING_RIGHT = 9
+def InvertNPCDirection(direction_byte):
+    if direction_byte == SPRITEMOVEDATA_STANDING_DOWN:
+        return SPRITEMOVEDATA_STANDING_UP
+    elif direction_byte == SPRITEMOVEDATA_STANDING_UP:
+        return SPRITEMOVEDATA_STANDING_DOWN
+    elif direction_byte == SPRITEMOVEDATA_STANDING_LEFT:
+        return SPRITEMOVEDATA_STANDING_RIGHT
+    elif direction_byte == SPRITEMOVEDATA_STANDING_RIGHT:
+        return SPRITEMOVEDATA_STANDING_LEFT
+
+    return direction_byte
+
+def GenerateNPCSwitchPatch():
+    patchFile = "Patches Base/Trainer180.json"
+    default_label_file = "crystal-speedchoice-label-details.json"
+    json_file_2 = default_label_file
+
+    yamlfile2 = open(json_file_2, encoding='utf-8')
+    yamltext2 = yamlfile2.read()
+    addressLists2 = json.loads(yamltext2)
+    addressData2 = {}
+    for i in addressLists2:
+        addressData2[i['label'].split(".")[-1]] = i
+
+    mapEvents = list(filter(lambda x: "_TrainerEvent_" in x[0], addressData2.items()))
+
+    all_map_events = []
+
+    for mapEvent in mapEvents:
+        print(mapEvent)
+        mapEventInfo = mapEvent[1]
+
+        ints_old = [int(x) for x in mapEventInfo["integer_values"].split(" ")]
+
+        # Need to handle names containing _s
+        map_name = mapEvent[0].replace("__", "#").split("_")[3].replace("#","_")
+
+        #WRONG FastShipCabins_MapEvents.ckir_BEFORE_TrainerEvent_FastShipCabins_NNW_NNE_NE_0
+
+        #FastShipCabins_NNW_NNE_NE_MapEvents.ckir_BEFORE_TrainerEvent_FastShipCabins_NNW_NNE_NE_0
+
+        label = map_name + "_MapEvents." + mapEvent[0]
+
+        description = "Invert Trainer NPC facing directions"
+        address_range = mapEventInfo["address_range"]
+        ints_new = ints_old.copy()
+
+        #object_event  5,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherBenny, -1
+
+        ints_new[3]= InvertNPCDirection(ints_old[3])
+
+        obj = {
+            "integer_values": {
+                "old": ints_old,
+                "new": ints_new
+            },
+            "address_range": address_range,
+            "label": label,
+            "description": description
+        }
+
+        all_map_events.append(obj)
+
+    map_flash_patch = json.dumps(all_map_events, indent=4)
+    patch = open(patchFile, "w")
+    patch.write(map_flash_patch)
+    patch.flush()
+    patch.close()
+
+def GenerateNPCLabels():
+    romDirectory = "RandomizerRom"
+    mapsDirectory = "maps"
+
+    mapFiles = romDirectory + "/" + mapsDirectory
+    map_files = os.listdir(mapFiles)
+
+    special_cases = []
+
+
+    #object_event 21, 13, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherWade1, -1
+
+    regex = "^\s{0,}object_event\s{1,}\d{1,},\s{1,}\d{1,},\s{1,}SPRITE_[A-Za-z0-9_]{1,}, SPRITEMOVEDATA_[A-Za-z0-9_]{1,}, " \
+            "[0-9\-]{1,2}, [0-9\-]{1,2}, [0-9\-]{1,2}, [0-9\-]{1,2}, [A-Za-z0-9_]{1,}, " \
+            "OBJECTTYPE_TRAINER, [0-9\-]{1,2}, Trainer[A-Za-z0-9_]{1,}, [A-Za-z0-9\-]{1,}"
+    trainer_npc_data_match = re.compile(regex)
+
+    for m in map_files:
+        extension = m.split(".")[-1]
+        if extension != "asm":
+            continue
+
+        map_file_data = open(mapFiles+"/"+m, encoding="utf8")
+        data = map_file_data.readlines()
+        map_file_data.close()
+
+        npc_events = list(filter(trainer_npc_data_match.match, data))
+
+        change = False
+        iterator = 0
+        for npc in npc_events:
+            where = data.index(npc)
+
+            safe_map_name = m[0:-4]
+
+            before,after = NPCEventToLabels(safe_map_name, npc,iterator)
+            iterator += 1
+
+            print(before, after)
+
+            create_labels = False
+
+            if where+1 >= len(npc_events):
+                create_labels = True
+            elif data[where-1].strip() != before and data[where+1].strip() != after:
+                create_labels = True
+
+            if create_labels:
+                data.insert(where, before + "\n")
+                data.insert(where + 2, after + "\n")
+
+                change = True
+
+        if change:
+            map_file_data = open(mapFiles + "/" + m, "w", encoding="utf8")
+            map_file_data.writelines(data)
+            map_file_data.close()
+
+
+
 def CreateMapPatches():
     patchFile = "Patches Base/LightUpDarkCaves.json"
     default_label_file = "crystal-speedchoice-label-details.json"
@@ -316,7 +456,7 @@ def getMapLookupForById(addressData):
 
 
 if __name__ == '__main__':
-    LabelAllBlocks()
+    GenerateNPCSwitchPatch()
 
 
 

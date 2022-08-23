@@ -1,0 +1,4 @@
+Name: Invert Trainers
+Description: Inverts Trainer Directions
+NewGamePatches:
+    - 'Patches/Trainer180.json'

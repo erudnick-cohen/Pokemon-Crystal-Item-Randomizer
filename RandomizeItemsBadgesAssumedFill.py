@@ -317,7 +317,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		for i in requirementsDict['8 Badges']:
 			i.extend(E4Badges)
 	#if we are in plando mode (explicit placements, only use explicit checks for locations which have the option)
-	if(len(plandoPlacements)>0):
+	if(len(plandoPlacements)>0 or "Warps" in inputFlags):
 		for i in requirementsDict:
 			explicitable = False
 			explicitOption = None
@@ -771,6 +771,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								if k not in allDepsList:
 									newDeps.append(k)
 
+							#print(newDeps)
+
 						allDepsList.extend(newDeps)
 						#print("New dependencies:", allDepsList)
 
@@ -792,6 +794,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					if("Impossible" in allDepsList or "Banned" in jReqs or "Unreachable" in jReqs):
 						illegalReason = "Impossible 2"
 						legal = False
+
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
 						loc = locList.pop(iter)
 						valid = True
@@ -1049,10 +1052,26 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
-	while "RandomiseItems" in inputFlags and remainingItems:
+	while ("RandomiseItems" in inputFlags) and remainingItems:
 		remainingItems = False
 		for i in activeLoc:
 			if i.Name not in reachable and (i.isItem() or i.isGym() or i.wasItem()) \
+					and "Impossible" not in i.FlagReqs: # Impossible means NEVER overwrite
+														# e.g. Not randomising Pokegear
+				remainingItems = True
+				activeLoc.extend(i.Sublocations)
+				i.item = "SILVER_LEAF"
+				i.IsItem = True
+				i.Type = "Item"
+				reachable[i.Name] = i
+				randomizedExtra[i.Name] = i.item
+				print(i.Name,"now","Silver Leaf")
+
+	remainingItems = True
+	while ("SilverLeafDebug" in inputFlags) and remainingItems:
+		remainingItems = False
+		for i in activeLoc:
+			if i.Name not in reachable and (i.isItem() or i.isGym()) \
 					and "Impossible" not in i.FlagReqs: # Impossible means NEVER overwrite
 														# e.g. Not randomising Pokegear
 				remainingItems = True

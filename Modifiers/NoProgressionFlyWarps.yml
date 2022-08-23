@@ -27,7 +27,7 @@ Changes:
 
 
     -
-        Location: Tin Tower 5F Start Warpie
+        Location: Tin Tower 5F Start
         AddFlagReqs:
             - Storm Badge
         AddItemReqs:

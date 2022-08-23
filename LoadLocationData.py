@@ -480,12 +480,24 @@ def CheckLocationData(warpLocations, locationList):
 
 	usePurge = True
 
+
+	# For warp grouping purposes, have an additional check not to purge if the ONLY group that leads to that location
+	# Should ALL be transitional options anyway
+
 	if usePurge:
 		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
 		print("Purge count==",len(toPurge))
+		skip_purge = []
 		for purge in toPurge:
-			#print("Purge:", purge)
-			accessible_warp_data.remove(purge)
+			end_group = purge["End Warp Group"]
+			other_end_group = len([ a for a in accessible_warp_data if a["End Warp Group"] == end_group])
+			# Because the warps focus on START locations, double check the end groups here and ensure
+			# Not to remove the last option from the list
+			# For warp group processing, etc.
+			if other_end_group <= 1:
+				skip_purge.append(purge)
+			else:
+				accessible_warp_data.remove(purge)
 
 	return accessible_warp_data,removed_warps
 
@@ -560,6 +572,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 		warpData, warp_removed_items = LoadWarpData(LocationList, flags)
 		for warp in warpData:
 			warp.applyModifiers(modifierDict, flags)
+			warp.applyWarpLogic(flags)
 			LocationList.append(warp)
 
 	trashList = []

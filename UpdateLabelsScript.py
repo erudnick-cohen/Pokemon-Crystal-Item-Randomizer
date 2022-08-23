@@ -12,6 +12,7 @@ from Tests.TestLabelItemLocations import *
 GenerateWarpData.GenerateWarpLabels()
 GenerateMapLabels.GenerateWarpMapDataLabels()
 GenerateMapLabels.LabelAllBlocks()
+GenerateMapLabels.GenerateNPCLabels()
 
 os.chdir('RandomizerRom')
 try:
@@ -33,6 +34,7 @@ except OSError:
     pass
 shutil.move(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd())
 GenerateMapLabels.CreateMapPatches()
+GenerateMapLabels.GenerateNPCSwitchPatch()
 GeneratePatches.makePatches()
 
 #DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!

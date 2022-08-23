@@ -2,22 +2,22 @@ Name: Not Early Moon Rival
 Description: Preventing requiring to take the warp transitions through Mt Moon until you have 7 Badges. However, rival fight will still happen, so save frequently.
 Changes:
     -
-        Location: Mount Moon Main Warpie
+        Location: Mount Moon Main
         AddFlagReqs:
             - Rocket Invasion
 
     -
-        Location: Mount Moon Shop Passage In Warpie
+        Location: Mount Moon Shop Passage In
         AddFlagReqs:
             - Rocket Invasion
 
     -
-        Location: Mount Moon Main Ledge Warpie
+        Location: Mount Moon Main Ledge
         AddFlagReqs:
             - Rocket Invasion
 
     -
-        Location: Mount Moon Shop Passage Out Warpie
+        Location: Mount Moon Shop Passage Out
         AddFlagReqs:
             - Rocket Invasion
 

@@ -159,6 +159,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				MAX_HINTS = 0
 			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
 
+			settings_md5 = self.GetSettingsMD5()
+			print(settings_md5)
+
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','w') as f:
 				f.write(rngSeed)
