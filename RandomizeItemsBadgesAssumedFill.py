@@ -505,6 +505,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					newDeps = allDepsList
 					addedList = [locList[iter].Name]
 					revReqDict = defaultdict(lambda: [])
+					lastWarpStep = None
 					while oldDepsList != allDepsList and legal:
 						oldDepsList = allDepsList
 						for j in newDeps:
@@ -529,8 +530,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								# Similarly, if a path only contains 'Warps'
 								# Otherwise X% chance of failure on each run through
 
-
-
 								paths = copy.copy(requirementsDict[j])
 								random.shuffle(paths)
 
@@ -547,8 +546,26 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 										if check in jBanned:
 											removedPaths.append(check)
 
+
+									if lastWarpStep is not None:
+										warpCheck = True
+										for c in check:
+											if c == lastWarpStep:
+												warpCheck = False
+
+										if not warpCheck:
+											removedPaths.append(check)
+											#print("Prevent path back:", j, check)
+
+
 								for path in removedPaths:
 									paths.remove(path)
+
+
+								if len(paths) == 0:
+									#print("Banned paths only, cannot take a route")
+									legal = False
+									break
 
 
 								#pick an option from paths which isn't a tautology!
@@ -769,7 +786,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 										addedList.append(j)
 							for k in jReqs:
 								if k not in allDepsList:
+
+									if LoadLocationData.WARP_OPTION in k:
+										lastWarpStep = k
+									else:
+										lastWarpStep = None
+
+
 									newDeps.append(k)
+
+
 
 							#print(newDeps)
 
@@ -908,10 +934,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		for i in activeLoc:
 			#can we get to this location?
 			if(i.isReachable(state) and i.Name not in reachable):
-
 				#print("reachable:",i.Name, "@", stage)
 				#if we can get somewhere, we aren't stuck
 				stuck = False
+				stuckCount = 0
 				#we can get somehwhere, so set this location in the state as true
 				state[i.Name] = True
 				#Add sublocations to the set of active locations
@@ -1004,6 +1030,22 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						and "Impossible" not in i.FlagReqs:
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 					addAfter.append(i)
+			elif i.Name in reachable:
+				# If another location has the same name and other requirements, you already can access
+				# Now you need to add any flags this has!
+				newState = False
+				for j in i.getFlagList():
+					if j not in state or not state[j]:
+						state[j] = True
+						maxdist = max([stateDist[flag] for flag in i.requirementsNeeded(defaultdict(lambda: False))],
+								  default=0)
+						stateDist[j] = maxdist
+						stuck = False
+						stuckCount = 0
+
+				activeLoc.remove(i)
+
+
 
 			elif "Warps" in inputFlags and "Unreachable" in i.FlagReqs and i.Name not in reachable and i not in addAfter:
 				if i.isItem() or i.isGym() or i.wasItem():

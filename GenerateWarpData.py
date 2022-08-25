@@ -230,19 +230,25 @@ def LoadSpecialCaseWarps():
 
 def handleSpecialCases(warpData, warpLocation, special_cases):
 
+    addedLocations = []
+
     for case in special_cases:
         if "From" in case:
             pass
 
         if "To" in case:
             toCase = case["To"]
-            if warpData["Start Warp Name"] == toCase["WarpName"]:
+            if warpData["End Warp Name"] == toCase["WarpName"]:
                 for change in toCase["Changes"].items():
                     if change[0] == "FlagsSet":
+
+                        # Add a new location which depends on the Start Location to set the flag
+
                         for setFlag in change[1]:
                             warpLocation["FlagsSet"].append(setFlag)
 
-    return
+
+    return addedLocations
 
 
 def GenerateWarpLabels():

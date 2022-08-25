@@ -6,5 +6,10 @@ Changes:
         RemoveFlagReqs:
             - Received Togepi Egg
 
+    -
+        Location: Route 32 Entrance
+        RemoveFlagReqs:
+            - Received Togepi Egg
+
 IncompatibleWithout:
     - 'Warps'

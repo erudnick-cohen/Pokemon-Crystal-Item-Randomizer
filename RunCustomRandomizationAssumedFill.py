@@ -117,10 +117,6 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	#print('required items are')
 	#print(requiredItems)
 
-	# This may need to be moved earlier!+
-
-
-
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
 	extraTrash = []
@@ -230,7 +226,18 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	seedIncrements = 0
 	completeResult = False
 
-	while goal not in result[0] or not completeResult:
+	spoilerLoop = False
+	spoilerDetails = {}
+	spoilerTotal = 209
+	spoilerCount = 0
+
+	if spoilerLoop:
+		flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
+		items = [ f.Name for f in flat if f.Type == "Item" or f.Type == "Gym" ]
+		for item in items:
+			spoilerDetails[item] = []
+
+	while goal not in result[0] or not completeResult or spoilerLoop:
 		try:
 			completeResult = True
 			res_items = fullLocationData[1].copy()
@@ -319,6 +326,22 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				if not foundAll:
 					print("Successful seed, but cannot reach all E4...")
 					completeResult = False
+
+
+				if completeResult and spoilerLoop:
+					for s in result[1].keys():
+						s_value = result[1][s]
+						spoilerDetails[s_value].append(s)
+
+					print("Spoiler loop::", spoilerCount, spoilerTotal)
+
+					spoilerCount += 1
+					if spoilerLoop and spoilerCount > spoilerTotal:
+						spoilerLoop = False
+						json_out = json.dumps(spoilerDetails, indent=2)
+						print(json_out)
+
+
 
 
 

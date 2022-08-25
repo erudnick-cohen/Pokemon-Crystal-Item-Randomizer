@@ -80,7 +80,7 @@ def LoadWarpData(locationList, flags):
 			"TrainerList": None
 		}
 
-		GenerateWarpData.handleSpecialCases(data, locationData, special_cases)
+		extra_locations = GenerateWarpData.handleSpecialCases(data, locationData, special_cases)
 
 
 		darkWarpGroups = {"Silver Cave Room 1", "Whirl Island", "Rock Tunnel", "Dark Cave"}
@@ -108,6 +108,8 @@ def LoadWarpData(locationList, flags):
 		l = Location.Location(locationData)
 
 		warpLocations.append(l)
+		for extra in extra_locations:
+			warpLocations.append(extra)
 
 	# TODO: Investigate methods to remove inaccessible warp locations
 	# Closed loops, etc, and mark as impossible
