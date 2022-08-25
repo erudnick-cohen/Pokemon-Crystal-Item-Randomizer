@@ -370,5 +370,5 @@ class Ui_MainWindow(object):
 " to unlock Mt. Silver?\n"
 "(Currently 16)"))
         self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
-        self.version.setText(_translate("MainWindow", "Version 7.0.10"))
+        self.version.setText(_translate("MainWindow", "Version 7.0.8"))
         self.LoadPack.setText(_translate("MainWindow", "Load New Pack"))
