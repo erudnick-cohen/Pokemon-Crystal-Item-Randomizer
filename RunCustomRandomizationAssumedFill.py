@@ -226,6 +226,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	seedIncrements = 0
 	completeResult = False
 
+	# Debug code for finding odd behaviour
+	#seed += 160
+
 	spoilerLoop = False
 	spoilerDetails = {}
 	spoilerTotal = 209

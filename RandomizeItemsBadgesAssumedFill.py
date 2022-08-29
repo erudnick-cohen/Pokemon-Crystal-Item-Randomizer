@@ -924,6 +924,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	randomizedExtra = {}
 
 	allocatedCount = 0
+	failed = False
 
 	while not goalReached and not randomizerFailed:
 		stage += 1
@@ -978,10 +979,23 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								print("exception",e)
 								i.item = "GOLD_LEAF"
 								addAfter.append(i)
+							re_add_after= []
+							unable_to_assign = False
 							while placeItem in monReqItems and 'Mon Locked Checks' in i.requirementsNeeded(defaultdict(lambda: False)):
+								if len(trashItems) == 0:
+									unable_to_assign = True
+									break
 								oldItem = placeItem
 								placeItem = trashItems.pop()
-								trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+								re_add_after.append(oldItem)
+
+							if unable_to_assign:
+								failed = True
+								break
+
+							for item in re_add_after:
+								trashItems.insert(random.randint(0, len(trashItems)), item)
+
 							i.item = placeItem
 						#print("Trash", i.Name, i.item)
 						if i.item != "GOLD_LEAF":
@@ -1075,6 +1089,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			stuckCount = stuckCount+1
 		else:
 			stuckCount = 0
+
+	if failed:
+		raise Exception('Failed mapping due to item requirement seed!')
 
 	#verify that plando is matched if in use
 	for i in plandoPlacements:
