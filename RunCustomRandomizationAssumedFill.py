@@ -78,29 +78,15 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 
 	return trashItems
 
-def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
-				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
-				 wildLVBoost = 0,
-				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
-				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
-				 otherSettings = {}, bonusTrash = [],hintConfig=None):
-	#print('required items are')
-	#print(requiredItems)
-
-	requiredItemsCopy = copy.copy(requiredItems)
-	changeListDict = defaultdict(lambda: [])
-	extraTrash = []
-	newItems = []
-	maybeNewItems = []
-	dontReplace = []
-	addedProgressList = []
+def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+					 newItems, maybeNewItems, dontReplace):
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
 			flags.extend(i['FlagsSet'])
 		if 'Changes' in i:
 			for j in i['Changes']:
-				changeListDict[j['Location']].append(j) 
+				changeListDict[j['Location']].append(j)
 		if 'AddedItems' in i:
 			for j in i['AddedItems']:
 				if j not in requiredItemsCopy:
@@ -120,11 +106,45 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			maybeNewItems.extend(i['MaybeNewItems'])
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
+
+
+def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
+				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
+				 wildLVBoost = 0,
+				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
+				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
+				 otherSettings = {}, bonusTrash = [],hintConfig=None):
+	#print('required items are')
+	#print(requiredItems)
+
+	requiredItemsCopy = copy.copy(requiredItems)
+	changeListDict = defaultdict(lambda: [])
+	extraTrash = []
+	newItems = []
+	maybeNewItems = []
+	dontReplace = []
+	addedProgressList = []
+
+	ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, dontReplace)
+
+	if "Warps" in flags:
+		mod_changes = GenerateWarpData.InterpretWarpChanges(romPath)
+
+		ProcessModifiers(mod_changes, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, dontReplace)
+
 	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
 
 	if "Warps" in flags:
 		GenerateWarpData.interpretDataForRandomisedRom(romPath)
+
+		warpOutput = "Warp Data/warp-output.tsv"
+		warpTSVData = LoadLocationData.readTSVFile(warpOutput)
+
+
+
 
 	if "Start With Bike" in flags:
 		requiredItemsCopy.remove("Bicycle")
@@ -206,9 +226,21 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	seedIncrements = 0
 	completeResult = False
 
-	KEEP_GOING = False
+	# Debug code for finding odd behaviour
+	#seed += 160
 
-	while goal not in result[0] or not completeResult:
+	spoilerLoop = False
+	spoilerDetails = {}
+	spoilerTotal = 209
+	spoilerCount = 0
+
+	if spoilerLoop:
+		flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
+		items = [ f.Name for f in flat if f.Type == "Item" or f.Type == "Gym" or f.Type == "Shop" or f.Type == "BargainShop" ]
+		for item in items:
+			spoilerDetails[item] = []
+
+	while goal not in result[0] or not completeResult or spoilerLoop:
 		try:
 			completeResult = True
 			res_items = fullLocationData[1].copy()
@@ -286,9 +318,36 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					handleBadSpoiler(result, flags)
 					print("bad run, retrying")
 					completeResult = False
-			if KEEP_GOING and goal in result[0]:
-				print("Keep going...")
-				completeResult = False
+				# Check for other requirements for FULL completion
+				# This DOESN'T check possibility before Red however
+				E4Found = ["Will", "Koga", "Bruno", "Karen", "Lance"]
+				foundAll = True
+				for mapReach in E4Found:
+					if mapReach not in result[0]:
+						foundAll = False
+						break
+				if not foundAll:
+					print("Successful seed, but cannot reach all E4...")
+					completeResult = False
+
+
+				if completeResult and spoilerLoop:
+					for s in result[1].keys():
+						s_value = result[1][s]
+						spoilerDetails[s_value].append(s)
+
+					print("Spoiler loop::", spoilerCount, spoilerTotal)
+
+					spoilerCount += 1
+					if spoilerLoop and spoilerCount > spoilerTotal:
+						spoilerLoop = False
+						json_out = json.dumps(spoilerDetails, indent=2)
+						print(json_out)
+
+
+
+
+
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			completeResult = False

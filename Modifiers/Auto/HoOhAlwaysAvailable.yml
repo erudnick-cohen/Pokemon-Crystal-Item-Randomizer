@@ -1,0 +1,15 @@
+Name: Ho Oh Always Available
+Description: Assumes Ho-Oh always being available atop Tin Tower.
+Changes:
+    -
+        Location: VS Ho-Oh
+        RemoveFlagReqs:
+            - Became Champion
+        RemoveItemReqs:
+            - Rainbow Wing
+
+IncompatibleWithout:
+    - 'Warps'
+
+IncompatibleWith:
+    - 'Nerf Ho-Oh Chamber'

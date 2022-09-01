@@ -257,14 +257,16 @@ Location:
                     - Director Saved
                 ReachableReqs:
                 HintName: Goldenrod
-                Code: |
+                Code: |                    
                     GoldenrodUndergroundWarehouseDirectorScript:
                         faceplayer
                         opentext
                         checkevent EVENT_RECEIVED_CARD_KEY
                         iftrue .GotCardKey
                         checkcode VAR_BADGES
+                    .ckir_BEFORE_DirectorBadges::
                         ifless 7, .GotCardKey
+                    .ckir_AFTER_DirectorBadges::
                         writetext DirectorIntroText
                         promptbutton
                         ITEMLINE

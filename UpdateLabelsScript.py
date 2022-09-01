@@ -2,7 +2,6 @@ import os
 import shutil
 
 def UpdateLabels(wsl=False, delete_file=False):
-
     os.chdir('RandomizerRom')
     try:
         os.remove('pokecrystal-speedchoice.gbc')

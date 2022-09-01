@@ -28,12 +28,12 @@ def CountFilesInDirectory(dir):
 	return count
 
 
-def ResetRomForLabelling():
+def ResetRomForLabelling(romDir="7.4"):
 	try:
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
+	shutil.copytree("Game Files/"+romDir,"RandomizerRom")
 	#next overwrite the files which need custom labels
 
 	manual_dir = "Files with manual labels"
@@ -57,6 +57,7 @@ def ResetRomForLabelling():
 	manual_copy_files.append((manual_dir+"/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm"))
 	manual_copy_files.append((manual_dir+"/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm"))
 	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
+	manual_copy_files.append((manual_dir + "/events/std_scripts.asm", "RandomizerRom/engine/events/std_scripts.asm"))
 	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
 
 	if len(manual_copy_files) != counted:

@@ -1,4 +1,7 @@
+import json
 import os
+
+import GenerateWarpData
 import Location
 import Gym
 import yaml
@@ -50,6 +53,8 @@ def LoadWarpData(locationList, flags):
 	# Then pruning is done before the object creation below
 	accepted_warps, removed_items = CheckLocationData(warpTSV, locationList)
 
+	special_cases = GenerateWarpData.LoadSpecialCaseWarps()
+
 	for data in accepted_warps:
 		fromGroupName = data["Start Warp Group"][1:-1]
 		toGroupName = data["End Warp Group"][1:-1]
@@ -65,7 +70,7 @@ def LoadWarpData(locationList, flags):
 			"WildTableList": None,
 			"LocationReqs": [fromGroupName+WARP_OPTION],
 			"FlagReqs": [],
-			"FlagsSet": None,
+			"FlagsSet": [],
 			"ItemReqs": [],
 			"Code": "",
 			"Text": "",
@@ -74,6 +79,8 @@ def LoadWarpData(locationList, flags):
 			"ReachableReqs": None,
 			"TrainerList": None
 		}
+
+		extra_locations = GenerateWarpData.handleSpecialCases(data, locationData, special_cases)
 
 
 		darkWarpGroups = {"Silver Cave Room 1", "Whirl Island", "Rock Tunnel", "Dark Cave"}
@@ -101,6 +108,8 @@ def LoadWarpData(locationList, flags):
 		l = Location.Location(locationData)
 
 		warpLocations.append(l)
+		for extra in extra_locations:
+			warpLocations.append(extra)
 
 	# TODO: Investigate methods to remove inaccessible warp locations
 	# Closed loops, etc, and mark as impossible
@@ -456,7 +465,8 @@ def CheckLocationData(warpLocations, locationList):
 
 
 	if impossible_flags:
-		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened, forbiddenFlags=actually_impossible_flags)
+		accessible_groups, accessible_warp_data = CycleWarps(warpLocations, flattened,
+															 forbiddenFlags=actually_impossible_flags)
 	# if flags impossible, repeat
 		for l in locationList:
 			ignore, r_warps = ImpossibleWarpRecursion(accessible_groups, locationList,  l)
@@ -472,12 +482,24 @@ def CheckLocationData(warpLocations, locationList):
 
 	usePurge = True
 
+
+	# For warp grouping purposes, have an additional check not to purge if the ONLY group that leads to that location
+	# Should ALL be transitional options anyway
+
 	if usePurge:
 		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
 		print("Purge count==",len(toPurge))
+		skip_purge = []
 		for purge in toPurge:
-			#print("Purge:", purge)
-			accessible_warp_data.remove(purge)
+			end_group = purge["End Warp Group"]
+			other_end_group = len([ a for a in accessible_warp_data if a["End Warp Group"] == end_group])
+			# Because the warps focus on START locations, double check the end groups here and ensure
+			# Not to remove the last option from the list
+			# For warp group processing, etc.
+			if other_end_group <= 1:
+				skip_purge.append(purge)
+			else:
+				accessible_warp_data.remove(purge)
 
 	return accessible_warp_data,removed_warps
 
@@ -511,6 +533,8 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					nLoc.YmlFile = file
 					nLoc.applyBanList(banList,allowList, flags)
 					nLoc.applyModifiers(modifierDict, flags)
+					nLoc.applyBanList(banList,allowList)
+
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)
 						#warpModifications = list(filter(lambda x: "Warpie" in x.Name, modifierDict))
@@ -550,6 +574,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 		warpData, warp_removed_items = LoadWarpData(LocationList, flags)
 		for warp in warpData:
 			warp.applyModifiers(modifierDict, flags)
+			warp.applyWarpLogic(flags)
 			LocationList.append(warp)
 
 	trashList = []

@@ -1,0 +1,10 @@
+Name: Director In Tunnel
+Description: Remove badge restrictions for Director in Tunnel.
+Changes:
+    -
+        Location: Goldenrod Tunnel Rocket Attack
+        RemoveFlagReqs:
+            - Rocket Invasion
+
+IncompatibleWithout:
+    - 'Warps'

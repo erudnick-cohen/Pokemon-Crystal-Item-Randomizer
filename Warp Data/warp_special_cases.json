@@ -1,0 +1,22 @@
+[
+    {
+        "To": {
+            "WarpName": "Lighthouse 4F North Drop",
+            "Changes": {
+                "FlagsSet": [
+                    "Lighthouse4FHoles"
+                ]
+            }
+        }
+    },
+    {
+        "To": {
+            "WarpName": "Lighthouse 4F North Drop 2",
+            "Changes": {
+                "FlagsSet": [
+                    "Lighthouse4FHoles"
+                ]
+            }
+        }
+    }
+]

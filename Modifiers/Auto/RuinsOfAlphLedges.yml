@@ -1,0 +1,16 @@
+Name: Ruins Of Alph Ledges
+Description: Remove restrictions associated with the Ruins of Alph ledges, if removed.
+Changes:
+    -
+        Location: Ruins of Alph Top Ledge
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Ruins Ledge Middle
+        RemoveFlagReqs:
+            - Impossible
+
+
+IncompatibleWithout:
+    - 'Warps'

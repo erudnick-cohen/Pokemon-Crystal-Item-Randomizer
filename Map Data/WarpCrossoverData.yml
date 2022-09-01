@@ -3118,7 +3118,7 @@ Location:
         LocationReqs: Lighthouse 4F Middle
         ItemReqs:
         FlagReqs:
-            - Impossible
+            - Lighthouse4FHoles
         FlagsSet:
         ReachableReqs:
         WildTableList:
@@ -3133,7 +3133,7 @@ Location:
         LocationReqs: Lighthouse 4F
         ItemReqs:
         FlagReqs:
-            - Impossible
+            - Lighthouse4FHoles
         FlagsSet:
         ReachableReqs:
         WildTableList:

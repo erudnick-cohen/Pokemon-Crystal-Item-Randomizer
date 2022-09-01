@@ -2159,6 +2159,21 @@ def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocati
     return True
 
 
+def PreventItemAssignment(placeItem, items, trash):
+    success = True
+    re_add = []
+
+    while placeItem in items:
+        if len(trash) == 0:
+            success = False
+            break
+        oldItem = placeItem
+        placeItem = trash.pop()
+        re_add.append(oldItem)
+
+    return re_add, placeItem, success
+
+
 def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, addAfter=None, force=False):
     if addAfter is None:
         addAfter = []
@@ -2213,12 +2228,18 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
 
     # Maintain list of flags and such here
 
-    while baseItem in ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
-                        "SUPER_ROD"] and itemLocation.isShop():
-        oldItem = baseItem
-        baseItem = trashItems.pop()
-        replacedItem = baseItem
-        trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+    ShopFlagItems = ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
+                        "SUPER_ROD", "ENGINE_MAP_CARD", "ENGINE_UNOWN_DEX"]
+
+    if itemLocation.isShop():
+        item_to_replace = baseItem if replacedItem is None else replacedItem
+        re_add, chosen, success = PreventItemAssignment(item_to_replace, ShopFlagItems, trashItems)
+        if not success:
+            raise Exception('Failed mapping due to item requirement seed (shop)!')
+        for item in re_add:
+            trashItems.insert(random.randint(0, len(trashItems)), item)
+        if item_to_replace != chosen:
+            replacedItem = chosen
 
     return replacedItem
 

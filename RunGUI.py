@@ -160,6 +160,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				MAX_HINTS = 0
 			HintOptions = RandomizeFunctions.ConvertHintLevelToFlags(HINT_LEVEL, MaxHints=MAX_HINTS)
 
+			settings_md5 = self.GetSettingsMD5()
+			print(settings_md5)
+
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','a+') as f:
 				f.write(rngSeed+"\n")
@@ -306,12 +309,18 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 							modifiersToLoad.append(mod)
 
 			for mod in modifiersToLoad:
-				yamlfile = open(mod)
-				yamltext = yamlfile.read()
+				if os.path.isfile(mod):
+					yamlfile = open(mod)
+					yamltext = yamlfile.read()
+					loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+					self.modList.append(loadedYaml)
+					self.modList[-1]['fileName'] = self.makeFileNameSafe(mod)
+				else:
+					error_dialog = QtWidgets.QErrorMessage()
+					error_dialog.showMessage('Pack Modifier not found:' + "\n" + mod)
+					error_dialog.exec_()
 
-				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
-				self.modList.append(loadedYaml)
-				self.modList[-1]['fileName'] = self.makeFileNameSafe(mod)
+
 
 			self.updateModListView()
 
@@ -390,10 +399,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		modFileList = settings['DefaultModifiers']
 		self.modList = []
 		for i in modFileList:
-			yamlfile = open(i)
-			yamltext = yamlfile.read()
-			self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
-			self.modList[-1]['fileName'] = self.makeFileNameSafe(i)
+			if os.path.isfile(i):
+				yamlfile = open(i)
+				yamltext = yamlfile.read()
+				self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
+				self.modList[-1]['fileName'] = self.makeFileNameSafe(i)
+			else:
+				error_dialog = QtWidgets.QErrorMessage()
+				error_dialog.showMessage('Modifier not found:' + "\n" + i)
+				error_dialog.exec_()
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))
