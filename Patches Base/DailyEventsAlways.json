@@ -1,7 +1,7 @@
 [
   {"integer_values": { "old": [6,0,142,96], "new": [7,10,"ckir_BEFORE_timed_events_DEPTSTORE5F1_yes",null] },"address_range": { "begin": 352391, "end": 352393 },
 "label" : "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1", "description" : "Return lady always present"},
-{"integer_values": { "old": [7,0,218,96], "new": [6,10,"ckir_BEFORE_timed_events_DEPTSTORE5F2_EventIsOver218",null] },"address_range": { "begin": 352410, "end": 352412 },
+{"integer_values": { "old": [7,0,218,96], "new": [6,10,"ckir_BEFORE_timed_events_DEPTSTORE5F2_EventIsOver",null] },"address_range": { "begin": 352410, "end": 352412 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2", "description" : "Return lady always gives item"},
 {"integer_values": { "old": [10,149,182,96], "new": [10,0,"ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy",null] },"address_range": { "begin": 352428, "end": 352429 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3", "description" : "Happiness check removed for TMs"},
@@ -38,7 +38,7 @@
 "label" : "ArthurScript.ckir_BEFORE_timed_events_ARTHUR2", "description" : "Arthur always gives item"},
   {"integer_values": { "old": [6,2,97,79], "new": [6,10,"ckir_BEFORE_timed_events_TUSCANY_TuscanyDisappears", null] },"address_range": { "begin": 1707878, "end": 1707880 },
 "label" : "Route29_MapScripts.ckir_BEFORE_timed_events_TUSCANY", "description" : "Tuscany is always present"},
-  {"integer_values": { "old": [7,2,97,79], "new": [6,10,"ckir_AFTER_timed_events_TUSCANY_NotTuesday", null] },"address_range": { "begin": 1708115, "end": 1708117 },
+  {"integer_values": { "old": [7,2,97,79], "new": [6,10,"ckir_BEFORE_timed_events_TUSCANY_NotTuesday", null] },"address_range": { "begin": 1708115, "end": 1708117 },
 "label" : "TuscanyScript.ckir_BEFORE_timed_events_TUSCANY2", "description" : "Tuscany always gives item"},
   {"integer_values": { "old": [6,6,229,70], "new": [7,10,"ckir_BEFORE_timed_events_SANTOS_SantosAppears", null] },"address_range": { "begin": 1722078, "end": 1722080 },
 "label" : "BlackthornCity_MapScripts.ckir_BEFORE_timed_events_SANTOS", "description" : "Santos is always present"},

@@ -307,8 +307,8 @@ WesleyDoneScript:
 	closetext
 	end
 
-.ckir_BEFORE_timed_events_WESLEY2_NotWednesday
-.ckir_AFTER_timed_events_WESLEY2_NotWednesday
+.ckir_BEFORE_timed_events_WESLEY2_NotWednesday::
+.ckir_AFTER_timed_events_WESLEY2_NotWednesday::
 WesleyNotWednesdayScript:
 	writetext WesleyNotWednesdayText
 	waitbutton

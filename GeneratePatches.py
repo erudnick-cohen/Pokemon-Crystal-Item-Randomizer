@@ -118,7 +118,7 @@ def makePatches():
 							usedLabels = [ x for x in addrData if x["label"].endswith(value) ]
 
 							if len(usedLabels) == 0:
-								print("Unable to find label " + value + " in sym file. ")
+								raise Exception("Unable to find label " + value + " in sym file. ")
 								iterator += 2
 								continue
 
