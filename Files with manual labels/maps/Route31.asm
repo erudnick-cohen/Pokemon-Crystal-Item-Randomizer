@@ -118,14 +118,16 @@ TrainerBugCatcherWade1:
 .ckir_BEFORE_WADE::
 	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_PSNCUREBERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_BITTER_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_PRZCUREBERRY
 	iftrue .Berry
 .ckir_AFTER_WADE::
+.ckir_BEFORE_AFTER_WADE::
 .Berry:
+.ckir_AFTER_AFTER_WADE::
 	verbosegiveitem BERRY
 	iffalse .PackFull
 	sjump .Done

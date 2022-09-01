@@ -76,7 +76,9 @@ TrainerYoungsterJoey:
 	ifequal 1, .Fight4
 	ifequal 0, .Fight4
 .ckir_AFTER_Joey::
+.ckir_BEFORE_Joey_Fight4::
 .Fight4:
+.ckir_AFTER_Joey_Fight4::
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
 .Fight3:

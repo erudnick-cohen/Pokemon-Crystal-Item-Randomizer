@@ -1722,3 +1722,8 @@ class RandomItemProcessor:
             return normal_item
 
         return random.choice(self.itemsList).Name
+
+
+def AddressToIntValues(address):
+    bytes = address.to_bytes(3, byteorder='little')
+    return bytes[0:2]

@@ -23,13 +23,22 @@
         "label": "Route36OfficerScriptContest.ckir_BEFORE_RUN36_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"
     },
-    {"integer_values": { "old": [6,2,197,97], "new": [7,10,197,97] },"address_range": { "begin": 434604, "end": 434606 },
+    {"integer_values": { "old": [6,2,197,97], "new": [7,10,"ckir_BEFORE_timed_events_BGC35_SetOfficer",null] },"address_range": { "begin": 434604, "end": 434606 },
     "label" : "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35", "description" : "BGC is every day"},
-    {"integer_values": { "old": [6,0,194,98,6,0,194,98,6,0,194,98,6,0,194,98], "new": [6,10,194,98,6,10,194,98,6,10,194,98,6,10,194,98] },"address_range": { "begin": 434690, "end": 434691 },
+    {"integer_values": { "old": [6,0,194,98,6,0,194,98,6,0,194,98,6,0,194,98], "new": [
+        6,10,"ckir_BEFORE_timed_events_BGC352_NoContest",null,
+        6,10,"ckir_BEFORE_timed_events_BGC352_NoContest",null,
+        6,10,"ckir_BEFORE_timed_events_BGC352_NoContest",null,
+        6,10,"ckir_BEFORE_timed_events_BGC352_NoContest",null] },"address_range": { "begin": 434690, "end": 434691 },
     "label" : "Route35OfficerScriptContest.ckir_BEFORE_timed_events_BGC352", "description" : "BGC is every day"},
 
-    {"integer_values": { "old": [6,2,61,107], "new": [7,10,61,107] },"address_range": { "begin": 437030, "end": 437032 },
+    {"integer_values": { "old": [6,2,61,107], "new": [7,10,"ckir_BEFORE_timed_events_BGC36_SetOfficer",null] },"address_range": { "begin": 437030, "end": 437032 },
     "label" : "Route36NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC36", "description" : "BGC is every day"},
-    {"integer_values": { "old": [6,0,236,108,6,0,236,108,6,0,236,108,6,0,236,108], "new": [6,10,236,108,6,10,236,108,6,10,236,108,6,10,236,108] },"address_range": { "begin": 437214, "end": 437215 },
+    {"integer_values": { "old": [6,0,236,108,6,0,236,108,6,0,236,108,6,0,236,108], "new":
+    [6,10,"ckir_BEFORE_timed_events_BGC362_ContestNotOn",null,
+        6,10,"ckir_BEFORE_timed_events_BGC362_ContestNotOn",null,
+        6,10,"ckir_BEFORE_timed_events_BGC362_ContestNotOn",null,
+        6,10,"ckir_BEFORE_timed_events_BGC362_ContestNotOn",null
+    ] },"address_range": { "begin": 437214, "end": 437215 },
     "label" : "Route36OfficerScriptContest.ckir_BEFORE_timed_events_BGC362", "description" : "BGC is every day"}
 ]

@@ -55,7 +55,9 @@ TrainerSailorHuey:
 	ifequal 1, .Fight3
 	ifequal 0, .Fight3
 .ckir_AFTER_Huey::
+.ckir_BEFORE_Huey_Fight3::
 .Fight3:
+.ckir_AFTER_Huey_Fight3::
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
 .Fight2:

@@ -176,9 +176,9 @@ BargainMerchantScript:
 	checkflag ENGINE_GOLDENROD_UNDERGROUND_MERCHANT_CLOSED
 	iftrue GoldenrodUndergroundScript_ShopClosed
 	readvar VAR_WEEKDAY
-.ckir_BEFORE_timed_events_UNDERGROUND::
+.ckir_BEFORE_timed_events_UNDERGROUND4::
 	ifnotequal 10, .CheckMorn
-.ckir_AFTER_timed_events_UNDERGROUND::
+.ckir_AFTER_timed_events_UNDERGROUND4::
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .CheckMorn:

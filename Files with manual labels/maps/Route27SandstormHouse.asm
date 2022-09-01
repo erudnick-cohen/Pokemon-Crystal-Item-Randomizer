@@ -19,7 +19,9 @@ SandstormHouseWoman:
 .ckir_AFTER_timed_events_SANDSTORM::
 	sjump .Disloyal
 
+.ckir_BEFORE_timed_events_SANDSTORM_Loyal::
 .Loyal:
+.ckir_AFTER_timed_events_SANDSTORM_Loyal::
 	writetext SandstormHouseWomanLoyalText
 	promptbutton
 	verbosegiveitem TM_SANDSTORM

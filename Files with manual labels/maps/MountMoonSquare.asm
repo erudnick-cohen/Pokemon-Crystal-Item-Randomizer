@@ -71,7 +71,9 @@ ClefairyDance:
 	setflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
 	end
 
+.ckir_BEFORE_timed_events_MOUNTMOON_NoDancing::
 .NoDancing:
+.ckir_AFTER_timed_events_MOUNTMOON_NoDancing::
 	end
 
 MountMoonSquareHiddenMoonStone:

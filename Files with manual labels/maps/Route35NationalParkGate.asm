@@ -47,7 +47,9 @@ Route35NationalParkGate_MapScripts:
 	appear ROUTE35NATIONALPARKGATE_OFFICER2
 	return
 
+.ckir_BEFORE_timed_events_BGC35_SetOfficer::
 .SetContestOfficer:
+.ckir_AFTER_timed_events_BGC35_SetOfficer::
 	appear ROUTE35NATIONALPARKGATE_OFFICER1
 	disappear ROUTE35NATIONALPARKGATE_YOUNGSTER
 	disappear ROUTE35NATIONALPARKGATE_OFFICER2
@@ -190,8 +192,11 @@ Route35NationalParkGate_ContestIsOver:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_BGC352_NoContest::
+.ckir_AFTER_timed_events_BGC352_NoContest::
 Route35NationalParkGate_NoContestToday:
 	jumptextfaceplayer Route35NationalParkGateOfficer1WeHoldContestsText
+
 
 Route35NationalParkGateOfficerScript:
 	faceplayer
