@@ -97,7 +97,7 @@ def makePatches():
 						# JR are less problematic and not detected in quite the same way
 						# But if there is ever an issue with one of these in a new version
 						# Consider changing this behaviour
-						if (" ." in l or "ifequal" in l or "ifnotequal" in l) and "jr" not in l:
+						if (" ." in l or "ifequal" in l or "ifnotequal" in l or "iffalse" in l or "iftrue" in l ) and "jr" not in l:
 							print("checking label", j["label"],l)
 							jumps += 1
 

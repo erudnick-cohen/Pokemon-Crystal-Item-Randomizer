@@ -159,6 +159,7 @@ Location:
                 IsBall: No
                 Code: |
                     .Berry:
+                    .ckir_AFTER_AFTER_WADE::
                         ITEMLINE
                         iffalse .PackFull
                         sjump .Done

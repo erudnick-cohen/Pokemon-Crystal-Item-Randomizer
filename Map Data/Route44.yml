@@ -225,7 +225,9 @@ Location:
                 IsBall: No
                 NormalItem: ULTRA_BALL
                 Code: |
+                    .ckir_BEFORE_AFTER_WILTON_A::
                     .UltraBall:
+                    .ckir_AFTER_AFTER_WILTON_A::
                         ITEMLINE
                         iffalse .Route44PackFullM
                         sjump .ItemReceived

@@ -195,7 +195,9 @@ Location:
         NormalItem: TM_SANDSTORM
         WarpReqs: Route 27 Sandstorm House
         Code: |
+            .ckir_BEFORE_timed_events_SANDSTORM_Loyal::
             .Loyal:
+            .ckir_AFTER_timed_events_SANDSTORM_Loyal::
                 writetext SandstormHouseWomanLoyalText
                 promptbutton
                 ITEMLINE

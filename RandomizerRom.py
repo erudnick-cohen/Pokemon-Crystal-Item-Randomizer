@@ -33,7 +33,7 @@ def ResetRomForLabelling():
 		shutil.rmtree("RandomizerRom")
 	except:
 		print("No existing folder created, nothing to remove")
-	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
+	shutil.copytree("Game Files/7.31","RandomizerRom")
 	#next overwrite the files which need custom labels
 
 	manual_dir = "Files with manual labels"
@@ -705,7 +705,7 @@ def LabelItemLocation(location):
 		try:
 			codeSearch = re.findall(coderegexstr,filecode)[0]
 		except:
-			print("fail")
+			print("fail on", location.Name)
 			return
 
 		oldcode = codeSearch[0]
