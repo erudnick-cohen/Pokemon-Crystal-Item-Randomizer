@@ -1725,5 +1725,7 @@ class RandomItemProcessor:
 
 
 def AddressToIntValues(address):
-    bytes = address.to_bytes(3, byteorder='little')
-    return bytes[0:2]
+    bank_size = 0x4000
+    value = (address % bank_size) + bank_size
+    bytes = value.to_bytes(2, byteorder='little')
+    return bytes
