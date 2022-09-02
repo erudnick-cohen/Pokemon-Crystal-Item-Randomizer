@@ -139,6 +139,11 @@ def makePatches():
 
 						iterator += 1
 
+					intCount = [ x for x in new_values if type(x) == int ]
+					if len(intCount) != len(new_values):
+						print("Invalid values for", j)
+						raise Exception()
+
 				comp_data = []
 				for k in addrData:
 					if 'label' in j:

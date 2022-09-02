@@ -5,7 +5,7 @@
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2", "description" : "Return lady always gives item"},
 {"integer_values": { "old": [10,149,182,96], "new": [10,0,"ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy",null] },"address_range": { "begin": 352428, "end": 352429 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3", "description" : "Happiness check removed for TMs"},
-{"integer_values": { "old": [9,"203",96,8,203,96], "new": [9,"ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",null,
+{"integer_values": { "old": [9,203,96,8,203,96], "new": [9,"ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",null,
   8,"ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",null] },"address_range": { "begin": 352445, "end": 352447 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4", "description" : "Gives both TMs"},
 {"integer_values": { "old": [6,2,197,97], "new": [7,10,"ckir_BEFORE_timed_events_BGC35_SetOfficer",null] },"address_range": { "begin": 434604, "end": 434606 },

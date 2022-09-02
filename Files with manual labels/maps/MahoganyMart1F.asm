@@ -46,9 +46,9 @@ MahoganyMart1FPharmacistScript:
 	closetext
 	end
 
-.ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered
+.ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered::
 .LanceEntered:
-.ckir_AFTER_shop_events_ROCKETSHOP_LanceEntered
+.ckir_AFTER_shop_events_ROCKETSHOP_LanceEntered::
 	writetext MahoganyMart1FPharmacistText_LanceEntered
 	waitbutton
 	closetext

@@ -4554,6 +4554,15 @@
     "hex_values": "$3 $78 $43 $9 $7e $43"
   },
   {
+    "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered",
+    "address_range": {
+      "begin": 443262,
+      "end": 443262
+    },
+    "integer_values": "",
+    "hex_values": ""
+  },
+  {
     "label": "MahoganyMart1F_MapEvents.ckir_BEFORE_shop_events_ROCKETSHOP",
     "address_range": {
       "begin": 443935,
