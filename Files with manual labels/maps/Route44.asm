@@ -54,7 +54,9 @@ TrainerBirdKeeperVance1:
 	ifequal 1, .Fight2
 	ifequal 0, .Fight2
 .ckir_AFTER_Vance::
+.ckir_BEFORE_Vance_Fight2::
 .Fight2:
+.ckir_AFTER_Vance_Fight2::
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
 .Fight1:
@@ -232,12 +234,14 @@ TrainerFisherWilton1:
 .ckir_BEFORE_WILTON::
 	checkevent EVENT_WILTON_HAS_ULTRA_BALL
 	iftrue .UltraBall
-	checkevent EVENT_WILTON_HAS_ULTRA_BALL
+	checkevent EVENT_WILTON_HAS_GREAT_BALL
 	iftrue .UltraBall
-	checkevent EVENT_WILTON_HAS_ULTRA_BALL
+	checkevent EVENT_WILTON_HAS_POKE_BALL
 	iftrue .UltraBall
 .ckir_AFTER_WILTON::
+.ckir_BEFORE_AFTER_WILTON_A::
 .UltraBall:
+.ckir_AFTER_AFTER_WILTON_A::
 	verbosegiveitem ULTRA_BALL
 	iffalse .Route44PackFullM
 	sjump .ItemReceived

@@ -60,7 +60,9 @@ TrainerPicnickerErin1:
 	ifequal 1, .Fight2
 	ifequal 0, .Fight2
 .ckir_AFTER_Erin::
+.ckir_BEFORE_Erin_Fight2::
 .Fight2:
+.ckir_AFTER_Erin_Fight2::
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
 .Fight1:

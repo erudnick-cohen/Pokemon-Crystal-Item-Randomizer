@@ -40,7 +40,9 @@ Route32_MapScripts:
 	disappear ROUTE32_FRIEDA
 	return
 
+.ckir_BEFORE_timed_events_FRIEDA_FriedaAppears::
 .FriedaAppears:
+.ckir_AFTER_timed_events_FRIEDA_FriedaAppears::
 	appear ROUTE32_FRIEDA
 	return
 
@@ -483,7 +485,9 @@ FriedaScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_FRIEDA2_NotFriday::
 .NotFriday:
+.ckir_AFTER_timed_events_FRIEDA2_NotFriday::
 	writetext FriedaNotFridayText
 	waitbutton
 	closetext

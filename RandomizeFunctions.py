@@ -2244,3 +2244,6 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
     return replacedItem
 
 
+def AddressToIntValues(address):
+    bytes = address.to_bytes(3, byteorder='little')
+    return bytes[0:2]

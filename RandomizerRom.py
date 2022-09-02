@@ -52,7 +52,7 @@ def ResetRomForLabelling(romDir="7.4"):
 			manual_copy_files.append(engine_file)
 
 
-	manual_copy_files.append((manual_dir+"/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm"))
+	#manual_copy_files.append((manual_dir+"/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm"))
 	manual_copy_files.append((manual_dir+"/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm"))
 	manual_copy_files.append((manual_dir+"/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm"))
 	manual_copy_files.append((manual_dir+"/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm"))
@@ -799,7 +799,7 @@ def LabelItemLocation(location):
 		try:
 			codeSearch = re.findall(coderegexstr,filecode)[0]
 		except:
-			print("fail")
+			print("fail on", location.Name)
 			return
 
 		oldcode = codeSearch[0]

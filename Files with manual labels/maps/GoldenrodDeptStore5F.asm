@@ -20,7 +20,9 @@ GoldenrodDeptStore5F_MapScripts:
 	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
 	return
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F1_yes::
 .yes
+.ckir_AFTER_timed_events_DEPTSTORE5F1_yes::
 	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
 	return
 
@@ -49,7 +51,9 @@ GoldenrodDeptStore5FReceptionistScript:
 	ifgreater 50 - 1, .SomewhatHappy
 	sjump .NotVeryHappy
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy::
 .VeryHappy:
+.ckir_AFTER_timed_events_DEPTSTORE5F3_VeryHappy::
 	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
 	promptbutton
 	verbosegiveitem TM_RETURN
@@ -66,7 +70,9 @@ GoldenrodDeptStore5FReceptionistScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy::
 .NotVeryHappy:
+.ckir_AFTER_timed_events_DEPTSTORE5F4_NotVeryHappy::
 	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
 	promptbutton
 	verbosegiveitem TM_FRUSTRATION
@@ -75,7 +81,9 @@ GoldenrodDeptStore5FReceptionistScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F2_EventIsOver::
 .EventIsOver:
+.ckir_AFTER_timed_events_DEPTSTORE5F2_EventIsOver::
 	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
 	waitbutton
 .Done:

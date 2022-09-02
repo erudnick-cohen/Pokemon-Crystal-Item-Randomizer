@@ -39,12 +39,16 @@ MahoganyMart1FPharmacistScript:
     sjump .ckir_AFTER_shop_events_ROCKETSHOPOPEN
 	;;checkevent EVENT_DECIDED_TO_HELP_LANCE
 	iftrue .LanceEntered
+.ckir_BEFORE_AFTER_shop_events_ROCKETSHOPOPEN::
 .ckir_AFTER_shop_events_ROCKETSHOPOPEN::
+.ckir_AFTER_AFTER_shop_events_ROCKETSHOPOPEN::
 	pokemart MARTTYPE_STANDARD, MART_MAHOGANY_1
 	closetext
 	end
 
+.ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered
 .LanceEntered:
+.ckir_AFTER_shop_events_ROCKETSHOP_LanceEntered
 	writetext MahoganyMart1FPharmacistText_LanceEntered
 	waitbutton
 	closetext

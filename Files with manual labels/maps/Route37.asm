@@ -21,7 +21,9 @@ Route37_MapScripts:
 	disappear ROUTE37_SUNNY
 	return
 
+.ckir_BEFORE_timed_events_SUNNY_SunnyAppears::
 .SunnyAppears:
+.ckir_AFTER_timed_events_SUNNY_SunnyAppears::
 	appear ROUTE37_SUNNY
 	return
 
@@ -90,6 +92,7 @@ SunnyScript:
 	closetext
 	end
 
+
 SunnySundayScript:
 	writetext SunnySundayText
 	waitbutton
@@ -97,6 +100,8 @@ SunnyDoneScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_SUNNY_NotSunday::
+.ckir_AFTER_timed_events_SUNNY_NotSunday::
 SunnyNotSundayScript:
 	writetext SunnyNotSundayText
 	waitbutton

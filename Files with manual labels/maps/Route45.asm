@@ -57,7 +57,9 @@ TrainerBlackbeltKenji:
 	checkevent EVENT_KENJI_ON_BREAK
 	iffalse .ckir_AFTER_Kenji
 	scall Route45GiftM
+.ckir_BEFORE_AFTER_Kenji::
 .ckir_AFTER_Kenji::
+.ckir_AFTER_AFTER_Kenji::
 	verbosegiveitem PP_UP
 	iffalse .NoRoom
 	clearevent EVENT_KENJI_ON_BREAK

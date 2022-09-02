@@ -27,7 +27,9 @@ Route40_MapScripts:
 	disappear ROUTE40_MONICA
 	return
 
+.ckir_BEFORE_timed_events_MONICA_MonicaAppears::
 .MonicaAppears:
+.ckir_AFTER_timed_events_MONICA_MonicaAppears::
 	appear ROUTE40_MONICA
 	return
 
@@ -124,7 +126,9 @@ MonicaScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_MONICA_NotMonday::
 .NotMonday:
+.ckir_AFTER_timed_events_MONICA_NotMonday::
 	writetext MonicaNotMondayText
 	waitbutton
 	closetext

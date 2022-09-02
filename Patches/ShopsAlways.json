@@ -50,12 +50,12 @@
                 0
             ],
             "new": [
-                3,
+                0,
                 120,
-                67,
-                9,
-                126,
-                67
+                195,
+                0,
+                ".ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered",
+                null
             ]
         },
         "address_range": {

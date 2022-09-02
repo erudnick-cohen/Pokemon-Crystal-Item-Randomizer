@@ -39,7 +39,9 @@ LakeOfRage_MapScripts:
 	disappear LAKEOFRAGE_WESLEY
 	return
 
+.ckir_BEFORE_timed_events_WESLEY_WesleyAppears::
 .WesleyAppears:
+.ckir_AFTER_timed_events_WESLEY_WesleyAppears::
 	appear LAKEOFRAGE_WESLEY
 	return
 
@@ -305,6 +307,8 @@ WesleyDoneScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_WESLEY2_NotWednesday::
+.ckir_AFTER_timed_events_WESLEY2_NotWednesday::
 WesleyNotWednesdayScript:
 	writetext WesleyNotWednesdayText
 	waitbutton

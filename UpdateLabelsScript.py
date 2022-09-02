@@ -2,8 +2,12 @@ import os
 import shutil
 
 def UpdateLabels(wsl=False, delete_file=False):
-    os.chdir('RandomizerRom')
     try:
+        os.remove('Warp Data/crystal-speedchoice-warp-label-details.json')
+        os.remove('crystal-speedchoice-label-details.json')
+        os.remove('Config/crystal-speedchoice-hint-details.json')
+        os.remove('Config/crystal-speedchoice-block-details.json')
+        os.chdir('RandomizerRom')
         os.remove('pokecrystal-speedchoice.gbc')
     except OSError:
         pass

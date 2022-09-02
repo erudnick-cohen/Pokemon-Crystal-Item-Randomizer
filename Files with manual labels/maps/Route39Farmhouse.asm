@@ -22,6 +22,8 @@ PokefanM_DairyFarmer:
 	setevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
 	end
 
+.ckir_BEFORE_timed_events_MOOMOO_SellMilk::
+.ckir_AFTER_timed_events_MOOMOO_SellMilk::
 FarmerMScript_SellMilk:
 	checkitem MOOMOO_MILK
 	iftrue FarmerMScript_Milking
@@ -82,6 +84,8 @@ PokefanF_SnoreFarmer:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_MOOMOO2_GiveSnore::
+.ckir_AFTER_timed_events_MOOMOO2_GiveSnore::
 FarmerFScript_GiveSnore:
 	writetext FarmerFText_HealedMiltank
 	promptbutton

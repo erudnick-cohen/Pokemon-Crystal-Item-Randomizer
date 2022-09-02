@@ -6,15 +6,15 @@ import mmap
 import yaml
 
 import LoadLocationData
+import RandomizeFunctions
+
 
 # A function which detects known possible warp changes and automatically enabled other modifiers
 
 # This function is used for taking an address from a label and working out the values used to jump to it
 # Ignore the bank as can assumed to not be needed for jumping within a script
 # Return the 2-part address value
-def AddressToIntValues(address):
-    bytes = address.to_bytes(3, byteorder='little')
-    return bytes[0:2]
+
 
 
 def InterpretWarpChanges(file):
@@ -71,7 +71,7 @@ def InterpretWarpChanges(file):
             if type(value) != int:
                 # TODO Lookup the value in the label as refers to a label address
                 addressForOn = labelData[value]["address_range"]["begin"]
-                jumpBytes = AddressToIntValues(addressForOn)
+                jumpBytes = RandomizeFunctions.AddressToIntValues(addressForOn)
                 expectedOnValues[iterator] = jumpBytes[0]
                 expectedOnValues[iterator + 1] = jumpBytes[1]
                 iterator += 1
@@ -83,7 +83,7 @@ def InterpretWarpChanges(file):
             if type(value) != int:
                 # TODO Lookup the value in the label as refers to a label address
                 addressForOff = labelData[value]["address_range"]["begin"]
-                jumpBytes = AddressToIntValues(addressForOff)
+                jumpBytes = RandomizeFunctions.AddressToIntValues(addressForOff)
                 expectedOffValues[iterator] = jumpBytes[0]
                 expectedOffValues[iterator + 1] = jumpBytes[1]
                 iterator += 1

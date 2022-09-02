@@ -26,7 +26,9 @@ Route29_MapScripts:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .DoesTuscanyAppear
 
+.ckir_BEFORE_timed_events_TUSCANY_TuscanyDisappears::
 .TuscanyDisappears:
+.ckir_AFTER_timed_events_TUSCANY_TuscanyDisappears::
 	disappear ROUTE29_TUSCANY
 	return
 
@@ -201,6 +203,8 @@ TuscanyDoneScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_TUSCANY_NotTuesday::
+.ckir_AFTER_timed_events_TUSCANY_NotTuesday::
 TuscanyNotTuesdayScript:
 	writetext TuscanyNotTuesdayText
 	waitbutton

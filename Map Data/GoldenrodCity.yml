@@ -556,7 +556,9 @@ Location:
             NormalItem: TM_RETURN
             IsBall: No
             Code: |
+                .ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy::
                 .VeryHappy:
+                .ckir_AFTER_timed_events_DEPTSTORE5F3_VeryHappy::
                     writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
                     promptbutton
                     ITEMLINE
@@ -585,7 +587,9 @@ Location:
             NormalItem: TM_FRUSTRATION
             IsBall: No
             Code: |
+                .ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy::
                 .NotVeryHappy:
+                .ckir_AFTER_timed_events_DEPTSTORE5F4_NotVeryHappy::
                     writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
                     promptbutton
                     ITEMLINE
