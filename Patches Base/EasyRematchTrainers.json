@@ -18,10 +18,10 @@
     {
         "integer_values": {
             "old": [6, 3, 252, 111, 6, 2, 252, 111, 6, 1, 252, 111, 6, 0, 252, 111],
-            "new": [6, 3, "ckir_BEFORE_Huey", null,
-                6, 2, "ckir_BEFORE_Huey", null,
-                6, 1, "ckir_BEFORE_Huey", null,
-                6, 0, "ckir_BEFORE_Huey", null]
+            "new": [6, 3, "ckir_BEFORE_Huey_Fight3", null,
+                6, 2, "ckir_BEFORE_Huey_Fight3", null,
+                6, 1, "ckir_BEFORE_Huey_Fight3", null,
+                6, 0, "ckir_BEFORE_Huey_Fight3", null]
         },
         "address_range": {
             "begin": 2080769,
