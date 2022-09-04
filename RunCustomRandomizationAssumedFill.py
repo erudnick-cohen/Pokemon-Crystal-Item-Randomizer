@@ -324,6 +324,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				foundAll = True
 				for mapReach in E4Found:
 					if mapReach not in result[0]:
+						print("Not found:", mapReach)
 						foundAll = False
 						break
 				if not foundAll:
