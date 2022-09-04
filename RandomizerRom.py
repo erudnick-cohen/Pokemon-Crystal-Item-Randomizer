@@ -222,7 +222,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
 	for i in locations:
-		if i.isShop():
+		if i.isShop() and i.isItem():
 			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
 		elif i.isItem():
 			if i.IsHidden:

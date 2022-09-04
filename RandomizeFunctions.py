@@ -1770,6 +1770,9 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     hintList = []
 
+
+
+
     sanityCheckFailure = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, goal)
     if sanityCheckFailure:
         raise Exception("Invalid created base conditions")
@@ -1973,6 +1976,38 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     barrenHints = list(filter(lambda x: "nothing" in x.type, hintList))
     allBarren = [ x.secondary for x in barrenHints ]
     print("allBarren", allBarren)
+
+
+    # Check for special cases
+    # Please note if this checking was complete special cases would not be needed
+
+    edgePairs = [("Pass", "S S Ticket"), ("S S Ticket", "Squirtbottle"), ("Pass", "Squirtbottle")]
+
+    barrenRemove = []
+
+    for edgePair in edgePairs:
+        contained = list(filter(lambda x: x in allBarren, edgePair))
+        if contained:
+            edgeResult = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, input_variables=
+                list(edgePair))
+            # If either way is possible to get to Kanto
+            # Remove the options from the checks below as otherwise would also come up with 'either or'
+            if edgeResult:
+                for edge in edgePair:
+                    allBarren.remove(edge)
+                    barrenRemove.append(edge)
+
+
+    removedHints = []
+    for barrenRem in barrenRemove:
+        for x in hintList:
+            if "nothing" in x.type and barrenRem == x.secondary:
+                removedHints.append(x)
+
+    for rem in removedHints:
+        hintList.remove(rem)
+
+
 
     required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal,
                                   input_variables=allBarren)
