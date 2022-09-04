@@ -4536,22 +4536,13 @@
     "hex_values": "$2c $8 $6 $a $0 $ff $ff $92 $1 $49 $5c $ff $ff"
   },
   {
-    "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_AFTER_shop_events_ROCKETSHOPOPEN",
-    "address_range": {
-      "begin": 443256,
-      "end": 443256
-    },
-    "integer_values": "",
-    "hex_values": ""
-  },
-  {
     "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOPOPEN",
     "address_range": {
       "begin": 443250,
       "end": 443256
     },
-    "integer_values": "3 120 67 9 126 67",
-    "hex_values": "$3 $78 $43 $9 $7e $43"
+    "integer_values": "107 107 107 107 107 107",
+    "hex_values": "$6b $6b $6b $6b $6b $6b"
   },
   {
     "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOP_LanceEntered",
@@ -14731,6 +14722,15 @@
     },
     "integer_values": "22 22 22 22 22 23 24 34 26 23 23 28 33 30 23 23 31 27 32 23",
     "hex_values": "$16 $16 $16 $16 $16 $17 $18 $22 $1a $17 $17 $1c $21 $1e $17 $17 $1f $1b $20 $17"
+  },
+  {
+    "label": "TinTower1FSage5Script.ckir_BEFORERAINBOWWINGGIFT0ITEMCODE",
+    "address_range": {
+      "begin": 1593809,
+      "end": 1593812
+    },
+    "integer_values": "158 178 1",
+    "hex_values": "$9e $b2 $1"
   },
   {
     "label": "TinTower1F_Blocks.ckir_BEFORE_TinTower1F_Blocks",

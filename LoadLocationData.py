@@ -533,7 +533,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}
 					nLoc.YmlFile = file
 					nLoc.applyBanList(banList,allowList, flags)
 					nLoc.applyModifiers(modifierDict, flags)
-					nLoc.applyBanList(banList,allowList)
+					nLoc.applyBanList(banList,allowList, flags)
 
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)

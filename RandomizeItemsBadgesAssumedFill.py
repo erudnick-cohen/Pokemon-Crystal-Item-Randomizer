@@ -1034,7 +1034,10 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 		random.shuffle(activeLoc)
 		for i in activeLoc:
 			#can we get to this location?
-			if(i.isReachable(state) and i.Name not in reachable and i.Name not in forbidden and not i.Banned):
+			# Previously added a banned check in here, but this breaks actual ban list if items were set
+			# Unknown what line was changed for, but removed due to breaking change
+
+			if(i.isReachable(state) and i.Name not in reachable and i.Name not in forbidden):
 
 				maxdist = max([stateDist[x] for x in i.requirementsNeeded(defaultdict(lambda: False))], default=0)
 				if i.HasPKMN:
