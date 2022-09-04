@@ -28,12 +28,28 @@ def CountFilesInDirectory(dir):
 	return count
 
 
-def ResetRomForLabelling(romDir="7.4"):
+def ResetRomForLabelling(wsl=False, romDir="7.4"):
+	git_success = False
 	try:
-		shutil.rmtree("RandomizerRom")
+		os.chdir("RandomizerRom")
+		os.listdir(os.curdir)
+		if not os.path.isdir(".git"):
+			git_success = False
+		else:
+			command = ("wsl " if wsl else "") + "git reset --hard"
+			os.system(command)
+			os.chdir("..")
+			git_success = True
 	except:
-		print("No existing folder created, nothing to remove")
-	shutil.copytree("Game Files/"+romDir,"RandomizerRom")
+		git_success = False
+
+
+	if not git_success:
+		try:
+			shutil.rmtree("RandomizerRom")
+		except:
+			print("No existing folder created, nothing to remove")
+		shutil.copytree("Game Files/"+romDir,"RandomizerRom")
 	#next overwrite the files which need custom labels
 
 	manual_dir = "Files with manual labels"

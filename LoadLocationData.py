@@ -486,6 +486,8 @@ def CheckLocationData(warpLocations, locationList):
 	# For warp grouping purposes, have an additional check not to purge if the ONLY group that leads to that location
 	# Should ALL be transitional options anyway
 
+	special_cases = GenerateWarpData.LoadSpecialCaseWarps()
+
 	if usePurge:
 		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
 		print("Purge count==",len(toPurge))
@@ -496,7 +498,19 @@ def CheckLocationData(warpLocations, locationList):
 			# Because the warps focus on START locations, double check the end groups here and ensure
 			# Not to remove the last option from the list
 			# For warp group processing, etc.
+
+			special_no_purge = False
+
+			for case in special_cases:
+				if "To" in case:
+					toCase = case["To"]
+					if purge["End Warp Name"] == toCase["WarpName"]:
+						special_no_purge = True
+						break
+
 			if other_end_group <= 1:
+				skip_purge.append(purge)
+			elif special_no_purge:
 				skip_purge.append(purge)
 			else:
 				accessible_warp_data.remove(purge)

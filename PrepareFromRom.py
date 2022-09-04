@@ -8,8 +8,17 @@ from Tests.TestLabelItemLocations import *
 import RandomizerRom
 import GeneratePatches
 
+import shutil
+import sys
+
 if __name__ == '__main__':
-    RandomizerRom.ResetRomForLabelling()
+    has_wsl = False
+
+    result = shutil.which("wsl")
+    if result is not None:
+        has_wsl = True
+
+    RandomizerRom.ResetRomForLabelling(wsl=has_wsl)
 
     sign_entries = GenerateHintData.GenerateHintLabels()
     TestLabels()
@@ -18,7 +27,7 @@ if __name__ == '__main__':
     GenerateMapLabels.LabelAllBlocks()
     GenerateMapLabels.GenerateNPCLabels()
 
-    UpdateLabelsScript.UpdateLabels(wsl=True, delete_file=False)
+    UpdateLabelsScript.UpdateLabels(has_wsl, delete_file=False)
 
     GenerateMapLabels.CreateMapPatches()
     GenerateMapLabels.GenerateNPCSwitchPatch()
