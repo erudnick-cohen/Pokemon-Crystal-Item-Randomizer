@@ -1607,11 +1607,6 @@ def OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badge
 
     return itemToReq, locationList
 
-
-#def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
-#					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
-#					 assign_trash=True, forbidden=[]):
-
 def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
                        badgeSet, goal, input_variables=None):
 
@@ -1627,7 +1622,7 @@ def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
     result = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
                                                      None, None, None, locList,
                                                      badgeSet, None, assign_trash=False,
-                                                     forbidden=variables)
+                                                     forbidden=variables, recommended=False)
 
     if goal in result[0]:
         return False

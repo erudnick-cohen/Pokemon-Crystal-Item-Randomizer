@@ -6,10 +6,12 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
+        RecommendedLocationReqs:
             - Saffron City
             - Woke Snorlax
             - Ecruteak City
         FlagReqs:
+        RecommendedFlagReqs:
             - Rocket Invasion
             - Hive Badge
             - Plain Badge
@@ -17,6 +19,7 @@ Location:
             - Glacier Badge
             - Rising Badge
         ItemReqs:
+        RecommendedItemReqs:
             - Surf
             - Cut
             - Strength

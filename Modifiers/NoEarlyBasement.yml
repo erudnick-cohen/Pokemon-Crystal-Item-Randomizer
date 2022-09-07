@@ -3,15 +3,15 @@ Description: Prevents the basement in goldenrod from having the squirtbottle or 
 Changes:
     -
         Location: Goldenrod Tunnel Entrance A
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Squirtbottle
     -
         Location: Goldenrod Tunnel Entrance B
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Pass
 
     -
         Location: Goldenrod Underground Switch Room Warpie
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 

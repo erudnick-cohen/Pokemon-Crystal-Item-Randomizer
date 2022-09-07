@@ -3,5 +3,5 @@ Description: "Add logic to prevent going to the Power Plant before having the Ma
 Changes:
     -
         Location: Power Plant
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Machine Part

@@ -6,38 +6,38 @@ FlagsSet:
 Changes:
     -
         Location: Route 45
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
 
     -
         Location: Mt Mortar Inside Top
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
 
     -
       Location: Mt Mortar Inside
-      AddFlagReqs:
+      AddRecommendedFlagReqs:
           - Storm Badge
-      AddItemReqs:
+      AddRecommendedItemReqs:
           - Fly
 
 
     -
         Location: Tin Tower 5F Start
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
 
     -
         Location: Route 46 Upper
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
 
 

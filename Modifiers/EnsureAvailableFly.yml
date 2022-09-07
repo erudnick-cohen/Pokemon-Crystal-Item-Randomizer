@@ -3,9 +3,9 @@ Description: "Ensures that the fly HM is available before fighting E4"
 Changes:
     -
         Location: Indigo Plateau
-        NewItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        NewFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
 IncompatibleWith:
     - 'Delete Fly'

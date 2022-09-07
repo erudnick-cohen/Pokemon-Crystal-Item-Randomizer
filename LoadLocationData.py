@@ -97,10 +97,10 @@ def LoadWarpData(locationList, flags):
 
 
 			if "Fly Warps" in flags and "Delete Fly" not in flags:
-				if "Storm Badge" not in locationData["FlagReqs"]:
-					locationData["FlagReqs"].append("Storm Badge")
-				if "Fly" not in locationData["ItemReqs"]:
-					locationData["ItemReqs"].append("Fly")
+				if "Storm Badge" not in locationData["RecommendedFlagReqs"]:
+					locationData["RecommendedFlagReqs"].append("Storm Badge")
+				if "Fly" not in locationData["RecommendedItemReqs"]:
+					locationData["RecommendedItemReqs"].append("Fly")
 
 
 

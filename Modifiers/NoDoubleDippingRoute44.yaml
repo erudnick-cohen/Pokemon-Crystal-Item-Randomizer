@@ -3,7 +3,7 @@ Description: "Add logic to prevent going to Route 44 & Ice Path before you have 
 Changes:
     -
         Location: Route 44
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Strength
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Plain Badge

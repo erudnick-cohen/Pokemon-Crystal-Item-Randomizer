@@ -3,91 +3,91 @@ Description: Prevents fighting any trainer with ~Lv40 Pokemon. Excludes Moon Riv
 Changes:
     -
         Location: Saffron City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Cinnabar Island Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Viridian City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Pewter City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Cerulean City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Celadon City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Erika TM
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Vermilion City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Fuchsia City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Janine TM
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Fuchsia City Gym Badge
     -
         Location: Lance
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Battle Clair
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Victory Road Hall 3
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Victory Road Hall 3 Exit
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Cycling Road North
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
     -
         Location: Cycling Road South
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Route 26 North
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Route 26
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Fuchsia
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -
         Location: Fuchsia West
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
 
     -

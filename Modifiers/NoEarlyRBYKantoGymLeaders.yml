@@ -3,56 +3,56 @@ Description: Prevents fighting any gym leader who was a character in the generat
 Changes:
     -
         Location: Saffron City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Cinnabar Island Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Viridian City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Pewter City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Cerulean City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Celadon City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Vermilion City Gym Badge
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
         Location: Vermilion Gym via Surf
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
             - Fog Badge
     -
         Location: Vermilion Gym via Cut
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
             - Hive Badge
     -
         Location: Early Sabrina
-        NewFlagReqs:
+        NewRecommendedFlagReqs:
             - Impossible
-        NewLocationsReqs:
+        NewRecommendedLocationsReqs:
             - Impossible
-        NewItemReqs:
+        NewRecommendedItemReqs:
             - Impossible

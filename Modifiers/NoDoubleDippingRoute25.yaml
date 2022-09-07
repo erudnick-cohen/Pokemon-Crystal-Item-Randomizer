@@ -3,10 +3,10 @@ Description: "Add logic to prevent going to Route 25 before having access to all
 Changes:
     -
         Location: Route 25
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Machine Part
             - Cut
             - Surf
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Hive Badge
             - Fog Badge

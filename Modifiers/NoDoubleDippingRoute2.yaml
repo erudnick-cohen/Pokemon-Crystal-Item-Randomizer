@@ -3,7 +3,7 @@ Description: "Add logic to prevent going to Route 2 without the ability to use C
 Changes:
     -
         Location: Diglett's Cave
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Cut
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Hive Badge

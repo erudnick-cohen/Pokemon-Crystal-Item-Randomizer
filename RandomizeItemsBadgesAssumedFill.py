@@ -943,7 +943,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
-					 assign_trash=True, forbidden=None):
+					 assign_trash=True, forbidden=None, recommended=True):
 
 	if forbidden is None:
 		forbidden = []
@@ -1040,9 +1040,9 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 			# Previously added a banned check in here, but this breaks actual ban list if items were set
 			# Unknown what line was changed for, but removed due to breaking change
 
-			if(i.isReachable(state) and i.Name not in reachable and i.Name not in forbidden):
+			if(i.isReachable(state, recommended=recommended) and i.Name not in reachable and i.Name not in forbidden):
 
-				maxdist = max([stateDist[x] for x in i.requirementsNeeded(defaultdict(lambda: False))], default=0)
+				maxdist = max([stateDist[x] for x in i.requirementsNeeded(defaultdict(lambda: False), recommended=recommended)], default=0)
 				if i.HasPKMN:
 					maxdist = maxdist + 1
 				pre_distance = maxdist

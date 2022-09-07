@@ -3,6 +3,6 @@ Description: "Add logic to prevent going back to Route 31 via reverse Union Cave
 Changes:
     -
         Location: Route 31 Kenya Item
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Squirtbottle
             

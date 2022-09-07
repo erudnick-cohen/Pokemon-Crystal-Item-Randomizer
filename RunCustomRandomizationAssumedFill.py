@@ -15,7 +15,7 @@ import copy
 import traceback
 import random
 
-def handleBadSpoiler(result, flags):
+def handleBadSpoiler(result, flags, minSize=None, maxSize=None):
 	spoiler = result[1]
 	state = result[0]
 
@@ -32,10 +32,21 @@ def handleBadSpoiler(result, flags):
 			print("Unplaced:", s)
 
 
+	prepared_commands = []
+
 	for s in spoiler.keys():
 		s_value = spoiler[s]
 		if s_value not in state or state[s_value].item == "SILVER_LEAF":
-			print("Cannot reach:",s, s_value)
+			prepared_commands.append("Cannot reach:"+s+" "+s_value)
+
+	if minSize is None and maxSize is None:
+		print(prepared_commands)
+	elif minSize is None and len(prepared_commands) < maxSize:
+		print(prepared_commands)
+	elif maxSize is None and len(prepared_commands) > minSize:
+		print(prepared_commands)
+	elif len(prepared_commands) < maxSize and len(prepared_commands) > minSize:
+		print(prepared_commands)
 
 
 
@@ -238,7 +249,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
 		items = [ f.Name for f in flat if f.Type == "Item" or f.Type == "Gym" or f.Type == "Shop" or f.Type == "BargainShop" ]
 		for item in items:
-			spoilerDetails[item] = []
+			spoilerDetails[item] = {}
 
 	while goal not in result[0] or not completeResult or spoilerLoop:
 		try:
@@ -309,7 +320,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rBadgeList.append(i)
 				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
 			if goal not in result[0]:
-				handleBadSpoiler(result, flags)
+				handleBadSpoiler(result, flags, maxSize=5 if spoilerLoop else None)
 				print("bad run, retrying")
 			elif len(result) > 6:
 				remainingProgressItems = result[6]
@@ -335,13 +346,17 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				if completeResult and spoilerLoop:
 					for s in result[1].keys():
 						s_value = result[1][s]
-						spoilerDetails[s_value].append(s)
+						if s not in spoilerDetails[s_value]:
+							spoilerDetails[s_value][s] = 0
+
+						spoilerDetails[s_value][s] += 1
 
 					print("Spoiler loop::", spoilerCount, spoilerTotal)
 
 					spoilerCount += 1
 					if spoilerLoop and spoilerCount > spoilerTotal:
 						spoilerLoop = False
+
 						json_out = json.dumps(spoilerDetails, indent=2)
 						print(json_out)
 

@@ -133,6 +133,34 @@ class Location:
 			if (yamlTree["Sublocations"] is not None):
 				for i in yamlTree["Sublocations"]:
 					self.Sublocations.append(Location(i))
+
+		if "RecommendedFlagReqs" in yamlTree:
+			self.RecommendedFlagReqs = yamlTree["RecommendedFlagReqs"]
+		else:
+			self.RecommendedFlagReqs = []
+		if self.RecommendedFlagReqs is None:
+			self.RecommendedFlagReqs = []
+		elif isinstance(self.RecommendedFlagReqs, str):
+			self.RecommendedFlagReqs = [self.RecommendedFlagReqs]
+
+		if "RecommendedItemReqs" in yamlTree:
+			self.RecommendedItemReqs = yamlTree["RecommendedItemReqs"]
+		else:
+			self.RecommendedItemReqs = []
+		if self.RecommendedItemReqs is None:
+			self.RecommendedItemReqs = []
+		elif isinstance(self.RecommendedItemReqs, str):
+			self.RecommendedItemReqs = [self.RecommendedItemReqs]
+
+		if "RecommendedLocationReqs" in yamlTree:
+			self.RecommendedLocationReqs = yamlTree["RecommendedLocationReqs"]
+		else:
+			self.RecommendedLocationReqs = []
+		if self.RecommendedLocationReqs is None:
+			self.RecommendedLocationReqs = []
+		elif isinstance(self.RecommendedLocationReqs, str):
+			self.RecommendedLocationReqs = [self.RecommendedLocationReqs]
+
 		self.IsGym = False
 		self.IsActuallyGym = False
 		self.Banned = False
@@ -153,7 +181,9 @@ class Location:
 	#determine if this location is reachable
 	#reachable defined by requirements being present in state
 	#and reachable reqs NOT present in state
-	def isReachable(self, state):
+	def isReachable(self, state, recommended=None):
+		if recommended is None:
+			recommended = True
 		reachable = True
 		for i in self.LocationReqs:
 			reachable = reachable and state[i]
@@ -163,10 +193,19 @@ class Location:
 			reachable = reachable and state[i]
 		for i in self.ReachableReqs:
 			reachable = reachable and not state[i]
+		if recommended:
+			for i in self.RecommendedItemReqs:
+				reachable = reachable and state[i]
+			for i in self.RecommendedLocationReqs:
+				reachable = reachable and state[i]
+			for i in self.RecommendedFlagReqs:
+				reachable = reachable and state[i]
 		return reachable
 	
 	#return the set of requirements for this location that still need to be met
-	def requirementsNeeded(self,state):
+	def requirementsNeeded(self,state, recommended=None):
+		if recommended is None:
+			recommended = True
 		reqList = []
 		for i in self.LocationReqs:
 			if not state[i]:
@@ -177,6 +216,16 @@ class Location:
 		for i in self.ItemReqs:
 			if not state[i]:
 				reqList.append(i)
+		if recommended:
+			for i in self.RecommendedLocationReqs:
+				if not state[i]:
+					reqList.append(i)
+			for i in self.RecommendedItemReqs:
+				if not state[i]:
+					reqList.append(i)
+			for i in self.RecommendedFlagReqs:
+				if not state[i]:
+					reqList.append(i)
 		return reqList
 	
 	#returns the flags set by this location
@@ -237,6 +286,18 @@ class Location:
 			 i.applyBanList(banList, allowList, flags)
 
 
+	# Finds any requirements for the location for potentially adding Fly Warp logic
+	def hasBaseRequirement(self, inputFlags):
+		notInputFlags = [x for x in self.FlagReqs if x not in inputFlags]
+		hasItemReqs = [x for x in self.ItemReqs]
+
+		hasRecommendFlag = [x for x in self.RecommendedFlagReqs if x not in inputFlags]
+		hasRecommendedItem = [x for x in self.RecommendedItemReqs]
+
+		totalLength = len(notInputFlags) + len(hasItemReqs) + len(hasRecommendedItem) + len(hasRecommendFlag)
+
+		return totalLength == 0
+
 	def applyWarpLogic(self, flags):
 		# Remove standard requirements for warp randomisation
 		# At definition, if the original requirements are still possible even in Warp Rando, then a fork must be made
@@ -278,37 +339,22 @@ class Location:
 					newReqs.append(x)
 			self.LocationReqs = newReqs
 
-		notInputFlags = [x for x in self.FlagReqs if x not in flags]
-		if self.Type == "Transition" and len(notInputFlags) > 0 and len(self.ItemReqs) > 0:
+		if self.Type == "Transition" and self.hasBaseRequirement(flags):
 			if "Fly Warps" in flags:
-				if "Storm Badge" not in self.FlagReqs:
-					self.FlagReqs.append("Storm Badge")
-				if "Fly" not in self.ItemReqs:
-					self.ItemReqs.append("Fly")
+				if "Storm Badge" not in self.RecommendedFlagReqs:
+					self.RecommendedFlagReqs.append("Storm Badge")
+				if "Fly" not in self.RecommendedItemReqs:
+					self.RecommendedItemReqs.append("Fly")
 
 		if "Fly Warps" in flags:
-			fly_first = False
-			if len(notInputFlags) > 0:
-				fly_first = True
-			if len(self.ItemReqs):
-				fly_first = True
+			fly_first = self.hasBaseRequirement(flags)
 
 			if fly_first:
-				if "Storm Badge" not in self.FlagReqs:
-					self.FlagReqs.append("Storm Badge")
+				if "Storm Badge" not in self.RecommendedFlagReqs:
+					self.RecommendedFlagReqs.append("Storm Badge")
 
-				if "Fly" not in self.ItemReqs:
-					self.ItemReqs.append("Fly")
-
-		#if "Fly Warps" in flags and len(self.FlagReqs) > 0:
-		#	print("Flags", self.Name, self.FlagReqs)
-		#	self.FlagReqs.append("Storm Badge")
-		#	self.ItemReqs.append("Fly")
-
-		#if "Fly Warps" in flags and len(self.ItemReqs) > 0:
-		#	print("Items", self.Name, self.FlagReqs)
-		#	self.FlagReqs.append("Storm Badge")
-		#	self.ItemReqs.append("Fly")
+				if "Fly" not in self.RecommendedItemReqs:
+					self.RecommendedItemReqs.append("Fly")
 
 
 		for i in self.Sublocations:
@@ -374,6 +420,37 @@ class Location:
 					for x in toAdd:
 						if x not in self.Handles:
 							self.Handles.append(x)
+				if 'AddRecommendedFlagReqs' in j:
+					toAdd = j["AddRecommendedFlagReqs"]
+					for x in toAdd:
+						if x not in self.RecommendedFlagReqs:
+							self.RecommendedFlagReqs.append(x)
+				if 'RemoveRecommendedFlagReqs' in j:
+					toRemove = j["RemoveRecommendedFlagReqs"]
+					for x in toRemove:
+						if x in self.RecommendedFlagReqs:
+							self.RecommendedFlagReqs.append(x)
+				if 'AddRecommendedItemReqs' in j:
+					toAdd = j["AddRecommendedItemReqs"]
+					for x in toAdd:
+						if x not in self.RecommendedItemReqs:
+							self.RecommendedItemReqs.append(x)
+				if 'RemoveRecommendedItemReqs' in j:
+					toRemove = j["RemoveRecommendedItemReqs"]
+					for x in toRemove:
+						if x in self.RecommendedItemReqs:
+							self.RecommendedItemReqs.append(x)
+
+				if 'AddRecommendedLocationReqs' in j:
+					toAdd = j["AddRecommendedLocationReqs"]
+					for x in toAdd:
+						if x not in self.RecommendedLocationReqs:
+							self.RecommendedLocationReqs.append(x)
+				if 'RemoveRecommendedLocationReqs' in j:
+					toRemove = j["RemoveRecommendedLocationReqs"]
+					for x in toRemove:
+						if x in self.RecommendedLocationReqs:
+							self.RecommendedLocationReqs.append(x)
 
 		if "No Flash" in flags:
 			if "Zephyr Badge" in self.FlagReqs and "Flash" in self.ItemReqs and \
@@ -383,8 +460,10 @@ class Location:
 		if "Start With Bike" in flags:
 			if "Bicycle" in self.ItemReqs:
 				self.ItemReqs.remove("Bicycle")
+			if "Bicycle" in self.RecommendedItemReqs:
+				self.RecommendedItemReqs.remove("Bicycle")
 
-		if "Delete Fly" in flags and "Fly" in self.ItemReqs:
+		if "Delete Fly" in flags and ("Fly" in self.ItemReqs or "Fly" in self.RecommendedItemReqs):
 			self.FlagReqs.append("Impossible")
 
 		for i in self.Sublocations:

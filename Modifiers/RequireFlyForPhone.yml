@@ -3,9 +3,9 @@ Description: "Requires Fly/Storm before any phone call trainers, as the most con
 Changes:
     -
         Location: Phone Call Trainers
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
         RemoveFlagReqs:
             - Phone Call Trainers

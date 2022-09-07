@@ -3,7 +3,7 @@ Description: Prevents Sabrina being required before you can access 7 other gyms
 Changes:
     -
         Location: Saffron City Gym Badge
-        NewFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
             - Kanto Mode
     -
