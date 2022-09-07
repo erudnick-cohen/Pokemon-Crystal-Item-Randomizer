@@ -1793,6 +1793,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
         unlock_goal = goal if goal != "Red" else "Mt. Silver Is Open"
 
+        # Remove recommended hints
         if "Warps" not in inputFlags:
             for location in to_check_location:
                 required = IsVariableRequired(location, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
@@ -1987,7 +1988,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
     for edgePair in edgePairs:
         contained = list(filter(lambda x: x in allBarren, edgePair))
-        if contained:
+        if len(contained) == len(edgePair):
             edgeResult = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, input_variables=
                 list(edgePair))
             # If either way is possible to get to Kanto

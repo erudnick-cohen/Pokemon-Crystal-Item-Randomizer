@@ -7,6 +7,8 @@ Changes:
             - Fly
         AddFlagReqs:
             - Storm Badge
+        RemoveFlagReqs:
+            - Phone Call Trainers
 IncompatibleWith:
     - 'Delete Fly'
     - 'Teleport instead of fly'

@@ -551,6 +551,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 								if toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags:
 									legal = False
 
+							if toAllocate in badgeSet and j == "All Badges":
+								legal = False
+
 							if not legal:
 								break
 
@@ -899,7 +902,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	#print('----')
 
-	print("spoiler is: ", spoiler)
+	#print("spoiler is: ", spoiler)
 
 	# This should be moved to prevent it running on each attempt through!
 	if "RandomiseItems" in inputFlags:

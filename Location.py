@@ -213,7 +213,9 @@ class Location:
 					self.FlagReqs.remove("Banned")
 
 			for i in self.Sublocations:
-				i.applyBanList(banList, allowList, flags, banned=True)
+				# What does this affect? Currently this over-bans all sublocations
+				# but getting there should not be possible anyway
+				i.applyBanList(banList, allowList, flags)
 
 			return
 
