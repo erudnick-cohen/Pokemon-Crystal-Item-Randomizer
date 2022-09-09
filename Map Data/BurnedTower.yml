@@ -27,8 +27,8 @@ Location:
                 WildTableList: 
                 LocationReqs: Burned Tower 1F
                 FlagReqs:
-                ItemReqs: 
-                    - Rock Smash
+                    - Rock Smash Usable
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: HP_UP

@@ -2136,11 +2136,27 @@ BALL_ITEMS = ["POKE_BALL", "GREAT_BALL", "ULTRA_BALL", "FAST_BALL", "HEAVY_BALL"
               "MOON_BALL", "MASTER_BALL", "PARK_BALL", "LOVE_BALL",
               "FRIEND_BALL", "LEVEL_BALL", "LURE_BALL"]
 
-X_ITEMS = ["X_ATTACK", "X_DEFEND", "X_SPEED", "X_SPECIAL", "DIRE_HIT", "X_ACCURACY", "GUARD_SPEC"]
+X_ITEMS = ["X_ATTACK", "X_DEFEND", "X_SPEED", "X_SPECIAL", "DIRE_HIT", "X_ACCURACY", "GUARD_SPEC",
+           "TM_SWEET_SCENT"]
+
+REQUIRED_BUY_ITEMS = ["Rock Smash","Water Stone","Escape Rope"]
+
+
+def ShopFilenameConversion(name):
+    if name is None:
+        return None
+
+    if "Goldenrod" in name:
+        return "Goldenrod"
+    if "Celadon" in name:
+        return "Celadon"
+
+    return name
+
 
 def ShopItemGroupCheck(i, locList, reachable, itemList, addAfter=None):
     if i.isShop():
-        shopElements = list(filter(lambda x: x.FileName == i.FileName, locList))
+        shopElements = list(filter(lambda x: ShopFilenameConversion(x.FileName) == ShopFilenameConversion(i.FileName), locList))
         shopElementNames = [x.Name for x in shopElements]
         # Find these from old copy
         # Then find instances in activeLoc & reachable
@@ -2172,20 +2188,23 @@ def AtLeastOneInAShop(itemList, trashList, reachable, currentItem, currentLocati
         addAfter = []
     # Potential issue, need to check if there IS a shop remaining -- if there isn't, will have to settle
     # If not settled, can force a re-do seed
-    if not currentLocation.isShop():
-        return True
 
     reachCopy = []
-    reachCopy.extend(reachable)
+    reachCopy.extend(reachable.values())
     reachCopy.extend(addAfter)
 
     if currentItem in itemList:
         remainingOf = [ trash for trash in trashList if trash == currentItem ]
+        # If trashList now contains 0 of the item (excluding the current item)
         if len(remainingOf) == 0:
-            r = list(filter(lambda x: x[1].item == currentItem and x[1].isShop() and \
-                            "Banned" not in x[1].FlagReqs and "Impossible" not in x[1].FlagReqs and \
-                            "Unreachable" not in x[1].FlagReqs, reachCopy.items()))
-            return len(r) != 0
+            # Check all shops containing the item
+            r = list(filter(lambda x: x.item == currentItem and x.isShop() and \
+                            "Banned" not in x.FlagReqs and "Impossible" not in x.FlagReqs and \
+                            "Unreachable" not in x.FlagReqs, reachCopy))
+            # If no shop contains, return False
+
+            if not currentLocation.isShop():
+                return len(r) != 0
 
     return True
 
@@ -2210,52 +2229,86 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
         addAfter = []
     replacedItem = None
     baseItem = placeItem
+    progressItem = baseItem
 
-    if not itemLocation.isShop():
-        return None
+    # Incorrect, need to handle if an item is being assigned to a NON-shop as well
+    # If the item is meant to always be purchasable
+    #if not itemLocation.isShop():
+     #   return None
 
-    hasRepel = ShopItemGroupCheck(itemLocation, locList, reachable, REPEL_ITEMS, addAfter=addAfter)
-    if not hasRepel:
-        if force:
-            replacedItem = random.choice(REPEL_ITEMS)
-        else:
-            trashRepels = list(filter(lambda x: x in REPEL_ITEMS, trashItems))
-            if len(trashRepels) > 0:
-                while baseItem not in REPEL_ITEMS:
-                    oldItem = baseItem
-                    baseItem = trashItems.pop()
-                    replacedItem = baseItem
-                    trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+    invalidItems = []
+    invalidPriorityItems = []
 
-    hasBall = ShopItemGroupCheck(itemLocation, locList, reachable,BALL_ITEMS, addAfter=addAfter)
-    if not hasBall:
-        if force:
-            replacedItem = random.choice(BALL_ITEMS)
-        else:
-            trashBalls = list(filter(lambda x: x in BALL_ITEMS, trashItems))
-            if len(trashBalls) > 0:
-                while baseItem not in BALL_ITEMS:
-                    oldItem = baseItem
-                    baseItem = trashItems.pop()
-                    replacedItem = baseItem
-                    trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+    # Function checks if all the items in a given shop, at least 1 must be a type of repel and 1 type of ball
+    if itemLocation.isShop():
+        hasRepel = ShopItemGroupCheck(itemLocation, locList, reachable, REPEL_ITEMS, addAfter=addAfter)
+        if not hasRepel:
+            if force:
+                replacedItem = random.choice(REPEL_ITEMS)
+                progressItem = replacedItem
+            else:
+                trashRepels = list(filter(lambda x: x in REPEL_ITEMS, trashItems))
+                if len(trashRepels) > 0:
+                    while progressItem not in REPEL_ITEMS:
+                        oldItem = progressItem
+                        progressItem = trashItems.pop()
+                        replacedItem = progressItem
+                        invalidItems.append(oldItem)
+                        #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+        hasBall = ShopItemGroupCheck(itemLocation, locList, reachable,BALL_ITEMS, addAfter=addAfter)
+        if not hasBall:
+            if force:
+                replacedItem = random.choice(BALL_ITEMS)
+                progressItem = replacedItem
+            else:
+                trashBalls = list(filter(lambda x: x in BALL_ITEMS, trashItems))
+                if len(trashBalls) > 0:
+                    while progressItem not in BALL_ITEMS:
+                        oldItem = progressItem
+                        progressItem = trashItems.pop()
+                        replacedItem = progressItem
+                        invalidItems.append(oldItem)
+                        #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
 
     # If shop enabled
     # Ensure each type of X Item is available in at least 1 shop
 
+    # At least one of these items in the pool
+    # Must be assigned to a shop
+    # For convinence / otherwise
+
     acceptable_placement = AtLeastOneInAShop(X_ITEMS, trashItems,
-                                             reachable, replacedItem, itemLocation,
+                                             reachable, progressItem, itemLocation,
                                              addAfter=addAfter)
-    if not acceptable_placement and force:
+    if not acceptable_placement and force and itemLocation.isShop():
         # Not yet handled for randomise unaffected items (force)
         replacedItem = itemLocation.item
+        progressItem = replacedItem
     else:
         while not acceptable_placement:
-            oldItem = baseItem
-            baseItem = trashItems.pop()
-            replacedItem = baseItem
-            trashItems.insert(random.randint(0, len(trashItems)), oldItem)
-            acceptable_placement = AtLeastOneInAShop(X_ITEMS,trashItems,reachable, replacedItem, itemLocation)
+            oldItem = progressItem
+            progressItem = trashItems.pop()
+            replacedItem = progressItem
+            invalidPriorityItems.append(oldItem)
+            #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+            acceptable_placement = AtLeastOneInAShop(X_ITEMS,trashItems,reachable, progressItem, itemLocation)
+
+    #acceptable_placement_buy = AtLeastOneInAShop(REQUIRED_BUY_ITEMS, trashItems,
+     #                                        reachable, progressItem, itemLocation,
+      #                                       addAfter=addAfter)
+    #if not acceptable_placement_buy and force and itemLocation.isShop():
+        # Not yet handled for randomise unaffected items (force)
+     #   replacedItem = itemLocation.item
+      #  progressItem = replacedItem
+    #else:
+     #   while not acceptable_placement_buy:
+      #      oldItem = progressItem
+       #     progressItem = trashItems.pop()
+        #    replacedItem = progressItem
+         #   invalidPriorityItems.append(oldItem)
+          #  #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+           # acceptable_placement_buy = AtLeastOneInAShop(REQUIRED_BUY_ITEMS, trashItems, reachable, progressItem, itemLocation)
 
     # Maintain list of flags and such here
 
@@ -2263,7 +2316,7 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
                         "SUPER_ROD", "ENGINE_MAP_CARD", "ENGINE_UNOWN_DEX"]
 
     if itemLocation.isShop():
-        item_to_replace = baseItem if replacedItem is None else replacedItem
+        item_to_replace = baseItem if replacedItem is None else progressItem
         re_add, chosen, success = PreventItemAssignment(item_to_replace, ShopFlagItems, trashItems)
         if not success:
             raise Exception('Failed mapping due to item requirement seed (shop)!')
@@ -2271,6 +2324,12 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
             trashItems.insert(random.randint(0, len(trashItems)), item)
         if item_to_replace != chosen:
             replacedItem = chosen
+
+    for item in invalidPriorityItems:
+        trashItems.append(item)
+
+    for item in invalidItems:
+        trashItems.insert(random.randint(0, len(trashItems)), item)
 
     return replacedItem
 

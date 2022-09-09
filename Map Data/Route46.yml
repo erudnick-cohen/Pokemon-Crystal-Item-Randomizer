@@ -38,9 +38,9 @@ Location:
             LocationReqs: Dark Cave Violet Side
             FlagReqs:
                 - Zephyr Badge
+                - Rock Smash Usable
             ItemReqs:
                 - Flash
-                - Rock Smash
             FlagsSet:
             ReachableReqs:
             Code:

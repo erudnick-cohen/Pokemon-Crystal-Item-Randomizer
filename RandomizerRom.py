@@ -391,24 +391,33 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 
 
 def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
-	beforeLabel = "ckir_BEFORE"+ \
-				  (("".join(location.Name.split())+"0ITEMCODE").upper())
-	addressData = labelData[beforeLabel]
-
-	nItemCodeData = itemScriptLookup(location.item)
-	nItemCode = nItemCodeData[0]
-	itemType = nItemCodeData[1]
-	if itemType == "Item":
-
-		if location.isBargainShop():
-			# Bargain shop item contains price also, so is different
-			romMap[addressData["address_range"]["begin"]] = nItemCode
+	potentialFilenames = location.FileName.split(",")
+	# Handle a shop which might change stock over time but shares some items
+	for pFileName in potentialFilenames:
+		if len(potentialFilenames) == 1:
+			beforeLabel = "ckir_BEFORE"+ \
+					  (("".join(location.Name.split())+"0ITEMCODE").upper())
 		else:
-			romMap[addressData["address_range"]["begin"] + 1] = nItemCode
-	else:
-		# This will write the other byte of shopitem macro in future
-		# This is not yet supported by speedchoice engine changes
-		raise Exception("Not yet supported")
+			beforeLabel = "ckir_BEFORE" + \
+						  (("".join(location.Name.split()) + "0ITEMCODE"
+							+"_"+str(potentialFilenames.index(pFileName))).upper())
+
+
+		addressData = labelData[beforeLabel]
+
+		nItemCodeData = itemScriptLookup(location.item)
+		nItemCode = nItemCodeData[0]
+		itemType = nItemCodeData[1]
+		if itemType == "Item":
+			if location.isBargainShop():
+				# Bargain shop item contains price also, so is different
+				romMap[addressData["address_range"]["begin"]] = nItemCode
+			else:
+				romMap[addressData["address_range"]["begin"] + 1] = nItemCode
+		else:
+			# This will write the other byte of shopitem macro in future
+			# This is not yet supported by speedchoice engine changes
+			raise Exception("Not yet supported")
 
 
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
@@ -765,24 +774,29 @@ def LabelShopLocation(location):
 	filecode = file.read()
 	file.close()
 
-	shopName = location.FileName
-	shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
-	currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
-	shopDetail = currentShopDesc[0][0]
+	shopDupeSet = location.FileName.split(",")
+	for shopName in shopDupeSet:
+		print(shopName)
+		shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
+		currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
+		shopDetail = currentShopDesc[0][0]
 
-	itemRegex = "shopitem,\t\d{1,}, "+location.NormalItem+"\n"
-	itemDesc = re.findall(itemRegex, shopDetail)
-	beforeLabel = ".ckir_BEFORE"+"".join(location.Name.upper().split())+"0ITEMCODE::\n"
-	afterLabel = ".ckir_AFTER"+"".join(location.Name.upper().split())+"0ITEMCODE::\n"
-	toReplace = "\t" + itemDesc[0]
-	replacement = beforeLabel + toReplace + afterLabel
+		itemRegex = "shopitem,\t\d{1,}, "+location.NormalItem+"\n"
+		itemDesc = re.findall(itemRegex, shopDetail)
 
-	shopDetailReplaced = shopDetail.replace(toReplace, replacement)
-	changedCode = filecode.replace(shopDetail, shopDetailReplaced)
+		labelExtra = "" if len(shopDupeSet) == 1 else "_"+str(shopDupeSet.index(shopName))
+
+		beforeLabel = ".ckir_BEFORE"+"".join(location.Name.upper().split())+"0ITEMCODE"+labelExtra+"::\n"
+		afterLabel = ".ckir_AFTER"+"".join(location.Name.upper().split())+"0ITEMCODE"+labelExtra+"::\n"
+		toReplace = "\t" + itemDesc[0]
+		replacement = beforeLabel + toReplace + afterLabel
+
+		shopDetailReplaced = shopDetail.replace(toReplace, replacement)
+		filecode = filecode.replace(shopDetail, shopDetailReplaced)
 
 	newfilestream = open(mart_data_file, "w")
 	newfilestream.seek(0)
-	newfilestream.write(changedCode)
+	newfilestream.write(filecode)
 	newfilestream.truncate()
 	newfilestream.flush()
 	newfilestream.close()

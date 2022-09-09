@@ -2,8 +2,8 @@
   {
     "label": "AideScript_GivePotion.ckir_BEFOREELMAIDEPOTION0ITEMCODE",
     "address_range": {
-      "begin": 495280,
-      "end": 495283
+      "begin": 495298,
+      "end": 495301
     },
     "integer_values": "158 18 1",
     "hex_values": "$9e $12 $1"
@@ -11,8 +11,8 @@
   {
     "label": "AideScript_GiveYouBalls.ckir_BEFOREELMAIDEPOKEBALLS0ITEMCODE",
     "address_range": {
-      "begin": 495326,
-      "end": 495329
+      "begin": 495344,
+      "end": 495347
     },
     "integer_values": "158 5 5",
     "hex_values": "$9e $5 $5"
@@ -695,8 +695,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSLICKITUNG0ITEMCODE",
     "address_range": {
-      "begin": 1611417,
-      "end": 1611420
+      "begin": 1611442,
+      "end": 1611445
     },
     "integer_values": "158 112 1",
     "hex_values": "$9e $70 $1"
@@ -704,8 +704,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSODDISH0ITEMCODE",
     "address_range": {
-      "begin": 1611440,
-      "end": 1611443
+      "begin": 1611465,
+      "end": 1611468
     },
     "integer_values": "158 34 1",
     "hex_values": "$9e $22 $1"
@@ -713,8 +713,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSPICHU0ITEMCODE",
     "address_range": {
-      "begin": 1611503,
-      "end": 1611506
+      "begin": 1611528,
+      "end": 1611531
     },
     "integer_values": "158 23 1",
     "hex_values": "$9e $17 $1"
@@ -722,8 +722,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSSTARYU0ITEMCODE",
     "address_range": {
-      "begin": 1611463,
-      "end": 1611466
+      "begin": 1611488,
+      "end": 1611491
     },
     "integer_values": "158 24 1",
     "hex_values": "$9e $18 $1"
@@ -731,8 +731,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSVULPIX0ITEMCODE",
     "address_range": {
-      "begin": 1611486,
-      "end": 1611489
+      "begin": 1611511,
+      "end": 1611514
     },
     "integer_values": "158 22 1",
     "hex_values": "$9e $16 $1"
@@ -857,8 +857,8 @@
   {
     "label": "Buena.ckir_BEFOREBUENAITEM0ITEMCODE",
     "address_range": {
-      "begin": 382979,
-      "end": 382982
+      "begin": 382998,
+      "end": 383001
     },
     "integer_values": "158 116 1",
     "hex_values": "$9e $74 $1"
@@ -1955,8 +1955,8 @@
   {
     "label": "Copycat.ckir_BEFORECOPYCATRAILPASS0ITEMCODE",
     "address_range": {
-      "begin": 1617862,
-      "end": 1617865
+      "begin": 1617887,
+      "end": 1617890
     },
     "integer_values": "158 134 1",
     "hex_values": "$9e $86 $1"
@@ -2540,8 +2540,8 @@
   {
     "label": "ElmGiveEverstoneScript.ckir_BEFOREELMEVERSTONE0ITEMCODE",
     "address_range": {
-      "begin": 495125,
-      "end": 495128
+      "begin": 495143,
+      "end": 495146
     },
     "integer_values": "158 112 1",
     "hex_values": "$9e $70 $1"
@@ -2549,8 +2549,8 @@
   {
     "label": "ElmGiveMasterBallScript.ckir_BEFOREELMMASTERBALL0ITEMCODE",
     "address_range": {
-      "begin": 495150,
-      "end": 495153
+      "begin": 495168,
+      "end": 495171
     },
     "integer_values": "158 1 1",
     "hex_values": "$9e $1 $1"
@@ -2558,8 +2558,8 @@
   {
     "label": "ElmGiveTicketScript.ckir_BEFOREELMSSTICKET0ITEMCODE",
     "address_range": {
-      "begin": 495169,
-      "end": 495172
+      "begin": 495187,
+      "end": 495190
     },
     "integer_values": "158 68 1",
     "hex_values": "$9e $44 $1"
@@ -2864,8 +2864,8 @@
   {
     "label": "FightingDojoFocusBand.ckir_BEFOREDOJOBAND0ITEMCODE",
     "address_range": {
-      "begin": 1612735,
-      "end": 1612737
+      "begin": 1612760,
+      "end": 1612762
     },
     "integer_values": "119 1",
     "hex_values": "$77 $1"
@@ -2882,11 +2882,11 @@
   {
     "label": "FightingDojo_MapEvents.ckir_BEFOREDOJOBAND0NPCCODE",
     "address_range": {
-      "begin": 1612916,
-      "end": 1612929
+      "begin": 1612941,
+      "end": 1612954
     },
-    "integer_values": "84 5 7 1 0 255 255 1 0 191 91 125 7",
-    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $bf $5b $7d $7"
+    "integer_values": "84 5 7 1 0 255 255 1 0 216 91 125 7",
+    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $d8 $5b $7d $7"
   },
   {
     "label": "FlowerShopTeacherScript.ckir_BEFOREFLOWERSHOP0ITEMCODE",
@@ -4448,8 +4448,8 @@
   {
     "label": "MagikarpLengthRaterScript.ckir_BEFORELAKEOFRAGEBIGMAGIKARPGUYELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1681398,
-      "end": 1681401
+      "begin": 1681417,
+      "end": 1681420
     },
     "integer_values": "158 65 1",
     "hex_values": "$9e $41 $1"
@@ -5832,6 +5832,330 @@
     "hex_values": "$1 $18"
   },
   {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 90973,
+      "end": 90975
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 90975,
+      "end": 90977
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 90971,
+      "end": 90973
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 90982,
+      "end": 90984
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 90986,
+      "end": 90988
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 90984,
+      "end": 90986
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 90980,
+      "end": 90982
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91004,
+      "end": 91006
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91008,
+      "end": 91010
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91006,
+      "end": 91008
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91010,
+      "end": 91012
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91002,
+      "end": 91004
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91054,
+      "end": 91056
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91058,
+      "end": 91060
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91056,
+      "end": 91058
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91060,
+      "end": 91062
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91062,
+      "end": 91064
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91052,
+      "end": 91054
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91028,
+      "end": 91030
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91032,
+      "end": 91034
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91030,
+      "end": 91032
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91034,
+      "end": 91036
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91026,
+      "end": 91028
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 90993,
+      "end": 90995
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 90995,
+      "end": 90997
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 90997,
+      "end": 90999
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 90991,
+      "end": 90993
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91041,
+      "end": 91043
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91043,
+      "end": 91045
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91045,
+      "end": 91047
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91047,
+      "end": 91049
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91039,
+      "end": 91041
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91017,
+      "end": 91019
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91019,
+      "end": 91021
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91021,
+      "end": 91023
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91015,
+      "end": 91017
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
     "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPFULLHEAL0ITEMCODE",
     "address_range": {
       "begin": 90867,
@@ -6626,8 +6950,8 @@
   {
     "label": "MeetMomScript.ckir_BEFOREPOKEGEARGIFT0ITEMCODE",
     "address_range": {
-      "begin": 500994,
-      "end": 500997
+      "begin": 501012,
+      "end": 501015
     },
     "integer_values": "175 4 0",
     "hex_values": "$af $4 $0"
@@ -6653,8 +6977,8 @@
   {
     "label": "MonicaScript.ckir_BEFOREROUTE40MONICA0ITEMCODE",
     "address_range": {
-      "begin": 1729016,
-      "end": 1729019
+      "begin": 1729035,
+      "end": 1729038
     },
     "integer_values": "158 77 1",
     "hex_values": "$9e $4d $1"
@@ -6662,17 +6986,17 @@
   {
     "label": "MonicaScript.ckir_BEFORE_timed_events_MONICA2",
     "address_range": {
-      "begin": 1728995,
-      "end": 1728999
+      "begin": 1729014,
+      "end": 1729018
     },
-    "integer_values": "6 10 13 98",
-    "hex_values": "$6 $a $d $62"
+    "integer_values": "6 10 32 98",
+    "hex_values": "$6 $a $20 $62"
   },
   {
     "label": "MonicaScript.ckir_BEFORE_timed_events_MONICA_NotMonday",
     "address_range": {
-      "begin": 1729037,
-      "end": 1729037
+      "begin": 1729056,
+      "end": 1729056
     },
     "integer_values": "",
     "hex_values": ""
@@ -7301,8 +7625,8 @@
   {
     "label": "MrPsychic.ckir_BEFOREMRPSYCHICTM0ITEMCODE",
     "address_range": {
-      "begin": 1615843,
-      "end": 1615846
+      "begin": 1615868,
+      "end": 1615871
     },
     "integer_values": "158 221 1",
     "hex_values": "$9e $dd $1"
@@ -7319,8 +7643,8 @@
   {
     "label": "NationalParkBugContestHiddenFullHeal.ckir_BEFORENATIONALPARKHIDDENFULLHEALBCC0ITEMCODE",
     "address_range": {
-      "begin": 379209,
-      "end": 379212
+      "begin": 379228,
+      "end": 379231
     },
     "integer_values": "132 0 38",
     "hex_values": "$84 $0 $26"
@@ -7328,8 +7652,8 @@
   {
     "label": "NationalParkBugContestParlyzHeal.ckir_BEFORENATIONALPARKPARLYZHEAL0ITEMCODEB",
     "address_range": {
-      "begin": 379205,
-      "end": 379207
+      "begin": 379224,
+      "end": 379226
     },
     "integer_values": "13 1",
     "hex_values": "$d $1"
@@ -7337,8 +7661,8 @@
   {
     "label": "NationalParkBugContestTMDig.ckir_BEFORENATIONALPARKDIGTM0ITEMCODEB",
     "address_range": {
-      "begin": 379207,
-      "end": 379209
+      "begin": 379226,
+      "end": 379228
     },
     "integer_values": "219 1",
     "hex_values": "$db $1"
@@ -7364,35 +7688,35 @@
   {
     "label": "NationalParkBugContest_MapEvents.ckir_BEFORENATIONALPARKDIGTM0NPCCODEB",
     "address_range": {
-      "begin": 380186,
-      "end": 380199
+      "begin": 380205,
+      "end": 380218
     },
-    "integer_values": "84 47 5 1 0 255 255 1 0 71 73 89 6",
-    "hex_values": "$54 $2f $5 $1 $0 $ff $ff $1 $0 $47 $49 $59 $6"
+    "integer_values": "84 47 5 1 0 255 255 1 0 90 73 89 6",
+    "hex_values": "$54 $2f $5 $1 $0 $ff $ff $1 $0 $5a $49 $59 $6"
   },
   {
     "label": "NationalParkBugContest_MapEvents.ckir_BEFORENATIONALPARKHIDDENFULLHEALBCC0ITEMCODEB",
     "address_range": {
-      "begin": 380032,
-      "end": 380037
+      "begin": 380051,
+      "end": 380056
     },
-    "integer_values": "47 6 7 73 73",
-    "hex_values": "$2f $6 $7 $49 $49"
+    "integer_values": "47 6 7 92 73",
+    "hex_values": "$2f $6 $7 $5c $49"
   },
   {
     "label": "NationalParkBugContest_MapEvents.ckir_BEFORENATIONALPARKPARLYZHEAL0NPCCODEB",
     "address_range": {
-      "begin": 380173,
-      "end": 380186
+      "begin": 380192,
+      "end": 380205
     },
-    "integer_values": "84 16 39 1 0 255 255 1 0 69 73 88 6",
-    "hex_values": "$54 $10 $27 $1 $0 $ff $ff $1 $0 $45 $49 $58 $6"
+    "integer_values": "84 16 39 1 0 255 255 1 0 88 73 88 6",
+    "hex_values": "$54 $10 $27 $1 $0 $ff $ff $1 $0 $58 $49 $58 $6"
   },
   {
     "label": "NationalParkHiddenFullHeal.ckir_BEFORENATIONALPARKHIDDENFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 377296,
-      "end": 377299
+      "begin": 377315,
+      "end": 377318
     },
     "integer_values": "132 0 38",
     "hex_values": "$84 $0 $26"
@@ -7400,8 +7724,8 @@
   {
     "label": "NationalParkParlyzHeal.ckir_BEFORENATIONALPARKPARLYZHEAL0ITEMCODE",
     "address_range": {
-      "begin": 377292,
-      "end": 377294
+      "begin": 377311,
+      "end": 377313
     },
     "integer_values": "13 1",
     "hex_values": "$d $1"
@@ -7409,8 +7733,8 @@
   {
     "label": "NationalParkTMDig.ckir_BEFORENATIONALPARKDIGTM0ITEMCODE",
     "address_range": {
-      "begin": 377294,
-      "end": 377296
+      "begin": 377313,
+      "end": 377315
     },
     "integer_values": "219 1",
     "hex_values": "$db $1"
@@ -7427,35 +7751,35 @@
   {
     "label": "NationalPark_MapEvents.ckir_BEFORENATIONALPARKDIGTM0NPCCODE",
     "address_range": {
-      "begin": 379101,
-      "end": 379114
+      "begin": 379120,
+      "end": 379133
     },
-    "integer_values": "84 47 5 1 0 255 255 1 0 206 65 89 6",
-    "hex_values": "$54 $2f $5 $1 $0 $ff $ff $1 $0 $ce $41 $59 $6"
+    "integer_values": "84 47 5 1 0 255 255 1 0 225 65 89 6",
+    "hex_values": "$54 $2f $5 $1 $0 $ff $ff $1 $0 $e1 $41 $59 $6"
   },
   {
     "label": "NationalPark_MapEvents.ckir_BEFORENATIONALPARKHIDDENFULLHEAL0ITEMCODEB",
     "address_range": {
-      "begin": 378921,
-      "end": 378926
+      "begin": 378940,
+      "end": 378945
     },
-    "integer_values": "47 6 7 208 65",
-    "hex_values": "$2f $6 $7 $d0 $41"
+    "integer_values": "47 6 7 227 65",
+    "hex_values": "$2f $6 $7 $e3 $41"
   },
   {
     "label": "NationalPark_MapEvents.ckir_BEFORENATIONALPARKPARLYZHEAL0NPCCODE",
     "address_range": {
-      "begin": 379075,
-      "end": 379088
+      "begin": 379094,
+      "end": 379107
     },
-    "integer_values": "84 16 39 1 0 255 255 1 0 204 65 88 6",
-    "hex_values": "$54 $10 $27 $1 $0 $ff $ff $1 $0 $cc $41 $58 $6"
+    "integer_values": "84 16 39 1 0 255 255 1 0 223 65 88 6",
+    "hex_values": "$54 $10 $27 $1 $0 $ff $ff $1 $0 $df $41 $58 $6"
   },
   {
     "label": "NationalPark_MapEvents.ckir_BEFORE_TrainerEvent_NationalPark_0",
     "address_range": {
-      "begin": 379023,
-      "end": 379036
+      "begin": 379042,
+      "end": 379055
     },
     "integer_values": "39 27 31 10 0 255 255 146 3 66 64 255 255",
     "hex_values": "$27 $1b $1f $a $0 $ff $ff $92 $3 $42 $40 $ff $ff"
@@ -7463,8 +7787,8 @@
   {
     "label": "NationalPark_MapEvents.ckir_BEFORE_TrainerEvent_NationalPark_1",
     "address_range": {
-      "begin": 379036,
-      "end": 379049
+      "begin": 379055,
+      "end": 379068
     },
     "integer_values": "46 33 22 10 0 255 255 130 2 44 65 255 255",
     "hex_values": "$2e $21 $16 $a $0 $ff $ff $82 $2 $2c $41 $ff $ff"
@@ -7472,8 +7796,8 @@
   {
     "label": "NationalPark_MapEvents.ckir_BEFORE_TrainerEvent_NationalPark_2",
     "address_range": {
-      "begin": 379049,
-      "end": 379062
+      "begin": 379068,
+      "end": 379081
     },
     "integer_values": "45 13 20 10 0 255 255 130 2 24 65 255 255",
     "hex_values": "$2d $d $14 $a $0 $ff $ff $82 $2 $18 $41 $ff $ff"
@@ -7481,11 +7805,11 @@
   {
     "label": "NationalPark_MapEvents.ckir_BEFORE_TrainerEvent_NationalPark_3",
     "address_range": {
-      "begin": 379062,
-      "end": 379075
+      "begin": 379081,
+      "end": 379094
     },
-    "integer_values": "40 18 12 10 0 255 255 146 3 175 65 255 255",
-    "hex_values": "$28 $12 $c $a $0 $ff $ff $92 $3 $af $41 $ff $ff"
+    "integer_values": "40 18 12 10 0 255 255 146 3 194 65 255 255",
+    "hex_values": "$28 $12 $c $a $0 $ff $ff $92 $3 $c2 $41 $ff $ff"
   },
   {
     "label": "NewBarkTown_Blocks.ckir_BEFORE_NewBarkTown_Blocks",
@@ -7499,17 +7823,17 @@
   {
     "label": "Oak.ckir_BEFORE_OAK_BADGES_CHECK",
     "address_range": {
-      "begin": 1684696,
-      "end": 1684700
+      "begin": 1684715,
+      "end": 1684719
     },
-    "integer_values": "10 16 240 116",
-    "hex_values": "$a $10 $f0 $74"
+    "integer_values": "10 16 3 117",
+    "hex_values": "$a $10 $3 $75"
   },
   {
     "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",
     "address_range": {
-      "begin": 1684724,
-      "end": 1684727
+      "begin": 1684743,
+      "end": 1684746
     },
     "integer_values": "51 79 7",
     "hex_values": "$33 $4f $7"
@@ -7526,8 +7850,8 @@
   {
     "label": "OfficerScript_GuardWithSludgeBomb.ckir_BEFOREROUTE43SLUDGEBOMBTM0ITEMCODE",
     "address_range": {
-      "begin": 1682821,
-      "end": 1682824
+      "begin": 1682840,
+      "end": 1682843
     },
     "integer_values": "158 228 1",
     "hex_values": "$9e $e4 $1"
@@ -7598,26 +7922,26 @@
   {
     "label": "OlivineLighthouse2F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse2F_0",
     "address_range": {
-      "begin": 373346,
-      "end": 373359
+      "begin": 373367,
+      "end": 373380
     },
-    "integer_values": "73 7 13 9 0 255 255 146 3 198 111 255 255",
-    "hex_values": "$49 $7 $d $9 $0 $ff $ff $92 $3 $c6 $6f $ff $ff"
+    "integer_values": "73 7 13 9 0 255 255 146 3 219 111 255 255",
+    "hex_values": "$49 $7 $d $9 $0 $ff $ff $92 $3 $db $6f $ff $ff"
   },
   {
     "label": "OlivineLighthouse2F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse2F_1",
     "address_range": {
-      "begin": 373359,
-      "end": 373372
+      "begin": 373380,
+      "end": 373393
     },
-    "integer_values": "64 12 21 8 0 255 255 146 3 178 111 255 255",
-    "hex_values": "$40 $c $15 $8 $0 $ff $ff $92 $3 $b2 $6f $ff $ff"
+    "integer_values": "64 12 21 8 0 255 255 146 3 199 111 255 255",
+    "hex_values": "$40 $c $15 $8 $0 $ff $ff $92 $3 $c7 $6f $ff $ff"
   },
   {
     "label": "OlivineLighthouse3FEther.ckir_BEFORELIGHTHOUSEETHER0ITEMCODE",
     "address_range": {
-      "begin": 373434,
-      "end": 373436
+      "begin": 373455,
+      "end": 373457
     },
     "integer_values": "63 1",
     "hex_values": "$3f $1"
@@ -7634,38 +7958,38 @@
   {
     "label": "OlivineLighthouse3F_MapEvents.ckir_BEFORELIGHTHOUSEETHER0NPCCODE",
     "address_range": {
-      "begin": 374044,
-      "end": 374057
+      "begin": 374065,
+      "end": 374078
     },
-    "integer_values": "84 6 12 1 0 255 255 1 0 186 114 100 6",
-    "hex_values": "$54 $6 $c $1 $0 $ff $ff $1 $0 $ba $72 $64 $6"
+    "integer_values": "84 6 12 1 0 255 255 1 0 207 114 100 6",
+    "hex_values": "$54 $6 $c $1 $0 $ff $ff $1 $0 $cf $72 $64 $6"
   },
   {
     "label": "OlivineLighthouse3F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse3F_0",
     "address_range": {
-      "begin": 374005,
-      "end": 374018
+      "begin": 374026,
+      "end": 374039
     },
-    "integer_values": "73 6 13 6 0 255 255 146 1 166 114 255 255",
-    "hex_values": "$49 $6 $d $6 $0 $ff $ff $92 $1 $a6 $72 $ff $ff"
+    "integer_values": "73 6 13 6 0 255 255 146 1 187 114 255 255",
+    "hex_values": "$49 $6 $d $6 $0 $ff $ff $92 $1 $bb $72 $ff $ff"
   },
   {
     "label": "OlivineLighthouse3F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse3F_1",
     "address_range": {
-      "begin": 374018,
-      "end": 374031
+      "begin": 374039,
+      "end": 374052
     },
-    "integer_values": "64 9 17 9 0 255 255 146 4 146 114 255 255",
-    "hex_values": "$40 $9 $11 $9 $0 $ff $ff $92 $4 $92 $72 $ff $ff"
+    "integer_values": "64 9 17 9 0 255 255 146 4 167 114 255 255",
+    "hex_values": "$40 $9 $11 $9 $0 $ff $ff $92 $4 $a7 $72 $ff $ff"
   },
   {
     "label": "OlivineLighthouse3F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse3F_2",
     "address_range": {
-      "begin": 374031,
-      "end": 374044
+      "begin": 374052,
+      "end": 374065
     },
-    "integer_values": "39 13 7 7 0 255 255 146 3 126 114 255 255",
-    "hex_values": "$27 $d $7 $7 $0 $ff $ff $92 $3 $7e $72 $ff $ff"
+    "integer_values": "39 13 7 7 0 255 255 146 3 147 114 255 255",
+    "hex_values": "$27 $d $7 $7 $0 $ff $ff $92 $3 $93 $72 $ff $ff"
   },
   {
     "label": "OlivineLighthouse4F_Blocks.ckir_BEFORE_OlivineLighthouse4F_Blocks",
@@ -7679,20 +8003,20 @@
   {
     "label": "OlivineLighthouse4F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse4F_0",
     "address_range": {
-      "begin": 374585,
-      "end": 374598
+      "begin": 374606,
+      "end": 374619
     },
-    "integer_values": "73 18 11 8 0 255 255 146 3 63 117 255 255",
-    "hex_values": "$49 $12 $b $8 $0 $ff $ff $92 $3 $3f $75 $ff $ff"
+    "integer_values": "73 18 11 8 0 255 255 146 3 84 117 255 255",
+    "hex_values": "$49 $12 $b $8 $0 $ff $ff $92 $3 $54 $75 $ff $ff"
   },
   {
     "label": "OlivineLighthouse4F_MapEvents.ckir_BEFORE_TrainerEvent_OlivineLighthouse4F_1",
     "address_range": {
-      "begin": 374598,
-      "end": 374611
+      "begin": 374619,
+      "end": 374632
     },
-    "integer_values": "40 6 15 6 0 255 255 146 1 43 117 255 255",
-    "hex_values": "$28 $6 $f $6 $0 $ff $ff $92 $1 $2b $75 $ff $ff"
+    "integer_values": "40 6 15 6 0 255 255 146 1 64 117 255 255",
+    "hex_values": "$28 $6 $f $6 $0 $ff $ff $92 $1 $40 $75 $ff $ff"
   },
   {
     "label": "OlivineLighthouse5FHiddenHyperPotion.ckir_BEFORELIGHTHOUSEHIDDENHYPERPOTION0ITEMCODE",
@@ -8039,8 +8363,8 @@
   {
     "label": "RadioTower1FRadioCardWomanScript.ckir_BEFORERADIOCARDQUIZ0ITEMCODE",
     "address_range": {
-      "begin": 380447,
-      "end": 380450
+      "begin": 380466,
+      "end": 380469
     },
     "integer_values": "175 0 0",
     "hex_values": "$af $0 $0"
@@ -8057,11 +8381,11 @@
   {
     "label": "RadioTower1F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower1F_0",
     "address_range": {
-      "begin": 382668,
-      "end": 382681
+      "begin": 382687,
+      "end": 382700
     },
-    "integer_values": "53 5 18 6 0 255 255 2 3 79 78 206 6",
-    "hex_values": "$35 $5 $12 $6 $0 $ff $ff $2 $3 $4f $4e $ce $6"
+    "integer_values": "53 5 18 6 0 255 255 2 3 98 78 206 6",
+    "hex_values": "$35 $5 $12 $6 $0 $ff $ff $2 $3 $62 $4e $ce $6"
   },
   {
     "label": "RadioTower2F_Blocks.ckir_BEFORE_RadioTower2F_Blocks",
@@ -8075,44 +8399,44 @@
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_0",
     "address_range": {
-      "begin": 386245,
-      "end": 386258
+      "begin": 386264,
+      "end": 386277
     },
-    "integer_values": "53 8 5 7 0 255 255 2 3 29 87 206 6",
-    "hex_values": "$35 $8 $5 $7 $0 $ff $ff $2 $3 $1d $57 $ce $6"
+    "integer_values": "53 8 5 7 0 255 255 2 3 48 87 206 6",
+    "hex_values": "$35 $8 $5 $7 $0 $ff $ff $2 $3 $30 $57 $ce $6"
   },
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_1",
     "address_range": {
-      "begin": 386258,
-      "end": 386271
+      "begin": 386277,
+      "end": 386290
     },
-    "integer_values": "53 8 12 6 0 255 255 2 3 49 87 206 6",
-    "hex_values": "$35 $8 $c $6 $0 $ff $ff $2 $3 $31 $57 $ce $6"
+    "integer_values": "53 8 12 6 0 255 255 2 3 68 87 206 6",
+    "hex_values": "$35 $8 $c $6 $0 $ff $ff $2 $3 $44 $57 $ce $6"
   },
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_2",
     "address_range": {
-      "begin": 386271,
-      "end": 386284
+      "begin": 386290,
+      "end": 386303
     },
-    "integer_values": "53 5 8 6 0 255 255 2 2 69 87 206 6",
-    "hex_values": "$35 $5 $8 $6 $0 $ff $ff $2 $2 $45 $57 $ce $6"
+    "integer_values": "53 5 8 6 0 255 255 2 2 88 87 206 6",
+    "hex_values": "$35 $5 $8 $6 $0 $ff $ff $2 $2 $58 $57 $ce $6"
   },
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_3",
     "address_range": {
-      "begin": 386284,
-      "end": 386297
+      "begin": 386303,
+      "end": 386316
     },
-    "integer_values": "54 9 14 7 0 255 255 130 3 89 87 206 6",
-    "hex_values": "$36 $9 $e $7 $0 $ff $ff $82 $3 $59 $57 $ce $6"
+    "integer_values": "54 9 14 7 0 255 255 130 3 108 87 206 6",
+    "hex_values": "$36 $9 $e $7 $0 $ff $ff $82 $3 $6c $57 $ce $6"
   },
   {
     "label": "RadioTower3FCooltrainerFScript.ckir_BEFORERADIOTOWERSUNNYDAYTM0ITEMCODE",
     "address_range": {
-      "begin": 386442,
-      "end": 386445
+      "begin": 386461,
+      "end": 386464
     },
     "integer_values": "158 202 1",
     "hex_values": "$9e $ca $1"
@@ -8129,44 +8453,44 @@
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_0",
     "address_range": {
-      "begin": 387912,
-      "end": 387925
+      "begin": 387931,
+      "end": 387944
     },
-    "integer_values": "53 5 9 9 0 255 255 2 2 159 101 206 6",
-    "hex_values": "$35 $5 $9 $9 $0 $ff $ff $2 $2 $9f $65 $ce $6"
+    "integer_values": "53 5 9 9 0 255 255 2 2 178 101 206 6",
+    "hex_values": "$35 $5 $9 $9 $0 $ff $ff $2 $2 $b2 $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_1",
     "address_range": {
-      "begin": 387925,
-      "end": 387938
+      "begin": 387944,
+      "end": 387957
     },
-    "integer_values": "53 6 10 6 0 255 255 2 3 179 101 206 6",
-    "hex_values": "$35 $6 $a $6 $0 $ff $ff $2 $3 $b3 $65 $ce $6"
+    "integer_values": "53 6 10 6 0 255 255 2 3 198 101 206 6",
+    "hex_values": "$35 $6 $a $6 $0 $ff $ff $2 $3 $c6 $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_2",
     "address_range": {
-      "begin": 387938,
-      "end": 387951
+      "begin": 387957,
+      "end": 387970
     },
-    "integer_values": "53 10 20 7 0 255 255 2 3 199 101 206 6",
-    "hex_values": "$35 $a $14 $7 $0 $ff $ff $2 $3 $c7 $65 $ce $6"
+    "integer_values": "53 10 20 7 0 255 255 2 3 218 101 206 6",
+    "hex_values": "$35 $a $14 $7 $0 $ff $ff $2 $3 $da $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_3",
     "address_range": {
-      "begin": 387951,
-      "end": 387964
+      "begin": 387970,
+      "end": 387983
     },
-    "integer_values": "60 10 13 7 0 255 255 146 5 219 101 206 6",
-    "hex_values": "$3c $a $d $7 $0 $ff $ff $92 $5 $db $65 $ce $6"
+    "integer_values": "60 10 13 7 0 255 255 146 5 238 101 206 6",
+    "hex_values": "$3c $a $d $7 $0 $ff $ff $92 $5 $ee $65 $ce $6"
   },
   {
     "label": "RadioTower4FDJMaryScript.ckir_BEFORERADIOTOWERPINKBOW0ITEMCODE",
     "address_range": {
-      "begin": 387993,
-      "end": 387996
+      "begin": 388012,
+      "end": 388015
     },
     "integer_values": "158 104 1",
     "hex_values": "$9e $68 $1"
@@ -8183,38 +8507,38 @@
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_0",
     "address_range": {
-      "begin": 389217,
-      "end": 389230
+      "begin": 389236,
+      "end": 389249
     },
-    "integer_values": "53 10 9 31 0 255 255 2 3 184 107 206 6",
-    "hex_values": "$35 $a $9 $1f $0 $ff $ff $2 $3 $b8 $6b $ce $6"
+    "integer_values": "53 10 9 31 0 255 255 2 3 203 107 206 6",
+    "hex_values": "$35 $a $9 $1f $0 $ff $ff $2 $3 $cb $6b $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_1",
     "address_range": {
-      "begin": 389230,
-      "end": 389243
+      "begin": 389249,
+      "end": 389262
     },
-    "integer_values": "53 5 18 8 2 255 255 2 2 204 107 206 6",
-    "hex_values": "$35 $5 $12 $8 $2 $ff $ff $2 $2 $cc $6b $ce $6"
+    "integer_values": "53 5 18 8 2 255 255 2 2 223 107 206 6",
+    "hex_values": "$35 $5 $12 $8 $2 $ff $ff $2 $2 $df $6b $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_2",
     "address_range": {
-      "begin": 389243,
-      "end": 389256
+      "begin": 389262,
+      "end": 389275
     },
-    "integer_values": "54 8 16 9 0 255 255 130 1 224 107 206 6",
-    "hex_values": "$36 $8 $10 $9 $0 $ff $ff $82 $1 $e0 $6b $ce $6"
+    "integer_values": "54 8 16 9 0 255 255 130 1 243 107 206 6",
+    "hex_values": "$36 $8 $10 $9 $0 $ff $ff $82 $1 $f3 $6b $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_3",
     "address_range": {
-      "begin": 389256,
-      "end": 389269
+      "begin": 389275,
+      "end": 389288
     },
-    "integer_values": "60 6 8 8 0 255 255 146 4 244 107 206 6",
-    "hex_values": "$3c $6 $8 $8 $0 $ff $ff $92 $4 $f4 $6b $ce $6"
+    "integer_values": "60 6 8 8 0 255 255 146 4 7 108 206 6",
+    "hex_values": "$3c $6 $8 $8 $0 $ff $ff $92 $4 $7 $6c $ce $6"
   },
   {
     "label": "RadioTower5FRocketBossScene.ckir_BEFORERADIOTOWERROCKETSPART20ITEMCODE",
@@ -8723,8 +9047,8 @@
   {
     "label": "Route12Calcium.ckir_BEFOREROUTE12CALCIUM0ITEMCODE",
     "address_range": {
-      "begin": 1732619,
-      "end": 1732621
+      "begin": 1732638,
+      "end": 1732640
     },
     "integer_values": "31 1",
     "hex_values": "$1f $1"
@@ -8732,8 +9056,8 @@
   {
     "label": "Route12HiddenElixer.ckir_BEFOREROUTE12HIDDENELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1732623,
-      "end": 1732626
+      "begin": 1732642,
+      "end": 1732645
     },
     "integer_values": "243 0 65",
     "hex_values": "$f3 $0 $41"
@@ -8741,8 +9065,8 @@
   {
     "label": "Route12Nugget.ckir_BEFOREROUTE12NUGGET0ITEMCODE",
     "address_range": {
-      "begin": 1732621,
-      "end": 1732623
+      "begin": 1732640,
+      "end": 1732642
     },
     "integer_values": "36 1",
     "hex_values": "$24 $1"
@@ -8768,65 +9092,65 @@
   {
     "label": "Route12_MapEvents.ckir_BEFOREROUTE12CALCIUM0NPCCODE",
     "address_range": {
-      "begin": 1733405,
-      "end": 1733418
+      "begin": 1733424,
+      "end": 1733437
     },
-    "integer_values": "84 47 9 1 0 255 255 1 0 11 112 136 7",
-    "hex_values": "$54 $2f $9 $1 $0 $ff $ff $1 $0 $b $70 $88 $7"
+    "integer_values": "84 47 9 1 0 255 255 1 0 30 112 136 7",
+    "hex_values": "$54 $2f $9 $1 $0 $ff $ff $1 $0 $1e $70 $88 $7"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFOREROUTE12HIDDENELIXER0ITEMCODEB",
     "address_range": {
-      "begin": 1733347,
-      "end": 1733352
+      "begin": 1733366,
+      "end": 1733371
     },
-    "integer_values": "13 14 7 15 112",
-    "hex_values": "$d $e $7 $f $70"
+    "integer_values": "13 14 7 34 112",
+    "hex_values": "$d $e $7 $22 $70"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFOREROUTE12NUGGET0NPCCODE",
     "address_range": {
-      "begin": 1733418,
-      "end": 1733431
+      "begin": 1733437,
+      "end": 1733450
     },
-    "integer_values": "84 55 9 1 0 255 255 1 0 13 112 137 7",
-    "hex_values": "$54 $37 $9 $1 $0 $ff $ff $1 $0 $d $70 $89 $7"
+    "integer_values": "84 55 9 1 0 255 255 1 0 32 112 137 7",
+    "hex_values": "$54 $37 $9 $1 $0 $ff $ff $1 $0 $20 $70 $89 $7"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFORE_TrainerEvent_Route12_0",
     "address_range": {
-      "begin": 1733353,
-      "end": 1733366
+      "begin": 1733372,
+      "end": 1733385
     },
-    "integer_values": "58 17 9 10 0 255 255 162 1 201 111 255 255",
-    "hex_values": "$3a $11 $9 $a $0 $ff $ff $a2 $1 $c9 $6f $ff $ff"
+    "integer_values": "58 17 9 10 0 255 255 162 1 220 111 255 255",
+    "hex_values": "$3a $11 $9 $a $0 $ff $ff $a2 $1 $dc $6f $ff $ff"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFORE_TrainerEvent_Route12_1",
     "address_range": {
-      "begin": 1733366,
-      "end": 1733379
+      "begin": 1733385,
+      "end": 1733398
     },
-    "integer_values": "58 27 18 6 0 255 255 162 1 221 111 255 255",
-    "hex_values": "$3a $1b $12 $6 $0 $ff $ff $a2 $1 $dd $6f $ff $ff"
+    "integer_values": "58 27 18 6 0 255 255 162 1 240 111 255 255",
+    "hex_values": "$3a $1b $12 $6 $0 $ff $ff $a2 $1 $f0 $6f $ff $ff"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFORE_TrainerEvent_Route12_2",
     "address_range": {
-      "begin": 1733379,
-      "end": 1733392
+      "begin": 1733398,
+      "end": 1733411
     },
-    "integer_values": "58 42 14 8 0 255 255 162 5 241 111 255 255",
-    "hex_values": "$3a $2a $e $8 $0 $ff $ff $a2 $5 $f1 $6f $ff $ff"
+    "integer_values": "58 42 14 8 0 255 255 162 5 4 112 255 255",
+    "hex_values": "$3a $2a $e $8 $0 $ff $ff $a2 $5 $4 $70 $ff $ff"
   },
   {
     "label": "Route12_MapEvents.ckir_BEFORE_TrainerEvent_Route12_3",
     "address_range": {
-      "begin": 1733392,
-      "end": 1733405
+      "begin": 1733411,
+      "end": 1733424
     },
-    "integer_values": "58 11 10 9 0 255 255 162 3 181 111 255 255",
-    "hex_values": "$3a $b $a $9 $0 $ff $ff $a2 $3 $b5 $6f $ff $ff"
+    "integer_values": "58 11 10 9 0 255 255 162 3 200 111 255 255",
+    "hex_values": "$3a $b $a $9 $0 $ff $ff $a2 $3 $c8 $6f $ff $ff"
   },
   {
     "label": "Route13HiddenCalcium.ckir_BEFOREROUTE13HIDDENCALCIUM0ITEMCODE",
@@ -9146,38 +9470,38 @@
   {
     "label": "Route19_MapEvents.ckir_BEFORE_TrainerEvent_Route19_0",
     "address_range": {
-      "begin": 1699387,
-      "end": 1699400
+      "begin": 1699406,
+      "end": 1699419
     },
-    "integer_values": "50 27 13 8 0 255 255 162 0 242 105 255 255",
-    "hex_values": "$32 $1b $d $8 $0 $ff $ff $a2 $0 $f2 $69 $ff $ff"
+    "integer_values": "50 27 13 8 0 255 255 162 0 5 106 255 255",
+    "hex_values": "$32 $1b $d $8 $0 $ff $ff $a2 $0 $5 $6a $ff $ff"
   },
   {
     "label": "Route19_MapEvents.ckir_BEFORE_TrainerEvent_Route19_1",
     "address_range": {
-      "begin": 1699400,
-      "end": 1699413
+      "begin": 1699419,
+      "end": 1699432
     },
-    "integer_values": "49 32 17 10 0 255 255 130 3 6 106 255 255",
-    "hex_values": "$31 $20 $11 $a $0 $ff $ff $82 $3 $6 $6a $ff $ff"
+    "integer_values": "49 32 17 10 0 255 255 130 3 25 106 255 255",
+    "hex_values": "$31 $20 $11 $a $0 $ff $ff $82 $3 $19 $6a $ff $ff"
   },
   {
     "label": "Route19_MapEvents.ckir_BEFORE_TrainerEvent_Route19_2",
     "address_range": {
-      "begin": 1699413,
-      "end": 1699426
+      "begin": 1699432,
+      "end": 1699445
     },
-    "integer_values": "49 21 15 10 0 255 255 130 3 26 106 255 255",
-    "hex_values": "$31 $15 $f $a $0 $ff $ff $82 $3 $1a $6a $ff $ff"
+    "integer_values": "49 21 15 10 0 255 255 130 3 45 106 255 255",
+    "hex_values": "$31 $15 $f $a $0 $ff $ff $82 $3 $2d $6a $ff $ff"
   },
   {
     "label": "Route19_MapEvents.ckir_BEFORE_TrainerEvent_Route19_3",
     "address_range": {
-      "begin": 1699426,
-      "end": 1699439
+      "begin": 1699445,
+      "end": 1699458
     },
-    "integer_values": "49 27 12 7 0 255 255 130 0 46 106 255 255",
-    "hex_values": "$31 $1b $c $7 $0 $ff $ff $82 $0 $2e $6a $ff $ff"
+    "integer_values": "49 27 12 7 0 255 255 130 0 65 106 255 255",
+    "hex_values": "$31 $1b $c $7 $0 $ff $ff $82 $0 $41 $6a $ff $ff"
   },
   {
     "label": "Route1FruitTree.ckir_BEFOREROUTE1BITTERBERRY0ITEMCODE",
@@ -9326,8 +9650,8 @@
   {
     "label": "Route25HiddenPotion.ckir_BEFOREROUTE25HIDDENPOTION0ITEMCODE",
     "address_range": {
-      "begin": 1699802,
-      "end": 1699805
+      "begin": 1699821,
+      "end": 1699824
     },
     "integer_values": "248 0 18",
     "hex_values": "$f8 $0 $12"
@@ -9335,8 +9659,8 @@
   {
     "label": "Route25Protein.ckir_BEFOREROUTE25PROTEIN0ITEMCODE",
     "address_range": {
-      "begin": 1699800,
-      "end": 1699802
+      "begin": 1699819,
+      "end": 1699821
     },
     "integer_values": "27 1",
     "hex_values": "$1b $1"
@@ -9353,83 +9677,83 @@
   {
     "label": "Route25_MapEvents.ckir_BEFOREROUTE25HIDDENPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 1701283,
-      "end": 1701288
+      "begin": 1701302,
+      "end": 1701307
     },
-    "integer_values": "5 4 7 218 111",
-    "hex_values": "$5 $4 $7 $da $6f"
+    "integer_values": "5 4 7 237 111",
+    "hex_values": "$5 $4 $7 $ed $6f"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFOREROUTE25PROTEIN0NPCCODE",
     "address_range": {
-      "begin": 1701419,
-      "end": 1701432
+      "begin": 1701438,
+      "end": 1701451
     },
-    "integer_values": "84 8 36 1 0 255 255 1 0 216 111 139 7",
-    "hex_values": "$54 $8 $24 $1 $0 $ff $ff $1 $0 $d8 $6f $8b $7"
+    "integer_values": "84 8 36 1 0 255 255 1 0 235 111 139 7",
+    "hex_values": "$54 $8 $24 $1 $0 $ff $ff $1 $0 $eb $6f $8b $7"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_0",
     "address_range": {
-      "begin": 1701315,
-      "end": 1701328
+      "begin": 1701334,
+      "end": 1701347
     },
-    "integer_values": "39 12 16 6 0 255 255 146 3 21 111 255 255",
-    "hex_values": "$27 $c $10 $6 $0 $ff $ff $92 $3 $15 $6f $ff $ff"
+    "integer_values": "39 12 16 6 0 255 255 146 3 40 111 255 255",
+    "hex_values": "$27 $c $10 $6 $0 $ff $ff $92 $3 $28 $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_1",
     "address_range": {
-      "begin": 1701328,
-      "end": 1701341
+      "begin": 1701347,
+      "end": 1701360
     },
-    "integer_values": "40 15 20 7 0 255 255 146 3 41 111 255 255",
-    "hex_values": "$28 $f $14 $7 $0 $ff $ff $92 $3 $29 $6f $ff $ff"
+    "integer_values": "40 15 20 7 0 255 255 146 3 60 111 255 255",
+    "hex_values": "$28 $f $14 $7 $0 $ff $ff $92 $3 $3c $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_2",
     "address_range": {
-      "begin": 1701341,
-      "end": 1701354
+      "begin": 1701360,
+      "end": 1701373
     },
-    "integer_values": "39 12 25 6 0 255 255 146 1 61 111 255 255",
-    "hex_values": "$27 $c $19 $6 $0 $ff $ff $92 $1 $3d $6f $ff $ff"
+    "integer_values": "39 12 25 6 0 255 255 146 1 80 111 255 255",
+    "hex_values": "$27 $c $19 $6 $0 $ff $ff $92 $1 $50 $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_3",
     "address_range": {
-      "begin": 1701354,
-      "end": 1701367
+      "begin": 1701373,
+      "end": 1701386
     },
-    "integer_values": "40 10 26 9 0 255 255 146 3 81 111 255 255",
-    "hex_values": "$28 $a $1a $9 $0 $ff $ff $92 $3 $51 $6f $ff $ff"
+    "integer_values": "40 10 26 9 0 255 255 146 3 100 111 255 255",
+    "hex_values": "$28 $a $1a $9 $0 $ff $ff $92 $3 $64 $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_4",
     "address_range": {
-      "begin": 1701367,
-      "end": 1701380
+      "begin": 1701386,
+      "end": 1701399
     },
-    "integer_values": "39 8 29 6 0 255 255 162 2 101 111 255 255",
-    "hex_values": "$27 $8 $1d $6 $0 $ff $ff $a2 $2 $65 $6f $ff $ff"
+    "integer_values": "39 8 29 6 0 255 255 162 2 120 111 255 255",
+    "hex_values": "$27 $8 $1d $6 $0 $ff $ff $a2 $2 $78 $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_5",
     "address_range": {
-      "begin": 1701380,
-      "end": 1701393
+      "begin": 1701399,
+      "end": 1701412
     },
-    "integer_values": "40 15 32 7 0 255 255 146 1 121 111 255 255",
-    "hex_values": "$28 $f $20 $7 $0 $ff $ff $92 $1 $79 $6f $ff $ff"
+    "integer_values": "40 15 32 7 0 255 255 146 1 140 111 255 255",
+    "hex_values": "$28 $f $20 $7 $0 $ff $ff $92 $1 $8c $6f $ff $ff"
   },
   {
     "label": "Route25_MapEvents.ckir_BEFORE_TrainerEvent_Route25_6",
     "address_range": {
-      "begin": 1701393,
-      "end": 1701406
+      "begin": 1701412,
+      "end": 1701425
     },
-    "integer_values": "43 11 35 6 0 255 255 178 1 141 111 255 255",
-    "hex_values": "$2b $b $23 $6 $0 $ff $ff $b2 $1 $8d $6f $ff $ff"
+    "integer_values": "43 11 35 6 0 255 255 178 1 160 111 255 255",
+    "hex_values": "$2b $b $23 $6 $0 $ff $ff $b2 $1 $a0 $6f $ff $ff"
   },
   {
     "label": "Route26FruitTree.ckir_BEFOREROUTE26ICEBERRY0ITEMCODE",
@@ -11657,8 +11981,8 @@
   {
     "label": "Route39FruitTree.ckir_BEFOREROUTE39MINTBERRY0ITEMCODE",
     "address_range": {
-      "begin": 1727476,
-      "end": 1727478
+      "begin": 1727495,
+      "end": 1727497
     },
     "integer_values": "155 15",
     "hex_values": "$9b $f"
@@ -11666,8 +11990,8 @@
   {
     "label": "Route39HiddenNugget.ckir_BEFOREROUTE39HIDDENNUGGET0ITEMCODE",
     "address_range": {
-      "begin": 1727478,
-      "end": 1727481
+      "begin": 1727497,
+      "end": 1727500
     },
     "integer_values": "170 0 36",
     "hex_values": "$aa $0 $24"
@@ -11684,35 +12008,35 @@
   {
     "label": "Route39_MapEvents.ckir_BEFOREROUTE39HIDDENNUGGET0ITEMCODEB",
     "address_range": {
-      "begin": 1728728,
-      "end": 1728733
+      "begin": 1728747,
+      "end": 1728752
     },
-    "integer_values": "13 5 7 246 91",
-    "hex_values": "$d $5 $7 $f6 $5b"
+    "integer_values": "13 5 7 9 92",
+    "hex_values": "$d $5 $7 $9 $5c"
   },
   {
     "label": "Route39_MapEvents.ckir_BEFOREROUTE39MINTBERRY0NPCCODE",
     "address_range": {
-      "begin": 1728838,
-      "end": 1728851
+      "begin": 1728857,
+      "end": 1728870
     },
-    "integer_values": "93 7 13 1 0 255 255 0 0 244 91 255 255",
-    "hex_values": "$5d $7 $d $1 $0 $ff $ff $0 $0 $f4 $5b $ff $ff"
+    "integer_values": "93 7 13 1 0 255 255 0 0 7 92 255 255",
+    "hex_values": "$5d $7 $d $1 $0 $ff $ff $0 $0 $7 $5c $ff $ff"
   },
   {
     "label": "Route39_MapEvents.ckir_BEFORE_TrainerEvent_Route39_0",
     "address_range": {
-      "begin": 1728734,
-      "end": 1728747
+      "begin": 1728753,
+      "end": 1728766
     },
-    "integer_values": "73 33 17 8 0 255 255 146 5 150 91 255 255",
-    "hex_values": "$49 $21 $11 $8 $0 $ff $ff $92 $5 $96 $5b $ff $ff"
+    "integer_values": "73 33 17 8 0 255 255 146 5 169 91 255 255",
+    "hex_values": "$49 $21 $11 $8 $0 $ff $ff $92 $5 $a9 $5b $ff $ff"
   },
   {
     "label": "Route39_MapEvents.ckir_BEFORE_TrainerEvent_Route39_1",
     "address_range": {
-      "begin": 1728747,
-      "end": 1728760
+      "begin": 1728766,
+      "end": 1728779
     },
     "integer_values": "45 26 14 7 0 255 255 130 4 255 90 255 255",
     "hex_values": "$2d $1a $e $7 $0 $ff $ff $82 $4 $ff $5a $ff $ff"
@@ -11720,20 +12044,20 @@
   {
     "label": "Route39_MapEvents.ckir_BEFORE_TrainerEvent_Route39_2",
     "address_range": {
-      "begin": 1728760,
-      "end": 1728773
+      "begin": 1728779,
+      "end": 1728792
     },
-    "integer_values": "46 23 15 9 0 255 255 130 4 130 91 255 255",
-    "hex_values": "$2e $17 $f $9 $0 $ff $ff $82 $4 $82 $5b $ff $ff"
+    "integer_values": "46 23 15 9 0 255 255 130 4 149 91 255 255",
+    "hex_values": "$2e $17 $f $9 $0 $ff $ff $82 $4 $95 $5b $ff $ff"
   },
   {
     "label": "Route39_MapEvents.ckir_BEFORE_TrainerEvent_Route39_3",
     "address_range": {
-      "begin": 1728825,
-      "end": 1728838
+      "begin": 1728844,
+      "end": 1728857
     },
-    "integer_values": "102 11 17 10 0 255 255 146 1 170 91 255 255",
-    "hex_values": "$66 $b $11 $a $0 $ff $ff $92 $1 $aa $5b $ff $ff"
+    "integer_values": "102 11 17 10 0 255 255 146 1 189 91 255 255",
+    "hex_values": "$66 $b $11 $a $0 $ff $ff $92 $1 $bd $5b $ff $ff"
   },
   {
     "label": "Route3_Blocks.ckir_BEFORE_Route3_Blocks",
@@ -11783,8 +12107,8 @@
   {
     "label": "Route40HiddenHyperPotion.ckir_BEFOREROUTE40HIDDENHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 1729049,
-      "end": 1729052
+      "begin": 1729068,
+      "end": 1729071
     },
     "integer_values": "171 0 16",
     "hex_values": "$ab $0 $10"
@@ -11801,62 +12125,62 @@
   {
     "label": "Route40_MapEvents.ckir_BEFOREROUTE40HIDDENHYPERPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 1730461,
-      "end": 1730466
+      "begin": 1730480,
+      "end": 1730485
     },
-    "integer_values": "8 7 7 25 98",
-    "hex_values": "$8 $7 $7 $19 $62"
+    "integer_values": "8 7 7 44 98",
+    "hex_values": "$8 $7 $7 $2c $62"
   },
   {
     "label": "Route40_MapEvents.ckir_BEFORE_TrainerEvent_Route40_0",
     "address_range": {
-      "begin": 1730467,
-      "end": 1730480
+      "begin": 1730486,
+      "end": 1730499
     },
-    "integer_values": "245 19 18 9 0 255 255 130 4 156 97 255 255",
-    "hex_values": "$f5 $13 $12 $9 $0 $ff $ff $82 $4 $9c $61 $ff $ff"
+    "integer_values": "245 19 18 9 0 255 255 130 4 175 97 255 255",
+    "hex_values": "$f5 $13 $12 $9 $0 $ff $ff $82 $4 $af $61 $ff $ff"
   },
   {
     "label": "Route40_MapEvents.ckir_BEFORE_TrainerEvent_Route40_1",
     "address_range": {
-      "begin": 1730480,
-      "end": 1730493
+      "begin": 1730499,
+      "end": 1730512
     },
-    "integer_values": "245 34 22 8 0 255 255 130 5 176 97 255 255",
-    "hex_values": "$f5 $22 $16 $8 $0 $ff $ff $82 $5 $b0 $61 $ff $ff"
+    "integer_values": "245 34 22 8 0 255 255 130 5 195 97 255 255",
+    "hex_values": "$f5 $22 $16 $8 $0 $ff $ff $82 $5 $c3 $61 $ff $ff"
   },
   {
     "label": "Route40_MapEvents.ckir_BEFORE_TrainerEvent_Route40_2",
     "address_range": {
-      "begin": 1730493,
-      "end": 1730506
+      "begin": 1730512,
+      "end": 1730525
     },
-    "integer_values": "50 23 7 9 0 255 255 162 4 116 97 255 255",
-    "hex_values": "$32 $17 $7 $9 $0 $ff $ff $a2 $4 $74 $61 $ff $ff"
+    "integer_values": "50 23 7 9 0 255 255 162 4 135 97 255 255",
+    "hex_values": "$32 $17 $7 $9 $0 $ff $ff $a2 $4 $87 $61 $ff $ff"
   },
   {
     "label": "Route40_MapEvents.ckir_BEFORE_TrainerEvent_Route40_3",
     "address_range": {
-      "begin": 1730506,
-      "end": 1730519
+      "begin": 1730525,
+      "end": 1730538
     },
-    "integer_values": "50 29 14 31 0 255 255 162 3 136 97 255 255",
-    "hex_values": "$32 $1d $e $1f $0 $ff $ff $a2 $3 $88 $61 $ff $ff"
+    "integer_values": "50 29 14 31 0 255 255 162 3 155 97 255 255",
+    "hex_values": "$32 $1d $e $1f $0 $ff $ff $a2 $3 $9b $61 $ff $ff"
   },
   {
     "label": "Route40_MapScripts.ckir_BEFORE_timed_events_MONICA",
     "address_range": {
-      "begin": 1728874,
-      "end": 1728878
+      "begin": 1728893,
+      "end": 1728897
     },
-    "integer_values": "7 10 113 97",
-    "hex_values": "$7 $a $71 $61"
+    "integer_values": "7 10 132 97",
+    "hex_values": "$7 $a $84 $61"
   },
   {
     "label": "Route40_MapScripts.ckir_BEFORE_timed_events_MONICA_MonicaAppears",
     "address_range": {
-      "begin": 1728881,
-      "end": 1728881
+      "begin": 1728900,
+      "end": 1728900
     },
     "integer_values": "",
     "hex_values": ""
@@ -11864,8 +12188,8 @@
   {
     "label": "Route41HiddenMaxEther.ckir_BEFOREROUTE41HIDDENMAXETHER0ITEMCODE",
     "address_range": {
-      "begin": 1730828,
-      "end": 1730831
+      "begin": 1730847,
+      "end": 1730850
     },
     "integer_values": "172 0 64",
     "hex_values": "$ac $0 $40"
@@ -11882,101 +12206,101 @@
   {
     "label": "Route41_MapEvents.ckir_BEFOREROUTE41HIDDENMAXETHER0ITEMCODEB",
     "address_range": {
-      "begin": 1732395,
-      "end": 1732400
+      "begin": 1732414,
+      "end": 1732419
     },
-    "integer_values": "35 9 7 12 105",
-    "hex_values": "$23 $9 $7 $c $69"
+    "integer_values": "35 9 7 31 105",
+    "hex_values": "$23 $9 $7 $1f $69"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_0",
     "address_range": {
-      "begin": 1732401,
-      "end": 1732414
+      "begin": 1732420,
+      "end": 1732433
     },
-    "integer_values": "245 10 36 10 0 255 255 130 3 165 104 255 255",
-    "hex_values": "$f5 $a $24 $a $0 $ff $ff $82 $3 $a5 $68 $ff $ff"
+    "integer_values": "245 10 36 10 0 255 255 130 3 184 104 255 255",
+    "hex_values": "$f5 $a $24 $a $0 $ff $ff $82 $3 $b8 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_1",
     "address_range": {
-      "begin": 1732414,
-      "end": 1732427
+      "begin": 1732433,
+      "end": 1732446
     },
-    "integer_values": "245 12 50 10 0 255 255 130 3 185 104 255 255",
-    "hex_values": "$f5 $c $32 $a $0 $ff $ff $82 $3 $b9 $68 $ff $ff"
+    "integer_values": "245 12 50 10 0 255 255 130 3 204 104 255 255",
+    "hex_values": "$f5 $c $32 $a $0 $ff $ff $82 $3 $cc $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_2",
     "address_range": {
-      "begin": 1732427,
-      "end": 1732440
+      "begin": 1732446,
+      "end": 1732459
     },
-    "integer_values": "245 30 24 30 0 255 255 130 3 205 104 255 255",
-    "hex_values": "$f5 $1e $18 $1e $0 $ff $ff $82 $3 $cd $68 $ff $ff"
+    "integer_values": "245 30 24 30 0 255 255 130 3 224 104 255 255",
+    "hex_values": "$f5 $1e $18 $1e $0 $ff $ff $82 $3 $e0 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_3",
     "address_range": {
-      "begin": 1732440,
-      "end": 1732453
+      "begin": 1732459,
+      "end": 1732472
     },
-    "integer_values": "245 34 36 31 0 255 255 130 3 225 104 255 255",
-    "hex_values": "$f5 $22 $24 $1f $0 $ff $ff $82 $3 $e1 $68 $ff $ff"
+    "integer_values": "245 34 36 31 0 255 255 130 3 244 104 255 255",
+    "hex_values": "$f5 $22 $24 $1f $0 $ff $ff $82 $3 $f4 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_4",
     "address_range": {
-      "begin": 1732453,
-      "end": 1732466
+      "begin": 1732472,
+      "end": 1732485
     },
-    "integer_values": "245 50 23 30 0 255 255 130 3 245 104 255 255",
-    "hex_values": "$f5 $32 $17 $1e $0 $ff $ff $82 $3 $f5 $68 $ff $ff"
+    "integer_values": "245 50 23 30 0 255 255 130 3 8 105 255 255",
+    "hex_values": "$f5 $32 $17 $1e $0 $ff $ff $82 $3 $8 $69 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_5",
     "address_range": {
-      "begin": 1732466,
-      "end": 1732479
+      "begin": 1732485,
+      "end": 1732498
     },
-    "integer_values": "50 8 21 10 0 255 255 162 3 65 104 255 255",
-    "hex_values": "$32 $8 $15 $a $0 $ff $ff $a2 $3 $41 $68 $ff $ff"
+    "integer_values": "50 8 21 10 0 255 255 162 3 84 104 255 255",
+    "hex_values": "$32 $8 $15 $a $0 $ff $ff $a2 $3 $54 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_6",
     "address_range": {
-      "begin": 1732479,
-      "end": 1732492
+      "begin": 1732498,
+      "end": 1732511
     },
-    "integer_values": "50 23 27 7 0 255 255 162 3 85 104 255 255",
-    "hex_values": "$32 $17 $1b $7 $0 $ff $ff $a2 $3 $55 $68 $ff $ff"
+    "integer_values": "50 23 27 7 0 255 255 162 3 104 104 255 255",
+    "hex_values": "$32 $17 $1b $7 $0 $ff $ff $a2 $3 $68 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_7",
     "address_range": {
-      "begin": 1732492,
-      "end": 1732505
+      "begin": 1732511,
+      "end": 1732524
     },
-    "integer_values": "50 38 31 8 0 255 255 162 3 105 104 255 255",
-    "hex_values": "$32 $26 $1f $8 $0 $ff $ff $a2 $3 $69 $68 $ff $ff"
+    "integer_values": "50 38 31 8 0 255 255 162 3 124 104 255 255",
+    "hex_values": "$32 $26 $1f $8 $0 $ff $ff $a2 $3 $7c $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_8",
     "address_range": {
-      "begin": 1732505,
-      "end": 1732518
+      "begin": 1732524,
+      "end": 1732537
     },
-    "integer_values": "50 32 48 9 0 255 255 162 4 125 104 255 255",
-    "hex_values": "$32 $20 $30 $9 $0 $ff $ff $a2 $4 $7d $68 $ff $ff"
+    "integer_values": "50 32 48 9 0 255 255 162 4 144 104 255 255",
+    "hex_values": "$32 $20 $30 $9 $0 $ff $ff $a2 $4 $90 $68 $ff $ff"
   },
   {
     "label": "Route41_MapEvents.ckir_BEFORE_TrainerEvent_Route41_9",
     "address_range": {
-      "begin": 1732518,
-      "end": 1732531
+      "begin": 1732537,
+      "end": 1732550
     },
-    "integer_values": "50 54 13 10 0 255 255 162 2 145 104 255 255",
-    "hex_values": "$32 $36 $d $a $0 $ff $ff $a2 $2 $91 $68 $ff $ff"
+    "integer_values": "50 54 13 10 0 255 255 162 2 164 104 255 255",
+    "hex_values": "$32 $36 $d $a $0 $ff $ff $a2 $2 $a4 $68 $ff $ff"
   },
   {
     "label": "Route42FruitTree1.ckir_BEFOREROUTE42GRNAPRICORN0ITEMCODE",
@@ -12125,8 +12449,8 @@
   {
     "label": "Route43FruitTree.ckir_BEFOREROUTE43BITTERBERRY0ITEMCODE",
     "address_range": {
-      "begin": 1692251,
-      "end": 1692253
+      "begin": 1692270,
+      "end": 1692272
     },
     "integer_values": "155 8",
     "hex_values": "$9b $8"
@@ -12134,8 +12458,8 @@
   {
     "label": "Route43MaxEther.ckir_BEFOREROUTE43MAXETHER0ITEMCODE",
     "address_range": {
-      "begin": 1692253,
-      "end": 1692255
+      "begin": 1692272,
+      "end": 1692274
     },
     "integer_values": "64 1",
     "hex_values": "$40 $1"
@@ -12152,26 +12476,26 @@
   {
     "label": "Route43_MapEvents.ckir_BEFOREROUTE43BITTERBERRY0NPCCODE",
     "address_range": {
-      "begin": 1693693,
-      "end": 1693706
+      "begin": 1693712,
+      "end": 1693725
     },
-    "integer_values": "93 30 5 1 0 255 255 0 0 91 82 255 255",
-    "hex_values": "$5d $1e $5 $1 $0 $ff $ff $0 $0 $5b $52 $ff $ff"
+    "integer_values": "93 30 5 1 0 255 255 0 0 110 82 255 255",
+    "hex_values": "$5d $1e $5 $1 $0 $ff $ff $0 $0 $6e $52 $ff $ff"
   },
   {
     "label": "Route43_MapEvents.ckir_BEFOREROUTE43MAXETHER0NPCCODE",
     "address_range": {
-      "begin": 1693706,
-      "end": 1693719
+      "begin": 1693725,
+      "end": 1693738
     },
-    "integer_values": "84 36 16 1 0 255 255 1 0 93 82 181 6",
-    "hex_values": "$54 $24 $10 $1 $0 $ff $ff $1 $0 $5d $52 $b5 $6"
+    "integer_values": "84 36 16 1 0 255 255 1 0 112 82 181 6",
+    "hex_values": "$54 $24 $10 $1 $0 $ff $ff $1 $0 $70 $52 $b5 $6"
   },
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_0",
     "address_range": {
-      "begin": 1693615,
-      "end": 1693628
+      "begin": 1693634,
+      "end": 1693647
     },
     "integer_values": "43 9 17 8 0 255 255 146 2 106 80 255 255",
     "hex_values": "$2b $9 $11 $8 $0 $ff $ff $92 $2 $6a $50 $ff $ff"
@@ -12179,8 +12503,8 @@
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_1",
     "address_range": {
-      "begin": 1693628,
-      "end": 1693641
+      "begin": 1693647,
+      "end": 1693660
     },
     "integer_values": "43 24 17 10 0 255 255 146 3 126 80 255 255",
     "hex_values": "$2b $18 $11 $a $0 $ff $ff $92 $3 $7e $50 $ff $ff"
@@ -12188,8 +12512,8 @@
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_2",
     "address_range": {
-      "begin": 1693641,
-      "end": 1693654
+      "begin": 1693660,
+      "end": 1693673
     },
     "integer_values": "43 11 18 6 0 255 255 146 2 61 81 255 255",
     "hex_values": "$2b $b $12 $6 $0 $ff $ff $92 $2 $3d $51 $ff $ff"
@@ -12197,8 +12521,8 @@
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_3",
     "address_range": {
-      "begin": 1693654,
-      "end": 1693667
+      "begin": 1693673,
+      "end": 1693686
     },
     "integer_values": "58 20 8 9 0 255 255 162 4 81 81 255 255",
     "hex_values": "$3a $14 $8 $9 $0 $ff $ff $a2 $4 $51 $51 $ff $ff"
@@ -12206,8 +12530,8 @@
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_4",
     "address_range": {
-      "begin": 1693667,
-      "end": 1693680
+      "begin": 1693686,
+      "end": 1693699
     },
     "integer_values": "40 29 13 6 0 255 255 162 2 101 81 255 255",
     "hex_values": "$28 $1d $d $6 $0 $ff $ff $a2 $2 $65 $51 $ff $ff"
@@ -12215,8 +12539,8 @@
   {
     "label": "Route43_MapEvents.ckir_BEFORE_TrainerEvent_Route43_5",
     "address_range": {
-      "begin": 1693680,
-      "end": 1693693
+      "begin": 1693699,
+      "end": 1693712
     },
     "integer_values": "39 44 17 10 0 255 255 162 3 86 80 255 255",
     "hex_values": "$27 $2c $11 $a $0 $ff $ff $a2 $3 $56 $50 $ff $ff"
@@ -12224,8 +12548,8 @@
   {
     "label": "Route44FruitTree.ckir_BEFOREROUTE44BURNTBERRY0ITEMCODE",
     "address_range": {
-      "begin": 1694261,
-      "end": 1694263
+      "begin": 1694280,
+      "end": 1694282
     },
     "integer_values": "155 16",
     "hex_values": "$9b $10"
@@ -12233,8 +12557,8 @@
   {
     "label": "Route44HiddenElixer.ckir_BEFOREROUTE44HIDDENELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1694269,
-      "end": 1694272
+      "begin": 1694288,
+      "end": 1694291
     },
     "integer_values": "174 0 65",
     "hex_values": "$ae $0 $41"
@@ -12242,8 +12566,8 @@
   {
     "label": "Route44MaxRepel.ckir_BEFOREROUTE44MAXREPEL0ITEMCODE",
     "address_range": {
-      "begin": 1694267,
-      "end": 1694269
+      "begin": 1694286,
+      "end": 1694288
     },
     "integer_values": "43 1",
     "hex_values": "$2b $1"
@@ -12251,8 +12575,8 @@
   {
     "label": "Route44MaxRevive.ckir_BEFOREROUTE44MAXREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 1694263,
-      "end": 1694265
+      "begin": 1694282,
+      "end": 1694284
     },
     "integer_values": "40 1",
     "hex_values": "$28 $1"
@@ -12260,8 +12584,8 @@
   {
     "label": "Route44UltraBall.ckir_BEFOREROUTE44ULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 1694265,
-      "end": 1694267
+      "begin": 1694284,
+      "end": 1694286
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -12278,116 +12602,116 @@
   {
     "label": "Route44_MapEvents.ckir_BEFOREROUTE44BURNTBERRY0NPCCODE",
     "address_range": {
-      "begin": 1695840,
-      "end": 1695853
+      "begin": 1695859,
+      "end": 1695872
     },
-    "integer_values": "93 9 13 1 0 255 255 0 0 53 90 255 255",
-    "hex_values": "$5d $9 $d $1 $0 $ff $ff $0 $0 $35 $5a $ff $ff"
+    "integer_values": "93 9 13 1 0 255 255 0 0 72 90 255 255",
+    "hex_values": "$5d $9 $d $1 $0 $ff $ff $0 $0 $48 $5a $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFOREROUTE44HIDDENELIXER0ITEMCODEB",
     "address_range": {
-      "begin": 1695743,
-      "end": 1695748
+      "begin": 1695762,
+      "end": 1695767
     },
-    "integer_values": "9 32 7 61 90",
-    "hex_values": "$9 $20 $7 $3d $5a"
+    "integer_values": "9 32 7 80 90",
+    "hex_values": "$9 $20 $7 $50 $5a"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFOREROUTE44MAXREPEL0NPCCODE",
     "address_range": {
-      "begin": 1695879,
-      "end": 1695892
+      "begin": 1695898,
+      "end": 1695911
     },
-    "integer_values": "84 13 18 1 0 255 255 1 0 59 90 189 7",
-    "hex_values": "$54 $d $12 $1 $0 $ff $ff $1 $0 $3b $5a $bd $7"
+    "integer_values": "84 13 18 1 0 255 255 1 0 78 90 189 7",
+    "hex_values": "$54 $d $12 $1 $0 $ff $ff $1 $0 $4e $5a $bd $7"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFOREROUTE44MAXREVIVE0NPCCODE",
     "address_range": {
-      "begin": 1695853,
-      "end": 1695866
+      "begin": 1695872,
+      "end": 1695885
     },
-    "integer_values": "84 12 34 1 0 255 255 1 0 55 90 182 6",
-    "hex_values": "$54 $c $22 $1 $0 $ff $ff $1 $0 $37 $5a $b6 $6"
+    "integer_values": "84 12 34 1 0 255 255 1 0 74 90 182 6",
+    "hex_values": "$54 $c $22 $1 $0 $ff $ff $1 $0 $4a $5a $b6 $6"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFOREROUTE44ULTRABALL0NPCCODE",
     "address_range": {
-      "begin": 1695866,
-      "end": 1695879
+      "begin": 1695885,
+      "end": 1695898
     },
-    "integer_values": "84 8 49 1 0 255 255 1 0 57 90 183 6",
-    "hex_values": "$54 $8 $31 $1 $0 $ff $ff $1 $0 $39 $5a $b7 $6"
+    "integer_values": "84 8 49 1 0 255 255 1 0 76 90 183 6",
+    "hex_values": "$54 $8 $31 $1 $0 $ff $ff $1 $0 $4c $5a $b7 $6"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_0",
     "address_range": {
-      "begin": 1695749,
-      "end": 1695762
+      "begin": 1695768,
+      "end": 1695781
     },
-    "integer_values": "58 7 39 6 0 255 255 162 1 23 89 255 255",
-    "hex_values": "$3a $7 $27 $6 $0 $ff $ff $a2 $1 $17 $59 $ff $ff"
+    "integer_values": "58 7 39 6 0 255 255 162 1 42 89 255 255",
+    "hex_values": "$3a $7 $27 $6 $0 $ff $ff $a2 $1 $2a $59 $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_1",
     "address_range": {
-      "begin": 1695762,
-      "end": 1695775
+      "begin": 1695781,
+      "end": 1695794
     },
-    "integer_values": "58 17 23 9 0 255 255 162 1 223 89 255 255",
-    "hex_values": "$3a $11 $17 $9 $0 $ff $ff $a2 $1 $df $59 $ff $ff"
+    "integer_values": "58 17 23 9 0 255 255 162 1 242 89 255 255",
+    "hex_values": "$3a $11 $17 $9 $0 $ff $ff $a2 $1 $f2 $59 $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_2",
     "address_range": {
-      "begin": 1695775,
-      "end": 1695788
+      "begin": 1695794,
+      "end": 1695807
     },
-    "integer_values": "39 13 14 31 0 255 255 146 3 3 89 255 255",
-    "hex_values": "$27 $d $e $1f $0 $ff $ff $92 $3 $3 $59 $ff $ff"
+    "integer_values": "39 13 14 31 0 255 255 146 3 22 89 255 255",
+    "hex_values": "$27 $d $e $1f $0 $ff $ff $92 $3 $16 $59 $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_3",
     "address_range": {
-      "begin": 1695788,
-      "end": 1695801
+      "begin": 1695807,
+      "end": 1695820
     },
-    "integer_values": "43 6 47 31 0 255 255 162 3 7 90 255 255",
-    "hex_values": "$2b $6 $2f $1f $0 $ff $ff $a2 $3 $7 $5a $ff $ff"
+    "integer_values": "43 6 47 31 0 255 255 162 3 26 90 255 255",
+    "hex_values": "$2b $6 $2f $1f $0 $ff $ff $a2 $3 $1a $5a $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_4",
     "address_range": {
-      "begin": 1695801,
-      "end": 1695814
+      "begin": 1695820,
+      "end": 1695833
     },
-    "integer_values": "39 9 55 6 0 255 255 162 2 25 88 255 255",
-    "hex_values": "$27 $9 $37 $6 $0 $ff $ff $a2 $2 $19 $58 $ff $ff"
+    "integer_values": "39 9 55 6 0 255 255 162 2 44 88 255 255",
+    "hex_values": "$27 $9 $37 $6 $0 $ff $ff $a2 $2 $2c $58 $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_5",
     "address_range": {
-      "begin": 1695814,
-      "end": 1695827
+      "begin": 1695833,
+      "end": 1695846
     },
-    "integer_values": "35 19 45 8 0 255 255 130 5 27 90 255 255",
-    "hex_values": "$23 $13 $2d $8 $0 $ff $ff $82 $5 $1b $5a $ff $ff"
+    "integer_values": "35 19 45 8 0 255 255 130 5 46 90 255 255",
+    "hex_values": "$23 $13 $2d $8 $0 $ff $ff $82 $5 $2e $5a $ff $ff"
   },
   {
     "label": "Route44_MapEvents.ckir_BEFORE_TrainerEvent_Route44_6",
     "address_range": {
-      "begin": 1695827,
-      "end": 1695840
+      "begin": 1695846,
+      "end": 1695859
     },
-    "integer_values": "36 18 35 8 0 255 255 130 5 243 89 255 255",
-    "hex_values": "$24 $12 $23 $8 $0 $ff $ff $82 $5 $f3 $59 $ff $ff"
+    "integer_values": "36 18 35 8 0 255 255 130 5 6 90 255 255",
+    "hex_values": "$24 $12 $23 $8 $0 $ff $ff $82 $5 $6 $5a $ff $ff"
   },
   {
     "label": "Route45Elixer.ckir_BEFOREROUTE45ELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1696399,
-      "end": 1696401
+      "begin": 1696418,
+      "end": 1696420
     },
     "integer_values": "65 1",
     "hex_values": "$41 $1"
@@ -12395,8 +12719,8 @@
   {
     "label": "Route45FruitTree.ckir_BEFOREROUTE45MYSTERYBERRY0ITEMCODE",
     "address_range": {
-      "begin": 1696393,
-      "end": 1696395
+      "begin": 1696412,
+      "end": 1696414
     },
     "integer_values": "155 12",
     "hex_values": "$9b $c"
@@ -12404,8 +12728,8 @@
   {
     "label": "Route45HiddenPpUp.ckir_BEFOREROUTE45HIDDENPPUP0ITEMCODE",
     "address_range": {
-      "begin": 1696403,
-      "end": 1696406
+      "begin": 1696422,
+      "end": 1696425
     },
     "integer_values": "175 0 62",
     "hex_values": "$af $0 $3e"
@@ -12413,8 +12737,8 @@
   {
     "label": "Route45MaxPotion.ckir_BEFOREROUTE45MAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 1696401,
-      "end": 1696403
+      "begin": 1696420,
+      "end": 1696422
     },
     "integer_values": "15 1",
     "hex_values": "$f $1"
@@ -12422,8 +12746,8 @@
   {
     "label": "Route45Nugget.ckir_BEFOREROUTE45NUGGET0ITEMCODE",
     "address_range": {
-      "begin": 1696395,
-      "end": 1696397
+      "begin": 1696414,
+      "end": 1696416
     },
     "integer_values": "36 1",
     "hex_values": "$24 $1"
@@ -12431,8 +12755,8 @@
   {
     "label": "Route45Revive.ckir_BEFOREROUTE45REVIVE0ITEMCODE",
     "address_range": {
-      "begin": 1696397,
-      "end": 1696399
+      "begin": 1696416,
+      "end": 1696418
     },
     "integer_values": "39 1",
     "hex_values": "$27 $1"
@@ -12449,119 +12773,119 @@
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45ELIXER0NPCCODE",
     "address_range": {
-      "begin": 1698215,
-      "end": 1698228
+      "begin": 1698234,
+      "end": 1698247
     },
-    "integer_values": "84 24 10 1 0 255 255 1 0 143 98 186 6",
-    "hex_values": "$54 $18 $a $1 $0 $ff $ff $1 $0 $8f $62 $ba $6"
+    "integer_values": "84 24 10 1 0 255 255 1 0 162 98 186 6",
+    "hex_values": "$54 $18 $a $1 $0 $ff $ff $1 $0 $a2 $62 $ba $6"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45HIDDENPPUP0ITEMCODEB",
     "address_range": {
-      "begin": 1698079,
-      "end": 1698084
+      "begin": 1698098,
+      "end": 1698103
     },
-    "integer_values": "80 13 7 147 98",
-    "hex_values": "$50 $d $7 $93 $62"
+    "integer_values": "80 13 7 166 98",
+    "hex_values": "$50 $d $7 $a6 $62"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45MAXPOTION0NPCCODE",
     "address_range": {
-      "begin": 1698228,
-      "end": 1698241
+      "begin": 1698247,
+      "end": 1698260
     },
-    "integer_values": "84 37 11 1 0 255 255 1 0 145 98 187 6",
-    "hex_values": "$54 $25 $b $1 $0 $ff $ff $1 $0 $91 $62 $bb $6"
+    "integer_values": "84 37 11 1 0 255 255 1 0 164 98 187 6",
+    "hex_values": "$54 $25 $b $1 $0 $ff $ff $1 $0 $a4 $62 $bb $6"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45MYSTERYBERRY0NPCCODE",
     "address_range": {
-      "begin": 1698176,
-      "end": 1698189
+      "begin": 1698195,
+      "end": 1698208
     },
-    "integer_values": "93 86 20 1 0 255 255 0 0 137 98 255 255",
-    "hex_values": "$5d $56 $14 $1 $0 $ff $ff $0 $0 $89 $62 $ff $ff"
+    "integer_values": "93 86 20 1 0 255 255 0 0 156 98 255 255",
+    "hex_values": "$5d $56 $14 $1 $0 $ff $ff $0 $0 $9c $62 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45NUGGET0NPCCODE",
     "address_range": {
-      "begin": 1698189,
-      "end": 1698202
+      "begin": 1698208,
+      "end": 1698221
     },
-    "integer_values": "84 55 10 1 0 255 255 1 0 139 98 184 6",
-    "hex_values": "$54 $37 $a $1 $0 $ff $ff $1 $0 $8b $62 $b8 $6"
+    "integer_values": "84 55 10 1 0 255 255 1 0 158 98 184 6",
+    "hex_values": "$54 $37 $a $1 $0 $ff $ff $1 $0 $9e $62 $b8 $6"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFOREROUTE45REVIVE0NPCCODE",
     "address_range": {
-      "begin": 1698202,
-      "end": 1698215
+      "begin": 1698221,
+      "end": 1698234
     },
-    "integer_values": "84 70 9 1 0 255 255 1 0 141 98 185 6",
-    "hex_values": "$54 $46 $9 $1 $0 $ff $ff $1 $0 $8d $62 $b9 $6"
+    "integer_values": "84 70 9 1 0 255 255 1 0 160 98 185 6",
+    "hex_values": "$54 $46 $9 $1 $0 $ff $ff $1 $0 $a0 $62 $b9 $6"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_0",
     "address_range": {
-      "begin": 1698085,
-      "end": 1698098
+      "begin": 1698104,
+      "end": 1698117
     },
-    "integer_values": "45 20 14 9 0 255 255 178 1 63 97 255 255",
-    "hex_values": "$2d $14 $e $9 $0 $ff $ff $b2 $1 $3f $61 $ff $ff"
+    "integer_values": "45 20 14 9 0 255 255 178 1 82 97 255 255",
+    "hex_values": "$2d $14 $e $9 $0 $ff $ff $b2 $1 $52 $61 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_1",
     "address_range": {
-      "begin": 1698098,
-      "end": 1698111
+      "begin": 1698117,
+      "end": 1698130
     },
-    "integer_values": "45 69 19 9 0 255 255 178 2 83 97 255 255",
-    "hex_values": "$2d $45 $13 $9 $0 $ff $ff $b2 $2 $53 $61 $ff $ff"
+    "integer_values": "45 69 19 9 0 255 255 178 2 102 97 255 255",
+    "hex_values": "$2d $45 $13 $9 $0 $ff $ff $b2 $2 $66 $61 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_2",
     "address_range": {
-      "begin": 1698111,
-      "end": 1698124
+      "begin": 1698130,
+      "end": 1698143
     },
-    "integer_values": "45 32 9 7 0 255 255 178 2 103 97 255 255",
-    "hex_values": "$2d $20 $9 $7 $0 $ff $ff $b2 $2 $67 $61 $ff $ff"
+    "integer_values": "45 32 9 7 0 255 255 178 2 122 97 255 255",
+    "hex_values": "$2d $20 $9 $7 $0 $ff $ff $b2 $2 $7a $61 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_3",
     "address_range": {
-      "begin": 1698124,
-      "end": 1698137
+      "begin": 1698143,
+      "end": 1698156
     },
-    "integer_values": "45 69 13 8 0 255 255 178 1 34 98 255 255",
-    "hex_values": "$2d $45 $d $8 $0 $ff $ff $b2 $1 $22 $62 $ff $ff"
+    "integer_values": "45 69 13 8 0 255 255 178 1 53 98 255 255",
+    "hex_values": "$2d $45 $d $8 $0 $ff $ff $b2 $1 $35 $62 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_4",
     "address_range": {
-      "begin": 1698137,
-      "end": 1698150
+      "begin": 1698156,
+      "end": 1698169
     },
-    "integer_values": "65 54 15 10 0 255 255 178 2 150 96 255 255",
-    "hex_values": "$41 $36 $f $a $0 $ff $ff $b2 $2 $96 $60 $ff $ff"
+    "integer_values": "65 54 15 10 0 255 255 178 2 169 96 255 255",
+    "hex_values": "$41 $36 $f $a $0 $ff $ff $b2 $2 $a9 $60 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_5",
     "address_range": {
-      "begin": 1698150,
-      "end": 1698163
+      "begin": 1698169,
+      "end": 1698182
     },
-    "integer_values": "35 22 21 8 0 255 255 130 1 54 98 255 255",
-    "hex_values": "$23 $16 $15 $8 $0 $ff $ff $82 $1 $36 $62 $ff $ff"
+    "integer_values": "35 22 21 8 0 255 255 130 1 73 98 255 255",
+    "hex_values": "$23 $16 $15 $8 $0 $ff $ff $82 $1 $49 $62 $ff $ff"
   },
   {
     "label": "Route45_MapEvents.ckir_BEFORE_TrainerEvent_Route45_6",
     "address_range": {
-      "begin": 1698163,
-      "end": 1698176
+      "begin": 1698182,
+      "end": 1698195
     },
-    "integer_values": "36 40 9 10 0 255 255 130 3 74 98 255 255",
-    "hex_values": "$24 $28 $9 $a $0 $ff $ff $82 $3 $4a $62 $ff $ff"
+    "integer_values": "36 40 9 10 0 255 255 130 3 93 98 255 255",
+    "hex_values": "$24 $28 $9 $a $0 $ff $ff $82 $3 $5d $62 $ff $ff"
   },
   {
     "label": "Route46FruitTree1.ckir_BEFOREROUTE46PRZCUREBERRY0ITEMCODE",
@@ -12728,8 +13052,8 @@
   {
     "label": "Route5CleanseTagHouseGrannyScript.ckir_BEFOREROUTE5CLEANSETAG0ITEMCODE",
     "address_range": {
-      "begin": 1619622,
-      "end": 1619625
+      "begin": 1619647,
+      "end": 1619650
     },
     "integer_values": "158 94 1",
     "hex_values": "$9e $5e $1"
@@ -13097,8 +13421,8 @@
   {
     "label": "RuinsOfAlphAerodactylItemRoomEnergyRoot.ckir_BEFORERUINSOFALPHLIGHTCHAMBER30ITEMCODE",
     "address_range": {
-      "begin": 367354,
-      "end": 367356
+      "begin": 367375,
+      "end": 367377
     },
     "integer_values": "122 1",
     "hex_values": "$7a $1"
@@ -13106,8 +13430,8 @@
   {
     "label": "RuinsOfAlphAerodactylItemRoomGoldBerry.ckir_BEFORERUINSOFALPHLIGHTCHAMBER10ITEMCODE",
     "address_range": {
-      "begin": 367348,
-      "end": 367350
+      "begin": 367369,
+      "end": 367371
     },
     "integer_values": "174 1",
     "hex_values": "$ae $1"
@@ -13115,8 +13439,8 @@
   {
     "label": "RuinsOfAlphAerodactylItemRoomHealPowder.ckir_BEFORERUINSOFALPHLIGHTCHAMBER20ITEMCODE",
     "address_range": {
-      "begin": 367352,
-      "end": 367354
+      "begin": 367373,
+      "end": 367375
     },
     "integer_values": "123 1",
     "hex_values": "$7b $1"
@@ -13124,8 +13448,8 @@
   {
     "label": "RuinsOfAlphAerodactylItemRoomMoonStone.ckir_BEFORERUINSOFALPHLIGHTCHAMBER40ITEMCODE",
     "address_range": {
-      "begin": 367350,
-      "end": 367352
+      "begin": 367371,
+      "end": 367373
     },
     "integer_values": "8 1",
     "hex_values": "$8 $1"
@@ -13169,38 +13493,38 @@
   {
     "label": "RuinsOfAlphAerodactylItemRoom_MapEvents.ckir_BEFORERUINSOFALPHLIGHTCHAMBER10NPCCODE",
     "address_range": {
-      "begin": 367432,
-      "end": 367445
+      "begin": 367453,
+      "end": 367466
     },
-    "integer_values": "84 10 6 1 0 255 255 1 0 244 90 160 7",
-    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $f4 $5a $a0 $7"
+    "integer_values": "84 10 6 1 0 255 255 1 0 9 91 160 7",
+    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $9 $5b $a0 $7"
   },
   {
     "label": "RuinsOfAlphAerodactylItemRoom_MapEvents.ckir_BEFORERUINSOFALPHLIGHTCHAMBER20NPCCODE",
     "address_range": {
-      "begin": 367458,
-      "end": 367471
+      "begin": 367479,
+      "end": 367492
     },
-    "integer_values": "84 8 6 1 0 255 255 1 0 248 90 162 7",
-    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $f8 $5a $a2 $7"
+    "integer_values": "84 8 6 1 0 255 255 1 0 13 91 162 7",
+    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $d $5b $a2 $7"
   },
   {
     "label": "RuinsOfAlphAerodactylItemRoom_MapEvents.ckir_BEFORERUINSOFALPHLIGHTCHAMBER30NPCCODE",
     "address_range": {
-      "begin": 367471,
-      "end": 367484
+      "begin": 367492,
+      "end": 367505
     },
-    "integer_values": "84 8 9 1 0 255 255 1 0 250 90 163 7",
-    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $fa $5a $a3 $7"
+    "integer_values": "84 8 9 1 0 255 255 1 0 15 91 163 7",
+    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $f $5b $a3 $7"
   },
   {
     "label": "RuinsOfAlphAerodactylItemRoom_MapEvents.ckir_BEFORERUINSOFALPHLIGHTCHAMBER40NPCCODE",
     "address_range": {
-      "begin": 367445,
-      "end": 367458
+      "begin": 367466,
+      "end": 367479
     },
-    "integer_values": "84 10 9 1 0 255 255 1 0 246 90 161 7",
-    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $f6 $5a $a1 $7"
+    "integer_values": "84 10 9 1 0 255 255 1 0 11 91 161 7",
+    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $b $5b $a1 $7"
   },
   {
     "label": "RuinsOfAlphAerodactylWordRoom_Blocks.ckir_BEFORE_RuinsOfAlphAerodactylWordRoom_Blocks",
@@ -13214,8 +13538,8 @@
   {
     "label": "RuinsOfAlphHoOhItemRoomCharcoal.ckir_BEFORERUINSOFALPHHOOHCHAMBER40ITEMCODE",
     "address_range": {
-      "begin": 366940,
-      "end": 366942
+      "begin": 366961,
+      "end": 366963
     },
     "integer_values": "138 1",
     "hex_values": "$8a $1"
@@ -13223,8 +13547,8 @@
   {
     "label": "RuinsOfAlphHoOhItemRoomGoldBerry.ckir_BEFORERUINSOFALPHHOOHCHAMBER10ITEMCODE",
     "address_range": {
-      "begin": 366934,
-      "end": 366936
+      "begin": 366955,
+      "end": 366957
     },
     "integer_values": "174 1",
     "hex_values": "$ae $1"
@@ -13232,8 +13556,8 @@
   {
     "label": "RuinsOfAlphHoOhItemRoomMysteryberry.ckir_BEFORERUINSOFALPHHOOHCHAMBER20ITEMCODE",
     "address_range": {
-      "begin": 366936,
-      "end": 366938
+      "begin": 366957,
+      "end": 366959
     },
     "integer_values": "150 1",
     "hex_values": "$96 $1"
@@ -13241,8 +13565,8 @@
   {
     "label": "RuinsOfAlphHoOhItemRoomRevivalHerb.ckir_BEFORERUINSOFALPHHOOHCHAMBER30ITEMCODE",
     "address_range": {
-      "begin": 366938,
-      "end": 366940
+      "begin": 366959,
+      "end": 366961
     },
     "integer_values": "124 1",
     "hex_values": "$7c $1"
@@ -13250,38 +13574,38 @@
   {
     "label": "RuinsOfAlphHoOhItemRoom_MapEvents.ckir_BEFORERUINSOFALPHHOOHCHAMBER10NPCCODE",
     "address_range": {
-      "begin": 367018,
-      "end": 367031
+      "begin": 367039,
+      "end": 367052
     },
-    "integer_values": "84 10 6 1 0 255 255 1 0 86 89 148 7",
-    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $56 $59 $94 $7"
+    "integer_values": "84 10 6 1 0 255 255 1 0 107 89 148 7",
+    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $6b $59 $94 $7"
   },
   {
     "label": "RuinsOfAlphHoOhItemRoom_MapEvents.ckir_BEFORERUINSOFALPHHOOHCHAMBER20NPCCODE",
     "address_range": {
-      "begin": 367031,
-      "end": 367044
+      "begin": 367052,
+      "end": 367065
     },
-    "integer_values": "84 10 9 1 0 255 255 1 0 88 89 149 7",
-    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $58 $59 $95 $7"
+    "integer_values": "84 10 9 1 0 255 255 1 0 109 89 149 7",
+    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $6d $59 $95 $7"
   },
   {
     "label": "RuinsOfAlphHoOhItemRoom_MapEvents.ckir_BEFORERUINSOFALPHHOOHCHAMBER30NPCCODE",
     "address_range": {
-      "begin": 367044,
-      "end": 367057
+      "begin": 367065,
+      "end": 367078
     },
-    "integer_values": "84 8 6 1 0 255 255 1 0 90 89 150 7",
-    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $5a $59 $96 $7"
+    "integer_values": "84 8 6 1 0 255 255 1 0 111 89 150 7",
+    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $6f $59 $96 $7"
   },
   {
     "label": "RuinsOfAlphHoOhItemRoom_MapEvents.ckir_BEFORERUINSOFALPHHOOHCHAMBER40NPCCODE",
     "address_range": {
-      "begin": 367057,
-      "end": 367070
+      "begin": 367078,
+      "end": 367091
     },
-    "integer_values": "84 8 9 1 0 255 255 1 0 92 89 151 7",
-    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $5c $59 $97 $7"
+    "integer_values": "84 8 9 1 0 255 255 1 0 113 89 151 7",
+    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $71 $59 $97 $7"
   },
   {
     "label": "RuinsOfAlphHoOhWordRoom_Blocks.ckir_BEFORE_RuinsOfAlphHoOhWordRoom_Blocks",
@@ -13304,8 +13628,8 @@
   {
     "label": "RuinsOfAlphKabutoItemRoomBerry.ckir_BEFORERUINSOFALPHROPECHAMBER10ITEMCODE",
     "address_range": {
-      "begin": 367072,
-      "end": 367074
+      "begin": 367093,
+      "end": 367095
     },
     "integer_values": "173 1",
     "hex_values": "$ad $1"
@@ -13313,8 +13637,8 @@
   {
     "label": "RuinsOfAlphKabutoItemRoomEnergypowder.ckir_BEFORERUINSOFALPHROPECHAMBER40ITEMCODE",
     "address_range": {
-      "begin": 367078,
-      "end": 367080
+      "begin": 367099,
+      "end": 367101
     },
     "integer_values": "121 1",
     "hex_values": "$79 $1"
@@ -13322,8 +13646,8 @@
   {
     "label": "RuinsOfAlphKabutoItemRoomHealPowder.ckir_BEFORERUINSOFALPHROPECHAMBER30ITEMCODE",
     "address_range": {
-      "begin": 367076,
-      "end": 367078
+      "begin": 367097,
+      "end": 367099
     },
     "integer_values": "123 1",
     "hex_values": "$7b $1"
@@ -13331,8 +13655,8 @@
   {
     "label": "RuinsOfAlphKabutoItemRoomPsncureberry.ckir_BEFORERUINSOFALPHROPECHAMBER20ITEMCODE",
     "address_range": {
-      "begin": 367074,
-      "end": 367076
+      "begin": 367095,
+      "end": 367097
     },
     "integer_values": "74 1",
     "hex_values": "$4a $1"
@@ -13340,38 +13664,38 @@
   {
     "label": "RuinsOfAlphKabutoItemRoom_MapEvents.ckir_BEFORERUINSOFALPHROPECHAMBER10NPCCODE",
     "address_range": {
-      "begin": 367156,
-      "end": 367169
+      "begin": 367177,
+      "end": 367190
     },
-    "integer_values": "84 10 6 1 0 255 255 1 0 224 89 152 7",
-    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $e0 $59 $98 $7"
+    "integer_values": "84 10 6 1 0 255 255 1 0 245 89 152 7",
+    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $f5 $59 $98 $7"
   },
   {
     "label": "RuinsOfAlphKabutoItemRoom_MapEvents.ckir_BEFORERUINSOFALPHROPECHAMBER20NPCCODE",
     "address_range": {
-      "begin": 367169,
-      "end": 367182
+      "begin": 367190,
+      "end": 367203
     },
-    "integer_values": "84 10 9 1 0 255 255 1 0 226 89 153 7",
-    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $e2 $59 $99 $7"
+    "integer_values": "84 10 9 1 0 255 255 1 0 247 89 153 7",
+    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $f7 $59 $99 $7"
   },
   {
     "label": "RuinsOfAlphKabutoItemRoom_MapEvents.ckir_BEFORERUINSOFALPHROPECHAMBER30NPCCODE",
     "address_range": {
-      "begin": 367182,
-      "end": 367195
+      "begin": 367203,
+      "end": 367216
     },
-    "integer_values": "84 8 6 1 0 255 255 1 0 228 89 154 7",
-    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $e4 $59 $9a $7"
+    "integer_values": "84 8 6 1 0 255 255 1 0 249 89 154 7",
+    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $f9 $59 $9a $7"
   },
   {
     "label": "RuinsOfAlphKabutoItemRoom_MapEvents.ckir_BEFORERUINSOFALPHROPECHAMBER40NPCCODE",
     "address_range": {
-      "begin": 367195,
-      "end": 367208
+      "begin": 367216,
+      "end": 367229
     },
-    "integer_values": "84 8 9 1 0 255 255 1 0 230 89 155 7",
-    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $e6 $59 $9b $7"
+    "integer_values": "84 8 9 1 0 255 255 1 0 251 89 155 7",
+    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $fb $59 $9b $7"
   },
   {
     "label": "RuinsOfAlphKabutoWordRoom_Blocks.ckir_BEFORE_RuinsOfAlphKabutoWordRoom_Blocks",
@@ -13385,8 +13709,8 @@
   {
     "label": "RuinsOfAlphOmanyteItemRoomMysteryberry.ckir_BEFORERUINSOFALPHWATERCHAMBER10ITEMCODE",
     "address_range": {
-      "begin": 367210,
-      "end": 367212
+      "begin": 367231,
+      "end": 367233
     },
     "integer_values": "150 1",
     "hex_values": "$96 $1"
@@ -13394,8 +13718,8 @@
   {
     "label": "RuinsOfAlphOmanyteItemRoomMysticWater.ckir_BEFORERUINSOFALPHWATERCHAMBER20ITEMCODE",
     "address_range": {
-      "begin": 367212,
-      "end": 367214
+      "begin": 367233,
+      "end": 367235
     },
     "integer_values": "95 1",
     "hex_values": "$5f $1"
@@ -13403,8 +13727,8 @@
   {
     "label": "RuinsOfAlphOmanyteItemRoomStarPiece.ckir_BEFORERUINSOFALPHWATERCHAMBER40ITEMCODE",
     "address_range": {
-      "begin": 367216,
-      "end": 367218
+      "begin": 367237,
+      "end": 367239
     },
     "integer_values": "132 1",
     "hex_values": "$84 $1"
@@ -13412,8 +13736,8 @@
   {
     "label": "RuinsOfAlphOmanyteItemRoomStardust.ckir_BEFORERUINSOFALPHWATERCHAMBER30ITEMCODE",
     "address_range": {
-      "begin": 367214,
-      "end": 367216
+      "begin": 367235,
+      "end": 367237
     },
     "integer_values": "131 1",
     "hex_values": "$83 $1"
@@ -13421,38 +13745,38 @@
   {
     "label": "RuinsOfAlphOmanyteItemRoom_MapEvents.ckir_BEFORERUINSOFALPHWATERCHAMBER10NPCCODE",
     "address_range": {
-      "begin": 367294,
-      "end": 367307
+      "begin": 367315,
+      "end": 367328
     },
-    "integer_values": "84 10 6 1 0 255 255 1 0 106 90 156 7",
-    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $6a $5a $9c $7"
+    "integer_values": "84 10 6 1 0 255 255 1 0 127 90 156 7",
+    "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $7f $5a $9c $7"
   },
   {
     "label": "RuinsOfAlphOmanyteItemRoom_MapEvents.ckir_BEFORERUINSOFALPHWATERCHAMBER20NPCCODE",
     "address_range": {
-      "begin": 367307,
-      "end": 367320
+      "begin": 367328,
+      "end": 367341
     },
-    "integer_values": "84 10 9 1 0 255 255 1 0 108 90 157 7",
-    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $6c $5a $9d $7"
+    "integer_values": "84 10 9 1 0 255 255 1 0 129 90 157 7",
+    "hex_values": "$54 $a $9 $1 $0 $ff $ff $1 $0 $81 $5a $9d $7"
   },
   {
     "label": "RuinsOfAlphOmanyteItemRoom_MapEvents.ckir_BEFORERUINSOFALPHWATERCHAMBER30NPCCODE",
     "address_range": {
-      "begin": 367320,
-      "end": 367333
+      "begin": 367341,
+      "end": 367354
     },
-    "integer_values": "84 8 6 1 0 255 255 1 0 110 90 158 7",
-    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $6e $5a $9e $7"
+    "integer_values": "84 8 6 1 0 255 255 1 0 131 90 158 7",
+    "hex_values": "$54 $8 $6 $1 $0 $ff $ff $1 $0 $83 $5a $9e $7"
   },
   {
     "label": "RuinsOfAlphOmanyteItemRoom_MapEvents.ckir_BEFORERUINSOFALPHWATERCHAMBER40NPCCODE",
     "address_range": {
-      "begin": 367333,
-      "end": 367346
+      "begin": 367354,
+      "end": 367367
     },
-    "integer_values": "84 8 9 1 0 255 255 1 0 112 90 159 7",
-    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $70 $5a $9f $7"
+    "integer_values": "84 8 9 1 0 255 255 1 0 133 90 159 7",
+    "hex_values": "$54 $8 $9 $1 $0 $ff $ff $1 $0 $85 $5a $9f $7"
   },
   {
     "label": "RuinsOfAlphOmanyteWordRoom_Blocks.ckir_BEFORE_RuinsOfAlphOmanyteWordRoom_Blocks",
@@ -13574,8 +13898,8 @@
   {
     "label": "SaffronGymSabrinaScript.ckir_BEFORESAFFRONCITYGYMBADGE0BADGECODE",
     "address_range": {
-      "begin": 1612970,
-      "end": 1612973
+      "begin": 1612995,
+      "end": 1612998
     },
     "integer_values": "175 40 0",
     "hex_values": "$af $28 $0"
@@ -13592,38 +13916,38 @@
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_0",
     "address_range": {
-      "begin": 1614809,
-      "end": 1614822
+      "begin": 1614834,
+      "end": 1614847
     },
-    "integer_values": "48 20 21 10 0 255 255 178 3 200 92 255 255",
-    "hex_values": "$30 $14 $15 $a $0 $ff $ff $b2 $3 $c8 $5c $ff $ff"
+    "integer_values": "48 20 21 10 0 255 255 178 3 225 92 255 255",
+    "hex_values": "$30 $14 $15 $a $0 $ff $ff $b2 $3 $e1 $5c $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_1",
     "address_range": {
-      "begin": 1614822,
-      "end": 1614835
+      "begin": 1614847,
+      "end": 1614860
     },
-    "integer_values": "39 20 7 10 0 255 255 146 3 220 92 255 255",
-    "hex_values": "$27 $14 $7 $a $0 $ff $ff $92 $3 $dc $5c $ff $ff"
+    "integer_values": "39 20 7 10 0 255 255 146 3 245 92 255 255",
+    "hex_values": "$27 $14 $7 $a $0 $ff $ff $92 $3 $f5 $5c $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_2",
     "address_range": {
-      "begin": 1614835,
-      "end": 1614848
+      "begin": 1614860,
+      "end": 1614873
     },
-    "integer_values": "48 8 7 10 0 255 255 178 2 240 92 255 255",
-    "hex_values": "$30 $8 $7 $a $0 $ff $ff $b2 $2 $f0 $5c $ff $ff"
+    "integer_values": "48 8 7 10 0 255 255 178 2 9 93 255 255",
+    "hex_values": "$30 $8 $7 $a $0 $ff $ff $b2 $2 $9 $5d $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_3",
     "address_range": {
-      "begin": 1614848,
-      "end": 1614861
+      "begin": 1614873,
+      "end": 1614886
     },
-    "integer_values": "39 8 21 10 0 255 255 146 2 4 93 255 255",
-    "hex_values": "$27 $8 $15 $a $0 $ff $ff $92 $2 $4 $5d $ff $ff"
+    "integer_values": "39 8 21 10 0 255 255 146 2 29 93 255 255",
+    "hex_values": "$27 $8 $15 $a $0 $ff $ff $92 $2 $1d $5d $ff $ff"
   },
   {
     "label": "SaffronMagnetTrainStation_Blocks.ckir_BEFORE_SaffronMagnetTrainStation_Blocks",
@@ -13745,8 +14069,8 @@
   {
     "label": "SandstormHouseWoman.ckir_BEFOREROUTE27SANDSTORMHOUSE0ITEMCODE",
     "address_range": {
-      "begin": 504750,
-      "end": 504753
+      "begin": 504768,
+      "end": 504771
     },
     "integer_values": "158 229 1",
     "hex_values": "$9e $e5 $1"
@@ -13754,17 +14078,17 @@
   {
     "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM",
     "address_range": {
-      "begin": 504739,
-      "end": 504743
+      "begin": 504757,
+      "end": 504761
     },
-    "integer_values": "10 0 170 115",
-    "hex_values": "$a $0 $aa $73"
+    "integer_values": "10 0 188 115",
+    "hex_values": "$a $0 $bc $73"
   },
   {
     "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM_Loyal",
     "address_range": {
-      "begin": 504746,
-      "end": 504746
+      "begin": 504764,
+      "end": 504764
     },
     "integer_values": "",
     "hex_values": ""
@@ -13826,8 +14150,8 @@
   {
     "label": "SilphCoOfficerScript.ckir_BEFORESILPHCOUPGRADE0ITEMCODE",
     "address_range": {
-      "begin": 1616981,
-      "end": 1616984
+      "begin": 1617006,
+      "end": 1617009
     },
     "integer_values": "158 172 1",
     "hex_values": "$9e $ac $1"
@@ -14123,8 +14447,8 @@
   {
     "label": "SlowpokeWellB1FSuperPotion.ckir_BEFORESLOWPOKEWELLFLOOR1SUPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 370404,
-      "end": 370406
+      "begin": 370425,
+      "end": 370427
     },
     "integer_values": "17 1",
     "hex_values": "$11 $1"
@@ -14141,53 +14465,53 @@
   {
     "label": "SlowpokeWellB1F_MapEvents.ckir_BEFORESLOWPOKEWELLFLOOR1SUPERPOTION0NPCCODE",
     "address_range": {
-      "begin": 372029,
-      "end": 372042
+      "begin": 372050,
+      "end": 372063
     },
-    "integer_values": "84 7 14 1 0 255 255 1 0 228 102 98 6",
-    "hex_values": "$54 $7 $e $1 $0 $ff $ff $1 $0 $e4 $66 $62 $6"
+    "integer_values": "84 7 14 1 0 255 255 1 0 249 102 98 6",
+    "hex_values": "$54 $7 $e $1 $0 $ff $ff $1 $0 $f9 $66 $62 $6"
   },
   {
     "label": "SlowpokeWellB1F_MapEvents.ckir_BEFORE_TrainerEvent_SlowpokeWellB1F_0",
     "address_range": {
-      "begin": 371925,
-      "end": 371938
+      "begin": 371946,
+      "end": 371959
     },
-    "integer_values": "53 11 19 6 0 255 255 2 3 22 102 252 6",
-    "hex_values": "$35 $b $13 $6 $0 $ff $ff $2 $3 $16 $66 $fc $6"
+    "integer_values": "53 11 19 6 0 255 255 2 3 43 102 252 6",
+    "hex_values": "$35 $b $13 $6 $0 $ff $ff $2 $3 $2b $66 $fc $6"
   },
   {
     "label": "SlowpokeWellB1F_MapEvents.ckir_BEFORE_TrainerEvent_SlowpokeWellB1F_1",
     "address_range": {
-      "begin": 371938,
-      "end": 371951
+      "begin": 371959,
+      "end": 371972
     },
-    "integer_values": "53 6 9 6 0 255 255 2 1 42 102 252 6",
-    "hex_values": "$35 $6 $9 $6 $0 $ff $ff $2 $1 $2a $66 $fc $6"
+    "integer_values": "53 6 9 6 0 255 255 2 1 63 102 252 6",
+    "hex_values": "$35 $6 $9 $6 $0 $ff $ff $2 $1 $3f $66 $fc $6"
   },
   {
     "label": "SlowpokeWellB1F_MapEvents.ckir_BEFORE_TrainerEvent_SlowpokeWellB1F_2",
     "address_range": {
-      "begin": 371951,
-      "end": 371964
+      "begin": 371972,
+      "end": 371985
     },
-    "integer_values": "53 10 9 9 0 255 255 2 2 154 102 252 6",
-    "hex_values": "$35 $a $9 $9 $0 $ff $ff $2 $2 $9a $66 $fc $6"
+    "integer_values": "53 10 9 9 0 255 255 2 2 175 102 252 6",
+    "hex_values": "$35 $a $9 $9 $0 $ff $ff $2 $2 $af $66 $fc $6"
   },
   {
     "label": "SlowpokeWellB1F_MapEvents.ckir_BEFORE_TrainerEvent_SlowpokeWellB1F_3",
     "address_range": {
-      "begin": 371964,
-      "end": 371977
+      "begin": 371985,
+      "end": 371998
     },
-    "integer_values": "54 8 14 9 0 255 255 130 4 174 102 252 6",
-    "hex_values": "$36 $8 $e $9 $0 $ff $ff $82 $4 $ae $66 $fc $6"
+    "integer_values": "54 8 14 9 0 255 255 130 4 195 102 252 6",
+    "hex_values": "$36 $8 $e $9 $0 $ff $ff $82 $4 $c3 $66 $fc $6"
   },
   {
     "label": "SlowpokeWellB2FGymGuyScript.ckir_BEFOREKINGSROCKGUY0ITEMCODE",
     "address_range": {
-      "begin": 372056,
-      "end": 372059
+      "begin": 372077,
+      "end": 372080
     },
     "integer_values": "158 82 1",
     "hex_values": "$9e $52 $1"
@@ -14195,8 +14519,8 @@
   {
     "label": "SlowpokeWellB2FTMRainDance.ckir_BEFORESLOWPOKEWELLRAINDANCETM0ITEMCODE",
     "address_range": {
-      "begin": 372073,
-      "end": 372075
+      "begin": 372094,
+      "end": 372096
     },
     "integer_values": "209 1",
     "hex_values": "$d1 $1"
@@ -14213,11 +14537,11 @@
   {
     "label": "SlowpokeWellB2F_MapEvents.ckir_BEFORESLOWPOKEWELLRAINDANCETM0NPCCODE",
     "address_range": {
-      "begin": 372377,
-      "end": 372390
+      "begin": 372398,
+      "end": 372411
     },
-    "integer_values": "84 9 19 1 0 255 255 1 0 105 109 99 6",
-    "hex_values": "$54 $9 $13 $1 $0 $ff $ff $1 $0 $69 $6d $63 $6"
+    "integer_values": "84 9 19 1 0 255 255 1 0 126 109 99 6",
+    "hex_values": "$54 $9 $13 $1 $0 $ff $ff $1 $0 $7e $6d $63 $6"
   },
   {
     "label": "SoulHouse_Blocks.ckir_BEFORE_SoulHouse_Blocks",
@@ -15138,7 +15462,7 @@
     "hex_values": "$54 $a $6 $1 $0 $ff $ff $1 $0 $f4 $5a $a9 $6"
   },
   {
-    "label": "TrainerBirdKeeperJose2.ckir_BEFOREROUTE27BIRDKEEPERJOSESTAR_PIECE0ITEMCODE",
+    "label": "TrainerBirdKeeperJose2.ckir_BEFOREROUTE27BIRDKEEPERJOSESTARPIECE0ITEMCODE",
     "address_range": {
       "begin": 1706312,
       "end": 1706315
@@ -15149,8 +15473,8 @@
   {
     "label": "TrainerBirdKeeperVance1.ckir_BEFOREROUTE44BIRDKEEPERVANCECARBOS0ITEMCODE",
     "address_range": {
-      "begin": 1693893,
-      "end": 1693896
+      "begin": 1693912,
+      "end": 1693915
     },
     "integer_values": "158 29 1",
     "hex_values": "$9e $1d $1"
@@ -15158,8 +15482,8 @@
   {
     "label": "TrainerBirdKeeperVance1.ckir_BEFOREROUTE44BIRDKEEPERVANCECARBOS0ITEMCODEB",
     "address_range": {
-      "begin": 1693875,
-      "end": 1693878
+      "begin": 1693894,
+      "end": 1693897
     },
     "integer_values": "158 29 1",
     "hex_values": "$9e $1d $1"
@@ -15167,17 +15491,17 @@
   {
     "label": "TrainerBirdKeeperVance1.ckir_BEFORE_Vance",
     "address_range": {
-      "begin": 1693802,
-      "end": 1693814
+      "begin": 1693821,
+      "end": 1693833
     },
-    "integer_values": "6 2 118 88 6 1 118 88 6 0 118 88",
-    "hex_values": "$6 $2 $76 $58 $6 $1 $76 $58 $6 $0 $76 $58"
+    "integer_values": "6 2 137 88 6 1 137 88 6 0 137 88",
+    "hex_values": "$6 $2 $89 $58 $6 $1 $89 $58 $6 $0 $89 $58"
   },
   {
     "label": "TrainerBirdKeeperVance1.ckir_BEFORE_Vance_Fight2",
     "address_range": {
-      "begin": 1693814,
-      "end": 1693814
+      "begin": 1693833,
+      "end": 1693833
     },
     "integer_values": "",
     "hex_values": ""
@@ -15185,8 +15509,8 @@
   {
     "label": "TrainerBlackbeltKenji.ckir_BEFOREROUTE45KENJI0ITEMCODE",
     "address_range": {
-      "begin": 1695986,
-      "end": 1695989
+      "begin": 1696005,
+      "end": 1696008
     },
     "integer_values": "158 62 1",
     "hex_values": "$9e $3e $1"
@@ -15194,8 +15518,8 @@
   {
     "label": "TrainerBlackbeltKenji.ckir_BEFORE_AFTER_Kenji",
     "address_range": {
-      "begin": 1695986,
-      "end": 1695986
+      "begin": 1696005,
+      "end": 1696005
     },
     "integer_values": "",
     "hex_values": ""
@@ -15203,11 +15527,11 @@
   {
     "label": "TrainerBlackbeltKenji.ckir_BEFORE_Kenji",
     "address_range": {
-      "begin": 1695963,
-      "end": 1695986
+      "begin": 1695982,
+      "end": 1696005
     },
-    "integer_values": "7 1 242 96 43 1 9 242 96 43 4 9 242 96 49 106 2 8 242 96 0 44 97",
-    "hex_values": "$7 $1 $f2 $60 $2b $1 $9 $f2 $60 $2b $4 $9 $f2 $60 $31 $6a $2 $8 $f2 $60 $0 $2c $61"
+    "integer_values": "7 1 5 97 43 1 9 5 97 43 4 9 5 97 49 106 2 8 5 97 0 63 97",
+    "hex_values": "$7 $1 $5 $61 $2b $1 $9 $5 $61 $2b $4 $9 $5 $61 $31 $6a $2 $8 $5 $61 $0 $3f $61"
   },
   {
     "label": "TrainerBugCatcherWade1.ckir_BEFOREROUTE31BUGCATCHERWADEBERRY0ITEMCODE",
@@ -15248,8 +15572,8 @@
   {
     "label": "TrainerCooltrainermKevin.ckir_BEFOREROUTE25NUGGET0ITEMCODE",
     "address_range": {
-      "begin": 1699763,
-      "end": 1699766
+      "begin": 1699782,
+      "end": 1699785
     },
     "integer_values": "158 36 1",
     "hex_values": "$9e $24 $1"
@@ -15266,8 +15590,8 @@
   {
     "label": "TrainerFisherWilton1.ckir_BEFOREROUTE44FISHERWILTONBALL0ITEMCODE",
     "address_range": {
-      "begin": 1694142,
-      "end": 1694145
+      "begin": 1694161,
+      "end": 1694164
     },
     "integer_values": "158 2 1",
     "hex_values": "$9e $2 $1"
@@ -15275,8 +15599,8 @@
   {
     "label": "TrainerFisherWilton1.ckir_BEFORE_AFTER_WILTON_A",
     "address_range": {
-      "begin": 1694142,
-      "end": 1694142
+      "begin": 1694161,
+      "end": 1694161
     },
     "integer_values": "",
     "hex_values": ""
@@ -15284,11 +15608,11 @@
   {
     "label": "TrainerFisherWilton1.ckir_BEFORE_WILTON",
     "address_range": {
-      "begin": 1694124,
-      "end": 1694142
+      "begin": 1694143,
+      "end": 1694161
     },
-    "integer_values": "49 47 3 9 190 89 49 48 3 9 190 89 49 49 3 9 190 89",
-    "hex_values": "$31 $2f $3 $9 $be $59 $31 $30 $3 $9 $be $59 $31 $31 $3 $9 $be $59"
+    "integer_values": "49 47 3 9 209 89 49 48 3 9 209 89 49 49 3 9 209 89",
+    "hex_values": "$31 $2f $3 $9 $d1 $59 $31 $30 $3 $9 $d1 $59 $31 $31 $3 $9 $d1 $59"
   },
   {
     "label": "TrainerHouse1F_Blocks.ckir_BEFORE_TrainerHouse1F_Blocks",
@@ -15392,8 +15716,8 @@
   {
     "label": "TrainerSailorHuey.ckir_BEFORELIGHTHOUSESAILORHUEYPROTEIN0ITEMCODE",
     "address_range": {
-      "begin": 372869,
-      "end": 372872
+      "begin": 372890,
+      "end": 372893
     },
     "integer_values": "158 27 1",
     "hex_values": "$9e $1b $1"
@@ -15401,8 +15725,8 @@
   {
     "label": "TrainerSailorHuey.ckir_BEFORELIGHTHOUSESAILORHUEYPROTEIN0ITEMCODEB",
     "address_range": {
-      "begin": 372851,
-      "end": 372854
+      "begin": 372872,
+      "end": 372875
     },
     "integer_values": "158 27 1",
     "hex_values": "$9e $1b $1"
@@ -15410,17 +15734,17 @@
   {
     "label": "TrainerSailorHuey.ckir_BEFORE_Huey",
     "address_range": {
-      "begin": 372755,
-      "end": 372771
+      "begin": 372776,
+      "end": 372792
     },
-    "integer_values": "6 3 35 112 6 2 35 112 6 1 35 112 6 0 35 112",
-    "hex_values": "$6 $3 $23 $70 $6 $2 $23 $70 $6 $1 $23 $70 $6 $0 $23 $70"
+    "integer_values": "6 3 56 112 6 2 56 112 6 1 56 112 6 0 56 112",
+    "hex_values": "$6 $3 $38 $70 $6 $2 $38 $70 $6 $1 $38 $70 $6 $0 $38 $70"
   },
   {
     "label": "TrainerSailorHuey.ckir_BEFORE_Huey_Fight3",
     "address_range": {
-      "begin": 372771,
-      "end": 372771
+      "begin": 372792,
+      "end": 372792
     },
     "integer_values": "",
     "hex_values": ""
@@ -15545,8 +15869,8 @@
   {
     "label": "UnionCave1FAwakening.ckir_BEFOREUNIONCAVEFLOOR1AWAKENING0ITEMCODE",
     "address_range": {
-      "begin": 367684,
-      "end": 367686
+      "begin": 367705,
+      "end": 367707
     },
     "integer_values": "12 1",
     "hex_values": "$c $1"
@@ -15554,8 +15878,8 @@
   {
     "label": "UnionCave1FGreatBall.ckir_BEFOREUNIONCAVEFLOOR1GREATBALL0ITEMCODE",
     "address_range": {
-      "begin": 367678,
-      "end": 367680
+      "begin": 367699,
+      "end": 367701
     },
     "integer_values": "4 1",
     "hex_values": "$4 $1"
@@ -15563,8 +15887,8 @@
   {
     "label": "UnionCave1FPotion.ckir_BEFOREUNIONCAVEFLOOR1POTION0ITEMCODE",
     "address_range": {
-      "begin": 367682,
-      "end": 367684
+      "begin": 367703,
+      "end": 367705
     },
     "integer_values": "18 1",
     "hex_values": "$12 $1"
@@ -15572,8 +15896,8 @@
   {
     "label": "UnionCave1FXAttack.ckir_BEFOREUNIONCAVEFLOOR1XATTACK0ITEMCODE",
     "address_range": {
-      "begin": 367680,
-      "end": 367682
+      "begin": 367701,
+      "end": 367703
     },
     "integer_values": "49 1",
     "hex_values": "$31 $1"
@@ -15590,89 +15914,89 @@
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR1AWAKENING0NPCCODE",
     "address_range": {
-      "begin": 368629,
-      "end": 368642
+      "begin": 368650,
+      "end": 368663
     },
-    "integer_values": "84 37 16 1 0 255 255 1 0 68 92 93 6",
-    "hex_values": "$54 $25 $10 $1 $0 $ff $ff $1 $0 $44 $5c $5d $6"
+    "integer_values": "84 37 16 1 0 255 255 1 0 89 92 93 6",
+    "hex_values": "$54 $25 $10 $1 $0 $ff $ff $1 $0 $59 $5c $5d $6"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR1GREATBALL0NPCCODE",
     "address_range": {
-      "begin": 368590,
-      "end": 368603
+      "begin": 368611,
+      "end": 368624
     },
-    "integer_values": "84 25 21 1 0 255 255 1 0 62 92 90 6",
-    "hex_values": "$54 $19 $15 $1 $0 $ff $ff $1 $0 $3e $5c $5a $6"
+    "integer_values": "84 25 21 1 0 255 255 1 0 83 92 90 6",
+    "hex_values": "$54 $19 $15 $1 $0 $ff $ff $1 $0 $53 $5c $5a $6"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR1POTION0NPCCODE",
     "address_range": {
-      "begin": 368616,
-      "end": 368629
+      "begin": 368637,
+      "end": 368650
     },
-    "integer_values": "84 21 8 1 0 255 255 1 0 66 92 92 6",
-    "hex_values": "$54 $15 $8 $1 $0 $ff $ff $1 $0 $42 $5c $5c $6"
+    "integer_values": "84 21 8 1 0 255 255 1 0 87 92 92 6",
+    "hex_values": "$54 $15 $8 $1 $0 $ff $ff $1 $0 $57 $5c $5c $6"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR1XATTACK0NPCCODE",
     "address_range": {
-      "begin": 368603,
-      "end": 368616
+      "begin": 368624,
+      "end": 368637
     },
-    "integer_values": "84 6 8 1 0 255 255 1 0 64 92 91 6",
-    "hex_values": "$54 $6 $8 $1 $0 $ff $ff $1 $0 $40 $5c $5b $6"
+    "integer_values": "84 6 8 1 0 255 255 1 0 85 92 91 6",
+    "hex_values": "$54 $6 $8 $1 $0 $ff $ff $1 $0 $55 $5c $5b $6"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCave1F_0",
     "address_range": {
-      "begin": 368525,
-      "end": 368538
+      "begin": 368546,
+      "end": 368559
     },
-    "integer_values": "45 10 7 9 0 255 255 178 2 2 92 255 255",
-    "hex_values": "$2d $a $7 $9 $0 $ff $ff $b2 $2 $2 $5c $ff $ff"
+    "integer_values": "45 10 7 9 0 255 255 178 2 23 92 255 255",
+    "hex_values": "$2d $a $7 $9 $0 $ff $ff $b2 $2 $17 $5c $ff $ff"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCave1F_1",
     "address_range": {
-      "begin": 368538,
-      "end": 368551
+      "begin": 368559,
+      "end": 368572
     },
-    "integer_values": "43 25 8 10 0 255 255 146 3 218 91 255 255",
-    "hex_values": "$2b $19 $8 $a $0 $ff $ff $92 $3 $da $5b $ff $ff"
+    "integer_values": "43 25 8 10 0 255 255 146 3 239 91 255 255",
+    "hex_values": "$2b $19 $8 $a $0 $ff $ff $92 $3 $ef $5b $ff $ff"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCave1F_2",
     "address_range": {
-      "begin": 368551,
-      "end": 368564
+      "begin": 368572,
+      "end": 368585
     },
-    "integer_values": "45 12 15 10 0 255 255 178 1 238 91 255 255",
-    "hex_values": "$2d $c $f $a $0 $ff $ff $b2 $1 $ee $5b $ff $ff"
+    "integer_values": "45 12 15 10 0 255 255 178 1 3 92 255 255",
+    "hex_values": "$2d $c $f $a $0 $ff $ff $b2 $1 $3 $5c $ff $ff"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCave1F_3",
     "address_range": {
-      "begin": 368564,
-      "end": 368577
+      "begin": 368585,
+      "end": 368598
     },
-    "integer_values": "58 31 19 8 0 255 255 130 4 42 92 255 255",
-    "hex_values": "$3a $1f $13 $8 $0 $ff $ff $82 $4 $2a $5c $ff $ff"
+    "integer_values": "58 31 19 8 0 255 255 130 4 63 92 255 255",
+    "hex_values": "$3a $1f $13 $8 $0 $ff $ff $82 $4 $3f $5c $ff $ff"
   },
   {
     "label": "UnionCave1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCave1F_4",
     "address_range": {
-      "begin": 368577,
-      "end": 368590
+      "begin": 368598,
+      "end": 368611
     },
-    "integer_values": "58 23 18 7 0 255 255 130 4 22 92 255 255",
-    "hex_values": "$3a $17 $12 $7 $0 $ff $ff $82 $4 $16 $5c $ff $ff"
+    "integer_values": "58 23 18 7 0 255 255 130 4 43 92 255 255",
+    "hex_values": "$3a $17 $12 $7 $0 $ff $ff $82 $4 $2b $5c $ff $ff"
   },
   {
     "label": "UnionCaveB1FTMSwift.ckir_BEFOREUNIONCAVESWIFTTM0ITEMCODE",
     "address_range": {
-      "begin": 368724,
-      "end": 368726
+      "begin": 368745,
+      "end": 368747
     },
     "integer_values": "231 1",
     "hex_values": "$e7 $1"
@@ -15680,8 +16004,8 @@
   {
     "label": "UnionCaveB1FXDefend.ckir_BEFOREUNIONCAVEFLOOR2XDEFEND0ITEMCODE",
     "address_range": {
-      "begin": 368726,
-      "end": 368728
+      "begin": 368747,
+      "end": 368749
     },
     "integer_values": "51 1",
     "hex_values": "$33 $1"
@@ -15698,62 +16022,62 @@
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR2XDEFEND0NPCCODE",
     "address_range": {
-      "begin": 369465,
-      "end": 369478
+      "begin": 369486,
+      "end": 369499
     },
-    "integer_values": "84 27 21 1 0 255 255 1 0 86 96 95 6",
-    "hex_values": "$54 $1b $15 $1 $0 $ff $ff $1 $0 $56 $60 $5f $6"
+    "integer_values": "84 27 21 1 0 255 255 1 0 107 96 95 6",
+    "hex_values": "$54 $1b $15 $1 $0 $ff $ff $1 $0 $6b $60 $5f $6"
   },
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFOREUNIONCAVESWIFTTM0NPCCODE",
     "address_range": {
-      "begin": 369439,
-      "end": 369452
+      "begin": 369460,
+      "end": 369473
     },
-    "integer_values": "84 20 6 1 0 255 255 1 0 84 96 94 6",
-    "hex_values": "$54 $14 $6 $1 $0 $ff $ff $1 $0 $54 $60 $5e $6"
+    "integer_values": "84 20 6 1 0 255 255 1 0 105 96 94 6",
+    "hex_values": "$54 $14 $6 $1 $0 $ff $ff $1 $0 $69 $60 $5e $6"
   },
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB1F_0",
     "address_range": {
-      "begin": 369387,
-      "end": 369400
+      "begin": 369408,
+      "end": 369421
     },
-    "integer_values": "45 8 13 10 0 255 255 178 3 44 96 255 255",
-    "hex_values": "$2d $8 $d $a $0 $ff $ff $b2 $3 $2c $60 $ff $ff"
+    "integer_values": "45 8 13 10 0 255 255 178 3 65 96 255 255",
+    "hex_values": "$2d $8 $d $a $0 $ff $ff $b2 $3 $41 $60 $ff $ff"
   },
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB1F_1",
     "address_range": {
-      "begin": 369400,
-      "end": 369413
+      "begin": 369421,
+      "end": 369434
     },
-    "integer_values": "45 11 20 6 0 255 255 178 3 64 96 255 255",
-    "hex_values": "$2d $b $14 $6 $0 $ff $ff $b2 $3 $40 $60 $ff $ff"
+    "integer_values": "45 11 20 6 0 255 255 178 3 85 96 255 255",
+    "hex_values": "$2d $b $14 $6 $0 $ff $ff $b2 $3 $55 $60 $ff $ff"
   },
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB1F_2",
     "address_range": {
-      "begin": 369413,
-      "end": 369426
+      "begin": 369434,
+      "end": 369447
     },
-    "integer_values": "43 36 9 8 0 255 255 146 3 4 96 255 255",
-    "hex_values": "$2b $24 $9 $8 $0 $ff $ff $92 $3 $4 $60 $ff $ff"
+    "integer_values": "43 36 9 8 0 255 255 146 3 25 96 255 255",
+    "hex_values": "$2b $24 $9 $8 $0 $ff $ff $92 $3 $19 $60 $ff $ff"
   },
   {
     "label": "UnionCaveB1F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB1F_3",
     "address_range": {
-      "begin": 369426,
-      "end": 369439
+      "begin": 369447,
+      "end": 369460
     },
-    "integer_values": "43 34 21 8 0 255 255 146 3 24 96 255 255",
-    "hex_values": "$2b $22 $15 $8 $0 $ff $ff $92 $3 $18 $60 $ff $ff"
+    "integer_values": "43 34 21 8 0 255 255 146 3 45 96 255 255",
+    "hex_values": "$2b $22 $15 $8 $0 $ff $ff $92 $3 $2d $60 $ff $ff"
   },
   {
     "label": "UnionCaveB2FElixer.ckir_BEFOREUNIONCAVEFLOOR3ELIXIR0ITEMCODE",
     "address_range": {
-      "begin": 369576,
-      "end": 369578
+      "begin": 369597,
+      "end": 369599
     },
     "integer_values": "65 1",
     "hex_values": "$41 $1"
@@ -15761,8 +16085,8 @@
   {
     "label": "UnionCaveB2FHyperPotion.ckir_BEFOREUNIONCAVEFLOOR3HYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 369578,
-      "end": 369580
+      "begin": 369599,
+      "end": 369601
     },
     "integer_values": "16 1",
     "hex_values": "$10 $1"
@@ -15779,47 +16103,47 @@
   {
     "label": "UnionCaveB2F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR3ELIXIR0NPCCODE",
     "address_range": {
-      "begin": 370154,
-      "end": 370167
+      "begin": 370175,
+      "end": 370188
     },
-    "integer_values": "84 6 20 1 0 255 255 1 0 168 99 96 6",
-    "hex_values": "$54 $6 $14 $1 $0 $ff $ff $1 $0 $a8 $63 $60 $6"
+    "integer_values": "84 6 20 1 0 255 255 1 0 189 99 96 6",
+    "hex_values": "$54 $6 $14 $1 $0 $ff $ff $1 $0 $bd $63 $60 $6"
   },
   {
     "label": "UnionCaveB2F_MapEvents.ckir_BEFOREUNIONCAVEFLOOR3HYPERPOTION0NPCCODE",
     "address_range": {
-      "begin": 370167,
-      "end": 370180
+      "begin": 370188,
+      "end": 370201
     },
-    "integer_values": "84 23 16 1 0 255 255 1 0 170 99 97 6",
-    "hex_values": "$54 $17 $10 $1 $0 $ff $ff $1 $0 $aa $63 $61 $6"
+    "integer_values": "84 23 16 1 0 255 255 1 0 191 99 97 6",
+    "hex_values": "$54 $17 $10 $1 $0 $ff $ff $1 $0 $bf $63 $61 $6"
   },
   {
     "label": "UnionCaveB2F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB2F_0",
     "address_range": {
-      "begin": 370115,
-      "end": 370128
+      "begin": 370136,
+      "end": 370149
     },
-    "integer_values": "44 23 19 6 0 255 255 130 3 108 99 255 255",
-    "hex_values": "$2c $17 $13 $6 $0 $ff $ff $82 $3 $6c $63 $ff $ff"
+    "integer_values": "44 23 19 6 0 255 255 130 3 129 99 255 255",
+    "hex_values": "$2c $17 $13 $6 $0 $ff $ff $82 $3 $81 $63 $ff $ff"
   },
   {
     "label": "UnionCaveB2F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB2F_1",
     "address_range": {
-      "begin": 370128,
-      "end": 370141
+      "begin": 370149,
+      "end": 370162
     },
-    "integer_values": "36 17 9 10 0 255 255 130 1 128 99 255 255",
-    "hex_values": "$24 $11 $9 $a $0 $ff $ff $82 $1 $80 $63 $ff $ff"
+    "integer_values": "36 17 9 10 0 255 255 130 1 149 99 255 255",
+    "hex_values": "$24 $11 $9 $a $0 $ff $ff $82 $1 $95 $63 $ff $ff"
   },
   {
     "label": "UnionCaveB2F_MapEvents.ckir_BEFORE_TrainerEvent_UnionCaveB2F_2",
     "address_range": {
-      "begin": 370141,
-      "end": 370154
+      "begin": 370162,
+      "end": 370175
     },
-    "integer_values": "36 34 7 7 0 255 255 130 3 148 99 255 255",
-    "hex_values": "$24 $22 $7 $7 $0 $ff $ff $82 $3 $94 $63 $ff $ff"
+    "integer_values": "36 34 7 7 0 255 255 130 3 169 99 255 255",
+    "hex_values": "$24 $22 $7 $7 $0 $ff $ff $82 $3 $a9 $63 $ff $ff"
   },
   {
     "label": "VermilionCityHiddenFullHeal.ckir_BEFOREVERMILIONCITYHIDDENFULLHEAL0ITEMCODE",

@@ -1,3 +1,5 @@
+import string
+
 import LoadLocationData
 from collections import defaultdict
 import random
@@ -275,6 +277,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	single_flags_set = []
 	flags_with_path = []
 
+	# This a list of required items that are actually base items and therefore can be deleted, etc so in shopsanity
+	# These must be purchaseable
+
+	requiredItems = []
 	for i in locList:
 		#baseline requirements
 		#allReqs = i.LocationReqs+i.FlagReqs+i.itemReqs
@@ -295,6 +301,19 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 		if i.Type == 'Item':
 			itemCount = itemCount+1
+
+		for iReq in i.ItemReqs:
+			iReq = iReq.replace("_", " ")
+			iReq = string.capwords(iReq," ")
+			if iReq not in requiredItems:
+				requiredItems.append(iReq)
+		for iReq in i.RecommendedItemReqs:
+			iReq = iReq.replace("_", " ")
+			iReq = string.capwords(iReq, " ")
+			if iReq not in requiredItems:
+				requiredItems.append(iReq)
+
+
 
 
 	# Store flags set in a single location and forcibly update
@@ -505,6 +524,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						(toAllocate in badgeSet or toAllocate in \
 					[ "Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX" ]):
 					# Shopsanity does not yet support flags in shops
+					placeable = False
+
+				# Enforce Shopsanity items to be buyable
+				if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS and not locList[iter].isShop():
 					placeable = False
 
 				# Unlikely to be the culprit?
@@ -930,7 +953,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 
 	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems = \
-		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList, badgeSet, item_processor)
+		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList,
+						 badgeSet, item_processor, requiredItems)
 
 
 	for f in requirementsDict.items():
@@ -943,7 +967,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
-					 assign_trash=True, forbidden=None, recommended=True):
+					 assign_trash=True, forbidden=None, recommended=True, requiredItems=[]):
 
 	if forbidden is None:
 		forbidden = []
@@ -1138,13 +1162,17 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 							i.IsGym = False
 							i.IsItem = True
 
-							if i.item == "WATER_STONE" or i.item == "ESCAPE_ROPE":
-								state[i.item.replace("_"," ").title()] = True
-							# Do this to ensure items are all overwritable with other requirements
-							# Even if the item is trash
-							elif i.item == "Red Scale" or i.item == "Mystery Egg" or i.item == "Rainbow Wing" or\
-								i.item == "COIN_CASE" or i.item == "BLUE_CARD" or i.item == "ITEMFINDER":
-									state[i.item] = True
+							cleanItem = i.item.replace("_", " ").replace("TM", "").strip()
+							cleanItem = string.capwords(cleanItem," ")
+
+							if cleanItem in requiredItems:
+								state[cleanItem] = True
+								stateDist[i.item] = max(stateDist[i.item], stateDist[i.Name])
+
+							if i.isShop() and i.item in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+								state[cleanItem + " Purchasable"] = True
+								stateDist[cleanItem + " Purchasable"] = max(stateDist[cleanItem + " Purchasable"], stateDist[i.Name])
+
 					else:
 						if i.item not in forbidden:
 							state[i.item] = True

@@ -132,10 +132,8 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REVIVE
@@ -156,10 +154,8 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER

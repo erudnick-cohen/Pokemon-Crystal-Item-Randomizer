@@ -236,13 +236,13 @@
             "new": [
                 10,
                 0,
-                170,
+                188,
                 115
             ]
         },
         "address_range": {
-            "begin": 504739,
-            "end": 504743
+            "begin": 504757,
+            "end": 504761
         },
         "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM",
         "description": "Remove happiness check for Sandstorm TM"
@@ -510,13 +510,13 @@
             "new": [
                 7,
                 10,
-                113,
+                132,
                 97
             ]
         },
         "address_range": {
-            "begin": 1728874,
-            "end": 1728878
+            "begin": 1728893,
+            "end": 1728897
         },
         "label": "Route40_MapScripts.ckir_BEFORE_timed_events_MONICA",
         "description": "Monica is always present"
@@ -532,13 +532,13 @@
             "new": [
                 6,
                 10,
-                13,
+                32,
                 98
             ]
         },
         "address_range": {
-            "begin": 1728995,
-            "end": 1728999
+            "begin": 1729014,
+            "end": 1729018
         },
         "label": "MonicaScript.ckir_BEFORE_timed_events_MONICA2",
         "description": "Monica always gives item"

@@ -242,7 +242,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 	spoilerLoop = False
 	spoilerDetails = {}
-	spoilerTotal = 209
+	spoilerTotal = 150
 	spoilerCount = 0
 
 	if spoilerLoop:
@@ -320,7 +320,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rBadgeList.append(i)
 				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
 			if goal not in result[0]:
-				handleBadSpoiler(result, flags, maxSize=5 if spoilerLoop else None)
+				handleBadSpoiler(result, flags, maxSize=10 if spoilerLoop else None)
 				print("bad run, retrying")
 			elif len(result) > 6:
 				remainingProgressItems = result[6]

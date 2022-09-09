@@ -150,7 +150,7 @@ Location:
         FlagReqs:
         ItemReqs:
         FlagsSet: 
-            - Rock Smash Purchaseable
+            - Rock Smash Guy Gives Item
         ReachableReqs:
         NormalItem: TM_ROCK_SMASH
         Code: |

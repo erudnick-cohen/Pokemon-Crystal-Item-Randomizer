@@ -372,9 +372,9 @@ Location:
         HasPKMN: No
         LocationReqs: Dark Cave Route 46
         ItemReqs:
-          - Rock Smash
         FlagsSet:
         FlagReqs:
+            - Rock Smash Usable
         ReachableReqs:
         WildTableList:
         Code:
@@ -387,9 +387,9 @@ Location:
         HasPKMN: No
         LocationReqs: Dark Cave Violet
         ItemReqs:
-            - Rock Smash
         FlagsSet:
         FlagReqs:
+            - Rock Smash Usable
         ReachableReqs:
         WildTableList:
         Code:

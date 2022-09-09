@@ -26,25 +26,25 @@
                 47,
                 3,
                 9,
-                190,
+                209,
                 89,
                 49,
                 48,
                 3,
                 9,
-                190,
+                209,
                 89,
                 49,
                 49,
                 3,
                 9,
-                190,
+                209,
                 89
             ]
         },
         "address_range": {
-            "begin": 1694124,
-            "end": 1694142
+            "begin": 1694143,
+            "end": 1694161
         },
         "label": "TrainerFisherWilton1.ckir_BEFORE_WILTON",
         "description": "Makes Wilton not a ball man with how he gives items out"

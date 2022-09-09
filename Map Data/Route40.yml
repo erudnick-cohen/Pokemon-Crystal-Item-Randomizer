@@ -26,10 +26,8 @@ Location:
                 LocationReqs: Route 40 Land
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: HYPER_POTION

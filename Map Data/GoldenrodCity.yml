@@ -685,24 +685,6 @@ Location:
             Sublocations:
 
         -
-            Name: Goldenrod City Buy Rock Smash
-            FileName: GoldenrodCity.asm
-            Type: Map
-            HasPKMN: No
-            WildTableList:
-            LocationReqs:
-                - Goldenrod Department Store
-            FlagReqs:
-                - Rock Smash Purchaseable
-            ItemReqs:
-            FlagsSet:
-                - Rock Smash
-            ReachableReqs:
-            Code:
-            Text:
-            TrainerList:
-            Sublocations:
-        -
             Name: Goldenrod Department Store 4F Protein
             FileName: MartGoldenrod4FBetter
             Type: Shop
@@ -1349,7 +1331,126 @@ Location:
             AREALV:
             TrainerList:
             Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Thunder Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_THUNDERPUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
 
+        -
+            Name: Goldenrod Department Store 5F Fire Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_FIRE_PUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 5F Ice Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_ICE_PUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Sweet Scent TM
+            FileName: MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Sweet Scent Girl Met
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_SWEET_SCENT
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Headbutt TM
+            FileName: MartGoldenrod5FTM02,MartGoldenrod5FTM0208,MartGoldenrod5FTM0212,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Headbutt Guy Met
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_HEADBUTT
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Rock Smash TM
+            FileName: MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Rock Smash Guy Gives Item
+                - Impossible
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_ROCK_SMASH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
         -
             Name: Goldenrod Department Store Rooftop Sale
             FileName:

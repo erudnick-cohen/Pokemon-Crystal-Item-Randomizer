@@ -440,15 +440,15 @@
         "tileAddress": 710057
     },
     {
-        "start": 1612821,
-        "end": 1612852,
+        "start": 1612846,
+        "end": 1612877,
         "name": "FightingDojoSign1Text",
         "map": "FightingDojo.asm",
         "commands": 3
     },
     {
-        "start": 1612853,
-        "end": 1612876,
+        "start": 1612878,
+        "end": 1612901,
         "name": "FightingDojoSign2Text",
         "map": "FightingDojo.asm",
         "commands": 3
@@ -790,8 +790,8 @@
         "tileAddress": 726261
     },
     {
-        "start": 378704,
-        "end": 378736,
+        "start": 378723,
+        "end": 378755,
         "name": "NationalParkRelaxationSquareText",
         "map": "NationalPark.asm",
         "commands": 3,
@@ -800,8 +800,8 @@
         "tileAddress": 706964
     },
     {
-        "start": 378737,
-        "end": 378821,
+        "start": 378756,
+        "end": 378840,
         "name": "NationalParkBattleNoticeText",
         "map": "NationalPark.asm",
         "commands": 7,
@@ -810,8 +810,8 @@
         "tileAddress": 706830
     },
     {
-        "start": 378822,
-        "end": 378885,
+        "start": 378841,
+        "end": 378904,
         "name": "NationalParkTrainerTipsText",
         "map": "NationalPark.asm",
         "commands": 5,
@@ -820,22 +820,22 @@
         "tileAddress": 706563
     },
     {
-        "start": 379815,
-        "end": 379847,
+        "start": 379834,
+        "end": 379866,
         "name": "NationalParkBugContestRelaxationSquareText",
         "map": "NationalParkBugContest.asm",
         "commands": 3
     },
     {
-        "start": 379848,
-        "end": 379932,
+        "start": 379867,
+        "end": 379951,
         "name": "NationalParkBugContestBattleNoticeText",
         "map": "NationalParkBugContest.asm",
         "commands": 7
     },
     {
-        "start": 379933,
-        "end": 379996,
+        "start": 379952,
+        "end": 380015,
         "name": "NationalParkBugContestTrainerTipsText",
         "map": "NationalParkBugContest.asm",
         "commands": 5
@@ -1021,8 +1021,8 @@
         "tileAddress": 694768
     },
     {
-        "start": 382431,
-        "end": 382504,
+        "start": 382450,
+        "end": 382523,
         "name": "RadioTower1FDirectoryText",
         "map": "RadioTower1F.asm",
         "commands": 7,
@@ -1031,8 +1031,8 @@
         "tileAddress": 707842
     },
     {
-        "start": 382505,
-        "end": 382597,
+        "start": 382524,
+        "end": 382616,
         "name": "RadioTower1FLuckyChannelSignText",
         "map": "RadioTower1F.asm",
         "commands": 7,
@@ -1041,8 +1041,8 @@
         "tileAddress": 707847
     },
     {
-        "start": 386082,
-        "end": 386091,
+        "start": 386101,
+        "end": 386110,
         "name": "RadioTower2FSalesSignText",
         "map": "RadioTower2F.asm",
         "commands": 2,
@@ -1051,8 +1051,8 @@
         "tileAddress": 707878
     },
     {
-        "start": 386092,
-        "end": 386142,
+        "start": 386111,
+        "end": 386161,
         "name": "RadioTower2FOaksPKMNTalkSignText",
         "map": "RadioTower2F.asm",
         "commands": 5,
@@ -1061,8 +1061,8 @@
         "tileAddress": 707879
     },
     {
-        "start": 386143,
-        "end": 386172,
+        "start": 386162,
+        "end": 386191,
         "name": "RadioTower2FPokemonRadioSignText",
         "map": "RadioTower2F.asm",
         "commands": 3,
@@ -1071,8 +1071,8 @@
         "tileAddress": 707883
     },
     {
-        "start": 387794,
-        "end": 387807,
+        "start": 387813,
+        "end": 387826,
         "name": "RadioTower3FPersonnelSignText",
         "map": "RadioTower3F.asm",
         "commands": 2,
@@ -1081,8 +1081,8 @@
         "tileAddress": 707914
     },
     {
-        "start": 387808,
-        "end": 387836,
+        "start": 387827,
+        "end": 387855,
         "name": "RadioTower3FPokemonMusicSignText",
         "map": "RadioTower3F.asm",
         "commands": 3,
@@ -1091,8 +1091,8 @@
         "tileAddress": 707917
     },
     {
-        "start": 389114,
-        "end": 389128,
+        "start": 389133,
+        "end": 389147,
         "name": "RadioTower4FProductionSignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1101,8 +1101,8 @@
         "tileAddress": 707952
     },
     {
-        "start": 389129,
-        "end": 389141,
+        "start": 389148,
+        "end": 389160,
         "name": "RadioTower4FStudio2SignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1168,8 +1168,8 @@
         "tileAddress": 690647
     },
     {
-        "start": 1733280,
-        "end": 1733312,
+        "start": 1733299,
+        "end": 1733331,
         "name": "Route12SignText",
         "map": "Route12.asm",
         "commands": 4,
@@ -1178,8 +1178,8 @@
         "tileAddress": 695424
     },
     {
-        "start": 1733313,
-        "end": 1733326,
+        "start": 1733332,
+        "end": 1733345,
         "name": "FishingSpotSignText",
         "map": "Route12.asm",
         "commands": 2,
@@ -1248,8 +1248,8 @@
         "tileAddress": 711780
     },
     {
-        "start": 1699249,
-        "end": 1699289,
+        "start": 1699268,
+        "end": 1699308,
         "name": "Route19SignText",
         "map": "Route19.asm",
         "commands": 4,
@@ -1258,8 +1258,8 @@
         "tileAddress": 691137
     },
     {
-        "start": 1699290,
-        "end": 1699365,
+        "start": 1699309,
+        "end": 1699384,
         "name": "CarefulSwimmingSignText",
         "map": "Route19.asm",
         "commands": 6,
@@ -1318,8 +1318,8 @@
         "tileAddress": 726011
     },
     {
-        "start": 1701212,
-        "end": 1701237,
+        "start": 1701231,
+        "end": 1701256,
         "name": "BillsHouseSignText",
         "map": "Route25.asm",
         "commands": 3,
@@ -1595,8 +1595,8 @@
         "tileAddress": 698323
     },
     {
-        "start": 1728483,
-        "end": 1728521,
+        "start": 1728502,
+        "end": 1728540,
         "name": "Route39SignText",
         "map": "Route39.asm",
         "commands": 4,
@@ -1605,8 +1605,8 @@
         "tileAddress": 701964
     },
     {
-        "start": 1728522,
-        "end": 1728565,
+        "start": 1728541,
+        "end": 1728584,
         "name": "MoomooFarmSignText",
         "map": "Route39.asm",
         "commands": 4,
@@ -1615,8 +1615,8 @@
         "tileAddress": 701951
     },
     {
-        "start": 1728566,
-        "end": 1728697,
+        "start": 1728585,
+        "end": 1728716,
         "name": "Route39TrainerTipsText",
         "map": "Route39.asm",
         "commands": 10,
@@ -1635,8 +1635,8 @@
         "tileAddress": 699108
     },
     {
-        "start": 1730407,
-        "end": 1730445,
+        "start": 1730426,
+        "end": 1730464,
         "name": "Route40SignText",
         "map": "Route40.asm",
         "commands": 4,
@@ -1685,8 +1685,8 @@
         "tileAddress": 697268
     },
     {
-        "start": 1693296,
-        "end": 1693334,
+        "start": 1693315,
+        "end": 1693353,
         "name": "Route43Sign1Text",
         "map": "Route43.asm",
         "commands": 4,
@@ -1695,8 +1695,8 @@
         "tileAddress": 701673
     },
     {
-        "start": 1693335,
-        "end": 1693373,
+        "start": 1693354,
+        "end": 1693392,
         "name": "Route43Sign2Text",
         "map": "Route43.asm",
         "commands": 4,
@@ -1705,8 +1705,8 @@
         "tileAddress": 701902
     },
     {
-        "start": 1693374,
-        "end": 1693568,
+        "start": 1693393,
+        "end": 1693587,
         "name": "Route43TrainerTipsText",
         "map": "Route43.asm",
         "commands": 14,
@@ -1715,8 +1715,8 @@
         "tileAddress": 701855
     },
     {
-        "start": 1695656,
-        "end": 1695680,
+        "start": 1695675,
+        "end": 1695699,
         "name": "Route44Sign1Text",
         "map": "Route44.asm",
         "commands": 3,
@@ -1725,8 +1725,8 @@
         "tileAddress": 689144
     },
     {
-        "start": 1695681,
-        "end": 1695722,
+        "start": 1695700,
+        "end": 1695741,
         "name": "Route44Sign2Text",
         "map": "Route44.asm",
         "commands": 4,
@@ -1735,8 +1735,8 @@
         "tileAddress": 689181
     },
     {
-        "start": 1698035,
-        "end": 1698063,
+        "start": 1698054,
+        "end": 1698082,
         "name": "Route45SignText",
         "map": "Route45.asm",
         "commands": 3,

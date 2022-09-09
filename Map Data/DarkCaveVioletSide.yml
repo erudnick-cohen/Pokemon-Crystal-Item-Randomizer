@@ -62,10 +62,8 @@ Location:
                 LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                     - Flash
                 FlagsSet:
                 ReachableReqs:
@@ -86,10 +84,8 @@ Location:
                 LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                     - Flash
                 FlagsSet:
                 ReachableReqs:
@@ -110,10 +106,8 @@ Location:
                 LocationReqs: Dark Cave Violet Side
                 FlagReqs:
                     - Zephyr Badge
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                     - Flash
                 FlagsSet:
                 ReachableReqs:
@@ -136,10 +130,8 @@ Location:
                 FlagReqs:
                     - Hidden Items
                     - Zephyr Badge
-                    - Goldenrod Store Accessible
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                     - Flash
                 FlagsSet:
                 ReachableReqs:

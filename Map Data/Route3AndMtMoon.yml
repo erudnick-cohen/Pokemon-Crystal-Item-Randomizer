@@ -38,11 +38,9 @@ Location:
                 -   Route 3 and Mt. Moon
             FlagReqs:
                 -   Timed Events
-                -   Goldenrod Store Accessible
-                -   Rock Smash Purchaseable
+                - Rock Smash Usable
                 -   Hidden Items
             ItemReqs:
-                -   Rock Smash
             FlagsSet:
             NormalItem: MOON_STONE
             ReachableReqs:
