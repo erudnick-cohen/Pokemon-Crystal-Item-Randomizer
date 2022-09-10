@@ -90,7 +90,7 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 	return trashItems
 
 def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-					 newItems, maybeNewItems, dontReplace):
+					 newItems, maybeNewItems, maybeRemoveItems, dontReplace):
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
@@ -115,6 +115,8 @@ def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedP
 			newItems.extend(i['NewItems'])
 		if 'MaybeNewItems' in i:
 			maybeNewItems.extend(i['MaybeNewItems'])
+		if 'MaybeRemoveItems' in i:
+			maybeRemoveItems.extend(i["MaybeRemoveItems"])
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
 
@@ -135,15 +137,16 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	maybeNewItems = []
 	dontReplace = []
 	addedProgressList = []
+	maybeRemoveItems = []
 
 	ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-						 newItems, maybeNewItems, dontReplace)
+						 newItems, maybeNewItems, maybeRemoveItems, dontReplace)
 
 	if "Warps" in flags:
 		mod_changes = GenerateWarpData.InterpretWarpChanges(romPath)
 
 		ProcessModifiers(mod_changes, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-						 newItems, maybeNewItems, dontReplace)
+						 newItems, maybeNewItems, maybeRemoveItems, dontReplace)
 
 	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
@@ -266,8 +269,13 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			for i in keyItemMap:
 				invKeyItemMap[keyItemMap[i]] = i
 			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
+
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
+
+			for item in maybeRemoveItems:
+				if item in trashItems:
+					trashItems.remove(item)
 
 			# This is intended to remove warp trash to keep the item balance level
 			# At first, I assumed this was the issue with items not being placed

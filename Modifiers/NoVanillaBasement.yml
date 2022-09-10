@@ -3,19 +3,19 @@ Description: Guarantees that the seed will not require you to enter the basement
 Changes:
     -
         Location: Goldenrod Tunnel
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
             - Beat Team Rocket
 
     -
         Location: Goldenrod Warehouse
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
             - Beat Team Rocket
 
 
     -
         Location: Goldenrod Underground Switch Room
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Rocket Invasion
             - Beat Team Rocket

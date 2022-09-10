@@ -521,8 +521,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					placeable = False
 
 				if locList[iter].isShop() and \
-						(toAllocate in badgeSet or toAllocate in \
-					[ "Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX" ]):
+						(toAllocate in badgeSet or toAllocate in RandomizeFunctions.ShopFlagItems):
 					# Shopsanity does not yet support flags in shops
 					placeable = False
 
@@ -1157,7 +1156,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 						else:
 							i.item = None
 						#print("Trash", i.Name, i.item)
-						if i.item != "GOLD_LEAF":
+						if i.item != "GOLD_LEAF" and i.item is not None:
 							trashSpoiler[i.Name] = i.item
 							i.IsGym = False
 							i.IsItem = True

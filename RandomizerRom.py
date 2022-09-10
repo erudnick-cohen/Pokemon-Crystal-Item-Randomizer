@@ -417,7 +417,7 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 		else:
 			# This will write the other byte of shopitem macro in future
 			# This is not yet supported by speedchoice engine changes
-			raise Exception("Not yet supported")
+			raise Exception("Not yet supported::", itemType, location.Name, location.item)
 
 
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):

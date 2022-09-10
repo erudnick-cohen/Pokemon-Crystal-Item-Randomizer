@@ -8,6 +8,9 @@ AddedItems:
     - Rock Smash
     - Water Stone
     - Escape Rope
+MaybeRemoveItems:
+    - ESCAPE_ROPE
+    - WATER_STONE
 Changes:
     -
         Location: Shopsanity
