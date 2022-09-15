@@ -55,8 +55,8 @@
   {
     "FriendlyName": "Director Tunnel",
     "LabelName": "ckir_BEFORE_DirectorBadges",
-    "ExpectedOffValues": [11, 7, 228, 89],
-    "ExpectedOnValues": [11, 0, 228, 89],
+    "ExpectedOffValues": [11, 7, "ckir_BEFORE_GotCardKey", null],
+    "ExpectedOnValues": [11, 0, "ckir_BEFORE_GotCardKey", null],
     "ModifierChanges":
       {
         "Add": [

@@ -3492,6 +3492,15 @@
     "hex_values": "$b $7 $5 $5a"
   },
   {
+    "label": "GoldenrodUndergroundWarehouseDirectorScript.ckir_BEFORE_GotCardKey",
+    "address_range": {
+      "begin": 514565,
+      "end": 514565
+    },
+    "integer_values": "",
+    "hex_values": ""
+  },
+  {
     "label": "GoldenrodUndergroundWarehouseMaxEther.ckir_BEFOREGOLDENRODTUNNELMAXETHER0ITEMCODE",
     "address_range": {
       "begin": 514571,
@@ -7826,8 +7835,8 @@
       "begin": 1684715,
       "end": 1684719
     },
-    "integer_values": "10 16 3 117",
-    "hex_values": "$a $10 $3 $75"
+    "integer_values": "10 15 3 117",
+    "hex_values": "$a $f $3 $75"
   },
   {
     "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",

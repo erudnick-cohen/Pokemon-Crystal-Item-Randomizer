@@ -1309,7 +1309,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				i.Type = "Item"
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
-				print(i.Name,"now","Silver Leaf")
+				#print(i.Name,"now","Silver Leaf")
 
 	remainingItems = True
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
@@ -1325,7 +1325,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				i.Type = "Item"
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
-				print(i.Name,"now","Silver Leaf")
+				#print(i.Name,"now","Silver Leaf")
 
 			if i.Type == "Map":
 				activeLoc.extend(i.Sublocations)

@@ -296,7 +296,7 @@ class Location:
 
 		totalLength = len(notInputFlags) + len(hasItemReqs) + len(hasRecommendedItem) + len(hasRecommendFlag)
 
-		return totalLength == 0
+		return totalLength != 0
 
 	def applyWarpLogic(self, flags):
 		# Remove standard requirements for warp randomisation

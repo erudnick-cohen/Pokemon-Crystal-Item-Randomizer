@@ -84,7 +84,9 @@ GoldenrodUndergroundWarehouseDirectorScript:
 	clearevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_3
 	writetext DirectorCardKeyText
 	promptbutton
+.ckir_BEFORE_GotCardKey::
 .GotCardKey:
+.ckir_AFTER_GotCardKey::
 	writetext DirectorAfterText
 	waitbutton
 	closetext
