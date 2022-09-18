@@ -1127,6 +1127,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				print(i.Name,"now","Silver Leaf")
 
 	remainingItems = True
+	addedSublocations = {}
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
 		remainingItems = False
 		for i in activeLoc:
@@ -1141,6 +1142,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				print(i.Name,"now","Silver Leaf")
+			#Handle adding unreachable maps that haven't been met
+			elif i.Name not in addedSublocations:
+				addedSublocations[i.Name] = i
+				activeLoc.extend(i.Sublocations)
 
 
 
