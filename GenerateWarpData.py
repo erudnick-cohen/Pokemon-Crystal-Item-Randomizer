@@ -64,6 +64,11 @@ def InterpretWarpChanges(file):
             labelData = addressData1
 
         expectedOnValues = check["ExpectedOnValues"]
+
+        expectedOnValuesFix = None
+        if "ExpectedOnValuesFix" in check:
+            expectedOnValuesFix = check["ExpectedOnValuesFix"]
+
         expectedOffValues = check["ExpectedOffValues"]
 
         iterator=0
@@ -77,6 +82,19 @@ def InterpretWarpChanges(file):
                 iterator += 1
 
             iterator += 1
+
+        if expectedOnValuesFix is not None:
+            iterator = 0
+            for value in expectedOnValuesFix:
+                if type(value) != int:
+                    # TODO Lookup the value in the label as refers to a label address
+                    addressForOn = labelData[value]["address_range"]["begin"]
+                    jumpBytes = RandomizeFunctions.AddressToIntValues(addressForOn)
+                    expectedOnValuesFix[iterator] = jumpBytes[0]
+                    expectedOnValuesFix[iterator + 1] = jumpBytes[1]
+                    iterator += 1
+
+                iterator += 1
 
         iterator = 0
         for value in expectedOffValues:
@@ -102,6 +120,7 @@ def InterpretWarpChanges(file):
         else:
             isOn = True
             isOff = True
+            isOnFix = expectedOnValuesFix is None
 
             iterator=0
             while iterator < labelValuesCount:
@@ -110,8 +129,14 @@ def InterpretWarpChanges(file):
                     isOn = False
                 if lookupI != expectedOffValues[iterator]:
                     isOff = False
+                if expectedOnValuesFix is not None:
+                    if lookupI != expectedOnValuesFix[iterator]:
+                        isOnFix = False
 
                 iterator += 1
+
+            if isOnFix and not isOn:
+                isOn = True
 
             if not isOn and not isOff:
                 print("Error: Neither on nor off")

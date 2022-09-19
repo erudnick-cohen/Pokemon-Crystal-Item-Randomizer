@@ -1109,6 +1109,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	# TODO: Handle any items deemed not possible to reach even after all remaining processing
 	# Preferably all to one item to make this obvious to find/identify bugs
 
+	hasSilverLeaf = False
+
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
 	while ("RandomiseItems" in inputFlags) and remainingItems:
@@ -1125,9 +1127,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				print(i.Name,"now","Silver Leaf")
+				hasSilverLeaf = True
 
 	remainingItems = True
 	addedSublocations = {}
+
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
 		remainingItems = False
 		for i in activeLoc:
@@ -1142,6 +1146,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				print(i.Name,"now","Silver Leaf")
+				hasSilverLeaf = True
+
 			#Handle adding unreachable maps that haven't been met
 			elif i.Name not in addedSublocations:
 				addedSublocations[i.Name] = i
@@ -1177,4 +1183,4 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#print('remaining')
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList, randomizedExtra)
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList, randomizedExtra, hasSilverLeaf)

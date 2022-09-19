@@ -218,8 +218,24 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
+
+			successMessage = "Successfully randomized rom"
+			successBoxName = "Success"
+
+			# TODO
+			# Change warning handling and result to dictionary for easier readability and extension
+			# Handle E4 not possible in the same way
+
+			if len(result) >= 10:
+				# If Silver Leaf debug is enabled, say completed with warnings
+				silverCheck = result[9]
+				if silverCheck:
+					successMessage = "Sucessfully generated rom with warnings"
+					successBoxName = "Success..."
+
+
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
-			QtWidgets.QMessageBox.about(self, 'Success', 'Sucessfully randomized rom')
+			QtWidgets.QMessageBox.about(self, successBoxName, successMessage)
 			_translate = QtCore.QCoreApplication.translate
 		except Exception:
 			error_dialog = QtWidgets.QErrorMessage()
