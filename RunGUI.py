@@ -345,7 +345,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
 			QtGui.QGuiApplication.processEvents()
 def main():
-	os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
+	QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+	QtGui.QGuiApplication.setHighDpiScaleFactorRoundingPolicy(QtCore.Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
 	app = QApplication(sys.argv)
 	form = RunWindow()
 	form.show()
