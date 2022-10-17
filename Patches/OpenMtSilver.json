@@ -53,8 +53,8 @@
             ]
         },
         "address_range": {
-            "begin": 1578110,
-            "end": 1578113
+            "begin": 1578104,
+            "end": 1578107
         },
         "label": "HallOfFame_MapScripts.ckir_BEFORE_clearevent_EVENT_RED_IN_MT_SILVER",
         "description": "Changes E4 to not spawn Red to prevent cheese"

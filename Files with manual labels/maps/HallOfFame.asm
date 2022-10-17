@@ -31,8 +31,8 @@ HallOfFame_MapScripts:
 	setval HEALMACHINE_HALL_OF_FAME
 	special HealMachineAnim
 	setevent EVENT_BEAT_ELITE_FOUR
-	setevent EVENT_TELEPORT_GUY
-	setevent EVENT_RIVAL_SPROUT_TOWER
+    ;;setevent EVENT_TELEPORT_GUY
+	;;setevent EVENT_RIVAL_SPROUT_TOWER
 .ckir_BEFORE_clearevent_EVENT_RED_IN_MT_SILVER::
 	clearevent EVENT_RED_IN_MT_SILVER
 .ckir_AFTER_clearevent_EVENT_RED_IN_MT_SILVER::
@@ -43,6 +43,7 @@ HallOfFame_MapScripts:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftrue .SkipPhoneCall
 	specialphonecall SPECIALCALL_SSTICKET
+	setevent EVENT_ELM_HAS_SS_TICKET
 .SkipPhoneCall:
 	halloffame
 	end

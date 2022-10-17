@@ -730,8 +730,8 @@
         "tileAddress": 693376
     },
     {
-        "start": 520966,
-        "end": 521039,
+        "start": 520953,
+        "end": 521026,
         "name": "LavRadioTower1FDirectoryText",
         "map": "LavRadioTower1F.asm",
         "commands": 7,
@@ -740,8 +740,8 @@
         "tileAddress": 723949
     },
     {
-        "start": 521040,
-        "end": 521101,
+        "start": 521027,
+        "end": 521088,
         "name": "LavRadioTower1FPokeFluteSignText",
         "map": "LavRadioTower1F.asm",
         "commands": 5,
