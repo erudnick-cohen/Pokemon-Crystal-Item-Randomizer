@@ -1287,6 +1287,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	# TODO: Handle any items deemed not possible to reach even after all remaining processing
 	# Preferably all to one item to make this obvious to find/identify bugs
 
+	hasSilverLeaf = False
+
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
 	while ("RandomiseItems" in inputFlags or "SilverLeafDebug" in inputFlags ) and remainingItems and assign_trash:
@@ -1310,8 +1312,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				#print(i.Name,"now","Silver Leaf")
+				hasSilverLeaf = True
 
 	remainingItems = True
+	addedSublocations = {}
+
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
 		remainingItems = False
 		for i in activeLoc:
@@ -1328,6 +1333,13 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				#print(i.Name,"now","Silver Leaf")
 
 			if i.Type == "Map":
+				activeLoc.extend(i.Sublocations)
+				print(i.Name,"now","Silver Leaf")
+				hasSilverLeaf = True
+
+			#Handle adding unreachable maps that haven't been met
+			elif i.Name not in addedSublocations:
+				addedSublocations[i.Name] = i
 				activeLoc.extend(i.Sublocations)
 
 
@@ -1347,12 +1359,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	# if len(trashItems) > 0 and not randomizerFailed:
 	# print(len(trashItems), trashItems)
 
-	# print(stateDist)
-	# print(spoiler)
-	# print(nBadges)
-	# print('illegal')
-	# print('remaining')
-	# print(trashItems)
-	# print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-
-	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes
+	#print(stateDist)
+	#print(spoiler)
+	#print(nBadges)
+	#print('illegal')
+	#print('remaining')
+	#print(trashItems)
+	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
+	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList, randomizedExtra, changes, hasSilverLeaf)
