@@ -285,7 +285,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		#baseline requirements
 		#allReqs = i.LocationReqs+i.FlagReqs+i.itemReqs
 		allReqs = sorted(i.requirementsNeeded(defaultdict(lambda: False)))
-		allReqsList.extend(allReqs) 
+		allReqsList.extend(allReqs)
 		allReqsList.append(i.Name)
 		requirementsDict[i.Name].append(allReqs)
 		for j in sorted(i.FlagsSet):
@@ -371,7 +371,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			progressList.append(i)
 
 
-				
+
 	#put surf at the front of the list because with badges being shuffled, there is otherwise an abnormal bias towards early surf
 	progressList.remove('Surf')
 	progressList.append('Surf')
@@ -419,7 +419,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			# Standard warps use a 2-for-2 system so no optimisation with these
 		#	if len(nonStartSet) > 2:
 
-	
+
 	#go through all the plandomizer allocations and try to put them in locations specified (generated seed will ATTEMPT to obey these)
 	#this works by putting the plando placements to be tried first
 	for i in plandoPlacements:
@@ -951,7 +951,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		item_processor = None
 
 
-	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems = \
+	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems, hasSilverLeaf = \
 		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList,
 						 badgeSet, item_processor, requiredItems)
 
@@ -960,8 +960,20 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		if f[0] not in fullDependenciesList:
 			fullDependenciesList[f[0]] = f[1]
 
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, fullDependenciesList, progressList, locList,
-			randomizedExtra, upgradedItems)
+	resultDict = {}
+	resultDict["Reachable"] = reachable
+	resultDict["Spoiler"] = spoiler
+	resultDict["State"] = stateDist
+	resultDict["Trash"] = trashSpoiler
+	resultDict["Dependencies"] = fullDependenciesList
+	resultDict["ProgressList"] = progressList
+	resultDict["LocationList"] = locList
+	resultDict["Failed"] = randomizerFailed
+	resultDict["UpgradedItems"] = upgradedItems
+	resultDict["RandomizedExtra"] = randomizedExtra
+	resultDict["HasSilverLeaf"] = hasSilverLeaf
+
+	return resultDict
 
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
@@ -1366,4 +1378,5 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	#print('remaining')
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
-	return (reachable, spoiler, stateDist, randomizerFailed, trashSpoiler, requirementsDict, progressList, locList, randomizedExtra, changes, hasSilverLeaf)
+
+	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes, hasSilverLeaf

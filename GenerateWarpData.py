@@ -450,7 +450,7 @@ def getMapAttributesMapping():
     data = f.readlines()
     f.close()
 
-    result = {}
+    elements = {}
 
     for line in data:
         line = line.strip()
@@ -464,9 +464,9 @@ def getMapAttributesMapping():
         map_path = s[0].replace("map_attributes ","")
         map_desired = s[1].strip()
 
-        result[map_path] = map_desired
+        elements[map_path] = map_desired
 
-    return result
+    return elements
 
 
 

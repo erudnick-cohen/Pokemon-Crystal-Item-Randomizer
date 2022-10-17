@@ -15,19 +15,19 @@ import copy
 import traceback
 import random
 
-def handleBadSpoiler(result, flags, minSize=None, maxSize=None):
-	spoiler = result[1]
-	state = result[0]
+def handleBadSpoiler(resultDict, flags, minSize=None, maxSize=None):
+	spoiler = resultDict["Spoiler"]
+	reachable = resultDict["Reachable"]
 
 	if "Warps" in flags:
 		# Debugging points to be aware of, due to bad warp rom at this time
-		if "Victory Road Gate "+LoadLocationData.WARP_OPTION not in state:
+		if "Victory Road Gate "+LoadLocationData.WARP_OPTION not in reachable:
 			pass
-		if "Oaks Lab "+LoadLocationData.WARP_OPTION not in state:
+		if "Oaks Lab "+LoadLocationData.WARP_OPTION not in reachable:
 			pass
 
-	if len(result) > 6:
-		remainingProgressItems = result[6]
+	if "ProgressList" in resultDict:
+		remainingProgressItems = resultDict["ProgressList"]
 		for s in remainingProgressItems:
 			print("Unplaced:", s)
 
@@ -36,7 +36,7 @@ def handleBadSpoiler(result, flags, minSize=None, maxSize=None):
 
 	for s in spoiler.keys():
 		s_value = spoiler[s]
-		if s_value not in state or state[s_value].item == "SILVER_LEAF":
+		if s_value not in reachable or reachable[s_value].item == "SILVER_LEAF":
 			prepared_commands.append("Cannot reach:"+s+" "+s_value)
 
 	if minSize is None and maxSize is None:
@@ -120,6 +120,29 @@ def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedP
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
 
+
+class PriorityObject:
+	def __init__(self, name, types, keys):
+		self.HintName = name
+		self.HintTypes = types
+		self.HintKeys = keys
+
+
+def CheckForE4Reachable(resultDict):
+	E4Flag = True
+	E4Found = ["Will", "Koga", "Bruno", "Karen", "Lance"]
+	foundAll = True
+	for mapReach in E4Found:
+		if mapReach not in resultDict["Reachable"]:
+			print("Not found:", mapReach)
+			foundAll = False
+			break
+	if not foundAll:
+		# TODO Add this as a warning display
+		print("Successful seed, but cannot reach all E4...")
+		E4Flag = False
+
+	return E4Flag
 
 def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
 				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
@@ -232,7 +255,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	else:
 		BadgeDict = {'Fog Badge':Fog, 'Zephyr Badge':Zephyr, 'Hive Badge':Hive, 'Plain Badge': Plain, 'Storm Badge': Storm, 'Mineral Badge': Mineral, 'Glacier Badge': Glacier, 'Rising Badge': Rising}
 
-	result = ['Nothing', 'Here']
+	resultDict = {}
 
 	# Don't re-load data from folder on failure!
 	fullLocationData = LoadLocationData.LoadDataFromFolder(".", banList, allowList, changeListDict, flags)
@@ -254,7 +277,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		for item in items:
 			spoilerDetails[item] = {}
 
-	while goal not in result[0] or not completeResult or spoilerLoop:
+	while ("Reachable" not in resultDict or goal not in resultDict["Reachable"]) or not completeResult or spoilerLoop:
 		try:
 			completeResult = True
 			res_items = fullLocationData[1].copy()
@@ -321,39 +344,36 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			for i in rmCore:
 				coreProgress.remove(i)
 			if(not "BadgeItemShuffle" in otherSettings):
-				result = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+				resultDict = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
 			else:
 				rBadgeList = []
 				for i in BadgeDict:
 					rBadgeList.append(i)
-				result = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
-			if goal not in result[0]:
-				handleBadSpoiler(result, flags, maxSize=10 if spoilerLoop else None)
+				resultDict = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
+
+			if goal not in resultDict["Reachable"]:
+				handleBadSpoiler(resultDict, flags, maxSize=10 if spoilerLoop else None)
 				print("bad run, retrying")
-			elif len(result) > 6:
-				remainingProgressItems = result[6]
+			elif "ProgressList" in resultDict:
+				print("Final checks...")
+				completeResult = True
+
+
+				remainingProgressItems = resultDict["ProgressList"]
 				if len(remainingProgressItems) > 0:
 					print("Successful seed, but not all items placed...")
-					handleBadSpoiler(result, flags)
+					handleBadSpoiler(resultDict, flags)
 					print("bad run, retrying")
 					completeResult = False
 				# Check for other requirements for FULL completion
 				# This DOESN'T check possibility before Red however
-				E4Found = ["Will", "Koga", "Bruno", "Karen", "Lance"]
-				foundAll = True
-				for mapReach in E4Found:
-					if mapReach not in result[0]:
-						print("Not found:", mapReach)
-						foundAll = False
-						break
-				if not foundAll:
-					print("Successful seed, but cannot reach all E4...")
-					completeResult = False
 
+
+				completeResult = completeResult and CheckForE4Reachable(resultDict)
 
 				if completeResult and spoilerLoop:
-					for s in result[1].keys():
-						s_value = result[1][s]
+					for s in resultDict["Spoiler"].keys():
+						s_value = resultDict["Spoiler"][s]
 						if s not in spoilerDetails[s_value]:
 							spoilerDetails[s_value][s] = 0
 
@@ -368,10 +388,6 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 						json_out = json.dumps(spoilerDetails, indent=2)
 						print(json_out)
 
-
-
-
-
 		except Exception as err:
 			print('Failed with error: '+str(err)+' retrying...')
 			completeResult = False
@@ -382,17 +398,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 	print("Seed increments:",seedIncrements-1)
 
-
-
-
-	for j in result[0]:
-		i = result[0][j]
+	for j in resultDict["Reachable"]:
+		i = resultDict["Reachable"][j]
 		if(i.NormalItem is None and i.isItem()):
 			pass
 			#print(i.Name)
 	print('-------')
-	for j in result[0]:
-		i = result[0][j]
+	for j in resultDict["Reachable"]:
+		i = resultDict["Reachable"][j]
 		if(i.NormalItem is not None and not i.isItem()):
 			pass
 			#print(i.Name)
@@ -422,11 +435,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 
 
-	class PriorityObject:
-		def __init__(self, name, types, keys):
-			self.HintName = name
-			self.HintTypes = types
-			self.HintKeys = keys
+
 
 	pri_file = open("Config/PriorityHints.json")
 	p_d = pri_file.read()
@@ -445,7 +454,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		ptext = pfile.read()
 		patchList.extend(json.loads(ptext))
 
-	maxDist = max(result[2].values())
+	maxDist = max(resultDict["State"].values())
 	f = open(romPath,'r+b')
 	romMap = mmap.mmap(f.fileno(),0)
 
@@ -454,19 +463,18 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 
-	RandomizerRom.DirectWriteItemLocations(result[0].values(), addressData,romMap,'Progressive Rods' in flags)
+	RandomizerRom.DirectWriteItemLocations(resultDict["Reachable"].values(), addressData,romMap,'Progressive Rods' in flags)
 	if adjustRegularWildLevels:
-		RandomizerRom.WriteWildLevelsToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
+		RandomizerRom.WriteWildLevelsToMemory(resultDict["Reachable"], resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
 	if adjustSpecialWildLevels:
-		RandomizerRom.WriteSpecialWildToMemory(result[0], result[2],addressData,romMap,wildLVBoost,maxDist)
+		RandomizerRom.WriteSpecialWildToMemory(resultDict["Reachable"], resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
-		RandomizerRom.WriteTrainerDataToMemory(result[0],result[2],addressData,romMap,trainerLVBoost,maxDist)
+		RandomizerRom.WriteTrainerDataToMemory(resultDict["Reachable"],resultDict["State"],addressData,romMap,trainerLVBoost,maxDist)
 
 	if hintConfig is not None and hintConfig.UseHints:
-		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(result[1].copy(), result[4].copy(), res_locations,
-															criticalTrash, BadgeDict, result[5].copy(), otherSettings,
-															hintConfig, allowList, LocationList,
-																		  flags, goal)
+		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(resultDict["Spoiler"].copy(), resultDict["Trash"].copy(), res_locations,
+															criticalTrash, BadgeDict, resultDict["Dependencies"].copy(), otherSettings,
+															hintConfig, allowList, LocationList, flags, goal)
 
 		RandomizeFunctions.removeRedundantHints(hint_desc, hintConfig, locationList)
 
@@ -487,4 +495,4 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	#RandomizerRom.WriteSpecialWildLevels(result[0], result[2],lambda x,y: monFun(x,y,85))
 	#print(result[2])
 	#print(result[1])
-	return result
+	return resultDict

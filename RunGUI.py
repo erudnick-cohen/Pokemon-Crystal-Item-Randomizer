@@ -188,7 +188,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 			else:
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.\
+					resultDict = RunCustomRandomization.\
 						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
@@ -196,7 +196,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 									 coreProgress = self.settings['CoreProgress'], otherSettings = self.settings,
 									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.\
+					resultDict = RunCustomRandomization.\
 						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
@@ -208,13 +208,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			if(self.OutputSpoiler.isChecked()):
 				outputSpoiler = {}
 				outputSpoiler['RNG Seed'] = rngSeed
-				outputSpoiler['Solution'] = result[1]
-				outputSpoiler['Useless Stuff'] = result[4]
-				if len(result) > 8:
-					outputSpoiler["Xtra Stuff"] = result[8]
+				outputSpoiler['Solution'] = resultDict["Spoiler"]
+				outputSpoiler['Useless Stuff'] = resultDict["Trash"]
+				if "RandomizedExtra" in resultDict:
+					outputSpoiler["Xtra Stuff"] = resultDict["RandomizedExtra"]
 
-				if len(result) > 9:
-					outputSpoiler["Xtra Upgrades"] = result[9]
+				if "UpgradedItems" in resultDict:
+					outputSpoiler["Xtra Upgrades"] = resultDict["UpgradedItems"]
 
 				outputSpoiler["CIR Version"] = Version.GetVersion()
 				outputSpoiler["Mode"] = self.CurentSettings.text()
@@ -230,9 +230,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			# Change warning handling and result to dictionary for easier readability and extension
 			# Handle E4 not possible in the same way
 
-			if len(result) >= 10:
+			if "HasSilverLeaf" in resultDict:
 				# If Silver Leaf debug is enabled, say completed with warnings
-				silverCheck = result[9]
+				silverCheck = resultDict["HasSilverLeaf"]
 				if silverCheck:
 					successMessage = "Sucessfully generated rom with warnings"
 					successBoxName = "Success..."

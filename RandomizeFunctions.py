@@ -1349,11 +1349,11 @@ def OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badge
         one_location_hints = []
 
         location_name = spoiler[key]
-        result = list(filter(lambda x: x.Name == location_name, locationList))
-        if len(result) != 1:
+        resultOld = list(filter(lambda x: x.Name == location_name, locationList))
+        if len(resultOld) != 1:
             print("Should be only one result")
         else:
-            found_result = result[0]
+            found_result = resultOld[0]
 
             if "Impossible" in found_result.FlagReqs or \
                     "Banned" in found_result.FlagReqs or \
@@ -1619,12 +1619,12 @@ def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
     if variable is not None:
         variables.append(variable)
 
-    result = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
+    variableResult = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
                                                      None, None, None, locList,
                                                      badgeSet, None, assign_trash=False,
                                                      forbidden=variables, recommended=False)
 
-    if goal in result[0]:
+    if goal in variableResult[0]:
         return False
 
     return True

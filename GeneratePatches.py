@@ -20,7 +20,7 @@ def GetManualCode(labelName, lookups):
 	betweenLines = lookups[beforeLabel]
 	return betweenLines
 
-def ExtractLabelledCode(file, result):
+def ExtractLabelledCode(file, foundElement):
 
 	text = open(file).read()
 	regex = ".ckir_BEFORE_{0,}[A-Za-z0-9_]{1,}::(?:$|\n)"
@@ -46,7 +46,7 @@ def ExtractLabelledCode(file, result):
 
 		beforeClean = before.replace("::", "").strip()
 
-		result[beforeClean] = betweenLines
+		foundElement[beforeClean] = betweenLines
 
 
 
