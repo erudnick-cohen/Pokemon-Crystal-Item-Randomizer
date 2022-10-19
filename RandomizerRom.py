@@ -28,6 +28,68 @@ def CountFilesInDirectory(dir):
 	return count
 
 
+def IsWithinLabels(before, after, index):
+	for b in before:
+		after_b = [x for x in after if x > b]
+		if len(after_b) == 0:
+			return False
+		first_after = max(after_b)
+		if index >= b and index < first_after:
+			return True
+
+	return False
+
+
+
+
+def CompareFileData(manual_file, base_file):
+	manual_file = open(manual_file)
+	manual_lines = manual_file.readlines()
+
+	replace_file = open(base_file)
+	replace_lines = replace_file.readlines()
+
+	manual_file.close()
+	replace_file.close()
+
+	isCKIRBeforeLabel = "\.ckir_BEFORE(.*){1,}::"
+	isCKIRAfterLabel = "\.ckir_AFTER(.*){1,}::"
+	ckirBefore = re.compile(isCKIRBeforeLabel)
+	ckirAfter = re.compile(isCKIRAfterLabel)
+
+	manuals_within_before = [ manual_lines.index(x) for x in manual_lines if ckirBefore.match(x)]
+	manuals_within_after = [manual_lines.index(x) for x in manual_lines if ckirAfter.match(x)]
+
+	if len(manuals_within_before) == 0 or len(manuals_within_after) == 0:
+		# This should not occur as all these files should have manual labels
+		raise Exception("No Manual label in labelling file")
+
+	if len(manuals_within_before) != len(manuals_within_after):
+		raise Exception("Incorrect count of manual labels")
+
+
+	replace_drop = [ x for x in replace_lines if not IsWithinLabels(manuals_within_before, manuals_within_after,
+																	replace_lines.index(x))]
+
+
+	manuals =  [ x.strip() for x in manual_lines if not (x.strip().endswith("::") or x.strip().startswith(";"))]
+	replaces = [ x.strip() for x in replace_drop if not (x.strip().endswith(":") or x.strip().startswith(";"))]
+
+
+
+	# TODO: Make these code changes work for old/new code in the labels, so this generated rom IS still the base rom
+	# For now, ignore changes within before->after label sets
+
+
+
+	missing_from_manual = [ x for x in replaces if x not in manuals ]
+	if len(missing_from_manual) > 0:
+		index = replaces.index(missing_from_manual[0])
+		return index
+	else:
+		return_value = None if len(manuals) == len(manuals) else 1
+		return return_value
+
 def ResetRomForLabelling(wsl=False, romDir="7.4"):
 	git_success = False
 	try:
@@ -80,6 +142,14 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 		print("Manual copied files:", len(manual_copy_files), counted)
 		print("Copied files", manual_copy_files)
 		raise Exception("Unused file in folder")
+
+	# Check files for inconsistent line differences
+
+	for item in manual_copy_files:
+		fine = CompareFileData(item[0], item[1])
+		if fine is not None:
+			pass
+			# raise Exception("File data does not correlate")
 
 	for manual_file in manual_copy_files:
 		shutil.copy(manual_file[0], manual_file[1])

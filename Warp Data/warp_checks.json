@@ -30,7 +30,7 @@
     "FriendlyName": "Slowpoke Well Open",
     "LabelName": "ckir_BEFORE_AzaleaRocket",
     "ExpectedOffValues": [246, 13, 35, 6, 0, 255, 255, 0, 0, 171, 64, 250, 6],
-    "ExpectedOnValues": [246, 13, 35, 2, 1, 255, 255, 0, 0, 171, 64, 250, 6],
+    "ExpectedOnValues": [246, 13, 35, 2, 1, 255, 255, 0, 0, "ckir_BEFORE_AzaleaTownRocket1Script", null, 250, 6],
     "ModifierChanges":
       {
         "Add": [
@@ -42,8 +42,23 @@
   {
     "FriendlyName": "Wandering Goldenrod Rockets",
     "LabelName": "ckir_BEFORE_GoldenrodRockets",
-    "ExpectedOffValues": [53, 20, 8, 7, 0, 255, 255, 0, 0, 26, 75, 204, 6, 53, 24, 32, 7, 0, 255, 255, 0, 0, 41, 75, 5, 1, 53, 19, 12, 6, 0, 255, 255, 0, 0, 44, 75, 205, 6, 53, 27, 20, 9, 0, 255, 255, 0, 0, 47, 75, 206, 6, 53, 24, 33, 7, 0, 255, 255, 0, 0, 50, 75, 5, 1, 53, 11, 33, 6, 0, 255, 255, 0, 0, 53, 75, 5, 1, 53, 14, 35, 8, 0, 255, 255, 0, 0, 56, 75, 206, 6],
-    "ExpectedOnValues": [53, 20, 7, 2, 17, 255, 255, 0, 0, 26, 75, 204, 6, 53, 21, 33, 2, 70, 255, 255, 0, 0, 41, 75, 5, 1, 53, 19, 12, 2, 16, 255, 255, 0, 0, 44, 75, 205, 6, 53, 27, 24, 2, 66, 255, 255, 0, 0, 47, 75, 206, 6, 53, 31, 37, 2, 67, 255, 255, 0, 0, 50, 75, 5, 1, 53, 14, 32, 2, 34, 255, 255, 0, 0, 53, 75, 5, 1, 53, 16, 24, 2, 51, 255, 255, 0, 0, 56, 75, 206, 6],
+    "ExpectedOffValues": [
+      53, 20, 8, 7, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketA", null, 204, 6,
+      53, 24, 32, 7, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketB", null, 5, 1,
+      53, 19, 12, 6, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketC", null, 205, 6,
+      53, 27, 20, 9, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketD", null, 206, 6,
+      53, 24, 33, 7, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketE", null, 5, 1,
+      53, 11, 33, 6, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketF", null, 5, 1,
+      53, 14, 35, 8, 0, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketG", null, 206, 6],
+    "ExpectedOnValues":
+    [53, 20, 7, 2, 17, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketA", null, 204, 6,
+      53, 21, 33, 2, 70, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketB", null, 5, 1,
+      53, 19, 12, 2, 16, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketC", null, 205, 6,
+      53, 27, 24, 2, 66, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketD", null, 206, 6,
+      53, 31, 37, 2, 67, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketE", null, 5, 1,
+      53, 14, 32, 2, 34, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketF", null, 5, 1,
+      53, 16, 24, 2, 51, 255, 255, 0, 0, "ckir_BEFORE_GoldenrodRocketG", null, 206, 6
+    ],
     "ModifierChanges":
       {
         "Add": [
@@ -108,7 +123,7 @@
     "FriendlyName": "Route 44 Access From Mahogany",
     "LabelName": "ckir_BEFORE_MahoganyTownStopScene",
     "ExpectedOffValues": [0, 8, 19, 0, 19, 64, 0, 0, 0, 9, 19, 0, 19, 64, 0, 0],
-    "ExpectedOnValues": [0, 7, 19, 0, 19, 64, 0, 0, 0, 7, 19, 0, 19, 64, 0, 0],
+    "ExpectedOnValues": [0, 7, 19, 0, 19, 64, 0, 0, 0, 7, 19, 0, "ckir_BEFORE_MahoganyTownTryARageCandyBarScript", null, 0, 0],
     "ModifierChanges":
       {
         "Add": [
@@ -132,9 +147,9 @@
 
   {
     "FriendlyName": "Right Gate Guard Absent",
-    "LabelName": "ckir_BEFORE_LockBasementDoor",
-    "ExpectedOffValues": [122, 18, 6, 61],
-    "ExpectedOnValues": [122, 18, 6, 46],
+    "LabelName": "ckir_BEFORE_object_event_MT_SILVER_GUARD2",
+    "ExpectedOffValues": [65, 9, 16, 8, 0, 255, 255, 0, 0, "ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript", null, 80, 7],
+    "ExpectedOnValues": [65, 9, 16, 8, 0, 255, 255, 0, 0, "ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript", null, 26, 0],
     "ModifierChanges":
       {
         "Add": [

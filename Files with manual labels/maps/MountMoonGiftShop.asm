@@ -9,6 +9,8 @@ MountMoonGiftShop_MapScripts:
 
 	db 0 ; callbacks
 
+.ckir_BEFORE_shop_events_MOONSHOP_MountMoonGiftShopClerkScript::
+.ckir_AFTER_shop_events_MOONSHOP_MountMoonGiftShopClerkScript::
 MountMoonGiftShopClerkScript:
 	faceplayer
 	opentext

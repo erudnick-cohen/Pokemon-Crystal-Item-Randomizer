@@ -72,7 +72,8 @@ def InterpretWarpChanges(file):
         expectedOffValues = check["ExpectedOffValues"]
 
         iterator=0
-        for value in expectedOnValues:
+        while iterator < len(expectedOnValues):
+            value = expectedOnValues[iterator]
             if type(value) != int:
                 # TODO Lookup the value in the label as refers to a label address
                 addressForOn = labelData[value]["address_range"]["begin"]
@@ -85,7 +86,8 @@ def InterpretWarpChanges(file):
 
         if expectedOnValuesFix is not None:
             iterator = 0
-            for value in expectedOnValuesFix:
+            while iterator < len(expectedOnValuesFix):
+                value = expectedOnValuesFix[iterator]
                 if type(value) != int:
                     # TODO Lookup the value in the label as refers to a label address
                     addressForOn = labelData[value]["address_range"]["begin"]
@@ -97,7 +99,8 @@ def InterpretWarpChanges(file):
                 iterator += 1
 
         iterator = 0
-        for value in expectedOffValues:
+        while iterator < len(expectedOffValues):
+            value = expectedOffValues[iterator]
             if type(value) != int:
                 # TODO Lookup the value in the label as refers to a label address
                 addressForOff = labelData[value]["address_range"]["begin"]
@@ -120,7 +123,7 @@ def InterpretWarpChanges(file):
         else:
             isOn = True
             isOff = True
-            isOnFix = expectedOnValuesFix is None
+            isOnFix = expectedOnValuesFix is not None
 
             iterator=0
             while iterator < labelValuesCount:
@@ -142,6 +145,7 @@ def InterpretWarpChanges(file):
                 print("Error: Neither on nor off")
             elif isOn and isOff:
                 print("On AND Off... broken!")
+                print(expectedOnValues, expectedOffValues)
             elif isOn:
                 print("On")
                 modifierChanges = check["ModifierChanges"]

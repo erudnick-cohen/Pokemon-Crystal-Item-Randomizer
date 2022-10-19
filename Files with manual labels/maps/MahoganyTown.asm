@@ -24,6 +24,8 @@ MahoganyTown_MapScripts:
 	setflag ENGINE_FLYPOINT_MAHOGANY
 	return
 
+.ckir_BEFORE_MahoganyTownTryARageCandyBarScript::
+.ckir_AFTER_MahoganyTownTryARageCandyBarScript::
 MahoganyTownTryARageCandyBarScript:
 	showemote EMOTE_SHOCK, MAHOGANYTOWN_POKEFAN_M, 15
 	applymovement MAHOGANYTOWN_POKEFAN_M, MovementData_0x1900a9

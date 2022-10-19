@@ -41,9 +41,13 @@ VictoryRoadGateBadgeCheckScript:
 	setscene SCENE_FINISHED
 	end
 
+.ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateLeftBlackBeltScript::
+.ckir_AFTER_object_event_MT_SILVER_GUARD_VictoryRoadGateLeftBlackBeltScript::
 VictoryRoadGateLeftBlackBeltScript:
 	jumptextfaceplayer VictoryRoadGateLeftBlackBeltText
 
+.ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript::
+.ckir_AFTER_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript::
 VictoryRoadGateRightBlackBeltScript:
 	jumptextfaceplayer VictoryRoadGateRightBlackBeltText
 

@@ -780,8 +780,8 @@
         "tileAddress": 710377
     },
     {
-        "start": 487755,
-        "end": 487783,
+        "start": 487760,
+        "end": 487788,
         "name": "DontLitterSignText",
         "map": "MountMoonSquare.asm",
         "commands": 3,

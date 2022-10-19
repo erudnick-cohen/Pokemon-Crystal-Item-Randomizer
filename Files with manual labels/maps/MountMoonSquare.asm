@@ -15,8 +15,13 @@ MountMoonSquare_MapScripts:
 	end
 
 .DisappearMoonStone:
-	setevent EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE
-	return
+    checkitemrando
+    iffalse .HideStone
+    end
+
+.HideStone:
+    setevent EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE
+    return
 
 .DisappearRock:
 	disappear MOUNTMOONSQUARE_ROCK

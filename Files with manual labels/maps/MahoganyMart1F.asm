@@ -32,6 +32,8 @@ MahoganyMart1F_MapScripts:
 	changeblock 6, 2, $1e ; stairs
 	return
 
+.ckir_BEFORE_shop_events_MahoganyMart1FPharmacistScript::
+.ckir_AFTER_shop_events_MahoganyMart1FPharmacistScript::
 MahoganyMart1FPharmacistScript:
 	faceplayer
 	opentext

@@ -4844,8 +4844,8 @@
   {
     "label": "MountMoonGiftShop_MapEvents.cwri_BEFOREMOUNT__MOON__GIFT__SHOP_3_7_MOUNT__MOON__SQUARE_3_0",
     "address_range": {
-      "begin": 487930,
-      "end": 487935
+      "begin": 487935,
+      "end": 487940
     },
     "integer_values": "7 3 3 15 10",
     "hex_values": "$7 $3 $3 $f $a"
@@ -4853,8 +4853,8 @@
   {
     "label": "MountMoonGiftShop_MapEvents.cwri_BEFOREMOUNT__MOON__GIFT__SHOP_4_7_MOUNT__MOON__SQUARE_3_1",
     "address_range": {
-      "begin": 487935,
-      "end": 487940
+      "begin": 487940,
+      "end": 487945
     },
     "integer_values": "7 4 3 15 10",
     "hex_values": "$7 $4 $3 $f $a"
@@ -4862,8 +4862,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_13_7_MOUNT__MOON__GIFT__SHOP_1_2",
     "address_range": {
-      "begin": 487797,
-      "end": 487802
+      "begin": 487802,
+      "end": 487807
     },
     "integer_values": "7 13 1 15 11",
     "hex_values": "$7 $d $1 $f $b"
@@ -4871,8 +4871,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_20_5_MOUNT__MOON_5_0",
     "address_range": {
-      "begin": 487787,
-      "end": 487792
+      "begin": 487792,
+      "end": 487797
     },
     "integer_values": "5 20 5 3 85",
     "hex_values": "$5 $14 $5 $3 $55"
@@ -4880,8 +4880,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_22_11_MOUNT__MOON_6_1",
     "address_range": {
-      "begin": 487792,
-      "end": 487797
+      "begin": 487797,
+      "end": 487802
     },
     "integer_values": "11 22 6 3 85",
     "hex_values": "$b $16 $6 $3 $55"
@@ -10541,8 +10541,8 @@
   {
     "label": "TinTowerRoof_MapEvents.cwri_BEFORETIN__TOWER__ROOF_9_13_TIN__TOWER__9F_4_0",
     "address_range": {
-      "begin": 488075,
-      "end": 488080
+      "begin": 488080,
+      "end": 488085
     },
     "integer_values": "13 9 4 3 12",
     "hex_values": "$d $9 $4 $3 $c"

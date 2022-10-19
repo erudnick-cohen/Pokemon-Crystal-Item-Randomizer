@@ -206,6 +206,8 @@ GoldenrodCityLassScript:
 GoldenrodCityGrampsScript:
 	jumptextfaceplayer GoldenrodCityGrampsText
 
+.ckir_BEFORE_GoldenrodRocketA::
+.ckir_AFTER_GoldenrodRocketA::
 GoldenrodCityRocketScoutScript:
 	opentext
 	writetext GoldenrodCityRocketScoutText1
@@ -217,21 +219,33 @@ GoldenrodCityRocketScoutScript:
 	turnobject GOLDENRODCITY_ROCKETSCOUT, UP
 	end
 
+.ckir_BEFORE_GoldenrodRocketB::
+.ckir_AFTER_GoldenrodRocketB::
 GoldenrodCityRocket1Script:
 	jumptextfaceplayer GoldenrodCityRocket1Text
 
+.ckir_BEFORE_GoldenrodRocketC::
+.ckir_AFTER_GoldenrodRocketC::
 GoldenrodCityRocket2Script:
 	jumptextfaceplayer GoldenrodCityRocket2Text
 
+.ckir_BEFORE_GoldenrodRocketD::
+.ckir_AFTER_GoldenrodRocketD::
 GoldenrodCityRocket3Script:
 	jumptextfaceplayer GoldenrodCityRocket3Text
 
+.ckir_BEFORE_GoldenrodRocketE::
+.ckir_AFTER_GoldenrodRocketE::
 GoldenrodCityRocket4Script:
 	jumptextfaceplayer GoldenrodCityRocket4Text
 
+.ckir_BEFORE_GoldenrodRocketF::
+.ckir_AFTER_GoldenrodRocketF::
 GoldenrodCityRocket5Script:
 	jumptextfaceplayer GoldenrodCityRocket5Text
 
+.ckir_BEFORE_GoldenrodRocketG::
+.ckir_AFTER_GoldenrodRocketG::
 GoldenrodCityRocket6Script:
 	jumptextfaceplayer GoldenrodCityRocket6Text
 

@@ -105,6 +105,8 @@ AzaleaTownRivalBattleScript:
 	playmapmusic
 	end
 
+.ckir_BEFORE_AzaleaTownRocket1Script::
+.ckir_AFTER_AzaleaTownRocket1Script::
 AzaleaTownRocket1Script:
 	jumptextfaceplayer AzaleaTownRocket1Text
 

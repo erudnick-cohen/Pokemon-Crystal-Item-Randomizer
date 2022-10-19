@@ -398,8 +398,8 @@
   {
     "label": "DontLitterSignText.ctir_BEFORE_DontLitterSignText",
     "address_range": {
-      "begin": 487755,
-      "end": 487784
+      "begin": 487760,
+      "end": 487789
     },
     "integer_values": "0 140 147 232 140 142 142 141 127 146 144 148 128 145 132 79 131 142 141 224 147 127 139 136 147 147 132 145 87",
     "hex_values": "$0 $8c $93 $e8 $8c $8e $8e $8d $7f $92 $90 $94 $80 $91 $84 $4f $83 $8e $8d $e0 $93 $7f $8b $88 $93 $93 $84 $91 $57"

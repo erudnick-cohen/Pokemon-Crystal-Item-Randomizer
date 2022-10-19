@@ -109,6 +109,12 @@ def makePatches():
 						if (" ." in l or "ifequal" in l or "ifnotequal" in l or "iffalse" in l or "iftrue" in l ) and "jr" not in l:
 							print("checking label", j["label"],l)
 							jumps += 1
+						#TODO:: Add handling here also for finding label commands in object events
+
+						# For any nested object events, all contain a jump reference
+						# Apart from a few which are generic ObjectEvent
+						if "object_event" in l and ", ObjectEvent," not in l :
+							jumps += 1
 
 				new_values = j["integer_values"]["new"]
 
