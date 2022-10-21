@@ -143,6 +143,7 @@ def InterpretWarpChanges(file):
 
             if not isOn and not isOff:
                 print("Error: Neither on nor off")
+                print(expectedOnValues, expectedOffValues, expectedOnValuesFix, lookValues)
             elif isOn and isOff:
                 print("On AND Off... broken!")
                 print(expectedOnValues, expectedOffValues)

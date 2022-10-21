@@ -1346,7 +1346,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 			if i.Type == "Map":
 				activeLoc.extend(i.Sublocations)
-				print("Unable to reach::", i.Name)
+				#print("Unable to reach::", i.Name)
 				#print(i.Name,"now","Silver Leaf")
 				#hasSilverLeaf = True
 
