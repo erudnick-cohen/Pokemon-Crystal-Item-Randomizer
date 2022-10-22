@@ -77,7 +77,10 @@ def LoadWarpData(locationList, flags):
 			"Sublocations": None,
 			"HasPKMN": "No",
 			"ReachableReqs": None,
-			"TrainerList": None
+			"TrainerList": None,
+			"RecommendedFlagReqs": [],
+			"RecommendedItemReqs": [],
+			"RecommendedLocationReqs": []
 		}
 
 		extra_locations = GenerateWarpData.handleSpecialCases(data, locationData, special_cases)
