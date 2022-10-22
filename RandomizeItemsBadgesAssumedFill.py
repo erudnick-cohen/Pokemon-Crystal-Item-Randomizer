@@ -1303,7 +1303,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
-	while ("RandomiseItems" in inputFlags or "SilverLeafDebug" in inputFlags ) and remainingItems and assign_trash:
+	while ("RandomiseItems" in inputFlags) and remainingItems and assign_trash:
 		remainingItems = False
 		for i in activeLoc:
 
@@ -1333,8 +1333,9 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 		remainingItems = False
 		for i in activeLoc:
 			if i.Name not in reachable and (i.isItem() or i.isGym()) \
-					and "Impossible" not in i.FlagReqs: # Impossible means NEVER overwrite
+					and "Impossible" not in i.FlagReqs and "Banned" not in i.FlagReqs: # Impossible means NEVER overwrite
 														# e.g. Not randomising Pokegear
+
 				remainingItems = True
 				activeLoc.extend(i.Sublocations)
 				i.item = "SILVER_LEAF"
@@ -1344,7 +1345,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				randomizedExtra[i.Name] = i.item
 				#print(i.Name,"now","Silver Leaf")
 
-			if i.Type == "Map":
+			if i.Type == "Map" and "Banned" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)
 				#print("Unable to reach::", i.Name)
 				#print(i.Name,"now","Silver Leaf")

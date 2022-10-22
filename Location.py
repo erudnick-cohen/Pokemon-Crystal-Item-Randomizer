@@ -492,6 +492,9 @@ class Location:
 			include = False
 		if 'Shopsanity' in self.FlagReqs and "Shopsanity" not in flags:
 			include = False
+		if "Possible Sale" in self.FlagReqs and "Phone Call Trainers" not in flags:
+			include = False
+
 		if include:
 			if self.NormalItem is not None and self.isItem():
 				list.append(self.NormalItem)
