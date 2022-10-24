@@ -1158,7 +1158,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 								placeItem = chosen
 
-							replacedItem = RandomizeFunctions.HandleShopLimitations(placeItem, i, locList, reachable, trashItems)
+							replacedItem = RandomizeFunctions.HandleShopLimitations(placeItem, i, locList, reachable, trashItems, inputFlags)
 							if replacedItem is not None:
 								placeItem = replacedItem
 
@@ -1222,7 +1222,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 
 					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
-																			addAfter=addAfter, force=True)
+																			inputFlags, addAfter=addAfter, force=True)
 
 					if replacedItem is not None:
 						i.item = replacedItem
@@ -1257,7 +1257,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				if (i.isItem() or i.isGym() or i.wasItem()):
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
-																			addAfter=addAfter, force=True)
+																			inputFlags, addAfter=addAfter, force=True)
 					if replacedItem is not None:
 						i.item = replacedItem
 
@@ -1343,7 +1343,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				i.Type = "Item"
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
-				#print(i.Name,"now","Silver Leaf")
+				hasSilverLeaf = True
 
 			if i.Type == "Map" and "Banned" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)

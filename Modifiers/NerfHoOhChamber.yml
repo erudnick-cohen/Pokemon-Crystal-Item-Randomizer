@@ -7,3 +7,5 @@ Changes:
         Location: VS Ho-Oh
         RemoveFlagReqs:
             - Became Champion
+IncompatibleWith:
+    - 'Warps'

@@ -173,14 +173,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				
 			if('ProgressItems' in self.settings):
 				if 'CoreProgress' in self.settings:
-					result = RunCustomRandomization.\
+					resultDict = RunCustomRandomization.\
 						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
 									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'],coreProgress = self.settings['CoreProgress'],
 									 otherSettings = self.settings, plandoPlacements = self.PlandoData, hintConfig = HintOptions)
 				else:
-					result = RunCustomRandomization.\
+					resultDict = RunCustomRandomization.\
 						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
 									 banList = self.settings['BannedLocations'], allowList = self.settings['AllowedLocations'],
 									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
@@ -203,6 +203,12 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
 									 otherSettings = self.settings, plandoPlacements = self.PlandoData,
 									 hintConfig = HintOptions)
+
+
+			if resultDict is None:
+				error_dialog = QtWidgets.QErrorMessage()
+				error_dialog.showMessage("Incorrect rom version provided!")
+				error_dialog.exec_()
 
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):

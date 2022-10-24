@@ -53,7 +53,7 @@ Location:
         Sublocations:
 
     -
-        Name: Rock Smash Possible
+        Name: Use Rock Smash Possible
         FileName: ElmsLab.asm
         Type: Map
         HasPKMN: No
@@ -76,7 +76,7 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
-          - Rock Smash Possible
+          - Use Rock Smash Possible
         FlagReqs:
         ItemReqs:
         FlagsSet:

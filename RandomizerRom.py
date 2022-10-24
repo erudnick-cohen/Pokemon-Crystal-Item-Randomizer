@@ -137,6 +137,7 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
 	manual_copy_files.append((manual_dir + "/events/std_scripts.asm", "RandomizerRom/engine/events/std_scripts.asm"))
 	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
+	manual_copy_files.append((manual_dir + "/menus/intro_permaoptions.asm", "RandomizerRom/engine/menus/intro_permaoptions.asm"))
 
 	if len(manual_copy_files) != counted:
 		print("Manual copied files:", len(manual_copy_files), counted)

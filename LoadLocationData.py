@@ -425,8 +425,8 @@ def purgeWarpBidirectional(warpLocations, locationList):
 						warpsRemoved.append(w)
 
 					if not ignore_this_one:
-						for w in has_return:
-							returnRemoved.append(w)
+						for wr in has_return:
+							returnRemoved.append(wr)
 
 
 	return warpsRemoved
@@ -491,11 +491,25 @@ def CheckLocationData(warpLocations, locationList):
 
 	special_cases = GenerateWarpData.LoadSpecialCaseWarps()
 
+	holesToDrops = [ a for a in accessible_warp_data if "Drop Point" in a["End Warp Name"] ]
+	# In case of vanilla hole behaviour, do not purge the only way into an area via a drop-point
+
+	onlyWayIn = []
+	for hole in holesToDrops:
+		waysOut = [ a for a in accessible_warp_data if a["Start Warp Group"] == hole["End Warp Group"]]
+		if len(waysOut) <= 1:
+			for wayOut in waysOut:
+				onlyWayIn.append(wayOut)
+
 	if usePurge:
 		toPurge = purgeWarpBidirectional(accessible_warp_data.copy(), flattened)
 		print("Purge count==",len(toPurge))
 		skip_purge = []
 		for purge in toPurge:
+
+			if purge in onlyWayIn:
+				continue
+
 			end_group = purge["End Warp Group"]
 			other_end_group = len([ a for a in accessible_warp_data if a["End Warp Group"] == end_group])
 			# Because the warps focus on START locations, double check the end groups here and ensure

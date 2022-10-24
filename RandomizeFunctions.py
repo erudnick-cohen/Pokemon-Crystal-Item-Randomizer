@@ -2227,7 +2227,7 @@ def PreventItemAssignment(placeItem, items, trash):
 ShopFlagItems = ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
                         "SUPER_ROD", "ENGINE_MAP_CARD", "ENGINE_UNOWN_DEX", "Pokedex"]
 
-def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, addAfter=None, force=False):
+def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, flags, addAfter=None, force=False):
     if addAfter is None:
         addAfter = []
     replacedItem = None
@@ -2241,6 +2241,20 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
 
     invalidItems = []
     invalidPriorityItems = []
+
+    includesShopItems = [ l for l in locList if l.isShop() and l.isItem() ]
+    if len(includesShopItems) == 0:
+        print("Shop items are not shuffled")
+        return None
+
+    forbiddenItems = []
+    for flag in flags:
+        if flag.starstwith("Cannot Buy"):
+            item = flag.replace("Cannot Buy ", "").upper().replace(" "," ")
+            forbiddenItems.append(item)
+
+    if itemLocation.isShop() and placeItem in forbiddenItems:
+        return None
 
     # Function checks if all the items in a given shop, at least 1 must be a type of repel and 1 type of ball
     if itemLocation.isShop():
@@ -2341,3 +2355,14 @@ def AddressToIntValues(address):
     value = (address % bank_size) + bank_size
     bytes = value.to_bytes(2, byteorder='little')
     return bytes
+
+
+def CheckVersion(addressData):
+    if "ckir_BEFORE_BaseVersionNumber" in addressData:
+        baseVersionInfo = addressData["ckir_BEFORE_BaseVersionNumber"]
+        revisionVersionInfo = addressData["ckir_BEFORE_RevisionVersionNumber"]
+
+        #TODO: Convert to usable string and compare for baseVersionInfo
+        # TODO: Include this logic in Warp Rando also
+
+    return True

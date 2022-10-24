@@ -162,6 +162,17 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	addedProgressList = []
 	maybeRemoveItems = []
 
+	yamlfile = open("crystal-speedchoice-label-details.json", encoding='utf-8')
+	yamltext = yamlfile.read()
+	addressLists = json.loads(yamltext)
+	addressData = {}
+	for i in addressLists:
+		addressData[i['label'].split(".")[-1]] = i
+
+	version_check = RandomizeFunctions.CheckVersion(addressData)
+	if not version_check:
+		return None
+
 	ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
 						 newItems, maybeNewItems, maybeRemoveItems, dontReplace)
 
@@ -410,12 +421,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			pass
 			#print(i.Name)
 
-	yamlfile = open("crystal-speedchoice-label-details.json",encoding='utf-8')
-	yamltext = yamlfile.read()
-	addressLists = json.loads(yamltext)
-	addressData = {}
-	for i in addressLists:
-		addressData[i['label'].split(".")[-1]] = i
+
 	#print(addressData)
 
 	item_desc = open("ItemDescriptions.json")

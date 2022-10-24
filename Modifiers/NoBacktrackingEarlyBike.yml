@@ -118,4 +118,5 @@ Changes:
         Location: Rock Smash Guy
         AddRecommendedItemReqs:
             - Bicycle
-
+IncompatibleWith:
+    - 'Start With Bike'
