@@ -40,11 +40,15 @@ Location:
                 setevent EVENT_BEAT_PSYCHIC_FRANKLIN
                 setevent EVENT_BEAT_PSYCHIC_JARED
                 opentext
-                BADGELINE
                 writetext SabrinaMarshBadgeText
                 waitbutton
                 closetext
-                end
+            .FightDone:
+                checkevent EVENT_GOT_MARSH_BADGE
+                iftrue .GotMarshBadge
+                BADGELINE
+                iffalse .GotMarshBadge
+                setevent EVENT_GOT_MARSH_BADGE
         Code:
         Text:
             -

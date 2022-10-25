@@ -20,25 +20,30 @@ Location:
         InfeasibleBadges:
         HintName: Cerulean
         NormalBadge: Cascade Badge
-        BadgeLine: |
-                CeruleanGymMistyScript:
-                    faceplayer
-                    opentext
-                    checkevent EVENT_BEAT_MISTY
-                    iftrue .FightDone
-                    writetext MistyIntroText
-                    waitbutton
-                    closetext
-                    winlosstext MistyWinLossText, 0
-                    loadtrainer MISTY, MISTY1
-                    startbattle
-                    reloadmapafterbattle
-                    setevent EVENT_BEAT_MISTY
-                    setevent EVENT_BEAT_SWIMMERF_DIANA
-                    setevent EVENT_BEAT_SWIMMERF_BRIANA
-                    setevent EVENT_BEAT_SWIMMERM_PARKER
-                    opentext
-                    BADGELINE
+        BadgeLine: |        
+            CeruleanGymMistyScript:
+                faceplayer
+                opentext
+                checkevent EVENT_BEAT_MISTY
+                iftrue .FightDone
+                writetext MistyIntroText
+                waitbutton
+                closetext
+                winlosstext MistyWinLossText, 0
+                loadtrainer MISTY, MISTY1
+                startbattle
+                reloadmapafterbattle
+                setevent EVENT_BEAT_MISTY
+                setevent EVENT_BEAT_SWIMMERF_DIANA
+                setevent EVENT_BEAT_SWIMMERF_BRIANA
+                setevent EVENT_BEAT_SWIMMERM_PARKER
+                opentext
+            .FightDone:
+                checkevent EVENT_GOT_CASCADE_BADGE
+                iftrue .GotCascadeBadge
+                BADGELINE
+                iffalse .GotCascadeBadge
+                setevent EVENT_GOT_CASCADE_BADGE
         Code:
         Text:
             -

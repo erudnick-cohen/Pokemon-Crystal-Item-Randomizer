@@ -34,7 +34,11 @@ Location:
                 reloadmapafterbattle
                 setevent EVENT_BEAT_JASMINE
                 opentext
+            .FightDone:
+                checkevent EVENT_GOT_MINERAL_BADGE
+                iftrue .GotMineralBadge
                 BADGELINE
+                iffalse .GotMineralBadge
         Code:
         Text:
             -

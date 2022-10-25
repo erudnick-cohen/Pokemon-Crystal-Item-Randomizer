@@ -60,7 +60,7 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_GIGA_DRAIN
                 Code: |
-                    .FightDone:
+                    .GotRainbowBadge:
                         checkevent EVENT_GOT_TM19_GIGA_DRAIN
                         iftrue .GotGigaDrain
                         writetext ErikaExplainTMText

@@ -62,7 +62,7 @@ def CompareFileData(manual_file, base_file):
 
 	if len(manuals_within_before) == 0 or len(manuals_within_after) == 0:
 		# This should not occur as all these files should have manual labels
-		raise Exception("No Manual label in labelling file")
+		raise Exception("No Manual label in labelling file::", manual_file)
 
 	if len(manuals_within_before) != len(manuals_within_after):
 		raise Exception("Incorrect count of manual labels")
@@ -600,8 +600,25 @@ def LabelBadgeLocation(location):
 
 	#find the code we need to replace
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
-	codeSearch = re.findall(coderegexstr,filecode)[0]
+	codeSearchResults = re.findall(coderegexstr,filecode)
+	if len(codeSearchResults) == 0:
+		print("Invalid::test", location.Name)
+		#return
+		raise Exception("Invalid code search results")
+	codeSearch = codeSearchResults[0]
 	oldcode = codeSearch[0]
+
+	#TODO: Add a check that this is actually the right line in here!
+	splitCode = location.Code.split("\n")
+	badgeLineValue = [ x for x in splitCode if "BADGELINE" in x ]
+	if len(badgeLineValue) == 0:
+		raise Exception("Not badge line found in badge description")
+	badgeIndex = splitCode.index(badgeLineValue[0])
+	foundLine = oldcode.split("\n")[badgeIndex]
+
+	if "verbosesetflag" not in foundLine:
+		raise Exception("Invalid badge line code given::"+foundLine)
+
 	#print(codeSearch)
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
@@ -898,9 +915,14 @@ def LabelItemLocation(location):
 	codeSearch = None
 	if not location.IsSpecial:
 		try:
-			codeSearch = re.findall(coderegexstr,filecode)[0]
+			codeSearchResults = re.findall(coderegexstr,filecode)
+			if len(codeSearchResults) == 0:
+				raise Exception("Couldnt find code for::"+location.Name)
+
+			codeSearch = codeSearchResults[0]
 		except:
 			print("fail on", location.Name)
+			raise Exception("fail to run on:", location.Name)
 			return
 
 		oldcode = codeSearch[0]
@@ -908,6 +930,17 @@ def LabelItemLocation(location):
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
+
+	splitCode = location.Code.split("\n")
+	itemLineValue = [x for x in splitCode if "ITEMLINE" in x]
+	if len(itemLineValue) == 0:
+		raise Exception("Not item line found in item code description")
+	itemIndex = splitCode.index(itemLineValue[0])
+	foundLine = oldcode.split("\n")[itemIndex]
+
+	if "giveitem" not in foundLine and "hiddenitem" not in foundLine and "verbosesetflag" not in foundLine\
+			and "itemball" not in foundLine and "fruittree" not in foundLine:
+		raise Exception("Invalid item line code given::" + foundLine)
 
 	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 	if location.IsBall or location.IsBerry:

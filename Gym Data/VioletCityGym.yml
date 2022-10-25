@@ -32,9 +32,19 @@ Location:
                 loadtrainer FALKNER, FALKNER1
                 startbattle
                 reloadmapafterbattle
+                setevent EVENT_BEAT_BIRD_KEEPER_ROD
+                setevent EVENT_BEAT_BIRD_KEEPER_ABE
+                specialphonecall SPECIALCALL_ASSISTANT
+                clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
                 setevent EVENT_BEAT_FALKNER
                 opentext
+            .FightDone:
+                checkevent EVENT_GOT_ZEPHYR_BADGE
+                iftrue .GotZephyrBadge
                 BADGELINE
+                promptbutton
+                iffalse .GotZephyrBadge
+                setevent EVENT_GOT_ZEPHYR_BADGE
         Code:
         Text:
             -

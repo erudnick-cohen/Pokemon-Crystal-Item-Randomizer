@@ -33,8 +33,17 @@ Location:
                     startbattle
                     reloadmapafterbattle
                     setevent EVENT_BEAT_PRYCE
+                    setevent EVENT_BEAT_SKIER_ROXANNE
+                    setevent EVENT_BEAT_SKIER_CLARISSA
+                    setevent EVENT_BEAT_BOARDER_RONALD
+                    setevent EVENT_BEAT_BOARDER_BRAD
+                    setevent EVENT_BEAT_BOARDER_DOUGLAS
                     opentext
+                .FightDone:
+                    checkevent EVENT_GOT_GLACIER_BADGE
+                    iftrue .GotGlacierBadge
                     BADGELINE
+                    iffalse .GotGlacierBadge
         Code:
         Text:
             -

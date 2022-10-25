@@ -76,25 +76,25 @@
             "new": [
                 6,
                 3,
-                56,
+                57,
                 112,
                 6,
                 2,
-                56,
+                57,
                 112,
                 6,
                 1,
-                56,
+                57,
                 112,
                 6,
                 0,
-                56,
+                57,
                 112
             ]
         },
         "address_range": {
-            "begin": 372776,
-            "end": 372792
+            "begin": 372777,
+            "end": 372793
         },
         "label": "TrainerSailorHuey.ckir_BEFORE_Huey",
         "description": "Makes it so you can fight rematch trainers only one additional time to get their items"
@@ -118,21 +118,21 @@
             "new": [
                 6,
                 2,
-                137,
+                138,
                 88,
                 6,
                 1,
-                137,
+                138,
                 88,
                 6,
                 0,
-                137,
+                138,
                 88
             ]
         },
         "address_range": {
-            "begin": 1693821,
-            "end": 1693833
+            "begin": 1693822,
+            "end": 1693834
         },
         "label": "TrainerBirdKeeperVance1.ckir_BEFORE_Vance",
         "description": "Makes it so you can fight rematch trainers only one additional time to get their items"

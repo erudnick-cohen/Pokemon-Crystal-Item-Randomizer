@@ -188,6 +188,7 @@ Location:
                 iftrue .GotSweetScent
                 writetext Route34IlexForestGateTeacherText
                 promptbutton
+                setevent EVENT_SPOKE_TO_TM12_NPC
                 ITEMLINE
                 iffalse .NoRoom
                 setevent EVENT_GOT_TM12_SWEET_SCENT
@@ -305,6 +306,7 @@ Location:
                         iftrue .AlreadyGotHeadbutt
                         writetext Text_HeadbuttIntro
                         promptbutton
+                        setevent EVENT_SPOKE_TO_TM02_NPC
                         ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM02_HEADBUTT

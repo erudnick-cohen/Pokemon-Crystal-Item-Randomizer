@@ -35,6 +35,8 @@ Location:
                 NormalItem: TM_ATTRACT
                 Code: |
                     .GotPlainBadge:
+                        checkevent EVENT_GOT_TM45_ATTRACT
+                        iftrue .GotAttract
                         writetext WhitneyPlainBadgeText
                         promptbutton
                         ITEMLINE

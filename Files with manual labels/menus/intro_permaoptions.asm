@@ -1,11 +1,19 @@
 
-.ckir_BEFORE_BaseVersionNumber::
 VersionNumberText::
         db "v7.4@"
-.ckir_AFTER_BaseVersionNumber::
 
+SpeedchoiceVersion:
+; Speedchoice Major Version
+.ckir_BEFORE_MajorVersionNumber::
+db 7
+.ckir_AFTER_MajorVersionNumber::
 
-;;Revision Number
+; Speedchoice Minor Version
+.ckir_BEFORE_MinorVersionNumber::
+db 4
+.ckir_AFTER_MinorVersionNumber::
+
+; Speedchoice Revision
 .ckir_BEFORE_RevisionVersionNumber::
 db 1
 .ckir_AFTER_RevisionVersionNumber::

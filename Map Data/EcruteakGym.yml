@@ -36,13 +36,9 @@ Location:
                             - Ecruteak
                 NormalItem: TM_SHADOW_BALL
                 Code: |
-                    .FightDone:
+                    .GotFogBadge:
                         checkevent EVENT_GOT_TM30_SHADOW_BALL
                         iftrue .GotShadowBall
-                        setevent EVENT_BEAT_SAGE_JEFFREY
-                        setevent EVENT_BEAT_SAGE_PING
-                        setevent EVENT_BEAT_MEDIUM_MARTHA
-                        setevent EVENT_BEAT_MEDIUM_GRACE
                         writetext MortyText_FogBadgeSpeech
                         promptbutton
                         ITEMLINE

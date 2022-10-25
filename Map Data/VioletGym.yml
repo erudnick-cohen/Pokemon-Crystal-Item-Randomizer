@@ -35,15 +35,9 @@ Location:
                         SubTags:
                             - Violet
                 Code: |
-                    .FightDone:
+                    .GotZephyrBadge:
                         checkevent EVENT_GOT_TM31_MUD_SLAP
                         iftrue .SpeechAfterTM
-                        setevent EVENT_BEAT_BIRD_KEEPER_ROD
-                        setevent EVENT_BEAT_BIRD_KEEPER_ABE
-                        specialphonecall SPECIALCALL_ASSISTANT
-                        clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
-                        writetext FalknerZephyrBadgeText
-                        promptbutton
                         ITEMLINE
                         iffalse .NoRoomForMudSlap
                         setevent EVENT_GOT_TM31_MUD_SLAP

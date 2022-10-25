@@ -40,7 +40,7 @@ Location:
                         SubTags:
                             - Fuschia
                 Code: |
-                    .AfterBattle:
+                    .GotSoulBadge:
                         checkevent EVENT_GOT_TM06_TOXIC
                         iftrue .AfterTM
                         writetext JanineText_ToxicSpeech

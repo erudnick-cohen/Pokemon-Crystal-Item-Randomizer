@@ -54,14 +54,9 @@ Location:
                             - Mahogany
                 NormalItem: TM_ICY_WIND
                 Code: |
-                    .FightDone:
+                    .GotGlacierBadge:
                         checkevent EVENT_GOT_TM16_ICY_WIND
                         iftrue PryceScript_Defeat
-                        setevent EVENT_BEAT_SKIER_ROXANNE
-                        setevent EVENT_BEAT_SKIER_CLARISSA
-                        setevent EVENT_BEAT_BOARDER_RONALD
-                        setevent EVENT_BEAT_BOARDER_BRAD
-                        setevent EVENT_BEAT_BOARDER_DOUGLAS
                         writetext PryceText_GlacierBadgeSpeech
                         promptbutton
                         ITEMLINE

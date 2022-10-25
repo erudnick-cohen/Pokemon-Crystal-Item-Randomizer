@@ -2244,7 +2244,7 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
 
     includesShopItems = [ l for l in locList if l.isShop() and l.isItem() ]
     if len(includesShopItems) == 0:
-        print("Shop items are not shuffled")
+        #print("Shop items are not shuffled")
         return None
 
     forbiddenItems = []
@@ -2358,11 +2358,20 @@ def AddressToIntValues(address):
 
 
 def CheckVersion(addressData):
-    if "ckir_BEFORE_BaseVersionNumber" in addressData:
-        baseVersionInfo = addressData["ckir_BEFORE_BaseVersionNumber"]
-        revisionVersionInfo = addressData["ckir_BEFORE_RevisionVersionNumber"]
+    if "ckir_BEFORE_MajorVersionNumber" in addressData:
+        majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]
+        minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
+        revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
 
-        #TODO: Convert to usable string and compare for baseVersionInfo
-        # TODO: Include this logic in Warp Rando also
 
-    return True
+        major = int(majorVersion["integer_values"][0])
+        minor = int(minorVersion["integer_values"][0])
+        revision = int(revisionVersion["integer_values"][0])
+        #revision value is just a number
+
+        if major != 7 or minor != 4 or revision != 1:
+            return False
+
+        return True
+    else:
+        return False

@@ -36,7 +36,7 @@ Location:
                             - Olivine
                 NormalItem: TM_IRON_TAIL
                 Code: |
-                    .FightDone:
+                    .GotMineralBadge:
                         checkevent EVENT_GOT_TM23_IRON_TAIL
                         iftrue .GotIronTail
                         writetext Jasmine_BadgeSpeech

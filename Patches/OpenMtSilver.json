@@ -26,15 +26,15 @@
                 255,
                 0,
                 0,
-                29,
+                52,
                 122,
                 26,
                 0
             ]
         },
         "address_range": {
-            "begin": 637914,
-            "end": 637927
+            "begin": 637937,
+            "end": 637950
         },
         "label": "VictoryRoadGate_MapEvents.ckir_BEFORE_object_event_MT_SILVER_GUARD",
         "description": "Causes Mt. Silver to always be open if you can reach the Victory Road Gate"
@@ -73,8 +73,8 @@
             ]
         },
         "address_range": {
-            "begin": 1684743,
-            "end": 1684746
+            "begin": 1684753,
+            "end": 1684756
         },
         "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",
         "description": "Causes Red to be present at Mt. Silver by talking to Oak with enough badges, without needing to defeat the E4"

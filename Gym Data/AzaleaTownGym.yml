@@ -32,8 +32,17 @@ Location:
                     startbattle
                     reloadmapafterbattle
                     setevent EVENT_BEAT_BUGSY
+                    setevent EVENT_BEAT_TWINS_AMY_AND_MAY
+                    setevent EVENT_BEAT_BUG_CATCHER_BENNY
+                    setevent EVENT_BEAT_BUG_CATCHER_AL
+                    setevent EVENT_BEAT_BUG_CATCHER_JOSH
                     opentext
+                .FightDone:
+                    checkevent EVENT_GOT_HIVE_BADGE
+                    iftrue .GotHiveBadge
                     BADGELINE
+                    iffalse .GotHiveBadge
+                    setevent EVENT_GOT_HIVE_BADGE
         Code:
         Text:
             -

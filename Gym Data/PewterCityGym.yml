@@ -36,8 +36,17 @@ Location:
                 setevent EVENT_BEAT_BROCK
                 setevent EVENT_BEAT_CAMPER_JERRY
                 opentext
-                BADGELINE
                 writetext BrockBoulderBadgeText
+                waitbutton
+                closetext
+            .FightDone:
+                checkevent EVENT_GOT_BOULDER_BADGE
+                iftrue .GotBoulderBadge
+                BADGELINE
+                iffalse .GotBoulderBadge
+                setevent EVENT_GOT_BOULDER_BADGE
+            .GotBoulderBadge
+                writetext BrockFightDoneText
                 waitbutton
                 closetext
                 end
