@@ -102,13 +102,13 @@
             "new": [
                 7,
                 10,
-                209,
+                212,
                 97
             ]
         },
         "address_range": {
-            "begin": 434616,
-            "end": 434620
+            "begin": 434619,
+            "end": 434623
         },
         "label": "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35",
         "description": "BGC is every day"

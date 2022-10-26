@@ -131,6 +131,7 @@ TrainerBugCatcherWade1:
 	verbosegiveitem BERRY
 	iffalse .PackFull
 	sjump .Done
+.ckir_BEFORE_WadeRedudantLabels::
 .Psncureberry:
 	verbosegiveitem PSNCUREBERRY
 	iffalse .PackFull
@@ -142,6 +143,7 @@ TrainerBugCatcherWade1:
 .BitterBerry:
 	verbosegiveitem BITTER_BERRY
 	iffalse .PackFull
+.ckir_AFTER_WadeRedudantLabels::
 .Done:
 	clearflag ENGINE_WADE_HAS_ITEM
 	sjump .AcceptedNumberSTD

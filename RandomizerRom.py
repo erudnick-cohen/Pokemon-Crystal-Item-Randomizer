@@ -29,19 +29,42 @@ def CountFilesInDirectory(dir):
 
 
 def IsWithinLabels(before, after, index):
-	for b in before:
-		after_b = [x for x in after if x > b]
-		if len(after_b) == 0:
-			return False
-		first_after = max(after_b)
-		if index >= b and index < first_after:
+	for b_index in range(0, len(before)):
+		beforeValue = before[b_index]
+		afterValue = after[b_index]
+
+		if index >= beforeValue and index < afterValue:
 			return True
 
 	return False
 
 
 
+def GetLabelsDefinedWithinLines(manual_file):
+	# Get any code sandwiched with .ckir
+	manual_file = open(manual_file)
+	manual_lines = manual_file.readlines()
+	manual_file.close()
 
+	isCKIRBeforeLabel = "\.ckir_BEFORE(.*){1,}::"
+	isCKIRAfterLabel = "\.ckir_AFTER(.*){1,}::"
+	ckirBefore = re.compile(isCKIRBeforeLabel)
+	ckirAfter = re.compile(isCKIRAfterLabel)
+
+	manuals_within_before = [manual_lines.index(x) for x in manual_lines if ckirBefore.match(x)]
+	manuals_within_after = [manual_lines.index(x) for x in manual_lines if ckirAfter.match(x)]
+
+	if len(manuals_within_before) == 0 or len(manuals_within_after) == 0:
+		# This should not occur as all these files should have manual labels
+		raise Exception("No Manual label in labelling file::", manual_file)
+
+	if len(manuals_within_before) != len(manuals_within_after):
+		raise Exception("Incorrect count of manual labels")
+
+	lines_between = [x.strip() for x in manual_lines if IsWithinLabels(manuals_within_before, manuals_within_after,
+																   manual_lines.index(x))]
+
+	return [ label.replace(":","") for label in lines_between if label.startswith(".") and ".ckir" not in label]
 def CompareFileData(manual_file, base_file):
 	manual_file = open(manual_file)
 	manual_lines = manual_file.readlines()
@@ -67,9 +90,15 @@ def CompareFileData(manual_file, base_file):
 	if len(manuals_within_before) != len(manuals_within_after):
 		raise Exception("Incorrect count of manual labels")
 
+	# Ignore any changes within the labels, as these are meant to be different and handled accordingly
+	# So only check for the other lines!
 
 	replace_drop = [ x for x in replace_lines if not IsWithinLabels(manuals_within_before, manuals_within_after,
 																	replace_lines.index(x))]
+
+	# Replace drop contains the lines in REPLACE to ignore
+	# However, we are looking for MISSING lines from the original
+	# Maybe just handle with latest changes?
 
 
 	manuals =  [ x.strip() for x in manual_lines if not (x.strip().endswith("::") or x.strip().startswith(";"))]
@@ -97,6 +126,7 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 		os.listdir(os.curdir)
 		if not os.path.isdir(".git"):
 			git_success = False
+			os.chdir("..")
 		else:
 			command = ("wsl " if wsl else "") + "git reset --hard"
 			os.system(command)
@@ -114,6 +144,7 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 		shutil.copytree("Game Files/"+romDir,"RandomizerRom")
 	#next overwrite the files which need custom labels
 
+def InsertManualFiles(result_lines=None):
 	manual_dir = "Files with manual labels"
 
 	counted = CountFilesInDirectory(manual_dir)
@@ -147,16 +178,19 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 	# Check files for inconsistent line differences
 
 	for item in manual_copy_files:
-		fine = CompareFileData(item[0], item[1])
-		if fine is not None:
-			pass
-			# raise Exception("File data does not correlate")
+		# Code was complex, but secondary  solution below might work better
+		#fine = CompareFileData(item[0], item[1])
+		#if fine is not None:
+		#	#pass
+		#	raise Exception("File data does not correlate::", item)
+
+		if result_lines is not None:
+			definedLabels = GetLabelsDefinedWithinLines(item[0])
+			for label in definedLabels:
+				result_lines.append(label)
 
 	for manual_file in manual_copy_files:
 		shutil.copy(manual_file[0], manual_file[1])
-
-
-	#TODO: Add test here to ensure newly added files are not missed out!
 
 def WriteOakBadgeCheckNumber(number, addressData, gameFile):
 	#get where this is

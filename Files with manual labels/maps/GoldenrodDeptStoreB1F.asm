@@ -35,6 +35,7 @@ GoldenrodDeptStoreB1F_MapScripts:
 	changeblock 10, 8, $0d ; floor
 	return
 
+.ckir_BEFORE_GoldenrodStore_RedundantLabels::
 .Layout2:
 	changeblock 4, 10, $0d ; floor
 	return
@@ -42,6 +43,7 @@ GoldenrodDeptStoreB1F_MapScripts:
 .Layout3:
 	changeblock 10, 12, $0d ; floor
 	return
+.ckir_AFTER_GoldenrodStore_RedundantLabels::
 
 .Unblock:
 	clearevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF

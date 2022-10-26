@@ -2249,7 +2249,7 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
 
     forbiddenItems = []
     for flag in flags:
-        if flag.starstwith("Cannot Buy"):
+        if flag.startswith("Cannot Buy"):
             item = flag.replace("Cannot Buy ", "").upper().replace(" "," ")
             forbiddenItems.append(item)
 

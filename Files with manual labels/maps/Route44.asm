@@ -246,6 +246,7 @@ TrainerFisherWilton1:
 	iffalse .Route44PackFullM
 	sjump .ItemReceived
 
+.ckir_BEFORE_WiltonRedudantLabels::
 .GreatBall:
 	verbosegiveitem GREAT_BALL
 	iffalse .Route44PackFullM
@@ -254,6 +255,8 @@ TrainerFisherWilton1:
 .PokeBall:
 	verbosegiveitem POKE_BALL
 	iffalse .Route44PackFullM
+.ckir_AFTER_WiltonRedudantLabels::
+
 .ItemReceived:
 	clearflag ENGINE_WILTON_HAS_ITEM
 	sjump Route44NumberAcceptedM

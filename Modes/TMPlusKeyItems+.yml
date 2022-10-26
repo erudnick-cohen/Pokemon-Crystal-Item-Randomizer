@@ -27,6 +27,7 @@ DefaultModifiers:
     - Modifiers/NerfHoOhChamber.yml
     - Modifiers/DerandomizeLeftovers.yml
     - Modifiers/NoEarlyBasement.yml
+    - Modifiers/Shopsanity.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -104,6 +105,17 @@ TrashItemList:
     - TM_FURY_CUTTER
     - TM_NIGHTMARE
     - ENGINE_MAP_CARD
+    - TM_THUNDERPUNCH
+    - TM_FIRE_PUNCH
+    - TM_ICE_PUNCH
+    - TM_SWEET_SCENT
+    - TM_HEADBUTT
+    - TM_ROCK_SMASH
+    - TM_SANDSTORM
+    - TM_RAIN_DANCE
+    - TM_PROTECT
+    - TM_SUNNY_DAY
+    - TM_HIDDEN_POWER
 BannedLocations:
 AllowedLocations:
     - Pokegear Gift
@@ -180,6 +192,17 @@ AllowedLocations:
     - Expansion Card Gift
     - Rainbow Wing Gift
     - Map Card
+    - Goldenrod Department Store 5F Rock Smash TM
+    - Goldenrod Department Store 5F Headbutt TM
+    - Goldenrod Department Store 5F Sweet Scent TM
+    - Goldenrod Department Store 5F Ice Punch TM
+    - Goldenrod Department Store 5F Fire Punch TM
+    - Goldenrod Department Store 5F Thunder Punch TM
+    - Celadon Dept Store 3F Hidden Power TM
+    - Celadon Dept Store 3F Sunny Day TM
+    - Celadon Dept Store 3F Protect TM
+    - Celadon Dept Store 3F Rain Dance TM
+    - Celadon Dept Store 3F Sandstorm TM
 Goal: Red
 FlagsSet:
     - Kanto Mode

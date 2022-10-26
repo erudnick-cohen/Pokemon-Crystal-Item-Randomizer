@@ -2651,7 +2651,7 @@
                 255,
                 162,
                 2,
-                111,
+                119,
                 75,
                 206,
                 6
@@ -2666,15 +2666,15 @@
                 255,
                 162,
                 2,
-                111,
+                119,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513790,
-            "end": 513803
+            "begin": 513798,
+            "end": 513811
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_0",
         "description": "Invert Trainer NPC facing directions"
@@ -2691,7 +2691,7 @@
                 255,
                 162,
                 2,
-                131,
+                139,
                 75,
                 206,
                 6
@@ -2706,15 +2706,15 @@
                 255,
                 162,
                 2,
-                131,
+                139,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513803,
-            "end": 513816
+            "begin": 513811,
+            "end": 513824
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_1",
         "description": "Invert Trainer NPC facing directions"
@@ -2731,7 +2731,7 @@
                 255,
                 2,
                 3,
-                151,
+                159,
                 75,
                 206,
                 6
@@ -2746,15 +2746,15 @@
                 255,
                 2,
                 3,
-                151,
+                159,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513816,
-            "end": 513829
+            "begin": 513824,
+            "end": 513837
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_2",
         "description": "Invert Trainer NPC facing directions"
@@ -2771,7 +2771,7 @@
                 255,
                 2,
                 3,
-                71,
+                79,
                 75,
                 206,
                 6
@@ -2786,15 +2786,15 @@
                 255,
                 2,
                 3,
-                71,
+                79,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513829,
-            "end": 513842
+            "begin": 513837,
+            "end": 513850
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_3",
         "description": "Invert Trainer NPC facing directions"
@@ -2811,7 +2811,7 @@
                 255,
                 2,
                 3,
-                91,
+                99,
                 75,
                 206,
                 6
@@ -2826,15 +2826,15 @@
                 255,
                 2,
                 3,
-                91,
+                99,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513842,
-            "end": 513855
+            "begin": 513850,
+            "end": 513863
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_4",
         "description": "Invert Trainer NPC facing directions"
@@ -2851,7 +2851,7 @@
                 255,
                 130,
                 1,
-                171,
+                179,
                 75,
                 206,
                 6
@@ -2866,15 +2866,15 @@
                 255,
                 130,
                 1,
-                171,
+                179,
                 75,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 513855,
-            "end": 513868
+            "begin": 513863,
+            "end": 513876
         },
         "label": "GoldenrodUndergroundSwitchRoomEntrances_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundSwitchRoomEntrances_5",
         "description": "Invert Trainer NPC facing directions"
@@ -2891,7 +2891,7 @@
                 255,
                 2,
                 3,
-                151,
+                159,
                 89,
                 206,
                 6
@@ -2906,15 +2906,15 @@
                 255,
                 2,
                 3,
-                151,
+                159,
                 89,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 515507,
-            "end": 515520
+            "begin": 515515,
+            "end": 515528
         },
         "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundWarehouse_0",
         "description": "Invert Trainer NPC facing directions"
@@ -2931,7 +2931,7 @@
                 255,
                 2,
                 3,
-                171,
+                179,
                 89,
                 206,
                 6
@@ -2946,15 +2946,15 @@
                 255,
                 2,
                 3,
-                171,
+                179,
                 89,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 515520,
-            "end": 515533
+            "begin": 515528,
+            "end": 515541
         },
         "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundWarehouse_1",
         "description": "Invert Trainer NPC facing directions"
@@ -2971,7 +2971,7 @@
                 255,
                 2,
                 4,
-                191,
+                199,
                 89,
                 206,
                 6
@@ -2986,15 +2986,15 @@
                 255,
                 2,
                 4,
-                191,
+                199,
                 89,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 515533,
-            "end": 515546
+            "begin": 515541,
+            "end": 515554
         },
         "label": "GoldenrodUndergroundWarehouse_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUndergroundWarehouse_2",
         "description": "Invert Trainer NPC facing directions"
@@ -3033,8 +3033,8 @@
             ]
         },
         "address_range": {
-            "begin": 510356,
-            "end": 510369
+            "begin": 510364,
+            "end": 510377
         },
         "label": "GoldenrodUnderground_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUnderground_0",
         "description": "Invert Trainer NPC facing directions"
@@ -3073,8 +3073,8 @@
             ]
         },
         "address_range": {
-            "begin": 510369,
-            "end": 510382
+            "begin": 510377,
+            "end": 510390
         },
         "label": "GoldenrodUnderground_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUnderground_1",
         "description": "Invert Trainer NPC facing directions"
@@ -3113,8 +3113,8 @@
             ]
         },
         "address_range": {
-            "begin": 510382,
-            "end": 510395
+            "begin": 510390,
+            "end": 510403
         },
         "label": "GoldenrodUnderground_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUnderground_2",
         "description": "Invert Trainer NPC facing directions"
@@ -3153,8 +3153,8 @@
             ]
         },
         "address_range": {
-            "begin": 510395,
-            "end": 510408
+            "begin": 510403,
+            "end": 510416
         },
         "label": "GoldenrodUnderground_MapEvents.ckir_BEFORE_TrainerEvent_GoldenrodUnderground_3",
         "description": "Invert Trainer NPC facing directions"
@@ -3571,7 +3571,7 @@
                 255,
                 146,
                 3,
-                107,
+                115,
                 94,
                 255,
                 255
@@ -3586,15 +3586,15 @@
                 255,
                 146,
                 3,
-                107,
+                115,
                 94,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 516270,
-            "end": 516283
+            "begin": 516278,
+            "end": 516291
         },
         "label": "MountMortar1FInside_MapEvents.ckir_BEFORE_TrainerEvent_MountMortar1FInside_0",
         "description": "Invert Trainer NPC facing directions"
@@ -3611,7 +3611,7 @@
                 255,
                 178,
                 3,
-                127,
+                135,
                 94,
                 255,
                 255
@@ -3626,15 +3626,15 @@
                 255,
                 178,
                 3,
-                127,
+                135,
                 94,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 516283,
-            "end": 516296
+            "begin": 516291,
+            "end": 516304
         },
         "label": "MountMortar1FInside_MapEvents.ckir_BEFORE_TrainerEvent_MountMortar1FInside_1",
         "description": "Invert Trainer NPC facing directions"
@@ -3651,7 +3651,7 @@
                 255,
                 178,
                 2,
-                228,
+                236,
                 96,
                 255,
                 255
@@ -3666,15 +3666,15 @@
                 255,
                 178,
                 2,
-                228,
+                236,
                 96,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 516609,
-            "end": 516622
+            "begin": 516617,
+            "end": 516630
         },
         "label": "MountMortar2FInside_MapEvents.ckir_BEFORE_TrainerEvent_MountMortar2FInside_0",
         "description": "Invert Trainer NPC facing directions"
@@ -13011,7 +13011,7 @@
                 255,
                 146,
                 3,
-                46,
+                49,
                 68,
                 255,
                 255
@@ -13026,15 +13026,15 @@
                 255,
                 146,
                 3,
-                46,
+                49,
                 68,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 428602,
-            "end": 428615
+            "begin": 428605,
+            "end": 428618
         },
         "label": "VioletGym_MapEvents.ckir_BEFORE_TrainerEvent_VioletGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -13051,7 +13051,7 @@
                 255,
                 146,
                 3,
-                66,
+                69,
                 68,
                 255,
                 255
@@ -13066,15 +13066,15 @@
                 255,
                 146,
                 3,
-                66,
+                69,
                 68,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 428615,
-            "end": 428628
+            "begin": 428618,
+            "end": 428631
         },
         "label": "VioletGym_MapEvents.ckir_BEFORE_TrainerEvent_VioletGym_1",
         "description": "Invert Trainer NPC facing directions"

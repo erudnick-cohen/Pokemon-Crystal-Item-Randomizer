@@ -203,8 +203,8 @@ BargainMerchantScript:
 
 OlderHaircutBrotherScript:
 	opentext
-        checkitemrando
-        iftrue .DoHaircut
+    checkitemrando
+    iftrue .DoHaircut
 	readvar VAR_WEEKDAY
 	ifequal TUESDAY, .DoHaircut
 	ifequal THURSDAY, .DoHaircut
@@ -212,8 +212,11 @@ OlderHaircutBrotherScript:
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .DoHaircut:
+    checkitemrando
+    iftrue .PerformHaircut
 	checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
 	iftrue .AlreadyGotHaircut
+.PerformHaircut
 	special PlaceMoneyTopRight
 	writetext GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText
 	yesorno
@@ -288,8 +291,8 @@ OlderHaircutBrotherScript:
 
 YoungerHaircutBrotherScript:
 	opentext
-        checkitemrando
-        iftrue .DoHaircut
+    checkitemrando
+    iftrue .DoHaircut
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .DoHaircut
 	ifequal WEDNESDAY, .DoHaircut
@@ -297,8 +300,11 @@ YoungerHaircutBrotherScript:
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .DoHaircut:
-	checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
+    checkitemrando
+    iftrue .PerformHaircut
+    checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
 	iftrue .AlreadyGotHaircut
+.PerformHaircut
 	special PlaceMoneyTopRight
 	writetext GoldenrodUndergroundYoungerHaircutBrotherOfferHaircutText
 	yesorno

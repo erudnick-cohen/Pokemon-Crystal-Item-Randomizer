@@ -66,6 +66,7 @@ TrainerBlackbeltKenji:
 	special SampleKenjiBreakCountdown
 	sjump Route45NumberAcceptedM
 
+.ckir_BEFORE_KenjiRedudantLabels::
 .Morning:
 	writetext BlackbeltKenjiMorningText
 	waitbutton
@@ -77,6 +78,7 @@ TrainerBlackbeltKenji:
 	waitbutton
 	closetext
 	end
+.ckir_AFTER_KenjiRedudantLabels::
 
 .NoRoom:
 	sjump Route45PackFullM

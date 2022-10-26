@@ -1,3 +1,4 @@
+import os
 import sys
 
 import GenerateHintData
@@ -18,7 +19,20 @@ if __name__ == '__main__':
     if result is not None:
         has_wsl = True
 
+    out_file = "crystal-speedchoice.gbc"
+    sym_file = "RandomizerRom/crystal-speedchoice.sym"
+
     RandomizerRom.ResetRomForLabelling(wsl=has_wsl)
+    print("DIR1",os.getcwd())
+    build_success = UpdateLabelsScript.BuildRom(out_file, delete_file=True, wsl=has_wsl)
+    print("DIR2", os.getcwd())
+    if not build_success:
+        print("Unable to build from base")
+        raise Exception("Unable to build from base")
+
+    pre_sym = UpdateLabelsScript.LoadSym(sym_file)
+    definedLabels = []
+    RandomizerRom.InsertManualFiles(definedLabels)
 
     sign_entries = GenerateHintData.GenerateHintLabels()
     TestLabels()
@@ -27,7 +41,14 @@ if __name__ == '__main__':
     GenerateMapLabels.LabelAllBlocks()
     GenerateMapLabels.GenerateNPCLabels()
 
-    UpdateLabelsScript.UpdateLabels(has_wsl, delete_file=False)
+    labelsSuccess = UpdateLabelsScript.UpdateLabels(has_wsl, delete_file=False)
+    if not labelsSuccess:
+        raise Exception("Failure to generate labels")
+
+    post_sym = UpdateLabelsScript.LoadSym(sym_file)
+    sym_match_up = UpdateLabelsScript.CompareSyms(pre_sym, post_sym, definedLabels)
+    if not sym_match_up:
+        raise Exception("Syms do not match")
 
     GenerateMapLabels.CreateMapPatches()
     GenerateMapLabels.GenerateNPCSwitchPatch()
