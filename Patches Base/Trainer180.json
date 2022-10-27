@@ -611,7 +611,7 @@
                 255,
                 162,
                 3,
-                125,
+                130,
                 68,
                 111,
                 7
@@ -626,15 +626,15 @@
                 255,
                 162,
                 3,
-                125,
+                130,
                 68,
                 111,
                 7
             ]
         },
         "address_range": {
-            "begin": 1608353,
-            "end": 1608366
+            "begin": 1608358,
+            "end": 1608371
         },
         "label": "CeruleanGym_MapEvents.ckir_BEFORE_TrainerEvent_CeruleanGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -651,7 +651,7 @@
                 255,
                 162,
                 1,
-                145,
+                150,
                 68,
                 111,
                 7
@@ -666,15 +666,15 @@
                 255,
                 162,
                 1,
-                145,
+                150,
                 68,
                 111,
                 7
             ]
         },
         "address_range": {
-            "begin": 1608366,
-            "end": 1608379
+            "begin": 1608371,
+            "end": 1608384
         },
         "label": "CeruleanGym_MapEvents.ckir_BEFORE_TrainerEvent_CeruleanGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -691,7 +691,7 @@
                 255,
                 130,
                 3,
-                165,
+                170,
                 68,
                 111,
                 7
@@ -706,15 +706,15 @@
                 255,
                 130,
                 3,
-                165,
+                170,
                 68,
                 111,
                 7
             ]
         },
         "address_range": {
-            "begin": 1608379,
-            "end": 1608392
+            "begin": 1608384,
+            "end": 1608397
         },
         "label": "CeruleanGym_MapEvents.ckir_BEFORE_TrainerEvent_CeruleanGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -4211,7 +4211,7 @@
                 255,
                 162,
                 3,
-                171,
+                172,
                 104,
                 255,
                 255
@@ -4226,15 +4226,15 @@
                 255,
                 162,
                 3,
-                171,
+                172,
                 104,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1715650,
-            "end": 1715663
+            "begin": 1715651,
+            "end": 1715664
         },
         "label": "PewterGym_MapEvents.ckir_BEFORE_TrainerEvent_PewterGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -11571,8 +11571,8 @@
                 255,
                 178,
                 3,
-                253,
-                92,
+                3,
+                93,
                 255,
                 255
             ],
@@ -11586,15 +11586,15 @@
                 255,
                 178,
                 3,
-                253,
-                92,
+                3,
+                93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614862,
-            "end": 1614875
+            "begin": 1614868,
+            "end": 1614881
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -11611,7 +11611,7 @@
                 255,
                 146,
                 3,
-                17,
+                23,
                 93,
                 255,
                 255
@@ -11626,15 +11626,15 @@
                 255,
                 146,
                 3,
-                17,
+                23,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614875,
-            "end": 1614888
+            "begin": 1614881,
+            "end": 1614894
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -11651,7 +11651,7 @@
                 255,
                 178,
                 2,
-                37,
+                43,
                 93,
                 255,
                 255
@@ -11666,15 +11666,15 @@
                 255,
                 178,
                 2,
-                37,
+                43,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614888,
-            "end": 1614901
+            "begin": 1614894,
+            "end": 1614907
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -11691,7 +11691,7 @@
                 255,
                 146,
                 2,
-                57,
+                63,
                 93,
                 255,
                 255
@@ -11706,15 +11706,15 @@
                 255,
                 146,
                 2,
-                57,
+                63,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614901,
-            "end": 1614914
+            "begin": 1614907,
+            "end": 1614920
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_3",
         "description": "Invert Trainer NPC facing directions"
@@ -12891,7 +12891,7 @@
                 255,
                 146,
                 4,
-                246,
+                247,
                 96,
                 255,
                 255
@@ -12906,15 +12906,15 @@
                 255,
                 146,
                 4,
-                246,
+                247,
                 96,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1648326,
-            "end": 1648339
+            "begin": 1648327,
+            "end": 1648340
         },
         "label": "VermilionGym_MapEvents.ckir_BEFORE_TrainerEvent_VermilionGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -12931,7 +12931,7 @@
                 255,
                 130,
                 3,
-                10,
+                11,
                 97,
                 255,
                 255
@@ -12946,15 +12946,15 @@
                 255,
                 130,
                 3,
-                10,
+                11,
                 97,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1648339,
-            "end": 1648352
+            "begin": 1648340,
+            "end": 1648353
         },
         "label": "VermilionGym_MapEvents.ckir_BEFORE_TrainerEvent_VermilionGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -12971,7 +12971,7 @@
                 255,
                 146,
                 4,
-                30,
+                31,
                 97,
                 255,
                 255
@@ -12986,15 +12986,15 @@
                 255,
                 146,
                 4,
-                30,
+                31,
                 97,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1648352,
-            "end": 1648365
+            "begin": 1648353,
+            "end": 1648366
         },
         "label": "VermilionGym_MapEvents.ckir_BEFORE_TrainerEvent_VermilionGym_2",
         "description": "Invert Trainer NPC facing directions"

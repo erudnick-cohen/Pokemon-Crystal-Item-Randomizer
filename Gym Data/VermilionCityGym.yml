@@ -38,15 +38,17 @@ Location:
                 setevent EVENT_BEAT_GUITARIST_VINCENT
                 setevent EVENT_BEAT_JUGGLER_HORTON
                 opentext
-                writetext LtSurgeThunderBadgeText
-                waitbutton
-                closetext
             .FightDone:
                 checkevent EVENT_GOT_THUNDER_BADGE
                 iftrue .GotThunderBadge
                 BADGELINE
-                iffalse .GotThunderBadge
+                iffalse .EndSurge
                 setevent EVENT_GOT_THUNDER_BADGE
+            .EndSurge
+                writetext LtSurgeThunderBadgeText
+                waitbutton
+                closetext
+                end
         Code:
         Text:
             -

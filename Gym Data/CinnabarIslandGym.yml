@@ -38,14 +38,11 @@ Location:
                 reloadmapafterbattle
                 setevent EVENT_BEAT_BLAINE
                 opentext
-                writetext BlaineAfterBattleText
-                waitbutton
-                closetext
             .FightDone:
                 checkevent EVENT_GOT_VOLCANO_BADGE
                 iftrue .GotVolcanoBadge
                 BADGELINE
-                iffalse .GotVolcanoBadge
+                iffalse .BlaineEnd
                 setevent EVENT_GOT_VOLCANO_BADGE
         Code:
         Text:

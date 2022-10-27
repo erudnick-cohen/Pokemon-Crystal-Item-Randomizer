@@ -440,15 +440,15 @@
         "tileAddress": 710057
     },
     {
-        "start": 1612863,
-        "end": 1612894,
+        "start": 1612868,
+        "end": 1612899,
         "name": "FightingDojoSign1Text",
         "map": "FightingDojo.asm",
         "commands": 3
     },
     {
-        "start": 1612895,
-        "end": 1612918,
+        "start": 1612900,
+        "end": 1612923,
         "name": "FightingDojoSign2Text",
         "map": "FightingDojo.asm",
         "commands": 3
@@ -1940,8 +1940,8 @@
         "tileAddress": 711254
     },
     {
-        "start": 635399,
-        "end": 635503,
+        "start": 635400,
+        "end": 635504,
         "name": "TrainerHouseSign1Text",
         "map": "TrainerHouse1F.asm",
         "commands": 8,
@@ -1950,8 +1950,8 @@
         "tileAddress": 723789
     },
     {
-        "start": 635504,
-        "end": 635603,
+        "start": 635505,
+        "end": 635604,
         "name": "TrainerHouseSign2Text",
         "map": "TrainerHouse1F.asm",
         "commands": 7,

@@ -42,7 +42,7 @@ Location:
                 checkevent EVENT_GOT_CASCADE_BADGE
                 iftrue .GotCascadeBadge
                 BADGELINE
-                iffalse .GotCascadeBadge
+                iffalse .EndMisty
                 setevent EVENT_GOT_CASCADE_BADGE
         Code:
         Text:
