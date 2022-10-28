@@ -123,7 +123,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.Randomize.setEnabled(False)
 			self.Randomize.setText(_translate("MainWindow", "Randomizing"))
 			QtGui.QGuiApplication.processEvents()
-			QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.3 Rom as the base rom, or your game WILL crash.')
+			#QtWidgets.QMessageBox.about(self, 'Message', 'Please select the name for the file. Make sure that you used a Speeedchoice V7.3 Rom as the base rom, or your game WILL crash.')
 			validFileName = False
 
 
@@ -209,6 +209,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				error_dialog = QtWidgets.QErrorMessage()
 				error_dialog.showMessage("Incorrect rom version provided!")
 				error_dialog.exec_()
+				raise Exception("Invalid ROM")
 
 			self.Randomize.setEnabled(True)
 			if(self.OutputSpoiler.isChecked()):

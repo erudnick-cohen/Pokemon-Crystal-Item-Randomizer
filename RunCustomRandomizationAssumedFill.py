@@ -169,7 +169,10 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	for i in addressLists:
 		addressData[i['label'].split(".")[-1]] = i
 
-	version_check = RandomizeFunctions.CheckVersion(addressData)
+	f = open(romPath, 'r+b')
+	romMap = mmap.mmap(f.fileno(), 0)
+
+	version_check = RandomizeFunctions.CheckVersion(addressData, romMap)
 	if not version_check:
 		return None
 
@@ -461,8 +464,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		patchList.extend(json.loads(ptext))
 
 	maxDist = max(resultDict["State"].values())
-	f = open(romPath,'r+b')
-	romMap = mmap.mmap(f.fileno(),0)
+
 
 	RandomizerRom.ApplyGamePatches(romMap, patchList)
 

@@ -2357,19 +2357,29 @@ def AddressToIntValues(address):
     return bytes
 
 
-def CheckVersion(addressData):
+def CheckVersion(addressData, romMap):
     if "ckir_BEFORE_MajorVersionNumber" in addressData:
         majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]
         minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
         revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
 
 
-        major = int(majorVersion["integer_values"][0])
-        minor = int(minorVersion["integer_values"][0])
-        revision = int(revisionVersion["integer_values"][0])
-        #revision value is just a number
+        majorRequired = int(majorVersion["integer_values"][0])
+        minorRequired = int(minorVersion["integer_values"][0])
+        revisionRequired = int(revisionVersion["integer_values"][0])
 
-        if major != 7 or minor != 4 or revision != 1:
+        majorAddress = majorVersion["address_range"]["begin"]
+        minorAddress = minorVersion["address_range"]["begin"]
+        revisionAddress = revisionVersion["address_range"]["begin"]
+
+        if len(romMap) <= majorAddress:
+            return False
+
+        majorActual = romMap[majorAddress]
+        minorActual = romMap[minorAddress]
+        revisionActual = romMap[revisionAddress]
+
+        if majorActual != majorRequired or minorActual != minorRequired or revisionRequired != revisionActual:
             return False
 
         return True
