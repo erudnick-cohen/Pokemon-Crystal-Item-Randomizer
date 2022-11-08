@@ -81,8 +81,8 @@
             ]
         },
         "address_range": {
-            "begin": 87265,
-            "end": 87267
+            "begin": 87272,
+            "end": 87274
         },
         "label": "CheckReplaceKrisSprite.ckir_BEFORE_BIKELOAD",
         "description": "Stay on Bike everywhere"
@@ -99,8 +99,8 @@
             ]
         },
         "address_range": {
-            "begin": 53563,
-            "end": 53565
+            "begin": 53570,
+            "end": 53572
         },
         "label": "BikeFunction.ckir_BEFORE_BIKEENV",
         "description": "Able to ride bike everywhere"

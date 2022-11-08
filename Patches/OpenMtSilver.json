@@ -73,8 +73,8 @@
             ]
         },
         "address_range": {
-            "begin": 1684753,
-            "end": 1684756
+            "begin": 1684757,
+            "end": 1684760
         },
         "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",
         "description": "Causes Red to be present at Mt. Silver by talking to Oak with enough badges, without needing to defeat the E4"

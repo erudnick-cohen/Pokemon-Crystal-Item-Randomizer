@@ -135,8 +135,8 @@
             ]
         },
         "address_range": {
-            "begin": 94553,
-            "end": 94568
+            "begin": 94560,
+            "end": 94575
         },
         "label": "HatchEggs.ckir_BEFORE_TOGEPIFLAG",
         "description": "Makes it so you can hatch any egg, rather than just a togepi egg"

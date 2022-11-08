@@ -731,7 +731,7 @@
                 255,
                 178,
                 3,
-                144,
+                148,
                 86,
                 255,
                 255
@@ -746,15 +746,15 @@
                 255,
                 178,
                 3,
-                144,
+                148,
                 86,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 645989,
-            "end": 646002
+            "begin": 645993,
+            "end": 646006
         },
         "label": "CianwoodGym_MapEvents.ckir_BEFORE_TrainerEvent_CianwoodGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -771,7 +771,7 @@
                 255,
                 178,
                 3,
-                164,
+                168,
                 86,
                 255,
                 255
@@ -786,15 +786,15 @@
                 255,
                 178,
                 3,
-                164,
+                168,
                 86,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 646002,
-            "end": 646015
+            "begin": 646006,
+            "end": 646019
         },
         "label": "CianwoodGym_MapEvents.ckir_BEFORE_TrainerEvent_CianwoodGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -811,7 +811,7 @@
                 255,
                 178,
                 2,
-                184,
+                188,
                 86,
                 255,
                 255
@@ -826,15 +826,15 @@
                 255,
                 178,
                 2,
-                184,
+                188,
                 86,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 646015,
-            "end": 646028
+            "begin": 646019,
+            "end": 646032
         },
         "label": "CianwoodGym_MapEvents.ckir_BEFORE_TrainerEvent_CianwoodGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -851,7 +851,7 @@
                 255,
                 178,
                 1,
-                204,
+                208,
                 86,
                 255,
                 255
@@ -866,15 +866,15 @@
                 255,
                 178,
                 1,
-                204,
+                208,
                 86,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 646028,
-            "end": 646041
+            "begin": 646032,
+            "end": 646045
         },
         "label": "CianwoodGym_MapEvents.ckir_BEFORE_TrainerEvent_CianwoodGym_3",
         "description": "Invert Trainer NPC facing directions"
@@ -3371,7 +3371,7 @@
                 255,
                 130,
                 1,
-                2,
+                6,
                 92,
                 255,
                 255
@@ -3386,15 +3386,15 @@
                 255,
                 130,
                 1,
-                2,
+                6,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680387,
-            "end": 1680400
+            "begin": 1680391,
+            "end": 1680404
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -3411,7 +3411,7 @@
                 255,
                 146,
                 1,
-                42,
+                46,
                 92,
                 255,
                 255
@@ -3426,15 +3426,15 @@
                 255,
                 146,
                 1,
-                42,
+                46,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680400,
-            "end": 1680413
+            "begin": 1680404,
+            "end": 1680417
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -3451,7 +3451,7 @@
                 255,
                 130,
                 1,
-                22,
+                26,
                 92,
                 255,
                 255
@@ -3466,15 +3466,15 @@
                 255,
                 130,
                 1,
-                22,
+                26,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680413,
-            "end": 1680426
+            "begin": 1680417,
+            "end": 1680430
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -3491,7 +3491,7 @@
                 255,
                 146,
                 1,
-                62,
+                66,
                 92,
                 255,
                 255
@@ -3506,15 +3506,15 @@
                 255,
                 146,
                 1,
-                62,
+                66,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680426,
-            "end": 1680439
+            "begin": 1680430,
+            "end": 1680443
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_3",
         "description": "Invert Trainer NPC facing directions"
@@ -3531,7 +3531,7 @@
                 255,
                 146,
                 1,
-                82,
+                86,
                 92,
                 255,
                 255
@@ -3546,15 +3546,15 @@
                 255,
                 146,
                 1,
-                82,
+                86,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680439,
-            "end": 1680452
+            "begin": 1680443,
+            "end": 1680456
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_4",
         "description": "Invert Trainer NPC facing directions"

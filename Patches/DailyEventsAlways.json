@@ -262,13 +262,13 @@
                 118,
                 0,
                 8,
-                194,
+                198,
                 78
             ]
         },
         "address_range": {
-            "begin": 642739,
-            "end": 642745
+            "begin": 642743,
+            "end": 642749
         },
         "label": "PokefanM_DairyFarmer.ckir_BEFORE_timed_events_MOOMOO",
         "description": "Farmhouse flag for MooMoo check changed"
@@ -288,13 +288,13 @@
                 118,
                 0,
                 8,
-                34,
+                38,
                 79
             ]
         },
         "address_range": {
-            "begin": 642838,
-            "end": 642844
+            "begin": 642842,
+            "end": 642848
         },
         "label": "PokefanF_SnoreFarmer.ckir_BEFORE_timed_events_MOOMOO2",
         "description": "Farmhouse flag for MooMoo check changed"

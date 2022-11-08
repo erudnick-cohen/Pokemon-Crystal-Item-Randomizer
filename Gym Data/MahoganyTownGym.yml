@@ -43,7 +43,9 @@ Location:
                     checkevent EVENT_GOT_GLACIER_BADGE
                     iftrue .GotGlacierBadge
                     BADGELINE
+                    promptbutton
                     iffalse .GotGlacierBadge
+                    setevent EVENT_GOT_GLACIER_BADGE
         Code:
         Text:
             -
