@@ -26,15 +26,6 @@
 
      {"integer_values": { "old": [49,5,3,9,162,87,49,6,3,9,167,87], "new": [122,4,10,13,122,10,8,13,122,10,12,13] },
     "address_range": { "begin": 513937, "end": 513949 },
-"label" : "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description" : "Prevent boxes from blocking path"},
-
-
-    {"integer_values": { "old": [0,0], "new": [254,8] },
-    "address_range": { "begin": 0, "end": 0 },
-"label" : "CheckReplaceKrisSprite.ckir_BEFORE_BIKELOAD", "description" : "Stay on Bike everywhere"},
-
-        {"integer_values": { "old": [0,0], "new": [24,0] },
-    "address_range": { "begin": 0, "end": 0 },
-"label" : "BikeFunction.ckir_BEFORE_BIKEENV", "description" : "Able to ride bike everywhere"}
+"label" : "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description" : "Prevent boxes from blocking path"}
 
 ]
