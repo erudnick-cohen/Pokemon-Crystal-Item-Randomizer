@@ -704,8 +704,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSLICKITUNG0ITEMCODE",
     "address_range": {
-      "begin": 1611464,
-      "end": 1611467
+      "begin": 1611459,
+      "end": 1611462
     },
     "integer_values": "158 112 1",
     "hex_values": "$9e $70 $1"
@@ -713,8 +713,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSODDISH0ITEMCODE",
     "address_range": {
-      "begin": 1611487,
-      "end": 1611490
+      "begin": 1611482,
+      "end": 1611485
     },
     "integer_values": "158 34 1",
     "hex_values": "$9e $22 $1"
@@ -722,8 +722,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSPICHU0ITEMCODE",
     "address_range": {
-      "begin": 1611550,
-      "end": 1611553
+      "begin": 1611545,
+      "end": 1611548
     },
     "integer_values": "158 23 1",
     "hex_values": "$9e $17 $1"
@@ -731,8 +731,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSSTARYU0ITEMCODE",
     "address_range": {
-      "begin": 1611510,
-      "end": 1611513
+      "begin": 1611505,
+      "end": 1611508
     },
     "integer_values": "158 24 1",
     "hex_values": "$9e $18 $1"
@@ -740,8 +740,8 @@
   {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSVULPIX0ITEMCODE",
     "address_range": {
-      "begin": 1611533,
-      "end": 1611536
+      "begin": 1611528,
+      "end": 1611531
     },
     "integer_values": "158 22 1",
     "hex_values": "$9e $16 $1"
@@ -1964,8 +1964,8 @@
   {
     "label": "Copycat.ckir_BEFORECOPYCATRAILPASS0ITEMCODE",
     "address_range": {
-      "begin": 1617921,
-      "end": 1617924
+      "begin": 1617916,
+      "end": 1617919
     },
     "integer_values": "158 134 1",
     "hex_values": "$9e $86 $1"
@@ -2873,8 +2873,8 @@
   {
     "label": "FightingDojoFocusBand.ckir_BEFOREDOJOBAND0ITEMCODE",
     "address_range": {
-      "begin": 1612782,
-      "end": 1612784
+      "begin": 1612777,
+      "end": 1612779
     },
     "integer_values": "119 1",
     "hex_values": "$77 $1"
@@ -2891,11 +2891,11 @@
   {
     "label": "FightingDojo_MapEvents.ckir_BEFOREDOJOBAND0NPCCODE",
     "address_range": {
-      "begin": 1612963,
-      "end": 1612976
+      "begin": 1612958,
+      "end": 1612971
     },
-    "integer_values": "84 5 7 1 0 255 255 1 0 238 91 125 7",
-    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $ee $5b $7d $7"
+    "integer_values": "84 5 7 1 0 255 255 1 0 233 91 125 7",
+    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $e9 $5b $7d $7"
   },
   {
     "label": "FlowerShopTeacherScript.ckir_BEFOREFLOWERSHOP0ITEMCODE",
@@ -7742,8 +7742,8 @@
   {
     "label": "MrPsychic.ckir_BEFOREMRPSYCHICTM0ITEMCODE",
     "address_range": {
-      "begin": 1615902,
-      "end": 1615905
+      "begin": 1615897,
+      "end": 1615900
     },
     "integer_values": "158 221 1",
     "hex_values": "$9e $dd $1"
@@ -13178,8 +13178,8 @@
   {
     "label": "Route5CleanseTagHouseGrannyScript.ckir_BEFOREROUTE5CLEANSETAG0ITEMCODE",
     "address_range": {
-      "begin": 1619681,
-      "end": 1619684
+      "begin": 1619676,
+      "end": 1619679
     },
     "integer_values": "158 94 1",
     "hex_values": "$9e $5e $1"
@@ -14024,8 +14024,8 @@
   {
     "label": "SaffronGymSabrinaScript.ckir_BEFORESAFFRONCITYGYMBADGE0BADGECODE",
     "address_range": {
-      "begin": 1613023,
-      "end": 1613026
+      "begin": 1613018,
+      "end": 1613021
     },
     "integer_values": "175 40 0",
     "hex_values": "$af $28 $0"
@@ -14042,38 +14042,38 @@
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_0",
     "address_range": {
-      "begin": 1614868,
-      "end": 1614881
+      "begin": 1614863,
+      "end": 1614876
     },
-    "integer_values": "48 20 21 10 0 255 255 178 3 3 93 255 255",
-    "hex_values": "$30 $14 $15 $a $0 $ff $ff $b2 $3 $3 $5d $ff $ff"
+    "integer_values": "48 20 21 10 0 255 255 178 3 254 92 255 255",
+    "hex_values": "$30 $14 $15 $a $0 $ff $ff $b2 $3 $fe $5c $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_1",
     "address_range": {
-      "begin": 1614881,
-      "end": 1614894
+      "begin": 1614876,
+      "end": 1614889
     },
-    "integer_values": "39 20 7 10 0 255 255 146 3 23 93 255 255",
-    "hex_values": "$27 $14 $7 $a $0 $ff $ff $92 $3 $17 $5d $ff $ff"
+    "integer_values": "39 20 7 10 0 255 255 146 3 18 93 255 255",
+    "hex_values": "$27 $14 $7 $a $0 $ff $ff $92 $3 $12 $5d $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_2",
     "address_range": {
-      "begin": 1614894,
-      "end": 1614907
+      "begin": 1614889,
+      "end": 1614902
     },
-    "integer_values": "48 8 7 10 0 255 255 178 2 43 93 255 255",
-    "hex_values": "$30 $8 $7 $a $0 $ff $ff $b2 $2 $2b $5d $ff $ff"
+    "integer_values": "48 8 7 10 0 255 255 178 2 38 93 255 255",
+    "hex_values": "$30 $8 $7 $a $0 $ff $ff $b2 $2 $26 $5d $ff $ff"
   },
   {
     "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_3",
     "address_range": {
-      "begin": 1614907,
-      "end": 1614920
+      "begin": 1614902,
+      "end": 1614915
     },
-    "integer_values": "39 8 21 10 0 255 255 146 2 63 93 255 255",
-    "hex_values": "$27 $8 $15 $a $0 $ff $ff $92 $2 $3f $5d $ff $ff"
+    "integer_values": "39 8 21 10 0 255 255 146 2 58 93 255 255",
+    "hex_values": "$27 $8 $15 $a $0 $ff $ff $92 $2 $3a $5d $ff $ff"
   },
   {
     "label": "SaffronMagnetTrainStation_Blocks.ckir_BEFORE_SaffronMagnetTrainStation_Blocks",
@@ -14276,8 +14276,8 @@
   {
     "label": "SilphCoOfficerScript.ckir_BEFORESILPHCOUPGRADE0ITEMCODE",
     "address_range": {
-      "begin": 1617040,
-      "end": 1617043
+      "begin": 1617035,
+      "end": 1617038
     },
     "integer_values": "158 172 1",
     "hex_values": "$9e $ac $1"

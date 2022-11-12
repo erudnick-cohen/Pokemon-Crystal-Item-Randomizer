@@ -11571,8 +11571,8 @@
                 255,
                 178,
                 3,
-                3,
-                93,
+                254,
+                92,
                 255,
                 255
             ],
@@ -11586,15 +11586,15 @@
                 255,
                 178,
                 3,
-                3,
-                93,
+                254,
+                92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614868,
-            "end": 1614881
+            "begin": 1614863,
+            "end": 1614876
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -11611,7 +11611,7 @@
                 255,
                 146,
                 3,
-                23,
+                18,
                 93,
                 255,
                 255
@@ -11626,15 +11626,15 @@
                 255,
                 146,
                 3,
-                23,
+                18,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614881,
-            "end": 1614894
+            "begin": 1614876,
+            "end": 1614889
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -11651,7 +11651,7 @@
                 255,
                 178,
                 2,
-                43,
+                38,
                 93,
                 255,
                 255
@@ -11666,15 +11666,15 @@
                 255,
                 178,
                 2,
-                43,
+                38,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614894,
-            "end": 1614907
+            "begin": 1614889,
+            "end": 1614902
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -11691,7 +11691,7 @@
                 255,
                 146,
                 2,
-                63,
+                58,
                 93,
                 255,
                 255
@@ -11706,15 +11706,15 @@
                 255,
                 146,
                 2,
-                63,
+                58,
                 93,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1614907,
-            "end": 1614920
+            "begin": 1614902,
+            "end": 1614915
         },
         "label": "SaffronGym_MapEvents.ckir_BEFORE_TrainerEvent_SaffronGym_3",
         "description": "Invert Trainer NPC facing directions"
