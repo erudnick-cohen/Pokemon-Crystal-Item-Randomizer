@@ -9,7 +9,10 @@ import time
 import RandomizeFunctions
 
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed,inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed,inputFlags, reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'], allPossibleFlags = ['Johto Mode','Kanto Mode'], plandoPlacements = {}):
+	if inputFlags is None:
+		inputFlags = []
+
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 	random.seed(seed)
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions

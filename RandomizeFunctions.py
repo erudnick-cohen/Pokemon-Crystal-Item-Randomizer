@@ -2,6 +2,7 @@ import csv
 import json
 import math
 import random
+import string
 from collections import defaultdict
 
 import LoadLocationData
@@ -287,7 +288,11 @@ def ReplaceItem(itemIn, replaceFile):
     return None
 
 
-def IterateRequirements(location, locations, known, partial_known=[]):
+def IterateRequirements(location, locations, known, partial_known=None):
+
+    if partial_known is None:
+        partial_known = []
+
     addedLocation = []
     addedFlag = []
     addedItem = []
@@ -1149,7 +1154,14 @@ def removeRedundantHints(hints, hintConfig, locationData):
 
 
 
-def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=[], requiredLocations=[]):
+def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=None, requiredLocations=None):
+
+    if notRequiredFlags is None:
+        notRequiredFlags = []
+
+    if requiredLocations is None:
+        requiredLocations = []
+
     if x not in locationMapping:
         print("Error, location should be in mapping")
         return True
@@ -2248,13 +2260,20 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
         return None
 
     forbiddenItems = []
+
     for flag in flags:
         if flag.startswith("Cannot Buy"):
-            item = flag.replace("Cannot Buy ", "").upper().replace(" "," ")
+            item = flag.replace("Cannot Buy ", "")
             forbiddenItems.append(item)
 
-    if itemLocation.isShop() and placeItem in forbiddenItems:
-        return None
+    cleanItem = placeItem.replace("_", " ").replace("TM", "").strip()
+    cleanItem = string.capwords(cleanItem, " ")
+
+    if itemLocation.isShop() and cleanItem in forbiddenItems:
+        replacedItem = trashItems.pop()
+        placeItem = replacedItem
+        progressItem = replacedItem
+        trashItems.append(placeItem)
 
     # Function checks if all the items in a given shop, at least 1 must be a type of repel and 1 type of ball
     if itemLocation.isShop():

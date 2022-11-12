@@ -11,6 +11,7 @@ AddedItems:
 MaybeRemoveItems:
     - ESCAPE_ROPE
     - WATER_STONE
+    - TM_ROCK_SMASH
 Changes:
     -
         Location: Shopsanity

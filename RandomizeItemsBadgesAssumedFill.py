@@ -213,13 +213,16 @@ def GetWarpGroupsSets(locList, inputFlags):
 	return warpSets
 
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=[], reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=None, reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
 				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
 				   plandoPlacements = {},
 				   dontReplace = None):
 	if dontReplace is None:
 		dontReplace = []
+	if inputFlags is None:
+		inputFlags = []
+
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 
 	random.seed(seed)
@@ -953,7 +956,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems, hasSilverLeaf = \
 		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList,
-						 badgeSet, item_processor, requiredItems)
+						 badgeSet, item_processor, requiredItems=requiredItems)
 
 
 	for f in requirementsDict.items():
@@ -978,10 +981,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					 plandoPlacements, monReqItems, locList, badgeSet, item_processor,
-					 assign_trash=True, forbidden=None, recommended=True, requiredItems=[]):
+					 assign_trash=True, forbidden=None, recommended=True, requiredItems=None):
 
 	if forbidden is None:
 		forbidden = []
+
+	if requiredItems is None:
+		requiredItems = []
 
 	#traverse seed to both confirm beatability, allocate "trash" items and determine location distances
 	#define the set of active initial locations to consider
@@ -1099,7 +1105,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				for item in preState.items():
 					state[item[0]] = item[1]
 				for item in preStateDist.items():
-					state[item[0]] = item[1]
+					stateDist[item[0]] = item[1]
 
 				i.distance = pre_distance
 
@@ -1174,16 +1180,16 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 							i.IsItem = True
 
 							cleanItem = i.item.replace("_", " ").replace("TM", "").strip()
-							cleanItem = string.capwords(cleanItem," ")
+							cleanItem = string.capwords(cleanItem, " ")
 
 							if cleanItem in requiredItems:
 								state[cleanItem] = True
 								stateDist[i.item] = max(stateDist[i.item], stateDist[i.Name])
 
-							if i.isShop() and i.item in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+							if i.isShop() and cleanItem in RandomizeFunctions.REQUIRED_BUY_ITEMS:
 								state[cleanItem + " Purchasable"] = True
-								stateDist[cleanItem + " Purchasable"] = max(stateDist[cleanItem + " Purchasable"], stateDist[i.Name])
-
+								stateDist[cleanItem + " Purchasable"] = max(stateDist[cleanItem + " Purchasable"],
+																			stateDist[i.Name])
 					else:
 						if i.item not in forbidden:
 							state[i.item] = True
@@ -1195,6 +1201,16 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 							i.item = None
 						#print('Progress item '+i.item +' in '+i.Name)
 						# TODO Confirm this is meant to be here with the rework
+
+						if i.item is not None:
+							cleanItem = i.item.replace("_", " ").replace("TM", "").strip()
+							cleanItem = string.capwords(cleanItem, " ")
+
+							if i.isShop() and cleanItem in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+								state[cleanItem + " Purchasable"] = True
+								stateDist[cleanItem + " Purchasable"] = max(stateDist[cleanItem + " Purchasable"],
+																			stateDist[i.Name])
+
 					if(i.item in badgeSet):
 						maxBadgeDist = max(maxBadgeDist,i.distance)
 						nBadges = nBadges+1
@@ -1345,14 +1361,14 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				randomizedExtra[i.Name] = i.item
 				hasSilverLeaf = True
 
-			if i.Type == "Map" and "Banned" not in i.FlagReqs:
+			if i.Type == "Map" and "Banned" not in i.FlagReqs and "Impossible" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)
 				#print("Unable to reach::", i.Name)
 				#print(i.Name,"now","Silver Leaf")
 				#hasSilverLeaf = True
 
 			#Handle adding unreachable maps that haven't been met
-			elif i.Name not in addedSublocations:
+			elif i.Name not in addedSublocations and "Impossible" not in i.FlagReqs:
 				addedSublocations[i.Name] = i
 				activeLoc.extend(i.Sublocations)
 

@@ -543,8 +543,15 @@ def CheckLocationData(warpLocations, locationList):
 
 
 
-def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = {}, flags = [], labelling = False,
+def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = None, flags = None, labelling = False,
 					   loadWarpData = True):
+
+	if modifierDict is None:
+		modifierDict = {}
+
+	if flags is None:
+		flags = []
+
 	LocationList = []
 	LocCountDict = defaultdict(lambda: 0)
 	print("Creating Locations")
