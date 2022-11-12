@@ -7,6 +7,7 @@ import yaml
 
 import LoadLocationData
 import RandomizeFunctions
+import Static
 
 
 # A function which detects known possible warp changes and automatically enabled other modifiers
@@ -18,10 +19,10 @@ import RandomizeFunctions
 
 
 def InterpretWarpChanges(file):
-    json_file_1 = "Warp Data/crystal-speedchoice-warp-label-details.json"
+    json_file_1 = Static.warp_labels_file
     rom_file = file
 
-    default_label_file = "crystal-speedchoice-label-details.json"
+    default_label_file = Static.default_labels_file
 
     f = open(rom_file, 'r+b')
     romMap = mmap.mmap(f.fileno(), 0)
@@ -398,7 +399,7 @@ def BytesToEasyString(bytes):
 
 
 def interpretDataForMapIDs(rom="RandomizerRom/crystal-speedchoice.gbc"):
-    json_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
+    json_file = Static.warp_labels_file
     rom_file = rom
     output_file = "Warp Data/map_ids.conf"
 
@@ -505,7 +506,7 @@ def getWarpGroupData():
     return warpGroupData
 
 def interpretDataForRandomisedRom(file, out_file="warp-output.tsv"):
-    json_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
+    json_file = Static.warp_labels_file
     rom_file = file
     conf_file = "Warp Data/map_ids.conf"
 

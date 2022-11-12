@@ -9,6 +9,9 @@ import mmap
 from collections import defaultdict
 import copy
 
+import Static
+
+
 def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly']):
 
 	changeListDict = defaultdict(lambda: [])
@@ -117,7 +120,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 			pass
 			#print(i.Name)
 
-	yamlfile = open("crystal-speedchoice-label-details.json")
+	yamlfile = open(Static.default_labels_file)
 	yamltext = yamlfile.read()
 	addressLists = json.loads(yamltext)
 	addressData = {}

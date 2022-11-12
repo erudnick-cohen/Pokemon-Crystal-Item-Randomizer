@@ -8,6 +8,8 @@ import json
 import mmap
 from collections import defaultdict
 
+import Static
+
 res = LoadLocationData.LoadDataFromFolder("..")
 trashItems = res[1]
 LocationList = res[0]
@@ -89,7 +91,7 @@ for j in result[0]:
 	if(i.NormalItem is not None and not i.isItem()):
 		print(i.Name)
 
-yamlfile = open("../crystal-speedchoice-label-details.json")
+yamlfile = open("../"+Static.default_labels_file)
 yamltext = yamlfile.read()
 addressLists = json.loads(yamltext)
 addressData = {}

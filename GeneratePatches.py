@@ -5,6 +5,7 @@ import shutil
 import os
 
 import RandomizeFunctions
+import Static
 
 
 def GetManualCode(labelName, lookups):
@@ -79,7 +80,7 @@ def makePatches():
 
 
 	#load the json data so that we know what the addresses actually SHOULD be
-	with open('crystal-speedchoice-label-details.json',encoding='utf-8') as f:
+	with open(Static.default_labels_file,encoding='utf-8') as f:
 		addrText = f.read()
 		addrData = json.loads(addrText)
 

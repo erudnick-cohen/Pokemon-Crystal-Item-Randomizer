@@ -2,6 +2,8 @@ import json
 import os
 import re
 
+import Static
+
 ROM_DIRECTORY = "RandomizerRom"
 MAPS_DIRECTORY = "maps"
 
@@ -430,7 +432,7 @@ def GenerateHintLabels():
     return signEntries
 
 def createSignJson(entries):
-    yamlfile = open("Config/crystal-speedchoice-hint-details.json", encoding='utf-8')
+    yamlfile = open(Static.hint_labels_file, encoding='utf-8')
     yamltext = yamlfile.read()
     addressLists = json.loads(yamltext)
     addressData = {}
@@ -438,7 +440,7 @@ def createSignJson(entries):
         addressData[i['label'].split(".")[-1]] = i
 
 
-    yamlfile_b = open("Config/crystal-speedchoice-block-details.json", encoding='utf-8')
+    yamlfile_b = open(Static.blocks_labels_file, encoding='utf-8')
     yamltext_b = yamlfile_b.read()
     addressLists_b = json.loads(yamltext_b)
     addressDataBlocks = {}

@@ -6,6 +6,8 @@ import mmap
 import yaml
 
 import LoadLocationData
+import Static
+
 
 def blocksToLabelNames(orig_label):
     l = orig_label.replace("\n", "")
@@ -90,7 +92,7 @@ def InvertNPCDirection(direction_byte):
 
 def GenerateNPCSwitchPatch():
     patchFile = "Patches Base/Trainer180.json"
-    default_label_file = "crystal-speedchoice-label-details.json"
+    default_label_file = Static.default_labels_file
     json_file_2 = default_label_file
 
     yamlfile2 = open(json_file_2, encoding='utf-8')
@@ -207,7 +209,7 @@ def GenerateNPCLabels():
 
 def CreateMapPatches():
     patchFile = "Patches Base/LightUpDarkCaves.json"
-    default_label_file = "crystal-speedchoice-label-details.json"
+    default_label_file = Static.default_labels_file
     json_file_2 = default_label_file
 
     yamlfile2 = open(json_file_2, encoding='utf-8')
@@ -354,7 +356,7 @@ def BytesToEasyString(bytes):
     return s
 
 def interpretDataForMapIDs():
-    json_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
+    json_file = Static.warp_labels_file
     rom_file = "warp-test.gbc" # For this function, needs vanilla rom
     output_file = "Warp Data/map_ids.conf"
 

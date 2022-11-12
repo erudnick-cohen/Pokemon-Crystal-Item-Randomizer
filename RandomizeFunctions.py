@@ -7,6 +7,7 @@ from collections import defaultdict
 
 import LoadLocationData
 import RandomizeItemsBadgesAssumedFill
+import Version
 
 
 def SpecialBytesConversion(text, safe, hintConfig):
@@ -2376,12 +2377,21 @@ def AddressToIntValues(address):
     return bytes
 
 
+def IsVersionSupported(major, minor, revision):
+    supported = Version.GetSupportedSpeedchoiceVersion()
+    if supported[0] != major or supported[1] != minor or supported[2] != revision:
+        return False
+
+    return True
+
+
+
+
 def CheckVersion(addressData, romMap):
     if "ckir_BEFORE_MajorVersionNumber" in addressData:
         majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]
         minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
         revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
-
 
         majorRequired = int(majorVersion["integer_values"][0])
         minorRequired = int(minorVersion["integer_values"][0])
@@ -2391,12 +2401,18 @@ def CheckVersion(addressData, romMap):
         minorAddress = minorVersion["address_range"]["begin"]
         revisionAddress = revisionVersion["address_range"]["begin"]
 
+        if not IsVersionSupported(majorRequired, minorRequired, revisionRequired):
+            raise Exception("Version mismatch!")
+
+
         if len(romMap) <= majorAddress:
             return False
 
         majorActual = romMap[majorAddress]
         minorActual = romMap[minorAddress]
         revisionActual = romMap[revisionAddress]
+
+
 
         if majorActual != majorRequired or minorActual != minorRequired or revisionRequired != revisionActual:
             return False

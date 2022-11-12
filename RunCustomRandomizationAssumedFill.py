@@ -15,6 +15,9 @@ import copy
 import traceback
 import random
 
+import Static
+
+
 def handleBadSpoiler(resultDict, flags, minSize=None, maxSize=None):
 	spoiler = resultDict["Spoiler"]
 	reachable = resultDict["Reachable"]
@@ -162,7 +165,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	addedProgressList = []
 	maybeRemoveItems = []
 
-	yamlfile = open("crystal-speedchoice-label-details.json", encoding='utf-8')
+	yamlfile = open(Static.default_labels_file, encoding='utf-8')
 	yamltext = yamlfile.read()
 	addressLists = json.loads(yamltext)
 	addressData = {}

@@ -1,7 +1,10 @@
+import json
 import os
 import sys
 
 import GenerateHintData
+import RandomizeFunctions
+import Static
 import UpdateLabelsScript
 import GenerateWarpData
 import GenerateMapLabels
@@ -57,3 +60,22 @@ if __name__ == '__main__':
     GenerateWarpData.interpretDataForMapIDs()
 
     GenerateHintData.createSignJson(sign_entries)
+
+    yamlfile = open(Static.default_labels_file, encoding='utf-8')
+    yamltext = yamlfile.read()
+    addressLists = json.loads(yamltext)
+    addressData = {}
+    for i in addressLists:
+        addressData[i['label'].split(".")[-1]] = i
+
+    majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]
+    minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
+    revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
+
+    majorRequired = int(majorVersion["integer_values"][0])
+    minorRequired = int(minorVersion["integer_values"][0])
+    revisionRequired = int(revisionVersion["integer_values"][0])
+
+    version_check = RandomizeFunctions.IsVersionSupported(majorRequired, minorRequired, revisionRequired)
+    if not version_check:
+        raise Exception("Version is invalid")

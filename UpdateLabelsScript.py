@@ -4,6 +4,8 @@ import subprocess
 import sys
 import threading
 
+import Static
+
 
 class ProcessPrint(threading.Thread):
     stream=None
@@ -137,33 +139,29 @@ def BuildScriptFromSym(wsl=False, change_dir=True):
 
 def UpdateLabels(wsl=False, delete_file=False):
 
-    warp_labels_file = "Warp Data/crystal-speedchoice-warp-label-details.json"
-    hint_labels_file = "Config/crystal-speedchoice-hint-details.json"
-    blocks_labels_file = "Config/crystal-speedchoice-block-details.json"
-    default_labels_file = "crystal-speedchoice-label-details.json"
-    out_file = "pokecrystal-speedchoice.gbc"
+
 
     try:
-        if os.path.isfile(warp_labels_file):
-            os.remove(warp_labels_file)
-        if os.path.isfile(hint_labels_file):
-            os.remove(hint_labels_file)
-        if os.path.isfile(blocks_labels_file):
-            os.remove(blocks_labels_file)
-        if os.path.isfile(default_labels_file):
-            os.remove(default_labels_file)
+        if os.path.isfile(Static.warp_labels_file):
+            os.remove(Static.warp_labels_file)
+        if os.path.isfile(Static.hint_labels_file):
+            os.remove(Static.hint_labels_file)
+        if os.path.isfile(Static.blocks_labels_file):
+            os.remove(Static.blocks_labels_file)
+        if os.path.isfile(Static.default_labels_file):
+            os.remove(Static.default_labels_file)
 
         os.chdir('RandomizerRom')
 
-        if os.path.isfile(out_file):
-            os.remove(out_file)
+        if os.path.isfile(Static.speedchoice_build_out_file):
+            os.remove(Static.speedchoice_build_out_file)
 
 
     except OSError as ose:
         print("OS Error occurred")
         raise ose
 
-    build_success = BuildRom(out_file, delete_file, wsl, change_dir=False)
+    build_success = BuildRom(Static.speedchoice_build_out_file, delete_file, wsl, change_dir=False)
     if not build_success:
         return False
 
@@ -175,16 +173,17 @@ def UpdateLabels(wsl=False, delete_file=False):
     os.chdir('..')
     # remove old label details
     try:
-        os.remove('Warp Data/crystal-speedchoice-warp-label-details.json')
-        os.remove('crystal-speedchoice-label-details.json')
-        os.remove('Config/crystal-speedchoice-hint-details.json')
-        os.remove('Config/crystal-speedchoice-block-details.json')
+        os.remove(Static.warp_labels_file)
+        os.remove(Static.default_labels_file)
+        os.remove(Static.hint_labels_file)
+        os.remove(Static.blocks_labels_file)
     except OSError:
         pass
-    shutil.move(r'RandomizerRom/crystal-speedchoice-label-details.json', os.getcwd())
-    shutil.move(r'RandomizerRom/crystal-speedchoice-warp-label-details.json', os.getcwd()+"/Warp Data")
-    shutil.move(r'RandomizerRom/crystal-speedchoice-hint-details.json', os.getcwd()+"/Config")
-    shutil.move(r'RandomizerRom/crystal-speedchoice-block-details.json', os.getcwd()+"/Config")
+
+    shutil.move("RandomizerRom/"+Static.default_labels_file, os.getcwd())
+    shutil.move('RandomizerRom/'+"crystal-speedchoice-warp-label-details.json", os.getcwd()+"/Warp Data")
+    shutil.move('RandomizerRom/'+"crystal-speedchoice-hint-details.json", os.getcwd()+"/Config")
+    shutil.move('RandomizerRom/'+"crystal-speedchoice-block-details.json", os.getcwd()+"/Config")
 
     # DONT FORGET TO COMMIT THE CHANGED FILES THIS SCRIPT PRODUCES!!!!
 

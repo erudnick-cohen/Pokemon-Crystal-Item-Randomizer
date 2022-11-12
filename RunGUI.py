@@ -57,7 +57,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
 		self.HintButton.clicked.connect(self.ProcessHintSettings)
 
-		self.version.setText(_translate("MainWindow", "Version "+Version.GetVersion()))
+		self.version.setText(_translate("MainWindow", "Version "+Version.GetItemRandoVersion()))
 
 		self.itemsList = []
 		with open('AddItemValues.csv', newline='',encoding='utf-8-sig') as csvfile:
@@ -223,7 +223,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				if "UpgradedItems" in resultDict:
 					outputSpoiler["Xtra Upgrades"] = resultDict["UpgradedItems"]
 
-				outputSpoiler["CIR Version"] = Version.GetVersion()
+				outputSpoiler["CIR Version"] = Version.GetItemRandoVersion()
 				outputSpoiler["Mode"] = self.CurentSettings.text()
 				outputSpoiler["Modifiers"] = self.GetSettingsMD5()
 
