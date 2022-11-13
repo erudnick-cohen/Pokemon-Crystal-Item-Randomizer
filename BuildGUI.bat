@@ -23,7 +23,7 @@ echo F|Xcopy "FlagValues.csv" "dist/Pokemon Crystal Item Randomizer/FlagValues.c
 echo F|Xcopy "BadgeData.yml" "dist/Pokemon Crystal Item Randomizer/BadgeData.yml" /i /y
 echo F|Xcopy "FullItemRandomizer.rnqs" "dist/Pokemon Crystal Item Randomizer/FullItemRandomizer.rnqs" /i /y
 echo F|Xcopy "README.md" "dist/Pokemon Crystal Item Randomizer/README.txt" /i /y
-echo F|Xcopy "RandomizerConfig.yml" "dist/Pokemon Crystal Item Randomizer/RandomizerConfig.yml" /i /y
+echo F|Xcopy "DefaultRandomizerConfig.yml" "dist/Pokemon Crystal Item Randomizer/RandomizerConfig.yml" /i /y
 echo F|Xcopy "ItemDescriptions.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y
 
 ::echo F|Xcopy "Config/SignData.json" "dist/Pokemon Crystal Item Randomizer/ItemDescriptions.json" /i /y

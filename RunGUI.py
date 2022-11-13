@@ -1,3 +1,4 @@
+import shutil
 import sys
 
 import RandomizeFunctions
@@ -66,6 +67,73 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				if(len(i)>0):
 					self.itemsList.append(i[0])
 					#self.ItemList.addItem(i[0])
+
+		if 'FirstRun' in yamltext:
+			firstRunCheck = yamltext['FirstRun']
+			if firstRunCheck:
+				QtWidgets.QMessageBox.about(self, 'First Run',
+											'Please select previous install directory to import custom settings')
+
+				previous_dir = QFileDialog.getExistingDirectory()
+				if previous_dir != "":
+					self.importSettings(previous_dir)
+
+
+				self.WriteRandomizerConfig(firstRun=False)
+
+
+	def importSettings(self, oldDirectory):
+		oldSettings = oldDirectory + "/RandomizerConfig.yml"
+		config_exists = os.path.isfile(oldSettings)
+		if config_exists:
+			yamlfile = open(oldSettings, encoding='utf-8')
+			yamltext = yaml.load(yamlfile, Loader=yaml.FullLoader)
+
+			if "DefaultSettings" in yamltext["DefaultSettings"]:
+				self.WriteRandomizerConfig(defaultFile=yamltext["DefaultSettings"])
+
+		modeDirectory = oldDirectory + "/" + "Modes"
+		if os.path.isdir(modeDirectory):
+			oldModes = []
+			newModes = []
+			files = os.listdir(modeDirectory)
+			for mode in files:
+				if os.path.isfile(modeDirectory + "/" + mode):
+					oldModes.append(mode)
+
+			if os.path.isdir(modeDirectory + "/" + "Custom"):
+				files = os.listdir(modeDirectory + "/Custom" )
+				for mode in files:
+					if os.path.isfile(modeDirectory + "/Custom/" + mode):
+						oldModes.append("Custom/"+mode)
+
+			release_modes = os.listdir("Modes")
+			for mode in release_modes:
+				if os.path.isfile("Modes" + "/" + mode):
+					newModes.append(mode)
+
+			if os.path.isdir("Modes" + "/" + "Custom"):
+				files = os.listdir("Modes" + "/" + "Custom")
+				for mode in files:
+					if os.path.isfile("Modes" + "/Custom/" + mode):
+						newModes.append("Custom/"+mode)
+
+			additionalModes = [ mode for mode in
+								[ old.replace("Custom/", "") for old in oldModes ]
+								if mode not in
+								[ new.replace("Custom/", "") for new in newModes ]]
+			custom_modes = os.path.isdir("Modes/Custom")
+			if not custom_modes:
+				os.mkdir("Modes/Custom")
+
+			for additionalMode in additionalModes:
+				isCustom = os.path.isfile(modeDirectory + "/Custom/" + additionalMode)
+				if isCustom:
+					shutil.copy(modeDirectory + "/Custom/" + additionalMode, "Modes/Custom")
+				else:
+					shutil.copy(modeDirectory + "/" + additionalMode, "Modes/Custom")
+
+
 
 	def runRandomizer(self):
 
@@ -499,16 +567,25 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.ModifierDescription.setText(_translate("MainWindow", self.modList[row]['Description']))
 		else:
 			self.ModifierDescription.setText(_translate("MainWindow", "No modifier selected!"))
+
+	def WriteRandomizerConfig(self, defaultFile=None, firstRun=None):
+		yamlfile = open('RandomizerConfig.yml')
+		yamltext = yaml.load(yamlfile, Loader=yaml.FullLoader)
+
+		if defaultFile is not None:
+			yamltext['DefaultSettings'] = defaultFile
+
+		if firstRun is not None:
+			yamltext["FirstRun"] = firstRun
+
+		with open('RandomizerConfig.yml', 'w', encoding='utf-8') as f:
+			yaml.dump(yamltext, f, default_flow_style=False)
 			
 	def SelectDefaultSettings(self):
 		QtWidgets.QMessageBox.about(self, 'Choose default settings', 'Select the mode which should be loaded by default when you open up the randomizer')
-		fName = QFileDialog.getOpenFileName(directory = 'Modes')[0]
-		if(fName != ''):
-			yamlfile = open('RandomizerConfig.yml')
-			yamltext = yaml.load(yamlfile, Loader=yaml.FullLoader)
-			yamltext['DefaultSettings'] = fName
-			with open('RandomizerConfig.yml', 'w',encoding='utf-8') as f:
-				yaml.dump(yamltext, f, default_flow_style=False)
+		defaultFile = QFileDialog.getOpenFileName(directory = 'Modes')[0]
+		if(defaultFile != ''):
+			self.WriteRandomizerConfig(defaultFile)
 		else:
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage('A file was not selected!')
