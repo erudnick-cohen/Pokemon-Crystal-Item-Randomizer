@@ -118,5 +118,11 @@ Changes:
         Location: Rock Smash Guy
         AddRecommendedItemReqs:
             - Bicycle
+
+    -
+        Location: Route 35 MysteryBerry
+        AddRecommendedItemReqs:
+            - Bicycle
+
 IncompatibleWith:
     - 'Start With Bike'

@@ -294,28 +294,6 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
-
-                    -
-                        Name: Mt Mortar Hidden Max Repel
-                        FileName: MountMortar1FInside.asm
-                        SecondaryFile: MountMortar1FInside.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Mt Mortar Inside
-                        FlagReqs:
-                            - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: MAX_REPEL
-                        Code: |
-                            MountMortar1FInsideHiddenMaxRepel:
-                                ITEMLINE
-                        SecondaryCode: '    bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel'
-                        Text:
-                        TrainerList:
-                        Sublocations:
             -
                 Name: Mt Mortar Inside Top
                 FileName: MountMortar1FInside.asm
@@ -390,7 +368,27 @@ Location:
                         Text:
                         TrainerList:
                         Sublocations:
-
+                    -
+                        Name: Mt Mortar Hidden Max Repel
+                        FileName: MountMortar1FInside.asm
+                        SecondaryFile: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Inside Top
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_REPEL
+                        Code: |
+                            MountMortar1FInsideHiddenMaxRepel:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel'
+                        Text:
+                        TrainerList:
+                        Sublocations:
 
             -
                 Name: Mt Mortar Surf Floor

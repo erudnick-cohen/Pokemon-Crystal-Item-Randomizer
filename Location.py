@@ -64,7 +64,8 @@ class Location:
 
 		if("IsBerry" in yamlTree):
 			self.IsBerry = yamlTree["IsBerry"]
-			self.BerryFlag = yamlTree["BerryFlag"]
+			self.BerryFlag = self.Name.upper().replace(" ", "_")
+			#self.BerryFlag = yamlTree["BerryFlag"]
 		else:
 			self.IsBerry = False
 			self.BerryFlag = None

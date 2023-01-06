@@ -203,6 +203,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					base_dir += self.romPath.split("/")[i]
 
 			exits = 0
+			stop_after = 1
 			while not validFileName:
 				file = QFileDialog.getSaveFileName(directory = base_dir)[0]
 				if file != '':
@@ -210,7 +211,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				else:
 					QtWidgets.QMessageBox.about(self, 'ERROR', 'Please name and save the generated rom...')
 					exits += 1
-					if exits > 2:
+					if exits > stop_after:
 						break
 			randomizedFileName = file
 
@@ -293,7 +294,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 				outputSpoiler["CIR Version"] = Version.GetItemRandoVersion()
 				outputSpoiler["Mode"] = self.CurentSettings.text()
-				outputSpoiler["Modifiers"] = self.GetSettingsMD5()
+				outputSpoiler["ModifierHash"] = self.GetSettingsMD5()
+				outputSpoiler["Modifiers"] = self.GetActiveModifiers()
 
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
@@ -520,7 +522,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.settings['DefaultModifiers'] = []
 			for i in self.modList:
 				self.settings['DefaultModifiers'].append(i['fileName'])
-			with open(fName+'.yml', 'w',encoding='utf-8') as f:
+
+			filename = fName if fName.endswith(".yml") else fName + ".yml"
+			with open(filename, 'w',encoding='utf-8') as f:
 				yaml.dump(self.settings, f, default_flow_style=False)
 				
 	def SetUpPlando(self):
@@ -604,6 +608,14 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 		return hashlib.md5(full_string.encode()).hexdigest()
 
+	def GetActiveModifiers(self):
+		mods = self.modList.copy()
+		mods.sort(key=self.yamlSortFunction)
+		full_string = ";"
+		for mod in mods:
+			full_string += mod["Name"] + ";"
+
+		return full_string
 			
 	def ProcessHintSettings(self):
 		_translate = QtCore.QCoreApplication.translate

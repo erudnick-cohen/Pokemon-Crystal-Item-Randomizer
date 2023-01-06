@@ -321,11 +321,32 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
 
 
+def LoadEventFlags():
+	event_flags_filename = "data/event_flags.asm"
+	event_data = open(event_flags_filename, encoding="utf8")
+	event_lines = event_data.readlines()
+	event_data.close()
+
+	event_flag_lookup = {}
+	count = 0
+
+	for event_line in event_lines:
+		event_line = event_line.strip()
+		if event_line.startswith("const EVENT_"):
+			flag_name = event_line.split(" ")[1]
+			count += 1
+			event_flag_lookup[flag_name] = count
+
+	return event_flag_lookup
+
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
 	yamlfile = open("badgeData.yml",encoding='utf-8')
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
+
+	berryLookup = LoadEventFlags()
+
 	for i in locations:
 		if i.isShop() and i.isItem():
 			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
@@ -336,11 +357,11 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 				if i.Name == "Elm Aide Pokeballs": #currently a regular location with special rules due to labelling weirdness
 					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
 				else:
-					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
 			else:
 				if i.Name == "Dragons Den Dragon Fang":
 					#this just happens to work, its in the same byte offset (its also now just a regular location...)
-					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
 				if i.Name == "Hidden Machine Part":
 					WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
 				if i.Name == "Celadon Cafe Leftovers":
@@ -391,7 +412,7 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	# #then terminate the string
 	# romMap[gymOffsets[location.Name]+len(nString)+2] = 50
 #STILL NEED TO WRITE THE REST OF THESE
-def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
+def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap,berryLookup):
 	if(not isinstance(location, Gym.Gym)):
 		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
@@ -464,7 +485,16 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		# need to extract the nibble out
 		# print(list(map(int, addressDataNPC["integer_values"].split(' '))))
 		# print(addressDataNPC["integer_values"].split(' '))
-		flag_bytes = location.BerryFlag.to_bytes(2, 'little')
+
+		berry_lookup = "EVENT_GOT_"+location.BerryFlag
+		if berry_lookup in berryLookup:
+			berry_flag = berryLookup[berry_lookup]
+		else:
+			berry_flag = location.BerryFlag
+
+		# Add a flag to the berry item and replace the event with a normal item ball (in behaviour)
+		# Still shows as tree
+		flag_bytes = berry_flag.to_bytes(2, 'little')
 		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
 		# form full binary expression
 		fullByte = (10 - len(combobyte)) * '0' + combobyte[2:]

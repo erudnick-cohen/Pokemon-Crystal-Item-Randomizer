@@ -1,6 +1,6 @@
 Name: Maximum Logic With Hints
 Description: Basically every item is being shuffled. All items that you buy from shops or which are hold items on pokemon are NOT randomized. Everything else is, except for the leftovers (we're working on it...). Mt. Silver can be accessed early, without 16 badges, but red will not spawn until you talk to oak with 16 badges. All seeds will be beatable. Hints are provided to help you out, these are located on signs throughout the game.
-BasePatch: Patches/BaseModificationsSpeedchoiceEvil.json
+BasePatch: Patches/BaseModificationsSpeedchoice.json
 RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False

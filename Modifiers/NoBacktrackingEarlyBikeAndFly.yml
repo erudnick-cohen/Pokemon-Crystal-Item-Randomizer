@@ -202,5 +202,14 @@ Changes:
         AddRecommendedItemReqs:
             - Bicycle
             - Fly
+
+    -
+        Location: Route 35 MysteryBerry
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Bicycle
+            - Fly
+
 IncompatibleWith:
     - 'Delete Fly'
