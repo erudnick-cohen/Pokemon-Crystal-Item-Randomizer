@@ -2380,6 +2380,7 @@ def AddressToIntValues(address):
 def IsVersionSupported(major, minor, revision):
     supported = Version.GetSupportedSpeedchoiceVersion()
     if supported[0] != major or supported[1] != minor or supported[2] != revision:
+        print(supported, major, minor, revision)
         return False
 
     return True

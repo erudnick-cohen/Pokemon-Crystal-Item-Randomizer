@@ -911,8 +911,8 @@
   {
     "label": "BurnedTower1FHPUp.ckir_BEFOREBURNEDTOWERROCKSMASHITEM0ITEMCODE",
     "address_range": {
-      "begin": 1596705,
-      "end": 1596707
+      "begin": 1596735,
+      "end": 1596737
     },
     "integer_values": "26 1",
     "hex_values": "$1a $1"
@@ -920,8 +920,8 @@
   {
     "label": "BurnedTower1FHiddenEther.ckir_BEFOREBURNEDTOWERHIDDENETHER0ITEMCODE",
     "address_range": {
-      "begin": 1596699,
-      "end": 1596702
+      "begin": 1596729,
+      "end": 1596732
     },
     "integer_values": "128 0 63",
     "hex_values": "$80 $0 $3f"
@@ -929,8 +929,8 @@
   {
     "label": "BurnedTower1FHiddenUltraBall.ckir_BEFOREBURNEDTOWERHIDDENULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 1596702,
-      "end": 1596705
+      "begin": 1596732,
+      "end": 1596735
     },
     "integer_values": "255 0 2",
     "hex_values": "$ff $0 $2"
@@ -947,35 +947,35 @@
   {
     "label": "BurnedTower1F_MapEvents.ckir_BEFOREBURNEDTOWERHIDDENETHER0ITEMCODEB",
     "address_range": {
-      "begin": 1597787,
-      "end": 1597792
+      "begin": 1597817,
+      "end": 1597822
     },
-    "integer_values": "7 8 7 27 93",
-    "hex_values": "$7 $8 $7 $1b $5d"
+    "integer_values": "7 8 7 57 93",
+    "hex_values": "$7 $8 $7 $39 $5d"
   },
   {
     "label": "BurnedTower1F_MapEvents.ckir_BEFOREBURNEDTOWERHIDDENULTRABALL0ITEMCODEB",
     "address_range": {
-      "begin": 1597792,
-      "end": 1597797
+      "begin": 1597822,
+      "end": 1597827
     },
-    "integer_values": "11 13 7 30 93",
-    "hex_values": "$b $d $7 $1e $5d"
+    "integer_values": "11 13 7 60 93",
+    "hex_values": "$b $d $7 $3c $5d"
   },
   {
     "label": "BurnedTower1F_MapEvents.ckir_BEFOREBURNEDTOWERROCKSMASHITEM0NPCCODE",
     "address_range": {
-      "begin": 1597850,
-      "end": 1597863
+      "begin": 1597880,
+      "end": 1597893
     },
-    "integer_values": "84 6 18 1 0 255 255 1 0 33 93 86 6",
-    "hex_values": "$54 $6 $12 $1 $0 $ff $ff $1 $0 $21 $5d $56 $6"
+    "integer_values": "84 6 18 1 0 255 255 1 0 63 93 86 6",
+    "hex_values": "$54 $6 $12 $1 $0 $ff $ff $1 $0 $3f $5d $56 $6"
   },
   {
     "label": "BurnedTowerB1FTMEndure.ckir_BEFOREBURNEDTOWERSTRENGTHITEM0ITEMCODE",
     "address_range": {
-      "begin": 1598087,
-      "end": 1598089
+      "begin": 1598117,
+      "end": 1598119
     },
     "integer_values": "211 1",
     "hex_values": "$d3 $1"
@@ -992,11 +992,11 @@
   {
     "label": "BurnedTowerB1F_MapEvents.ckir_BEFOREBURNEDTOWERSTRENGTHITEM0NPCCODE",
     "address_range": {
-      "begin": 1598651,
-      "end": 1598664
+      "begin": 1598681,
+      "end": 1598694
     },
-    "integer_values": "84 8 20 1 0 255 255 1 0 135 98 87 6",
-    "hex_values": "$54 $8 $14 $1 $0 $ff $ff $1 $0 $87 $62 $57 $6"
+    "integer_values": "84 8 20 1 0 255 255 1 0 165 98 87 6",
+    "hex_values": "$54 $8 $14 $1 $0 $ff $ff $1 $0 $a5 $62 $57 $6"
   },
   {
     "label": "CeladonCafeTrashcan.ckir_BEFORECELADONCAFELEFTOVERS0ITEMCODE",
@@ -14711,8 +14711,8 @@
       "begin": 1998855,
       "end": 1998856
     },
-    "integer_values": "3",
-    "hex_values": "$3"
+    "integer_values": "4",
+    "hex_values": "$4"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",
@@ -15212,8 +15212,8 @@
   {
     "label": "TinTower1FSage5Script.ckir_BEFORERAINBOWWINGGIFT0ITEMCODE",
     "address_range": {
-      "begin": 1593809,
-      "end": 1593812
+      "begin": 1593839,
+      "end": 1593842
     },
     "integer_values": "158 178 1",
     "hex_values": "$9e $b2 $1"
@@ -15239,8 +15239,8 @@
   {
     "label": "TinTower3FFullHeal.ckir_BEFORETINTOWERFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 1596045,
-      "end": 1596047
+      "begin": 1596075,
+      "end": 1596077
     },
     "integer_values": "38 1",
     "hex_values": "$26 $1"
@@ -15257,17 +15257,17 @@
   {
     "label": "TinTower3F_MapEvents.ckir_BEFORETINTOWERFULLHEAL0NPCCODE",
     "address_range": {
-      "begin": 1596063,
-      "end": 1596076
+      "begin": 1596093,
+      "end": 1596106
     },
-    "integer_values": "84 18 7 1 0 255 255 1 0 141 90 75 6",
-    "hex_values": "$54 $12 $7 $1 $0 $ff $ff $1 $0 $8d $5a $4b $6"
+    "integer_values": "84 18 7 1 0 255 255 1 0 171 90 75 6",
+    "hex_values": "$54 $12 $7 $1 $0 $ff $ff $1 $0 $ab $5a $4b $6"
   },
   {
     "label": "TinTower4FEscapeRope.ckir_BEFORETINTOWERESCAPEROPE0ITEMCODE",
     "address_range": {
-      "begin": 1596082,
-      "end": 1596084
+      "begin": 1596112,
+      "end": 1596114
     },
     "integer_values": "19 1",
     "hex_values": "$13 $1"
@@ -15275,8 +15275,8 @@
   {
     "label": "TinTower4FHiddenMaxPotion.ckir_BEFORETINTOWERHIDDENMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 1596084,
-      "end": 1596087
+      "begin": 1596114,
+      "end": 1596117
     },
     "integer_values": "125 0 15",
     "hex_values": "$7d $0 $f"
@@ -15284,8 +15284,8 @@
   {
     "label": "TinTower4FPPUp.ckir_BEFORETINTOWERPPUP0ITEMCODE",
     "address_range": {
-      "begin": 1596080,
-      "end": 1596082
+      "begin": 1596110,
+      "end": 1596112
     },
     "integer_values": "62 1",
     "hex_values": "$3e $1"
@@ -15293,8 +15293,8 @@
   {
     "label": "TinTower4FUltraBall.ckir_BEFORETINTOWERULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 1596078,
-      "end": 1596080
+      "begin": 1596108,
+      "end": 1596110
     },
     "integer_values": "2 1",
     "hex_values": "$2 $1"
@@ -15311,44 +15311,44 @@
   {
     "label": "TinTower4F_MapEvents.ckir_BEFORETINTOWERESCAPEROPE0NPCCODE",
     "address_range": {
-      "begin": 1596144,
-      "end": 1596157
+      "begin": 1596174,
+      "end": 1596187
     },
-    "integer_values": "84 16 6 1 0 255 255 1 0 178 90 78 6",
-    "hex_values": "$54 $10 $6 $1 $0 $ff $ff $1 $0 $b2 $5a $4e $6"
+    "integer_values": "84 16 6 1 0 255 255 1 0 208 90 78 6",
+    "hex_values": "$54 $10 $6 $1 $0 $ff $ff $1 $0 $d0 $5a $4e $6"
   },
   {
     "label": "TinTower4F_MapEvents.ckir_BEFORETINTOWERHIDDENMAXPOTION0ITEMCODEB",
     "address_range": {
-      "begin": 1596112,
-      "end": 1596117
+      "begin": 1596142,
+      "end": 1596147
     },
-    "integer_values": "6 11 7 180 90",
-    "hex_values": "$6 $b $7 $b4 $5a"
+    "integer_values": "6 11 7 210 90",
+    "hex_values": "$6 $b $7 $d2 $5a"
   },
   {
     "label": "TinTower4F_MapEvents.ckir_BEFORETINTOWERPPUP0NPCCODE",
     "address_range": {
-      "begin": 1596131,
-      "end": 1596144
+      "begin": 1596161,
+      "end": 1596174
     },
-    "integer_values": "84 18 21 1 0 255 255 1 0 176 90 77 6",
-    "hex_values": "$54 $12 $15 $1 $0 $ff $ff $1 $0 $b0 $5a $4d $6"
+    "integer_values": "84 18 21 1 0 255 255 1 0 206 90 77 6",
+    "hex_values": "$54 $12 $15 $1 $0 $ff $ff $1 $0 $ce $5a $4d $6"
   },
   {
     "label": "TinTower4F_MapEvents.ckir_BEFORETINTOWERULTRABALL0NPCCODE",
     "address_range": {
-      "begin": 1596118,
-      "end": 1596131
+      "begin": 1596148,
+      "end": 1596161
     },
-    "integer_values": "84 14 18 1 0 255 255 1 0 174 90 76 6",
-    "hex_values": "$54 $e $12 $1 $0 $ff $ff $1 $0 $ae $5a $4c $6"
+    "integer_values": "84 14 18 1 0 255 255 1 0 204 90 76 6",
+    "hex_values": "$54 $e $12 $1 $0 $ff $ff $1 $0 $cc $5a $4c $6"
   },
   {
     "label": "TinTower5FHiddenCarbos.ckir_BEFORETINTOWERHIDDENCARBOS0ITEMCODE",
     "address_range": {
-      "begin": 1596164,
-      "end": 1596167
+      "begin": 1596194,
+      "end": 1596197
     },
     "integer_values": "127 0 29",
     "hex_values": "$7f $0 $1d"
@@ -15356,8 +15356,8 @@
   {
     "label": "TinTower5FHiddenFullRestore.ckir_BEFORETINTOWERHIDDENFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 1596161,
-      "end": 1596164
+      "begin": 1596191,
+      "end": 1596194
     },
     "integer_values": "126 0 14",
     "hex_values": "$7e $0 $e"
@@ -15365,8 +15365,8 @@
   {
     "label": "TinTower5FRareCandy.ckir_BEFORETINTOWERRARECANDY0ITEMCODE",
     "address_range": {
-      "begin": 1596159,
-      "end": 1596161
+      "begin": 1596189,
+      "end": 1596191
     },
     "integer_values": "32 1",
     "hex_values": "$20 $1"
@@ -15383,35 +15383,35 @@
   {
     "label": "TinTower5F_MapEvents.ckir_BEFORETINTOWERHIDDENCARBOS0ITEMCODEB",
     "address_range": {
-      "begin": 1596197,
-      "end": 1596202
+      "begin": 1596227,
+      "end": 1596232
     },
-    "integer_values": "15 3 7 4 91",
-    "hex_values": "$f $3 $7 $4 $5b"
+    "integer_values": "15 3 7 34 91",
+    "hex_values": "$f $3 $7 $22 $5b"
   },
   {
     "label": "TinTower5F_MapEvents.ckir_BEFORETINTOWERHIDDENFULLRESTORE0ITEMCODEB",
     "address_range": {
-      "begin": 1596192,
-      "end": 1596197
+      "begin": 1596222,
+      "end": 1596227
     },
-    "integer_values": "14 16 7 1 91",
-    "hex_values": "$e $10 $7 $1 $5b"
+    "integer_values": "14 16 7 31 91",
+    "hex_values": "$e $10 $7 $1f $5b"
   },
   {
     "label": "TinTower5F_MapEvents.ckir_BEFORETINTOWERRARECANDY0NPCCODE",
     "address_range": {
-      "begin": 1596203,
-      "end": 1596216
+      "begin": 1596233,
+      "end": 1596246
     },
-    "integer_values": "84 13 13 1 0 255 255 1 0 255 90 79 6",
-    "hex_values": "$54 $d $d $1 $0 $ff $ff $1 $0 $ff $5a $4f $6"
+    "integer_values": "84 13 13 1 0 255 255 1 0 29 91 79 6",
+    "hex_values": "$54 $d $d $1 $0 $ff $ff $1 $0 $1d $5b $4f $6"
   },
   {
     "label": "TinTower6FMaxPotion.ckir_BEFORETINTOWERMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 1596218,
-      "end": 1596220
+      "begin": 1596248,
+      "end": 1596250
     },
     "integer_values": "15 1",
     "hex_values": "$f $1"
@@ -15428,17 +15428,17 @@
   {
     "label": "TinTower6F_MapEvents.ckir_BEFORETINTOWERMAXPOTION0NPCCODE",
     "address_range": {
-      "begin": 1596236,
-      "end": 1596249
+      "begin": 1596266,
+      "end": 1596279
     },
-    "integer_values": "84 12 12 1 0 255 255 1 0 58 91 198 7",
-    "hex_values": "$54 $c $c $1 $0 $ff $ff $1 $0 $3a $5b $c6 $7"
+    "integer_values": "84 12 12 1 0 255 255 1 0 88 91 198 7",
+    "hex_values": "$54 $c $c $1 $0 $ff $ff $1 $0 $58 $5b $c6 $7"
   },
   {
     "label": "TinTower7FMaxRevive.ckir_BEFORETINTOWERMAXREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 1596251,
-      "end": 1596253
+      "begin": 1596281,
+      "end": 1596283
     },
     "integer_values": "40 1",
     "hex_values": "$28 $1"
@@ -15455,17 +15455,17 @@
   {
     "label": "TinTower7F_MapEvents.ckir_BEFORETINTOWERMAXREVIVE0NPCCODE",
     "address_range": {
-      "begin": 1596284,
-      "end": 1596297
+      "begin": 1596314,
+      "end": 1596327
     },
-    "integer_values": "84 5 20 1 0 255 255 1 0 91 91 80 6",
-    "hex_values": "$54 $5 $14 $1 $0 $ff $ff $1 $0 $5b $5b $50 $6"
+    "integer_values": "84 5 20 1 0 255 255 1 0 121 91 80 6",
+    "hex_values": "$54 $5 $14 $1 $0 $ff $ff $1 $0 $79 $5b $50 $6"
   },
   {
     "label": "TinTower8FFullRestore.ckir_BEFORETINTOWERFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 1596303,
-      "end": 1596305
+      "begin": 1596333,
+      "end": 1596335
     },
     "integer_values": "14 1",
     "hex_values": "$e $1"
@@ -15473,8 +15473,8 @@
   {
     "label": "TinTower8FMaxElixer.ckir_BEFORETINTOWERMAXELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1596301,
-      "end": 1596303
+      "begin": 1596331,
+      "end": 1596333
     },
     "integer_values": "21 1",
     "hex_values": "$15 $1"
@@ -15482,8 +15482,8 @@
   {
     "label": "TinTower8FNugget.ckir_BEFORETINTOWERNUGGET0ITEMCODE",
     "address_range": {
-      "begin": 1596299,
-      "end": 1596301
+      "begin": 1596329,
+      "end": 1596331
     },
     "integer_values": "36 1",
     "hex_values": "$24 $1"
@@ -15500,35 +15500,35 @@
   {
     "label": "TinTower8F_MapEvents.ckir_BEFORETINTOWERFULLRESTORE0NPCCODE",
     "address_range": {
-      "begin": 1596367,
-      "end": 1596380
+      "begin": 1596397,
+      "end": 1596410
     },
-    "integer_values": "84 5 7 1 0 255 255 1 0 143 91 83 6",
-    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $8f $5b $53 $6"
+    "integer_values": "84 5 7 1 0 255 255 1 0 173 91 83 6",
+    "hex_values": "$54 $5 $7 $1 $0 $ff $ff $1 $0 $ad $5b $53 $6"
   },
   {
     "label": "TinTower8F_MapEvents.ckir_BEFORETINTOWERMAXELIXER0NPCCODE",
     "address_range": {
-      "begin": 1596354,
-      "end": 1596367
+      "begin": 1596384,
+      "end": 1596397
     },
-    "integer_values": "84 10 15 1 0 255 255 1 0 141 91 82 6",
-    "hex_values": "$54 $a $f $1 $0 $ff $ff $1 $0 $8d $5b $52 $6"
+    "integer_values": "84 10 15 1 0 255 255 1 0 171 91 82 6",
+    "hex_values": "$54 $a $f $1 $0 $ff $ff $1 $0 $ab $5b $52 $6"
   },
   {
     "label": "TinTower8F_MapEvents.ckir_BEFORETINTOWERNUGGET0NPCCODE",
     "address_range": {
-      "begin": 1596341,
-      "end": 1596354
+      "begin": 1596371,
+      "end": 1596384
     },
-    "integer_values": "84 17 11 1 0 255 255 1 0 139 91 81 6",
-    "hex_values": "$54 $11 $b $1 $0 $ff $ff $1 $0 $8b $5b $51 $6"
+    "integer_values": "84 17 11 1 0 255 255 1 0 169 91 81 6",
+    "hex_values": "$54 $11 $b $1 $0 $ff $ff $1 $0 $a9 $5b $51 $6"
   },
   {
     "label": "TinTower9FHPUp.ckir_BEFORETINTOWERHPUP0ITEMCODE",
     "address_range": {
-      "begin": 1596382,
-      "end": 1596384
+      "begin": 1596412,
+      "end": 1596414
     },
     "integer_values": "26 1",
     "hex_values": "$1a $1"
@@ -15545,11 +15545,11 @@
   {
     "label": "TinTower9F_MapEvents.ckir_BEFORETINTOWERHPUP0NPCCODE",
     "address_range": {
-      "begin": 1596458,
-      "end": 1596471
+      "begin": 1596488,
+      "end": 1596501
     },
-    "integer_values": "84 5 13 1 0 255 255 1 0 222 91 199 7",
-    "hex_values": "$54 $5 $d $1 $0 $ff $ff $1 $0 $de $5b $c7 $7"
+    "integer_values": "84 5 13 1 0 255 255 1 0 252 91 199 7",
+    "hex_values": "$54 $5 $d $1 $0 $ff $ff $1 $0 $fc $5b $c7 $7"
   },
   {
     "label": "TinTowerRoof_Blocks.ckir_BEFORE_TinTowerRoof_Blocks",

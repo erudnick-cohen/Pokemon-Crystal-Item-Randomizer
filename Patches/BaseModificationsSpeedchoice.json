@@ -25,11 +25,43 @@
             ]
         },
         "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "ItemRandoActive.ckir_BEFOREItemRandoActive",
+        "description": "Turn on the item rando variable for Tin Tower"
+    },
+    {
+        "integer_values": {
+            "old": [
+                0
+            ],
+            "new": [
+                1
+            ]
+        },
+        "address_range": {
             "begin": 2080773,
             "end": 2080774
         },
         "label": "ItemRandoEasyClairBadge.ckir_BEFOREItemRandoEasyClairBadge",
         "description": "Ensures clair can be easily accessed, also currently in base patch due to lack of vanilla clair support"
+    },
+    {
+        "integer_values": {
+            "old": [
+                0
+            ],
+            "new": [
+                1
+            ]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772
+        },
+        "label": "ClassicRainbowWing.ckir_BEFOREClassicRainbowWing",
+        "description": "Sets item rando logic to require E4 for Rainbow Wing"
     },
     {
         "integer_values": {
