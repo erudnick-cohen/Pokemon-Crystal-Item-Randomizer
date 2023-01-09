@@ -1,4 +1,4 @@
-Name: Start with Repel
-Description: Makes it so that all starters will be holding repels
+Name: Start With Repel
+Description: Start with Repel in inventory.
 NewGamePatches:
-    - 'Patches/StarterRepels.json'
+    - 'Patches/EnableStartRepel.json'

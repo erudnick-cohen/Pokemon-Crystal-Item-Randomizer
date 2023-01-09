@@ -32,7 +32,7 @@ HallOfFame_MapScripts:
 	special HealMachineAnim
 	setevent EVENT_BEAT_ELITE_FOUR
     ;;setevent EVENT_TELEPORT_GUY
-	;;setevent EVENT_RIVAL_SPROUT_TOWER
+	setevent EVENT_RIVAL_SPROUT_TOWER
 .ckir_BEFORE_clearevent_EVENT_RED_IN_MT_SILVER::
 	clearevent EVENT_RED_IN_MT_SILVER
 .ckir_AFTER_clearevent_EVENT_RED_IN_MT_SILVER::

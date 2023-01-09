@@ -95,8 +95,8 @@
             ]
         },
         "address_range": {
-            "begin": 513965,
-            "end": 513977
+            "begin": 513978,
+            "end": 513990
         },
         "label": "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F",
         "description": "Prevent boxes from blocking path"

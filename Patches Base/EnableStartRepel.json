@@ -1,0 +1,14 @@
+[
+    {
+        "integer_values": {
+            "old": [62, 0],
+            "new": [62, 1]
+        },
+        "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "GiveStartItems.ckir_BEFORE_IntroRepel",
+        "description": "Enables a repel in the inventory at the start"
+    }
+]

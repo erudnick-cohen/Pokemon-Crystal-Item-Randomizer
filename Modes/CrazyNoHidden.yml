@@ -1,0 +1,53 @@
+AllowedLocations: null
+BadgeItemShuffle: null
+BannedLocations: null
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+CoreProgress:
+- Surf
+- Fog Badge
+- Pass
+- S S Ticket
+- Squirtbottle
+DefaultModifiers:
+- Modifiers/DefinitelyNoEarlySabrina.yml
+- Modifiers/NoEarlyBasement.yml
+- Modifiers/SkipReturningToNewBark.yml
+- Modifiers/ProgressiveRods.yml
+- Modifiers/RemoveCutTreeInIlex.yml
+- Modifiers/VanillaClair.yml
+- Modifiers/EnableTinTower.yml
+- Modifiers/CardRandomization.yml
+- Modifiers/ForceEarlyFlyV2.yml
+- Modifiers/TimeEvents.yml
+- Modifiers/BerryTrees.yml
+- Modifiers/SkipE4AndFightRed.yml
+- Modifiers/DerandomizeLeftovers.yml
+- Modifiers/NoVanillaBasement.yml
+- Modifiers/NerfHoOhChamber.yml
+- Modifiers/StartWithBike.yml
+- Modifiers/UpgradeApricorns.yml
+Description: Most items which require daily events, day-night events or happiness
+  checks are are included under these settings. This includes the berry trees. Note
+  that this mode includes additional hidden items, any hidden item hidden under a
+  weekday sibling has been moved one tile. Issues encountered with these items should
+  be reported to Choatix, and not ERC or Vicendithas. Read the modifiers to further
+  understand how this differs from standard and tricky. Hidden items are included
+  in the item pool. For a complete list of what hidden items are used by the randomizer,
+  please consult Vicendithas and Dillon's emotracker plugin. Any issues with hidden
+  items should be reported to Vicendithas and not ERC. Expected completion time is
+  between 20 minutes and 4 hours for experienced players. Items and badges are shuffled
+  interchangably. Gyms may not be required to beat the game. This mode allows for
+  the largest number of skips relative to any other mode. It is strongly recommended
+  that the emotracker package for Crystal Full Item Rando is used, unless you're certain
+  you've memorized every item location. All items and badges (item balls, gift items,
+  TMs, HMs, key items, pokegear cards, pokedex, berry trees, etc...) in the game have
+  their locations randomly shuffled.  Remember, you can't spell crazy without any
+  trees.
+FlagsSet:
+- Kanto Mode
+- Sane Extreme E4 Access
+Goal: Red
+Name: Crazy Logic With Hidden Items
+RegularWildLevelScalingDefault: false
+SpecialWildLevelScalingDefault: false
+TrainerLevelScalingDefault: false

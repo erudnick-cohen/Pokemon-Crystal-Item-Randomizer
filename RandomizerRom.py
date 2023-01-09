@@ -160,6 +160,10 @@ def InsertManualFiles(result_lines=None):
 			engine_file = (manual_dir+"/engine/"+engine,"RandomizerRom/engine/"+engine)
 			manual_copy_files.append(engine_file)
 
+	for root, dir, files in os.walk(manual_dir+"/menus"):
+		for engine in files:
+			engine_file = (manual_dir+"/menus/"+engine,"RandomizerRom/engine/menus/"+engine)
+			manual_copy_files.append(engine_file)
 
 	#manual_copy_files.append((manual_dir+"/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm"))
 	manual_copy_files.append((manual_dir+"/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm"))
@@ -168,7 +172,6 @@ def InsertManualFiles(result_lines=None):
 	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
 	manual_copy_files.append((manual_dir + "/events/std_scripts.asm", "RandomizerRom/engine/events/std_scripts.asm"))
 	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
-	manual_copy_files.append((manual_dir + "/menus/intro_permaoptions.asm", "RandomizerRom/engine/menus/intro_permaoptions.asm"))
 
 	if len(manual_copy_files) != counted:
 		print("Manual copied files:", len(manual_copy_files), counted)

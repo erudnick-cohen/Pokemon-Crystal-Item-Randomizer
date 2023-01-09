@@ -19,7 +19,7 @@ import traceback
 import hashlib
 import csv
 import os
-
+import zlib
 import Version
 
 
@@ -53,6 +53,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.LoadPlandoFile.clicked.connect(self.SetUpPlando)
 		self.TurnOffPlando.clicked.connect(self.DeactivatePlando)
 		self.DefaultSettings.clicked.connect(self.SelectDefaultSettings)
+		self.LoadRaceMode.clicked.connect(self.LoadRaceSettings)
 		self.AddItem.clicked.connect(self.AddBonusItem)
 		self.View_Items.clicked.connect(self.RemoveBonusItem)
 		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
@@ -281,7 +282,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				raise Exception("Invalid ROM")
 
 			self.Randomize.setEnabled(True)
-			if(self.OutputSpoiler.isChecked()):
+			if(self.SpoilerOutputRadioButton.isChecked()):
 				outputSpoiler = {}
 				outputSpoiler['RNG Seed'] = rngSeed
 				outputSpoiler['Solution'] = resultDict["Spoiler"]
@@ -296,9 +297,27 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				outputSpoiler["Mode"] = self.CurentSettings.text()
 				outputSpoiler["ModifierHash"] = self.GetSettingsMD5()
 				outputSpoiler["Modifiers"] = self.GetActiveModifiers()
+				#outputSpoiler["Xtreme Load"] = self.GetRaceModeValue()
 
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
+
+			elif self.RaceModeRadioButton.isChecked():
+				raceMode = {}
+				raceMode['RNG Seed'] = rngSeed
+				raceMode["Mode"] = self.SettingsFilename
+				raceMode["ModifierHash"] = self.GetSettingsMD5()
+				raceMode["Modifiers"] = self.GetActiveModifiers(filenames=True)
+				raceString = self.GetRaceModeValue(raceMode)
+				cb = QApplication.clipboard()
+				cb.setText(raceString, mode=cb.Clipboard)
+				#QtWidgets.QMessageBox.about(self, "Race Mode", raceString)
+
+				QtWidgets.QMessageBox.about(self, "Race Output", "Copied race output to clipboard")
+
+				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
+					f.write(raceString)
+
 
 			successMessage = "Successfully randomized rom"
 			successBoxName = "Success"
@@ -322,6 +341,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage(''.join(traceback.format_exc()))
 			error_dialog.exec_()
+
+
+	def GetRaceModeValue(self, text):
+		dict_string = json.dumps(text)
+		hexstring = zlib.compress(bytes(dict_string, "utf8")).hex()
+		print(hexstring)
+		return hexstring
 
 	def SetBadgeForSilver(self):
 		(nBadge, ok2) = QInputDialog.getInt(self,"How many badges will Mt. Silver unlock with?","How many badges will Mt. Silver unlock with?")
@@ -515,6 +541,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		else:
 			self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
 			QtGui.QGuiApplication.processEvents()
+
+		self.SettingsFilename = settingsFile
 			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes')[0]
@@ -608,12 +636,55 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 		return hashlib.md5(full_string.encode()).hexdigest()
 
-	def GetActiveModifiers(self):
+	def LoadRaceSettings(self):
+		success = QInputDialog.getText(self, "Title", "Label")
+		if success[1]:
+			inputString = success[0]
+		else:
+			return
+
+		hex_bytes = bytes.fromhex(inputString)
+		json_loaded = zlib.decompress(hex_bytes)
+
+		j = json.loads(json_loaded)
+		print(j)
+
+		modeFile = j["Mode"]
+
+		self.loadSettings(modeFile)
+		self.modList = []
+
+		self.SpoilerOutputRadioButton.setChecked(False)
+		self.RaceModeRadioButton.setChecked(False)
+		self.NoOutputRadioButton.setChecked(True)
+
+		for mod in j["Modifiers"].split(";"):
+			if len(mod) == 0:
+				continue
+			yamlfile = open(mod)
+			yamltext = yamlfile.read()
+			loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+			self.modList.append(loadedYaml)
+			self.modList[-1]['fileName'] = self.makeFileNameSafe(mod)
+
+		self.SeedInput.setText(j["RNG Seed"])
+
+		self.selectRom()
+		self.runRandomizer()
+
+		return
+
+	def GetActiveModifiers(self, filenames=False):
 		mods = self.modList.copy()
 		mods.sort(key=self.yamlSortFunction)
 		full_string = ";"
 		for mod in mods:
-			full_string += mod["Name"] + ";"
+			if filenames:
+				fName = mod["fileName"]
+			else:
+				fName = mod["Name"]
+
+			full_string += fName + ";"
 
 		return full_string
 			

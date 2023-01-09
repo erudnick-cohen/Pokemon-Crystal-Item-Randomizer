@@ -1,0 +1,65 @@
+Name: Force early fly Tournament Version
+Description: "Ensures that the fly HM is obtainable and usable before the player is required to do any of the following things: 1. Take the SS Aqua, 2. Enter route 44, 3. Enter Diglett's Cave after waking up Snorlax. 4. Enter the gate to the Pokemon League (before Victory Road). 5. Fight Misty. 6. Enter Route 26 7. Pick up vanilla machine part"
+Changes:
+    -
+        Location: SS Aqua via Olivine
+        AddItemReqs:
+            - Fly
+            - Squirtbottle
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: SS Aqua via Vermilion
+        AddItemReqs:
+            - Fly
+            - Pass
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Route 44
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Diglett's Cave
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: League Gate via Route 26
+        AddFlagReqs:
+            - Storm Badge
+        NewItemReqs:
+            - Fly
+    -
+        Location: Victory Road
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Cerulean Gym Trainers
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Hidden Machine Part
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Route 26 Max Elixer
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
+    -
+        Location: Route 27 Solar Beam TM
+        AddItemReqs:
+            - Fly
+        AddFlagReqs:
+            - Storm Badge
