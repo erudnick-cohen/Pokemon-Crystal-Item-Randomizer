@@ -15,7 +15,7 @@ db 4
 
 ; Speedchoice Revision
 .ckir_BEFORE_RevisionVersionNumber::
-db 5
+db 6
 .ckir_AFTER_RevisionVersionNumber::
 
 IntroPermaOptions::

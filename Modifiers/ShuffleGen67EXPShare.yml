@@ -1,0 +1,7 @@
+Name: Shuffle Gen 6/7 Exp Share
+Description: Shuffles Gen 6/7 Exp Share into the item pool instead of Gen 2-5 EXP Share. If you use this modifier without gen 6/7 experience the item will do nothing. The original Gen 2-5 EXP Share will not work on 6/7 mode even if held.
+MaybeNewItems:
+    - EXP_SHARE_GEN67
+MaybeRemoveItems:
+    - EXP_SHARE
+

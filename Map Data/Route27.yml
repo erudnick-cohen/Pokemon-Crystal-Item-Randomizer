@@ -67,13 +67,9 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Route 27
+        LocationReqs: Route 26 Entrance
         FlagReqs:
-            - Fog Badge
-            - Rising Badge
         ItemReqs:
-            - Surf
-            - Waterfall
         FlagsSet:
         ReachableReqs:
         Code:
@@ -85,15 +81,53 @@ Location:
         FileName: Route27.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
-        LocationReqs: Route 26 Entrance
+        WildTableList:
+        LocationReqs: Route 27 Center
         FlagReqs:
+            - Fog Badge
         ItemReqs:
+            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 27 Center
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27 Right Side
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 27 Center
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
         Sublocations:
     -
         Name: Tohjo Falls Over the Waterfall
@@ -183,7 +217,7 @@ Location:
         Type: Item
         HasPKMN: No
         WildTableList:
-        LocationReqs: Tohjo Falls Over the Waterfall
+        LocationReqs: Route 27 Center
         FlagReqs:
             - Timed Events
         ItemReqs:

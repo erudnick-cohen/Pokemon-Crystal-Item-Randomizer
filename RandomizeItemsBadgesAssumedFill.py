@@ -1133,12 +1133,13 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 					allocatedCount += 1
 					#print("IsReplace", i.Name)
 					if(not i.Name in spoiler.values()):
-						if plandoPlacements is not None and i.Name in plandoPlacements:
-							item = plandoPlacements[i.Name]
+						if assign_trash and plandoPlacements is not None and i.Name in plandoPlacements:
+							plando_item = plandoPlacements[i.Name]
 							try:
-								trashItems.remove(item)
+								trashItems.remove(plando_item)
 							except ValueError:
 								pass
+							i.item = plando_item
 						elif assign_trash:
 							placeItem = None
 							try:

@@ -7733,8 +7733,8 @@
   {
     "label": "MrPokemonsHouse_MrPokemonScript.ckir_BEFOREMR_POKEMONSEXPSHARE0ITEMCODE",
     "address_range": {
-      "begin": 1667295,
-      "end": 1667298
+      "begin": 1667303,
+      "end": 1667306
     },
     "integer_values": "158 57 1",
     "hex_values": "$9e $39 $1"
@@ -7742,8 +7742,8 @@
   {
     "label": "MrPokemonsHouse_OakScript.ckir_BEFOREOAKPOKEDEX0ITEMCODE",
     "address_range": {
-      "begin": 1667341,
-      "end": 1667344
+      "begin": 1667349,
+      "end": 1667352
     },
     "integer_values": "175 11 0",
     "hex_values": "$af $b $0"
@@ -14720,8 +14720,8 @@
       "begin": 1998857,
       "end": 1998858
     },
-    "integer_values": "5",
-    "hex_values": "$5"
+    "integer_values": "6",
+    "hex_values": "$6"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",

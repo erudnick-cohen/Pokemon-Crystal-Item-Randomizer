@@ -667,6 +667,9 @@
 - GameName: EXP_SHARE
   Name: EXP_SHARE
   output: verbosegiveitem EXP_SHARE
+- GameName: EXP_SHARE_GEN67
+  Name: EXP_SHARE_GEN67
+  output: verbosegiveitem EXP_SHARE_GEN67
 - GameName: TM_PSYCHIC
   Name: TM_PSYCHIC
   output: verbosegiveitem TM_PSYCHIC

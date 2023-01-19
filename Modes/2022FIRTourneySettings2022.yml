@@ -21,7 +21,7 @@ DefaultModifiers:
     - Modifiers/VanillaClair.yml
     - Modifiers/EnableTinTower.yml
     - Modifiers/CardRandomization.yml
-    - Modifiers/ForceEarlyFlyTournament.yml
+    - Modifiers/ForceEarlyFlyTournament2022.yml
     - Modifiers/NoVanillaBasement.yml
     - Modifiers/NerfHoOhChamber.yml
     - Modifiers/DerandomizeLeftovers.yml

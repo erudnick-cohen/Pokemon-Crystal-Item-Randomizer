@@ -313,8 +313,11 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
 
+			itemsRemoved = 0
+
 			for item in maybeRemoveItems:
 				if item in trashItems:
+					itemsRemoved += 1
 					trashItems.remove(item)
 
 			# This is intended to remove warp trash to keep the item balance level
@@ -336,7 +339,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 						maybeAdd.append(i)
 				bonusTrash.extend(maybeAdd)
 				for i in range(0,len(trashItems)):
-					if len(bonusTrash) > 0 and (not (trashItems[i] in criticalTrash)):
+					if len(bonusTrash) == 0:
+						break
+					if itemsRemoved > 0:
+						itemsRemoved -= 1
+						trashItems.append(bonusTrash.pop(0))
+					elif len(bonusTrash) > 0 and (not (trashItems[i] in criticalTrash)):
 						trashItems[i] = bonusTrash.pop(0)
 			#place bonus trash replacing non-critical trash
 			if 'TrashItemList' in otherSettings:
