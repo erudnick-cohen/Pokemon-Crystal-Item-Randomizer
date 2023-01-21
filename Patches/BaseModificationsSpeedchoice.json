@@ -100,5 +100,21 @@
         },
         "label": "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F",
         "description": "Prevent boxes from blocking path"
+    },
+    {
+        "integer_values": {
+            "old": [
+                249
+            ],
+            "new": [
+                249
+            ]
+        },
+        "address_range": {
+            "begin": 71297,
+            "end": 71298
+        },
+        "label": "TMHMMoves.ckir_BEFORE_ROCKSMASHDATA",
+        "description": "Replaces TM08 with Rock Smash, should UPR change it"
     }
 ]

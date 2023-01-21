@@ -2236,9 +2236,10 @@ def PreventItemAssignment(placeItem, items, trash):
 
     return re_add, placeItem, success
 
-
-ShopFlagItems = ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
+ShopFlagItems_Old = ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
                         "SUPER_ROD", "ENGINE_MAP_CARD", "ENGINE_UNOWN_DEX", "Pokedex"]
+
+ShopFlagItems = ["OLD_ROD", "GOOD_ROD","SUPER_ROD"]
 
 def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, flags, addAfter=None, force=False):
     if addAfter is None:

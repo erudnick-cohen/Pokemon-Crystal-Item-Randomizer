@@ -14913,6 +14913,15 @@
     "hex_values": "$13"
   },
   {
+    "label": "TMHMMoves.ckir_BEFORE_ROCKSMASHDATA",
+    "address_range": {
+      "begin": 71297,
+      "end": 71298
+    },
+    "integer_values": "249",
+    "hex_values": "$f9"
+  },
+  {
     "label": "TeamRocketBaseB1FGuardSpec.ckir_BEFOREROCKETBASE1FGUARDSPEC0ITEMCODE",
     "address_range": {
       "begin": 445143,

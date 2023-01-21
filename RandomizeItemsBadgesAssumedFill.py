@@ -523,10 +523,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if (locList[iter] in MtSilverSubItems and toAllocate in coreProgress):
 					placeable = False
 
-				if locList[iter].isShop() and \
-						(toAllocate in badgeSet or toAllocate in RandomizeFunctions.ShopFlagItems):
-					# Shopsanity does not yet support flags in shops
-					placeable = False
+				#if locList[iter].isShop() and \
+				#		(toAllocate in badgeSet or toAllocate in RandomizeFunctions.ShopFlagItems):
+				#	# Shopsanity does not yet support flags in shops
+				#	placeable = False
 
 				# Enforce Shopsanity items to be buyable
 				if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS and not locList[iter].isShop():

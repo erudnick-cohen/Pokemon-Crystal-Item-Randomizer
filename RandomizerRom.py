@@ -543,10 +543,10 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 
 		addressData = labelData[beforeLabel]
 
-		nItemCodeData = itemScriptLookup(location.item)
+		nItemCodeData = itemScriptLookup(location.item, forceItem=True)
 		nItemCode = nItemCodeData[0]
 		itemType = nItemCodeData[1]
-		if itemType == "Item":
+		if itemType == "Item" or itemType == "Flag":
 			if location.isBargainShop():
 				# Bargain shop item contains price also, so is different
 				romMap[addressData["address_range"]["begin"]] = nItemCode

@@ -73,6 +73,7 @@ def makeRawItemCodeDict(progRod = False):
 		for i in yamlTree["Items"]:
 			itemCodeDict[i["Name"]] = i["Output"]
 	rawTable = {}
+	rawItemTable = {}
 	with open('ItemValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
@@ -82,6 +83,10 @@ def makeRawItemCodeDict(progRod = False):
 					rawTable[i[0]] = (int(i[1]), 'Rod')
 				else:
 					rawTable[i[0]] = (int(i[1]), 'Item')
+
+	for key in rawTable.keys():
+		rawItemTable[key] = rawTable[key]
+
 	with open('FlagValues.csv', newline='',encoding='utf-8') as csvfile:
 		reader = csv.reader(csvfile)
 		for i in reader:
@@ -91,7 +96,13 @@ def makeRawItemCodeDict(progRod = False):
 	#print(rawTable)
 	#print(keyItemMap)
 
-	def lookupItemCode(item):
+	def lookupItemCode(item, forceItem=False):
+		if forceItem:
+			if item not in itemCodeDict:
+				if item in keyItemMap:
+					item = keyItemMap[item]
+			if item in rawItemTable:
+				return rawItemTable[item]
 		if item not in itemCodeDict:
 			if item in keyItemMap:
 				item = keyItemMap[item]
