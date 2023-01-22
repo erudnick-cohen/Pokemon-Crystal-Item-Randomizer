@@ -1,0 +1,11 @@
+Name: Bicycle Before Phone Calls
+Description: "Requires Bicycle before any phone call trainers, as the most convenient way to achieve this is through going to New Bark and requiring a lot of backtracking."
+Changes:
+    -
+        Location: Phone Call Trainers
+        AddRecommendedItemReqs:
+            - Bicycle
+        RemoveFlagReqs:
+            - Phone Call Trainers
+IncompatibleWith:
+    - 'Start With Bike'

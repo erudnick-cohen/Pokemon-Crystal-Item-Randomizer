@@ -1,0 +1,5 @@
+Name: Shopsanity Pack
+Modifiers:
+    - Modifiers/Shopsanity.yml
+    - Modifiers/UpgradeMail.yml
+    - Modifiers/PreventShopItems.yml

@@ -201,14 +201,9 @@ def ConvertHintLevelToFlags(level, MaxHints=None):
 
     return Options
 
-def getOptionsForItemModifications():
-	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope",
-            "Replace Type", "Replace Repel"]
-
 def checkIfReplacementsConfigured(inputFlags):
-    options = getOptionsForItemModifications()
-    for option in options:
-        if option in inputFlags:
+    for option in inputFlags:
+        if "Replace " in option:
             return True
     return False
 
