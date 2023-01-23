@@ -625,6 +625,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes/Custom')[0]
 		fName = self.makeFileNameSafe(fName)
 		if(fName != ''):
+			filename = fName if fName.endswith(".yml") else fName + ".yml"
 			self.settings['DefaultModifiers'] = []
 			for i in self.modList:
 				self.settings['DefaultModifiers'].append(i['fileName'])
@@ -634,11 +635,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				for key in self.PlandoData.keys():
 					self.settings["Plando"][key] = self.PlandoData[key]
 
-			filename = fName if fName.endswith(".yml") else fName + ".yml"
+
 			with open(filename, 'w',encoding='utf-8') as f:
 				yaml.dump(self.settings, f, default_flow_style=False)
 
-			self.loadSettings(fName)
+			self.loadSettings(filename)
 				
 	def SetUpPlando(self):
 		QtWidgets.QMessageBox.about(self, 'Plandomizer Mode', 'Select a log file (which need not specify every item allocation) to use as basis for plandomizer.\n NOTE: We are not reponsible for any lost friendships due to use of plandomizer mode')

@@ -1,6 +1,6 @@
 
 VersionNumberText::
-        db "v7.4.7@"
+        db "v7.4.8@"
 
 SpeedchoiceVersion:
 ; Speedchoice Major Version
@@ -15,7 +15,7 @@ db 4
 
 ; Speedchoice Revision
 .ckir_BEFORE_RevisionVersionNumber::
-db 7
+db 8
 .ckir_AFTER_RevisionVersionNumber::
 
 IntroPermaOptions::
