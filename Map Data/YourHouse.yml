@@ -36,3 +36,24 @@ Location:
                         writetext ElmsLookingForYouText
                         promptbutton
                         ITEMLINE
+            -
+                Name: Pokegear Backup
+                TrueName: Pokegear Gift
+                FileName: PlayersHouse1F.asm
+                Type: Item
+                Dummy: Yes
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pokegear Gift
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                Code: |
+                    .GetPokegear
+                        ITEMLINE
+                        waitbutton
+                        closetext
+                        end

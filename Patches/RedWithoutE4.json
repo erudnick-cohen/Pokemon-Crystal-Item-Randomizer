@@ -26,15 +26,15 @@
                 255,
                 128,
                 0,
-                3,
+                6,
                 70,
                 200,
                 6
             ]
         },
         "address_range": {
-            "begin": 1623659,
-            "end": 1623672
+            "begin": 1623662,
+            "end": 1623675
         },
         "label": "SilverCaveRoom3_MapEvents.ckir_BEFORE_object_event_RED",
         "description": "Causes red to always be present at mt. silver, without needing to defeat the E4"

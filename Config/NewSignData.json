@@ -60,8 +60,8 @@
         "tileAddress": 708732
     },
     {
-        "start": 654072,
-        "end": 654122,
+        "start": 654083,
+        "end": 654133,
         "name": "BattleTowerOutsideSignText",
         "map": "BattleTowerOutside.asm",
         "commands": 4,
@@ -177,64 +177,64 @@
         "tileAddress": 689704
     },
     {
-        "start": 462112,
-        "end": 462229,
+        "start": 462135,
+        "end": 462252,
         "name": "CeladonDeptStore1FDirectoryText",
         "map": "CeladonDeptStore1F.asm",
         "commands": 10
     },
     {
-        "start": 462546,
-        "end": 462601,
+        "start": 462569,
+        "end": 462624,
         "name": "CeladonDeptStore2FDirectoryText",
         "map": "CeladonDeptStore2F.asm",
         "commands": 5
     },
     {
-        "start": 463035,
-        "end": 463072,
+        "start": 463058,
+        "end": 463095,
         "name": "CeladonDeptStore3FDirectoryText",
         "map": "CeladonDeptStore3F.asm",
         "commands": 4
     },
     {
-        "start": 463298,
-        "end": 463345,
+        "start": 463321,
+        "end": 463368,
         "name": "CeladonDeptStore4FDirectoryText",
         "map": "CeladonDeptStore4F.asm",
         "commands": 4
     },
     {
-        "start": 463670,
-        "end": 463685,
+        "start": 463693,
+        "end": 463708,
         "name": "CeladonDeptStore5FDirectoryText",
         "map": "CeladonDeptStore5F.asm",
         "commands": 2
     },
     {
-        "start": 464247,
-        "end": 464283,
+        "start": 464270,
+        "end": 464306,
         "name": "CeladonDeptStore6FDirectoryText",
         "map": "CeladonDeptStore6F.asm",
         "commands": 3
     },
     {
-        "start": 464612,
-        "end": 464644,
+        "start": 464635,
+        "end": 464667,
         "name": "CeladonMansionManagersSuiteSignText",
         "map": "CeladonMansion1F.asm",
         "commands": 3
     },
     {
-        "start": 464997,
-        "end": 465021,
+        "start": 465020,
+        "end": 465044,
         "name": "CeladonMansion2FMeetingRoomSignText",
         "map": "CeladonMansion2F.asm",
         "commands": 3
     },
     {
-        "start": 465732,
-        "end": 465760,
+        "start": 465755,
+        "end": 465783,
         "name": "CeladonMansion3FDevRoomSignText",
         "map": "CeladonMansion3F.asm",
         "commands": 3
@@ -290,8 +290,8 @@
         "tileAddress": 703418
     },
     {
-        "start": 1689557,
-        "end": 1689609,
+        "start": 1689579,
+        "end": 1689631,
         "name": "CherrygroveCitySignText",
         "map": "CherrygroveCity.asm",
         "commands": 4,
@@ -300,8 +300,8 @@
         "tileAddress": 708206
     },
     {
-        "start": 1689610,
-        "end": 1689629,
+        "start": 1689632,
+        "end": 1689651,
         "name": "GuideGentsHouseSignText",
         "map": "CherrygroveCity.asm",
         "commands": 2,
@@ -380,8 +380,8 @@
         "tileAddress": 698990
     },
     {
-        "start": 1625120,
-        "end": 1625204,
+        "start": 1625123,
+        "end": 1625207,
         "name": "DragonShrineSignpostText",
         "map": "DragonsDenB1F.asm",
         "commands": 6,
@@ -621,50 +621,50 @@
         "tileAddress": 709311
     },
     {
-        "start": 350838,
-        "end": 350968,
+        "start": 350841,
+        "end": 350971,
         "name": "GoldenrodDeptStore1FDirectoryText",
         "map": "GoldenrodDeptStore1F.asm",
         "commands": 10
     },
     {
-        "start": 351518,
-        "end": 351563,
+        "start": 351521,
+        "end": 351566,
         "name": "GoldenrodDeptStore2FDirectoryText",
         "map": "GoldenrodDeptStore2F.asm",
         "commands": 5
     },
     {
-        "start": 351850,
-        "end": 351894,
+        "start": 351853,
+        "end": 351897,
         "name": "GoldenrodDeptStore3FDirectoryText",
         "map": "GoldenrodDeptStore3F.asm",
         "commands": 5
     },
     {
-        "start": 352270,
-        "end": 352312,
+        "start": 352273,
+        "end": 352315,
         "name": "GoldenrodDeptStore4FDirectoryText",
         "map": "GoldenrodDeptStore4F.asm",
         "commands": 4
     },
     {
-        "start": 353080,
-        "end": 353113,
+        "start": 353083,
+        "end": 353116,
         "name": "GoldenrodDeptStore5FDirectoryText",
         "map": "GoldenrodDeptStore5F.asm",
         "commands": 4
     },
     {
-        "start": 353777,
-        "end": 353824,
+        "start": 353780,
+        "end": 353827,
         "name": "GoldenrodDeptStore6FDirectoryText",
         "map": "GoldenrodDeptStore6F.asm",
         "commands": 4
     },
     {
-        "start": 455423,
-        "end": 455544,
+        "start": 455459,
+        "end": 455580,
         "name": "IlexForestSignpostText",
         "map": "IlexForest.asm",
         "commands": 8,
@@ -673,8 +673,8 @@
         "tileAddress": 721232
     },
     {
-        "start": 461581,
-        "end": 461624,
+        "start": 461589,
+        "end": 461632,
         "name": "LakeOfRageSignText",
         "map": "LakeOfRage.asm",
         "commands": 4,
@@ -683,8 +683,8 @@
         "tileAddress": 710676
     },
     {
-        "start": 461625,
-        "end": 461646,
+        "start": 461633,
+        "end": 461654,
         "name": "FishingGurusHouseSignText",
         "map": "LakeOfRage.asm",
         "commands": 3
@@ -730,8 +730,8 @@
         "tileAddress": 693376
     },
     {
-        "start": 520974,
-        "end": 521047,
+        "start": 520980,
+        "end": 521053,
         "name": "LavRadioTower1FDirectoryText",
         "map": "LavRadioTower1F.asm",
         "commands": 7,
@@ -740,8 +740,8 @@
         "tileAddress": 723949
     },
     {
-        "start": 521048,
-        "end": 521109,
+        "start": 521054,
+        "end": 521115,
         "name": "LavRadioTower1FPokeFluteSignText",
         "map": "LavRadioTower1F.asm",
         "commands": 5,
@@ -971,8 +971,8 @@
         "tileAddress": 693424
     },
     {
-        "start": 1622527,
-        "end": 1622557,
+        "start": 1622530,
+        "end": 1622560,
         "name": "PewterCitySignText",
         "map": "PewterCity.asm",
         "commands": 3,
@@ -981,8 +981,8 @@
         "tileAddress": 694711
     },
     {
-        "start": 1622558,
-        "end": 1622621,
+        "start": 1622561,
+        "end": 1622624,
         "name": "PewterGymSignText",
         "map": "PewterCity.asm",
         "commands": 6,
@@ -991,8 +991,8 @@
         "tileAddress": 694644
     },
     {
-        "start": 1622622,
-        "end": 1622696,
+        "start": 1622625,
+        "end": 1622699,
         "name": "PewterMuseumSignText",
         "map": "PewterCity.asm",
         "commands": 6,
@@ -1001,8 +1001,8 @@
         "tileAddress": 694566
     },
     {
-        "start": 1622697,
-        "end": 1622747,
+        "start": 1622700,
+        "end": 1622750,
         "name": "PewterCityMtMoonGiftShopSignText",
         "map": "PewterCity.asm",
         "commands": 5,
@@ -1011,8 +1011,8 @@
         "tileAddress": 694675
     },
     {
-        "start": 1622748,
-        "end": 1622772,
+        "start": 1622751,
+        "end": 1622775,
         "name": "PewterCityWelcomeSignText",
         "map": "PewterCity.asm",
         "commands": 3,
@@ -1021,8 +1021,8 @@
         "tileAddress": 694768
     },
     {
-        "start": 382451,
-        "end": 382524,
+        "start": 382463,
+        "end": 382536,
         "name": "RadioTower1FDirectoryText",
         "map": "RadioTower1F.asm",
         "commands": 7,
@@ -1031,8 +1031,8 @@
         "tileAddress": 707842
     },
     {
-        "start": 382525,
-        "end": 382617,
+        "start": 382537,
+        "end": 382629,
         "name": "RadioTower1FLuckyChannelSignText",
         "map": "RadioTower1F.asm",
         "commands": 7,
@@ -1041,8 +1041,8 @@
         "tileAddress": 707847
     },
     {
-        "start": 386102,
-        "end": 386111,
+        "start": 386114,
+        "end": 386123,
         "name": "RadioTower2FSalesSignText",
         "map": "RadioTower2F.asm",
         "commands": 2,
@@ -1051,8 +1051,8 @@
         "tileAddress": 707878
     },
     {
-        "start": 386112,
-        "end": 386162,
+        "start": 386124,
+        "end": 386174,
         "name": "RadioTower2FOaksPKMNTalkSignText",
         "map": "RadioTower2F.asm",
         "commands": 5,
@@ -1061,8 +1061,8 @@
         "tileAddress": 707879
     },
     {
-        "start": 386163,
-        "end": 386192,
+        "start": 386175,
+        "end": 386204,
         "name": "RadioTower2FPokemonRadioSignText",
         "map": "RadioTower2F.asm",
         "commands": 3,
@@ -1071,8 +1071,8 @@
         "tileAddress": 707883
     },
     {
-        "start": 387814,
-        "end": 387827,
+        "start": 387826,
+        "end": 387839,
         "name": "RadioTower3FPersonnelSignText",
         "map": "RadioTower3F.asm",
         "commands": 2,
@@ -1081,8 +1081,8 @@
         "tileAddress": 707914
     },
     {
-        "start": 387828,
-        "end": 387856,
+        "start": 387840,
+        "end": 387868,
         "name": "RadioTower3FPokemonMusicSignText",
         "map": "RadioTower3F.asm",
         "commands": 3,
@@ -1091,8 +1091,8 @@
         "tileAddress": 707917
     },
     {
-        "start": 389134,
-        "end": 389148,
+        "start": 389146,
+        "end": 389160,
         "name": "RadioTower4FProductionSignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1101,8 +1101,8 @@
         "tileAddress": 707952
     },
     {
-        "start": 389149,
-        "end": 389161,
+        "start": 389161,
+        "end": 389173,
         "name": "RadioTower4FStudio2SignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1111,8 +1111,8 @@
         "tileAddress": 707956
     },
     {
-        "start": 395543,
-        "end": 395567,
+        "start": 395563,
+        "end": 395587,
         "name": "RadioTower5FDirectorsOfficeSignText",
         "map": "RadioTower5F.asm",
         "commands": 3,
@@ -1121,8 +1121,8 @@
         "tileAddress": 707986
     },
     {
-        "start": 395568,
-        "end": 395580,
+        "start": 395588,
+        "end": 395600,
         "name": "RadioTower5FStudio1SignText",
         "map": "RadioTower5F.asm",
         "commands": 2
@@ -1168,8 +1168,8 @@
         "tileAddress": 690647
     },
     {
-        "start": 1733301,
-        "end": 1733333,
+        "start": 1733307,
+        "end": 1733339,
         "name": "Route12SignText",
         "map": "Route12.asm",
         "commands": 4,
@@ -1178,8 +1178,8 @@
         "tileAddress": 695424
     },
     {
-        "start": 1733334,
-        "end": 1733347,
+        "start": 1733340,
+        "end": 1733353,
         "name": "FishingSpotSignText",
         "map": "Route12.asm",
         "commands": 2,
@@ -1248,8 +1248,8 @@
         "tileAddress": 711780
     },
     {
-        "start": 1699269,
-        "end": 1699309,
+        "start": 1699304,
+        "end": 1699344,
         "name": "Route19SignText",
         "map": "Route19.asm",
         "commands": 4,
@@ -1258,8 +1258,8 @@
         "tileAddress": 691137
     },
     {
-        "start": 1699310,
-        "end": 1699385,
+        "start": 1699345,
+        "end": 1699420,
         "name": "CarefulSwimmingSignText",
         "map": "Route19.asm",
         "commands": 6,
@@ -1318,8 +1318,8 @@
         "tileAddress": 726011
     },
     {
-        "start": 1701232,
-        "end": 1701257,
+        "start": 1701267,
+        "end": 1701292,
         "name": "BillsHouseSignText",
         "map": "Route25.asm",
         "commands": 3,
@@ -1428,8 +1428,8 @@
         "tileAddress": 696412
     },
     {
-        "start": 1727045,
-        "end": 1727085,
+        "start": 1727051,
+        "end": 1727091,
         "name": "Route31SignText",
         "map": "Route31.asm",
         "commands": 4,
@@ -1438,8 +1438,8 @@
         "tileAddress": 700980
     },
     {
-        "start": 1727086,
-        "end": 1727096,
+        "start": 1727092,
+        "end": 1727102,
         "name": "DarkCaveSignText",
         "map": "Route31.asm",
         "commands": 2,
@@ -1518,8 +1518,8 @@
         "tileAddress": 697456
     },
     {
-        "start": 1691529,
-        "end": 1691538,
+        "start": 1691564,
+        "end": 1691573,
         "name": "Route35SignText",
         "map": "Route35.asm",
         "commands": 2
@@ -1595,8 +1595,8 @@
         "tileAddress": 698323
     },
     {
-        "start": 1728504,
-        "end": 1728542,
+        "start": 1728510,
+        "end": 1728548,
         "name": "Route39SignText",
         "map": "Route39.asm",
         "commands": 4,
@@ -1605,8 +1605,8 @@
         "tileAddress": 701964
     },
     {
-        "start": 1728543,
-        "end": 1728586,
+        "start": 1728549,
+        "end": 1728592,
         "name": "MoomooFarmSignText",
         "map": "Route39.asm",
         "commands": 4,
@@ -1615,8 +1615,8 @@
         "tileAddress": 701951
     },
     {
-        "start": 1728587,
-        "end": 1728718,
+        "start": 1728593,
+        "end": 1728724,
         "name": "Route39TrainerTipsText",
         "map": "Route39.asm",
         "commands": 10,
@@ -1635,8 +1635,8 @@
         "tileAddress": 699108
     },
     {
-        "start": 1730428,
-        "end": 1730466,
+        "start": 1730434,
+        "end": 1730472,
         "name": "Route40SignText",
         "map": "Route40.asm",
         "commands": 4,
@@ -1685,8 +1685,8 @@
         "tileAddress": 697268
     },
     {
-        "start": 1693316,
-        "end": 1693354,
+        "start": 1693351,
+        "end": 1693389,
         "name": "Route43Sign1Text",
         "map": "Route43.asm",
         "commands": 4,
@@ -1695,8 +1695,8 @@
         "tileAddress": 701673
     },
     {
-        "start": 1693355,
-        "end": 1693393,
+        "start": 1693390,
+        "end": 1693428,
         "name": "Route43Sign2Text",
         "map": "Route43.asm",
         "commands": 4,
@@ -1705,8 +1705,8 @@
         "tileAddress": 701902
     },
     {
-        "start": 1693394,
-        "end": 1693588,
+        "start": 1693429,
+        "end": 1693623,
         "name": "Route43TrainerTipsText",
         "map": "Route43.asm",
         "commands": 14,
@@ -1715,8 +1715,8 @@
         "tileAddress": 701855
     },
     {
-        "start": 1695676,
-        "end": 1695700,
+        "start": 1695711,
+        "end": 1695735,
         "name": "Route44Sign1Text",
         "map": "Route44.asm",
         "commands": 3,
@@ -1725,8 +1725,8 @@
         "tileAddress": 689144
     },
     {
-        "start": 1695701,
-        "end": 1695742,
+        "start": 1695736,
+        "end": 1695777,
         "name": "Route44Sign2Text",
         "map": "Route44.asm",
         "commands": 4,
@@ -1735,8 +1735,8 @@
         "tileAddress": 689181
     },
     {
-        "start": 1698055,
-        "end": 1698083,
+        "start": 1698090,
+        "end": 1698118,
         "name": "Route45SignText",
         "map": "Route45.asm",
         "commands": 3,
@@ -1940,8 +1940,8 @@
         "tileAddress": 711254
     },
     {
-        "start": 635400,
-        "end": 635504,
+        "start": 635406,
+        "end": 635510,
         "name": "TrainerHouseSign1Text",
         "map": "TrainerHouse1F.asm",
         "commands": 8,
@@ -1950,8 +1950,8 @@
         "tileAddress": 723789
     },
     {
-        "start": 635505,
-        "end": 635604,
+        "start": 635511,
+        "end": 635610,
         "name": "TrainerHouseSign2Text",
         "map": "TrainerHouse1F.asm",
         "commands": 7,

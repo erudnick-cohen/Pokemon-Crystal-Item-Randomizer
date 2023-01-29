@@ -55,6 +55,7 @@ Location:
                 Sublocations:
             -
                 Name: Map Card
+                OtherName: Map Card Backup
                 FileName: CherrygroveCity.asm
                 Type: Item
                 HasPKMN: No
@@ -115,6 +116,10 @@ Location:
                         writetext GuideGentGiftText
                         promptbutton
                         ITEMLINE
+                        iftrue .GotMapCard
+                        clearevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                        appear CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                    .GotMapCard
                         writetext GuideGentPokegearText
                         waitbutton
                         closetext
@@ -126,6 +131,34 @@ Location:
                         disappear CHERRYGROVECITY_GRAMPS
                         clearevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
                         waitsfx
+                        end
+                Sublocations:
+            -
+                Name: Map Card Backup
+                TrueName: Map Card
+                FileName: CherrygroveCity.asm
+                Type: Item
+                Dummy: Yes
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Map Card
+                FlagReqs:
+                    - Pointless Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                AREALV: 2
+                TrainerList:
+                Code: |
+                    CherrygroveCityMapCardBackup:
+                        opentext
+                        ITEMLINE
+                        iffalse .End
+                        setevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                        disappear CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                    .End
+                        closetext
                         end
                 Sublocations:
             -

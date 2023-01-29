@@ -109,6 +109,9 @@ Location:
                         playsound SFX_ITEM
                         waitsfx
                         ITEMLINE
+                        iffalse .SkipDex
+                        verbosesetflag EVENT_GOT_UNOWN_DEX
+                    .SkipDex
                         setevent EVENT_TALKED_TO_RUINS_COWARD
                         writetext RuinsOfAlphResearchCenterScientist3Text
                         waitbutton
@@ -117,7 +120,30 @@ Location:
                         setscene SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
                         special RestartMapMusic
                         end
-
+            -
+                Name: Ruins of Alph UnownDex Backup
+                TrueName: Ruins of Alph UnownDex
+                FileName: RuinsOfAlphResearchCenter.asm
+                Type: Item
+                Dummy: Yes
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph UnownDex
+                FlagReqs:
+                    - Mon Locked Checks
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Text:
+                TrainerList:
+                Code: |
+                    .GiveUnownDex:
+                        ITEMLINE
+                        iffalse .End
+                        setevent EVENT_GOT_UNOWN_DEX
+                    .End
+                        closetext
+                        end
             -
                 Name: Ruins of Alph Rope Complete Puzzle
                 FileName:

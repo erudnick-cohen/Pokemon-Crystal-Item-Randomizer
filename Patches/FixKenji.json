@@ -29,23 +29,23 @@
             "new": [
                 7,
                 1,
-                6,
+                41,
                 97,
                 43,
                 1,
                 9,
-                6,
+                41,
                 97,
                 43,
                 4,
                 9,
-                6,
+                41,
                 97,
                 49,
                 106,
                 2,
                 8,
-                6,
+                41,
                 97,
                 0,
                 44,
@@ -53,8 +53,8 @@
             ]
         },
         "address_range": {
-            "begin": 1695983,
-            "end": 1696006
+            "begin": 1696018,
+            "end": 1696041
         },
         "label": "TrainerBlackbeltKenji.ckir_BEFORE_Kenji",
         "description": "Makes Kenji not a weirdo with how he gives items out"

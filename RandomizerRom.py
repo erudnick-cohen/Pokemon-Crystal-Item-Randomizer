@@ -351,6 +351,12 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	berryLookup = LoadEventFlags()
 
 	for i in locations:
+		if i.Dummy:
+			findLocations = [location for location in locations if location.Name == i.TrueName]
+			if len(findLocations) != 1:
+				raise Exception("Invalid Dummy for ", i.Name, i.TrueName ,"!")
+			i.item = findLocations[0].item
+
 		if i.isShop() and i.isItem():
 			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
 		elif i.isItem():
@@ -417,11 +423,11 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 #STILL NEED TO WRITE THE REST OF THESE
 def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap,berryLookup):
 	if(not isinstance(location, Gym.Gym)):
-		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	else:
-		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
 
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
@@ -443,8 +449,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap,b
 		endVal = 176
 		nItemCode = 176
 	if location.IsBall:
-		labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 		#need to extract the nibble out
 		#print(list(map(int, addressDataNPC["integer_values"].split(' '))))
@@ -480,8 +486,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap,b
 			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	elif location.IsBerry:
-		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 
 
@@ -559,7 +565,7 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 
 
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCodeData = itemScriptLookup(location.item)
@@ -597,8 +603,8 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		# romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
 	#print('Writing '+labelCodeB+' with '+location.item)
 	addressData = labelData[labelCodeB]
@@ -619,28 +625,28 @@ def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	romMap[addressDataNPC["address_range"]["begin"]+2] = command
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 	
-	if not location.OtherName is None:
-		labelCodeB = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-		labelCodeBNPC = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
-
-		#print('Writing '+labelCodeB+' with '+location.item)
-		addressData = labelData[labelCodeB]
-		addressDataNPC = labelData[labelCodeBNPC]
-		nItemCodeData = itemScriptLookup(location.item)
-		nItemCode = nItemCodeData[0]
-		itemType = nItemCodeData[1]
-		if(itemType == 'Item'):
-			command = 7
-			nextVal = nItemCode
-		elif(itemType == 'Flag'):
-			command = 9
-			nextVal = nItemCode
-		elif(itemType == 'Rod'):
-			command = 10
-			nextVal = 0
-			nItemCode = 0
-		romMap[addressDataNPC["address_range"]["begin"]+2] = command
-		romMap[addressData["address_range"]["begin"]+2] = nItemCode
+	# if not location.OtherName is None:
+	# 	labelCodeB = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	# 	labelCodeBNPC = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	#
+	# 	#print('Writing '+labelCodeB+' with '+location.item)
+	# 	addressData = labelData[labelCodeB]
+	# 	addressDataNPC = labelData[labelCodeBNPC]
+	# 	nItemCodeData = itemScriptLookup(location.item)
+	# 	nItemCode = nItemCodeData[0]
+	# 	itemType = nItemCodeData[1]
+	# 	if(itemType == 'Item'):
+	# 		command = 7
+	# 		nextVal = nItemCode
+	# 	elif(itemType == 'Flag'):
+	# 		command = 9
+	# 		nextVal = nItemCode
+	# 	elif(itemType == 'Rod'):
+	# 		command = 10
+	# 		nextVal = 0
+	# 		nItemCode = 0
+	# 	romMap[addressDataNPC["address_range"]["begin"]+2] = command
+	# 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
 
@@ -988,6 +994,7 @@ def LabelItemLocation(location):
 
 			codeSearch = codeSearchResults[0]
 		except:
+			print(coderegexstr)
 			print("fail on", location.Name)
 			raise Exception("fail to run on:", location.Name)
 			return
@@ -1016,7 +1023,12 @@ def LabelItemLocation(location):
 		commandregexstr = "(\w+):"
 		commandSearch = re.findall(commandregexstr,location.Code)[0]
 		npcRegex = ("[^\n]+")+commandSearch+",[^\n]+\n"
-		npcSearch = re.findall(npcRegex,filecode)[0]
+		npcSearchT = re.findall(npcRegex,filecode)
+		if len(npcSearchT) == 0:
+			raise Exception("Unable to find NPC Data for itemball/berry::"+npcRegex)
+		else:
+			npcSearch = npcSearchT[0]
+
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'

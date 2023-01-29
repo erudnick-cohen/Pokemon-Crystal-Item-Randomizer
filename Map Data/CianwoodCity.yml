@@ -208,10 +208,12 @@ Location:
                   writetext PharmacistGiveSecretpotionText
                   promptbutton
                   ITEMLINE
+                  iffalse .SkipSecretPotion
                   setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+              .SkipSecretPotion
                   writetext PharmacistDescribeSecretpotionText
                   waitbutton
-                  closetext
+                  sjump .Mart
                   end
             Text: |
               ReceivedSecretpotionText:

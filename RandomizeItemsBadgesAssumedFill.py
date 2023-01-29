@@ -302,7 +302,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			else:
 				single_flags_set.append(j)
 
-		if i.Type == 'Item':
+		if i.Type == 'Item' and not i.Dummy:
 			itemCount = itemCount+1
 
 		for iReq in i.ItemReqs:
@@ -462,7 +462,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		#print("iter=",maxIter, "pl:", len(progressList), progressList)
 
 		if previousCount == len(progressList):
-			remainingLocations = list(filter(lambda x: x.Type == "Item" or x.Type == "Gym", locList))
+			remainingLocations = list(filter(lambda x: (x.Type == "Item" or x.Type == "Gym") and not x.Dummy, locList))
 			for r in remainingLocations:
 				pass
 				#print("r=",r.Name)
@@ -533,7 +533,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					placeable = False
 
 				# Unlikely to be the culprit?
-				if locList[iter].Type == "Map" or locList[iter].Type == "Transition":
+				if locList[iter].Type == "Map" or locList[iter].Type == "Transition" or locList[iter].Dummy:
 					break
 
 				warpImpossibleCheck = requirementsDict[locList[iter].Name]
@@ -1129,6 +1129,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				#perform appropriate behaviors for location
 				#if its an item, put an item in it
 				#double checks items to write due to bizzare bug observed only once
+				if i.Dummy:
+					continue
 				if(i.isItem() or i.isGym()):
 					allocatedCount += 1
 					#print("IsReplace", i.Name)

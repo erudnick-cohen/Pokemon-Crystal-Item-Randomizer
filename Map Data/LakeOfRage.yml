@@ -39,6 +39,7 @@ Location:
                 Sublocations:
             -
                 Name: Red Scale Dropped
+                OtherName: Red Scale Backup
                 FileName: LakeOfRage.asm
                 Type: Item
                 HasPKMN: No
@@ -69,6 +70,10 @@ Location:
                         reloadmapafterbattle
                         opentext
                         ITEMLINE
+                        iftrue .GotRedScale
+                        clearevent EVENT_LAKE_OF_RAGE_RED_SCALE_BACKUP
+                        appear LAKEOFRAGE_RED_SCALE_BACKUP
+                    .GotRedScale
                         closetext
                         setscene 0 ; Lake of Rage does not have a scene variable
                         appear LAKEOFRAGE_LANCE
@@ -81,6 +86,34 @@ Location:
                 TrainerList: 
                 Sublocations:
 
+            -
+                Name: Red Scale Backup
+                FileName: LakeOfRage.asm
+                TrueName: Red Scale Dropped
+                Type: Item
+                Dummy: Yes
+                HasPKMN: No
+                WildTableList:
+                IsBall: Yes
+                LocationReqs: Red Scale Dropped
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                    - Gyarados Beaten
+                ReachableReqs:
+                Code: |
+                    LakeOfRageRedScaleBackup:
+                    	ITEMLINE
+                Text:
+                AREALV: 17
+                TrainerList:
+                    - COOLTRAINERM 2
+                    - FISHER 9
+                    - FISHER 8
+                    - COOLTRAINERF 2
+                Sublocations:
 
     -
         Name: Lake Of Rage Back

@@ -227,7 +227,8 @@ Location:
                 TrueName: National Park Hidden Full Heal
                 FileName: NationalParkBugContest.asm
                 SecondaryFile: NationalParkBugContest.asm
-                Type: Dummy
+                Type: Item
+                Dummy: Yes
                 HasPKMN: No
                 WildTableList:
                 LocationReqs: National Park
@@ -236,7 +237,6 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: FULL_HEAL
                 Code: |
                     NationalParkBugContestHiddenFullHeal:
                         ITEMLINE

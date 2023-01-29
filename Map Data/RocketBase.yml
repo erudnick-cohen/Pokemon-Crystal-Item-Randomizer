@@ -419,6 +419,7 @@ Location:
                         Sublocations:
             -
                 Name: Rocket Base Whirlpool HM
+                OtherName: Rocket Base Whirlpool HM Backup
                 FileName: TeamRocketBaseB2F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -440,7 +441,13 @@ Location:
                         writetext RocketBaseLanceElectrodeDoneText
                         promptbutton
                         ITEMLINE
+                        iftrue .GotWhirlpool
+                        clearevent EVENT_TEAM_ROCKET_BASE_WHIRLPOOL_BACKUP
+                        appear TEAMROCKETBASEB2F_WHIRLPOOL_BACKUP
+                        sjump .DidntGetWhirlpool
+                    .GotWhirlpool
                         setevent EVENT_GOT_HM06_WHIRLPOOL
+                    .DidntGetWhirlpool
                         writetext RocketBaseLanceWhirlpoolText
                         waitbutton
                         closetext
@@ -536,3 +543,24 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
+            -
+                Name: Rocket Base Whirlpool HM Backup
+                TrueName: Rocket Base Whirlpool HM
+                FileName: TeamRocketBaseB2F.asm
+                Type: Item
+                Dummy: Yes
+                IsBall: Yes
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base Whirlpool HM
+                FlagReqs:
+                    - Generator Password
+                ItemReqs:
+                FlagsSet:
+                    - Mahogany Rockets Defeated
+                ReachableReqs:
+                Code: |
+                    GetWhirlpoolBackup:
+                    	ITEMLINE
+                Text:
+                Sublocations:

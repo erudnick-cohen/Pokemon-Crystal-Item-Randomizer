@@ -36,6 +36,7 @@ Location:
                 writetext LavRadioTower1FGentlemanText_ReturnedMachinePart
                 promptbutton
                 ITEMLINE
+                iffalse .GotExpnCard
                 setevent EVENT_EXPN_CARD_RECEIVED
             .GotExpnCard:
                 writetext LavRadioTower1FGentlemanText_GotExpnCard

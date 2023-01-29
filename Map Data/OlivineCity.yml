@@ -123,6 +123,7 @@ Location:
                         writetext OlivineCafeStrengthSailorText
                         promptbutton
                         ITEMLINE
+                        iffalse .GotStrength
                         setevent EVENT_GOT_HM04_STRENGTH
                     .GotStrength:
                         writetext OlivineCafeStrengthSailorText_GotStrength
@@ -171,10 +172,12 @@ Location:
                         writetext GiveGoodRodText
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipGoodRod
+                        setevent EVENT_GOT_GOOD_ROD
+                    .SkipGoodRod
                         writetext GaveGoodRodText
                         waitbutton
                         closetext
-                        setevent EVENT_GOT_GOOD_ROD
                         end
                 Text:
                 TrainerList:

@@ -13,8 +13,8 @@
             ]
         },
         "address_range": {
-            "begin": 434722,
-            "end": 434725
+            "begin": 434725,
+            "end": 434728
         },
         "label": "Route35OfficerScriptContest.ckir_BEFORE_RUN35_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"
@@ -33,8 +33,8 @@
             ]
         },
         "address_range": {
-            "begin": 437246,
-            "end": 437249
+            "begin": 437249,
+            "end": 437252
         },
         "label": "Route36OfficerScriptContest.ckir_BEFORE_RUN36_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"

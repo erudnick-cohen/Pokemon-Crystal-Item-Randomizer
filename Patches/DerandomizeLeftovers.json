@@ -13,8 +13,8 @@
             ]
         },
         "address_range": {
-            "begin": 471805,
-            "end": 471808
+            "begin": 471828,
+            "end": 471831
         },
         "label": "CeladonCafeTrashcan.ckir_BEFORECELADONCAFELEFTOVERS0ITEMCODE",
         "description": "Forcibly makes leftovers into a leftovers"

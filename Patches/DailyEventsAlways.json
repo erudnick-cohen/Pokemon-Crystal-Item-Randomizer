@@ -10,13 +10,13 @@
             "new": [
                 7,
                 10,
-                154,
+                157,
                 96
             ]
         },
         "address_range": {
-            "begin": 352403,
-            "end": 352407
+            "begin": 352406,
+            "end": 352410
         },
         "label": "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1",
         "description": "Return lady always present"
@@ -32,13 +32,13 @@
             "new": [
                 6,
                 10,
-                230,
+                233,
                 96
             ]
         },
         "address_range": {
-            "begin": 352422,
-            "end": 352426
+            "begin": 352425,
+            "end": 352429
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2",
         "description": "Return lady always gives item"
@@ -54,13 +54,13 @@
             "new": [
                 10,
                 0,
-                194,
+                197,
                 96
             ]
         },
         "address_range": {
-            "begin": 352439,
-            "end": 352443
+            "begin": 352442,
+            "end": 352446
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3",
         "description": "Happiness check removed for TMs"
@@ -77,16 +77,16 @@
             ],
             "new": [
                 9,
-                215,
+                218,
                 96,
                 8,
-                215,
+                218,
                 96
             ]
         },
         "address_range": {
-            "begin": 352457,
-            "end": 352463
+            "begin": 352460,
+            "end": 352466
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4",
         "description": "Gives both TMs"
@@ -102,13 +102,13 @@
             "new": [
                 7,
                 10,
-                212,
+                215,
                 97
             ]
         },
         "address_range": {
-            "begin": 434619,
-            "end": 434623
+            "begin": 434622,
+            "end": 434626
         },
         "label": "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35",
         "description": "BGC is every day"
@@ -146,40 +146,16 @@
             "new": [
                 6,
                 10,
-                39,
+                47,
                 66
             ]
         },
         "address_range": {
-            "begin": 459261,
-            "end": 459265
+            "begin": 459269,
+            "end": 459273
         },
         "label": "WesleyScript.ckir_BEFORE_timed_events_WESLEY2",
         "description": "Wesley always gives item"
-    },
-    {
-        "integer_values": {
-            "old": [
-                4,
-                4,
-                7,
-                52,
-                66
-            ],
-            "new": [
-                5,
-                4,
-                7,
-                52,
-                66
-            ]
-        },
-        "address_range": {
-            "begin": 461677,
-            "end": 461682
-        },
-        "label": "LakeOfRage_MapEvents.ckir_BEFORE_timed_events_WESLEYHIDDENITEM",
-        "description": "Shifts the hidden item from under Wesley"
     },
     {
         "integer_values": {
@@ -193,8 +169,8 @@
             ]
         },
         "address_range": {
-            "begin": 466242,
-            "end": 466244
+            "begin": 466265,
+            "end": 466267
         },
         "label": "CeladonMansionRoofHousePharmacistScript.ckir_BEFORE_timed_events_CURSE",
         "description": "Curse is provided regardless of the time of day."
@@ -236,13 +212,13 @@
             "new": [
                 10,
                 0,
-                188,
-                115
+                13,
+                116
             ]
         },
         "address_range": {
-            "begin": 504757,
-            "end": 504761
+            "begin": 504838,
+            "end": 504842
         },
         "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM",
         "description": "Remove happiness check for Sandstorm TM"
@@ -262,13 +238,13 @@
                 118,
                 0,
                 8,
-                198,
+                204,
                 78
             ]
         },
         "address_range": {
-            "begin": 642743,
-            "end": 642749
+            "begin": 642749,
+            "end": 642755
         },
         "label": "PokefanM_DairyFarmer.ckir_BEFORE_timed_events_MOOMOO",
         "description": "Farmhouse flag for MooMoo check changed"
@@ -288,13 +264,13 @@
                 118,
                 0,
                 8,
-                38,
+                44,
                 79
             ]
         },
         "address_range": {
-            "begin": 642842,
-            "end": 642848
+            "begin": 642848,
+            "end": 642854
         },
         "label": "PokefanF_SnoreFarmer.ckir_BEFORE_timed_events_MOOMOO2",
         "description": "Farmhouse flag for MooMoo check changed"
@@ -342,30 +318,6 @@
         },
         "label": "FriedaScript.ckir_BEFORE_timed_events_FRIEDA2",
         "description": "Frieda always gives item"
-    },
-    {
-        "integer_values": {
-            "old": [
-                67,
-                11,
-                7,
-                134,
-                71
-            ],
-            "new": [
-                67,
-                11,
-                7,
-                134,
-                71
-            ]
-        },
-        "address_range": {
-            "begin": 1643469,
-            "end": 1643474
-        },
-        "label": "Route32_MapEvents.ckir_BEFORE_timed_events_FRIEDAHIDDENITEM",
-        "description": "Shift hidden item away from Frieda"
     },
     {
         "integer_values": {
@@ -510,13 +462,13 @@
             "new": [
                 7,
                 10,
-                134,
+                140,
                 97
             ]
         },
         "address_range": {
-            "begin": 1728895,
-            "end": 1728899
+            "begin": 1728901,
+            "end": 1728905
         },
         "label": "Route40_MapScripts.ckir_BEFORE_timed_events_MONICA",
         "description": "Monica is always present"
@@ -532,13 +484,13 @@
             "new": [
                 6,
                 10,
-                34,
+                40,
                 98
             ]
         },
         "address_range": {
-            "begin": 1729016,
-            "end": 1729020
+            "begin": 1729022,
+            "end": 1729026
         },
         "label": "MonicaScript.ckir_BEFORE_timed_events_MONICA2",
         "description": "Monica always gives item"

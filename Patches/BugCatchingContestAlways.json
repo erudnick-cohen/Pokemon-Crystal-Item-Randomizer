@@ -13,8 +13,8 @@
             ]
         },
         "address_range": {
-            "begin": 434722,
-            "end": 434725
+            "begin": 434725,
+            "end": 434728
         },
         "label": "Route35OfficerScriptContest.ckir_BEFORE_RUN35_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"
@@ -33,8 +33,8 @@
             ]
         },
         "address_range": {
-            "begin": 437246,
-            "end": 437249
+            "begin": 437249,
+            "end": 437252
         },
         "label": "Route36OfficerScriptContest.ckir_BEFORE_RUN36_BUG_CATCHING_CONTEST",
         "description": "Endless bug catching ahoy"
@@ -50,13 +50,13 @@
             "new": [
                 7,
                 10,
-                212,
+                215,
                 97
             ]
         },
         "address_range": {
-            "begin": 434619,
-            "end": 434623
+            "begin": 434622,
+            "end": 434626
         },
         "label": "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35",
         "description": "BGC is every day"
@@ -84,25 +84,25 @@
             "new": [
                 6,
                 10,
-                209,
+                212,
                 98,
                 6,
                 10,
-                209,
+                212,
                 98,
                 6,
                 10,
-                209,
+                212,
                 98,
                 6,
                 10,
-                209,
+                212,
                 98
             ]
         },
         "address_range": {
-            "begin": 434704,
-            "end": 434720
+            "begin": 434707,
+            "end": 434723
         },
         "label": "Route35OfficerScriptContest.ckir_BEFORE_timed_events_BGC352",
         "description": "BGC is every day"
@@ -118,13 +118,13 @@
             "new": [
                 7,
                 10,
-                76,
+                79,
                 107
             ]
         },
         "address_range": {
-            "begin": 437045,
-            "end": 437049
+            "begin": 437048,
+            "end": 437052
         },
         "label": "Route36NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC36",
         "description": "BGC is every day"
@@ -152,25 +152,25 @@
             "new": [
                 6,
                 10,
-                251,
+                254,
                 108,
                 6,
                 10,
-                251,
+                254,
                 108,
                 6,
                 10,
-                251,
+                254,
                 108,
                 6,
                 10,
-                251,
+                254,
                 108
             ]
         },
         "address_range": {
-            "begin": 437228,
-            "end": 437244
+            "begin": 437231,
+            "end": 437247
         },
         "label": "Route36OfficerScriptContest.ckir_BEFORE_timed_events_BGC362",
         "description": "BGC is every day"

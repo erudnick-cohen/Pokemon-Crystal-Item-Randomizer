@@ -39,7 +39,9 @@ Location:
                         writetext PewterCityGrampsText
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipSilverWing
                         setevent EVENT_GOT_SILVER_WING
+                    .SkipSilverWing
                         closetext
                         end
                 Text:

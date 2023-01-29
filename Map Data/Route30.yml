@@ -229,6 +229,7 @@ Location:
 
                 Name: Mr. Pokemon's Egg
                 FileName: MrPokemonsHouse.asm
+                OtherName: Mystery Egg Backup
                 Type: Item
                 HasPKMN: No
                 WildTableList:
@@ -251,6 +252,9 @@ Location:
                       promptbutton
                       waitsfx
                       ITEMLINE
+                      iffalse .SkipSettingEgg
+                      setevent EVENT_GOT_MYSTERY_EGG
+                  .SkipSettingEgg
                       setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
                       blackoutmod CHERRYGROVE_CITY
                       writetext MrPokemonIntroText3
@@ -273,6 +277,7 @@ Location:
                 Sublocations:
             -
                     Name: Oak Pokedex
+                    OtherName: Pokedex Backup
                     FileName: MrPokemonsHouse.asm
                     Type: Item
                     HasPKMN: No
@@ -294,6 +299,10 @@ Location:
                             promptbutton
                             waitsfx
                             ITEMLINE
+                            iftrue .GotDex
+                            clearevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                            appear MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                        .GotDex
                             writetext MrPokemonsHouse_OakText2
                             waitbutton
                             closetext
@@ -352,11 +361,11 @@ Location:
                     ReachableReqs:
                     NormalItem: EXP_SHARE
                     Code: |
-                        .RedScale:
+                        RedScale:
                             checkitemrando
                             iftrue .ItemScale1
                             checkmbpermaoptions EXP_SPLITTING, GEN8
-                            iftrue .AlwaysNewDiscoveries
+                            iftrue AlwaysNewDiscoveries
                         .ItemScale1
                             writetext MrPokemonText_GimmeTheScale
                             yesorno
@@ -369,7 +378,7 @@ Location:
                             ITEMLINE
                             iffalse .full
                             takeitem RED_SCALE
-                            sjump .AlwaysNewDiscoveries
+                            sjump AlwaysNewDiscoveries
                     Text: |
                         MrPokemonText_GimmeTheScale:
                             text "Hm? That SCALE!"
@@ -387,4 +396,51 @@ Location:
                             cont "from PROF.OAK."
                             done
                     TrainerList:
+                    Sublocations:
+            -
+                    Name: Mystery Egg Backup
+                    TrueName: Mr. Pokemon's Egg
+                    FileName: MrPokemonsHouse.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Mr. Pokemon's Egg
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet: Mr. Pokemon Visited
+                    ReachableReqs:
+                    Code: |
+                        RetryMysteryEgg:
+                            ITEMLINE
+                            iffalse .End
+                            setevent EVENT_GOT_MYSTERY_EGG
+                        .End
+                            sjump PokemonText
+                    Text:
+                    Sublocations:
+            -
+                    Name: Pokedex Backup
+                    TrueName: Oak Pokedex
+                    FileName: MrPokemonsHouse.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Oak Pokedex
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        MrPokemonsHousePokedexBackup:
+                            opentext
+                            ITEMLINE
+                            iffalse .End
+                            setevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                            disappear MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                        .End
+                            closetext
+                            end
+                    Text:
                     Sublocations:

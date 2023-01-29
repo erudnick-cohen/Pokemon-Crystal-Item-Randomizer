@@ -117,6 +117,10 @@ Location:
                         writetext Text_CharcoalMasterIntro
                         promptbutton
                         ITEMLINE
+                        iftrue .GotCut
+                        clearevent EVENT_ILEX_FOREST_HM_CUT_BACKUP
+                        appear ILEXFOREST_HM_CUT_BACKUP
+                    .GotCut
                         setevent EVENT_GOT_HM01_CUT
                         writetext Text_CharcoalMasterOutro
                         waitbutton
@@ -144,6 +148,28 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+
+            -
+                Name: Ilex Forest Cut HM Backup
+                TrueName: Ilex Cut HM
+                FileName: IlexForest.asm
+                Type: Item
+                Dummy: Yes
+                IsBall: Yes
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ilex Cut HM
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code: |
+                    IlexForestHmCutBackup:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+
             -
                 Name: Ilex Forest Revive
                 FileName: IlexForest.asm

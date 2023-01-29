@@ -4,6 +4,7 @@ FlagsSet:
     - Timed Events
 NewGamePatches:
     - 'Patches/DailyEventsAlways.json'
+    - 'Patches/MoveBlockedHiddenItems.json'
 Changes:
     -
         Location: Timed Events

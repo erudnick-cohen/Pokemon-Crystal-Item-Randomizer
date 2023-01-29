@@ -92,18 +92,22 @@ ProfElmScript:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftrue ElmCheckMasterBall
 	checkevent EVENT_ELM_HAS_SS_TICKET
-	iftrue ElmGiveTicketScript
+	iffalse ElmCheckMasterBall
+	sjump ElmGiveTicketScript
 ElmCheckMasterBall:
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
-	iftrue ElmCheckEverstone
+	iftrue ElmCheckMysteryEgg
 	checkflag ENGINE_RISINGBADGE
-	iftrue ElmGiveMasterBallScript
-ElmCheckEverstone:
+	iffalse ElmCheckMysteryEgg
+	sjump ElmGiveMasterBallScript
+ElmCheckMysteryEgg:
 	checkscene
 	ifequal SCENE_ELMSLAB_AIDE_GIVES_POTION, ElmDescribesMrPokemonScript
 	ifequal SCENE_ELMSLAB_CANT_LEAVE, DidntChooseStarterScript
 	checkitem MYSTERY_EGG
-	iftrue ElmAfterTheftScript
+	iffalse ElmCheckEverstone2
+	sjump ElmAfterTheftScript
+ElmCheckEverstone2:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
@@ -367,9 +371,8 @@ ElmAfterTheftScript:
 	setevent EVENT_ROUTE_30_BATTLE
 	writetext ElmAfterTheftText6
 	waitbutton
-	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
-	end
+	sjump ElmCheckEverstone2
 
 ElmStudyingEggScript:
 	writetext ElmStudyingEggText
@@ -387,18 +390,18 @@ ElmWaitingEggHatchScript:
 	checkitemrando
 	iffalse .SeenTogepi
 	refreshscreen
-        pokepic TOGEPI
-        setval TOGEPI
-        special UnusedSetSeenMon
-        cry TOGEPI
-        waitbutton
-        closepokepic
+	pokepic TOGEPI
+	setval TOGEPI
+	special UnusedSetSeenMon
+	cry TOGEPI
+	waitbutton
+	closepokepic
 
 .SeenTogepi:
 	writetext ElmWaitingEggHatchText
-    waitbutton
-    closetext
-    end
+	waitbutton
+	closetext
+	end
 
 ShowElmTogepiScript:
 	writetext ShowElmTogepiText1
@@ -438,18 +441,18 @@ ElmGiveMasterBallScript:
 	writetext ElmGiveMasterBallText2
 	waitbutton
 .notdone
-	closetext
-	end
+	sjump ElmCheckMysteryEgg
 
 ElmGiveTicketScript:
 	writetext ElmGiveTicketText1
 	promptbutton
 	verbosegiveitem S_S_TICKET
+	iffalse .BagFull
 	setevent EVENT_GOT_SS_TICKET_FROM_ELM
 	writetext ElmGiveTicketText2
+.BagFull
 	waitbutton
-	closetext
-	end
+	sjump ElmCheckMasterBall
 
 ElmJumpBackScript1:
 	closetext
@@ -505,9 +508,13 @@ AideScript_WalkPotion2:
 
 AideScript_GivePotion:
 	opentext
+	setevent EVENT_TRIED_AIDE_POTION
 	writetext AideText_GiveYouPotion
 	promptbutton
 	verbosegiveitem POTION
+	iffalse .SkipPotion
+	setevent EVENT_GOT_AIDE_POTION
+.SkipPotion
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
@@ -530,9 +537,13 @@ AideScript_WalkBalls2:
 
 AideScript_GiveYouBalls:
 	opentext
+	setevent EVENT_TRIED_AIDE_POKE_BALLS
 	writetext AideText_GiveYouBalls
 	promptbutton
 	verbosegiveitem POKE_BALL, 5
+	iffalse .SkipBalls
+	setevent EVENT_GOT_AIDE_POKE_BALLS
+.SkipBalls
 	writetext AideText_ExplainBalls
 	promptbutton
 	closetext
@@ -546,6 +557,18 @@ AideScript_ReceiveTheBalls:
 ElmsAideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_TRIED_AIDE_POTION
+	iffalse .SkipPotion
+	checkevent EVENT_GOT_AIDE_POTION
+	iftrue .SkipPotion
+	scall AideScript_GivePotion
+.SkipPotion
+	checkevent EVENT_TRIED_AIDE_POKE_BALLS
+	iffalse .SkipBalls
+	checkevent EVENT_GOT_AIDE_POKE_BALLS
+	iftrue .SkipBalls
+	scall AideScript_GiveYouBalls
+.SkipBalls
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM

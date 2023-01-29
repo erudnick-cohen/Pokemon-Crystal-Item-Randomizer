@@ -34,9 +34,13 @@ Location:
                 Code: |
                     AideScript_GivePotion:
                         opentext
+                        setevent EVENT_TRIED_AIDE_POTION
                         writetext AideText_GiveYouPotion
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipPotion
+                        setevent EVENT_GOT_AIDE_POTION
+                    .SkipPotion
                         writetext AideText_AlwaysBusy
                         waitbutton
                         closetext
@@ -78,9 +82,13 @@ Location:
                 Code: |
                     AideScript_GiveYouBalls:
                         opentext
+                        setevent EVENT_TRIED_AIDE_POKE_BALLS
                         writetext AideText_GiveYouBalls
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipBalls
+                        setevent EVENT_GOT_AIDE_POKE_BALLS
+                    .SkipBalls
                         writetext AideText_ExplainBalls
                         promptbutton
                         closetext
@@ -143,8 +151,7 @@ Location:
                         writetext ElmGiveMasterBallText2
                         waitbutton
                     .notdone
-                        closetext
-                        end
+                        sjump ElmCheckMysteryEgg
             -             
                 Name: Elm SS Ticket
                 FileName: ElmsLab.asm
@@ -182,11 +189,12 @@ Location:
                         writetext ElmGiveTicketText1
                         promptbutton
                         ITEMLINE
+                        iffalse .BagFull
                         setevent EVENT_GOT_SS_TICKET_FROM_ELM
                         writetext ElmGiveTicketText2
+                    .BagFull
                         waitbutton
-                        closetext
-                        end
+                        sjump ElmCheckMasterBall
             -             
                 Name: Elm Everstone
                 FileName: ElmsLab.asm

@@ -511,6 +511,8 @@ Route32UnionCaveSign:
 Route32PokecenterSign:
 	jumpstd PokecenterSignScript
 
+.ckir_BEFORE_timed_events_FRIEDAHIDDENITEMGREATBALL::
+.ckir_AFTER_timed_events_FRIEDAHIDDENITEMGREATBALL::
 Route32HiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL
 

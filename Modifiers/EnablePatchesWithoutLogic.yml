@@ -4,3 +4,4 @@ NewGamePatches:
     - 'Patches/DailyEventsAlways.json'
     - 'Patches/BugCatchingContestAlways.json'
     - 'Patches/ShopsAlways.json'
+    - 'Patches/MoveBlockedHiddenItems.json'

@@ -306,10 +306,12 @@ Location:
                 writetext Route32Pokecenter1FFishingGuruText_Yes
                 promptbutton
                 ITEMLINE
+                iffalse .SkipOldRod
+                setevent EVENT_GOT_OLD_ROD
+            .SkipOldRod
                 writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
                 waitbutton
                 closetext
-                setevent EVENT_GOT_OLD_ROD
                 end
 
         Text: |

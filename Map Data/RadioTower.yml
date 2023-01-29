@@ -113,10 +113,14 @@ Location:
                         loadtrainer EXECUTIVEM, EXECUTIVEM_3
                         startbattle
                         reloadmapafterbattle
+                    PostBattle:
                         opentext
                         writetext FakeDirectorTextAfter
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipBasementKey
+                        setevent EVENT_GOT_BASEMENT_KEY
+                    .SkipBasementKey
                         closetext
                         setevent EVENT_BEAT_ROCKET_EXECUTIVEM_3
                         checkevent EVENT_BEAT_ROCKET_EXECUTIVEM_1
@@ -178,6 +182,7 @@ Location:
 
             -
                 Name: Radio Tower Rockets Part 2
+                OtherName: Clear Bell Backup
                 FileName: RadioTower5F.asm
                 Type: Item
                 HasPKMN: Yes
@@ -209,6 +214,10 @@ Location:
                         writetext RadioTower5FDirectorThankYouText
                         promptbutton
                         ITEMLINE
+                        iftrue .SkipBackupClearBell
+                        clearevent EVENT_RADIO_TOWER_5F_CLEAR_BELL_BACKUP
+                        appear RADIOTOWER5F_CLEAR_BELL_BACKUP
+                    .SkipBackupClearBell
                         writetext RadioTower5FDirectorDescribeClearBellText
                         waitbutton
                         closetext
@@ -240,6 +249,28 @@ Location:
                     - EXECUTIVEF 1
                     - EXECUTIVEM 1
                 Sublocations:
+            -
+                Name: Clear Bell Backup
+                TrueName: Radio Tower Rockets Part 2
+                FileName: RadioTower5F.asm
+                Type: Item
+                Dummy: Yes
+                HasPKMN: Yes
+                WildTableList:
+                IsBall: Yes
+                LocationReqs: Radio Tower Top Room Access
+                FlagReqs:
+                    - Rocket Invasion
+                ItemReqs:
+                FlagsSet:
+                    - Beat Team Rocket
+                ReachableReqs:
+                Code: |
+                    RadioTower5FClearBellBackup:
+                        ITEMLINE
+                Text:
+                Sublocations:
+
             -
                 Name: Radio Tower Sunny Day TM
                 FileName: RadioTower3F.asm
@@ -361,6 +392,8 @@ Location:
                         opentext
                         checkevent EVENT_RADIO_CARD_RECEIVED
                         iftrue .GotCard
+                        checkevent EVENT_RADIO_QUIZ_COMPLETE
+                        iftrue .GetRadioCard
                         writetext RadioTower1FRadioCardWomanOfferQuizText
                         yesorno
                         iffalse .NoQuiz
@@ -389,9 +422,12 @@ Location:
                         iftrue .WrongAnswer
                         playsound SFX_ELEVATOR_END
                         waitsfx
+                        setevent EVENT_RADIO_QUIZ_COMPLETE
+                    .GetRadioCard
                         writetext RadioTower1FRadioCardWomanYouWinText
                         promptbutton
                         ITEMLINE
+                        iffalse .GotCard
                         setevent EVENT_RADIO_CARD_RECEIVED
                     .GotCard:
                         writetext RadioTower1FRadioCardWomanTuneInText

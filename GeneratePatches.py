@@ -117,12 +117,16 @@ def makePatches():
 						if "object_event" in l and ", ObjectEvent," not in l :
 							jumps += 1
 
+						if "bg_event" in l:
+							jumps += 1
+
 				new_values = j["integer_values"]["new"]
 
 				if jumps > 0:
 					nullCount = [ x for x in new_values if x is None ]
+					print(new_values)
 					if len(nullCount) != jumps:
-						raise Exception("Not handling JUMPS for +"+labelName+"!")
+						raise Exception("Not handling JUMPS for +"+labelName+"("+str(len(nullCount))+"/"+str(jumps)+")!")
 
 					iterator = 0
 					while iterator < len(new_values):

@@ -1,0 +1,9 @@
+Name: Include GS Ball
+Description: Add GS Ball event item & GS Ball into the pool.
+NewGamePatches:
+    - 'Patches/NoWaitForGSBall.json'
+Changes:
+    -
+        Location: GS Ball
+        RemoveFlagReqs:
+            - Impossible

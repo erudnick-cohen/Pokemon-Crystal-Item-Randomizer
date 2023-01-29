@@ -34,6 +34,7 @@ class Location:
 		self.Handles = []
 		self.SuperLocation = None
 		self.YmlFile = None
+		self.Dummy = yamlTree["Dummy"] if "Dummy" in yamlTree else False
 
 		if self.Type == "Shop":
 			self.IsItem = True
@@ -494,6 +495,8 @@ class Location:
 		if 'Shopsanity' in self.FlagReqs and "Shopsanity" not in flags:
 			include = False
 		if "Possible Sale" in self.FlagReqs and "Phone Call Trainers" not in flags:
+			include = False
+		if "Impossible" in self.FlagReqs:
 			include = False
 
 		if include:

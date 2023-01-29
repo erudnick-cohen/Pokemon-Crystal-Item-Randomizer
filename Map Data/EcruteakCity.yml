@@ -130,7 +130,9 @@ Location:
                         writetext SurfGuyLikeADanceText
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipSurf
                         setevent EVENT_GOT_HM03_SURF
+                    .SkipSurf
                         writetext SurfGuySurfExplanationText
                         waitbutton
                         closetext
@@ -176,6 +178,7 @@ Location:
                         writetext EcruteakItemfinderTrueSpiritText
                         promptbutton
                         ITEMLINE
+                        iffalse .itemfinder
                         setevent EVENT_GOT_ITEMFINDER
 
                 Text: |

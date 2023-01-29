@@ -26,15 +26,15 @@
                 255,
                 0,
                 0,
-                53,
+                59,
                 122,
                 26,
                 0
             ]
         },
         "address_range": {
-            "begin": 637938,
-            "end": 637951
+            "begin": 637944,
+            "end": 637957
         },
         "label": "VictoryRoadGate_MapEvents.ckir_BEFORE_object_event_MT_SILVER_GUARD",
         "description": "Causes Mt. Silver to always be open if you can reach the Victory Road Gate"

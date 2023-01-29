@@ -207,7 +207,9 @@ Location:
                 writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
                 promptbutton
                 ITEMLINE
+                iffalse .SkipSquirtbottle
                 setevent EVENT_GOT_SQUIRTBOTTLE
+            .SkipSquirtbottle
                 closetext
                 setevent EVENT_FLORIA_AT_SUDOWOODO
                 clearevent EVENT_FLORIA_AT_FLOWER_SHOP
@@ -1700,6 +1702,41 @@ Location:
         FlagsSet:
         ReachableReqs:
         Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: GS Ball
+        FileName: GoldenrodPokecenter1F.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+            - Became Champion
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        NormalItem: GS_BALL
+        ReachableReqs:
+        WarpReqs: Goldenrod Center
+        Code: |
+            GiveGSBall:
+                opentext
+                writetext GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptGSBallText
+                waitbutton
+                ITEMLINE
+                iftrue .GotGSBall
+                clearevent EVENT_GS_BALL_BACKUP
+                appear GOLDENRODPOKECENTER1F_GSBALLBACKUP
+            .GotGSBall
+                setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+                setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+                writetext GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText
+                waitbutton
+                closetext
+                end
         Text:
         TrainerList:
         Sublocations:

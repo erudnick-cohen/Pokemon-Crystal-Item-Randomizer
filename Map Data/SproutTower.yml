@@ -213,6 +213,8 @@ Location:
                                 opentext
                                 checkevent EVENT_GOT_HM05_FLASH
                                 iftrue .GotFlash
+                                checkevent EVENT_BEAT_SAGE_LI
+                                iftrue .Flash
                                 writetext SageLiSeenText
                                 waitbutton
                                 closetext
@@ -220,11 +222,14 @@ Location:
                                 loadtrainer SAGE, LI
                                 startbattle
                                 reloadmapafterbattle
+                            .Flash
                                 opentext
                                 writetext SageLiTakeThisFlashText
                                 promptbutton
                                 ITEMLINE
+                                iffalse .SkipFlash
                                 setevent EVENT_GOT_HM05_FLASH
+                            .SkipFlash
                                 setevent EVENT_BEAT_SAGE_LI
                                 writetext SageLiFlashExplanationText
                                 waitbutton
