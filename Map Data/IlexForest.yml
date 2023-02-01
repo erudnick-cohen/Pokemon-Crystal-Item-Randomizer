@@ -149,26 +149,26 @@ Location:
                 TrainerList: 
                 Sublocations:
 
-            -
-                Name: Ilex Forest Cut HM Backup
-                TrueName: Ilex Cut HM
-                FileName: IlexForest.asm
-                Type: Item
-                Dummy: Yes
-                IsBall: Yes
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Ilex Cut HM
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    IlexForestHmCutBackup:
-                        ITEMLINE
-                Text:
-                TrainerList:
-                Sublocations:
+                -
+                    Name: Ilex Forest Cut HM Backup
+                    TrueName: Ilex Cut HM
+                    FileName: IlexForest.asm
+                    Type: Item
+                    Dummy: Yes
+                    IsBall: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Ilex Cut HM
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        IlexForestHmCutBackup:
+                            ITEMLINE
+                    Text:
+                    TrainerList:
+                    Sublocations:
 
             -
                 Name: Ilex Forest Revive

@@ -1,13 +1,11 @@
 [
   {"integer_values": { "old": [6,0,142,96], "new": [7,10,"ckir_BEFORE_timed_events_DEPTSTORE5F1_yes",null] },"address_range": { "begin": 352391, "end": 352393 },
 "label" : "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1", "description" : "Return lady always present"},
-{"integer_values": { "old": [7,0,218,96], "new": [6,10,"ckir_BEFORE_timed_events_DEPTSTORE5F2_EventIsOver",null] },"address_range": { "begin": 352410, "end": 352412 },
+{"integer_values": { "old": [7,0,218,96], "new": [6,10,"ckir_BEFORE_timed_events_DEPTSTORE5_EventIsOver",null] },"address_range": { "begin": 352410, "end": 352412 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2", "description" : "Return lady always gives item"},
 {"integer_values": { "old": [10,149,182,96], "new": [10,0,"ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy",null] },"address_range": { "begin": 352428, "end": 352429 },
 "label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3", "description" : "Happiness check removed for TMs"},
-{"integer_values": { "old": [9,203,96,8,203,96], "new": [9,"ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",null,
-  8,"ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",null] },"address_range": { "begin": 352445, "end": 352447 },
-"label" : "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4", "description" : "Gives both TMs"},
+
 {"integer_values": { "old": [6,2,197,97], "new": [7,10,"ckir_BEFORE_timed_events_BGC35_SetOfficer",null] },"address_range": { "begin": 434604, "end": 434606 },
 "label" : "Route35NationalParkGate_MapScripts.ckir_BEFORE_timed_events_BGC35", "description" : "BGC is every day"},
 {"integer_values": { "old": [6,3,31,64], "new": [7,10,"ckir_BEFORE_timed_events_WESLEY_WesleyAppears",null] },"address_range": { "begin": 458776, "end": 458778 },

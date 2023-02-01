@@ -7,9 +7,9 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermilion City Entrance
-            - Expansion Card Gift
-            - Radio Card Quiz
-            - Pokegear Gift
+            - Expansion Card Gift Access
+            - Radio Card Quiz Access
+            - Pokegear Gift Access
         FlagReqs:
         ItemReqs:
         FlagsSet:

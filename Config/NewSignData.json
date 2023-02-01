@@ -621,43 +621,43 @@
         "tileAddress": 709311
     },
     {
-        "start": 350841,
-        "end": 350971,
+        "start": 350836,
+        "end": 350966,
         "name": "GoldenrodDeptStore1FDirectoryText",
         "map": "GoldenrodDeptStore1F.asm",
         "commands": 10
     },
     {
-        "start": 351521,
-        "end": 351566,
+        "start": 351516,
+        "end": 351561,
         "name": "GoldenrodDeptStore2FDirectoryText",
         "map": "GoldenrodDeptStore2F.asm",
         "commands": 5
     },
     {
-        "start": 351853,
-        "end": 351897,
+        "start": 351848,
+        "end": 351892,
         "name": "GoldenrodDeptStore3FDirectoryText",
         "map": "GoldenrodDeptStore3F.asm",
         "commands": 5
     },
     {
-        "start": 352273,
-        "end": 352315,
+        "start": 352268,
+        "end": 352310,
         "name": "GoldenrodDeptStore4FDirectoryText",
         "map": "GoldenrodDeptStore4F.asm",
         "commands": 4
     },
     {
-        "start": 353083,
-        "end": 353116,
+        "start": 353118,
+        "end": 353151,
         "name": "GoldenrodDeptStore5FDirectoryText",
         "map": "GoldenrodDeptStore5F.asm",
         "commands": 4
     },
     {
-        "start": 353780,
-        "end": 353827,
+        "start": 353815,
+        "end": 353862,
         "name": "GoldenrodDeptStore6FDirectoryText",
         "map": "GoldenrodDeptStore6F.asm",
         "commands": 4

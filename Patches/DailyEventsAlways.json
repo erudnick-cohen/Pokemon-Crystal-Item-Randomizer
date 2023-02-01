@@ -10,13 +10,13 @@
             "new": [
                 7,
                 10,
-                157,
+                152,
                 96
             ]
         },
         "address_range": {
-            "begin": 352406,
-            "end": 352410
+            "begin": 352401,
+            "end": 352405
         },
         "label": "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1",
         "description": "Return lady always present"
@@ -32,13 +32,13 @@
             "new": [
                 6,
                 10,
-                233,
-                96
+                12,
+                97
             ]
         },
         "address_range": {
-            "begin": 352425,
-            "end": 352429
+            "begin": 352420,
+            "end": 352424
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2",
         "description": "Return lady always gives item"
@@ -54,42 +54,16 @@
             "new": [
                 10,
                 0,
-                197,
+                192,
                 96
             ]
         },
         "address_range": {
-            "begin": 352442,
-            "end": 352446
+            "begin": 352437,
+            "end": 352441
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3",
         "description": "Happiness check removed for TMs"
-    },
-    {
-        "integer_values": {
-            "old": [
-                9,
-                203,
-                96,
-                8,
-                203,
-                96
-            ],
-            "new": [
-                9,
-                218,
-                96,
-                8,
-                218,
-                96
-            ]
-        },
-        "address_range": {
-            "begin": 352460,
-            "end": 352466
-        },
-        "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4",
-        "description": "Gives both TMs"
     },
     {
         "integer_values": {

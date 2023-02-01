@@ -7,9 +7,11 @@ AddedItems:
 Changes:
     -
         Location: Woke Snorlax
-        NewLocationReqs:
-            - Vermilion City Entrance
-        NewFlagReqs:
+        RemoveLocationReqs:
+            - Expansion Card Gift Access
+            - Radio Card Quiz Access
+            - Pokegear Gift Access
+        AddFlagReqs:
             - Pokegear
             - Radio Card
             - Expansion Card

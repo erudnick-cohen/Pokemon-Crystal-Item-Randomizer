@@ -37,7 +37,7 @@ def ExtractLabelledCode(file, foundElement):
 		afterLine = before.replace("_BEFORE", "_AFTER").strip()
 		found = [ x for x in codeSearchAfter if x.strip() == afterLine ]
 		if len(found) != 1:
-			raise Exception("Invalid result found")
+			raise Exception("Invalid result found:", afterLine)
 
 		beforeIndex = text.index(before)
 		afterIndex = text.index(afterLine)

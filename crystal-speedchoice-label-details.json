@@ -2900,8 +2900,8 @@
   {
     "label": "FlowerShopTeacherScript.ckir_BEFOREFLOWERSHOP0ITEMCODE",
     "address_range": {
-      "begin": 349053,
-      "end": 349056
+      "begin": 349048,
+      "end": 349051
     },
     "integer_values": "158 175 1",
     "hex_values": "$9e $af $1"
@@ -3020,8 +3020,8 @@
       "begin": 345950,
       "end": 345953
     },
-    "integer_values": "31 7 1",
-    "hex_values": "$1f $7 $1"
+    "integer_values": "158 7 1",
+    "hex_values": "$9e $7 $1"
   },
   {
     "label": "GoldenrodBikeShop_Blocks.ckir_BEFORE_GoldenrodBikeShop_Blocks",
@@ -3116,8 +3116,8 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFOREGOLDENRODDEPARTMENTSTOREFRUSTRATION0ITEMCODE",
     "address_range": {
-      "begin": 352478,
-      "end": 352481
+      "begin": 352490,
+      "end": 352493
     },
     "integer_values": "158 212 1",
     "hex_values": "$9e $d4 $1"
@@ -3125,8 +3125,8 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFOREGOLDENRODDEPARTMENTSTORERETURN0ITEMCODE",
     "address_range": {
-      "begin": 352457,
-      "end": 352460
+      "begin": 352458,
+      "end": 352461
     },
     "integer_values": "158 218 1",
     "hex_values": "$9e $da $1"
@@ -3134,53 +3134,44 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2",
     "address_range": {
-      "begin": 352425,
-      "end": 352429
+      "begin": 352420,
+      "end": 352424
     },
-    "integer_values": "6 10 233 96",
-    "hex_values": "$6 $a $e9 $60"
-  },
-  {
-    "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2_EventIsOver",
-    "address_range": {
-      "begin": 352489,
-      "end": 352489
-    },
-    "integer_values": "",
-    "hex_values": ""
+    "integer_values": "6 10 12 97",
+    "hex_values": "$6 $a $c $61"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3",
     "address_range": {
-      "begin": 352442,
-      "end": 352446
+      "begin": 352437,
+      "end": 352441
     },
-    "integer_values": "10 0 197 96",
-    "hex_values": "$a $0 $c5 $60"
+    "integer_values": "10 0 192 96",
+    "hex_values": "$a $0 $c0 $60"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy",
     "address_range": {
-      "begin": 352453,
-      "end": 352453
+      "begin": 352448,
+      "end": 352448
     },
     "integer_values": "",
     "hex_values": ""
   },
   {
-    "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4",
-    "address_range": {
-      "begin": 352460,
-      "end": 352466
-    },
-    "integer_values": "9 218 96 8 218 96",
-    "hex_values": "$9 $da $60 $8 $da $60"
-  },
-  {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",
     "address_range": {
-      "begin": 352474,
-      "end": 352474
+      "begin": 352480,
+      "end": 352480
+    },
+    "integer_values": "",
+    "hex_values": ""
+  },
+  {
+    "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5_EventIsOver",
+    "address_range": {
+      "begin": 352524,
+      "end": 352524
     },
     "integer_values": "",
     "hex_values": ""
@@ -3188,17 +3179,17 @@
   {
     "label": "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1",
     "address_range": {
-      "begin": 352406,
-      "end": 352410
+      "begin": 352401,
+      "end": 352405
     },
-    "integer_values": "7 10 157 96",
-    "hex_values": "$7 $a $9d $60"
+    "integer_values": "7 10 152 96",
+    "hex_values": "$7 $a $98 $60"
   },
   {
     "label": "GoldenrodDeptStore5F_MapScripts.ckir_BEFORE_timed_events_DEPTSTORE5F1_yes",
     "address_range": {
-      "begin": 352413,
-      "end": 352413
+      "begin": 352408,
+      "end": 352408
     },
     "integer_values": "",
     "hex_values": ""
@@ -7796,8 +7787,8 @@
   {
     "label": "MrPokemonsHousePokedexBackup.ckir_BEFOREPOKEDEXBACKUP0ITEMCODE",
     "address_range": {
-      "begin": 1669207,
-      "end": 1669210
+      "begin": 1669206,
+      "end": 1669209
     },
     "integer_values": "175 11 0",
     "hex_values": "$af $b $0"
@@ -7823,8 +7814,8 @@
   {
     "label": "MrPokemonsHouse_OakScript.ckir_BEFOREOAKPOKEDEX0ITEMCODE",
     "address_range": {
-      "begin": 1667388,
-      "end": 1667391
+      "begin": 1667387,
+      "end": 1667390
     },
     "integer_values": "175 11 0",
     "hex_values": "$af $b $0"

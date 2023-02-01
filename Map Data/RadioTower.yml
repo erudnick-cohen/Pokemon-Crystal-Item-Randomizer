@@ -186,7 +186,7 @@ Location:
                 FileName: RadioTower5F.asm
                 Type: Item
                 HasPKMN: Yes
-                WildTableList: 
+                WildTableList:
                 LocationReqs: Radio Tower Top Room Access
                 FlagReqs:
                     - Rocket Invasion
@@ -242,34 +242,34 @@ Location:
                         end
                 Text:
                 AREALV: 20
-                TrainerList: 
+                TrainerList:
                     - GRUNTM 3
                     - GRUNTF 4
                     - GRUNTM 22
                     - EXECUTIVEF 1
                     - EXECUTIVEM 1
                 Sublocations:
-            -
-                Name: Clear Bell Backup
-                TrueName: Radio Tower Rockets Part 2
-                FileName: RadioTower5F.asm
-                Type: Item
-                Dummy: Yes
-                HasPKMN: Yes
-                WildTableList:
-                IsBall: Yes
-                LocationReqs: Radio Tower Top Room Access
-                FlagReqs:
-                    - Rocket Invasion
-                ItemReqs:
-                FlagsSet:
-                    - Beat Team Rocket
-                ReachableReqs:
-                Code: |
-                    RadioTower5FClearBellBackup:
-                        ITEMLINE
-                Text:
-                Sublocations:
+                -
+                    Name: Clear Bell Backup
+                    TrueName: Radio Tower Rockets Part 2
+                    FileName: RadioTower5F.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: Yes
+                    WildTableList:
+                    IsBall: Yes
+                    LocationReqs: Radio Tower Top Room Access
+                    FlagReqs:
+                        - Rocket Invasion
+                    ItemReqs:
+                    FlagsSet:
+                        - Beat Team Rocket
+                    ReachableReqs:
+                    Code: |
+                        RadioTower5FClearBellBackup:
+                            ITEMLINE
+                    Text:
+                    Sublocations:
 
             -
                 Name: Radio Tower Sunny Day TM
@@ -375,12 +375,29 @@ Location:
                 Sublocations:
                 WarpReqs: Radio Tower 2F
             -
+                Name: Radio Card Quiz Access
+                FileName: RadioTower1F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Radio Tower
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                WarpReqs: Radio Tower 1F
+                Sublocations:
+            -
                 Name: Radio Card Quiz
                 FileName: RadioTower1F.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs: Radio Tower
+                LocationReqs: Radio Tower Quiz Access
                 FlagReqs:
                     - Impossible
                 ItemReqs:
@@ -437,5 +454,4 @@ Location:
                 Text:
                 AREALV:
                 TrainerList:
-                WarpReqs: Radio Tower 1F
                 Sublocations:

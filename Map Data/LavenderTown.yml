@@ -18,16 +18,33 @@ Location:
         WarpReqs: East Kanto
         Sublocations:
     -
+        Name: Expansion Card Gift Access
+        FileName: LavRadioTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Lavender Town
+        FlagReqs:
+            - Kanto Power Restored
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs: Lavender Radio Tower
+    -
         Name: Expansion Card Gift
         FileName: LavRadioTower1F.asm
         Type: Item
         HasPKMN: No
         WildTableList:
         LocationReqs:
-            - Lavender Town
+            - Expansion Card Gift Access
         FlagReqs:
             - Impossible
-            - Kanto Power Restored
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -46,8 +63,6 @@ Location:
         Text:
         TrainerList:
         Sublocations:
-        WarpReqs: Lavender Radio Tower
-
     -
         Name: Lavender Mart
         FileName: MahoganyTown.asm

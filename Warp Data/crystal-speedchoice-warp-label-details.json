@@ -308,8 +308,8 @@
   {
     "label": "BillsFamilysHouse_MapEvents.cwri_BEFOREBILLS__FAMILYS__HOUSE_2_7_GOLDENROD__CITY_4_0",
     "address_range": {
-      "begin": 348316,
-      "end": 348321
+      "begin": 348311,
+      "end": 348316
     },
     "integer_values": "7 2 4 11 2",
     "hex_values": "$7 $2 $4 $b $2"
@@ -317,8 +317,8 @@
   {
     "label": "BillsFamilysHouse_MapEvents.cwri_BEFOREBILLS__FAMILYS__HOUSE_3_7_GOLDENROD__CITY_4_1",
     "address_range": {
-      "begin": 348321,
-      "end": 348326
+      "begin": 348316,
+      "end": 348321
     },
     "integer_values": "7 3 4 11 2",
     "hex_values": "$7 $3 $4 $b $2"
@@ -3251,8 +3251,8 @@
   {
     "label": "GoldenrodBikeShop_MapEvents.cwri_BEFOREGOLDENROD__BIKE__SHOP_2_7_GOLDENROD__CITY_2_0",
     "address_range": {
-      "begin": 346372,
-      "end": 346377
+      "begin": 346367,
+      "end": 346372
     },
     "integer_values": "7 2 2 11 2",
     "hex_values": "$7 $2 $2 $b $2"
@@ -3260,8 +3260,8 @@
   {
     "label": "GoldenrodBikeShop_MapEvents.cwri_BEFOREGOLDENROD__BIKE__SHOP_3_7_GOLDENROD__CITY_2_1",
     "address_range": {
-      "begin": 346377,
-      "end": 346382
+      "begin": 346372,
+      "end": 346377
     },
     "integer_values": "7 3 2 11 2",
     "hex_values": "$7 $3 $2 $b $2"
@@ -3404,8 +3404,8 @@
   {
     "label": "GoldenrodDeptStore1F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__1F_15_0_GOLDENROD__DEPT__STORE__2F_2_2",
     "address_range": {
-      "begin": 350985,
-      "end": 350990
+      "begin": 350980,
+      "end": 350985
     },
     "integer_values": "0 15 2 11 12",
     "hex_values": "$0 $f $2 $b $c"
@@ -3413,8 +3413,8 @@
   {
     "label": "GoldenrodDeptStore1F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__1F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_3",
     "address_range": {
-      "begin": 350990,
-      "end": 350995
+      "begin": 350985,
+      "end": 350990
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3422,8 +3422,8 @@
   {
     "label": "GoldenrodDeptStore1F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__1F_7_7_GOLDENROD__CITY_9_0",
     "address_range": {
-      "begin": 350975,
-      "end": 350980
+      "begin": 350970,
+      "end": 350975
     },
     "integer_values": "7 7 9 11 2",
     "hex_values": "$7 $7 $9 $b $2"
@@ -3431,8 +3431,8 @@
   {
     "label": "GoldenrodDeptStore1F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__1F_8_7_GOLDENROD__CITY_9_1",
     "address_range": {
-      "begin": 350980,
-      "end": 350985
+      "begin": 350975,
+      "end": 350980
     },
     "integer_values": "7 8 9 11 2",
     "hex_values": "$7 $8 $9 $b $2"
@@ -3440,8 +3440,8 @@
   {
     "label": "GoldenrodDeptStore2F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__2F_12_0_GOLDENROD__DEPT__STORE__3F_1_0",
     "address_range": {
-      "begin": 351570,
-      "end": 351575
+      "begin": 351565,
+      "end": 351570
     },
     "integer_values": "0 12 1 11 13",
     "hex_values": "$0 $c $1 $b $d"
@@ -3449,8 +3449,8 @@
   {
     "label": "GoldenrodDeptStore2F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__2F_15_0_GOLDENROD__DEPT__STORE__1F_3_1",
     "address_range": {
-      "begin": 351575,
-      "end": 351580
+      "begin": 351570,
+      "end": 351575
     },
     "integer_values": "0 15 3 11 11",
     "hex_values": "$0 $f $3 $b $b"
@@ -3458,8 +3458,8 @@
   {
     "label": "GoldenrodDeptStore2F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__2F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_2",
     "address_range": {
-      "begin": 351580,
-      "end": 351585
+      "begin": 351575,
+      "end": 351580
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3467,8 +3467,8 @@
   {
     "label": "GoldenrodDeptStore3F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__3F_12_0_GOLDENROD__DEPT__STORE__2F_1_0",
     "address_range": {
-      "begin": 351901,
-      "end": 351906
+      "begin": 351896,
+      "end": 351901
     },
     "integer_values": "0 12 1 11 12",
     "hex_values": "$0 $c $1 $b $c"
@@ -3476,8 +3476,8 @@
   {
     "label": "GoldenrodDeptStore3F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__3F_15_0_GOLDENROD__DEPT__STORE__4F_2_1",
     "address_range": {
-      "begin": 351906,
-      "end": 351911
+      "begin": 351901,
+      "end": 351906
     },
     "integer_values": "0 15 2 11 14",
     "hex_values": "$0 $f $2 $b $e"
@@ -3485,8 +3485,8 @@
   {
     "label": "GoldenrodDeptStore3F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__3F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_2",
     "address_range": {
-      "begin": 351911,
-      "end": 351916
+      "begin": 351906,
+      "end": 351911
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3494,8 +3494,8 @@
   {
     "label": "GoldenrodDeptStore4F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__4F_12_0_GOLDENROD__DEPT__STORE__5F_1_0",
     "address_range": {
-      "begin": 352319,
-      "end": 352324
+      "begin": 352314,
+      "end": 352319
     },
     "integer_values": "0 12 1 11 15",
     "hex_values": "$0 $c $1 $b $f"
@@ -3503,8 +3503,8 @@
   {
     "label": "GoldenrodDeptStore4F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__4F_15_0_GOLDENROD__DEPT__STORE__3F_2_1",
     "address_range": {
-      "begin": 352324,
-      "end": 352329
+      "begin": 352319,
+      "end": 352324
     },
     "integer_values": "0 15 2 11 13",
     "hex_values": "$0 $f $2 $b $d"
@@ -3512,8 +3512,8 @@
   {
     "label": "GoldenrodDeptStore4F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__4F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_2",
     "address_range": {
-      "begin": 352329,
-      "end": 352334
+      "begin": 352324,
+      "end": 352329
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3521,8 +3521,8 @@
   {
     "label": "GoldenrodDeptStore5F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__5F_12_0_GOLDENROD__DEPT__STORE__4F_1_0",
     "address_range": {
-      "begin": 353120,
-      "end": 353125
+      "begin": 353155,
+      "end": 353160
     },
     "integer_values": "0 12 1 11 14",
     "hex_values": "$0 $c $1 $b $e"
@@ -3530,8 +3530,8 @@
   {
     "label": "GoldenrodDeptStore5F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__5F_15_0_GOLDENROD__DEPT__STORE__6F_1_1",
     "address_range": {
-      "begin": 353125,
-      "end": 353130
+      "begin": 353160,
+      "end": 353165
     },
     "integer_values": "0 15 1 11 16",
     "hex_values": "$0 $f $1 $b $10"
@@ -3539,8 +3539,8 @@
   {
     "label": "GoldenrodDeptStore5F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__5F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_2",
     "address_range": {
-      "begin": 353130,
-      "end": 353135
+      "begin": 353165,
+      "end": 353170
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3548,8 +3548,8 @@
   {
     "label": "GoldenrodDeptStore6F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__6F_13_0_GOLDENROD__DEPT__STORE__ROOF_1_2",
     "address_range": {
-      "begin": 353841,
-      "end": 353846
+      "begin": 353876,
+      "end": 353881
     },
     "integer_values": "0 13 1 11 18",
     "hex_values": "$0 $d $1 $b $12"
@@ -3557,8 +3557,8 @@
   {
     "label": "GoldenrodDeptStore6F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__6F_15_0_GOLDENROD__DEPT__STORE__5F_2_0",
     "address_range": {
-      "begin": 353831,
-      "end": 353836
+      "begin": 353866,
+      "end": 353871
     },
     "integer_values": "0 15 2 11 15",
     "hex_values": "$0 $f $2 $b $f"
@@ -3566,8 +3566,8 @@
   {
     "label": "GoldenrodDeptStore6F_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__6F_2_0_GOLDENROD__DEPT__STORE__ELEVATOR_1_1",
     "address_range": {
-      "begin": 353836,
-      "end": 353841
+      "begin": 353871,
+      "end": 353876
     },
     "integer_values": "0 2 1 11 17",
     "hex_values": "$0 $2 $1 $b $11"
@@ -3602,8 +3602,8 @@
   {
     "label": "GoldenrodDeptStoreElevator_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__ELEVATOR_1_3_GOLDENROD__DEPT__STORE__1F_m_0",
     "address_range": {
-      "begin": 354011,
-      "end": 354016
+      "begin": 354046,
+      "end": 354051
     },
     "integer_values": "3 1 255 11 11",
     "hex_values": "$3 $1 $ff $b $b"
@@ -3611,8 +3611,8 @@
   {
     "label": "GoldenrodDeptStoreElevator_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__ELEVATOR_2_3_GOLDENROD__DEPT__STORE__1F_m_1",
     "address_range": {
-      "begin": 354016,
-      "end": 354021
+      "begin": 354051,
+      "end": 354056
     },
     "integer_values": "3 2 255 11 11",
     "hex_values": "$3 $2 $ff $b $b"
@@ -3620,8 +3620,8 @@
   {
     "label": "GoldenrodDeptStoreRoof_MapEvents.cwri_BEFOREGOLDENROD__DEPT__STORE__ROOF_13_1_GOLDENROD__DEPT__STORE__6F_3_0",
     "address_range": {
-      "begin": 355146,
-      "end": 355151
+      "begin": 355181,
+      "end": 355186
     },
     "integer_values": "1 13 3 11 16",
     "hex_values": "$1 $d $3 $b $10"
@@ -3629,8 +3629,8 @@
   {
     "label": "GoldenrodFlowerShop_MapEvents.cwri_BEFOREGOLDENROD__FLOWER__SHOP_2_7_GOLDENROD__CITY_6_0",
     "address_range": {
-      "begin": 349722,
-      "end": 349727
+      "begin": 349717,
+      "end": 349722
     },
     "integer_values": "7 2 6 11 2",
     "hex_values": "$7 $2 $6 $b $2"
@@ -3638,8 +3638,8 @@
   {
     "label": "GoldenrodFlowerShop_MapEvents.cwri_BEFOREGOLDENROD__FLOWER__SHOP_3_7_GOLDENROD__CITY_6_1",
     "address_range": {
-      "begin": 349727,
-      "end": 349732
+      "begin": 349722,
+      "end": 349727
     },
     "integer_values": "7 3 6 11 2",
     "hex_values": "$7 $3 $6 $b $2"
@@ -3647,8 +3647,8 @@
   {
     "label": "GoldenrodGameCorner_MapEvents.cwri_BEFOREGOLDENROD__GAME__CORNER_2_13_GOLDENROD__CITY_10_0",
     "address_range": {
-      "begin": 356792,
-      "end": 356797
+      "begin": 356827,
+      "end": 356832
     },
     "integer_values": "13 2 10 11 2",
     "hex_values": "$d $2 $a $b $2"
@@ -3656,8 +3656,8 @@
   {
     "label": "GoldenrodGameCorner_MapEvents.cwri_BEFOREGOLDENROD__GAME__CORNER_3_13_GOLDENROD__CITY_10_1",
     "address_range": {
-      "begin": 356797,
-      "end": 356802
+      "begin": 356832,
+      "end": 356837
     },
     "integer_values": "13 3 10 11 2",
     "hex_values": "$d $3 $a $b $2"
@@ -3683,8 +3683,8 @@
   {
     "label": "GoldenrodHappinessRater_MapEvents.cwri_BEFOREGOLDENROD__HAPPINESS__RATER_2_7_GOLDENROD__CITY_3_0",
     "address_range": {
-      "begin": 347033,
-      "end": 347038
+      "begin": 347028,
+      "end": 347033
     },
     "integer_values": "7 2 3 11 2",
     "hex_values": "$7 $2 $3 $b $2"
@@ -3692,8 +3692,8 @@
   {
     "label": "GoldenrodHappinessRater_MapEvents.cwri_BEFOREGOLDENROD__HAPPINESS__RATER_3_7_GOLDENROD__CITY_3_1",
     "address_range": {
-      "begin": 347038,
-      "end": 347043
+      "begin": 347033,
+      "end": 347038
     },
     "integer_values": "7 3 3 11 2",
     "hex_values": "$7 $3 $3 $b $2"
@@ -3701,8 +3701,8 @@
   {
     "label": "GoldenrodMagnetTrainStation_MapEvents.cwri_BEFOREGOLDENROD__MAGNET__TRAIN__STATION_11_5_SAFFRON__MAGNET__TRAIN__STATION_3_3",
     "address_range": {
-      "begin": 348975,
-      "end": 348980
+      "begin": 348970,
+      "end": 348975
     },
     "integer_values": "5 11 3 25 9",
     "hex_values": "$5 $b $3 $19 $9"
@@ -3710,8 +3710,8 @@
   {
     "label": "GoldenrodMagnetTrainStation_MapEvents.cwri_BEFOREGOLDENROD__MAGNET__TRAIN__STATION_6_5_SAFFRON__MAGNET__TRAIN__STATION_4_2",
     "address_range": {
-      "begin": 348970,
-      "end": 348975
+      "begin": 348965,
+      "end": 348970
     },
     "integer_values": "5 6 4 25 9",
     "hex_values": "$5 $6 $4 $19 $9"
@@ -3719,8 +3719,8 @@
   {
     "label": "GoldenrodMagnetTrainStation_MapEvents.cwri_BEFOREGOLDENROD__MAGNET__TRAIN__STATION_8_17_GOLDENROD__CITY_5_0",
     "address_range": {
-      "begin": 348960,
-      "end": 348965
+      "begin": 348955,
+      "end": 348960
     },
     "integer_values": "17 8 5 11 2",
     "hex_values": "$11 $8 $5 $b $2"
@@ -3728,8 +3728,8 @@
   {
     "label": "GoldenrodMagnetTrainStation_MapEvents.cwri_BEFOREGOLDENROD__MAGNET__TRAIN__STATION_9_17_GOLDENROD__CITY_5_1",
     "address_range": {
-      "begin": 348965,
-      "end": 348970
+      "begin": 348960,
+      "end": 348965
     },
     "integer_values": "17 9 5 11 2",
     "hex_values": "$11 $9 $5 $b $2"
@@ -3737,8 +3737,8 @@
   {
     "label": "GoldenrodNameRater_MapEvents.cwri_BEFOREGOLDENROD__NAME__RATER_2_7_GOLDENROD__CITY_8_0",
     "address_range": {
-      "begin": 350543,
-      "end": 350548
+      "begin": 350538,
+      "end": 350543
     },
     "integer_values": "7 2 8 11 2",
     "hex_values": "$7 $2 $8 $b $2"
@@ -3746,8 +3746,8 @@
   {
     "label": "GoldenrodNameRater_MapEvents.cwri_BEFOREGOLDENROD__NAME__RATER_3_7_GOLDENROD__CITY_8_1",
     "address_range": {
-      "begin": 350548,
-      "end": 350553
+      "begin": 350543,
+      "end": 350548
     },
     "integer_values": "7 3 8 11 2",
     "hex_values": "$7 $3 $8 $b $2"
@@ -3755,8 +3755,8 @@
   {
     "label": "GoldenrodPPSpeechHouse_MapEvents.cwri_BEFOREGOLDENROD__PP__SPEECH__HOUSE_2_7_GOLDENROD__CITY_7_0",
     "address_range": {
-      "begin": 350013,
-      "end": 350018
+      "begin": 350008,
+      "end": 350013
     },
     "integer_values": "7 2 7 11 2",
     "hex_values": "$7 $2 $7 $b $2"
@@ -3764,8 +3764,8 @@
   {
     "label": "GoldenrodPPSpeechHouse_MapEvents.cwri_BEFOREGOLDENROD__PP__SPEECH__HOUSE_3_7_GOLDENROD__CITY_7_1",
     "address_range": {
-      "begin": 350018,
-      "end": 350023
+      "begin": 350013,
+      "end": 350018
     },
     "integer_values": "7 3 7 11 2",
     "hex_values": "$7 $3 $7 $b $2"
@@ -5168,8 +5168,8 @@
   {
     "label": "MrPokemonsHouse_MapEvents.cwri_BEFOREMR__POKEMONS__HOUSE_2_7_ROUTE__30_2_0",
     "address_range": {
-      "begin": 1669223,
-      "end": 1669228
+      "begin": 1669222,
+      "end": 1669227
     },
     "integer_values": "7 2 2 26 1",
     "hex_values": "$7 $2 $2 $1a $1"
@@ -5177,8 +5177,8 @@
   {
     "label": "MrPokemonsHouse_MapEvents.cwri_BEFOREMR__POKEMONS__HOUSE_3_7_ROUTE__30_2_1",
     "address_range": {
-      "begin": 1669228,
-      "end": 1669233
+      "begin": 1669227,
+      "end": 1669232
     },
     "integer_values": "7 3 2 26 1",
     "hex_values": "$7 $3 $2 $1a $1"
@@ -7346,8 +7346,8 @@
   {
     "label": "Route31VioletGate_MapEvents.cwri_BEFOREROUTE__31__VIOLET__GATE_0_4_VIOLET__CITY_8_0",
     "address_range": {
-      "begin": 1669393,
-      "end": 1669398
+      "begin": 1669392,
+      "end": 1669397
     },
     "integer_values": "4 0 8 10 5",
     "hex_values": "$4 $0 $8 $a $5"
@@ -7355,8 +7355,8 @@
   {
     "label": "Route31VioletGate_MapEvents.cwri_BEFOREROUTE__31__VIOLET__GATE_0_5_VIOLET__CITY_9_1",
     "address_range": {
-      "begin": 1669398,
-      "end": 1669403
+      "begin": 1669397,
+      "end": 1669402
     },
     "integer_values": "5 0 9 10 5",
     "hex_values": "$5 $0 $9 $a $5"
@@ -7364,8 +7364,8 @@
   {
     "label": "Route31VioletGate_MapEvents.cwri_BEFOREROUTE__31__VIOLET__GATE_9_4_ROUTE__31_1_2",
     "address_range": {
-      "begin": 1669403,
-      "end": 1669408
+      "begin": 1669402,
+      "end": 1669407
     },
     "integer_values": "4 9 1 26 2",
     "hex_values": "$4 $9 $1 $1a $2"
@@ -7373,8 +7373,8 @@
   {
     "label": "Route31VioletGate_MapEvents.cwri_BEFOREROUTE__31__VIOLET__GATE_9_5_ROUTE__31_2_3",
     "address_range": {
-      "begin": 1669408,
-      "end": 1669413
+      "begin": 1669407,
+      "end": 1669412
     },
     "integer_values": "5 9 2 26 2",
     "hex_values": "$5 $9 $2 $1a $2"

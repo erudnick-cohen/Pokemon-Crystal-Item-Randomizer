@@ -8,7 +8,10 @@ import time
 
 import RandomizeFunctions
 
-
+def DebugLegality(toAllocate, location, input1):
+	DEBUG_LEGALITY = False
+	if DEBUG_LEGALITY:
+		print("Legality reason change:", toAllocate, location, input1)
 def findAllSilverUnlocks(req, locList, handled=None):
 	#req = "Mt. Silver Outside"
 	if handled is None:
@@ -217,13 +220,16 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
 				   plandoPlacements = {},
-				   dontReplace = None):
+				   dontReplace = None, badgeShuffle=True):
 	if dontReplace is None:
 		dontReplace = []
 	if inputFlags is None:
 		inputFlags = []
 
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
+
+	if not badgeShuffle and "Allocate Badges First" not in inputFlags:
+		inputFlags.append("Allocate Badges First")
 
 	random.seed(seed)
 	#add the "Ok" flag to the input flags, which is used to handle locations that lose all their restrictions
@@ -517,6 +523,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#if('Mt. Silver' in locList[iter].LocationReqs and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 				#	placeable = False
 
+				badgesRemaining = len(reqBadges) - len(spoiler.keys()) > 0
+
+				if badgesRemaining and 'Allocate Badges First' in inputFlags and toAllocate not in badgeSet:
+					continue
+
 				if (locList[iter] in MtSilverSubItems and toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags):
 					placeable = False
 
@@ -535,6 +546,14 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				# Unlikely to be the culprit?
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition" or locList[iter].Dummy:
 					break
+
+				if not badgeShuffle and toAllocate in badgeSet and not locList[iter].IsActuallyGym:
+					placeable = False
+				elif not badgeShuffle and toAllocate not in badgeSet and locList[iter].IsActuallyGym:
+					placeable = False
+
+				#if placeable and not badgeShuffle and toAllocate in badgeSet:
+				#	print("Attempt:", locList[iter].Name, toAllocate)
 
 				warpImpossibleCheck = requirementsDict[locList[iter].Name]
 				impossible_paths = 0
@@ -569,14 +588,17 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						for j in newDeps:
 							# Break out before continuing if item is locked to Red due to modifiers
 							if "Red" in newDeps or "Defeated Red" in newDeps:
+								DebugLegality(toAllocate, locList[iter].Name, "Red")
 								#illegalReason = "Red"
 								legal = False
 
 							if j == "Mt. Silver Unlock":
 								if toAllocate in badgeSet and not 'Open Mt. Silver' in inputFlags:
+									DebugLegality(toAllocate, locList[iter].Name,"Mt Silver")
 									legal = False
 
 							if toAllocate in badgeSet and j == "All Badges":
+								DebugLegality(toAllocate, locList[iter].Name, "All Badges")
 								legal = False
 
 							if not legal:
@@ -624,6 +646,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 
 								if len(paths) == 0:
+									DebugLegality(toAllocate, locList[iter].Name, "Banned Paths")
 									#print("Banned paths only, cannot take a route")
 									legal = False
 									break
@@ -765,6 +788,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 											1+1
 											#print(revReqDict)
 									else:
+										DebugLegality(toAllocate, locList[iter].Name, "Tautology")
 										legal = False
 										illegalReason = allDepsList.copy()
 										#this is not a legal item location! because it involves a tautology!
@@ -834,7 +858,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 											singleTrue = singleTrue and not (l in usedFlagsList and l not in inputFlags)
 
-										if not singleTrue:
+										if "Warps" in inputFlags and not singleTrue:
+											DebugLegality(toAllocate, locList[iter].Name, "SingleTrue:"+str(paths[0]))
 											legal = False
 										else:
 											for l in paths[0]:
@@ -842,6 +867,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 												revReqDict[l].append(j)
 									else:
 										if 'Impossible' in jReqs or "Banned" in jReqs or "Unreachable" in jReqs:
+											DebugLegality(toAllocate, locList[iter].Name, "Impossible Path")
 											legal = False
 									if j not in addedList:
 										addedList.append(j)
@@ -879,7 +905,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 						#print(set(allDepsList).intersection(set(usedFlagsList)))
 					#Impossible locations are illegal
 					if("Impossible" in allDepsList or "Banned" in allDepsList or "Unreachable" in allDepsList):
-						illegalReason = "Impossible 2"
+						DebugLegality(toAllocate, locList[iter].Name, "Impossible-2")
 						legal = False
 
 					if(toAllocate not in allDepsList and legal or (toAllocate in plandoPlacements.values() and 'unsafePlando' in inputFlags)):
@@ -1031,6 +1057,9 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				counter[item] += 1
 
 			changes[changeFromKey] = counter
+
+		if len(changes) > 0:
+			random.shuffle(trashItems)
 
 
 	# Due to changes to items, such as becoming items from banlist, do deep copy?

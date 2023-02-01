@@ -275,6 +275,28 @@ Location:
                       done
                 TrainerList:
                 Sublocations:
+                -
+                        Name: Mystery Egg Backup
+                        TrueName: Mr. Pokemon's Egg
+                        FileName: MrPokemonsHouse.asm
+                        Type: Item
+                        Dummy: Yes
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mr. Pokemon's Egg
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet: Mr. Pokemon Visited
+                        ReachableReqs:
+                        Code: |
+                            RetryMysteryEgg:
+                                ITEMLINE
+                                iffalse .End
+                                setevent EVENT_GOT_MYSTERY_EGG
+                            .End
+                                sjump PokemonText
+                        Text:
+                        Sublocations:
             -
                     Name: Oak Pokedex
                     OtherName: Pokedex Backup
@@ -348,6 +370,31 @@ Location:
                     Text: |
                     TrainerList:
                     Sublocations:
+                    -
+                        Name: Pokedex Backup
+                        TrueName: Oak Pokedex
+                        FileName: MrPokemonsHouse.asm
+                        Type: Item
+                        Dummy: Yes
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Oak Pokedex
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code: |
+                            MrPokemonsHousePokedexBackup:
+                                opentext
+                                ITEMLINE
+                                iffalse .End
+                                setevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                                disappear MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+                            .End
+                                closetext
+                                end
+                        Text:
+                        Sublocations:
             -
                     Name: Mr. Pokemon's EXP Share
                     FileName: MrPokemonsHouse.asm
@@ -397,50 +444,4 @@ Location:
                             done
                     TrainerList:
                     Sublocations:
-            -
-                    Name: Mystery Egg Backup
-                    TrueName: Mr. Pokemon's Egg
-                    FileName: MrPokemonsHouse.asm
-                    Type: Item
-                    Dummy: Yes
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Mr. Pokemon's Egg
-                    FlagReqs:
-                    ItemReqs:
-                    FlagsSet: Mr. Pokemon Visited
-                    ReachableReqs:
-                    Code: |
-                        RetryMysteryEgg:
-                            ITEMLINE
-                            iffalse .End
-                            setevent EVENT_GOT_MYSTERY_EGG
-                        .End
-                            sjump PokemonText
-                    Text:
-                    Sublocations:
-            -
-                    Name: Pokedex Backup
-                    TrueName: Oak Pokedex
-                    FileName: MrPokemonsHouse.asm
-                    Type: Item
-                    Dummy: Yes
-                    HasPKMN: No
-                    WildTableList:
-                    LocationReqs: Oak Pokedex
-                    FlagReqs:
-                    ItemReqs:
-                    FlagsSet:
-                    ReachableReqs:
-                    Code: |
-                        MrPokemonsHousePokedexBackup:
-                            opentext
-                            ITEMLINE
-                            iffalse .End
-                            setevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
-                            disappear MR_POKEMONS_HOUSE_POKEDEX_BACKUP
-                        .End
-                            closetext
-                            end
-                    Text:
-                    Sublocations:
+

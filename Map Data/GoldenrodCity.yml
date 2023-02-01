@@ -121,12 +121,14 @@ Location:
                 promptbutton
                 waitsfx
                 ITEMLINE
-                writetext BorrowedABicycleText
-                playsound SFX_KEY_ITEM
-                waitsfx
-                itemnotify
+                iffalse .GotBicycle
                 setflag ENGINE_BIKE_SHOP_CALL_ENABLED
                 setevent EVENT_GOT_BICYCLE
+            .GotBicycle:
+                writetext GoldenrodBikeShopClerkFirstRateBikesText
+                waitbutton
+                closetext
+                end
         Text: |
             UnknownText_0x54787:
                 text "...sigh... I moved"
@@ -563,13 +565,11 @@ Location:
                 .ckir_AFTER_timed_events_DEPTSTORE5F3_VeryHappy::
                     writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
                     promptbutton
+                    checkevent EVENT_GOT_TM27
+                    iftrue .Onwards27
                     ITEMLINE
-                .ckir_BEFORE_timed_events_DEPTSTORE5F4::
-                    iftrue .NotVeryHappy
-                    iffalse .NotVeryHappy
-                .ckir_AFTER_timed_events_DEPTSTORE5F4::
-                    closetext
-                    end
+                    iffalse .Onwards27
+                    setevent EVENT_GOT_TM27
             Text:
             AREALV:
             TrainerList:
@@ -594,11 +594,11 @@ Location:
                 .ckir_AFTER_timed_events_DEPTSTORE5F4_NotVeryHappy::
                     writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
                     promptbutton
+                    checkevent EVENT_GOT_TM21
+                    iftrue .Onwards21
                     ITEMLINE
-                    iffalse .Done
-                    setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-                    closetext
-                    end
+                    iffalse .Onwards21
+                    setevent EVENT_GOT_TM21
             Text:
             AREALV:
             TrainerList:

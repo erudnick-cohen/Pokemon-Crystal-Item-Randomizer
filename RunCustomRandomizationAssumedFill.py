@@ -368,13 +368,18 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					rmCore.append(i)
 			for i in rmCore:
 				coreProgress.remove(i)
-			if(not "BadgeItemShuffle" in otherSettings):
-				resultDict = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
-			else:
-				rBadgeList = []
-				for i in BadgeDict:
-					rBadgeList.append(i)
-				resultDict = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements, coreProgress = coreProgress, dontReplace = dontReplace)
+			#if(not "BadgeItemShuffle" in otherSettings):
+			#	resultDict = RandomizeItems.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed, inputFlags = flags, plandoPlacements = plandoPlacements, coreProgress = coreProgress)
+			#else:
+			# All the most recent logic now resides in ItemsBadges, so this one should be updated to support no BadgeItem Shuffle
+			badgeShuffle = otherSettings["BadgeItemShuffle"] is None or otherSettings["BadgeItemShuffle"] if "BadgeItemShuffle" in otherSettings else False
+			rBadgeList = []
+			for i in BadgeDict:
+				rBadgeList.append(i)
+			print(BadgeDict)
+			resultDict = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed,
+															 inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements,
+															 coreProgress = coreProgress, dontReplace = dontReplace, badgeShuffle=badgeShuffle)
 
 			if goal not in resultDict["Reachable"]:
 				handleBadSpoiler(resultDict, flags, maxSize=10 if spoilerLoop else None)
