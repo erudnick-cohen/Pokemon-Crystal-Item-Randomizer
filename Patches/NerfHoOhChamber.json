@@ -29,8 +29,8 @@
             ]
         },
         "address_range": {
-            "begin": 488056,
-            "end": 488059,
+            "begin": 488053,
+            "end": 488056,
             "Offset": 2
         },
         "label": "Randomizer_HoOhSpecies.ckir_BEFORE_HOOHENCOUNTER",

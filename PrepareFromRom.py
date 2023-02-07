@@ -3,6 +3,7 @@ import os
 import sys
 
 import GenerateHintData
+import GenerateItemLabels
 import RandomizeFunctions
 import Static
 import UpdateLabelsScript
@@ -35,14 +36,18 @@ if __name__ == '__main__':
 
     pre_sym = UpdateLabelsScript.LoadSym(sym_file)
     definedLabels = []
-    RandomizerRom.InsertManualFiles(definedLabels)
 
+    RandomizerRom.UpdateDataDirectory()
+
+    RandomizerRom.InsertManualFiles(definedLabels)
     sign_entries = GenerateHintData.GenerateHintLabels()
     TestLabels()
     GenerateWarpData.GenerateWarpLabels()
     GenerateMapLabels.GenerateWarpMapDataLabels()
     GenerateMapLabels.LabelAllBlocks()
     GenerateMapLabels.GenerateNPCLabels()
+
+    GenerateItemLabels.GenerateAttributeLabels()
 
     labelsSuccess = UpdateLabelsScript.UpdateLabels(has_wsl, delete_file=False)
     if not labelsSuccess:

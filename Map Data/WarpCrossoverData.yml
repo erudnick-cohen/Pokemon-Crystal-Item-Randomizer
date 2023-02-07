@@ -3280,3 +3280,29 @@ Location:
         WildTableList:
         Code:
         Text:
+    -
+        Name: Sea Cottage
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Cerulean
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+    -
+        Name: Cerulean
+        FileName: CianwoodCity.asm
+        Type: Transition
+        HasPKMN: No
+        LocationReqs: Sea Cottage
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:

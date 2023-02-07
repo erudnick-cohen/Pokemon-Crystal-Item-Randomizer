@@ -213,7 +213,7 @@ Location:
               .SkipSecretPotion
                   writetext PharmacistDescribeSecretpotionText
                   waitbutton
-                  sjump .Mart
+                  sjump .CheckShopsanity
                   end
             Text: |
               ReceivedSecretpotionText:

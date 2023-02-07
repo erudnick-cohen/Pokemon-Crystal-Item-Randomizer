@@ -370,6 +370,8 @@ Location:
                         promptbutton
                         setevent EVENT_MET_BUENA
                         ITEMLINE
+                        iffalse .TuneIn
+                        setevent EVENT_GOT_BLUE_CARD
                 Text:
                 TrainerList:
                 Sublocations:
@@ -397,7 +399,7 @@ Location:
                 Type: Item
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs: Radio Tower Quiz Access
+                LocationReqs: Radio Card Quiz Access
                 FlagReqs:
                     - Impossible
                 ItemReqs:

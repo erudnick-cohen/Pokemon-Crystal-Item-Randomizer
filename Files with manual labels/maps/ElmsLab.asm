@@ -86,6 +86,13 @@ ElmsLab_MapScripts:
 	closetext
 	end
 
+CheckMonChecks:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+.ckir_BEFORE_ELMSLAB_MONLOCKEDCHECKS::
+	iftrue ElmCheckEverstone2
+.ckir_AFTER_ELMSLAB_MONLOCKEDCHECKS::
+	end
+
 ProfElmScript:
 	faceplayer
 	opentext
@@ -105,8 +112,10 @@ ElmCheckMysteryEgg:
 	ifequal SCENE_ELMSLAB_AIDE_GIVES_POTION, ElmDescribesMrPokemonScript
 	ifequal SCENE_ELMSLAB_CANT_LEAVE, DidntChooseStarterScript
 	checkitem MYSTERY_EGG
-	iffalse ElmCheckEverstone2
+	iffalse CheckMonChecks
 	sjump ElmAfterTheftScript
+.ckir_BEFORE_ELMSLAB_EVERSTONE2::
+.ckir_AFTER_ELMSLAB_EVERSTONE2::
 ElmCheckEverstone2:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
@@ -372,7 +381,7 @@ ElmAfterTheftScript:
 	writetext ElmAfterTheftText6
 	waitbutton
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
-	sjump ElmCheckEverstone2
+	sjump CheckMonChecks
 
 ElmStudyingEggScript:
 	writetext ElmStudyingEggText

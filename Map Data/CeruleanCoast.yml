@@ -16,7 +16,46 @@ Location:
         Code:
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
+        Sublocations:
+            -
+                Name: Route 25 Hidden Potion
+                FileName: Route25.asm
+                SecondaryFile: Route25.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 25
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POTION
+                Code: |
+                    Route25HiddenPotion:
+                        ITEMLINE
+                SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, Route25HiddenPotion'
+                Text:
+                TrainerList:
+                Sublocations:
+    -
+        Name: Route 25 Trainer Gauntlet
+        FileName: Route25.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+            - ROUTE_25
+        LocationReqs:
+            - Route 25
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
             - LASS 11
             - SCHOOLBOY 8
             - SCHOOLBOY 7
@@ -27,6 +66,26 @@ Location:
             - COOLTRAINERM 17
             - GRUNTM 31
         Sublocations:
+    -
+        Name: Sea Cottage
+        FileName: Route25.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+            - ROUTE_25
+            - ROUTE_24
+        LocationReqs:
+            - Route 25 Trainer Gauntlet
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        WarpReqs: Sea Cottage
+        Sublocations:
             -
                 Name: Route 25 Nugget
                 FileName: Route25.asm
@@ -34,7 +93,7 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 25
+                    - Sea Cottage
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -66,7 +125,7 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 25
+                    - Sea Cottage
                 FlagReqs:
                     - Hive Badge
                 ItemReqs:
@@ -91,7 +150,7 @@ Location:
                 HasPKMN: No
                 WildTableList: 
                 LocationReqs:
-                    - Route 25
+                    - Sea Cottage
                 FlagReqs:
                     - Power Plant
                 ItemReqs:
@@ -103,36 +162,13 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Route 25 Hidden Potion
-                FileName: Route25.asm
-                SecondaryFile: Route25.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 25
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: POTION
-                Code: |
-                    Route25HiddenPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  4,  5, BGEVENT_ITEM, Route25HiddenPotion'
-                Text:
-                TrainerList: 
-                Sublocations:
-                
-                
-            -
                 Name: Bills Grandpas House
                 FileName: BillsHouse.asm
                 SecondaryFile: BillsHouse.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 25
+                LocationReqs: Sea Cottage
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -164,10 +200,9 @@ Location:
                                 iftrue .GotEverstone
                                 scall .ReceiveItem
                                 ITEMLINE
-                                iffalse .BagFull
+                                iffalse .GotEverstone
                                 setevent EVENT_GOT_EVERSTONE_FROM_BILLS_GRANDPA
-                                setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-                                closetext
+                                sjump .GotEverstone
                                 end
                         Text:
                         TrainerList: 
@@ -195,10 +230,9 @@ Location:
                                 iftrue .GotLeafStone
                                 scall .ReceiveItem
                                 ITEMLINE
-                                iffalse .BagFull
+                                iffalse .GotLeafStone
                                 setevent EVENT_GOT_LEAF_STONE_FROM_BILLS_GRANDPA
-                                setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-                                closetext
+                                sjump .GotLeafStone
                                 end
                         Text:
                         TrainerList: 
@@ -226,10 +260,9 @@ Location:
                                 iftrue .GotWaterStone
                                 scall .ReceiveItem
                                 ITEMLINE
-                                iffalse .BagFull
+                                iffalse .GotWaterStone
                                 setevent EVENT_GOT_WATER_STONE_FROM_BILLS_GRANDPA
-                                setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-                                closetext
+                                sjump .GotWaterStone
                                 end
                         Text:
                         TrainerList: 
@@ -257,10 +290,9 @@ Location:
                                 iftrue .GotFireStone
                                 scall .ReceiveItem
                                 ITEMLINE
-                                iffalse .BagFull
+                                iffalse .GotFireStone
                                 setevent EVENT_GOT_FIRE_STONE_FROM_BILLS_GRANDPA
-                                setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-                                closetext
+                                sjump .GotFireStone
                                 end
                         Text:
                         TrainerList: 
@@ -284,12 +316,12 @@ Location:
                         NormalItem: THUNDERSTONE
                         Code: |
                             .ShowedPichu:
+                                checkevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
+                                iftrue .CheckForAll
                                 scall .ReceiveItem
                                 ITEMLINE
-                                iffalse .BagFull
+                                iffalse .PichuEnd
                                 setevent EVENT_GOT_THUNDERSTONE_FROM_BILLS_GRANDPA
-                                closetext
-                                end
                         Text:
                         TrainerList: 
                         Sublocations:

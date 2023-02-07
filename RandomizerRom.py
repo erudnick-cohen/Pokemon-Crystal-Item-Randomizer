@@ -1,4 +1,6 @@
 import shutil
+import struct
+
 import Items
 import re
 import os
@@ -59,7 +61,9 @@ def GetLabelsDefinedWithinLines(manual_file):
 		raise Exception("No Manual label in labelling file::", manual_file)
 
 	if len(manuals_within_before) != len(manuals_within_after):
-		raise Exception("Incorrect count of manual labels")
+		raise Exception("Incorrect count of manual labels for:", manual_file,
+						manuals_within_before, manuals_within_after)
+
 
 	lines_between = [x.strip() for x in manual_lines if IsWithinLabels(manuals_within_before, manuals_within_after,
 																   manual_lines.index(x))]
@@ -143,6 +147,11 @@ def ResetRomForLabelling(wsl=False, romDir="7.4"):
 			print("No existing folder created, nothing to remove")
 		shutil.copytree("Game Files/"+romDir,"RandomizerRom")
 	#next overwrite the files which need custom labels
+
+
+def UpdateDataDirectory():
+	shutil.copy("RandomizerRom/data/items/attributes.asm", "Data/item_attributes.asm")
+	shutil.copy("RandomizerRom/constants/event_flags.asm", "Data/event_flags.asm")
 
 def InsertManualFiles(result_lines=None):
 	manual_dir = "Files with manual labels"
@@ -354,6 +363,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 		if i.Dummy:
 			findLocations = [location for location in locations if location.Name == i.TrueName]
 			if len(findLocations) != 1:
+				# ('Invalid Dummy for ', 'Ruins of Alph UnownDex Backup', 'Ruins of Alph UnownDex', '!')
 				raise Exception("Invalid Dummy for ", i.Name, i.TrueName ,"!")
 			i.item = findLocations[0].item
 
@@ -1515,3 +1525,19 @@ def WriteDescriptionsToMemory(romMap, hints, hintConfig):
 
 
 	return
+
+#In future, may wish to use depth into the game for shop items to determine prices
+def WriteItemPricesToMemory(addressData, romMap, itemPrices):
+	for item in itemPrices.keys():
+		price = itemPrices[item]
+
+		#ItemAttributes.ckir_BEFORE_ItemAttribute_REPEL
+		labelReference = "ckir_BEFORE_ItemAttribute_{}".format(item)
+		labelInfo = addressData[labelReference]
+
+		bytes = list(struct.pack('<H', price))
+
+		# First two bytes dictate price
+		romMap[labelInfo["address_range"]["begin"]] = bytes[0]
+		romMap[labelInfo["address_range"]["begin"]+1] = bytes[1]
+

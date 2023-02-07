@@ -60,8 +60,8 @@
         "tileAddress": 708732
     },
     {
-        "start": 654083,
-        "end": 654133,
+        "start": 654089,
+        "end": 654139,
         "name": "BattleTowerOutsideSignText",
         "map": "BattleTowerOutside.asm",
         "commands": 4,
@@ -440,15 +440,15 @@
         "tileAddress": 710057
     },
     {
-        "start": 1612863,
-        "end": 1612894,
+        "start": 1612916,
+        "end": 1612947,
         "name": "FightingDojoSign1Text",
         "map": "FightingDojo.asm",
         "commands": 3
     },
     {
-        "start": 1612895,
-        "end": 1612918,
+        "start": 1612948,
+        "end": 1612971,
         "name": "FightingDojoSign2Text",
         "map": "FightingDojo.asm",
         "commands": 3
@@ -780,8 +780,8 @@
         "tileAddress": 710377
     },
     {
-        "start": 487760,
-        "end": 487788,
+        "start": 487757,
+        "end": 487785,
         "name": "DontLitterSignText",
         "map": "MountMoonSquare.asm",
         "commands": 3,
@@ -1041,8 +1041,8 @@
         "tileAddress": 707847
     },
     {
-        "start": 386114,
-        "end": 386123,
+        "start": 386129,
+        "end": 386138,
         "name": "RadioTower2FSalesSignText",
         "map": "RadioTower2F.asm",
         "commands": 2,
@@ -1051,8 +1051,8 @@
         "tileAddress": 707878
     },
     {
-        "start": 386124,
-        "end": 386174,
+        "start": 386139,
+        "end": 386189,
         "name": "RadioTower2FOaksPKMNTalkSignText",
         "map": "RadioTower2F.asm",
         "commands": 5,
@@ -1061,8 +1061,8 @@
         "tileAddress": 707879
     },
     {
-        "start": 386175,
-        "end": 386204,
+        "start": 386190,
+        "end": 386219,
         "name": "RadioTower2FPokemonRadioSignText",
         "map": "RadioTower2F.asm",
         "commands": 3,
@@ -1071,8 +1071,8 @@
         "tileAddress": 707883
     },
     {
-        "start": 387826,
-        "end": 387839,
+        "start": 387841,
+        "end": 387854,
         "name": "RadioTower3FPersonnelSignText",
         "map": "RadioTower3F.asm",
         "commands": 2,
@@ -1081,8 +1081,8 @@
         "tileAddress": 707914
     },
     {
-        "start": 387840,
-        "end": 387868,
+        "start": 387855,
+        "end": 387883,
         "name": "RadioTower3FPokemonMusicSignText",
         "map": "RadioTower3F.asm",
         "commands": 3,
@@ -1091,8 +1091,8 @@
         "tileAddress": 707917
     },
     {
-        "start": 389146,
-        "end": 389160,
+        "start": 389161,
+        "end": 389175,
         "name": "RadioTower4FProductionSignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1101,8 +1101,8 @@
         "tileAddress": 707952
     },
     {
-        "start": 389161,
-        "end": 389173,
+        "start": 389176,
+        "end": 389188,
         "name": "RadioTower4FStudio2SignText",
         "map": "RadioTower4F.asm",
         "commands": 2,

@@ -76,25 +76,25 @@
             "new": [
                 6,
                 3,
-                80,
+                78,
                 112,
                 6,
                 2,
-                80,
+                78,
                 112,
                 6,
                 1,
-                80,
+                78,
                 112,
                 6,
                 0,
-                80,
+                78,
                 112
             ]
         },
         "address_range": {
-            "begin": 372800,
-            "end": 372816
+            "begin": 372798,
+            "end": 372814
         },
         "label": "TrainerSailorHuey.ckir_BEFORE_Huey",
         "description": "Makes it so you can fight rematch trainers only one additional time to get their items"

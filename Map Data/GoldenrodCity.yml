@@ -1740,3 +1740,24 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+        -
+            Name: GS Ball Backup
+            FileName: GoldenrodPokecenter1F.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: GS Ball
+            FlagReqs:
+              - Became Champion
+              - Impossible
+            ItemReqs:
+            FlagsSet:
+            NormalItem: GS_BALL
+            ReachableReqs:
+            WarpReqs: Goldenrod Center
+            Code: |
+                GSBallBackup:
+                    ITEMLINE
+            Text:
+            TrainerList:
+            Sublocations:

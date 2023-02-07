@@ -29,8 +29,8 @@
   {
     "label": "BattleTowerOutsideSignText.ctir_BEFORE_BattleTowerOutsideSignText",
     "address_range": {
-      "begin": 654083,
-      "end": 654134
+      "begin": 654089,
+      "end": 654140
     },
     "integer_values": "0 129 128 147 147 139 132 127 147 142 150 132 145 81 147 160 170 164 127 179 167 164 127 148 171 179 168 172 160 179 164 79 147 177 160 168 173 164 177 127 130 167 160 171 171 164 173 166 164 231 87",
     "hex_values": "$0 $81 $80 $93 $93 $8b $84 $7f $93 $8e $96 $84 $91 $51 $93 $a0 $aa $a4 $7f $b3 $a7 $a4 $7f $94 $ab $b3 $a8 $ac $a0 $b3 $a4 $4f $93 $b1 $a0 $a8 $ad $a4 $b1 $7f $82 $a7 $a0 $ab $ab $a4 $ad $a6 $a4 $e7 $57"
@@ -398,8 +398,8 @@
   {
     "label": "DontLitterSignText.ctir_BEFORE_DontLitterSignText",
     "address_range": {
-      "begin": 487760,
-      "end": 487789
+      "begin": 487757,
+      "end": 487786
     },
     "integer_values": "0 140 147 232 140 142 142 141 127 146 144 148 128 145 132 79 131 142 141 224 147 127 139 136 147 147 132 145 87",
     "hex_values": "$0 $8c $93 $e8 $8c $8e $8e $8d $7f $92 $90 $94 $80 $91 $84 $4f $83 $8e $8d $e0 $93 $7f $8b $88 $93 $93 $84 $91 $57"
@@ -461,8 +461,8 @@
   {
     "label": "FightingDojoSign1Text.ctir_BEFORE_FightingDojoSign1Text",
     "address_range": {
-      "begin": 1612863,
-      "end": 1612895
+      "begin": 1612916,
+      "end": 1612948
     },
     "integer_values": "0 150 167 160 179 127 166 174 164 178 127 160 177 174 180 173 163 79 162 174 172 164 178 127 160 177 174 180 173 163 231 87",
     "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a6 $ae $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $4f $a2 $ae $ac $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $e7 $57"
@@ -470,8 +470,8 @@
   {
     "label": "FightingDojoSign2Text.ctir_BEFORE_FightingDojoSign2Text",
     "address_range": {
-      "begin": 1612895,
-      "end": 1612919
+      "begin": 1612948,
+      "end": 1612972
     },
     "integer_values": "0 132 173 164 172 168 164 178 127 174 173 127 164 181 164 177 184 79 178 168 163 164 231 87",
     "hex_values": "$0 $84 $ad $a4 $ac $a8 $a4 $b2 $7f $ae $ad $7f $a4 $b5 $a4 $b1 $b8 $4f $b2 $a8 $a3 $a4 $e7 $57"
@@ -1136,8 +1136,8 @@
   {
     "label": "RadioTower2FOaksPKMNTalkSignText.ctir_BEFORE_RadioTower2FOaksPKMNTalkSignText",
     "address_range": {
-      "begin": 386124,
-      "end": 386175
+      "begin": 386139,
+      "end": 386190
     },
     "integer_values": "0 143 145 142 133 232 142 128 138 224 146 127 84 140 142 141 79 147 128 139 138 81 147 167 164 127 135 174 179 179 164 178 179 127 146 167 174 182 79 174 173 127 179 167 164 127 128 168 177 231 87",
     "hex_values": "$0 $8f $91 $8e $85 $e8 $8e $80 $8a $e0 $92 $7f $54 $8c $8e $8d $4f $93 $80 $8b $8a $51 $93 $a7 $a4 $7f $87 $ae $b3 $b3 $a4 $b2 $b3 $7f $92 $a7 $ae $b6 $4f $ae $ad $7f $b3 $a7 $a4 $7f $80 $a8 $b1 $e7 $57"
@@ -1145,8 +1145,8 @@
   {
     "label": "RadioTower2FPokemonRadioSignText.ctir_BEFORE_RadioTower2FPokemonRadioSignText",
     "address_range": {
-      "begin": 386175,
-      "end": 386205
+      "begin": 386190,
+      "end": 386220
     },
     "integer_values": "0 128 173 184 182 167 164 177 164 244 127 128 173 184 179 168 172 164 79 84 140 142 141 127 145 160 163 168 174 87",
     "hex_values": "$0 $80 $ad $b8 $b6 $a7 $a4 $b1 $a4 $f4 $7f $80 $ad $b8 $b3 $a8 $ac $a4 $4f $54 $8c $8e $8d $7f $91 $a0 $a3 $a8 $ae $57"
@@ -1154,8 +1154,8 @@
   {
     "label": "RadioTower2FSalesSignText.ctir_BEFORE_RadioTower2FSalesSignText",
     "address_range": {
-      "begin": 386114,
-      "end": 386124
+      "begin": 386129,
+      "end": 386139
     },
     "integer_values": "0 248 133 127 146 128 139 132 146 87",
     "hex_values": "$0 $f8 $85 $7f $92 $80 $8b $84 $92 $57"
@@ -1163,8 +1163,8 @@
   {
     "label": "RadioTower3FPersonnelSignText.ctir_BEFORE_RadioTower3FPersonnelSignText",
     "address_range": {
-      "begin": 387826,
-      "end": 387840
+      "begin": 387841,
+      "end": 387855
     },
     "integer_values": "0 249 133 127 143 132 145 146 142 141 141 132 139 87",
     "hex_values": "$0 $f9 $85 $7f $8f $84 $91 $92 $8e $8d $8d $84 $8b $57"
@@ -1172,8 +1172,8 @@
   {
     "label": "RadioTower3FPokemonMusicSignText.ctir_BEFORE_RadioTower3FPokemonMusicSignText",
     "address_range": {
-      "begin": 387840,
-      "end": 387869
+      "begin": 387855,
+      "end": 387884
     },
     "integer_values": "0 84 140 142 141 127 140 148 146 136 130 127 182 168 179 167 79 135 174 178 179 127 131 137 127 129 132 141 87",
     "hex_values": "$0 $54 $8c $8e $8d $7f $8c $94 $92 $88 $82 $7f $b6 $a8 $b3 $a7 $4f $87 $ae $b2 $b3 $7f $83 $89 $7f $81 $84 $8d $57"
@@ -1181,8 +1181,8 @@
   {
     "label": "RadioTower4FProductionSignText.ctir_BEFORE_RadioTower4FProductionSignText",
     "address_range": {
-      "begin": 389146,
-      "end": 389161
+      "begin": 389161,
+      "end": 389176
     },
     "integer_values": "0 250 133 127 143 145 142 131 148 130 147 136 142 141 87",
     "hex_values": "$0 $fa $85 $7f $8f $91 $8e $83 $94 $82 $93 $88 $8e $8d $57"
@@ -1190,8 +1190,8 @@
   {
     "label": "RadioTower4FStudio2SignText.ctir_BEFORE_RadioTower4FStudio2SignText",
     "address_range": {
-      "begin": 389161,
-      "end": 389174
+      "begin": 389176,
+      "end": 389189
     },
     "integer_values": "0 250 133 127 146 147 148 131 136 142 127 248 87",
     "hex_values": "$0 $fa $85 $7f $92 $93 $94 $83 $88 $8e $7f $f8 $57"

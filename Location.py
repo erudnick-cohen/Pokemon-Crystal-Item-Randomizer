@@ -362,11 +362,11 @@ class Location:
 		for i in self.Sublocations:
 			i.applyWarpLogic(flags)
 
-	def applyModifiers(self, modifierDict, flags):
+	def applyModifiers(self, modifierDict, flags, warpless=True):
 		list = [];
 
 		warpLessModiferName = self.Name
-		if LoadLocationData.WARP_OPTION in warpLessModiferName:
+		if warpless and LoadLocationData.WARP_OPTION in warpLessModiferName:
 			warpLessModiferName = warpLessModiferName.replace(LoadLocationData.WARP_OPTION, "")
 
 		if(warpLessModiferName in modifierDict):

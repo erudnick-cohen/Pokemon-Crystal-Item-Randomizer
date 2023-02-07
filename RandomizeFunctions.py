@@ -2049,6 +2049,7 @@ class RandomItemProcessor:
 
     itemsList = []
     dontReplace = []
+    allItems = []
 
     def readAttributesFile(self, file):
         items = []
@@ -2107,7 +2108,7 @@ class RandomItemProcessor:
                            and x.Name not in banned_items
             ,itemObjects))
 
-    def __init__(self, dontReplace=None):
+    def __init__(self, dontReplace=None, replaceNames=True):
         if dontReplace is None:
             dontReplace = []
         self.itemsTest = []
@@ -2118,14 +2119,14 @@ class RandomItemProcessor:
                 if (len(i) > 0):
                     self.itemsTest.append(i[0])
 
-        items = self.readAttributesFile("Data/attributes.asm")
-        self.itemsList = self.limitItems(items)
+        self.allItems = self.readAttributesFile("Data/item_attributes.asm")
+        self.itemsList = self.limitItems(self.allItems)
 
-        self.replaceRenames()
-
-        for item in self.itemsList:
-            if item.Name not in self.itemsTest:
-                print("Error with item:",item.Name)
+        if replaceNames:
+            self.replaceRenames()
+            for item in self.itemsList:
+                if item.Name not in self.itemsTest:
+                    print("Error with item:", item.Name)
 
         return
 
@@ -2417,3 +2418,88 @@ def CheckVersion(addressData, romMap):
         return True
     else:
         return False
+
+
+
+
+def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
+    retry = True
+
+    increased_variance = False
+
+    if original_price <= min_variance:
+        modal_price = 2000
+        increased_variance = True
+    else:
+        modal_price = original_price
+
+    max_retries = 5
+    total_retries = 0
+
+    while retry:
+        variance = modal_price
+        if increased_variance:
+            variance *= 0.4
+            modal_price *= 0.8
+        new_modal_price = random.normalvariate(modal_price, variance)
+
+        total_retries += 1
+
+        if new_modal_price > 15000:
+            if total_retries == 1:
+                total_retries -= 1
+                continue
+            else:
+                break
+
+        if new_modal_price <= 0:
+            if modal_price == 0:
+                total_retries -= 1
+                continue
+            elif total_retries == 1:
+                total_retries -= 1
+                continue
+            else:
+                break
+
+        if not increased_variance:
+
+            if new_modal_price < (original_price * min_below):
+                if total_retries == 1:
+                    total_retries -= 1
+                    continue
+                else:
+                    break
+            elif new_modal_price > (original_price * max_above):
+                if total_retries == 1:
+                    total_retries -= 1
+                    continue
+                else:
+                    break
+            else:
+                modal_price = new_modal_price
+        else:
+            modal_price = new_modal_price
+
+        if total_retries >= max_retries:
+            break
+
+    return min(15000,abs(int(math.floor(modal_price) / 5) * 5))
+
+def RandomizePrices(min_below=0.5, max_above=2, min_variance=10, keepFree=False):
+    priceList = {}
+    itemProcessor = RandomItemProcessor(replaceNames=False)
+    for item in itemProcessor.allItems:
+        if "$" in item.Name:
+            continue
+
+        if item.Price == 0 and keepFree:
+            randomised_price = 0
+        else:
+            randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
+                                       min_variance=min_variance)
+        priceList[item.Name] = randomised_price
+        price_diff = randomised_price/item.Price if item.Price > 0 else "!"
+        print(item.Name, randomised_price, price_diff)
+
+    return priceList

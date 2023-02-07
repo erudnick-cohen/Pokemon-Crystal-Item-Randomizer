@@ -1,0 +1,4 @@
+Name: Price Randomisation
+Description: Randomises price of items in shops.
+FlagsSet:
+    - Price Randomisation

@@ -17,8 +17,8 @@
             ]
         },
         "address_range": {
-            "begin": 494777,
-            "end": 494782,
+            "begin": 494784,
+            "end": 494789,
             "Offset": 3
         },
         "label": "Randomizer_StarterCyndaquilOffset4.ckir_BEFORE_STARTER1",
@@ -42,8 +42,8 @@
             ]
         },
         "address_range": {
-            "begin": 494843,
-            "end": 494848,
+            "begin": 494850,
+            "end": 494855,
             "Offset": 3
         },
         "label": "Randomizer_StarterTotodileOffset4.ckir_BEFORE_STARTER2",
@@ -67,8 +67,8 @@
             ]
         },
         "address_range": {
-            "begin": 494903,
-            "end": 494908,
+            "begin": 494910,
+            "end": 494915,
             "Offset": 3
         },
         "label": "Randomizer_StarterChikoritaOffset4.ckir_BEFORE_STARTER3",

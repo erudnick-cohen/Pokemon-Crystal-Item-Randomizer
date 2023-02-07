@@ -162,15 +162,15 @@
             "new": [
                 6,
                 10,
-                44,
+                41,
                 113,
                 43,
                 7
             ]
         },
         "address_range": {
-            "begin": 487607,
-            "end": 487613
+            "begin": 487604,
+            "end": 487610
         },
         "label": "ClefairyDance.ckir_BEFORE_timed_events_MOUNTMOON",
         "description": "Clefairy dance happens regardless of time/day"
@@ -186,13 +186,13 @@
             "new": [
                 10,
                 0,
-                13,
+                20,
                 116
             ]
         },
         "address_range": {
-            "begin": 504838,
-            "end": 504842
+            "begin": 504845,
+            "end": 504849
         },
         "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM",
         "description": "Remove happiness check for Sandstorm TM"

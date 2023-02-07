@@ -13,8 +13,8 @@
             ]
         },
         "address_range": {
-            "begin": 1631087,
-            "end": 1631090
+            "begin": 1631084,
+            "end": 1631087
         },
         "label": "Kurt1.ckir_BEFORE_KURTHOUSE_SKIPWAITGSBALL",
         "description": "Removes the wait for Kurt to work on the GS Ball"

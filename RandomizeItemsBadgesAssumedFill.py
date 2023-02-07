@@ -858,7 +858,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 
 											singleTrue = singleTrue and not (l in usedFlagsList and l not in inputFlags)
 
-										if "Warps" in inputFlags and not singleTrue:
+										if not singleTrue:
 											DebugLegality(toAllocate, locList[iter].Name, "SingleTrue:"+str(paths[0]))
 											legal = False
 										else:
@@ -1377,10 +1377,13 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	remainingItems = True
 	addedSublocations = {}
 
+
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
 		remainingItems = False
+		c = 0
 		for i in activeLoc:
-			if i.Name not in reachable and (i.isItem() or i.isGym()) \
+			c += 1
+			if i.Name not in reachable and not i.Dummy and (i.isItem() or i.isGym()) \
 					and "Impossible" not in i.FlagReqs and "Banned" not in i.FlagReqs: # Impossible means NEVER overwrite
 														# e.g. Not randomising Pokegear
 
@@ -1392,6 +1395,10 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				hasSilverLeaf = True
+
+			if "Unown" in i.Name:
+				print("nameprint", i.Name)
+			print("C=", c)
 
 			if i.Type == "Map" and "Banned" not in i.FlagReqs and "Impossible" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)

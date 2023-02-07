@@ -285,7 +285,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 	spoilerLoop = False
 	spoilerDetails = {}
-	spoilerTotal = 150
+	spoilerTotal = 200
 	spoilerCount = 0
 
 	if spoilerLoop:
@@ -494,6 +494,10 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		RandomizerRom.WriteSpecialWildToMemory(resultDict["Reachable"], resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(resultDict["Reachable"],resultDict["State"],addressData,romMap,trainerLVBoost,maxDist)
+
+	if "Price Randomisation" in flags:
+		itemPrices = RandomizeFunctions.RandomizePrices()
+		RandomizerRom.WriteItemPricesToMemory(addressData, romMap, itemPrices)
 
 	if hintConfig is not None and hintConfig.UseHints:
 		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(resultDict["Spoiler"].copy(), resultDict["Trash"].copy(), res_locations,

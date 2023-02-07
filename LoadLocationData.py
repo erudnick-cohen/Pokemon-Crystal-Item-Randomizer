@@ -576,7 +576,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = No
 					if "Warps" in flags:
 						nLoc.applyWarpLogic(flags)
 						#warpModifications = list(filter(lambda x: "Warpie" in x.Name, modifierDict))
-						nLoc.applyModifiers(modifierDict, flags)
+						nLoc.applyModifiers(modifierDict, flags, warpless=False)
 
 
 					LocationList.append(nLoc)
