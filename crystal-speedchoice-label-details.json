@@ -1919,8 +1919,8 @@
   {
     "label": "CianwoodPharmacist.ckir_BEFORE_CIANWOODPHARMACY_MART",
     "address_range": {
-      "begin": 647121,
-      "end": 647121
+      "begin": 647123,
+      "end": 647123
     },
     "integer_values": "",
     "hex_values": ""
@@ -1931,8 +1931,8 @@
       "begin": 647118,
       "end": 647121
     },
-    "integer_values": "9 209 95",
-    "hex_values": "$9 $d1 $5f"
+    "integer_values": "9 211 95",
+    "hex_values": "$9 $d3 $5f"
   },
   {
     "label": "CinnabarIslandHiddenRareCandy.ckir_BEFORECINNABARISLANDHIDDENRARECANDY0ITEMCODE",
@@ -17129,8 +17129,8 @@
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_MajorVersionNumber",
     "address_range": {
-      "begin": 1998855,
-      "end": 1998856
+      "begin": 1998856,
+      "end": 1998857
     },
     "integer_values": "7",
     "hex_values": "$7"
@@ -17138,8 +17138,8 @@
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_MinorVersionNumber",
     "address_range": {
-      "begin": 1998856,
-      "end": 1998857
+      "begin": 1998857,
+      "end": 1998858
     },
     "integer_values": "4",
     "hex_values": "$4"
@@ -17147,11 +17147,11 @@
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_RevisionVersionNumber",
     "address_range": {
-      "begin": 1998857,
-      "end": 1998858
+      "begin": 1998858,
+      "end": 1998859
     },
-    "integer_values": "9",
-    "hex_values": "$9"
+    "integer_values": "10",
+    "hex_values": "$a"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",

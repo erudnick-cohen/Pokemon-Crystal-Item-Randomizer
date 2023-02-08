@@ -229,9 +229,9 @@ Location:
         Sublocations:
 
     -
-        Name: Kenya Gate Item
+        Name: Kenya Gate
         FileName: Route35GoldenrodGate.asm
-        Type: Item
+        Type: Map
         HasPKMN: No
         WildTableList:
         LocationReqs: Goldenrod City
@@ -242,23 +242,39 @@ Location:
         ReachableReqs:
         WarpReqs:
             Goldenrod/Route 35 Gate
-        NormalItem: HP_UP
-        Code: |
-            RandyScript_questcomplete:
-                writetext Route35GoldenrodGateRandySomethingForYourTroubleText
-                promptbutton
-                ITEMLINE
-                iffalse RandyScript_bagfull
-                setevent EVENT_GOT_HP_UP_FROM_RANDY
-            RandyScript_gothpup:
-                writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
-                waitbutton
-            RandyScript_bagfull:
-                closetext
-                end
+        Code:
         Text:
         TrainerList:
         Sublocations:
+        -
+            Name: Kenya Gate Item
+            FileName: Route35GoldenrodGate.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod City
+            FlagReqs:
+                - Kenya Traded
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: HP_UP
+            Code: |
+                RandyScript_questcomplete:
+                    writetext Route35GoldenrodGateRandySomethingForYourTroubleText
+                    promptbutton
+                    ITEMLINE
+                    iffalse RandyScript_bagfull
+                    setevent EVENT_GOT_HP_UP_FROM_RANDY
+                RandyScript_gothpup:
+                    writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
+                    waitbutton
+                RandyScript_bagfull:
+                    closetext
+                    end
+            Text:
+            TrainerList:
+            Sublocations:
 
     -
         Name: Goldenrod Underground

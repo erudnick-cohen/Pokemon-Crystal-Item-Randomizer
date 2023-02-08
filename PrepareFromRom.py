@@ -77,9 +77,9 @@ if __name__ == '__main__':
     minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
     revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
 
-    majorRequired = int(majorVersion["integer_values"][0])
-    minorRequired = int(minorVersion["integer_values"][0])
-    revisionRequired = int(revisionVersion["integer_values"][0])
+    majorRequired = int(majorVersion["integer_values"])
+    minorRequired = int(minorVersion["integer_values"])
+    revisionRequired = int(revisionVersion["integer_values"])
 
     version_check = RandomizeFunctions.IsVersionSupported(majorRequired, minorRequired, revisionRequired)
     if not version_check:

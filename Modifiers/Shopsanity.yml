@@ -2,6 +2,7 @@ Name: Shopsanity
 Description: Adds shop items into logic.
 NewGamePatches:
     - 'Patches/ShopsAlways.json'
+    - 'Patches/CianwoodPharmacyShop.json'
 FlagsSet:
     - Shopsanity
 AddedItems:

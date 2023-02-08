@@ -1396,10 +1396,6 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				randomizedExtra[i.Name] = i.item
 				hasSilverLeaf = True
 
-			if "Unown" in i.Name:
-				print("nameprint", i.Name)
-			print("C=", c)
-
 			if i.Type == "Map" and "Banned" not in i.FlagReqs and "Impossible" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)
 				#print("Unable to reach::", i.Name)

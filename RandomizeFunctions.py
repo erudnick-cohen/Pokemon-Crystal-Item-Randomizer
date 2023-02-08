@@ -2391,9 +2391,9 @@ def CheckVersion(addressData, romMap):
         minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
         revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
 
-        majorRequired = int(majorVersion["integer_values"][0])
-        minorRequired = int(minorVersion["integer_values"][0])
-        revisionRequired = int(revisionVersion["integer_values"][0])
+        majorRequired = int(majorVersion["integer_values"])
+        minorRequired = int(minorVersion["integer_values"])
+        revisionRequired = int(revisionVersion["integer_values"])
 
         majorAddress = majorVersion["address_range"]["begin"]
         minorAddress = minorVersion["address_range"]["begin"]

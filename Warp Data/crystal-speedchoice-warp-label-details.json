@@ -137,8 +137,8 @@
   {
     "label": "BattleTower1F_MapEvents.cwri_BEFOREBATTLE__TOWER__1F_7_0_BATTLE__TOWER__ELEVATOR_1_2",
     "address_range": {
-      "begin": 652238,
-      "end": 652243
+      "begin": 652240,
+      "end": 652245
     },
     "integer_values": "0 7 1 22 13",
     "hex_values": "$0 $7 $1 $16 $d"
@@ -146,8 +146,8 @@
   {
     "label": "BattleTower1F_MapEvents.cwri_BEFOREBATTLE__TOWER__1F_7_9_BATTLE__TOWER__OUTSIDE_3_0",
     "address_range": {
-      "begin": 652228,
-      "end": 652233
+      "begin": 652230,
+      "end": 652235
     },
     "integer_values": "9 7 3 22 16",
     "hex_values": "$9 $7 $3 $16 $10"
@@ -155,8 +155,8 @@
   {
     "label": "BattleTower1F_MapEvents.cwri_BEFOREBATTLE__TOWER__1F_8_9_BATTLE__TOWER__OUTSIDE_4_1",
     "address_range": {
-      "begin": 652233,
-      "end": 652238
+      "begin": 652235,
+      "end": 652240
     },
     "integer_values": "9 8 4 22 16",
     "hex_values": "$9 $8 $4 $16 $10"
@@ -164,8 +164,8 @@
   {
     "label": "BattleTowerBattleRoom_MapEvents.cwri_BEFOREBATTLE__TOWER__BATTLE__ROOM_3_7_BATTLE__TOWER__HALLWAY_4_0",
     "address_range": {
-      "begin": 652606,
-      "end": 652611
+      "begin": 652608,
+      "end": 652613
     },
     "integer_values": "7 3 4 22 14",
     "hex_values": "$7 $3 $4 $16 $e"
@@ -173,8 +173,8 @@
   {
     "label": "BattleTowerBattleRoom_MapEvents.cwri_BEFOREBATTLE__TOWER__BATTLE__ROOM_4_7_BATTLE__TOWER__HALLWAY_4_1",
     "address_range": {
-      "begin": 652611,
-      "end": 652616
+      "begin": 652613,
+      "end": 652618
     },
     "integer_values": "7 4 4 22 14",
     "hex_values": "$7 $4 $4 $16 $e"
@@ -182,8 +182,8 @@
   {
     "label": "BattleTowerElevator_MapEvents.cwri_BEFOREBATTLE__TOWER__ELEVATOR_1_3_BATTLE__TOWER__HALLWAY_1_0",
     "address_range": {
-      "begin": 652708,
-      "end": 652713
+      "begin": 652710,
+      "end": 652715
     },
     "integer_values": "3 1 1 22 14",
     "hex_values": "$3 $1 $1 $16 $e"
@@ -191,8 +191,8 @@
   {
     "label": "BattleTowerElevator_MapEvents.cwri_BEFOREBATTLE__TOWER__ELEVATOR_2_3_BATTLE__TOWER__HALLWAY_1_1",
     "address_range": {
-      "begin": 652713,
-      "end": 652718
+      "begin": 652715,
+      "end": 652720
     },
     "integer_values": "3 2 1 22 14",
     "hex_values": "$3 $2 $1 $16 $e"
@@ -200,8 +200,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_11_1_BATTLE__TOWER__ELEVATOR_1_0",
     "address_range": {
-      "begin": 652863,
-      "end": 652868
+      "begin": 652865,
+      "end": 652870
     },
     "integer_values": "1 11 1 22 13",
     "hex_values": "$1 $b $1 $16 $d"
@@ -209,8 +209,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_13_0_BATTLE__TOWER__BATTLE__ROOM_1_4",
     "address_range": {
-      "begin": 652883,
-      "end": 652888
+      "begin": 652885,
+      "end": 652890
     },
     "integer_values": "0 13 1 22 12",
     "hex_values": "$0 $d $1 $16 $c"
@@ -218,8 +218,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_15_0_BATTLE__TOWER__BATTLE__ROOM_1_5",
     "address_range": {
-      "begin": 652888,
-      "end": 652893
+      "begin": 652890,
+      "end": 652895
     },
     "integer_values": "0 15 1 22 12",
     "hex_values": "$0 $f $1 $16 $c"
@@ -227,8 +227,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_5_0_BATTLE__TOWER__BATTLE__ROOM_1_1",
     "address_range": {
-      "begin": 652868,
-      "end": 652873
+      "begin": 652870,
+      "end": 652875
     },
     "integer_values": "0 5 1 22 12",
     "hex_values": "$0 $5 $1 $16 $c"
@@ -236,8 +236,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_7_0_BATTLE__TOWER__BATTLE__ROOM_1_2",
     "address_range": {
-      "begin": 652873,
-      "end": 652878
+      "begin": 652875,
+      "end": 652880
     },
     "integer_values": "0 7 1 22 12",
     "hex_values": "$0 $7 $1 $16 $c"
@@ -245,8 +245,8 @@
   {
     "label": "BattleTowerHallway_MapEvents.cwri_BEFOREBATTLE__TOWER__HALLWAY_9_0_BATTLE__TOWER__BATTLE__ROOM_1_3",
     "address_range": {
-      "begin": 652878,
-      "end": 652883
+      "begin": 652880,
+      "end": 652885
     },
     "integer_values": "0 9 1 22 12",
     "hex_values": "$0 $9 $1 $16 $c"
@@ -254,8 +254,8 @@
   {
     "label": "BattleTowerOutside_MapEvents.cwri_BEFOREBATTLE__TOWER__OUTSIDE_8_21_ROUTE__40__BATTLE__TOWER__GATE_3_0",
     "address_range": {
-      "begin": 654191,
-      "end": 654196
+      "begin": 654193,
+      "end": 654198
     },
     "integer_values": "21 8 3 22 15",
     "hex_values": "$15 $8 $3 $16 $f"
@@ -263,8 +263,8 @@
   {
     "label": "BattleTowerOutside_MapEvents.cwri_BEFOREBATTLE__TOWER__OUTSIDE_8_9_BATTLE__TOWER__1F_1_2",
     "address_range": {
-      "begin": 654201,
-      "end": 654206
+      "begin": 654203,
+      "end": 654208
     },
     "integer_values": "9 8 1 22 11",
     "hex_values": "$9 $8 $1 $16 $b"
@@ -272,8 +272,8 @@
   {
     "label": "BattleTowerOutside_MapEvents.cwri_BEFOREBATTLE__TOWER__OUTSIDE_9_21_ROUTE__40__BATTLE__TOWER__GATE_4_1",
     "address_range": {
-      "begin": 654196,
-      "end": 654201
+      "begin": 654198,
+      "end": 654203
     },
     "integer_values": "21 9 4 22 15",
     "hex_values": "$15 $9 $4 $16 $f"
@@ -281,8 +281,8 @@
   {
     "label": "BattleTowerOutside_MapEvents.cwri_BEFOREBATTLE__TOWER__OUTSIDE_9_9_BATTLE__TOWER__1F_2_3",
     "address_range": {
-      "begin": 654206,
-      "end": 654211
+      "begin": 654208,
+      "end": 654213
     },
     "integer_values": "9 9 2 22 11",
     "hex_values": "$9 $9 $2 $16 $b"
@@ -1775,8 +1775,8 @@
   {
     "label": "CianwoodLugiaSpeechHouse_MapEvents.cwri_BEFORECIANWOOD__LUGIA__SPEECH__HOUSE_2_7_CIANWOOD__CITY_6_0",
     "address_range": {
-      "begin": 647995,
-      "end": 648000
+      "begin": 647997,
+      "end": 648002
     },
     "integer_values": "7 2 6 22 3",
     "hex_values": "$7 $2 $6 $16 $3"
@@ -1784,8 +1784,8 @@
   {
     "label": "CianwoodLugiaSpeechHouse_MapEvents.cwri_BEFORECIANWOOD__LUGIA__SPEECH__HOUSE_3_7_CIANWOOD__CITY_6_1",
     "address_range": {
-      "begin": 648000,
-      "end": 648005
+      "begin": 648002,
+      "end": 648007
     },
     "integer_values": "7 3 6 22 3",
     "hex_values": "$7 $3 $6 $16 $3"
@@ -1793,8 +1793,8 @@
   {
     "label": "CianwoodPharmacy_MapEvents.cwri_BEFORECIANWOOD__PHARMACY_2_7_CIANWOOD__CITY_4_0",
     "address_range": {
-      "begin": 647367,
-      "end": 647372
+      "begin": 647369,
+      "end": 647374
     },
     "integer_values": "7 2 4 22 3",
     "hex_values": "$7 $2 $4 $16 $3"
@@ -1802,8 +1802,8 @@
   {
     "label": "CianwoodPharmacy_MapEvents.cwri_BEFORECIANWOOD__PHARMACY_3_7_CIANWOOD__CITY_4_1",
     "address_range": {
-      "begin": 647372,
-      "end": 647377
+      "begin": 647374,
+      "end": 647379
     },
     "integer_values": "7 3 4 22 3",
     "hex_values": "$7 $3 $4 $16 $3"
@@ -1811,8 +1811,8 @@
   {
     "label": "CianwoodPhotoStudio_MapEvents.cwri_BEFORECIANWOOD__PHOTO__STUDIO_2_7_CIANWOOD__CITY_5_0",
     "address_range": {
-      "begin": 647585,
-      "end": 647590
+      "begin": 647587,
+      "end": 647592
     },
     "integer_values": "7 2 5 22 3",
     "hex_values": "$7 $2 $5 $16 $3"
@@ -1820,8 +1820,8 @@
   {
     "label": "CianwoodPhotoStudio_MapEvents.cwri_BEFORECIANWOOD__PHOTO__STUDIO_3_7_CIANWOOD__CITY_5_1",
     "address_range": {
-      "begin": 647590,
-      "end": 647595
+      "begin": 647592,
+      "end": 647597
     },
     "integer_values": "7 3 5 22 3",
     "hex_values": "$7 $3 $5 $16 $3"
@@ -6239,8 +6239,8 @@
   {
     "label": "PokeSeersHouse_MapEvents.cwri_BEFOREPOKE__SEERS__HOUSE_2_7_CIANWOOD__CITY_7_0",
     "address_range": {
-      "begin": 648070,
-      "end": 648075
+      "begin": 648072,
+      "end": 648077
     },
     "integer_values": "7 2 7 22 3",
     "hex_values": "$7 $2 $7 $16 $3"
@@ -6248,8 +6248,8 @@
   {
     "label": "PokeSeersHouse_MapEvents.cwri_BEFOREPOKE__SEERS__HOUSE_3_7_CIANWOOD__CITY_7_1",
     "address_range": {
-      "begin": 648075,
-      "end": 648080
+      "begin": 648077,
+      "end": 648082
     },
     "integer_values": "7 3 7 22 3",
     "hex_values": "$7 $3 $7 $16 $3"
@@ -7922,8 +7922,8 @@
   {
     "label": "Route40BattleTowerGate_MapEvents.cwri_BEFOREROUTE__40__BATTLE__TOWER__GATE_4_0_BATTLE__TOWER__OUTSIDE_1_2",
     "address_range": {
-      "begin": 653368,
-      "end": 653373
+      "begin": 653370,
+      "end": 653375
     },
     "integer_values": "0 4 1 22 16",
     "hex_values": "$0 $4 $1 $16 $10"
@@ -7931,8 +7931,8 @@
   {
     "label": "Route40BattleTowerGate_MapEvents.cwri_BEFOREROUTE__40__BATTLE__TOWER__GATE_4_7_ROUTE__40_1_0",
     "address_range": {
-      "begin": 653358,
-      "end": 653363
+      "begin": 653360,
+      "end": 653365
     },
     "integer_values": "7 4 1 22 1",
     "hex_values": "$7 $4 $1 $16 $1"
@@ -7940,8 +7940,8 @@
   {
     "label": "Route40BattleTowerGate_MapEvents.cwri_BEFOREROUTE__40__BATTLE__TOWER__GATE_5_0_BATTLE__TOWER__OUTSIDE_2_3",
     "address_range": {
-      "begin": 653373,
-      "end": 653378
+      "begin": 653375,
+      "end": 653380
     },
     "integer_values": "0 5 2 22 16",
     "hex_values": "$0 $5 $2 $16 $10"
@@ -7949,8 +7949,8 @@
   {
     "label": "Route40BattleTowerGate_MapEvents.cwri_BEFOREROUTE__40__BATTLE__TOWER__GATE_5_7_ROUTE__40_1_1",
     "address_range": {
-      "begin": 653363,
-      "end": 653368
+      "begin": 653365,
+      "end": 653370
     },
     "integer_values": "7 5 1 22 1",
     "hex_values": "$7 $5 $1 $16 $1"

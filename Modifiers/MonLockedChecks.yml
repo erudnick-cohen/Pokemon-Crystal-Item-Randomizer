@@ -4,6 +4,7 @@ FlagsSet:
     - Mon Locked Checks
 NewGamePatches:
     - 'Patches/NiceMonLockedChecks.json'
+    - 'Patches/ElmsLabMonLockedChecks.json'
 Changes:
     -
         Location: Mon Locked Checks

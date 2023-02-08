@@ -104,6 +104,11 @@ Changes:
         AddRecommendedFlagReqs:
             - Rocket Invasion
 
+    -
+        Location: Route 25 Trainer Gauntlet
+        AddRecommendedFlagReqs:
+            - Rocket Invasion
+
 IncompatibleWithout:
     - 'Warps'
 
