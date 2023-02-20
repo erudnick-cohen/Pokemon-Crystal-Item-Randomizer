@@ -7,7 +7,6 @@ import copy
 import time
 
 import RandomizeFunctions
-
 def DebugLegality(toAllocate, location, input1):
 	DEBUG_LEGALITY = False
 	if DEBUG_LEGALITY:
@@ -247,6 +246,10 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	#locList = copy.deepcopy(locList_base)
 
 	allocatedList = []
+
+	#print("Trash count:", len(trashItems))
+	#trashItems.sort()
+	#print(trashItems)
 
 	#define set of badges
 	badgeSet = list(sorted(badgeData.keys()))
@@ -1069,6 +1072,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 			random.shuffle(trashItems)
 
 
+	#print("Trashcount2:", len(trashItems))
+
 	# Due to changes to items, such as becoming items from banlist, do deep copy?
 	activeLoc = copy.deepcopy(locationTree)
 	goalReached = False
@@ -1333,6 +1338,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 			stuckCount = stuckCount+1
 		else:
 			stuckCount = 0
+
+
+	#TODO Add a warning here
+	if len(trashItems) != 0:
+		print("leftover trash:", trashItems)
 
 	if failed:
 		raise Exception('Failed mapping due to item requirement seed!')

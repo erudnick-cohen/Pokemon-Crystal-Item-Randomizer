@@ -507,7 +507,13 @@ class Location:
 			include = False
 		if "Possible Sale" in self.FlagReqs and "Phone Call Trainers" not in flags:
 			include = False
+		if "Game Corner Access" in self.FlagReqs and "Game Corner Items" not in flags:
+			include = False
+		if "Buena Access" in self.FlagReqs and "Buena Items" not in flags:
+			include = False
 		if "Impossible" in self.FlagReqs:
+			include = False
+		if self.Dummy:
 			include = False
 
 		if include:

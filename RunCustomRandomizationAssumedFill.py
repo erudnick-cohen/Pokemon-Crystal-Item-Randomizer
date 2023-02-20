@@ -66,6 +66,11 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 		for ind in range(0, len(res_removed_items)):
 			# TODO Add check to NOT remove critical trash or DO NOT REPLACE items
 			# Unless you HAVE to
+
+			itemAtIndex = res_removed_items[ind]
+			if not itemAtIndex.isItem() or itemAtIndex.Dummy:
+				continue
+
 			remove = True
 			while remove:
 				remove = False
@@ -86,8 +91,11 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 					elif removing_item in dontReplace:
 						remove = True
 						unreplaced_items.append(removing_item)
+					else:
+						print("remove:", removing_item)
 				else:
 					removed_item = unreplaced_items.pop()
+
 		trashItems.extend(unreplaced_items)
 
 	return trashItems
@@ -420,7 +428,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 
 				completeResult = completeResult and CheckForE4Reachable(resultDict)
 
+				#reachableItems = [i.Name.replace(" ", "_") for i in resultDict["Reachable"].values()
+				#				  if (i.isItem() or i.isGym()) and not i.Dummy]
+				#reachableItems.sort()
+				#print(reachableItems)
+
+
 				if completeResult and spoilerLoop:
+
 					for s in resultDict["Spoiler"].keys():
 						s_value = resultDict["Spoiler"][s]
 						if s not in spoilerDetails[s_value]:

@@ -1,6 +1,7 @@
 import shutil
 import sys
 
+import FileOperations
 import RandomizeFunctions
 import RandomizerGUI
 import time
@@ -22,7 +23,6 @@ import os
 import zlib
 import Version
 
-DEFAULT_MODIFIERS_DIRECTORY = "Modifiers"
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -501,7 +501,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.updateModListView()
 
 	def loadModifier(self):
-		modfiles = QFileDialog.getOpenFileNames(directory = DEFAULT_MODIFIERS_DIRECTORY)[0]
+		modfiles = QFileDialog.getOpenFileNames(directory = FileOperations.DEFAULT_MODIFIERS_DIRECTORY)[0]
 		if len(modfiles) > 0:
 			for modfile in modfiles:
 				yamlfile = open(modfile)
@@ -584,9 +584,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		for i in modifiersList:
 			fileToLoad = i
 			if not os.path.isfile(i):
-				modifiersDirectory = DEFAULT_MODIFIERS_DIRECTORY
 				filepart = i.split("/")[-1]
-				fileToLoad = self.findFileWithinDirectory(filepart, modifiersDirectory)
+				fileToLoad = FileOperations.FindModifier(filepart)
 
 			if fileToLoad is not None:
 				yamlfile = open(fileToLoad)

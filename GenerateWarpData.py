@@ -5,6 +5,7 @@ import mmap
 
 import yaml
 
+import FileOperations
 import LoadLocationData
 import RandomizeFunctions
 import Static
@@ -164,12 +165,17 @@ def InterpretWarpChanges(file):
 
     newModData = []
 
-    for mod in addModifiers:
-        yamlfile = open(mod)
-        yamltext = yamlfile.read()
 
-        loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
-        newModData.append(loadedYaml)
+
+    for mod in addModifiers:
+        fileToLoad = FileOperations.FindModifier(mod)
+        if fileToLoad is not None:
+            yamlfile = open(fileToLoad)
+            yamltext = yamlfile.read()
+            loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
+            newModData.append(loadedYaml)
+        else:
+            raise Exception("Cannot find modifier: "+mod)
 
 
     return newModData

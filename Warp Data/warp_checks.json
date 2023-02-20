@@ -7,7 +7,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/HoOhAlwaysAvailable.yml"
+          "HoOhAlwaysAvailable.yml"
         ]
       }
   },
@@ -20,7 +20,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/RemoveFlashLogic.yml"
+          "RemoveFlashLogic.yml"
         ]
       }
   },
@@ -33,7 +33,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/SlowpokeWellOpen.yml"
+          "SlowpokeWellOpen.yml"
         ]
       }
   },
@@ -61,7 +61,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/WanderingInvadingRockets.yml"
+          "WanderingInvadingRockets.yml"
         ]
       }
   },
@@ -74,7 +74,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/DirectorTunnel.yml"
+          "DirectorTunnel.yml"
         ]
       }
   },
@@ -82,12 +82,12 @@
   {
     "FriendlyName": "Department Store Door",
     "LabelName": "ckir_BEFORE_director_card_key_door_DEPTSTOREB1F",
-    "ExpectedOffValues": [49, 74, 0],
+    "ExpectedOffValues": [49, 87, 1],
     "ExpectedOnValues": [49, 9, 7],
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/GoldenrodDeptStoreBasementDoor.yml"
+          "GoldenrodDeptStoreBasementDoor.yml"
         ]
       }
   },
@@ -100,7 +100,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/DontReplaceAideItem.yml"
+          "DontReplaceAideItem.yml"
         ]
       }
   },
@@ -113,7 +113,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/Route32AccessFromViolet.yml"
+          "Route32AccessFromViolet.yml"
         ]
       }
   },
@@ -126,7 +126,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/Route44AccessFromMahogany.yml"
+          "Route44AccessFromMahogany.yml"
         ]
       }
   },
@@ -139,7 +139,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/BasementKeyDoorOpen.yml"
+          "BasementKeyDoorOpen.yml"
         ]
       }
   },
@@ -152,7 +152,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/RightGateGuardAbsent.yml"
+          "RightGateGuardAbsent.yml"
         ]
       }
   },
@@ -165,7 +165,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/RuinsOfAlphLedges.yml"
+          "RuinsOfAlphLedges.yml"
         ]
       }
   },
@@ -178,7 +178,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/VictoryRoadHall2.yml"
+          "VictoryRoadHall2.yml"
         ]
       }
   },
@@ -191,7 +191,7 @@
     "ModifierChanges":
       {
         "Add": [
-          "Modifiers/Auto/BlackthornCityMapChanges.yml"
+          "BlackthornCityMapChanges.yml"
         ]
       }
   },
@@ -204,7 +204,7 @@
     "ModifierChanges":
     {
       "Add": [
-        "Modifiers/Auto/VermilionCityMapChanges.yml"
+        "VermilionCityMapChanges.yml"
       ]
     }
   },
@@ -217,7 +217,7 @@
     "ModifierChanges":
     {
       "Add": [
-        "Modifiers/Auto/IcePathBouldersRemoved.yml"
+        "IcePathBouldersRemoved.yml"
       ]
     }
   }

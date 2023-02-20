@@ -1989,6 +1989,7 @@ Location:
             Name: GS Ball Backup
             FileName: GoldenrodPokecenter1F.asm
             Type: Item
+            Dummy: Yes
             HasPKMN: No
             WildTableList:
             LocationReqs: GS Ball
