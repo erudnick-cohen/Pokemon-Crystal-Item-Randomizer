@@ -1,9 +1,0 @@
-Name: Warps
-Description: Reads the warps automatically in the rom and enables warp logic. Requires running through a warp randomiser before item rando. Recommended to use and review Warps Pack.
-FlagsSet:
-    - Warps
-Changes:
-    -
-        Location: Warps
-        RemoveFlagReqs:
-            - Banned

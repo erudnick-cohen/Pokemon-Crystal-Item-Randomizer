@@ -1,0 +1,4 @@
+Name: Director Door
+Description: Director Door able to open upon speaking to the director, even pre 7 Badges.
+NewGamePatches:
+    - 'Patches/DirectorDoorPre7Badges.json'

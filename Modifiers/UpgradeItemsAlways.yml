@@ -1,4 +1,0 @@
-Name: Upgrade Items Always
-Description: Ensures other modifiers are set to 100% item replacement
-FlagsSet:
-    - Always Upgrade

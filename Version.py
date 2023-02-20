@@ -1,5 +1,5 @@
 def GetItemRandoVersion():
-    return "7.1.13"
+    return "7.1.14"
 
 def GetSupportedSpeedchoiceVersion():
-    return [7,4,10]
+    return [7,4,11]

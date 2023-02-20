@@ -17,7 +17,7 @@ GoldenrodDeptStoreB1F_MapScripts:
 
 .ClearBoxes:
 .ckir_BEFORE_director_card_key_door_DEPTSTOREB1F::
-	checkevent EVENT_RECEIVED_CARD_KEY
+	checkevent EVENT_MET_UNDERGROUND_DIRECTOR
 .ckir_AFTER_director_card_key_door_DEPTSTOREB1F::
 	iftrue .GotCardKey
 	sjump .Continue

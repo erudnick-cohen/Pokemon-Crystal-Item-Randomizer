@@ -92,8 +92,8 @@ def removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items):
 
 	return trashItems
 
-def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-					 newItems, maybeNewItems, maybeRemoveItems, dontReplace):
+def ProcessModifiers(modifiers, flags, inputVariables, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+					 newItems, maybeNewItems, maybeRemoveItems, dontReplace, disabledPatches):
 	for i in modifiers:
 		#print(i)
 		if 'FlagsSet' in i:
@@ -122,6 +122,13 @@ def ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedP
 			maybeRemoveItems.extend(i["MaybeRemoveItems"])
 		if 'DontReplace' in i:
 			dontReplace.extend(i['DontReplace'])
+		if 'VariablesSet' in i:
+			for variableItem in i["VariablesSet"]:
+				for variable in variableItem.keys():
+					inputVariables[variable] = variableItem[variable]
+		if 'DisablePatches' in i:
+			for patch in i["DisablePatches"]:
+				disabledPatches.append(patch)
 
 
 class PriorityObject:
@@ -164,6 +171,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	dontReplace = []
 	addedProgressList = []
 	maybeRemoveItems = []
+	disabledPatches = []
+	inputVariables = {}
 
 	yamlfile = open(Static.default_labels_file, encoding='utf-8')
 	yamltext = yamlfile.read()
@@ -179,14 +188,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if not version_check:
 		return None
 
-	ProcessModifiers(modifiers, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-						 newItems, maybeNewItems, maybeRemoveItems, dontReplace)
+	ProcessModifiers(modifiers, flags, inputVariables, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, maybeRemoveItems, dontReplace, disabledPatches)
 
 	if "Warps" in flags:
 		mod_changes = GenerateWarpData.InterpretWarpChanges(romPath)
 
-		ProcessModifiers(mod_changes, flags, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
-						 newItems, maybeNewItems, maybeRemoveItems, dontReplace)
+		ProcessModifiers(mod_changes, flags, inputVariables, changeListDict, requiredItemsCopy, addedProgressList, extraTrash, patchList,
+						 newItems, maybeNewItems, maybeRemoveItems, dontReplace, disabledPatches)
 
 	#print(changeListDict)
 	badgeRandoCheck = not "BadgeItemShuffle" in otherSettings
@@ -194,8 +203,18 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if "Warps" in flags:
 		GenerateWarpData.interpretDataForRandomisedRom(romPath)
 
-		warpOutput = "Warp Data/warp-output.tsv"
-		warpTSVData = LoadLocationData.readTSVFile(warpOutput)
+		#warpOutput = "Warp Data/warp-output.tsv"
+		#warpTSVData = LoadLocationData.readTSVFile(warpOutput)
+
+	for disablePatch in disabledPatches:
+		removing = []
+		for patch in patchList:
+			if patch["description"] == disablePatch:
+				removing.append(patch)
+
+		for remove in removing:
+			patchList.remove(remove)
+
 
 
 
@@ -376,9 +395,9 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			rBadgeList = []
 			for i in BadgeDict:
 				rBadgeList.append(i)
-			print(BadgeDict)
+			#print(BadgeDict)
 			resultDict = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed,
-															 inputFlags = flags, reqBadges = rBadgeList, plandoPlacements = plandoPlacements,
+															 inputFlags = flags, inputVariables = inputVariables, reqBadges = rBadgeList, plandoPlacements = plandoPlacements,
 															 coreProgress = coreProgress, dontReplace = dontReplace, badgeShuffle=badgeShuffle)
 
 			if goal not in resultDict["Reachable"]:
@@ -487,17 +506,40 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance
 
-	RandomizerRom.DirectWriteItemLocations(resultDict["Reachable"].values(), addressData,romMap,'Progressive Rods' in flags)
+	locations_list = resultDict["Reachable"].values()
+
+	RandomizerRom.DirectWriteItemLocations(locations_list, addressData,romMap,'Progressive Rods' in flags)
 	if adjustRegularWildLevels:
-		RandomizerRom.WriteWildLevelsToMemory(resultDict["Reachable"], resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
+		RandomizerRom.WriteWildLevelsToMemory(locations_list, resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
 	if adjustSpecialWildLevels:
-		RandomizerRom.WriteSpecialWildToMemory(resultDict["Reachable"], resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
+		RandomizerRom.WriteSpecialWildToMemory(locations_list, resultDict["State"],addressData,romMap,wildLVBoost,maxDist)
 	if adjustTrainerLevels:
-		RandomizerRom.WriteTrainerDataToMemory(resultDict["Reachable"],resultDict["State"],addressData,romMap,trainerLVBoost,maxDist)
+		RandomizerRom.WriteTrainerDataToMemory(locations_list,resultDict["State"],addressData,romMap,trainerLVBoost,maxDist)
 
 	if "Price Randomisation" in flags:
-		itemPrices = RandomizeFunctions.RandomizePrices()
+		priceSettings = {
+			"min_below": 0.5,
+			"max_above": 2,
+			"min_variance": 0,
+			"keep_free": False
+		}
+
+		if "MinBelow" in inputVariables:
+			priceSettings["min_below"] = inputVariables["MinBelow"]
+		if "MaxAbove" in inputVariables:
+			priceSettings["max_above"] = inputVariables["MaxAbove"]
+		if "MinVariance" in inputVariables:
+			priceSettings["min_variance"] = inputVariables["MinVariance"]
+		if "KeepFree" in inputVariables:
+			priceSettings["keep_free"] = inputVariables["KeepFree"]
+
+		itemPrices = RandomizeFunctions.RandomizePrices(priceSettings, locations_list)
 		RandomizerRom.WriteItemPricesToMemory(addressData, romMap, itemPrices)
+
+		RandomizerRom.WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations_list)
+
+		# Handle hard-coded prices
+
 
 	if hintConfig is not None and hintConfig.UseHints:
 		hint_desc, locationList = RandomizeFunctions.GenerateHintMessages(resultDict["Spoiler"].copy(), resultDict["Trash"].copy(), res_locations,

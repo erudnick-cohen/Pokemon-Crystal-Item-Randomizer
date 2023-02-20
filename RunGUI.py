@@ -22,6 +22,7 @@ import os
 import zlib
 import Version
 
+DEFAULT_MODIFIERS_DIRECTORY = "Modifiers"
 
 class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def __init__(self, parent=None):
@@ -352,7 +353,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 			QtWidgets.QMessageBox.about(self, successBoxName, successMessage)
 			_translate = QtCore.QCoreApplication.translate
-		except Exception:
+		except:
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage(''.join(traceback.format_exc()))
 			error_dialog.exec_()
@@ -481,9 +482,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
 
 				if 'Modifiers' in loadedYaml:
-					for mod in loadedYaml['Modifiers']:
-						if mod not in modifiersToLoad and mod not in currentModifierFiles:
-							modifiersToLoad.append(mod)
+					self.loadModifiers(loadedYaml['Modifiers'], reset=False)
 
 			for mod in modifiersToLoad:
 				if os.path.isfile(mod):
@@ -502,7 +501,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.updateModListView()
 
 	def loadModifier(self):
-		modfiles = QFileDialog.getOpenFileNames(directory = 'Modifiers')[0]
+		modfiles = QFileDialog.getOpenFileNames(directory = DEFAULT_MODIFIERS_DIRECTORY)[0]
 		if len(modfiles) > 0:
 			for modfile in modfiles:
 				yamlfile = open(modfile)
@@ -564,6 +563,42 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		return safeFile
 
 
+	def findFileWithinDirectory(self, name, directory):
+		files = os.listdir(directory)
+		for file in files:
+			path_full = directory + "/" + file
+			if os.path.isdir(path_full):
+				found = self.findFileWithinDirectory(name, path_full)
+				if found is not None:
+					return found
+			elif os.path.isfile(path_full):
+				if name == file:
+					return path_full
+
+		return None
+
+
+	def loadModifiers(self, modifiersList, reset=True):
+		if reset:
+			self.modList = []
+		for i in modifiersList:
+			fileToLoad = i
+			if not os.path.isfile(i):
+				modifiersDirectory = DEFAULT_MODIFIERS_DIRECTORY
+				filepart = i.split("/")[-1]
+				fileToLoad = self.findFileWithinDirectory(filepart, modifiersDirectory)
+
+			if fileToLoad is not None:
+				yamlfile = open(fileToLoad)
+				yamltext = yamlfile.read()
+				self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
+				self.modList[-1]['fileName'] = self.makeFileNameSafe(fileToLoad)
+			else:
+				error_dialog = QtWidgets.QErrorMessage()
+				error_dialog.showMessage('Modifier not found:' + "\n" + i)
+				error_dialog.exec_()
+
+
 	def loadSettings(self, settingsFile):
 		_translate = QtCore.QCoreApplication.translate
 
@@ -578,17 +613,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		yamltext = yamlfile.read()
 		patches = json.loads(yamltext)
 		modFileList = settings['DefaultModifiers']
-		self.modList = []
-		for i in modFileList:
-			if os.path.isfile(i):
-				yamlfile = open(i)
-				yamltext = yamlfile.read()
-				self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
-				self.modList[-1]['fileName'] = self.makeFileNameSafe(i)
-			else:
-				error_dialog = QtWidgets.QErrorMessage()
-				error_dialog.showMessage('Modifier not found:' + "\n" + i)
-				error_dialog.exec_()
+		self.loadModifiers(modFileList)
 		self.updateModListView()
 		self.CurentSettings.setText(_translate("MainWindow", settings['Name']))
 		self.SettingsDescription.setText(_translate("MainWindow", settings['Description']))

@@ -353,9 +353,9 @@ Location:
                 TrainerList:
                 Sublocations:
             -
-                Name: Buena Item
+                Name: Radio Tower 2F
                 FileName: RadioTower2F.asm
-                Type: Item
+                Type: Map
                 HasPKMN: No
                 WildTableList:
                 LocationReqs: Radio Tower
@@ -363,19 +363,188 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: BLUE_CARD
-                Code: |
-                    .Introduction:
-                        writetext RadioTower2FBuenaShowIntroductionText
-                        promptbutton
-                        setevent EVENT_MET_BUENA
-                        ITEMLINE
-                        iffalse .TuneIn
-                        setevent EVENT_GOT_BLUE_CARD
+                Code:
                 Text:
                 TrainerList:
-                Sublocations:
                 WarpReqs: Radio Tower 2F
+                Sublocations:
+                    -
+                        Name: Buena Item
+                        FileName: RadioTower2F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: BLUE_CARD
+                        Code: |
+                            .Introduction:
+                                writetext RadioTower2FBuenaShowIntroductionText
+                                promptbutton
+                                setevent EVENT_MET_BUENA
+                                ITEMLINE
+                                iffalse .TuneIn
+                                setevent EVENT_GOT_BLUE_CARD
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Ultra Ball
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ULTRA_BALL
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Full Restore
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Nugget
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: NUGGET
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Rare Candy
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: RARE_CANDY
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Protein
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: PROTEIN
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Iron
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: IRON
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Carbos
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: CARBOS
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Calcium
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: CALCIUM
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop HP Up
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: HP_UP
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
             -
                 Name: Radio Card Quiz Access
                 FileName: RadioTower1F.asm

@@ -2,3 +2,8 @@ Name: Price Randomisation
 Description: Randomises price of items in shops.
 FlagsSet:
     - Price Randomisation
+VariablesSet:
+    - MinBelow: 0.5
+    - MaxAbove: 2
+    - MinVariance: 0
+    - KeepFree: No

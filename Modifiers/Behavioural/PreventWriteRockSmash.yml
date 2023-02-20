@@ -1,0 +1,4 @@
+Name: Prevent Write Rock Smash
+Description: Usually, rock smash TM is force written to ensure completion, in case UPR setting is used. Use this modifier to have as another random TM via UPR. Use at your own risk.
+DisablePatches:
+    - Replaces TM08 with Rock Smash, should UPR change it

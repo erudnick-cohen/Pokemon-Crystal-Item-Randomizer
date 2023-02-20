@@ -1,0 +1,13 @@
+Name: Game Corner
+Description: Adds Game Corner items into logic.
+AddedItems:
+    - Coin Case
+MaybeRemoveItems:
+    - COIN_CASE
+FlagsSet:
+    - Game Corner Items
+Changes:
+-
+        Location: Game Corner Items
+        RemoveFlagReqs:
+            - Banned

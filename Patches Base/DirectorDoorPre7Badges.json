@@ -1,0 +1,8 @@
+[{"integer_values":
+{"old": [10, 28, 90],
+  "new": [9, "ckir_BEFORE_DirectorText", null]},
+  "address_range": {"begin": 71341, "end": 71342},
+  "label": "GoldenrodUndergroundWarehouseDirectorScript.ckir_BEFORE_OpenDirectorDoorPreBadges",
+  "description": "Enable the doorway after talking to the underground director, even below 7 Badges"
+}
+]

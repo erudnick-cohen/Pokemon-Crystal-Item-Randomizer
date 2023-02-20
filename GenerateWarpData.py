@@ -145,9 +145,11 @@ def InterpretWarpChanges(file):
             if not isOn and not isOff:
                 print("Error: Neither on nor off")
                 print(expectedOnValues, expectedOffValues, expectedOnValuesFix, lookValues)
+                raise Exception("Issue with automatic warp detection!")
             elif isOn and isOff:
                 print("On AND Off... broken!")
                 print(expectedOnValues, expectedOffValues)
+                # TODO Should generate a warning
             elif isOn:
                 print("On")
                 modifierChanges = check["ModifierChanges"]

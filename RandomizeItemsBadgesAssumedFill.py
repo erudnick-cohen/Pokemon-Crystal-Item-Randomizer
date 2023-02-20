@@ -216,7 +216,7 @@ def GetWarpGroupsSets(locList, inputFlags):
 	return warpSets
 
 
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=None, reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, seed, inputFlags=None, inputVariables=None, reqBadges = { 'Zephyr Badge', 'Fog Badge', 'Hive Badge', 'Plain Badge', 'Storm Badge', 'Glacier Badge', 'Rising Badge'},
 				   coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
 				   allPossibleFlags = ['Johto Mode','Kanto Mode'],
 				   plandoPlacements = {},
@@ -225,6 +225,8 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		dontReplace = []
 	if inputFlags is None:
 		inputFlags = []
+	if inputVariables is None:
+		inputVariables = {}
 
 	monReqItems = ['ENGINE_POKEDEX','COIN_CASE', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD']
 
@@ -552,6 +554,11 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				elif not badgeShuffle and toAllocate not in badgeSet and locList[iter].IsActuallyGym:
 					placeable = False
 
+				if "RerollShopPercent" in inputVariables and locList[iter].IsShop:
+					random_value = random.random()
+					if random_value % 100 <= inputVariables["RerollShopPercent"]:
+						placeable = False
+
 				#if placeable and not badgeShuffle and toAllocate in badgeSet:
 				#	print("Attempt:", locList[iter].Name, toAllocate)
 
@@ -572,7 +579,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				##print(locList[iter].Type)
 				#all locations are now the same!
 				if((locList[iter].Type == 'Item' or locList[iter].Type == 'Gym' \
-					or locList[iter].isShop()) and placeable):
+					or locList[iter].isShop() or locList[iter].Type == "Prize" or locList[iter].Type == "Vending Machine" ) and placeable):
 					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
 					#do any of its dependencies depend on this item/badge?
 					randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
@@ -1380,9 +1387,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 	while ("SilverLeafDebug" in inputFlags) and remainingItems:
 		remainingItems = False
-		c = 0
 		for i in activeLoc:
-			c += 1
 			if i.Name not in reachable and not i.Dummy and (i.isItem() or i.isGym()) \
 					and "Impossible" not in i.FlagReqs and "Banned" not in i.FlagReqs: # Impossible means NEVER overwrite
 														# e.g. Not randomising Pokegear

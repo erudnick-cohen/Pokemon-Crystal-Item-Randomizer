@@ -1,9 +1,0 @@
-Name: No Double Dipping - Route 2
-Description: "Add logic to prevent going to Route 2 without the ability to use Cut"
-Changes:
-    -
-        Location: Diglett's Cave
-        AddRecommendedItemReqs:
-            - Cut
-        AddRecommendedFlagReqs:
-            - Hive Badge

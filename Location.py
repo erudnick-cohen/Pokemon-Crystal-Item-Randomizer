@@ -44,9 +44,20 @@ class Location:
 			self.IsItem = True
 			self.IsShop = True
 			self.IsBargainShop = True
+		elif self.Type == "Buena":
+			self.IsItem = True
+			self.IsShop = True
+			self.IsBargainShop = True
 		else:
 			self.IsShop = False
 			self.IsBargainShop = False
+
+
+		if ( self.Type == "Vending Machine" or self.Type == "Prize") and "HardcodedName" in yamlTree:
+			self.IsItem = True
+			self.HardcodedName = yamlTree["HardcodedName"]
+		else:
+			self.HardcodedName = None
 
 		#this is not in all the areas because I'm an idiot for not thinking of including it from the startswith
 		#thus there is an if statement to handle all the things that don't have this

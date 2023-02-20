@@ -31,3 +31,73 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+    -
+        Name: Buena Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Buena Items Locked
+        FlagReqs:
+            - Banned
+            - Beat Team Rocket
+        ItemReqs:
+            - Blue Card
+        FlagsSet:
+            - Buena Access
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Buena Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Game Corner Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Game Corner Items Locked
+        FlagReqs:
+            - Banned
+        ItemReqs:
+            - Coin Case
+        FlagsSet:
+            - Game Corner Access
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Game Corner Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

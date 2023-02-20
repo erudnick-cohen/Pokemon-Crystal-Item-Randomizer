@@ -37,55 +37,163 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+    -
+        Name: Celadon Mansion Curse
+        FileName: CeladonMansionRoofHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+            - Timed Events
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        WarpReqs: Celadon Curse House
+        NormalItem: TM_CURSE
+        Code: |
+            .Night:
+                writetext CeladonMansionRoofHousePharmacistStoryText
+                promptbutton
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_TM03_CURSE
+    -
+        Name: Celadon Cafe Leftovers
+        FileName: CeladonCafe.asm
+        SecondaryFile: CeladonCafe.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+            - NPC Trash Can
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Celadon Cafe
+        NormalItem: LEFTOVERS
+        IsSpecial: Yes
+        Code: |
+            CeladonCafeTrashcan:
+            .ckir_BEFORE_LEFTOVERS_CAN::
+                ITEMLINE
+            .ckir_AFTER_LEFTOVERS_CAN::
+        SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Celadon Game Corner
+        FileName: GoldenrodGameCorner.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Celadon Prize Corner
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
             -
-                Name: Celadon Mansion Curse
-                FileName: CeladonMansionRoofHouse.asm
-                Type: Item
+                Name: Celadon Game Corner Double Team TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Celadon City
+                LocationReqs: Celadon Game Corner
                 FlagReqs:
-                    - Timed Events
+                    - Game Corner Access
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                NormalItem: TM_DOUBLE_TEAM
+                WarpReqs:
+                Code: |
+                    .DoubleTeam:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        getitemname STRING_BUFFER_3, TM_DOUBLE_TEAM
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
+                        ITEMLINE
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
+                        sjump CeladonPrizeRoom_purchased
                 Text:
+                HardcodedName: |
+                    db "TM32         1500@"
                 TrainerList:
-                WarpReqs: Celadon Curse House
-                NormalItem: TM_CURSE
-                Code: |
-                    .Night:
-                        writetext CeladonMansionRoofHousePharmacistStoryText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoom
-                        setevent EVENT_GOT_TM03_CURSE
+                Sublocations:
             -
-                Name: Celadon Cafe Leftovers
-                FileName: CeladonCafe.asm
-                SecondaryFile: CeladonCafe.asm
-                Type: Item
+                Name: Celadon Game Corner Psychic TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Celadon City
+                LocationReqs: Celadon Game Corner
                 FlagReqs:
-                    - NPC Trash Can
-                    - Impossible
+                    - Game Corner Access
+                NormalItem: TM_PSYCHIC
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                WarpReqs: Celadon Cafe
-                NormalItem: LEFTOVERS
-                IsSpecial: Yes
+                WarpReqs:
                 Code: |
-                    CeladonCafeTrashcan:
-                    .ckir_BEFORE_LEFTOVERS_CAN::
+                    .Psychic:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        getitemname STRING_BUFFER_3, TM_PSYCHIC_M
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
                         ITEMLINE
-                    .ckir_AFTER_LEFTOVERS_CAN::
-                SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+                        sjump CeladonPrizeRoom_purchased
                 Text:
-                TrainerList: 
+                HardcodedName: |
+                    db "TM29         3500@"
+                TrainerList:
                 Sublocations:
+            -
+                Name: Celadon Game Corner Hyper Beam TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Game Corner
+                FlagReqs:
+                    - Game Corner Access
+                NormalItem: TM_HYPER_BEAM
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                WarpReqs:
+                Code: |
+                    .HyperBeam:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        getitemname STRING_BUFFER_3, TM_HYPER_BEAM
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
+                        ITEMLINE
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+                        sjump CeladonPrizeRoom_purchased
+                Text:
+                HardcodedName: |
+                    db "TM15         7500@"
+                TrainerList:
+                Sublocations:
+
+
     -
         Name: Celadon Dept Store
         FileName: KurtsHouse.asm
@@ -695,3 +803,93 @@ Location:
                 Text:
                 TrainerList:
                 NormalItem: X_SPECIAL
+            -
+                Name: Celadon Department Store Vending Machine Fresh Water
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FRESH_WATER
+                IsBall: No
+                Code: |
+                    .FreshWater:
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
+                        getitemname STRING_BUFFER_3, FRESH_WATER
+                        sjump .VendItem
+                HardcodedName: |
+                        db "FRESH WATER  ¥200@"
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Celadon Department Store Vending Machine Soda Pop
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SODA_POP
+                IsBall: No
+                Code: |
+                    .SodaPop:
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
+                        getitemname STRING_BUFFER_3, SODA_POP
+                        sjump .VendItem
+                HardcodedName: |
+                        db "SODA POP     ¥300@"
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Celadon Department Store Vending Machine Lemonade
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: LEMONADE
+                IsBall: No
+                Code: |
+                    .Lemonade:
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
+                        getitemname STRING_BUFFER_3, LEMONADE
+                        sjump .VendItem
+                HardcodedName: |
+                        db "LEMONADE     ¥350@"
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:

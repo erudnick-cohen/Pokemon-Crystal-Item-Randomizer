@@ -91,6 +91,7 @@ CheckMonChecks:
 .ckir_BEFORE_ELMSLAB_MONLOCKEDCHECKS::
 	iftrue ElmCheckEverstone2
 .ckir_AFTER_ELMSLAB_MONLOCKEDCHECKS::
+	closetext
 	end
 
 ProfElmScript:

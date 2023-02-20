@@ -839,8 +839,8 @@
   {
     "label": "CeladonCafe_MapEvents.cwri_BEFORECELADON__CAFE_6_7_CELADON__CITY_9_0",
     "address_range": {
-      "begin": 472419,
-      "end": 472424
+      "begin": 472434,
+      "end": 472439
     },
     "integer_values": "7 6 9 21 4",
     "hex_values": "$7 $6 $9 $15 $4"
@@ -848,8 +848,8 @@
   {
     "label": "CeladonCafe_MapEvents.cwri_BEFORECELADON__CAFE_7_7_CELADON__CITY_9_1",
     "address_range": {
-      "begin": 472424,
-      "end": 472429
+      "begin": 472439,
+      "end": 472444
     },
     "integer_values": "7 7 9 21 4",
     "hex_values": "$7 $7 $9 $15 $4"
@@ -1118,8 +1118,8 @@
   {
     "label": "CeladonGameCornerPrizeRoom_MapEvents.cwri_BEFORECELADON__GAME__CORNER__PRIZE__ROOM_2_5_CELADON__CITY_7_0",
     "address_range": {
-      "begin": 470151,
-      "end": 470156
+      "begin": 470166,
+      "end": 470171
     },
     "integer_values": "5 2 7 21 4",
     "hex_values": "$5 $2 $7 $15 $4"
@@ -1127,8 +1127,8 @@
   {
     "label": "CeladonGameCornerPrizeRoom_MapEvents.cwri_BEFORECELADON__GAME__CORNER__PRIZE__ROOM_3_5_CELADON__CITY_7_1",
     "address_range": {
-      "begin": 470156,
-      "end": 470161
+      "begin": 470171,
+      "end": 470176
     },
     "integer_values": "5 3 7 21 4",
     "hex_values": "$5 $3 $7 $15 $4"
@@ -1154,8 +1154,8 @@
   {
     "label": "CeladonGym_MapEvents.cwri_BEFORECELADON__GYM_4_17_CELADON__CITY_8_0",
     "address_range": {
-      "begin": 471622,
-      "end": 471627
+      "begin": 471637,
+      "end": 471642
     },
     "integer_values": "17 4 8 21 4",
     "hex_values": "$11 $4 $8 $15 $4"
@@ -1163,8 +1163,8 @@
   {
     "label": "CeladonGym_MapEvents.cwri_BEFORECELADON__GYM_5_17_CELADON__CITY_8_1",
     "address_range": {
-      "begin": 471627,
-      "end": 471632
+      "begin": 471642,
+      "end": 471647
     },
     "integer_values": "17 5 8 21 4",
     "hex_values": "$11 $5 $8 $15 $4"
@@ -2054,8 +2054,8 @@
   {
     "label": "DayOfWeekSiblingsHouse_MapEvents.cwri_BEFOREDAY__OF__WEEK__SIBLINGS__HOUSE_2_7_ROUTE__26_3_0",
     "address_range": {
-      "begin": 504802,
-      "end": 504807
+      "begin": 504803,
+      "end": 504808
     },
     "integer_values": "7 2 3 24 1",
     "hex_values": "$7 $2 $3 $18 $1"
@@ -2063,8 +2063,8 @@
   {
     "label": "DayOfWeekSiblingsHouse_MapEvents.cwri_BEFOREDAY__OF__WEEK__SIBLINGS__HOUSE_3_7_ROUTE__26_3_1",
     "address_range": {
-      "begin": 504807,
-      "end": 504812
+      "begin": 504808,
+      "end": 504813
     },
     "integer_values": "7 3 3 24 1",
     "hex_values": "$7 $3 $3 $18 $1"
@@ -2774,8 +2774,8 @@
   {
     "label": "ElmsHouse_MapEvents.cwri_BEFOREELMS__HOUSE_2_7_NEW__BARK__TOWN_4_0",
     "address_range": {
-      "begin": 504151,
-      "end": 504156
+      "begin": 504152,
+      "end": 504157
     },
     "integer_values": "7 2 4 24 4",
     "hex_values": "$7 $2 $4 $18 $4"
@@ -2783,8 +2783,8 @@
   {
     "label": "ElmsHouse_MapEvents.cwri_BEFOREELMS__HOUSE_3_7_NEW__BARK__TOWN_4_1",
     "address_range": {
-      "begin": 504156,
-      "end": 504161
+      "begin": 504157,
+      "end": 504162
     },
     "integer_values": "7 3 4 24 4",
     "hex_values": "$7 $3 $4 $18 $4"
@@ -2792,8 +2792,8 @@
   {
     "label": "ElmsLab_MapEvents.cwri_BEFOREELMS__LAB_4_11_NEW__BARK__TOWN_1_0",
     "address_range": {
-      "begin": 500800,
-      "end": 500805
+      "begin": 500801,
+      "end": 500806
     },
     "integer_values": "11 4 1 24 4",
     "hex_values": "$b $4 $1 $18 $4"
@@ -2801,8 +2801,8 @@
   {
     "label": "ElmsLab_MapEvents.cwri_BEFOREELMS__LAB_5_11_NEW__BARK__TOWN_1_1",
     "address_range": {
-      "begin": 500805,
-      "end": 500810
+      "begin": 500806,
+      "end": 500811
     },
     "integer_values": "11 5 1 24 4",
     "hex_values": "$b $5 $1 $18 $4"
@@ -2810,8 +2810,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_15_15_FAST__SHIP__CABINS__SW__SSW__NW_2_5",
     "address_range": {
-      "begin": 480538,
-      "end": 480543
+      "begin": 480532,
+      "end": 480537
     },
     "integer_values": "15 15 2 15 5",
     "hex_values": "$f $f $2 $f $5"
@@ -2819,8 +2819,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_15_8_FAST__SHIP__CABINS__SW__SSW__NW_1_4",
     "address_range": {
-      "begin": 480533,
-      "end": 480538
+      "begin": 480527,
+      "end": 480532
     },
     "integer_values": "8 15 1 15 5",
     "hex_values": "$8 $f $1 $f $5"
@@ -2828,8 +2828,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_19_15_FAST__SHIP__CABINS__SW__SSW__NW_4_6",
     "address_range": {
-      "begin": 480543,
-      "end": 480548
+      "begin": 480537,
+      "end": 480542
     },
     "integer_values": "15 19 4 15 5",
     "hex_values": "$f $13 $4 $f $5"
@@ -2837,8 +2837,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_19_8_FAST__SHIP__CABINS__NNW__NNE__NE_3_3",
     "address_range": {
-      "begin": 480528,
-      "end": 480533
+      "begin": 480522,
+      "end": 480527
     },
     "integer_values": "8 19 3 15 4",
     "hex_values": "$8 $13 $3 $f $4"
@@ -2846,8 +2846,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_23_15_FAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_1_7",
     "address_range": {
-      "begin": 480548,
-      "end": 480553
+      "begin": 480542,
+      "end": 480547
     },
     "integer_values": "15 23 1 15 6",
     "hex_values": "$f $17 $1 $f $6"
@@ -2855,8 +2855,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_23_8_FAST__SHIP__CABINS__NNW__NNE__NE_2_2",
     "address_range": {
-      "begin": 480523,
-      "end": 480528
+      "begin": 480517,
+      "end": 480522
     },
     "integer_values": "8 23 2 15 4",
     "hex_values": "$8 $17 $2 $f $4"
@@ -2864,8 +2864,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_25_1_FAST__SHIP__1F_m_0",
     "address_range": {
-      "begin": 480513,
-      "end": 480518
+      "begin": 480507,
+      "end": 480512
     },
     "integer_values": "1 25 255 15 3",
     "hex_values": "$1 $19 $ff $f $3"
@@ -2873,8 +2873,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_27_15_FAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_3_8",
     "address_range": {
-      "begin": 480553,
-      "end": 480558
+      "begin": 480547,
+      "end": 480552
     },
     "integer_values": "15 27 3 15 6",
     "hex_values": "$f $1b $3 $f $6"
@@ -2882,8 +2882,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_27_8_FAST__SHIP__CABINS__NNW__NNE__NE_1_1",
     "address_range": {
-      "begin": 480518,
-      "end": 480523
+      "begin": 480512,
+      "end": 480517
     },
     "integer_values": "8 27 1 15 4",
     "hex_values": "$8 $1b $1 $f $4"
@@ -2891,8 +2891,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_30_14_FAST__SHIP__B1F_2_11",
     "address_range": {
-      "begin": 480568,
-      "end": 480573
+      "begin": 480562,
+      "end": 480567
     },
     "integer_values": "14 30 2 15 7",
     "hex_values": "$e $1e $2 $f $7"
@@ -2900,8 +2900,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_3_13_FAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_5_9",
     "address_range": {
-      "begin": 480558,
-      "end": 480563
+      "begin": 480552,
+      "end": 480557
     },
     "integer_values": "13 3 5 15 6",
     "hex_values": "$d $3 $5 $f $6"
@@ -2909,8 +2909,8 @@
   {
     "label": "FastShip1F_MapEvents.cwri_BEFOREFAST__SHIP__1F_6_12_FAST__SHIP__B1F_1_10",
     "address_range": {
-      "begin": 480563,
-      "end": 480568
+      "begin": 480557,
+      "end": 480562
     },
     "integer_values": "12 6 1 15 7",
     "hex_values": "$c $6 $1 $f $7"
@@ -2918,8 +2918,8 @@
   {
     "label": "FastShipB1F_MapEvents.cwri_BEFOREFAST__SHIP__B1F_31_13_FAST__SHIP__1F_12_1",
     "address_range": {
-      "begin": 487166,
-      "end": 487171
+      "begin": 487160,
+      "end": 487165
     },
     "integer_values": "13 31 12 15 3",
     "hex_values": "$d $1f $c $f $3"
@@ -2927,8 +2927,8 @@
   {
     "label": "FastShipB1F_MapEvents.cwri_BEFOREFAST__SHIP__B1F_5_11_FAST__SHIP__1F_11_0",
     "address_range": {
-      "begin": 487161,
-      "end": 487166
+      "begin": 487155,
+      "end": 487160
     },
     "integer_values": "11 5 11 15 3",
     "hex_values": "$b $5 $b $f $3"
@@ -2936,8 +2936,8 @@
   {
     "label": "FastShipCabins_NNW_NNE_NE_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__NNW__NNE__NE_2_0_FAST__SHIP__1F_2_0",
     "address_range": {
-      "begin": 481758,
-      "end": 481763
+      "begin": 481752,
+      "end": 481757
     },
     "integer_values": "0 2 2 15 3",
     "hex_values": "$0 $2 $2 $f $3"
@@ -2945,8 +2945,8 @@
   {
     "label": "FastShipCabins_NNW_NNE_NE_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__NNW__NNE__NE_2_12_FAST__SHIP__1F_3_1",
     "address_range": {
-      "begin": 481763,
-      "end": 481768
+      "begin": 481757,
+      "end": 481762
     },
     "integer_values": "12 2 3 15 3",
     "hex_values": "$c $2 $3 $f $3"
@@ -2954,8 +2954,8 @@
   {
     "label": "FastShipCabins_NNW_NNE_NE_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__NNW__NNE__NE_2_24_FAST__SHIP__1F_4_2",
     "address_range": {
-      "begin": 481768,
-      "end": 481773
+      "begin": 481762,
+      "end": 481767
     },
     "integer_values": "24 2 4 15 3",
     "hex_values": "$18 $2 $4 $f $3"
@@ -2963,8 +2963,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_2_19_FAST__SHIP__1F_9_2",
     "address_range": {
-      "begin": 485010,
-      "end": 485015
+      "begin": 485004,
+      "end": 485009
     },
     "integer_values": "19 2 9 15 3",
     "hex_values": "$13 $2 $9 $f $3"
@@ -2972,8 +2972,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_2_33_FAST__SHIP__1F_10_4",
     "address_range": {
-      "begin": 485020,
-      "end": 485025
+      "begin": 485014,
+      "end": 485019
     },
     "integer_values": "33 2 10 15 3",
     "hex_values": "$21 $2 $a $f $3"
@@ -2981,8 +2981,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_2_7_FAST__SHIP__1F_8_0",
     "address_range": {
-      "begin": 485000,
-      "end": 485005
+      "begin": 484994,
+      "end": 484999
     },
     "integer_values": "7 2 8 15 3",
     "hex_values": "$7 $2 $8 $f $3"
@@ -2990,8 +2990,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_3_19_FAST__SHIP__1F_9_3",
     "address_range": {
-      "begin": 485015,
-      "end": 485020
+      "begin": 485009,
+      "end": 485014
     },
     "integer_values": "19 3 9 15 3",
     "hex_values": "$13 $3 $9 $f $3"
@@ -2999,8 +2999,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_3_33_FAST__SHIP__1F_10_5",
     "address_range": {
-      "begin": 485025,
-      "end": 485030
+      "begin": 485019,
+      "end": 485024
     },
     "integer_values": "33 3 10 15 3",
     "hex_values": "$21 $3 $a $f $3"
@@ -3008,8 +3008,8 @@
   {
     "label": "FastShipCabins_SE_SSE_CaptainsCabin_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SE__SSE__CAPTAINS__CABIN_3_7_FAST__SHIP__1F_8_1",
     "address_range": {
-      "begin": 485005,
-      "end": 485010
+      "begin": 484999,
+      "end": 485004
     },
     "integer_values": "7 3 8 15 3",
     "hex_values": "$7 $3 $8 $f $3"
@@ -3017,8 +3017,8 @@
   {
     "label": "FastShipCabins_SW_SSW_NW_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SW__SSW__NW_2_0_FAST__SHIP__1F_5_0",
     "address_range": {
-      "begin": 482898,
-      "end": 482903
+      "begin": 482892,
+      "end": 482897
     },
     "integer_values": "0 2 5 15 3",
     "hex_values": "$0 $2 $5 $f $3"
@@ -3026,8 +3026,8 @@
   {
     "label": "FastShipCabins_SW_SSW_NW_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SW__SSW__NW_2_19_FAST__SHIP__1F_6_1",
     "address_range": {
-      "begin": 482903,
-      "end": 482908
+      "begin": 482897,
+      "end": 482902
     },
     "integer_values": "19 2 6 15 3",
     "hex_values": "$13 $2 $6 $f $3"
@@ -3035,8 +3035,8 @@
   {
     "label": "FastShipCabins_SW_SSW_NW_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SW__SSW__NW_2_31_FAST__SHIP__1F_7_3",
     "address_range": {
-      "begin": 482913,
-      "end": 482918
+      "begin": 482907,
+      "end": 482912
     },
     "integer_values": "31 2 7 15 3",
     "hex_values": "$1f $2 $7 $f $3"
@@ -3044,8 +3044,8 @@
   {
     "label": "FastShipCabins_SW_SSW_NW_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SW__SSW__NW_3_19_FAST__SHIP__1F_6_2",
     "address_range": {
-      "begin": 482908,
-      "end": 482913
+      "begin": 482902,
+      "end": 482907
     },
     "integer_values": "19 3 6 15 3",
     "hex_values": "$13 $3 $6 $f $3"
@@ -3053,8 +3053,8 @@
   {
     "label": "FastShipCabins_SW_SSW_NW_MapEvents.cwri_BEFOREFAST__SHIP__CABINS__SW__SSW__NW_3_31_FAST__SHIP__1F_7_4",
     "address_range": {
-      "begin": 482918,
-      "end": 482923
+      "begin": 482912,
+      "end": 482917
     },
     "integer_values": "31 3 7 15 3",
     "hex_values": "$1f $3 $7 $f $3"
@@ -3647,8 +3647,8 @@
   {
     "label": "GoldenrodGameCorner_MapEvents.cwri_BEFOREGOLDENROD__GAME__CORNER_2_13_GOLDENROD__CITY_10_0",
     "address_range": {
-      "begin": 356827,
-      "end": 356832
+      "begin": 356842,
+      "end": 356847
     },
     "integer_values": "13 2 10 11 2",
     "hex_values": "$d $2 $a $b $2"
@@ -3656,8 +3656,8 @@
   {
     "label": "GoldenrodGameCorner_MapEvents.cwri_BEFOREGOLDENROD__GAME__CORNER_3_13_GOLDENROD__CITY_10_1",
     "address_range": {
-      "begin": 356832,
-      "end": 356837
+      "begin": 356847,
+      "end": 356852
     },
     "integer_values": "13 3 10 11 2",
     "hex_values": "$d $3 $a $b $2"
@@ -3890,8 +3890,8 @@
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.cwri_BEFOREGOLDENROD__UNDERGROUND__WAREHOUSE_17_2_GOLDENROD__DEPT__STORE__B1F_1_2",
     "address_range": {
-      "begin": 515523,
-      "end": 515528
+      "begin": 515535,
+      "end": 515540
     },
     "integer_values": "2 17 1 3 55",
     "hex_values": "$2 $11 $1 $3 $37"
@@ -3899,8 +3899,8 @@
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.cwri_BEFOREGOLDENROD__UNDERGROUND__WAREHOUSE_2_12_GOLDENROD__UNDERGROUND__SWITCH__ROOM__ENTRANCES_2_0",
     "address_range": {
-      "begin": 515513,
-      "end": 515518
+      "begin": 515525,
+      "end": 515530
     },
     "integer_values": "12 2 2 3 54",
     "hex_values": "$c $2 $2 $3 $36"
@@ -3908,8 +3908,8 @@
   {
     "label": "GoldenrodUndergroundWarehouse_MapEvents.cwri_BEFOREGOLDENROD__UNDERGROUND__WAREHOUSE_3_12_GOLDENROD__UNDERGROUND__SWITCH__ROOM__ENTRANCES_3_1",
     "address_range": {
-      "begin": 515518,
-      "end": 515523
+      "begin": 515530,
+      "end": 515535
     },
     "integer_values": "12 3 3 3 54",
     "hex_values": "$c $3 $3 $3 $36"
@@ -4007,8 +4007,8 @@
   {
     "label": "IcePath1F_MapEvents.cwri_BEFOREICE__PATH__1F_36_27_BLACKTHORN__CITY_7_1",
     "address_range": {
-      "begin": 517298,
-      "end": 517303
+      "begin": 517310,
+      "end": 517315
     },
     "integer_values": "27 36 7 5 10",
     "hex_values": "$1b $24 $7 $5 $a"
@@ -4016,8 +4016,8 @@
   {
     "label": "IcePath1F_MapEvents.cwri_BEFOREICE__PATH__1F_37_13_ICE__PATH__B1F_7_3",
     "address_range": {
-      "begin": 517308,
-      "end": 517313
+      "begin": 517320,
+      "end": 517325
     },
     "integer_values": "13 37 7 3 62",
     "hex_values": "$d $25 $7 $3 $3e"
@@ -4025,8 +4025,8 @@
   {
     "label": "IcePath1F_MapEvents.cwri_BEFOREICE__PATH__1F_37_5_ICE__PATH__B1F_1_2",
     "address_range": {
-      "begin": 517303,
-      "end": 517308
+      "begin": 517315,
+      "end": 517320
     },
     "integer_values": "5 37 1 3 62",
     "hex_values": "$5 $25 $1 $3 $3e"
@@ -4034,8 +4034,8 @@
   {
     "label": "IcePath1F_MapEvents.cwri_BEFOREICE__PATH__1F_4_19_ROUTE__44_1_0",
     "address_range": {
-      "begin": 517293,
-      "end": 517298
+      "begin": 517305,
+      "end": 517310
     },
     "integer_values": "19 4 1 2 6",
     "hex_values": "$13 $4 $1 $2 $6"
@@ -4043,8 +4043,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_11_27_ICE__PATH__B2F__BLACKTHORN__SIDE_1_7",
     "address_range": {
-      "begin": 517509,
-      "end": 517514
+      "begin": 517521,
+      "end": 517526
     },
     "integer_values": "27 11 1 3 64",
     "hex_values": "$1b $b $1 $3 $40"
@@ -4052,8 +4052,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_11_2_ICE__PATH__B2F__MAHOGANY__SIDE_3_2",
     "address_range": {
-      "begin": 517484,
-      "end": 517489
+      "begin": 517496,
+      "end": 517501
     },
     "integer_values": "2 11 3 3 63",
     "hex_values": "$2 $b $3 $3 $3f"
@@ -4061,8 +4061,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_12_13_ICE__PATH__B2F__MAHOGANY__SIDE_6_5",
     "address_range": {
-      "begin": 517499,
-      "end": 517504
+      "begin": 517511,
+      "end": 517516
     },
     "integer_values": "13 12 6 3 63",
     "hex_values": "$d $c $6 $3 $3f"
@@ -4070,8 +4070,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_17_3_ICE__PATH__B2F__MAHOGANY__SIDE_1_1",
     "address_range": {
-      "begin": 517479,
-      "end": 517484
+      "begin": 517491,
+      "end": 517496
     },
     "integer_values": "3 17 1 3 63",
     "hex_values": "$3 $11 $1 $3 $3f"
@@ -4079,8 +4079,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_3_15_ICE__PATH__1F_3_0",
     "address_range": {
-      "begin": 517474,
-      "end": 517479
+      "begin": 517486,
+      "end": 517491
     },
     "integer_values": "15 3 3 3 61",
     "hex_values": "$f $3 $3 $3 $3d"
@@ -4088,8 +4088,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_4_7_ICE__PATH__B2F__MAHOGANY__SIDE_4_3",
     "address_range": {
-      "begin": 517489,
-      "end": 517494
+      "begin": 517501,
+      "end": 517506
     },
     "integer_values": "7 4 4 3 63",
     "hex_values": "$7 $4 $4 $3 $3f"
@@ -4097,8 +4097,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_5_12_ICE__PATH__B2F__MAHOGANY__SIDE_5_4",
     "address_range": {
-      "begin": 517494,
-      "end": 517499
+      "begin": 517506,
+      "end": 517511
     },
     "integer_values": "12 5 5 3 63",
     "hex_values": "$c $5 $5 $3 $3f"
@@ -4106,8 +4106,8 @@
   {
     "label": "IcePathB1F_MapEvents.cwri_BEFOREICE__PATH__B1F_5_25_ICE__PATH__1F_4_6",
     "address_range": {
-      "begin": 517504,
-      "end": 517509
+      "begin": 517516,
+      "end": 517521
     },
     "integer_values": "25 5 4 3 61",
     "hex_values": "$19 $5 $4 $3 $3d"
@@ -4115,8 +4115,8 @@
   {
     "label": "IcePathB2FBlackthornSide_MapEvents.cwri_BEFOREICE__PATH__B2F__BLACKTHORN__SIDE_3_15_ICE__PATH__B1F_8_0",
     "address_range": {
-      "begin": 517760,
-      "end": 517765
+      "begin": 517772,
+      "end": 517777
     },
     "integer_values": "15 3 8 3 62",
     "hex_values": "$f $3 $8 $3 $3e"
@@ -4124,8 +4124,8 @@
   {
     "label": "IcePathB2FBlackthornSide_MapEvents.cwri_BEFOREICE__PATH__B2F__BLACKTHORN__SIDE_3_3_ICE__PATH__B3F_2_1",
     "address_range": {
-      "begin": 517765,
-      "end": 517770
+      "begin": 517777,
+      "end": 517782
     },
     "integer_values": "3 3 2 3 65",
     "hex_values": "$3 $3 $2 $3 $41"
@@ -4133,8 +4133,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_11_4_ICE__PATH__B1F_3_2",
     "address_range": {
-      "begin": 517644,
-      "end": 517649
+      "begin": 517656,
+      "end": 517661
     },
     "integer_values": "4 11 3 3 62",
     "hex_values": "$4 $b $3 $3 $3e"
@@ -4142,8 +4142,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_12_12_ICE__PATH__B1F_6_5",
     "address_range": {
-      "begin": 517659,
-      "end": 517664
+      "begin": 517671,
+      "end": 517676
     },
     "integer_values": "12 12 6 3 62",
     "hex_values": "$c $c $6 $3 $3e"
@@ -4151,8 +4151,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_17_1_ICE__PATH__B1F_2_0",
     "address_range": {
-      "begin": 517634,
-      "end": 517639
+      "begin": 517646,
+      "end": 517651
     },
     "integer_values": "1 17 2 3 62",
     "hex_values": "$1 $11 $2 $3 $3e"
@@ -4160,8 +4160,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_4_12_ICE__PATH__B1F_5_4",
     "address_range": {
-      "begin": 517654,
-      "end": 517659
+      "begin": 517666,
+      "end": 517671
     },
     "integer_values": "12 4 5 3 62",
     "hex_values": "$c $4 $5 $3 $3e"
@@ -4169,8 +4169,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_4_6_ICE__PATH__B1F_4_3",
     "address_range": {
-      "begin": 517649,
-      "end": 517654
+      "begin": 517661,
+      "end": 517666
     },
     "integer_values": "6 4 4 3 62",
     "hex_values": "$6 $4 $4 $3 $3e"
@@ -4178,8 +4178,8 @@
   {
     "label": "IcePathB2FMahoganySide_MapEvents.cwri_BEFOREICE__PATH__B2F__MAHOGANY__SIDE_9_11_ICE__PATH__B3F_1_1",
     "address_range": {
-      "begin": 517639,
-      "end": 517644
+      "begin": 517651,
+      "end": 517656
     },
     "integer_values": "11 9 1 3 65",
     "hex_values": "$b $9 $1 $3 $41"
@@ -4187,8 +4187,8 @@
   {
     "label": "IcePathB3F_MapEvents.cwri_BEFOREICE__PATH__B3F_15_5_ICE__PATH__B2F__BLACKTHORN__SIDE_2_1",
     "address_range": {
-      "begin": 517806,
-      "end": 517811
+      "begin": 517818,
+      "end": 517823
     },
     "integer_values": "5 15 2 3 64",
     "hex_values": "$5 $f $2 $3 $40"
@@ -4196,8 +4196,8 @@
   {
     "label": "IcePathB3F_MapEvents.cwri_BEFOREICE__PATH__B3F_3_5_ICE__PATH__B2F__MAHOGANY__SIDE_2_0",
     "address_range": {
-      "begin": 517801,
-      "end": 517806
+      "begin": 517813,
+      "end": 517818
     },
     "integer_values": "5 3 2 3 63",
     "hex_values": "$5 $3 $2 $3 $3f"
@@ -4484,8 +4484,8 @@
   {
     "label": "LavRadioTower1F_MapEvents.cwri_BEFORELAV__RADIO__TOWER__1F_2_7_LAVENDER__TOWN_7_0",
     "address_range": {
-      "begin": 521197,
-      "end": 521202
+      "begin": 521209,
+      "end": 521214
     },
     "integer_values": "7 2 7 18 4",
     "hex_values": "$7 $2 $7 $12 $4"
@@ -4493,8 +4493,8 @@
   {
     "label": "LavRadioTower1F_MapEvents.cwri_BEFORELAV__RADIO__TOWER__1F_3_7_LAVENDER__TOWN_7_1",
     "address_range": {
-      "begin": 521202,
-      "end": 521207
+      "begin": 521214,
+      "end": 521219
     },
     "integer_values": "7 3 7 18 4",
     "hex_values": "$7 $3 $7 $12 $4"
@@ -4502,8 +4502,8 @@
   {
     "label": "LavenderMart_MapEvents.cwri_BEFORELAVENDER__MART_2_7_LAVENDER__TOWN_5_0",
     "address_range": {
-      "begin": 519235,
-      "end": 519240
+      "begin": 519247,
+      "end": 519252
     },
     "integer_values": "7 2 5 18 4",
     "hex_values": "$7 $2 $5 $12 $4"
@@ -4511,8 +4511,8 @@
   {
     "label": "LavenderMart_MapEvents.cwri_BEFORELAVENDER__MART_3_7_LAVENDER__TOWN_5_1",
     "address_range": {
-      "begin": 519240,
-      "end": 519245
+      "begin": 519252,
+      "end": 519257
     },
     "integer_values": "7 3 5 18 4",
     "hex_values": "$7 $3 $5 $12 $4"
@@ -4520,8 +4520,8 @@
   {
     "label": "LavenderNameRater_MapEvents.cwri_BEFORELAVENDER__NAME__RATER_2_7_LAVENDER__TOWN_4_0",
     "address_range": {
-      "begin": 518962,
-      "end": 518967
+      "begin": 518974,
+      "end": 518979
     },
     "integer_values": "7 2 4 18 4",
     "hex_values": "$7 $2 $4 $12 $4"
@@ -4529,8 +4529,8 @@
   {
     "label": "LavenderNameRater_MapEvents.cwri_BEFORELAVENDER__NAME__RATER_3_7_LAVENDER__TOWN_4_1",
     "address_range": {
-      "begin": 518967,
-      "end": 518972
+      "begin": 518979,
+      "end": 518984
     },
     "integer_values": "7 3 4 18 4",
     "hex_values": "$7 $3 $4 $12 $4"
@@ -4538,8 +4538,8 @@
   {
     "label": "LavenderPokecenter1F_MapEvents.cwri_BEFORELAVENDER__POKECENTER__1F_0_7_POKECENTER__2F_1_2",
     "address_range": {
-      "begin": 518321,
-      "end": 518326
+      "begin": 518333,
+      "end": 518338
     },
     "integer_values": "7 0 1 20 1",
     "hex_values": "$7 $0 $1 $14 $1"
@@ -4547,8 +4547,8 @@
   {
     "label": "LavenderPokecenter1F_MapEvents.cwri_BEFORELAVENDER__POKECENTER__1F_3_7_LAVENDER__TOWN_1_0",
     "address_range": {
-      "begin": 518311,
-      "end": 518316
+      "begin": 518323,
+      "end": 518328
     },
     "integer_values": "7 3 1 18 4",
     "hex_values": "$7 $3 $1 $12 $4"
@@ -4556,8 +4556,8 @@
   {
     "label": "LavenderPokecenter1F_MapEvents.cwri_BEFORELAVENDER__POKECENTER__1F_4_7_LAVENDER__TOWN_1_1",
     "address_range": {
-      "begin": 518316,
-      "end": 518321
+      "begin": 518328,
+      "end": 518333
     },
     "integer_values": "7 4 1 18 4",
     "hex_values": "$7 $4 $1 $12 $4"
@@ -4565,8 +4565,8 @@
   {
     "label": "LavenderPokecenter2FBeta_MapEvents.cwri_BEFORELAVENDER__POKECENTER__2F__BETA_0_7_LAVENDER__POKECENTER__1F_3_0",
     "address_range": {
-      "begin": 518386,
-      "end": 518391
+      "begin": 518398,
+      "end": 518403
     },
     "integer_values": "7 0 3 18 5",
     "hex_values": "$7 $0 $3 $12 $5"
@@ -4574,8 +4574,8 @@
   {
     "label": "LavenderSpeechHouse_MapEvents.cwri_BEFORELAVENDER__SPEECH__HOUSE_2_7_LAVENDER__TOWN_3_0",
     "address_range": {
-      "begin": 518905,
-      "end": 518910
+      "begin": 518917,
+      "end": 518922
     },
     "integer_values": "7 2 3 18 4",
     "hex_values": "$7 $2 $3 $12 $4"
@@ -4583,8 +4583,8 @@
   {
     "label": "LavenderSpeechHouse_MapEvents.cwri_BEFORELAVENDER__SPEECH__HOUSE_3_7_LAVENDER__TOWN_3_1",
     "address_range": {
-      "begin": 518910,
-      "end": 518915
+      "begin": 518922,
+      "end": 518927
     },
     "integer_values": "7 3 3 18 4",
     "hex_values": "$7 $3 $3 $12 $4"
@@ -4844,8 +4844,8 @@
   {
     "label": "MountMoonGiftShop_MapEvents.cwri_BEFOREMOUNT__MOON__GIFT__SHOP_3_7_MOUNT__MOON__SQUARE_3_0",
     "address_range": {
-      "begin": 487932,
-      "end": 487937
+      "begin": 487926,
+      "end": 487931
     },
     "integer_values": "7 3 3 15 10",
     "hex_values": "$7 $3 $3 $f $a"
@@ -4853,8 +4853,8 @@
   {
     "label": "MountMoonGiftShop_MapEvents.cwri_BEFOREMOUNT__MOON__GIFT__SHOP_4_7_MOUNT__MOON__SQUARE_3_1",
     "address_range": {
-      "begin": 487937,
-      "end": 487942
+      "begin": 487931,
+      "end": 487936
     },
     "integer_values": "7 4 3 15 10",
     "hex_values": "$7 $4 $3 $f $a"
@@ -4862,8 +4862,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_13_7_MOUNT__MOON__GIFT__SHOP_1_2",
     "address_range": {
-      "begin": 487799,
-      "end": 487804
+      "begin": 487793,
+      "end": 487798
     },
     "integer_values": "7 13 1 15 11",
     "hex_values": "$7 $d $1 $f $b"
@@ -4871,8 +4871,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_20_5_MOUNT__MOON_5_0",
     "address_range": {
-      "begin": 487789,
-      "end": 487794
+      "begin": 487783,
+      "end": 487788
     },
     "integer_values": "5 20 5 3 85",
     "hex_values": "$5 $14 $5 $3 $55"
@@ -4880,8 +4880,8 @@
   {
     "label": "MountMoonSquare_MapEvents.cwri_BEFOREMOUNT__MOON__SQUARE_22_11_MOUNT__MOON_6_1",
     "address_range": {
-      "begin": 487794,
-      "end": 487799
+      "begin": 487788,
+      "end": 487793
     },
     "integer_values": "11 22 6 3 85",
     "hex_values": "$b $16 $6 $3 $55"
@@ -4961,8 +4961,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_11_47_MOUNT__MORTAR__1F__OUTSIDE_5_0",
     "address_range": {
-      "begin": 516178,
-      "end": 516183
+      "begin": 516190,
+      "end": 516195
     },
     "integer_values": "47 11 5 3 57",
     "hex_values": "$2f $b $5 $3 $39"
@@ -4970,8 +4970,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_29_47_MOUNT__MORTAR__1F__OUTSIDE_6_1",
     "address_range": {
-      "begin": 516183,
-      "end": 516188
+      "begin": 516195,
+      "end": 516200
     },
     "integer_values": "47 29 6 3 57",
     "hex_values": "$2f $1d $6 $3 $39"
@@ -4979,8 +4979,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_33_41_MOUNT__MORTAR__1F__OUTSIDE_9_3",
     "address_range": {
-      "begin": 516193,
-      "end": 516198
+      "begin": 516205,
+      "end": 516210
     },
     "integer_values": "41 33 9 3 57",
     "hex_values": "$29 $21 $9 $3 $39"
@@ -4988,8 +4988,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_3_19_MOUNT__MORTAR__B1F_1_4",
     "address_range": {
-      "begin": 516198,
-      "end": 516203
+      "begin": 516210,
+      "end": 516215
     },
     "integer_values": "19 3 1 3 60",
     "hex_values": "$13 $3 $1 $3 $3c"
@@ -4997,8 +4997,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_5_39_MOUNT__MORTAR__1F__OUTSIDE_8_2",
     "address_range": {
-      "begin": 516188,
-      "end": 516193
+      "begin": 516200,
+      "end": 516205
     },
     "integer_values": "39 5 8 3 57",
     "hex_values": "$27 $5 $8 $3 $39"
@@ -5006,8 +5006,8 @@
   {
     "label": "MountMortar1FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__INSIDE_9_9_MOUNT__MORTAR__2F__INSIDE_2_5",
     "address_range": {
-      "begin": 516203,
-      "end": 516208
+      "begin": 516215,
+      "end": 516220
     },
     "integer_values": "9 9 2 3 59",
     "hex_values": "$9 $9 $2 $3 $3b"
@@ -5015,8 +5015,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_11_21_MOUNT__MORTAR__1F__INSIDE_1_4",
     "address_range": {
-      "begin": 515654,
-      "end": 515659
+      "begin": 515666,
+      "end": 515671
     },
     "integer_values": "21 11 1 3 58",
     "hex_values": "$15 $b $1 $3 $3a"
@@ -5024,8 +5024,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_17_29_MOUNT__MORTAR__B1F_2_6",
     "address_range": {
-      "begin": 515664,
-      "end": 515669
+      "begin": 515676,
+      "end": 515681
     },
     "integer_values": "29 17 2 3 60",
     "hex_values": "$1d $11 $2 $3 $3c"
@@ -5033,8 +5033,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_17_33_ROUTE__42_4_1",
     "address_range": {
-      "begin": 515639,
-      "end": 515644
+      "begin": 515651,
+      "end": 515656
     },
     "integer_values": "33 17 4 2 5",
     "hex_values": "$21 $11 $4 $2 $5"
@@ -5042,8 +5042,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_17_5_MOUNT__MORTAR__2F__INSIDE_1_3",
     "address_range": {
-      "begin": 515649,
-      "end": 515654
+      "begin": 515661,
+      "end": 515666
     },
     "integer_values": "5 17 1 3 59",
     "hex_values": "$5 $11 $1 $3 $3b"
@@ -5051,8 +5051,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_29_21_MOUNT__MORTAR__1F__INSIDE_2_5",
     "address_range": {
-      "begin": 515659,
-      "end": 515664
+      "begin": 515671,
+      "end": 515676
     },
     "integer_values": "21 29 2 3 58",
     "hex_values": "$15 $1d $2 $3 $3a"
@@ -5060,8 +5060,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_33_13_MOUNT__MORTAR__1F__INSIDE_4_8",
     "address_range": {
-      "begin": 515674,
-      "end": 515679
+      "begin": 515686,
+      "end": 515691
     },
     "integer_values": "13 33 4 3 58",
     "hex_values": "$d $21 $4 $3 $3a"
@@ -5069,8 +5069,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_37_33_ROUTE__42_5_2",
     "address_range": {
-      "begin": 515644,
-      "end": 515649
+      "begin": 515656,
+      "end": 515661
     },
     "integer_values": "33 37 5 2 5",
     "hex_values": "$21 $25 $5 $2 $5"
@@ -5078,8 +5078,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_3_33_ROUTE__42_3_0",
     "address_range": {
-      "begin": 515634,
-      "end": 515639
+      "begin": 515646,
+      "end": 515651
     },
     "integer_values": "33 3 3 2 5",
     "hex_values": "$21 $3 $3 $2 $5"
@@ -5087,8 +5087,8 @@
   {
     "label": "MountMortar1FOutside_MapEvents.cwri_BEFOREMOUNT__MORTAR__1F__OUTSIDE_7_13_MOUNT__MORTAR__1F__INSIDE_3_7",
     "address_range": {
-      "begin": 515669,
-      "end": 515674
+      "begin": 515681,
+      "end": 515686
     },
     "integer_values": "13 7 3 3 58",
     "hex_values": "$d $7 $3 $3 $3a"
@@ -5096,8 +5096,8 @@
   {
     "label": "MountMortar2FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__2F__INSIDE_17_33_MOUNT__MORTAR__1F__OUTSIDE_4_0",
     "address_range": {
-      "begin": 516537,
-      "end": 516542
+      "begin": 516549,
+      "end": 516554
     },
     "integer_values": "33 17 4 3 57",
     "hex_values": "$21 $11 $4 $3 $39"
@@ -5105,8 +5105,8 @@
   {
     "label": "MountMortar2FInside_MapEvents.cwri_BEFOREMOUNT__MORTAR__2F__INSIDE_3_5_MOUNT__MORTAR__1F__INSIDE_6_1",
     "address_range": {
-      "begin": 516542,
-      "end": 516547
+      "begin": 516554,
+      "end": 516559
     },
     "integer_values": "5 3 6 3 58",
     "hex_values": "$5 $3 $6 $3 $3a"
@@ -5114,8 +5114,8 @@
   {
     "label": "MountMortarB1F_MapEvents.cwri_BEFOREMOUNT__MORTAR__B1F_19_29_MOUNT__MORTAR__1F__OUTSIDE_7_1",
     "address_range": {
-      "begin": 517178,
-      "end": 517183
+      "begin": 517190,
+      "end": 517195
     },
     "integer_values": "29 19 7 3 57",
     "hex_values": "$1d $13 $7 $3 $39"
@@ -5123,8 +5123,8 @@
   {
     "label": "MountMortarB1F_MapEvents.cwri_BEFOREMOUNT__MORTAR__B1F_3_3_MOUNT__MORTAR__1F__INSIDE_5_0",
     "address_range": {
-      "begin": 517173,
-      "end": 517178
+      "begin": 517185,
+      "end": 517190
     },
     "integer_values": "3 3 5 3 58",
     "hex_values": "$3 $3 $5 $3 $3a"
@@ -5150,8 +5150,8 @@
   {
     "label": "MrFujisHouse_MapEvents.cwri_BEFOREMR__FUJIS__HOUSE_2_7_LAVENDER__TOWN_2_0",
     "address_range": {
-      "begin": 518687,
-      "end": 518692
+      "begin": 518699,
+      "end": 518704
     },
     "integer_values": "7 2 2 18 4",
     "hex_values": "$7 $2 $2 $12 $4"
@@ -5159,8 +5159,8 @@
   {
     "label": "MrFujisHouse_MapEvents.cwri_BEFOREMR__FUJIS__HOUSE_3_7_LAVENDER__TOWN_2_1",
     "address_range": {
-      "begin": 518692,
-      "end": 518697
+      "begin": 518704,
+      "end": 518709
     },
     "integer_values": "7 3 2 18 4",
     "hex_values": "$7 $3 $2 $12 $4"
@@ -5906,8 +5906,8 @@
   {
     "label": "OlivinePortPassage_MapEvents.cwri_BEFOREOLIVINE__PORT__PASSAGE_15_0_OLIVINE__CITY_10_0",
     "address_range": {
-      "begin": 487420,
-      "end": 487425
+      "begin": 487414,
+      "end": 487419
     },
     "integer_values": "0 15 10 1 14",
     "hex_values": "$0 $f $a $1 $e"
@@ -5915,8 +5915,8 @@
   {
     "label": "OlivinePortPassage_MapEvents.cwri_BEFOREOLIVINE__PORT__PASSAGE_15_4_OLIVINE__PORT__PASSAGE_4_2",
     "address_range": {
-      "begin": 487430,
-      "end": 487435
+      "begin": 487424,
+      "end": 487429
     },
     "integer_values": "4 15 4 15 8",
     "hex_values": "$4 $f $4 $f $8"
@@ -5924,8 +5924,8 @@
   {
     "label": "OlivinePortPassage_MapEvents.cwri_BEFOREOLIVINE__PORT__PASSAGE_16_0_OLIVINE__CITY_11_1",
     "address_range": {
-      "begin": 487425,
-      "end": 487430
+      "begin": 487419,
+      "end": 487424
     },
     "integer_values": "0 16 11 1 14",
     "hex_values": "$0 $10 $b $1 $e"
@@ -5933,8 +5933,8 @@
   {
     "label": "OlivinePortPassage_MapEvents.cwri_BEFOREOLIVINE__PORT__PASSAGE_3_14_OLIVINE__PORT_1_4",
     "address_range": {
-      "begin": 487440,
-      "end": 487445
+      "begin": 487434,
+      "end": 487439
     },
     "integer_values": "14 3 1 15 1",
     "hex_values": "$e $3 $1 $f $1"
@@ -5942,8 +5942,8 @@
   {
     "label": "OlivinePortPassage_MapEvents.cwri_BEFOREOLIVINE__PORT__PASSAGE_3_2_OLIVINE__PORT__PASSAGE_3_3",
     "address_range": {
-      "begin": 487435,
-      "end": 487440
+      "begin": 487429,
+      "end": 487434
     },
     "integer_values": "2 3 3 15 8",
     "hex_values": "$2 $3 $3 $f $8"
@@ -5951,8 +5951,8 @@
   {
     "label": "OlivinePort_MapEvents.cwri_BEFOREOLIVINE__PORT_11_7_OLIVINE__PORT__PASSAGE_5_0",
     "address_range": {
-      "begin": 478499,
-      "end": 478504
+      "begin": 478496,
+      "end": 478501
     },
     "integer_values": "7 11 5 15 8",
     "hex_values": "$7 $b $5 $f $8"
@@ -5960,8 +5960,8 @@
   {
     "label": "OlivinePort_MapEvents.cwri_BEFOREOLIVINE__PORT_7_23_FAST__SHIP__1F_1_1",
     "address_range": {
-      "begin": 478504,
-      "end": 478509
+      "begin": 478501,
+      "end": 478506
     },
     "integer_values": "23 7 1 15 3",
     "hex_values": "$17 $7 $1 $f $3"
@@ -6185,8 +6185,8 @@
   {
     "label": "PlayersHouse1F_MapEvents.cwri_BEFOREPLAYERS__HOUSE__1F_6_7_NEW__BARK__TOWN_2_0",
     "address_range": {
-      "begin": 502686,
-      "end": 502691
+      "begin": 502687,
+      "end": 502692
     },
     "integer_values": "7 6 2 24 4",
     "hex_values": "$7 $6 $2 $18 $4"
@@ -6194,8 +6194,8 @@
   {
     "label": "PlayersHouse1F_MapEvents.cwri_BEFOREPLAYERS__HOUSE__1F_7_7_NEW__BARK__TOWN_2_1",
     "address_range": {
-      "begin": 502691,
-      "end": 502696
+      "begin": 502692,
+      "end": 502697
     },
     "integer_values": "7 7 2 24 4",
     "hex_values": "$7 $7 $2 $18 $4"
@@ -6203,8 +6203,8 @@
   {
     "label": "PlayersHouse1F_MapEvents.cwri_BEFOREPLAYERS__HOUSE__1F_9_0_PLAYERS__HOUSE__2F_1_2",
     "address_range": {
-      "begin": 502696,
-      "end": 502701
+      "begin": 502697,
+      "end": 502702
     },
     "integer_values": "0 9 1 24 7",
     "hex_values": "$0 $9 $1 $18 $7"
@@ -6212,8 +6212,8 @@
   {
     "label": "PlayersHouse2F_MapEvents.cwri_BEFOREPLAYERS__HOUSE__2F_7_0_PLAYERS__HOUSE__1F_3_0",
     "address_range": {
-      "begin": 503046,
-      "end": 503051
+      "begin": 503047,
+      "end": 503052
     },
     "integer_values": "0 7 3 24 6",
     "hex_values": "$0 $7 $3 $18 $6"
@@ -6221,8 +6221,8 @@
   {
     "label": "PlayersNeighborsHouse_MapEvents.cwri_BEFOREPLAYERS__NEIGHBORS__HOUSE_2_7_NEW__BARK__TOWN_3_0",
     "address_range": {
-      "begin": 503581,
-      "end": 503586
+      "begin": 503582,
+      "end": 503587
     },
     "integer_values": "7 2 3 24 4",
     "hex_values": "$7 $2 $3 $18 $4"
@@ -6230,8 +6230,8 @@
   {
     "label": "PlayersNeighborsHouse_MapEvents.cwri_BEFOREPLAYERS__NEIGHBORS__HOUSE_3_7_NEW__BARK__TOWN_3_1",
     "address_range": {
-      "begin": 503586,
-      "end": 503591
+      "begin": 503587,
+      "end": 503592
     },
     "integer_values": "7 3 3 24 4",
     "hex_values": "$7 $3 $3 $18 $4"
@@ -6680,8 +6680,8 @@
   {
     "label": "Route12SuperRodHouse_MapEvents.cwri_BEFOREROUTE__12__SUPER__ROD__HOUSE_2_7_ROUTE__12_1_0",
     "address_range": {
-      "begin": 521791,
-      "end": 521796
+      "begin": 521803,
+      "end": 521808
     },
     "integer_values": "7 2 1 18 2",
     "hex_values": "$7 $2 $1 $12 $2"
@@ -6689,8 +6689,8 @@
   {
     "label": "Route12SuperRodHouse_MapEvents.cwri_BEFOREROUTE__12__SUPER__ROD__HOUSE_3_7_ROUTE__12_1_1",
     "address_range": {
-      "begin": 521796,
-      "end": 521801
+      "begin": 521808,
+      "end": 521813
     },
     "integer_values": "7 3 1 18 2",
     "hex_values": "$7 $3 $1 $12 $2"
@@ -6761,8 +6761,8 @@
   {
     "label": "Route16FuchsiaSpeechHouse_MapEvents.cwri_BEFOREROUTE__16__FUCHSIA__SPEECH__HOUSE_2_7_ROUTE__16_1_0",
     "address_range": {
-      "begin": 472585,
-      "end": 472590
+      "begin": 472600,
+      "end": 472605
     },
     "integer_values": "7 2 1 21 2",
     "hex_values": "$7 $2 $1 $15 $2"
@@ -6770,8 +6770,8 @@
   {
     "label": "Route16FuchsiaSpeechHouse_MapEvents.cwri_BEFOREROUTE__16__FUCHSIA__SPEECH__HOUSE_3_7_ROUTE__16_1_1",
     "address_range": {
-      "begin": 472590,
-      "end": 472595
+      "begin": 472605,
+      "end": 472610
     },
     "integer_values": "7 3 1 21 2",
     "hex_values": "$7 $3 $1 $15 $2"
@@ -6779,8 +6779,8 @@
   {
     "label": "Route16Gate_MapEvents.cwri_BEFOREROUTE__16__GATE_0_4_ROUTE__16_4_0",
     "address_range": {
-      "begin": 472876,
-      "end": 472881
+      "begin": 472891,
+      "end": 472896
     },
     "integer_values": "4 0 4 21 2",
     "hex_values": "$4 $0 $4 $15 $2"
@@ -6788,8 +6788,8 @@
   {
     "label": "Route16Gate_MapEvents.cwri_BEFOREROUTE__16__GATE_0_5_ROUTE__16_5_1",
     "address_range": {
-      "begin": 472881,
-      "end": 472886
+      "begin": 472896,
+      "end": 472901
     },
     "integer_values": "5 0 5 21 2",
     "hex_values": "$5 $0 $5 $15 $2"
@@ -6797,8 +6797,8 @@
   {
     "label": "Route16Gate_MapEvents.cwri_BEFOREROUTE__16__GATE_9_4_ROUTE__16_2_2",
     "address_range": {
-      "begin": 472886,
-      "end": 472891
+      "begin": 472901,
+      "end": 472906
     },
     "integer_values": "4 9 2 21 2",
     "hex_values": "$4 $9 $2 $15 $2"
@@ -6806,8 +6806,8 @@
   {
     "label": "Route16Gate_MapEvents.cwri_BEFOREROUTE__16__GATE_9_5_ROUTE__16_3_3",
     "address_range": {
-      "begin": 472891,
-      "end": 472896
+      "begin": 472906,
+      "end": 472911
     },
     "integer_values": "5 9 3 21 2",
     "hex_values": "$5 $9 $3 $15 $2"
@@ -6860,8 +6860,8 @@
   {
     "label": "Route17Route18Gate_MapEvents.cwri_BEFOREROUTE__17__ROUTE__18__GATE_0_4_ROUTE__17_1_0",
     "address_range": {
-      "begin": 473347,
-      "end": 473352
+      "begin": 473362,
+      "end": 473367
     },
     "integer_values": "4 0 1 21 3",
     "hex_values": "$4 $0 $1 $15 $3"
@@ -6869,8 +6869,8 @@
   {
     "label": "Route17Route18Gate_MapEvents.cwri_BEFOREROUTE__17__ROUTE__18__GATE_0_5_ROUTE__17_2_1",
     "address_range": {
-      "begin": 473352,
-      "end": 473357
+      "begin": 473367,
+      "end": 473372
     },
     "integer_values": "5 0 2 21 3",
     "hex_values": "$5 $0 $2 $15 $3"
@@ -6878,8 +6878,8 @@
   {
     "label": "Route17Route18Gate_MapEvents.cwri_BEFOREROUTE__17__ROUTE__18__GATE_9_4_ROUTE__18_1_2",
     "address_range": {
-      "begin": 473357,
-      "end": 473362
+      "begin": 473372,
+      "end": 473377
     },
     "integer_values": "4 9 1 17 4",
     "hex_values": "$4 $9 $1 $11 $4"
@@ -6887,8 +6887,8 @@
   {
     "label": "Route17Route18Gate_MapEvents.cwri_BEFOREROUTE__17__ROUTE__18__GATE_9_5_ROUTE__18_2_3",
     "address_range": {
-      "begin": 473362,
-      "end": 473367
+      "begin": 473377,
+      "end": 473382
     },
     "integer_values": "5 9 2 17 4",
     "hex_values": "$5 $9 $2 $11 $4"
@@ -7040,8 +7040,8 @@
   {
     "label": "Route26HealHouse_MapEvents.cwri_BEFOREROUTE__26__HEAL__HOUSE_2_7_ROUTE__26_2_0",
     "address_range": {
-      "begin": 504360,
-      "end": 504365
+      "begin": 504361,
+      "end": 504366
     },
     "integer_values": "7 2 2 24 1",
     "hex_values": "$7 $2 $2 $18 $1"
@@ -7049,8 +7049,8 @@
   {
     "label": "Route26HealHouse_MapEvents.cwri_BEFOREROUTE__26__HEAL__HOUSE_3_7_ROUTE__26_2_1",
     "address_range": {
-      "begin": 504365,
-      "end": 504370
+      "begin": 504366,
+      "end": 504371
     },
     "integer_values": "7 3 2 24 1",
     "hex_values": "$7 $3 $2 $18 $1"
@@ -7085,8 +7085,8 @@
   {
     "label": "Route27SandstormHouse_MapEvents.cwri_BEFOREROUTE__27__SANDSTORM__HOUSE_2_7_ROUTE__27_1_0",
     "address_range": {
-      "begin": 505343,
-      "end": 505348
+      "begin": 505344,
+      "end": 505349
     },
     "integer_values": "7 2 1 24 2",
     "hex_values": "$7 $2 $1 $18 $2"
@@ -7094,8 +7094,8 @@
   {
     "label": "Route27SandstormHouse_MapEvents.cwri_BEFOREROUTE__27__SANDSTORM__HOUSE_3_7_ROUTE__27_1_1",
     "address_range": {
-      "begin": 505348,
-      "end": 505353
+      "begin": 505349,
+      "end": 505354
     },
     "integer_values": "7 3 1 24 2",
     "hex_values": "$7 $3 $1 $18 $2"
@@ -7166,8 +7166,8 @@
   {
     "label": "Route29Route46Gate_MapEvents.cwri_BEFOREROUTE__29__ROUTE__46__GATE_4_0_ROUTE__46_1_0",
     "address_range": {
-      "begin": 505569,
-      "end": 505574
+      "begin": 505570,
+      "end": 505575
     },
     "integer_values": "0 4 1 5 9",
     "hex_values": "$0 $4 $1 $5 $9"
@@ -7175,8 +7175,8 @@
   {
     "label": "Route29Route46Gate_MapEvents.cwri_BEFOREROUTE__29__ROUTE__46__GATE_4_7_ROUTE__29_1_2",
     "address_range": {
-      "begin": 505579,
-      "end": 505584
+      "begin": 505580,
+      "end": 505585
     },
     "integer_values": "7 4 1 24 3",
     "hex_values": "$7 $4 $1 $18 $3"
@@ -7184,8 +7184,8 @@
   {
     "label": "Route29Route46Gate_MapEvents.cwri_BEFOREROUTE__29__ROUTE__46__GATE_5_0_ROUTE__46_2_1",
     "address_range": {
-      "begin": 505574,
-      "end": 505579
+      "begin": 505575,
+      "end": 505580
     },
     "integer_values": "0 5 2 5 9",
     "hex_values": "$0 $5 $2 $5 $9"
@@ -7193,8 +7193,8 @@
   {
     "label": "Route29Route46Gate_MapEvents.cwri_BEFOREROUTE__29__ROUTE__46__GATE_5_7_ROUTE__29_1_3",
     "address_range": {
-      "begin": 505584,
-      "end": 505589
+      "begin": 505585,
+      "end": 505590
     },
     "integer_values": "7 5 1 24 3",
     "hex_values": "$7 $5 $1 $18 $3"
@@ -8453,8 +8453,8 @@
   {
     "label": "Route7SaffronGate_MapEvents.cwri_BEFOREROUTE__7__SAFFRON__GATE_0_4_ROUTE__7_1_0",
     "address_range": {
-      "begin": 473133,
-      "end": 473138
+      "begin": 473148,
+      "end": 473153
     },
     "integer_values": "4 0 1 21 1",
     "hex_values": "$4 $0 $1 $15 $1"
@@ -8462,8 +8462,8 @@
   {
     "label": "Route7SaffronGate_MapEvents.cwri_BEFOREROUTE__7__SAFFRON__GATE_0_5_ROUTE__7_2_1",
     "address_range": {
-      "begin": 473138,
-      "end": 473143
+      "begin": 473153,
+      "end": 473158
     },
     "integer_values": "5 0 2 21 1",
     "hex_values": "$5 $0 $2 $15 $1"
@@ -8471,8 +8471,8 @@
   {
     "label": "Route7SaffronGate_MapEvents.cwri_BEFOREROUTE__7__SAFFRON__GATE_9_4_SAFFRON__CITY_10_2",
     "address_range": {
-      "begin": 473143,
-      "end": 473148
+      "begin": 473158,
+      "end": 473163
     },
     "integer_values": "4 9 10 25 2",
     "hex_values": "$4 $9 $a $19 $2"
@@ -8480,8 +8480,8 @@
   {
     "label": "Route7SaffronGate_MapEvents.cwri_BEFOREROUTE__7__SAFFRON__GATE_9_5_SAFFRON__CITY_11_3",
     "address_range": {
-      "begin": 473148,
-      "end": 473153
+      "begin": 473163,
+      "end": 473168
     },
     "integer_values": "5 9 11 25 2",
     "hex_values": "$5 $9 $b $19 $2"
@@ -8507,8 +8507,8 @@
   {
     "label": "Route8SaffronGate_MapEvents.cwri_BEFOREROUTE__8__SAFFRON__GATE_0_4_SAFFRON__CITY_14_0",
     "address_range": {
-      "begin": 521359,
-      "end": 521364
+      "begin": 521371,
+      "end": 521376
     },
     "integer_values": "4 0 14 25 2",
     "hex_values": "$4 $0 $e $19 $2"
@@ -8516,8 +8516,8 @@
   {
     "label": "Route8SaffronGate_MapEvents.cwri_BEFOREROUTE__8__SAFFRON__GATE_0_5_SAFFRON__CITY_15_1",
     "address_range": {
-      "begin": 521364,
-      "end": 521369
+      "begin": 521376,
+      "end": 521381
     },
     "integer_values": "5 0 15 25 2",
     "hex_values": "$5 $0 $f $19 $2"
@@ -8525,8 +8525,8 @@
   {
     "label": "Route8SaffronGate_MapEvents.cwri_BEFOREROUTE__8__SAFFRON__GATE_9_4_ROUTE__8_1_2",
     "address_range": {
-      "begin": 521369,
-      "end": 521374
+      "begin": 521381,
+      "end": 521386
     },
     "integer_values": "4 9 1 18 1",
     "hex_values": "$4 $9 $1 $12 $1"
@@ -8534,8 +8534,8 @@
   {
     "label": "Route8SaffronGate_MapEvents.cwri_BEFOREROUTE__8__SAFFRON__GATE_9_5_ROUTE__8_2_3",
     "address_range": {
-      "begin": 521374,
-      "end": 521379
+      "begin": 521386,
+      "end": 521391
     },
     "integer_values": "5 9 2 18 1",
     "hex_values": "$5 $9 $2 $12 $1"
@@ -9983,8 +9983,8 @@
   {
     "label": "SoulHouse_MapEvents.cwri_BEFORESOUL__HOUSE_4_7_LAVENDER__TOWN_6_0",
     "address_range": {
-      "begin": 519762,
-      "end": 519767
+      "begin": 519774,
+      "end": 519779
     },
     "integer_values": "7 4 6 18 4",
     "hex_values": "$7 $4 $6 $12 $4"
@@ -9992,8 +9992,8 @@
   {
     "label": "SoulHouse_MapEvents.cwri_BEFORESOUL__HOUSE_5_7_LAVENDER__TOWN_6_1",
     "address_range": {
-      "begin": 519767,
-      "end": 519772
+      "begin": 519779,
+      "end": 519784
     },
     "integer_values": "7 5 6 18 4",
     "hex_values": "$7 $5 $6 $12 $4"
@@ -10541,8 +10541,8 @@
   {
     "label": "TinTowerRoof_MapEvents.cwri_BEFORETIN__TOWER__ROOF_9_13_TIN__TOWER__9F_4_0",
     "address_range": {
-      "begin": 488077,
-      "end": 488082
+      "begin": 488071,
+      "end": 488076
     },
     "integer_values": "13 9 4 3 12",
     "hex_values": "$d $9 $4 $3 $c"
@@ -10946,8 +10946,8 @@
   {
     "label": "VermilionPortPassage_MapEvents.cwri_BEFOREVERMILION__PORT__PASSAGE_15_0_VERMILION__CITY_8_0",
     "address_range": {
-      "begin": 487530,
-      "end": 487535
+      "begin": 487524,
+      "end": 487529
     },
     "integer_values": "0 15 8 12 3",
     "hex_values": "$0 $f $8 $c $3"
@@ -10955,8 +10955,8 @@
   {
     "label": "VermilionPortPassage_MapEvents.cwri_BEFOREVERMILION__PORT__PASSAGE_15_4_VERMILION__PORT__PASSAGE_4_2",
     "address_range": {
-      "begin": 487540,
-      "end": 487545
+      "begin": 487534,
+      "end": 487539
     },
     "integer_values": "4 15 4 15 9",
     "hex_values": "$4 $f $4 $f $9"
@@ -10964,8 +10964,8 @@
   {
     "label": "VermilionPortPassage_MapEvents.cwri_BEFOREVERMILION__PORT__PASSAGE_16_0_VERMILION__CITY_9_1",
     "address_range": {
-      "begin": 487535,
-      "end": 487540
+      "begin": 487529,
+      "end": 487534
     },
     "integer_values": "0 16 9 12 3",
     "hex_values": "$0 $10 $9 $c $3"
@@ -10973,8 +10973,8 @@
   {
     "label": "VermilionPortPassage_MapEvents.cwri_BEFOREVERMILION__PORT__PASSAGE_3_14_VERMILION__PORT_1_4",
     "address_range": {
-      "begin": 487550,
-      "end": 487555
+      "begin": 487544,
+      "end": 487549
     },
     "integer_values": "14 3 1 15 2",
     "hex_values": "$e $3 $1 $f $2"
@@ -10982,8 +10982,8 @@
   {
     "label": "VermilionPortPassage_MapEvents.cwri_BEFOREVERMILION__PORT__PASSAGE_3_2_VERMILION__PORT__PASSAGE_3_3",
     "address_range": {
-      "begin": 487545,
-      "end": 487550
+      "begin": 487539,
+      "end": 487544
     },
     "integer_values": "2 3 3 15 9",
     "hex_values": "$2 $3 $3 $f $9"
@@ -10991,8 +10991,8 @@
   {
     "label": "VermilionPort_MapEvents.cwri_BEFOREVERMILION__PORT_7_17_FAST__SHIP__1F_1_1",
     "address_range": {
-      "begin": 479480,
-      "end": 479485
+      "begin": 479474,
+      "end": 479479
     },
     "integer_values": "17 7 1 15 3",
     "hex_values": "$11 $7 $1 $f $3"
@@ -11000,8 +11000,8 @@
   {
     "label": "VermilionPort_MapEvents.cwri_BEFOREVERMILION__PORT_9_5_VERMILION__PORT__PASSAGE_5_0",
     "address_range": {
-      "begin": 479475,
-      "end": 479480
+      "begin": 479469,
+      "end": 479474
     },
     "integer_values": "5 9 5 15 9",
     "hex_values": "$5 $9 $5 $f $9"

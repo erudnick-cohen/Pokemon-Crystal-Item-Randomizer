@@ -730,8 +730,8 @@
         "tileAddress": 693376
     },
     {
-        "start": 520980,
-        "end": 521053,
+        "start": 520992,
+        "end": 521065,
         "name": "LavRadioTower1FDirectoryText",
         "map": "LavRadioTower1F.asm",
         "commands": 7,
@@ -740,8 +740,8 @@
         "tileAddress": 723949
     },
     {
-        "start": 521054,
-        "end": 521115,
+        "start": 521066,
+        "end": 521127,
         "name": "LavRadioTower1FPokeFluteSignText",
         "map": "LavRadioTower1F.asm",
         "commands": 5,
@@ -780,8 +780,8 @@
         "tileAddress": 710377
     },
     {
-        "start": 487757,
-        "end": 487785,
+        "start": 487751,
+        "end": 487779,
         "name": "DontLitterSignText",
         "map": "MountMoonSquare.asm",
         "commands": 3,

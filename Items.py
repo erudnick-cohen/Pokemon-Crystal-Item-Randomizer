@@ -53,7 +53,7 @@ def makeRawItemCodeDict(progRod = False):
 		,'Rainbow Badge':'ENGINE_RAINBOWBADGE', 'Soul Badge':'ENGINE_SOULBADGE','Marsh Badge':'ENGINE_MARSHBADGE',
 		'Volcano Badge':'ENGINE_VOLCANOBADGE','Earth Badge':'ENGINE_EARTHBADGE',"Escape Rope": "ESCAPE_ROPE",
 		"Water Stone": "WATER_STONE", "Rock Smash": "TM_ROCK_SMASH", "Pokedex": "ENGINE_POKEDEX",
-		"Sweet Scent": "TM_SWEET_SCENT"
+		"Sweet Scent": "TM_SWEET_SCENT", "Coin Case": "COIN_CASE", "Blue Card": "BLUE_CARD"
 	}
 
 	itemCodeDict = {}

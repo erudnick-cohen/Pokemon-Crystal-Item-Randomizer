@@ -1,9 +1,0 @@
-Name: No Double Dipping - Route 44
-Description: "Add logic to prevent going to Route 44 & Ice Path before you have access to Strength"
-Changes:
-    -
-        Location: Route 44
-        AddRecommendedItemReqs:
-            - Strength
-        AddRecommendedFlagReqs:
-            - Plain Badge

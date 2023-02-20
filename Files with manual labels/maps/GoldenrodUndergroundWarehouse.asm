@@ -75,6 +75,7 @@ GoldenrodUndergroundWarehouseDirectorScript:
 .ckir_BEFORE_DirectorBadges::
 	ifless 7, .GotCardKey
 .ckir_AFTER_DirectorBadges::
+	setevent EVENT_MET_UNDERGROUND_DIRECTOR
 	writetext DirectorIntroText
 	promptbutton
 	verbosegiveitem CARD_KEY
@@ -89,6 +90,14 @@ GoldenrodUndergroundWarehouseDirectorScript:
 .ckir_BEFORE_GotCardKey::
 .GotCardKey:
 .ckir_AFTER_GotCardKey::
+	checkevent EVENT_MET_UNDERGROUND_DIRECTOR
+.ckir_BEFORE_OpenDirectorDoorPreBadges::
+	iftrue .DirectorText
+.ckir_AFTER_OpenDirectorDoorPreBadges::
+	setevent EVENT_MET_UNDERGROUND_DIRECTOR
+.ckir_BEFORE_DirectorText::
+.DirectorText
+.ckir_AFTER_DirectorText::
 	writetext DirectorAfterText
 	waitbutton
 	closetext

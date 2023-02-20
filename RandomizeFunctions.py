@@ -2321,6 +2321,9 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
         progressItem = replacedItem
     else:
         while not acceptable_placement:
+            if len(trashItems) == 0:
+                print("IPIs:", invalidPriorityItems, invalidItems)
+                return None
             oldItem = progressItem
             progressItem = trashItems.pop()
             replacedItem = progressItem
@@ -2420,6 +2423,24 @@ def CheckVersion(addressData, romMap):
         return False
 
 
+def GetTMNumber(TM):
+    TMs = []
+    HMs = []
+    with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
+        reader = csv.reader(csvfile)
+        for i in reader:
+            if "TM_ITEM_DC" == i[0]:
+                continue
+            if "TM_" in i[0]:
+                TMs.append(i[0])
+            elif "HM_" in i[0]:
+                HMs.append(i[0])
+
+    if "TM_" in TM:
+        return '{:01}'.format(TMs.index(TM)+1)
+
+    if "HM_" in TM:
+        return '{:01}'.format(HMs.index(TM)+1)
 
 
 def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
@@ -2486,20 +2507,71 @@ def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
 
     return min(15000,abs(int(math.floor(modal_price) / 5) * 5))
 
-def RandomizePrices(min_below=0.5, max_above=2, min_variance=10, keepFree=False):
+def RandomizePrices(priceSettings, locations):
     priceList = {}
+    lookupDict = {}
     itemProcessor = RandomItemProcessor(replaceNames=False)
+
+    min_below = priceSettings["min_below"]
+    max_above = priceSettings["max_above"]
+    min_variance = priceSettings["min_variance"]
+    keep_free = priceSettings["keep_free"]
+
+    if min_below == 0 or max_above == 0 or \
+        (min_below >= max_above):
+        raise Exception("Invalid values provided")
+
     for item in itemProcessor.allItems:
         if "$" in item.Name:
             continue
 
-        if item.Price == 0 and keepFree:
+        if item.Price == 0 and keep_free:
             randomised_price = 0
         else:
             randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
                                        min_variance=min_variance)
         priceList[item.Name] = randomised_price
         price_diff = randomised_price/item.Price if item.Price > 0 else "!"
-        print(item.Name, randomised_price, price_diff)
+        #print(item.Name, randomised_price, price_diff)
+
+        lookupDict[item.Name] = (item.Price, randomised_price)
+
+    #TODO: Add Game Corner Prize price randomisation
+    hardcodedShops = [ loc for loc in locations if loc.Type == "BargainShop"
+                       or loc.Type == "Vending Machine" or loc.Type == "Prize"
+                       or loc.Type == "Buena"]
+    for shop in hardcodedShops:
+        item_to_handle = shop.item
+        if item_to_handle is None:
+            continue
+
+        if shop.Type == "Prize" or shop.Type == "Buena":
+            priceList["HC_" + item_to_handle + str(shop)] = 0
+            continue
+
+        given_price = 500
+        if item_to_handle not in lookupDict:
+            if keep_free:
+                given_price = 0
+            else:
+                given_price = RandomPrice(0, min_below=min_below, max_above=max_above,
+                        min_variance=min_variance)
+
+        else:
+            details = lookupDict[item_to_handle]
+            if details[0] == 0 and keep_free:
+                given_price = 0
+
+            valid = False
+            while not valid:
+                valid = True
+                given_price = RandomPrice(details[0], min_below=min_below, max_above=max_above,
+                                      min_variance=min_variance)
+
+                # Treat as bargains, price must be lower
+                if given_price >= details[1]:
+                    valid = False
+
+        priceList["HC_"+item_to_handle+str(shop)] = given_price
 
     return priceList

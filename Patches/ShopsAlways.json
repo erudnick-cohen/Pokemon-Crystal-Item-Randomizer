@@ -92,15 +92,15 @@
                 255,
                 0,
                 0,
-                186,
+                180,
                 113,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 487945,
-            "end": 487958
+            "begin": 487939,
+            "end": 487952
         },
         "label": "MountMoonGiftShop_MapEvents.ckir_BEFORE_shop_events_MOONSHOP",
         "description": "Mount Moon shop always open"

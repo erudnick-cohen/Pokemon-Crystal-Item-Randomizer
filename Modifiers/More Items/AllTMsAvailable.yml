@@ -2,16 +2,16 @@ Name: All TMs available
 Description: Ensures that all 50 TMs are available. TMs that appear multiple times in the vanilla game will still have multiple copies. TMs that normally appear in shops will not have additional copies added to the item pool (other than those that already exist). All game corner TMs are added to the item pool, as they are way too expensive and slow to get normally. Note that this is relative to the checks available under your current settings, thus TM03 for example might be both in the item pool and also available at night in Celadon. 
 NewItems:
     - TM_PSYCH_UP
-    - TM_HYPER_BEAM
-    - TM_BLIZZARD
-    - TM_THUNDER
-    - TM_DOUBLE_TEAM
-    - TM_FIRE_BLAST
 
 MaybeNewItems:
     - TM_RETURN
     - TM_FRUSTRATION
     - TM_CURSE
+    - TM_HYPER_BEAM
+    - TM_BLIZZARD
+    - TM_THUNDER
+    - TM_DOUBLE_TEAM
+    - TM_FIRE_BLAST
 
 DontReplace:
     - TM_DYNAMICPUNCH
