@@ -1,0 +1,18 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                100
+            ],
+            "new": [
+                100
+            ]
+        },
+        "address_range": {
+            "begin": 71298,
+            "end": 71299
+        },
+        "label": "TMHMMoves.ckir_BEFORE_TM09",
+        "description": "Replaces TM09 with Teleport, on the TM never ordinarily included."
+    }
+]

@@ -11669,8 +11669,8 @@
       "begin": 494785,
       "end": 494790
     },
-    "integer_values": "45 155 5 173 0",
-    "hex_values": "$2d $9b $5 $ad $0"
+    "integer_values": "45 155 5 200 0",
+    "hex_values": "$2d $9b $5 $c8 $0"
   },
   {
     "label": "Randomizer_StarterTotodileOffset4.ckir_BEFORE_STARTER2",
@@ -17881,6 +17881,15 @@
     },
     "integer_values": "249",
     "hex_values": "$f9"
+  },
+  {
+    "label": "TMHMMoves.ckir_BEFORE_TM09",
+    "address_range": {
+      "begin": 71298,
+      "end": 71299
+    },
+    "integer_values": "244",
+    "hex_values": "$f4"
   },
   {
     "label": "TeamRocketBaseB1FGuardSpec.ckir_BEFOREROCKETBASE1FGUARDSPEC0ITEMCODE",

@@ -1,5 +1,69 @@
+from collections import defaultdict
+
 import yaml
 import csv
+
+def GetTMNumber(TM):
+    TMs = []
+    HMs = []
+    with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
+        reader = csv.reader(csvfile)
+        for i in reader:
+            if "TM_ITEM_DC" == i[0]:
+                continue
+            if "TM_" in i[0]:
+                TMs.append(i[0])
+            elif "HM_" in i[0]:
+                HMs.append(i[0])
+
+    if "TM_" in TM:
+        return '{:02}'.format(TMs.index(TM)+1)
+
+    if "HM_" in TM:
+        return '{:02}'.format(HMs.index(TM)+1)
+
+def GetKeyItemMap():
+	return {
+		'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG',
+		'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE',
+		'Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL',
+		'S S Ticket':'S_S_TICKET', 		'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE',
+		'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING',
+		'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'
+		,'Zephyr Badge' : 'ENGINE_ZEPHYRBADGE', 'Hive Badge':'ENGINE_HIVEBADGE','Plain Badge':'ENGINE_PLAINBADGE',
+		'Fog Badge':'ENGINE_FOGBADGE', 'Storm Badge':'ENGINE_STORMBADGE', 'Mineral Badge':'ENGINE_MINERALBADGE',
+		'Glacier Badge':'ENGINE_GLACIERBADGE','Rising Badge':'ENGINE_RISINGBADGE', 'Boulder Badge':'ENGINE_BOULDERBADGE'
+		,'Cascade Badge':'ENGINE_CASCADEBADGE','Thunder Badge':'ENGINE_THUNDERBADGE'
+		,'Rainbow Badge':'ENGINE_RAINBOWBADGE', 'Soul Badge':'ENGINE_SOULBADGE','Marsh Badge':'ENGINE_MARSHBADGE',
+		'Volcano Badge':'ENGINE_VOLCANOBADGE','Earth Badge':'ENGINE_EARTHBADGE',"Escape Rope": "ESCAPE_ROPE",
+		"Water Stone": "WATER_STONE", "Rock Smash": "TM_ROCK_SMASH", "Pokedex": "ENGINE_POKEDEX",
+		"Sweet Scent": "TM_SWEET_SCENT", "Coin Case": "COIN_CASE", "Blue Card": "BLUE_CARD"
+	}
+
+def getInverseKeyItemMap():
+	keyMap = GetKeyItemMap()
+	invKeyItemMap = defaultdict(lambda: '')
+	for i in keyMap:
+		invKeyItemMap[keyMap[i]] = i
+
+	return invKeyItemMap
+
+
+def GetCorrectItemName(itemName):
+	inverse = GetKeyItemMap()
+
+	if itemName in inverse:
+		itemName = inverse[itemName]
+
+	if itemName.startswith("TM"):
+		itemName = "TM" + GetTMNumber(itemName)
+	elif "HM" in itemName:
+		itemName = "HM" + GetTMNumber(itemName)
+
+	if itemName in inverse:
+		itemName = inverse[itemName]
+
+	return itemName.upper()
 
 def makeItemCodeDict():
 	#hardcoding key item lookups for now, pass as parameter in future
@@ -39,22 +103,7 @@ def makeItemCodeDict():
 
 def makeRawItemCodeDict(progRod = False):
 	#hardcoding key item lookups for now, pass as parameter in future
-	keyItemMap = {
-		'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG',
-		'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE',
-		'Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL',
-		'S S Ticket':'S_S_TICKET', 		'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE',
-		'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING',
-		'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'
-		,'Zephyr Badge' : 'ENGINE_ZEPHYRBADGE', 'Hive Badge':'ENGINE_HIVEBADGE','Plain Badge':'ENGINE_PLAINBADGE',
-		'Fog Badge':'ENGINE_FOGBADGE', 'Storm Badge':'ENGINE_STORMBADGE', 'Mineral Badge':'ENGINE_MINERALBADGE',
-		'Glacier Badge':'ENGINE_GLACIERBADGE','Rising Badge':'ENGINE_RISINGBADGE', 'Boulder Badge':'ENGINE_BOULDERBADGE'
-		,'Cascade Badge':'ENGINE_CASCADEBADGE','Thunder Badge':'ENGINE_THUNDERBADGE'
-		,'Rainbow Badge':'ENGINE_RAINBOWBADGE', 'Soul Badge':'ENGINE_SOULBADGE','Marsh Badge':'ENGINE_MARSHBADGE',
-		'Volcano Badge':'ENGINE_VOLCANOBADGE','Earth Badge':'ENGINE_EARTHBADGE',"Escape Rope": "ESCAPE_ROPE",
-		"Water Stone": "WATER_STONE", "Rock Smash": "TM_ROCK_SMASH", "Pokedex": "ENGINE_POKEDEX",
-		"Sweet Scent": "TM_SWEET_SCENT", "Coin Case": "COIN_CASE", "Blue Card": "BLUE_CARD"
-	}
+	keyItemMap = GetKeyItemMap()
 
 	itemCodeDict = {}
 	#progress items

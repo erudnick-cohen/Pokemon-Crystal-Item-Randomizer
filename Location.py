@@ -522,7 +522,7 @@ class Location:
 			for i in self.Sublocations:
 				list.extend(i.getTrashItemList(flags, labelling = labelling))
 		#if this item isn't included, then don't use it as an item location
-		elif not labelling and self.isItem():
+		elif not labelling and self.isItem() and not self.Dummy:
 			self.Type = 'Map'
 			self.WasItem = True
 			self.IsItem = False

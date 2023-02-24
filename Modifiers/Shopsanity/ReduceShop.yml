@@ -2,3 +2,5 @@ Name: Reduce Shops
 Description: Re-rolls progress items in shops to reduce odds
 VariablesSet:
     - RerollShopPercent: 50
+IncompatibleWithout:
+    - 'Shopsanity'

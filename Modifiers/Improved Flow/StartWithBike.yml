@@ -4,3 +4,5 @@ NewGamePatches:
     - 'Patches/StartWithBikeLock.json'
 FlagsSet:
     - Start With Bike
+AddedTrash:
+    - RARE_CANDY

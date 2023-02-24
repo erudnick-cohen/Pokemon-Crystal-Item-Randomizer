@@ -5,5 +5,5 @@ FlagsSet:
 VariablesSet:
     - MinBelow: 0.5
     - MaxAbove: 2
-    - MinVariance: 0
+    - MinVariance: 10
     - KeepFree: No

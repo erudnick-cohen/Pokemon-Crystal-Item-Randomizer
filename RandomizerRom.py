@@ -562,9 +562,7 @@ def WriteItemNameToBuffer(location,labelData,romMap):
 	vendSpaceMax = vendingString.rindex(" ")
 
 	#TODO: Replace TM with TM Number (shorter)
-	itemNameToWrite = location.item.upper()
-	if "TM_" in itemNameToWrite or "HM_" in itemNameToWrite:
-		itemNameToWrite = "TM" + RandomizeFunctions.GetTMNumber(itemNameToWrite)
+	itemNameToWrite = Items.GetCorrectItemName(location.item)
 
 	itemNameToWrite = itemNameToWrite.replace("_"," ")
 

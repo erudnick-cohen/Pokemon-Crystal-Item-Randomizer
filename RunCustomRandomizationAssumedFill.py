@@ -1,4 +1,5 @@
 import GenerateWarpData
+import Items
 import LoadLocationData
 import Badge
 import RandomizeFunctions
@@ -329,13 +330,27 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			res_removed_items = fullLocationData[2].copy()
 			progressItems = copy.copy(requiredItemsCopy)
 			#hardcoding key item lookups for now, pass as parameter in future
-			keyItemMap = {'Surf':'HM_SURF', 'Squirtbottle':"SQUIRTBOTTLE", 'Flash':'HM_FLASH', 'Mystery Egg':'MYSTERY_EGG', 'Cut':'HM_CUT','Strength': 'HM_STRENGTH','Secret Potion':'SECRETPOTION', 'Red Scale':'RED_SCALE','Whirlpool': 'HM_WHIRLPOOL', 'Card Key': 'CARD_KEY', 'Basement Key':'BASEMENT_KEY', 'Waterfall':'HM_WATERFALL','S S Ticket':'S_S_TICKET', 'Machine Part': 'MACHINE_PART','Lost Item':'LOST_ITEM','Bicycle':'BICYCLE', 'Pass':'PASS','Fly':'HM_FLY', 'Clear Bell': 'CLEAR_BELL', 'Rainbow Wing':'RAINBOW_WING', 'Pokegear':'ENGINE_POKEGEAR','Radio Card':'ENGINE_RADIO_CARD','Expansion Card':'ENGINE_EXPN_CARD'}
+			keyItemMap = Items.GetKeyItemMap()
 			criticalTrash = ['ENGINE_POKEDEX', 'COIN_CASE', 'ITEMFINDER', 'SILVER_WING', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD', 'BLUE_CARD']
 			criticalTrash.extend(dontReplace)
-			invKeyItemMap = defaultdict(lambda: '')
-			for i in keyItemMap:
-				invKeyItemMap[keyItemMap[i]] = i
-			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems]) #ensure progress items don't sneak into trash list
+			invKeyItemMap = Items.getInverseKeyItemMap()
+
+			# Some instances of progress items might have a duplicate, e.g. Escape Ropes
+			# But only want those now added to progress items
+			multiTrash = []
+			oneInstanceOf = []
+			multiInstancesOf = [ x for x in res_items if invKeyItemMap[x] in progressItems
+								 and (len([x2 for x2 in res_items if x == x2]) > 1) ]
+
+			for x in multiInstancesOf:
+				if x not in oneInstanceOf:
+					oneInstanceOf.append(x)
+				else:
+					multiTrash.append(x)
+
+			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems])
+			trashItems.extend(sorted(multiTrash))
+			#ensure progress items don't sneak into trash list
 
 			trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
@@ -536,7 +551,8 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			"min_below": 0.5,
 			"max_above": 2,
 			"min_variance": 0,
-			"keep_free": False
+			"keep_free": False,
+			"shop_settings": {}
 		}
 
 		if "MinBelow" in inputVariables:
@@ -547,6 +563,12 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			priceSettings["min_variance"] = inputVariables["MinVariance"]
 		if "KeepFree" in inputVariables:
 			priceSettings["keep_free"] = inputVariables["KeepFree"]
+		if "CherrygroveMaxPrice" in inputVariables:
+			priceSettings["shop_settings"]["MartCherrygroveBetter"] = {
+				"MaxPrice":	inputVariables["CherrygroveMaxPrice"]
+			}
+
+		#TODO: In future, make items in later marts more expensive if not present in earlier marts
 
 		itemPrices = RandomizeFunctions.RandomizePrices(priceSettings, locations_list)
 		RandomizerRom.WriteItemPricesToMemory(addressData, romMap, itemPrices)

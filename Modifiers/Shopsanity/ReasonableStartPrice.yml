@@ -1,0 +1,6 @@
+Name: Reasonable Start Price
+Description: Alters price randomisation logic for any item sold in Cherrygrove Mart.
+VariablesSet:
+  - CherrygroveMaxPrice: 200
+IncompatibleWithout:
+    - 'Price Randomisation'

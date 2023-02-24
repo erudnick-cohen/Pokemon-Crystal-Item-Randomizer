@@ -544,11 +544,18 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#	# Shopsanity does not yet support flags in shops
 				#	placeable = False
 
-				# Enforce Shopsanity items to be buyable
-				if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS and not locList[iter].isShop():
-					placeable = False
 
-				# Unlikely to be the culprit?
+				# Enforce Shopsanity items to be buyable
+				if not locList[iter].isShop():
+					if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+						placeable = False
+				else:
+					if toAllocate not in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+						if "RerollShopPercent" in inputVariables:
+							random_value = random.random() * 100
+							if random_value % 100 <= inputVariables["RerollShopPercent"]:
+								break
+
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition" or locList[iter].Dummy:
 					break
 
@@ -556,11 +563,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					placeable = False
 				elif not badgeShuffle and toAllocate not in badgeSet and locList[iter].IsActuallyGym:
 					placeable = False
-
-				if "RerollShopPercent" in inputVariables and locList[iter].IsShop:
-					random_value = random.random()
-					if random_value % 100 <= inputVariables["RerollShopPercent"]:
-						placeable = False
 
 				#if placeable and not badgeShuffle and toAllocate in badgeSet:
 				#	print("Attempt:", locList[iter].Name, toAllocate)

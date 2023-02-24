@@ -142,9 +142,17 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		# First, check no warps interfere with one another
 
 		conflicts = []
+		seenMods = []
+		repeatedMods = []
 		modNames = [ mod['Name'] for mod in self.modList ]
 
 		for mod in self.modList:
+			if mod in seenMods:
+				repeatedMods.append(mod)
+			else:
+				seenMods.append(mod)
+
+
 			if 'IncompatibleWith' in mod:
 				for item in mod['IncompatibleWith']:
 					if item in modNames:
@@ -165,6 +173,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 		if len(conflicts) > 0:
 			message = "Mod config error with: "+ ','.join(conflicts)
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage('Incompatible modifiers found' + "\n" + message)
+			error_dialog.exec_()
+			return
+
+		if len(repeatedMods) > 0:
+			message = "Mod repeated error with: "+ ','.join([x["Name"] for x in repeatedMods])
 			error_dialog = QtWidgets.QErrorMessage()
 			error_dialog.showMessage('Incompatible modifiers found' + "\n" + message)
 			error_dialog.exec_()
@@ -503,6 +518,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def loadModifier(self):
 		modfiles = QFileDialog.getOpenFileNames(directory = FileOperations.DEFAULT_MODIFIERS_DIRECTORY)[0]
 		if len(modfiles) > 0:
+
+			potentiallyMiss = {}
+
 			for modfile in modfiles:
 				yamlfile = open(modfile)
 				yamltext = yamlfile.read()
@@ -510,15 +528,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				loadedYaml = yaml.load(yamltext, Loader=yaml.FullLoader)
 				currentModifierNames = [obj["Name"] for obj in self.modList]
 
-
 				if loadedYaml["Name"] in currentModifierNames:
-					message = loadedYaml["Name"] + " is already loaded!"
-					error_dialog = QtWidgets.QErrorMessage()
-					error_dialog.showMessage(message)
-					error_dialog.exec_()
-
+					if len(modfiles) == 1:
+						message = loadedYaml["Name"] + " is already loaded!"
+						error_dialog = QtWidgets.QErrorMessage()
+						error_dialog.showMessage(message)
+						error_dialog.exec_()
 					continue
-
 
 				is_incompatible = False
 				if "IncompatibleWith" in loadedYaml:
@@ -537,15 +553,43 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 						if option in currentModifierNames:
 							optionFound = True
 					if not optionFound:
+						#TODO If loading multiple only show this message at the endpoint
+						potentiallyMiss[modfile] = loadedYaml
 						is_incompatible = True
-						message = loadedYaml["Name"] + ":" + '/'.join(options)
-						error_dialog = QtWidgets.QErrorMessage()
-						error_dialog.showMessage('Modifier chosen invalid without other:' + "\n" + message)
-						error_dialog.exec_()
 
 				if not is_incompatible:
 					self.modList.append(loadedYaml)
 					self.modList[-1]['fileName'] = self.makeFileNameSafe(modfile)
+
+
+			if len(potentiallyMiss) > 0:
+				currentModifierNames = [obj["Name"] for obj in self.modList]
+				for miss in potentiallyMiss.keys():
+					missYaml = potentiallyMiss[miss]
+					is_incompatible = True
+
+					options = missYaml["IncompatibleWithout"]
+					found = False
+					for option in options:
+						if option in currentModifierNames:
+							found = True
+
+					if found:
+						is_incompatible = False
+
+					if not is_incompatible:
+						self.modList.append(missYaml)
+						self.modList[-1]['fileName'] = self.makeFileNameSafe(miss)
+					else:
+						message = missYaml["Name"] + ":" + '/'.join(options)
+						print(message)
+						error_dialog = QtWidgets.QErrorMessage()
+						error_dialog.showMessage('Modifier chosen invalid without other:' + "\n" + message)
+						error_dialog.exec_()
+
+
+
+
 
 			self.updateModListView()
 
@@ -581,6 +625,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 	def loadModifiers(self, modifiersList, reset=True):
 		if reset:
 			self.modList = []
+
+		current = [x["fileName"] for x in self.modList]
+
 		for i in modifiersList:
 			fileToLoad = i
 			if not os.path.isfile(i):
@@ -588,6 +635,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				fileToLoad = FileOperations.FindModifier(filepart)
 
 			if fileToLoad is not None:
+				if fileToLoad in current:
+					continue
 				yamlfile = open(fileToLoad)
 				yamltext = yamlfile.read()
 				self.modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))

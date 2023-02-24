@@ -2,8 +2,6 @@ Name: Buena Items
 Description: Adds Game Corner items into logic.
 AddedItems:
     - Blue Card
-MaybeRemoveItems:
-    - BLUE_CARD
 FlagsSet:
     - Buena Items
 Changes:
@@ -11,3 +9,6 @@ Changes:
         Location: Buena Items
         RemoveFlagReqs:
             - Banned
+IncompatibleWithout:
+    - 'Shopsanity'
+    - 'Price Randomisation'

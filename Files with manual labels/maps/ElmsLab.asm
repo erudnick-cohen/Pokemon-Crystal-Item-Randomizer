@@ -202,7 +202,7 @@ Randomizer_StarterCyndaquilOffset3::
 	promptbutton
 Randomizer_StarterCyndaquilOffset4::
 .ckir_BEFORE_STARTER1::
-	givepoke CYNDAQUIL, 5, BERRY
+	givepoke CYNDAQUIL, 5, TM_PSYCH_UP
 .ckir_AFTER_STARTER1::
 	closetext
 	readvar VAR_FACING

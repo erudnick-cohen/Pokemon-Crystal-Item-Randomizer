@@ -3,3 +3,5 @@ Description: Prevents shuffling overpowered items into shops.
 FlagsSet:
     - Cannot Buy Rare Candy
     - Cannot Buy Master Ball
+IncompatibleWithout:
+    - 'Shopsanity'

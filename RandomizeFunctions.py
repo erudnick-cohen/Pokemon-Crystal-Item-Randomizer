@@ -5,6 +5,7 @@ import random
 import string
 from collections import defaultdict
 
+import Items
 import LoadLocationData
 import RandomizeItemsBadgesAssumedFill
 import Version
@@ -2323,7 +2324,7 @@ def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItem
         while not acceptable_placement:
             if len(trashItems) == 0:
                 print("IPIs:", invalidPriorityItems, invalidItems)
-                return None
+                #return None
             oldItem = progressItem
             progressItem = trashItems.pop()
             replacedItem = progressItem
@@ -2423,27 +2424,9 @@ def CheckVersion(addressData, romMap):
         return False
 
 
-def GetTMNumber(TM):
-    TMs = []
-    HMs = []
-    with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
-        reader = csv.reader(csvfile)
-        for i in reader:
-            if "TM_ITEM_DC" == i[0]:
-                continue
-            if "TM_" in i[0]:
-                TMs.append(i[0])
-            elif "HM_" in i[0]:
-                HMs.append(i[0])
-
-    if "TM_" in TM:
-        return '{:01}'.format(TMs.index(TM)+1)
-
-    if "HM_" in TM:
-        return '{:01}'.format(HMs.index(TM)+1)
 
 
-def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
+def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0, min_price=None, max_price=None):
     retry = True
 
     increased_variance = False
@@ -2457,6 +2440,9 @@ def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
     max_retries = 5
     total_retries = 0
 
+    if max_price is not None and max_price <= original_price * min_below:
+        return max_price
+
     while retry:
         variance = modal_price
         if increased_variance:
@@ -2464,27 +2450,30 @@ def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0):
             modal_price *= 0.8
         new_modal_price = random.normalvariate(modal_price, variance)
 
-        total_retries += 1
+        if max_price is not None and new_modal_price > max_price:
+            print("pr", max_price, original_price, new_modal_price)
+            modal_price -= 5
+            continue
 
         if new_modal_price > 15000:
             if total_retries == 1:
-                total_retries -= 1
                 continue
             else:
                 break
 
         if new_modal_price <= 0:
             if modal_price == 0:
-                total_retries -= 1
                 continue
-            elif total_retries == 1:
-                total_retries -= 1
+            elif total_retries == 0:
                 continue
             else:
                 break
 
-        if not increased_variance:
+        total_retries += 1
 
+
+
+        if not increased_variance:
             if new_modal_price < (original_price * min_below):
                 if total_retries == 1:
                     total_retries -= 1
@@ -2516,6 +2505,29 @@ def RandomizePrices(priceSettings, locations):
     max_above = priceSettings["max_above"]
     min_variance = priceSettings["min_variance"]
     keep_free = priceSettings["keep_free"]
+    shopDetails = priceSettings["shop_settings"]
+
+    martItems = {}
+
+    for mart in shopDetails.keys():
+        martDesc = shopDetails[mart]
+        itemsInThisLocation = [ i for i in locations if i.isShop() and i.FileName == mart ]
+        for item in itemsInThisLocation:
+            alterPriceOf = item.item
+            alterPriceOf = Items.GetCorrectItemName(alterPriceOf)
+
+            if alterPriceOf.startswith("ENGINE_"):
+                alterPriceOf = alterPriceOf.replace("ENGINE_", "ITEM_")
+
+            if alterPriceOf not in martItems:
+                martItems[alterPriceOf] = {}
+
+            if 'MaxPrice' in martDesc:
+                #TODO Check value is not overwritten
+                martItems[alterPriceOf]["MaxPrice"] = martDesc['MaxPrice']
+                print("MaxMartPrice::",alterPriceOf,  martDesc['MaxPrice'])
+
+
 
     if min_below == 0 or max_above == 0 or \
         (min_below >= max_above):
@@ -2528,8 +2540,14 @@ def RandomizePrices(priceSettings, locations):
         if item.Price == 0 and keep_free:
             randomised_price = 0
         else:
+            max_price = None
+            if item.Name in martItems:
+                if 'MaxPrice' in martItems[item.Name]:
+                    max_price = martItems[item.Name]["MaxPrice"]
+                    print("Use max price::", max_price)
+
             randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
-                                       min_variance=min_variance)
+                                       min_variance=min_variance, max_price=max_price)
         priceList[item.Name] = randomised_price
         price_diff = randomised_price/item.Price if item.Price > 0 else "!"
         #print(item.Name, randomised_price, price_diff)
@@ -2565,10 +2583,19 @@ def RandomizePrices(priceSettings, locations):
             valid = False
             while not valid:
                 valid = True
+                # Treat as bargains, price must be lower
+
+                if details[1] == 0:
+                    given_price = 0
+                    break
+
+                if details[1] <= details[0] * min_below:
+                    given_price = details[1] - 1
+                    break
+
                 given_price = RandomPrice(details[0], min_below=min_below, max_above=max_above,
                                       min_variance=min_variance)
 
-                # Treat as bargains, price must be lower
                 if given_price >= details[1]:
                     valid = False
 

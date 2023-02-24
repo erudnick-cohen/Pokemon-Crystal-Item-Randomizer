@@ -35,8 +35,7 @@ Xcopy "ItemData" "dist/Pokemon Crystal Item Randomizer/ItemData" /i /y
 Xcopy "Map Data" "dist/Pokemon Crystal Item Randomizer/Map Data" /i /y
 Xcopy "Config" "dist/Pokemon Crystal Item Randomizer/Config" /i /y
 Xcopy "Modes" "dist/Pokemon Crystal Item Randomizer/Modes" /i /y
-Xcopy "Modifiers" "dist/Pokemon Crystal Item Randomizer/Modifiers" /i /y
-Xcopy "Modifiers\Auto" "dist/Pokemon Crystal Item Randomizer/Modifiers/Auto" /i /y
+Xcopy "Modifiers" "dist/Pokemon Crystal Item Randomizer/Modifiers" /s /i /y
 Xcopy "Patches" "dist/Pokemon Crystal Item Randomizer/Patches" /i /y
 Xcopy "Special Pokemon Locations" "dist/Pokemon Crystal Item Randomizer/Special Pokemon Locations" /i /y
 Xcopy "TrainerData" "dist/Pokemon Crystal Item Randomizer/TrainerData" /i /y
