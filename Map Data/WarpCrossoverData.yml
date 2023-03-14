@@ -957,7 +957,7 @@ Location:
             - Radio Tower 2F
         ItemReqs:
         FlagReqs:
-            - Rocket Invasion
+            - Rockets In Radio Tower
         FlagsSet:
         ReachableReqs:
         WildTableList:

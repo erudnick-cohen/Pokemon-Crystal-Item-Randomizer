@@ -30,7 +30,12 @@ DefaultModifiers:
     - Modifiers/OpenMtSilver.yml
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/ForceEarlyFlyV2.yml
-    - Modifiers/ShuffleLeftovers.yml
+    - Modifiers/Shopsanity.yml
+    - Modifiers/BuenaItems.yml
+    - Modifiers/GameCorner.yml
+    - Modifiers/PreventShopItems.yml
+    - Modifiers/PriceRandomisation.yml
+    - Modifiers/IncludeGSBall.yml
 BannedLocations:
 AllowedLocations:
 Goal: Red

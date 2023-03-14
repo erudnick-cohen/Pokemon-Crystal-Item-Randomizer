@@ -251,7 +251,7 @@ Location:
                 WildTableList:
                 LocationReqs: Goldenrod Warehouse
                 FlagReqs:
-                    - Rocket Invasion
+                    - Rockets In Radio Tower
                 ItemReqs:
                 FlagsSet:
                     - Director Saved

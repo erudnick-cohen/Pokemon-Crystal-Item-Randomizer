@@ -42,12 +42,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		if 'BaseRomInputDirectory' in yamltext:
 			self.defaultRomDirectory = yamltext['BaseRomInputDirectory']
 		self.defaultRomOutDirectory = "."
+		self.defaultRom = None
 		if 'BaseRomOutputDirectory' in yamltext:
 			self.defaultRomOutDirectory = yamltext['BaseRomOutputDirectory']
+		if 'BaseRom' in yamltext:
+			self.defaultRom = yamltext['BaseRom']
 		self.SelectRomFile.clicked.connect(self.selectRom)
 		self.Randomize.setEnabled(False)
 		self.Randomize.setText(_translate("MainWindow", "No Rom Loaded!"))
-		self.Randomize.clicked.connect(self.runRandomizer)
+		self.Randomize.clicked.connect(self.pressRunRandomiser)
 		self.SaveSettings.clicked.connect(self.saveSettings)
 		self.PlandoMode = False
 		self.PlandoData = {}
@@ -59,7 +62,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		self.View_Items.clicked.connect(self.RemoveBonusItem)
 		self.BadgesNeeded.clicked.connect(self.SetBadgeForSilver)
 		self.HintButton.clicked.connect(self.ProcessHintSettings)
-
+		self.modeVariables = {}
+		self.setCurrentVariables.clicked.connect(self.SetCurrentVariables)
 		self.version.setText(_translate("MainWindow", "Version "+Version.GetItemRandoVersion()))
 
 		self.itemsList = []
@@ -83,6 +87,20 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 				self.WriteRandomizerConfig(firstRun=False)
 
+		if self.defaultRom is not None:
+			isFullPath = os.path.isfile(self.defaultRom)
+			if isFullPath:
+				self.romPath = self.defaultRom
+				self.Randomize.setEnabled(True)
+				self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
+			elif self.defaultRomDirectory is not None:
+				romPath = self.defaultRomDirectory + "/" +self.defaultRom
+				isEndPath = self.defaultRomDirectory is not None and \
+							os.path.isfile(romPath)
+				if isEndPath:
+					self.romPath = romPath
+					self.Randomize.setEnabled(True)
+					self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
 
 	def importSettings(self, oldDirectory):
 		oldSettings = oldDirectory + "/RandomizerConfig.yml"
@@ -136,8 +154,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					shutil.copy(modeDirectory + "/" + additionalMode, "Modes/Custom")
 
 
+	def pressRunRandomiser(self):
+		self.runRandomizer()
 
-	def runRandomizer(self):
+
+	def runRandomizer(self, requiredMD5=None):
 
 		# First, check no warps interfere with one another
 
@@ -249,6 +270,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			settings_md5 = self.GetSettingsMD5()
 			print(settings_md5)
 
+			f = open(self.romPath, 'rb')
+			romMD5 = str(hashlib.md5(f.read()).hexdigest())
+			f.close()
+
+			print("reqMD5", requiredMD5)
+			if requiredMD5 is not None:
+				if romMD5 != requiredMD5:
+					raise Exception("Invalid rom MD5")
+
 			copyfile(self.romPath, randomizedFileName)
 			with open('SAVEDSEEDLOG.log','a+') as f:
 				f.write(rngSeed+"\n")
@@ -267,39 +297,26 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				if allowedLocations is not None:
 					allowedLocations = allowedLocations.copy()
 
-			if('ProgressItems' in self.settings):
-				if 'CoreProgress' in self.settings:
-					resultDict = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
-									 banList = bannedLocations, allowList = allowedLocations,
-									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
-									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'].copy(),coreProgress = self.settings['CoreProgress'].copy(),
-									 otherSettings = self.settings, plandoPlacements = self.PlandoData, hintConfig = HintOptions)
-				else:
-					resultDict = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
-									 banList = bannedLocations, allowList = allowedLocations,
-									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False, adjustSpecialWildLevels = False,
-									 trainerLVBoost = tlv, wildLVBoost=wlv, requiredItems = self.settings['ProgressItems'].copy(), otherSettings = self.settings,
-									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
-			else:
-				if 'CoreProgress' in self.settings:
-					resultDict = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
-									 banList = bannedLocations, allowList = allowedLocations,
-									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
-									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
-									 coreProgress = self.settings['CoreProgress'].copy(), otherSettings = self.settings,
-									 plandoPlacements = self.PlandoData, hintConfig = HintOptions)
-				else:
-					resultDict = RunCustomRandomization.\
-						randomizeRom(randomizedFileName,self.settings['Goal'], rSeed, flagSettings,patches,
-									 banList = bannedLocations, allowList = allowedLocations,
-									 modifiers = self.modList,adjustTrainerLevels = False, adjustRegularWildLevels = False,
-									 adjustSpecialWildLevels = False, trainerLVBoost = tlv, wildLVBoost=wlv,
-									 otherSettings = self.settings, plandoPlacements = self.PlandoData,
-									 hintConfig = HintOptions)
+			preventAdd = None
+			if "PreventAddItems" in self.settings:
+				preventAdd = self.settings["PreventAddItems"]
+				if preventAdd is not None:
+					preventAdd = preventAdd.copy()
 
+			progressItems = self.settings["ProgressItems"].copy() if "ProgressItems" in self.settings else None
+
+			coreProgress = self.settings["CoreProgress"].copy() if "CoreProgress" in self.settings else None
+			bonusTrash = self.settings["BonusItems"].copy() if "BonusItems" in self.settings else None
+
+			resultDict = RunCustomRandomization. \
+				randomizeRom(randomizedFileName, self.settings['Goal'], rSeed, flagSettings, patches,
+							 banList=bannedLocations, allowList=allowedLocations,
+							 modifiers=self.modList, adjustTrainerLevels=False, adjustRegularWildLevels=False,
+							 adjustSpecialWildLevels=False,
+							 trainerLVBoost=tlv, wildLVBoost=wlv, requiredItems=progressItems,
+							 coreProgress=coreProgress,
+							 otherSettings=self.settings, plandoPlacements=self.PlandoData, hintConfig=HintOptions,
+							 preventAddingItems=preventAdd, bonusTrash=bonusTrash, modeVariables=self.modeVariables)
 
 			if resultDict is None:
 				error_dialog = QtWidgets.QErrorMessage()
@@ -308,7 +325,57 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				raise Exception("Invalid ROM")
 
 			self.Randomize.setEnabled(True)
-			if(self.SpoilerOutputRadioButton.isChecked()):
+
+			hasWarning = False
+			if "Warnings" in resultDict:
+				warnings = resultDict["Warnings"]
+				if "HasSilverLeaf" in warnings:
+					HasSilverLeaf = warnings["HasSilverLeaf"]
+					if HasSilverLeaf:
+						hasWarning = True
+
+				if "HasGoldLeaf" in warnings:
+					HasGoldLeaf = warnings["HasGoldLeaf"]
+					if HasGoldLeaf:
+						hasWarning = True
+
+				if "HasLeftoverTrash" in warnings:
+					HasLeftoverTrash = warnings["HasLeftoverTrash"]
+					if HasLeftoverTrash:
+						hasWarning = True
+
+				if "CantReachE4" in warnings:
+					CantReachE4 = warnings["CantReachE4"]
+					if CantReachE4:
+						hasWarning = True
+
+				if "NotAllPlaced" in warnings:
+					NotAllPlaced = warnings["NotAllPlaced"]
+					if NotAllPlaced:
+						hasWarning = True
+
+			raceModeString = None
+			if self.RaceModeRadioButton.isChecked() or self.SpoilerOutputRadioButton.isChecked():
+				raceMode = {}
+				raceMode['Seed'] = rngSeed
+				raceMode["Mode"] = self.SettingsFilename
+				raceMode["ModeHash"] = self.GetModeHash()
+				raceMode["RomMD5"] = romMD5
+
+				raceModeString = self.GetRaceModeValue(raceMode)
+
+				if self.RaceModeRadioButton.isChecked():
+					self.LoadRaceModeSettings(raceString=raceModeString, start=False)
+
+					cb = QApplication.clipboard()
+					cb.setText(raceModeString, mode=cb.Clipboard)
+
+					QtWidgets.QMessageBox.about(self, "Race Output", "Copied race output to clipboard")
+
+					with open(randomizedFileName + '_SPOILER.txt', 'w') as f:
+						f.write(raceModeString)
+
+			if self.SpoilerOutputRadioButton.isChecked():
 				outputSpoiler = {}
 				outputSpoiler['RNG Seed'] = rngSeed
 				outputSpoiler['Solution'] = resultDict["Spoiler"]
@@ -323,31 +390,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				outputSpoiler["Mode"] = self.CurentSettings.text()
 				outputSpoiler["ModifierHash"] = self.GetSettingsMD5()
 				outputSpoiler["Modifiers"] = self.GetActiveModifiers()
+				if hasWarning:
+					outputSpoiler["Warnings"] = resultDict["Warnings"]
+
+				if raceModeString is not None:
+					outputSpoiler["Race"] = raceModeString
 
 				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
 					yaml.dump(outputSpoiler, f, default_flow_style=False)
 
-			elif self.RaceModeRadioButton.isChecked():
-				raceMode = {}
-				raceMode['Seed'] = rngSeed
-				raceMode["Mode"] = self.SettingsFilename
-				raceMode["ModeHash"] = self.GetModeHash()
-
-				#raceMode["ModifierHash"] = self.GetSettingsMD5()
-				#raceMode["Modifiers"] = self.GetActiveModifiers(filenames=True)
-
-				raceString = self.GetRaceModeValue(raceMode)
-
-				self.LoadRaceModeSettings(raceString=raceString, start=False)
-
-				cb = QApplication.clipboard()
-				cb.setText(raceString, mode=cb.Clipboard)
-				#QtWidgets.QMessageBox.about(self, "Race Mode", raceString)
-
-				QtWidgets.QMessageBox.about(self, "Race Output", "Copied race output to clipboard")
-
-				with open(randomizedFileName+'_SPOILER.txt', 'w') as f:
-					f.write(raceString)
 
 
 			successMessage = "Successfully randomized rom"
@@ -357,12 +408,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			# Change warning handling and result to dictionary for easier readability and extension
 			# Handle E4 not possible in the same way
 
-			if "HasSilverLeaf" in resultDict:
-				# If Silver Leaf debug is enabled, say completed with warnings
-				silverCheck = resultDict["HasSilverLeaf"]
-				if silverCheck:
-					successMessage = "Sucessfully generated rom with warnings"
-					successBoxName = "Success..."
+			if hasWarning:
+				successMessage = "Sucessfully generated rom with warnings"
+				successBoxName = "Success..."
 
 
 			self.Randomize.setText(_translate("MainWindow", "Randomize Rom"))
@@ -392,6 +440,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			h.append("0")
 		elif type(value) == bool:
 			h.append(str(value))
+		elif type(value) == float:
+			h.append(str(value))
 		elif type(value) == dict:
 			for key in value.keys():
 				if not self.desireKey(key):
@@ -411,16 +461,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			for value in self.PlandoData:
 				self.AmendHash(value, value_to_hash)
 		new_hash = str.join(";", value_to_hash)
-		print(new_hash)
+		#print(new_hash)
 
 		return hashlib.md5(new_hash.encode()).hexdigest()
 
 	def GetRaceModeValue(self, seed):
 		# Contains Mode, RNG Seed and ModeHash
-
-		race_string = seed["Mode"] + "#" + seed["ModeHash"] + "#" + seed["Seed"]
+		race_string = "#".join([seed["Mode"], seed["ModeHash"], seed["Seed"], seed["RomMD5"]])
 		hexstring = zlib.compress(bytes(race_string, "utf8")).hex()
-		print(hexstring)
+		#print(hexstring)
 		return hexstring
 
 	def SetBadgeForSilver(self):
@@ -519,6 +568,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		modfiles = QFileDialog.getOpenFileNames(directory = FileOperations.DEFAULT_MODIFIERS_DIRECTORY)[0]
 		if len(modfiles) > 0:
 
+			variablesToSet = []
+
 			potentiallyMiss = {}
 
 			for modfile in modfiles:
@@ -561,6 +612,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 					self.modList.append(loadedYaml)
 					self.modList[-1]['fileName'] = self.makeFileNameSafe(modfile)
 
+					if "VariablesSet" in loadedYaml:
+						for variable in loadedYaml["VariablesSet"]:
+							variablesToSet.append(variable)
+
 
 			if len(potentiallyMiss) > 0:
 				currentModifierNames = [obj["Name"] for obj in self.modList]
@@ -587,11 +642,25 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 						error_dialog.showMessage('Modifier chosen invalid without other:' + "\n" + message)
 						error_dialog.exec_()
 
-
-
-
+			if self.setNewVariables.isChecked():
+				for variable in variablesToSet:
+					self.PromptForVariable(variable)
 
 			self.updateModListView()
+
+	def PromptForVariable(self, variable):
+		variableName = list(variable.keys())[0]
+		variableDefault = variable[variableName]
+
+		success = QInputDialog.getText(self, "Set variable", variableName + " (default is " + str(variableDefault) + ")")
+		if success[1]:
+			variableValue = success[0]
+			if len(variableValue) != 0:
+				self.modeVariables[variableName] = variableValue
+
+		else:
+			return
+
 
 
 	def deleteModifier(self):
@@ -692,6 +761,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		else:
 			self.DeactivatePlando()
 
+		if "ModeVariables" in self.settings:
+			for variable in self.settings["ModeVariables"].keys():
+				self.modeVariables[variable] = self.settings["ModeVariables"][variable]
+
 		self.SettingsFilename = settingsFile
 			
 	def saveSettings(self):
@@ -707,6 +780,11 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				self.settings["Plando"] = {}
 				for key in self.PlandoData.keys():
 					self.settings["Plando"][key] = self.PlandoData[key]
+
+			if "ModeVariables" not in self.settings:
+				self.settings["ModeVariables"] = {}
+			for variable_name in self.modeVariables:
+				self.settings["ModeVariables"][variable_name] = self.modeVariables[variable_name]
 
 
 			with open(filename, 'w',encoding='utf-8') as f:
@@ -802,7 +880,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def LoadRaceModeSettings(self, raceString=None, start=True):
 		if raceString is None:
-			success = QInputDialog.getText(self, "Title", "Label")
+			success = QInputDialog.getText(self, "Race Mode", "Input Race Mode Here")
 			if success[1]:
 				inputString = success[0]
 			else:
@@ -815,9 +893,13 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 		d_string = decompressed.decode("utf8")
 
 		data = d_string.split("#")
+		if len(data) != 4:
+			raise Exception("Invalid race mode string")
+
 		mode = data[0]
 		mode_hash = data[1]
 		seed = data[2]
+		md5 = data[3]
 
 		print(mode)
 		#race_string = seed["Mode"] + "#" + seed["ModeHash"] + "#" + seed["Seed"]
@@ -835,8 +917,9 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			self.NoOutputRadioButton.setChecked(True)
 
 			self.SeedInput.setText(seed)
-			self.selectRom()
-			self.runRandomizer()
+			if self.romPath is None or len(self.romPath) == 0:
+				self.selectRom()
+			self.runRandomizer(requiredMD5=md5)
 
 	def GetActiveModifiers(self, filenames=False):
 		mods = self.modList.copy()
@@ -868,6 +951,31 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			
 			self.HintButton.setText(_translate("MainWindow", "Set Hints (off)"))
 			QtGui.QGuiApplication.processEvents()
+
+	def SetCurrentVariables(self):
+		variablesToSet = []
+		loadedVariableNames = []
+
+		for variable in self.modeVariables.keys():
+			variablesToSet.append({variable:self.modeVariables[variable]})
+			loadedVariableNames.append(variable)
+
+
+		for mod in self.modList:
+			if "VariablesSet" in mod:
+				for variable in mod["VariablesSet"]:
+					variableName = list(variable.keys())[0]
+					if variableName not in loadedVariableNames:
+						variablesToSet.append(variable)
+
+		if len(variablesToSet) == 0:
+			QtWidgets.QMessageBox.about(self, 'Message', 'No variables to set.')
+		else:
+			for variable in variablesToSet:
+				self.PromptForVariable(variable)
+
+		return
+
 def main():
 	os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 	app = QApplication(sys.argv)

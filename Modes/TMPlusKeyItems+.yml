@@ -28,6 +28,9 @@ DefaultModifiers:
     - Modifiers/DerandomizeLeftovers.yml
     - Modifiers/NoEarlyBasement.yml
     - Modifiers/Shopsanity.yml
+    - Modifiers/GameCorner.yml
+    - Modifiers/IncludeGSBall.yml
+    - Modifiers/PriceRandomisation.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -52,13 +55,11 @@ ProgressItems:
 TrashItemList:
     - OLD_ROD
     - BLUE_CARD
-    - COIN_CASE
     - ITEMFINDER
     - GOOD_ROD
     - SUPER_ROD
     - SILVER_WING
     - Rainbow Wing
-    - ENGINE_POKEDEX
     - Red Scale
     - Mystery Egg
     - TM_DYNAMICPUNCH
@@ -74,6 +75,8 @@ TrashItemList:
     - TM_SWEET_SCENT
     - TM_SNORE
     - TM_SNORE
+    - TM_BLIZZARD
+    - TM_HYPER_BEAM
     - TM_ICY_WIND
     - TM_RAIN_DANCE
     - TM_GIGA_DRAIN
@@ -82,16 +85,20 @@ TrashItemList:
     - TM_SOLARBEAM
     - TM_IRON_TAIL
     - TM_DRAGONBREATH
+    - TM_THUNDER
     - TM_EARTHQUAKE
     - TM_RETURN
     - TM_DIG
     - TM_PSYCHIC
+    - TM_PSYCHIC
     - TM_SHADOW_BALL
     - TM_MUD_SLAP
+    - TM_DOUBLE_TEAM
     - TM_SWAGGER
     - TM_SLEEP_TALK
     - TM_SLUDGE_BOMB
     - TM_SANDSTORM
+    - TM_FIRE_BLAST
     - TM_SWIFT
     - TM_DEFENSE_CURL
     - TM_THUNDERPUNCH
@@ -105,7 +112,6 @@ TrashItemList:
     - TM_FURY_CUTTER
     - TM_NIGHTMARE
     - ENGINE_MAP_CARD
-    - TM_THUNDERPUNCH
     - TM_FIRE_PUNCH
     - TM_ICE_PUNCH
     - TM_SWEET_SCENT
@@ -116,6 +122,7 @@ TrashItemList:
     - TM_PROTECT
     - TM_SUNNY_DAY
     - TM_HIDDEN_POWER
+    - GS_BALL
 BannedLocations:
 AllowedLocations:
     - Pokegear Gift
@@ -203,6 +210,19 @@ AllowedLocations:
     - Celadon Dept Store 3F Protect TM
     - Celadon Dept Store 3F Rain Dance TM
     - Celadon Dept Store 3F Sandstorm TM
+    - Goldenrod Game Corner Thunder TM
+    - Goldenrod Game Corner Blizzard TM
+    - Goldenrod Game Corner Fire Blast TM
+    - Celadon Game Corner Double Team TM
+    - Celadon Game Corner Psychic TM
+    - Celadon Game Corner Hyper Beam TM
+    - GS Ball
 Goal: Red
 FlagsSet:
     - Kanto Mode
+PreventAddItems:
+    - Escape Rope
+    - Water Stone
+    - Rock Smash
+    - Blue Card
+    - Rainbow Wing

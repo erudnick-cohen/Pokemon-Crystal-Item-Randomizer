@@ -35,26 +35,53 @@ class Location:
 		self.SuperLocation = None
 		self.YmlFile = None
 		self.Dummy = yamlTree["Dummy"] if "Dummy" in yamlTree else False
+		if self.Dummy:
+			assert(self.TrueName != self.Name)
 
 		if self.Type == "Shop":
 			self.IsItem = True
 			self.IsShop = True
 			self.IsBargainShop = False
+			self.IsVendingMachine = False
+			self.IsPrize = False
+			self.IsBuenaItem = False
 		elif self.Type == "BargainShop":
 			self.IsItem = True
 			self.IsShop = True
 			self.IsBargainShop = True
+			self.IsVendingMachine = False
+			self.IsPrize = False
+			self.IsBuenaItem = False
 		elif self.Type == "Buena":
 			self.IsItem = True
 			self.IsShop = True
 			self.IsBargainShop = True
+			self.IsVendingMachine = False
+			self.IsPrize = False
+			self.IsBuenaItem = True
+		elif self.Type == "Vending Machine":
+			self.IsItem = True
+			self.IsShop = False
+			self.IsBargainShop = False
+			self.IsVendingMachine = True
+			self.IsPrize = False
+			self.IsBuenaItem = False
+		elif self.Type == "Prize":
+			self.IsItem = True
+			self.IsShop = False
+			self.IsBargainShop = False
+			self.IsVendingMachine = False
+			self.IsPrize = True
+			self.IsBuenaItem = False
 		else:
 			self.IsShop = False
 			self.IsBargainShop = False
+			self.IsVendingMachine = False
+			self.IsPrize = False
+			self.IsBuenaItem = False
 
 
 		if ( self.Type == "Vending Machine" or self.Type == "Prize") and "HardcodedName" in yamlTree:
-			self.IsItem = True
 			self.HardcodedName = yamlTree["HardcodedName"]
 		else:
 			self.HardcodedName = None
@@ -549,3 +576,15 @@ class Location:
 
 	def isBargainShop(self):
 		return self.IsBargainShop
+
+	def isVendingMachine(self):
+		return self.IsVendingMachine
+
+	def isPrize(self):
+		return self.IsPrize
+
+	def isBuenaItem(self):
+		return self.IsBuenaItem
+
+	def isShopLike(self):
+		return self.isShop() or self.isVendingMachine() or self.isPrize()

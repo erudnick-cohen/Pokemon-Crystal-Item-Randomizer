@@ -254,7 +254,7 @@ Location:
                 NormalItem: REPEL
                 Sublocations:
             -
-                Name: Cherrygrove Mart ANTIDOTE
+                Name: Cherrygrove Mart Antidote
                 FileName: MartCherrygroveBetter
                 Type: Shop
                 HasPKMN: No

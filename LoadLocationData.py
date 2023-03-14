@@ -583,6 +583,7 @@ def LoadDataFromFolder(path, banList = None, allowList = None, modifierDict = No
 					LocCountDict[nLoc.Name] = LocCountDict[nLoc.Name]+1
 				except Exception as inst:
 					print("-----------")
+					print("Failure within:", file)
 					print("Failure in "+location["Name"])
 					raise(inst)
 	print("Creating Gyms")

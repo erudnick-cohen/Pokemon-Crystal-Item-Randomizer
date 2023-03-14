@@ -253,7 +253,6 @@ Location:
         WildTableList:
         LocationReqs: Goldenrod City
         FlagReqs:
-            - Beat Team Rocket
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -1987,12 +1986,14 @@ Location:
         Sublocations:
         -
             Name: GS Ball Backup
+            TrueName: GS Ball
             FileName: GoldenrodPokecenter1F.asm
             Type: Item
             Dummy: Yes
             HasPKMN: No
             WildTableList:
             LocationReqs: GS Ball
+            IsBall: Yes
             FlagReqs:
               - Became Champion
               - Impossible

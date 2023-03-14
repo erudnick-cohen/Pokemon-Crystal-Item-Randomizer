@@ -242,6 +242,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	coreProgress = list(sorted(frozenset(coreProgress).intersection(frozenset(progressSet))))
 	locList = sorted(LoadLocationData.FlattenLocationTree(locationTree), key= lambda i: ''.join(i.Name).join(i.requirementsNeeded(defaultdict(lambda: False))))
 
+	#locs = [ x.Name for x in locList if x.isItem() or x.isGym() ]
+	#print(locs)
+
 	# Required as oherwise non-trash is stored in previous results!
 	#locList = copy.deepcopy(locList_base)
 
@@ -313,7 +316,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			else:
 				single_flags_set.append(j)
 
-		if i.Type == 'Item' and not i.Dummy:
+		if i.isItem() and not i.Dummy:
 			itemCount = itemCount+1
 
 		for iReq in i.ItemReqs:
@@ -326,8 +329,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			iReq = string.capwords(iReq, " ")
 			if iReq not in requiredItems:
 				requiredItems.append(iReq)
-
-
 
 
 	# Store flags set in a single location and forcibly update
@@ -417,13 +418,6 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 			# Detect any area as a 'Hub' and remove THESE from having requirements!
 
 		# Should still be massively preferred
-
-
-
-
-
-
-
 
 		# Otherwise, each other warp group set means no requirements once reaching ANY of those
 		# This doesn't 'save as much time' however
@@ -549,12 +543,13 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				if not locList[iter].isShop():
 					if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS:
 						placeable = False
-				else:
-					if toAllocate not in RandomizeFunctions.REQUIRED_BUY_ITEMS:
-						if "RerollShopPercent" in inputVariables:
-							random_value = random.random() * 100
-							if random_value % 100 <= inputVariables["RerollShopPercent"]:
-								break
+
+				if toAllocate not in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+					if locList[iter].isShopLike() and "RerollShopPercent" in inputVariables:
+						random_value = random.random() * 100
+						if random_value % 100 <= float(inputVariables["RerollShopPercent"]):
+							break
+
 
 				if locList[iter].Type == "Map" or locList[iter].Type == "Transition" or locList[iter].Dummy:
 					break
@@ -584,7 +579,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				##print(locList[iter].Type)
 				#all locations are now the same!
 				if((locList[iter].Type == 'Item' or locList[iter].Type == 'Gym' \
-					or locList[iter].isShop() or locList[iter].Type == "Prize" or locList[iter].Type == "Vending Machine" ) and placeable):
+					or locList[iter].isShopLike() ) and placeable):
 					#print('Trying '+locList[iter].Name +' as ' +toAllocate)
 					#do any of its dependencies depend on this item/badge?
 					randOpt = random.choice(range(0,len(requirementsDict[locList[iter].Name])))
@@ -980,6 +975,9 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 					for flag in h.FlagsSet:
 						if flag not in extraFlags:
 							extraFlags.append(flag)
+				for flag in handle.FlagsSet:
+					if flag not in extraFlags:
+						extraFlags.append(flag)
 
 			for extraFlag in extraFlags:
 				toHandleFlag = list(filter(lambda x: extraFlag in x.FlagReqs, locList))
@@ -992,7 +990,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 		item_processor = None
 
 
-	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems, hasSilverLeaf = \
+	reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, upgradedItems, beatabilityWarnings = \
 		checkBeatability(spoiler, locationTree, inputFlags, trashItems, plandoPlacements, monReqItems, locList,
 						 badgeSet, item_processor, requiredItems=requiredItems)
 
@@ -1012,7 +1010,7 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 	resultDict["Failed"] = randomizerFailed
 	resultDict["UpgradedItems"] = upgradedItems
 	resultDict["RandomizedExtra"] = randomizedExtra
-	resultDict["HasSilverLeaf"] = hasSilverLeaf
+	resultDict["Warnings"] = beatabilityWarnings
 
 	return resultDict
 
@@ -1073,6 +1071,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 		if len(changes) > 0:
 			random.shuffle(trashItems)
 
+	starting_trash = trashItems.copy()
 
 	#print("Trashcount2:", len(trashItems))
 
@@ -1110,6 +1109,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 	allocatedCount = 0
 	failed = False
+
+	warnings = {}
 
 	assigned = []
 
@@ -1193,6 +1194,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 								print("exception",e)
 								placeItem = "GOLD_LEAF"
 								addAfter.append(i)
+								warnings["HasGoldLeaf"] = True
 							unable_to_assign = False
 
 							#flag in location.requirementsNeeded(defaultdict(lambda: False))
@@ -1210,7 +1212,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 								placeItem = chosen
 
-							replacedItem = RandomizeFunctions.HandleShopLimitations(placeItem, i, locList, reachable, trashItems, inputFlags)
+							replacedItem = RandomizeFunctions.HandleShopLimitations(placeItem, i, locList, reachable,
+																					trashItems, inputFlags,starting_trash, spoiler)
 							if replacedItem is not None:
 								placeItem = replacedItem
 
@@ -1281,10 +1284,11 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				elif "RandomiseItems" in inputFlags and i.Banned and \
 						(i.wasItem() or i.isItem()) \
 						and "Impossible" not in i.FlagReqs and assign_trash:
+
 					i.item = item_processor.GetRandomItem(i.NormalItem)
 
 					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
-																			inputFlags, addAfter=addAfter, force=True)
+																			inputFlags, starting_trash, spoiler, addAfter=addAfter, force=True)
 
 					if replacedItem is not None:
 						i.item = replacedItem
@@ -1317,11 +1321,16 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				and i.Name not in reachable and i not in addAfter and \
 				"Impossible" not in i.FlagReqs and assign_trash:
 				if (i.isItem() or i.isGym() or i.wasItem()):
+					pass
 					i.item = item_processor.GetRandomItem(i.NormalItem)
+					# Dont use the list of trash items for randomised items
 					replacedItem = RandomizeFunctions.HandleShopLimitations(i.item, i, locList, reachable, trashItems,
-																			inputFlags, addAfter=addAfter, force=True)
+																			inputFlags, starting_trash, spoiler, addAfter=addAfter, force=True)
 					if replacedItem is not None:
 						i.item = replacedItem
+
+					#if "Banned" in i.FlagReqs:
+					#	i.FlagReqs.remove("Banned")
 
 					addAfter.append(i)
 				else:
@@ -1343,7 +1352,8 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 
 	#TODO Add a warning here
-	if len(trashItems) != 0:
+	if trashItems is not None and len(trashItems) != 0:
+		warnings["HasLeftoverTrash"] = True
 		print("leftover trash:", trashItems)
 
 	if failed:
@@ -1353,6 +1363,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	if plandoPlacements is not None:
 		for i in plandoPlacements:
 			if(plandoPlacements[i] in spoiler and spoiler[plandoPlacements[i]] != i):
+				print(spoiler)
 				#raise Exception('Did not match plando placements!!!', plandoPlacements[i], i, spoiler[plandoPlacements[i]],)
 				raise Exception('Did not match plando placements!!!')
 
@@ -1365,8 +1376,6 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 
 	# TODO: Handle any items deemed not possible to reach even after all remaining processing
 	# Preferably all to one item to make this obvious to find/identify bugs
-
-	hasSilverLeaf = False
 
 	remainingItems = True
 	# If RandomiseItems is off, these items will instead be vanilla
@@ -1391,7 +1400,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
 				#print(i.Name,"now","Silver Leaf")
-				hasSilverLeaf = True
+				warnings["HasSilverLeaf"] = True
 
 	remainingItems = True
 	addedSublocations = {}
@@ -1411,13 +1420,12 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 				i.Type = "Item"
 				reachable[i.Name] = i
 				randomizedExtra[i.Name] = i.item
-				hasSilverLeaf = True
+				warnings["HasSilverLeaf"] = True
 
 			if i.Type == "Map" and "Banned" not in i.FlagReqs and "Impossible" not in i.FlagReqs:
 				activeLoc.extend(i.Sublocations)
 				#print("Unable to reach::", i.Name)
 				#print(i.Name,"now","Silver Leaf")
-				#hasSilverLeaf = True
 
 			#Handle adding unreachable maps that haven't been met
 			elif i.Name not in addedSublocations and "Impossible" not in i.FlagReqs:
@@ -1449,4 +1457,4 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	#print(trashItems)
 	#print('Total number of checks in use: '+str(len(spoiler)+len(trashSpoiler)))
 
-	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes, hasSilverLeaf
+	return reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes, warnings

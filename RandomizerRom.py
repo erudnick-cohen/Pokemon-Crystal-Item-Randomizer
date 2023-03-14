@@ -367,7 +367,9 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 			if len(findLocations) != 1:
 				# ('Invalid Dummy for ', 'Ruins of Alph UnownDex Backup', 'Ruins of Alph UnownDex', '!')
 				raise Exception("Invalid Dummy for ", i.Name, i.TrueName ,"!")
+
 			i.item = findLocations[0].item
+			print("Dummy for", i.Name, i.TrueName, i.item)
 
 		if i.isShop() and i.isItem():
 			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
@@ -377,10 +379,10 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 			elif not i.IsSpecial:
 				if i.Name == "Elm Aide Pokeballs": #currently a regular location with special rules due to labelling weirdness
 					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
-				elif i.Type == "Vending Machine":
+				elif i.isVendingMachine():
 					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
 					WriteItemNameToBuffer(i,addressData,gameFile)
-				elif i.Type == "Prize":
+				elif i.isPrize():
 					WriteRegularLocationToRomMemory(i, addressData, codeLookup, gameFile, berryLookup)
 					WriteItemNameToBuffer(i, addressData, gameFile)
 				else:
@@ -572,6 +574,8 @@ def WriteItemNameToBuffer(location,labelData,romMap):
 
 	itemNameToWrite = itemNameToWrite[0:min(len(itemNameToWrite),vendSpaceMax)]
 
+	#print("Write to buffer:", itemNameToWrite, "for", location.Name)
+
 	for i in range(0, vendSpaceMax):
 		if i >= len(itemNameToWrite):
 			character = " "
@@ -705,7 +709,7 @@ def LabelAllLocations(locations):
 	for i in locations:
 		if i.isShop():
 			LabelShopLocation(i)
-		elif i.isItem() or i.Type == 'Dummy' or i.Type == "Vending Machine" or i.Type == "Prize":
+		elif i.isItem() or i.Type == 'Dummy' or i.isVendingMachine() or i.isPrize():
 			LabelItemLocation(i)
 		elif i.isGym():
 			LabelBadgeLocation(i)
@@ -1128,10 +1132,10 @@ def LabelItemLocation(location):
 		newfile = newfile.replace(item, vendingLabelB + item + vendingLabelA)
 
 	hardcoded_prize_labelling = False
-	if location.Type == "Vending Machine":
+	if location.isVendingMachine():
 		hardcoded_prize_labelling = True
 		label_desc = "checkmoney YOUR_MONEY,"
-	elif location.Type == "Prize":
+	elif location.isPrize():
 		hardcoded_prize_labelling = True
 		label_desc = "checkcoins"
 
@@ -1664,7 +1668,7 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 	# Vending machines prices are hardcoded AND the string must be updated
 
 	#.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEPOKEBALL0ITEMCODE::
-	bargainItems = [ l for l in locations if l.Type == "BargainShop"]
+	bargainItems = [ l for l in locations if l.isBargainShop() and l.isItem()]
 	for bargain in bargainItems:
 		bargainData = "ckir_BEFORE{}0ITEMCODE".format(
 			"".join(bargain.Name.split()).upper().replace('.', '_') \
@@ -1677,7 +1681,7 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 		romMap[bargainCode+1] = bytes[0]
 		romMap[bargainCode+2] = bytes[1]
 
-	buenaItems = [l for l in locations if l.Type == "Buena"]
+	buenaItems = [l for l in locations if l.isBuenaItem()]
 	for buena in buenaItems:
 		bargainData = "ckir_BEFORE{}0ITEMCODE".format(
 			"".join(buena.Name.split()).upper().replace('.', '_') \
@@ -1690,7 +1694,7 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 		romMap[bargainCode + 1] = bytes[0]
 
 
-	vendingLocations = [ l for l in locations if l.Type == "Vending Machine" or l.Type == "Prize"]
+	vendingLocations = [ l for l in locations if (l.isVendingMachine() or l.isPrize()) and l.isItem()]
 	for vend in vendingLocations:
 		vendPriceLabel1 = "ckir_BEFORE{}0VENDINGPRICECODE1".format(
 			"".join(vend.Name.split()).upper().replace('.', '_') \
@@ -1709,7 +1713,7 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 		codedPrice = itemPrices["HC_" + vend.item + str(vend)]
 		price_string = str(codedPrice)
 
-		print("Vending price:", vend.Name, vend.item, price_string)
+		#print("Vending price:", vend.Name, vend.item, price_string)
 
 		backwards_iterator = vendingAddressData["address_range"]["end"]-2
 		for i in range(0, len(price_string)):
@@ -1718,7 +1722,7 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 			backwards_iterator -= 1
 
 		extra_byte = 0
-		if vend.Type == "Vending Machine":
+		if vend.isVendingMachine():
 			romMap[backwards_iterator] = ByteToGBCCharacterByte("¥")
 			backwards_iterator -= 1
 			extra_byte = 1
@@ -1743,10 +1747,10 @@ def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
 		# Price is used in variable checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
 		byteOffset = 0
 		bytes = None
-		if vend.Type == "Vending Machine":
+		if vend.isVendingMachine():
 			byteOffset = 3
 			bytes = list(struct.pack('>H', codedPrice))
-		elif vend.Type == "Prize":
+		elif vend.isPrize():
 			byteOffset = 1
 			bytes = list(struct.pack('>H', codedPrice))
 

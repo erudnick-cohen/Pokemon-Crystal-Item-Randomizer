@@ -29,6 +29,7 @@ DefaultModifiers:
     - Modifiers/UpgradeValuableItems.yml
     - Modifiers/UpgradeBalls.yml
     - Modifiers/DerandomizeLeftovers.yml
+    - Modifiers/NerfHoOhChamber.yml
 HintLevel: 5
 nHints: 75
 BannedLocations:

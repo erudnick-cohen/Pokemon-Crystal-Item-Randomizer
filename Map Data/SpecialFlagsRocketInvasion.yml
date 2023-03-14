@@ -273,3 +273,19 @@ Location:
         Text:
         TrainerList: 
         Sublocations:
+    -
+        Name: Rockets In Radio Tower
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Rocket Invasion
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

@@ -253,3 +253,53 @@ Location:
                     Sublocations:
                     WarpReqs: Victory Road Hall 2 Ledge TM
 
+                -
+                    Name: Victory Road Rival Fight
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road F3
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Victory Road Rival Fight
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road Exit
+                    FlagReqs:
+                        - Warps
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Victory Road Exit
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road Rival Fight
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    WarpReqs: Victory Road Hall 3 Exit
+                    Sublocations:

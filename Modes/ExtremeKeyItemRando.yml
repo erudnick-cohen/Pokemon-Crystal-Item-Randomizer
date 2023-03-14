@@ -47,8 +47,6 @@ TrashItemList:
     - Whirlpool
     - SUPER_ROD
     - SILVER_WING
-    - Rainbow Wing
-    - ENGINE_POKEDEX
 BannedLocations:
 AllowedLocations:
     - Pokegear Gift

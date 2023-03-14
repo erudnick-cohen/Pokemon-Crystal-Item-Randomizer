@@ -46,3 +46,13 @@ Changes:
         Location: Shopsanity
         AddHandle:
             - ImpossibleRandomise
+
+    -
+        Location: Buena Items
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Game Corner Items
+        AddHandle:
+            - ImpossibleRandomise

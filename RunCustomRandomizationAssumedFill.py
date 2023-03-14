@@ -160,17 +160,27 @@ def CheckForE4Reachable(resultDict):
 		# TODO Add this as a warning display
 		print("Successful seed, but cannot reach all E4...")
 		E4Flag = False
+		if "Warnings" not in resultDict:
+			resultDict["Warnings"]["CantReachE4"] = True
 
 	return E4Flag
 
 def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None, allowList = None, modifiers = [],
 				 adjustTrainerLevels = False,adjustRegularWildLevels = False, adjustSpecialWildLevels = False, trainerLVBoost = 0,
-				 wildLVBoost = 0,
-				 requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly'],
-				 plandoPlacements = {}, coreProgress= ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge'],
-				 otherSettings = {}, bonusTrash = [],hintConfig=None):
+				 wildLVBoost = 0, requiredItems = None, plandoPlacements = {}, coreProgress = None,
+				 otherSettings = {}, bonusTrash = None,hintConfig=None, preventAddingItems = None, modeVariables=None):
 	#print('required items are')
 	#print(requiredItems)
+
+	if requiredItems is None:
+		requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion', 'Red Scale', 'Whirlpool',
+		 'Card Key', 'Basement Key', 'Waterfall', 'S S Ticket', 'Bicycle', 'Machine Part', 'Lost Item', 'Pass', 'Fly']
+
+	if coreProgress is None:
+		coreProgress = ['Surf','Fog Badge', 'Pass', 'S S Ticket', 'Squirtbottle','Cut','Hive Badge']
+
+	if modeVariables is None:
+		modeVariables = {}
 
 	requiredItemsCopy = copy.copy(requiredItems)
 	changeListDict = defaultdict(lambda: [])
@@ -182,6 +192,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	maybeRemoveItems = []
 	disabledPatches = []
 	inputVariables = {}
+	preventAddItems = []
+
+	if bonusTrash is None:
+		bonusTrash = []
+
+	if preventAddingItems is not None:
+		for item in preventAddingItems:
+			preventAddItems.append(item)
 
 	yamlfile = open(Static.default_labels_file, encoding='utf-8')
 	yamltext = yamlfile.read()
@@ -224,12 +242,14 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		for remove in removing:
 			patchList.remove(remove)
 
+	for preventAddItem in preventAddItems:
+		if preventAddItem in addedProgressList:
+			addedProgressList.remove(preventAddItem)
 
-
-
+	removed_items = []
 
 	if "Start With Bike" in flags:
-		requiredItemsCopy.remove("Bicycle")
+		removed_items.append("Bicycle")
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
@@ -316,9 +336,19 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	spoilerTotal = 200
 	spoilerCount = 0
 
+
+	if "Shopsanity" in flags:
+		flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
+
+		shopItems = [ x for x in flat if x.isShop() and x.isItem() ]
+		if len(shopItems) == 0:
+			raise Exception("Cannot use Shopsanity with these settings.")
+
 	if spoilerLoop:
 		flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
-		items = [ f.Name for f in flat if f.Type == "Item" or f.Type == "Gym" or f.Type == "Shop" or f.Type == "BargainShop" ]
+		#items = [ f.Name for f in flat if f.Type == "Item" or f.Type == "Gym" or f.Type == "Shop" or f.Type == "BargainShop"
+		#		  or f.Type== "Vending Machine" or f.Type == "Prize" or f.Type == "Buena"]
+		items = [ f.Name for f in flat if f.isItem() ]
 		for item in items:
 			spoilerDetails[item] = {}
 
@@ -328,7 +358,17 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			res_items = fullLocationData[1].copy()
 			res_locations = fullLocationData[0].copy()
 			res_removed_items = fullLocationData[2].copy()
-			progressItems = copy.copy(requiredItemsCopy)
+
+			#Logically not function with ETM+/TM+
+			if 'ProgressItems' in otherSettings:
+				progressItems = otherSettings["ProgressItems"].copy()
+			else:
+				progressItems = copy.copy(requiredItemsCopy)
+
+			for item in addedProgressList:
+				if item not in progressItems:
+					progressItems.append(item)
+
 			#hardcoding key item lookups for now, pass as parameter in future
 			keyItemMap = Items.GetKeyItemMap()
 			criticalTrash = ['ENGINE_POKEDEX', 'COIN_CASE', 'ITEMFINDER', 'SILVER_WING', 'OLD_ROD', 'GOOD_ROD', 'SUPER_ROD', 'BLUE_CARD']
@@ -348,11 +388,21 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				else:
 					multiTrash.append(x)
 
-			trashItems = sorted([x for x in res_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems])
-			trashItems.extend(sorted(multiTrash))
-			#ensure progress items don't sneak into trash list
+			if 'TrashItemList' in otherSettings:
+				trash_items = copy.deepcopy(otherSettings['TrashItemList'])
+			else:
+				trash_items = res_items.copy()
 
-			trashItems.extend(sorted(extraTrash))
+			trash_items.extend(extraTrash)
+
+			trashItems = sorted([x for x in trash_items if not x in keyItemMap.values() or invKeyItemMap[x] not in progressItems])
+			trashItems.extend(sorted(multiTrash))
+			#ensu
+			# re progress items don't sneak into trash list
+
+			# TODO: Extra Trash might contain an item we want to remove and add to progress items (i.e. Pokedex)
+
+			#trashItems.extend(sorted(extraTrash))
 			trashItems = random.sample(trashItems, k=len(trashItems))
 
 			itemsRemoved = 0
@@ -370,10 +420,6 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				trashItems = removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items)
 
 			if 'BonusItems' in otherSettings or (len(newItems)+len(maybeNewItems)) > 0:
-				if 'BonusItems' in otherSettings:
-					bonusTrash = copy.copy(otherSettings['BonusItems'])
-				else:
-					bonusTrash = []
 				bonusTrash.extend(copy.deepcopy(newItems))
 				maybeAdd = []
 				for i in maybeNewItems: #Change to only add MaybeNewItems if not or the ones added are likely duplicated
@@ -389,19 +435,29 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 					elif len(bonusTrash) > 0 and (not (trashItems[i] in criticalTrash)):
 						trashItems[i] = bonusTrash.pop(0)
 			#place bonus trash replacing non-critical trash
-			if 'TrashItemList' in otherSettings:
-				trashItems = copy.deepcopy(otherSettings['TrashItemList'])
-				if "Warps" in flags:
-					trashItems = removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items)
-				if 'ProgressItems' in otherSettings:
-					progressItems = copy.deepcopy(otherSettings['ProgressItems'])
-					progressItems.extend(addedProgressList)
-					#print(otherSettings)
-					for i in progressItems:
-						if i in trashItems:
-							trashItems.remove(i)
+			#if 'TrashItemList' in otherSettings:
+			#	trashItems = copy.deepcopy(otherSettings['TrashItemList'])
+			#	if "Warps" in flags:
+			#		trashItems = removeWarpTrash(trashItems, criticalTrash, dontReplace, res_removed_items)
+			#	if 'ProgressItems' in otherSettings:
+			#		progressItems = copy.deepcopy(otherSettings['ProgressItems'])
+			#		progressItems.extend(addedProgressList)
+			#		#print(otherSettings)
+			#		for i in progressItems:
+			#			if i in trashItems:
+			#				trashItems.remove(i)
 			#print(progressItems)
-			#print(trashItems)
+
+			# Move the start with Bike logic for KIR and other modes
+			for item in removed_items:
+				if item in progressItems:
+					progressItems.remove(item)
+
+			# Mode variables will overwrite default variables provided in modifiers
+			for variable_name in modeVariables.keys():
+				inputVariables[variable_name] = modeVariables[variable_name]
+
+
 			LocationList = res_locations
 			rmCore = []
 			#print(coreProgress)
@@ -419,6 +475,7 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 			for i in BadgeDict:
 				rBadgeList.append(i)
 			#print(BadgeDict)
+
 			resultDict = RandomizeItemsBadges.RandomizeItems('None',LocationList,progressItems,trashItems,BadgeDict, seed,
 															 inputFlags = flags, inputVariables = inputVariables, reqBadges = rBadgeList, plandoPlacements = plandoPlacements,
 															 coreProgress = coreProgress, dontReplace = dontReplace, badgeShuffle=badgeShuffle)
@@ -435,13 +492,23 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 				if len(remainingProgressItems) > 0:
 					print("Successful seed, but not all items placed...")
 					handleBadSpoiler(resultDict, flags)
-					print("bad run, retrying")
-					completeResult = False
-				# Check for other requirements for FULL completion
-				# This DOESN'T check possibility before Red however
+
+					if "Warnings" not in resultDict:
+						resultDict["Warnings"] = {}
+					resultDict["Warnings"]["NotAllPlaced"] = True
 
 
 				completeResult = completeResult and CheckForE4Reachable(resultDict)
+
+				#if completeResult:
+				#	flat = LoadLocationData.FlattenLocationTree(fullLocationData[0])
+
+					# Test code
+					#earlyXItems = RandomizeFunctions.CheckForBuyableItemBefore(None, resultDict["Spoiler"], flat, flags, \
+					#											 res_locations, rBadgeList, None, resultDict["Reachable"], resultDict["Trash"], None)
+
+				#	if not earlyXItems:
+				#		completeResult = False
 
 				#reachableItems = [i.Name.replace(" ", "_") for i in resultDict["Reachable"].values()
 				#				  if (i.isItem() or i.isGym()) and not i.Dummy]
@@ -556,16 +623,16 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 		}
 
 		if "MinBelow" in inputVariables:
-			priceSettings["min_below"] = inputVariables["MinBelow"]
+			priceSettings["min_below"] = float(inputVariables["MinBelow"])
 		if "MaxAbove" in inputVariables:
-			priceSettings["max_above"] = inputVariables["MaxAbove"]
+			priceSettings["max_above"] = float(inputVariables["MaxAbove"])
 		if "MinVariance" in inputVariables:
-			priceSettings["min_variance"] = inputVariables["MinVariance"]
+			priceSettings["min_variance"] = int(inputVariables["MinVariance"])
 		if "KeepFree" in inputVariables:
-			priceSettings["keep_free"] = inputVariables["KeepFree"]
+			priceSettings["keep_free"] = bool(inputVariables["KeepFree"])
 		if "CherrygroveMaxPrice" in inputVariables:
 			priceSettings["shop_settings"]["MartCherrygroveBetter"] = {
-				"MaxPrice":	inputVariables["CherrygroveMaxPrice"]
+				"MaxPrice":	int(inputVariables["CherrygroveMaxPrice"])
 			}
 
 		#TODO: In future, make items in later marts more expensive if not present in earlier marts

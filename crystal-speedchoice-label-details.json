@@ -3852,6 +3852,15 @@
     "hex_values": "$a $16 $a $16 $a $16 $a $16 $a $16 $b $b $b $b $b $b $b $b $b $b $14 $14 $10 $11 $15 $12 $13 $14 $14 $14 $4 $4 $4 $4 $4 $4 $4 $4 $4 $4 $6 $6 $6 $6 $7 $8 $6 $6 $6 $6 $f $f $1 $1 $3 $3 $2c $f $f $f $f $f $1 $1 $3 $3 $2d $f $f $f $f $f $c $3 $3 $3 $3 $f $f $f $f $f $c $3 $9 $3 $3 $f $f $f"
   },
   {
+    "label": "GoldenrodPokecenter1F_MapEvents.ckir_BEFOREGSBALLBACKUP0NPCCODE",
+    "address_range": {
+      "begin": 402996,
+      "end": 403009
+    },
+    "integer_values": "84 10 7 1 0 255 255 1 0 129 80 82 1",
+    "hex_values": "$54 $a $7 $1 $0 $ff $ff $1 $0 $81 $50 $52 $1"
+  },
+  {
     "label": "GoldenrodUndergroundCoinCase.ckir_BEFORECOINCASEUNDERGROUND0ITEMCODE",
     "address_range": {
       "begin": 508719,

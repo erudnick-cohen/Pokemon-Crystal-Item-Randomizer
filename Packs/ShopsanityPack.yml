@@ -3,3 +3,8 @@ Modifiers:
     - Modifiers/Shopsanity.yml
     - Modifiers/UpgradeMail.yml
     - Modifiers/PreventShopItems.yml
+    - Modifiers/BuenaItems.yml
+    - Modifiers/GameCorner.yml
+    - Modifiers/PriceRandomisation.yml
+    - Modifiers/CatchEmAllShops.yml
+    - Modifiers/SafeXItems.yml
