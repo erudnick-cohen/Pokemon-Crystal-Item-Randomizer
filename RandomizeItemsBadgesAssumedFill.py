@@ -539,9 +539,15 @@ def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, se
 				#	placeable = False
 
 
-				# Enforce Shopsanity items to be buyable
+				# Enforce Shopsanity items to be buyable;;
 				if not locList[iter].isShop():
 					if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+						placeable = False
+
+				# only in ordinary shops
+				if toAllocate in RandomizeFunctions.REQUIRED_BUY_ITEMS:
+					if locList[iter].isBargainShop() or locList[iter].isPrize() or \
+						locList[iter].isVendingMachine() or locList[iter].isBuenaItem():
 						placeable = False
 
 				if toAllocate not in RandomizeFunctions.REQUIRED_BUY_ITEMS:

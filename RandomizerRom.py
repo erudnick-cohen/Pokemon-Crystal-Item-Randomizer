@@ -369,7 +369,7 @@ def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 				raise Exception("Invalid Dummy for ", i.Name, i.TrueName ,"!")
 
 			i.item = findLocations[0].item
-			print("Dummy for", i.Name, i.TrueName, i.item)
+			#print("Dummy for", i.Name, i.TrueName, i.item)
 
 		if i.isShop() and i.isItem():
 			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
@@ -606,7 +606,7 @@ def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
 		nItemCode = nItemCodeData[0]
 		itemType = nItemCodeData[1]
 		if itemType == "Item" or itemType == "Flag":
-			if location.isBargainShop():
+			if location.isBargainShop() or location.isBuenaItem():
 				# Bargain shop item contains price also, so is different
 				romMap[addressData["address_range"]["begin"]] = nItemCode
 			else:
@@ -991,7 +991,7 @@ def LabelDrinksMachine(location):
 def LabelShopLocation(location):
 	print("Labelling", location.Name)
 
-	if location.isBargainShop():
+	if location.isBargainShop() or location.isBuenaItem():
 		LabelBargainShopLocation(location)
 		return
 
@@ -1003,11 +1003,11 @@ def LabelShopLocation(location):
 	shopDupeSet = location.FileName.split(",")
 	for shopName in shopDupeSet:
 		#print(shopName)
-		shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem,\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
+		shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
 		currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
 		shopDetail = currentShopDesc[0][0]
 
-		itemRegex = "shopitem,\t\d{1,}, "+location.NormalItem+"\n"
+		itemRegex = "shopitem\t\d{1,}, "+location.NormalItem+"\n"
 		itemDesc = re.findall(itemRegex, shopDetail)
 
 		labelExtra = "" if len(shopDupeSet) == 1 else "_"+str(shopDupeSet.index(shopName))
@@ -1663,38 +1663,46 @@ def WriteItemPricesToMemory(addressData, romMap, itemPrices):
 		romMap[labelInfo["address_range"]["begin"]+1] = bytes[1]
 
 
-def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations):
+def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations, priceSettings):
 	# Bargain shops are hardcoded price values
 	# Vending machines prices are hardcoded AND the string must be updated
 
-	#.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEPOKEBALL0ITEMCODE::
-	bargainItems = [ l for l in locations if l.isBargainShop() and l.isItem()]
-	for bargain in bargainItems:
-		bargainData = "ckir_BEFORE{}0ITEMCODE".format(
-			"".join(bargain.Name.split()).upper().replace('.', '_') \
-				.replace("'", ""))
-		bargainCode = addressData[bargainData]["address_range"]["begin"]
+	buena = priceSettings["randomise_buena_prices"]
+	game_corner = priceSettings["randomise_game_corner_prices"]
+	bargain = priceSettings["randomise_bargain_prices"]
 
-		codedPrice = itemPrices["HC_"+bargain.item+str(bargain)]
-		bytes = list(struct.pack('<H', codedPrice))
+	if bargain:
+		bargainItems = [ l for l in locations if l.isBargainShop() and l.isItem()]
+		for bargain in bargainItems:
+			bargainData = "ckir_BEFORE{}0ITEMCODE".format(
+				"".join(bargain.Name.split()).upper().replace('.', '_') \
+					.replace("'", ""))
+			bargainCode = addressData[bargainData]["address_range"]["begin"]
 
-		romMap[bargainCode+1] = bytes[0]
-		romMap[bargainCode+2] = bytes[1]
+			codedPrice = itemPrices["HC_"+bargain.item+str(bargain)]
+			bytes = list(struct.pack('<H', codedPrice))
 
-	buenaItems = [l for l in locations if l.isBuenaItem()]
-	for buena in buenaItems:
-		bargainData = "ckir_BEFORE{}0ITEMCODE".format(
-			"".join(buena.Name.split()).upper().replace('.', '_') \
-				.replace("'", ""))
-		bargainCode = addressData[bargainData]["address_range"]["begin"]
+			romMap[bargainCode+1] = bytes[0]
+			romMap[bargainCode+2] = bytes[1]
 
-		codedPrice = itemPrices["HC_" + buena.item + str(buena)]
-		bytes = list(struct.pack('<H', codedPrice))
+	if buena:
+		buenaItems = [l for l in locations if l.isBuenaItem()]
+		for buena in buenaItems:
+			bargainData = "ckir_BEFORE{}0ITEMCODE".format(
+				"".join(buena.Name.split()).upper().replace('.', '_') \
+					.replace("'", ""))
+			bargainCode = addressData[bargainData]["address_range"]["begin"]
 
-		romMap[bargainCode + 1] = bytes[0]
+			codedPrice = itemPrices["HC_" + buena.item + str(buena)]
+			bytes = list(struct.pack('<H', codedPrice))
+
+			romMap[bargainCode + 1] = bytes[0]
 
 
-	vendingLocations = [ l for l in locations if (l.isVendingMachine() or l.isPrize()) and l.isItem()]
+	vendingLocations = [ l for l in locations if
+						 ((l.isVendingMachine()  and bargain) or \
+							 ( l.isPrize() and game_corner))
+						  and l.isItem()]
 	for vend in vendingLocations:
 		vendPriceLabel1 = "ckir_BEFORE{}0VENDINGPRICECODE1".format(
 			"".join(vend.Name.split()).upper().replace('.', '_') \

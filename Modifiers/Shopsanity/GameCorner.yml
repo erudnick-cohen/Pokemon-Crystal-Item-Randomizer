@@ -10,5 +10,7 @@ Changes:
         RemoveFlagReqs:
             - Banned
 IncompatibleWithout:
-    - 'Shopsanity'
-    - 'Price Randomisation'
+  - 'Shopsanity'
+VariablesSet:
+  - RandomiseGameCornerPrices: True
+  - GameCornerSetPrice: 0

@@ -2608,6 +2608,13 @@ def RandomizePrices(priceSettings, locations):
     keep_free = priceSettings["keep_free"]
     shopDetails = priceSettings["shop_settings"]
 
+    standard = priceSettings["randomise_standard_prices"]
+    buena = priceSettings["randomise_buena_prices"]
+    game_corner = priceSettings["randomise_game_corner_prices"]
+    bargain = priceSettings["randomise_bargain_prices"]
+    buena_set = priceSettings["buena_set_price"]
+    game_corner_set = priceSettings["game_corner_set_price"]
+
     martItems = {}
 
     for mart in shopDetails.keys():
@@ -2628,8 +2635,6 @@ def RandomizePrices(priceSettings, locations):
                 martItems[alterPriceOf]["MaxPrice"] = martDesc['MaxPrice']
                 print("MaxMartPrice::",alterPriceOf,  martDesc['MaxPrice'])
 
-
-
     if min_below == 0 or max_above == 0 or \
         (min_below >= max_above):
         raise Exception("Invalid values provided")
@@ -2638,35 +2643,51 @@ def RandomizePrices(priceSettings, locations):
         if "$" in item.Name:
             continue
 
-        if item.Price == 0 and keep_free:
-            randomised_price = 0
-        else:
-            max_price = None
-            if item.Name in martItems:
-                if 'MaxPrice' in martItems[item.Name]:
-                    max_price = martItems[item.Name]["MaxPrice"]
-                    print("Use max price::", max_price)
+        randomised_price = item.Price
+        if standard:
+            if item.Price == 0 and keep_free:
+                randomised_price = 0
+            else:
+                max_price = None
+                if item.Name in martItems:
+                    if 'MaxPrice' in martItems[item.Name]:
+                        max_price = martItems[item.Name]["MaxPrice"]
 
-            randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
-                                       min_variance=min_variance, max_price=max_price)
-        priceList[item.Name] = randomised_price
-        price_diff = randomised_price/item.Price if item.Price > 0 else "!"
+                randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
+                                           min_variance=min_variance, max_price=max_price)
+            priceList[item.Name] = randomised_price
+        #price_diff = randomised_price/item.Price if item.Price > 0 else "!"
         #print(item.Name, randomised_price, price_diff)
 
         lookupDict[item.Name] = (item.Price, randomised_price)
 
     #TODO: Add Game Corner Prize price randomisation
-    hardcodedShops = [ loc for loc in locations if loc.isBargainShop() \
-                       or loc.isVendingMachine() or loc.isPrize()
-                       or loc.isBuenaItem()]
+    hardcodedShops = [ loc for loc in locations
+                       if (loc.isBargainShop() and bargain) \
+                       or (loc.isVendingMachine() and bargain) \
+                       or (loc.isPrize() and game_corner) \
+                       or (loc.isBuenaItem() and buena)
+                       ]
+
+    # Note, only randomised hardcoded shops can be affected by price randomisation
+
     for shop in hardcodedShops:
         item_to_handle = shop.item
         if item_to_handle is None:
             continue
 
-        if shop.isPrize() or shop.isBuenaItem():
-            priceList["HC_" + item_to_handle + str(shop)] = 0
+        if shop.isPrize() and game_corner_set is not None:
+            priceList["HC_" + item_to_handle + str(shop)] = game_corner_set
             continue
+
+        if shop.isBuenaItem() and buena_set is not None:
+            priceList["HC_" + item_to_handle + str(shop)] = buena_set
+            continue
+
+        if shop.isBuenaItem():
+            maxValue = 8
+        else:
+            maxValue = None
 
         given_price = 500
         if item_to_handle not in lookupDict:
@@ -2674,7 +2695,7 @@ def RandomizePrices(priceSettings, locations):
                 given_price = 0
             else:
                 given_price = RandomPrice(0, min_below=min_below, max_above=max_above,
-                        min_variance=min_variance)
+                        min_variance=min_variance, max_price=maxValue)
 
         else:
             details = lookupDict[item_to_handle]

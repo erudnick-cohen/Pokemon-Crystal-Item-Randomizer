@@ -411,7 +411,7 @@
                 255,
                 146,
                 2,
-                39,
+                192,
                 109,
                 255,
                 255
@@ -426,15 +426,15 @@
                 255,
                 146,
                 2,
-                39,
+                192,
                 109,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 471673,
-            "end": 471686
+            "begin": 471826,
+            "end": 471839
         },
         "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -451,7 +451,7 @@
                 255,
                 162,
                 2,
-                59,
+                212,
                 109,
                 255,
                 255
@@ -466,15 +466,15 @@
                 255,
                 162,
                 2,
-                59,
+                212,
                 109,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 471686,
-            "end": 471699
+            "begin": 471839,
+            "end": 471852
         },
         "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -491,7 +491,7 @@
                 255,
                 146,
                 2,
-                79,
+                232,
                 109,
                 255,
                 255
@@ -506,15 +506,15 @@
                 255,
                 146,
                 2,
-                79,
+                232,
                 109,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 471699,
-            "end": 471712
+            "begin": 471852,
+            "end": 471865
         },
         "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -531,7 +531,7 @@
                 255,
                 130,
                 1,
-                99,
+                252,
                 109,
                 255,
                 255
@@ -546,15 +546,15 @@
                 255,
                 130,
                 1,
-                99,
+                252,
                 109,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 471712,
-            "end": 471725
+            "begin": 471865,
+            "end": 471878
         },
         "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_3",
         "description": "Invert Trainer NPC facing directions"
@@ -571,8 +571,8 @@
                 255,
                 130,
                 1,
-                119,
-                109,
+                16,
+                110,
                 255,
                 255
             ],
@@ -586,15 +586,15 @@
                 255,
                 130,
                 1,
-                119,
-                109,
+                16,
+                110,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 471725,
-            "end": 471738
+            "begin": 471878,
+            "end": 471891
         },
         "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_4",
         "description": "Invert Trainer NPC facing directions"
@@ -3371,8 +3371,8 @@
                 255,
                 130,
                 1,
-                6,
-                92,
+                212,
+                91,
                 255,
                 255
             ],
@@ -3386,15 +3386,15 @@
                 255,
                 130,
                 1,
-                6,
-                92,
+                212,
+                91,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680391,
-            "end": 1680404
+            "begin": 1680341,
+            "end": 1680354
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_0",
         "description": "Invert Trainer NPC facing directions"
@@ -3411,8 +3411,8 @@
                 255,
                 146,
                 1,
-                46,
-                92,
+                252,
+                91,
                 255,
                 255
             ],
@@ -3426,15 +3426,15 @@
                 255,
                 146,
                 1,
-                46,
-                92,
+                252,
+                91,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680404,
-            "end": 1680417
+            "begin": 1680354,
+            "end": 1680367
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_1",
         "description": "Invert Trainer NPC facing directions"
@@ -3451,8 +3451,8 @@
                 255,
                 130,
                 1,
-                26,
-                92,
+                232,
+                91,
                 255,
                 255
             ],
@@ -3466,15 +3466,15 @@
                 255,
                 130,
                 1,
-                26,
-                92,
+                232,
+                91,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680417,
-            "end": 1680430
+            "begin": 1680367,
+            "end": 1680380
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_2",
         "description": "Invert Trainer NPC facing directions"
@@ -3491,7 +3491,7 @@
                 255,
                 146,
                 1,
-                66,
+                16,
                 92,
                 255,
                 255
@@ -3506,15 +3506,15 @@
                 255,
                 146,
                 1,
-                66,
+                16,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680430,
-            "end": 1680443
+            "begin": 1680380,
+            "end": 1680393
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_3",
         "description": "Invert Trainer NPC facing directions"
@@ -3531,7 +3531,7 @@
                 255,
                 146,
                 1,
-                86,
+                36,
                 92,
                 255,
                 255
@@ -3546,15 +3546,15 @@
                 255,
                 146,
                 1,
-                86,
+                36,
                 92,
                 255,
                 255
             ]
         },
         "address_range": {
-            "begin": 1680443,
-            "end": 1680456
+            "begin": 1680393,
+            "end": 1680406
         },
         "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_4",
         "description": "Invert Trainer NPC facing directions"
@@ -4313,8 +4313,8 @@
             ]
         },
         "address_range": {
-            "begin": 386292,
-            "end": 386305
+            "begin": 386293,
+            "end": 386306
         },
         "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_0",
         "description": "Invert Trainer NPC facing directions"
@@ -4353,8 +4353,8 @@
             ]
         },
         "address_range": {
-            "begin": 386305,
-            "end": 386318
+            "begin": 386306,
+            "end": 386319
         },
         "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_1",
         "description": "Invert Trainer NPC facing directions"
@@ -4393,8 +4393,8 @@
             ]
         },
         "address_range": {
-            "begin": 386318,
-            "end": 386331
+            "begin": 386319,
+            "end": 386332
         },
         "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_2",
         "description": "Invert Trainer NPC facing directions"
@@ -4433,8 +4433,8 @@
             ]
         },
         "address_range": {
-            "begin": 386331,
-            "end": 386344
+            "begin": 386332,
+            "end": 386345
         },
         "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_3",
         "description": "Invert Trainer NPC facing directions"
@@ -4451,7 +4451,7 @@
                 255,
                 2,
                 2,
-                206,
+                207,
                 101,
                 206,
                 6
@@ -4466,15 +4466,15 @@
                 255,
                 2,
                 2,
-                206,
+                207,
                 101,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 387959,
-            "end": 387972
+            "begin": 387960,
+            "end": 387973
         },
         "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_0",
         "description": "Invert Trainer NPC facing directions"
@@ -4491,7 +4491,7 @@
                 255,
                 2,
                 3,
-                226,
+                227,
                 101,
                 206,
                 6
@@ -4506,15 +4506,15 @@
                 255,
                 2,
                 3,
-                226,
+                227,
                 101,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 387972,
-            "end": 387985
+            "begin": 387973,
+            "end": 387986
         },
         "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_1",
         "description": "Invert Trainer NPC facing directions"
@@ -4531,7 +4531,7 @@
                 255,
                 2,
                 3,
-                246,
+                247,
                 101,
                 206,
                 6
@@ -4546,15 +4546,15 @@
                 255,
                 2,
                 3,
-                246,
+                247,
                 101,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 387985,
-            "end": 387998
+            "begin": 387986,
+            "end": 387999
         },
         "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_2",
         "description": "Invert Trainer NPC facing directions"
@@ -4571,7 +4571,7 @@
                 255,
                 146,
                 5,
-                10,
+                11,
                 102,
                 206,
                 6
@@ -4586,15 +4586,15 @@
                 255,
                 146,
                 5,
-                10,
+                11,
                 102,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 387998,
-            "end": 388011
+            "begin": 387999,
+            "end": 388012
         },
         "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_3",
         "description": "Invert Trainer NPC facing directions"
@@ -4611,7 +4611,7 @@
                 255,
                 2,
                 3,
-                231,
+                232,
                 107,
                 206,
                 6
@@ -4626,15 +4626,15 @@
                 255,
                 2,
                 3,
-                231,
+                232,
                 107,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 389264,
-            "end": 389277
+            "begin": 389265,
+            "end": 389278
         },
         "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_0",
         "description": "Invert Trainer NPC facing directions"
@@ -4651,7 +4651,7 @@
                 255,
                 2,
                 2,
-                251,
+                252,
                 107,
                 206,
                 6
@@ -4666,15 +4666,15 @@
                 255,
                 2,
                 2,
-                251,
+                252,
                 107,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 389277,
-            "end": 389290
+            "begin": 389278,
+            "end": 389291
         },
         "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_1",
         "description": "Invert Trainer NPC facing directions"
@@ -4691,7 +4691,7 @@
                 255,
                 130,
                 1,
-                15,
+                16,
                 108,
                 206,
                 6
@@ -4706,15 +4706,15 @@
                 255,
                 130,
                 1,
-                15,
+                16,
                 108,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 389290,
-            "end": 389303
+            "begin": 389291,
+            "end": 389304
         },
         "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_2",
         "description": "Invert Trainer NPC facing directions"
@@ -4731,7 +4731,7 @@
                 255,
                 146,
                 4,
-                35,
+                36,
                 108,
                 206,
                 6
@@ -4746,15 +4746,15 @@
                 255,
                 146,
                 4,
-                35,
+                36,
                 108,
                 206,
                 6
             ]
         },
         "address_range": {
-            "begin": 389303,
-            "end": 389316
+            "begin": 389304,
+            "end": 389317
         },
         "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_3",
         "description": "Invert Trainer NPC facing directions"

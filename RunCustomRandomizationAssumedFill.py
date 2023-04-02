@@ -613,34 +613,55 @@ def randomizeRom(romPath, goal, seed, flags = [], patchList = [], banList = None
 	if adjustTrainerLevels:
 		RandomizerRom.WriteTrainerDataToMemory(locations_list,resultDict["State"],addressData,romMap,trainerLVBoost,maxDist)
 
-	if "Price Randomisation" in flags:
-		priceSettings = {
-			"min_below": 0.5,
-			"max_above": 2,
-			"min_variance": 0,
-			"keep_free": False,
-			"shop_settings": {}
+	#if "Price Randomisation" in flags:
+	priceSettings = {
+		"min_below": 0.5,
+		"max_above": 2,
+		"min_variance": 0,
+		"keep_free": False,
+		"shop_settings": {},
+		"randomise_standard_prices": False,
+		"randomise_buena_prices": False,
+		"randomise_game_corner_prices": False,
+		"randomise_bargain_prices": False,
+		"buena_set_price": 0,
+		"game_corner_set_price": 0
+	}
+
+	if "MinBelow" in inputVariables:
+		priceSettings["min_below"] = float(inputVariables["MinBelow"])
+	if "MaxAbove" in inputVariables:
+		priceSettings["max_above"] = float(inputVariables["MaxAbove"])
+	if "MinVariance" in inputVariables:
+		priceSettings["min_variance"] = int(inputVariables["MinVariance"])
+	if "KeepFree" in inputVariables:
+		priceSettings["keep_free"] = bool(inputVariables["KeepFree"])
+
+	if "RandomiseStandardPrices" in inputVariables:
+		priceSettings["randomise_standard_prices"] = bool(inputVariables["RandomiseStandardPrices"])
+	if "RandomiseBuenaPrices" in inputVariables:
+		priceSettings["randomise_buena_prices"] = bool(inputVariables["RandomiseBuenaPrices"])
+	if "RandomiseGameCornerPrices" in inputVariables:
+		priceSettings["randomise_game_corner_prices"] = bool(inputVariables["RandomiseGameCornerPrices"])
+	if "RandomiseBargainPrices" in inputVariables:
+		priceSettings["randomise_bargain_prices"] = bool(inputVariables["RandomiseBargainPrices"])
+
+	if "BuenaSetPrice" in inputVariables:
+		priceSettings["buena_set_price"] = int(inputVariables["BuenaSetPrice"])
+	if "GameCornerSetPrice" in inputVariables:
+		priceSettings["game_corner_set_price"] = int(inputVariables["GameCornerSetPrice"])
+
+	if "CherrygroveMaxPrice" in inputVariables:
+		priceSettings["shop_settings"]["MartCherrygroveBetter"] = {
+			"MaxPrice":	int(inputVariables["CherrygroveMaxPrice"])
 		}
 
-		if "MinBelow" in inputVariables:
-			priceSettings["min_below"] = float(inputVariables["MinBelow"])
-		if "MaxAbove" in inputVariables:
-			priceSettings["max_above"] = float(inputVariables["MaxAbove"])
-		if "MinVariance" in inputVariables:
-			priceSettings["min_variance"] = int(inputVariables["MinVariance"])
-		if "KeepFree" in inputVariables:
-			priceSettings["keep_free"] = bool(inputVariables["KeepFree"])
-		if "CherrygroveMaxPrice" in inputVariables:
-			priceSettings["shop_settings"]["MartCherrygroveBetter"] = {
-				"MaxPrice":	int(inputVariables["CherrygroveMaxPrice"])
-			}
+	#TODO: In future, make items in later marts more expensive if not present in earlier marts
 
-		#TODO: In future, make items in later marts more expensive if not present in earlier marts
+	itemPrices = RandomizeFunctions.RandomizePrices(priceSettings, locations_list)
+	RandomizerRom.WriteItemPricesToMemory(addressData, romMap, itemPrices)
 
-		itemPrices = RandomizeFunctions.RandomizePrices(priceSettings, locations_list)
-		RandomizerRom.WriteItemPricesToMemory(addressData, romMap, itemPrices)
-
-		RandomizerRom.WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations_list)
+	RandomizerRom.WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations_list, priceSettings)
 
 		# Handle hard-coded prices
 

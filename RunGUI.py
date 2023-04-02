@@ -672,9 +672,23 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def makeFileNameSafe(self, mod):
 		runningDirectory = os.getcwd().replace("\\", "/") + "/"
-		safeFile = mod.replace(runningDirectory, "")
-		return safeFile
 
+		sp = runningDirectory.split("/")
+		root = sp[0]
+		isAbsolute = False
+		if root == "":
+			if mod.startswith("/"):
+				isAbsolute = True
+		elif mod.startswith(root):
+			isAbsolute = True
+
+		if runningDirectory in mod:
+			safeFile = mod.replace(runningDirectory, "")
+			return safeFile
+		elif isAbsolute:
+			return None
+
+		return mod
 
 	def findFileWithinDirectory(self, name, directory):
 		files = os.listdir(directory)
@@ -718,6 +732,10 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def loadSettings(self, settingsFile):
 		_translate = QtCore.QCoreApplication.translate
+
+		self.SettingsFilename = self.makeFileNameSafe(settingsFile)
+		if self.SettingsFilename is None:
+			raise Exception("Must load correctly.")
 
 		if not os.path.isfile(settingsFile):
 			raise Exception("Mode file not found:", settingsFile)
@@ -765,7 +783,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			for variable in self.settings["ModeVariables"].keys():
 				self.modeVariables[variable] = self.settings["ModeVariables"][variable]
 
-		self.SettingsFilename = settingsFile
+
 			
 	def saveSettings(self):
 		fName = QFileDialog.getSaveFileName(directory = 'Modes/Custom')[0]

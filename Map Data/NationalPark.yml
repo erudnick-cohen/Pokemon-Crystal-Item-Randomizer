@@ -282,11 +282,16 @@ Location:
                         ITEMLINE
                 SecondaryCode: |
                     BugContestResults_FirstPlace:
+                        checkevent EVENT_BGC_FIRST
+                        iftrue BugContestResults_ReturnAfterWinnersPrize
+                        setevent EVENT_BGC_FIRST
                         setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
                         getitemname STRING_BUFFER_4, SUN_STONE
                         farwritetext ContestResults_PlayerWonAPrizeText
                         waitbutton
                         ITEMLINE
+                        iffalse BugContestResults_NoRoomForSunStone
+                        sjump BugContestResults_ReturnAfterWinnersPrize
                 Text:
                 TrainerList: 
                 Sublocations:
@@ -311,10 +316,15 @@ Location:
                         ITEMLINE
                 SecondaryCode: |
                     BugContestResults_SecondPlace:
+                        checkevent EVENT_BGC_SECOND
+                        iftrue BugContestResults_ReturnAfterWinnersPrize
+                        setevent EVENT_BGC_SECOND
                         getitemname STRING_BUFFER_4, EVERSTONE
                         farwritetext ContestResults_PlayerWonAPrizeText
                         waitbutton
                         ITEMLINE
+                        iffalse BugContestResults_NoRoomForEverstone
+                        sjump BugContestResults_ReturnAfterWinnersPrize
                 Text:
                 TrainerList: 
                 Sublocations:
@@ -339,6 +349,9 @@ Location:
                         ITEMLINE
                 SecondaryCode: |
                     BugContestResults_ThirdPlace:
+                        checkevent EVENT_BGC_THIRD
+                        iftrue BugContestResults_ReturnAfterWinnersPrize
+                        setevent EVENT_BGC_THIRD
                         getitemname STRING_BUFFER_4, GOLD_BERRY
                         farwritetext ContestResults_PlayerWonAPrizeText
                         waitbutton
@@ -386,7 +399,11 @@ Location:
                         farwritetext ContestResults_ConsolationPrizeText
                         promptbutton
                         waitsfx
+                        checkevent EVENT_BGC_LAST
+                        iftrue BugContestResults_DidNotWin
+                        setevent EVENT_BGC_LAST
                         ITEMLINE
+                        iffalse BugContestResults_NoRoomForBerry
                 Text:
                 TrainerList: 
                 Sublocations:

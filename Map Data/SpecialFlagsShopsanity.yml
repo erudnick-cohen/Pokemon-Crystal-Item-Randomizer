@@ -41,7 +41,6 @@ Location:
             - Buena Items Locked
         FlagReqs:
             - Banned
-            - Beat Team Rocket
         ItemReqs:
             - Blue Card
         FlagsSet:

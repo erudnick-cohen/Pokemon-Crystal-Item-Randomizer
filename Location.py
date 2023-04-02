@@ -55,7 +55,7 @@ class Location:
 		elif self.Type == "Buena":
 			self.IsItem = True
 			self.IsShop = True
-			self.IsBargainShop = True
+			self.IsBargainShop = False
 			self.IsVendingMachine = False
 			self.IsPrize = False
 			self.IsBuenaItem = True

@@ -173,8 +173,8 @@
   {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPBIGPEARL0ITEMCODE",
     "address_range": {
-      "begin": 89093,
-      "end": 89096
+      "begin": 89190,
+      "end": 89193
     },
     "integer_values": "111 172 13",
     "hex_values": "$6f $ac $d"
@@ -182,8 +182,8 @@
   {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPNUGGET0ITEMCODE",
     "address_range": {
-      "begin": 89087,
-      "end": 89090
+      "begin": 89184,
+      "end": 89187
     },
     "integer_values": "36 148 17",
     "hex_values": "$24 $94 $11"
@@ -191,8 +191,8 @@
   {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPPEARL0ITEMCODE",
     "address_range": {
-      "begin": 89090,
-      "end": 89093
+      "begin": 89187,
+      "end": 89190
     },
     "integer_values": "110 138 2",
     "hex_values": "$6e $8a $2"
@@ -200,8 +200,8 @@
   {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPSTARDUST0ITEMCODE",
     "address_range": {
-      "begin": 89096,
-      "end": 89099
+      "begin": 89193,
+      "end": 89196
     },
     "integer_values": "131 132 3",
     "hex_values": "$83 $84 $3"
@@ -209,8 +209,8 @@
   {
     "label": "BargainShopData.ckir_BEFOREUNDERGROUNDBARGAINSHOPSTARPIECE0ITEMCODE",
     "address_range": {
-      "begin": 89099,
-      "end": 89102
+      "begin": 89196,
+      "end": 89199
     },
     "integer_values": "132 248 17",
     "hex_values": "$84 $f8 $11"
@@ -866,8 +866,8 @@
   {
     "label": "Buena.ckir_BEFOREBUENAITEM0ITEMCODE",
     "address_range": {
-      "begin": 383020,
-      "end": 383023
+      "begin": 383021,
+      "end": 383024
     },
     "integer_values": "158 116 1",
     "hex_values": "$9e $74 $1"
@@ -875,8 +875,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPCALCIUM0ITEMCODE",
     "address_range": {
-      "begin": 569716,
-      "end": 569719
+      "begin": 569792,
+      "end": 569795
     },
     "integer_values": "31 5 1",
     "hex_values": "$1f $5 $1"
@@ -884,8 +884,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPCARBOS0ITEMCODE",
     "address_range": {
-      "begin": 569713,
-      "end": 569716
+      "begin": 569789,
+      "end": 569792
     },
     "integer_values": "29 5 1",
     "hex_values": "$1d $5 $1"
@@ -893,8 +893,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 569698,
-      "end": 569701
+      "begin": 569774,
+      "end": 569777
     },
     "integer_values": "14 2 1",
     "hex_values": "$e $2 $1"
@@ -902,8 +902,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPHPUP0ITEMCODE",
     "address_range": {
-      "begin": 569719,
-      "end": 569722
+      "begin": 569795,
+      "end": 569798
     },
     "integer_values": "26 5 1",
     "hex_values": "$1a $5 $1"
@@ -911,8 +911,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPIRON0ITEMCODE",
     "address_range": {
-      "begin": 569710,
-      "end": 569713
+      "begin": 569786,
+      "end": 569789
     },
     "integer_values": "28 5 1",
     "hex_values": "$1c $5 $1"
@@ -920,8 +920,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPNUGGET0ITEMCODE",
     "address_range": {
-      "begin": 569701,
-      "end": 569704
+      "begin": 569777,
+      "end": 569780
     },
     "integer_values": "36 3 1",
     "hex_values": "$24 $3 $1"
@@ -929,8 +929,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPPROTEIN0ITEMCODE",
     "address_range": {
-      "begin": 569707,
-      "end": 569710
+      "begin": 569783,
+      "end": 569786
     },
     "integer_values": "27 5 1",
     "hex_values": "$1b $5 $1"
@@ -938,8 +938,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPRARECANDY0ITEMCODE",
     "address_range": {
-      "begin": 569704,
-      "end": 569707
+      "begin": 569780,
+      "end": 569783
     },
     "integer_values": "32 3 1",
     "hex_values": "$20 $3 $1"
@@ -947,8 +947,8 @@
   {
     "label": "BuenaPrizeItems.ckir_BEFOREBUENASHOPULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 569695,
-      "end": 569698
+      "begin": 569771,
+      "end": 569774
     },
     "integer_values": "2 2 1",
     "hex_values": "$2 $2 $1"
@@ -956,8 +956,8 @@
   {
     "label": "BugContestResultsScript.ckir_BEFOREBUGCATCHINGCONTESTLASTPLACE0ITEMCODEB",
     "address_range": {
-      "begin": 770741,
-      "end": 770744
+      "begin": 770750,
+      "end": 770753
     },
     "integer_values": "158 173 1",
     "hex_values": "$9e $ad $1"
@@ -965,8 +965,8 @@
   {
     "label": "BugContestResults_FirstPlace.ckir_BEFOREBUGCATCHINGCONTESTFIRSTPLACE0ITEMCODEB",
     "address_range": {
-      "begin": 770875,
-      "end": 770878
+      "begin": 770893,
+      "end": 770896
     },
     "integer_values": "158 169 1",
     "hex_values": "$9e $a9 $1"
@@ -974,8 +974,8 @@
   {
     "label": "BugContestResults_SecondPlace.ckir_BEFOREBUGCATCHINGCONTESTSECONDPLACE0ITEMCODEB",
     "address_range": {
-      "begin": 770892,
-      "end": 770895
+      "begin": 770919,
+      "end": 770922
     },
     "integer_values": "158 112 1",
     "hex_values": "$9e $70 $1"
@@ -983,8 +983,8 @@
   {
     "label": "BugContestResults_ThirdPlace.ckir_BEFOREBUGCATCHINGCONTESTTHIRDPLACE0ITEMCODEB",
     "address_range": {
-      "begin": 770909,
-      "end": 770912
+      "begin": 770945,
+      "end": 770948
     },
     "integer_values": "158 174 1",
     "hex_values": "$9e $ae $1"
@@ -1082,8 +1082,8 @@
   {
     "label": "CeladonCafeTrashcan.ckir_BEFORECELADONCAFELEFTOVERS0ITEMCODE",
     "address_range": {
-      "begin": 471843,
-      "end": 471846
+      "begin": 471996,
+      "end": 471999
     },
     "integer_values": "249 0 146",
     "hex_values": "$f9 $0 $92"
@@ -1091,8 +1091,8 @@
   {
     "label": "CeladonCafeTrashcan.ckir_BEFORE_LEFTOVERS_CAN",
     "address_range": {
-      "begin": 471843,
-      "end": 471846
+      "begin": 471996,
+      "end": 471999
     },
     "integer_values": "249 0 146",
     "hex_values": "$f9 $0 $92"
@@ -1109,11 +1109,11 @@
   {
     "label": "CeladonCafe_MapEvents.ckir_BEFORECELADONCAFELEFTOVERS0ITEMCODEB",
     "address_range": {
-      "begin": 472451,
-      "end": 472456
+      "begin": 472604,
+      "end": 472609
     },
-    "integer_values": "1 7 7 35 115",
-    "hex_values": "$1 $7 $7 $23 $73"
+    "integer_values": "1 7 7 188 115",
+    "hex_values": "$1 $7 $7 $bc $73"
   },
   {
     "label": "CeladonCityHiddenPpUp.ckir_BEFORECELADONCITYHIDDENPPUP0ITEMCODE",
@@ -1235,8 +1235,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0ITEMCODE",
     "address_range": {
-      "begin": 463856,
-      "end": 463859
+      "begin": 463862,
+      "end": 463865
     },
     "integer_values": "31 46 1",
     "hex_values": "$1f $2e $1"
@@ -1244,8 +1244,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGCODE",
     "address_range": {
-      "begin": 463965,
-      "end": 463983
+      "begin": 464011,
+      "end": 464029
     },
     "integer_values": "133 145 132 146 135 127 150 128 147 132 145 127 127 240 248 246 246 80",
     "hex_values": "$85 $91 $84 $92 $87 $7f $96 $80 $93 $84 $91 $7f $7f $f0 $f8 $f6 $f6 $50"
@@ -1253,8 +1253,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 463847,
-      "end": 463852
+      "begin": 463853,
+      "end": 463858
     },
     "integer_values": "36 0 0 0 200",
     "hex_values": "$24 $0 $0 $0 $c8"
@@ -1262,8 +1262,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 463862,
-      "end": 463867
+      "begin": 463868,
+      "end": 463873
     },
     "integer_values": "35 0 0 0 200",
     "hex_values": "$23 $0 $0 $0 $c8"
@@ -1271,8 +1271,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINELEMONADE0ITEMCODE",
     "address_range": {
-      "begin": 463908,
-      "end": 463911
+      "begin": 463940,
+      "end": 463943
     },
     "integer_values": "31 48 1",
     "hex_values": "$1f $30 $1"
@@ -1280,8 +1280,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGCODE",
     "address_range": {
-      "begin": 464001,
-      "end": 464019
+      "begin": 464047,
+      "end": 464065
     },
     "integer_values": "139 132 140 142 141 128 131 132 127 127 127 127 127 240 249 251 246 80",
     "hex_values": "$8b $84 $8c $8e $8d $80 $83 $84 $7f $7f $7f $7f $7f $f0 $f9 $fb $f6 $50"
@@ -1289,8 +1289,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 463899,
-      "end": 463904
+      "begin": 463931,
+      "end": 463936
     },
     "integer_values": "36 0 0 1 94",
     "hex_values": "$24 $0 $0 $1 $5e"
@@ -1298,8 +1298,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 463914,
-      "end": 463919
+      "begin": 463946,
+      "end": 463951
     },
     "integer_values": "35 0 0 1 94",
     "hex_values": "$23 $0 $0 $1 $5e"
@@ -1307,8 +1307,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINESODAPOP0ITEMCODE",
     "address_range": {
-      "begin": 463882,
-      "end": 463885
+      "begin": 463901,
+      "end": 463904
     },
     "integer_values": "31 47 1",
     "hex_values": "$1f $2f $1"
@@ -1316,8 +1316,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGCODE",
     "address_range": {
-      "begin": 463983,
-      "end": 464001
+      "begin": 464029,
+      "end": 464047
     },
     "integer_values": "146 142 131 128 127 143 142 143 127 127 127 127 127 240 249 246 246 80",
     "hex_values": "$92 $8e $83 $80 $7f $8f $8e $8f $7f $7f $7f $7f $7f $f0 $f9 $f6 $f6 $50"
@@ -1325,8 +1325,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 463873,
-      "end": 463878
+      "begin": 463892,
+      "end": 463897
     },
     "integer_values": "36 0 0 1 44",
     "hex_values": "$24 $0 $0 $1 $2c"
@@ -1334,8 +1334,8 @@
   {
     "label": "CeladonDeptStore6FVendingMachine.ckir_BEFORECELADONDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 463888,
-      "end": 463893
+      "begin": 463907,
+      "end": 463912
     },
     "integer_values": "35 0 0 1 44",
     "hex_values": "$23 $0 $0 $1 $2c"
@@ -1397,8 +1397,8 @@
   {
     "label": "CeladonGymErikaScript.ckir_BEFORECELADONCITYGYMBADGE0BADGECODE",
     "address_range": {
-      "begin": 470262,
-      "end": 470265
+      "begin": 470415,
+      "end": 470418
     },
     "integer_values": "175 38 0",
     "hex_values": "$af $26 $0"
@@ -1406,8 +1406,8 @@
   {
     "label": "CeladonGymErikaScript.ckir_BEFOREERIKATM0ITEMCODE",
     "address_range": {
-      "begin": 470281,
-      "end": 470284
+      "begin": 470434,
+      "end": 470437
     },
     "integer_values": "158 210 1",
     "hex_values": "$9e $d2 $1"
@@ -1424,47 +1424,47 @@
   {
     "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_0",
     "address_range": {
-      "begin": 471673,
-      "end": 471686
+      "begin": 471826,
+      "end": 471839
     },
-    "integer_values": "40 12 11 8 0 255 255 146 2 39 109 255 255",
-    "hex_values": "$28 $c $b $8 $0 $ff $ff $92 $2 $27 $6d $ff $ff"
+    "integer_values": "40 12 11 8 0 255 255 146 2 192 109 255 255",
+    "hex_values": "$28 $c $b $8 $0 $ff $ff $92 $2 $c0 $6d $ff $ff"
   },
   {
     "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_1",
     "address_range": {
-      "begin": 471686,
-      "end": 471699
+      "begin": 471839,
+      "end": 471852
     },
-    "integer_values": "40 12 6 9 0 255 255 162 2 59 109 255 255",
-    "hex_values": "$28 $c $6 $9 $0 $ff $ff $a2 $2 $3b $6d $ff $ff"
+    "integer_values": "40 12 6 9 0 255 255 162 2 212 109 255 255",
+    "hex_values": "$28 $c $6 $9 $0 $ff $ff $a2 $2 $d4 $6d $ff $ff"
   },
   {
     "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_2",
     "address_range": {
-      "begin": 471699,
-      "end": 471712
+      "begin": 471852,
+      "end": 471865
     },
-    "integer_values": "42 9 7 9 0 255 255 146 2 79 109 255 255",
-    "hex_values": "$2a $9 $7 $9 $0 $ff $ff $92 $2 $4f $6d $ff $ff"
+    "integer_values": "42 9 7 9 0 255 255 146 2 232 109 255 255",
+    "hex_values": "$2a $9 $7 $9 $0 $ff $ff $92 $2 $e8 $6d $ff $ff"
   },
   {
     "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_3",
     "address_range": {
-      "begin": 471712,
-      "end": 471725
+      "begin": 471865,
+      "end": 471878
     },
-    "integer_values": "38 14 8 6 0 255 255 130 1 99 109 255 255",
-    "hex_values": "$26 $e $8 $6 $0 $ff $ff $82 $1 $63 $6d $ff $ff"
+    "integer_values": "38 14 8 6 0 255 255 130 1 252 109 255 255",
+    "hex_values": "$26 $e $8 $6 $0 $ff $ff $82 $1 $fc $6d $ff $ff"
   },
   {
     "label": "CeladonGym_MapEvents.ckir_BEFORE_TrainerEvent_CeladonGym_4",
     "address_range": {
-      "begin": 471725,
-      "end": 471738
+      "begin": 471878,
+      "end": 471891
     },
-    "integer_values": "38 14 9 6 0 255 255 130 1 119 109 255 255",
-    "hex_values": "$26 $e $9 $6 $0 $ff $ff $82 $1 $77 $6d $ff $ff"
+    "integer_values": "38 14 9 6 0 255 255 130 1 16 110 255 255",
+    "hex_values": "$26 $e $9 $6 $0 $ff $ff $82 $1 $10 $6e $ff $ff"
   },
   {
     "label": "CeladonMansion1F_Blocks.ckir_BEFORE_CeladonMansion1F_Blocks",
@@ -1496,8 +1496,8 @@
   {
     "label": "CeladonMansionRoofHousePharmacistScript.ckir_BEFORECELADONMANSIONCURSE0ITEMCODE",
     "address_range": {
-      "begin": 466280,
-      "end": 466283
+      "begin": 466357,
+      "end": 466360
     },
     "integer_values": "158 193 1",
     "hex_values": "$9e $c1 $1"
@@ -1505,8 +1505,8 @@
   {
     "label": "CeladonMansionRoofHousePharmacistScript.ckir_BEFORE_timed_events_CURSE",
     "address_range": {
-      "begin": 466265,
-      "end": 466267
+      "begin": 466342,
+      "end": 466344
     },
     "integer_values": "43 7",
     "hex_values": "$2b $7"
@@ -1523,8 +1523,8 @@
   {
     "label": "CeladonPrizeRoom_TMMenuHeader.ckir_BEFORECELADONGAMECORNERDOUBLETEAMTM0VENDINGCODE",
     "address_range": {
-      "begin": 469482,
-      "end": 469500
+      "begin": 469604,
+      "end": 469622
     },
     "integer_values": "147 140 249 248 127 127 127 127 127 127 127 127 127 247 251 246 246 80",
     "hex_values": "$93 $8c $f9 $f8 $7f $7f $7f $7f $7f $7f $7f $7f $7f $f7 $fb $f6 $f6 $50"
@@ -1532,8 +1532,8 @@
   {
     "label": "CeladonPrizeRoom_TMMenuHeader.ckir_BEFORECELADONGAMECORNERHYPERBEAMTM0VENDINGCODE",
     "address_range": {
-      "begin": 469518,
-      "end": 469536
+      "begin": 469640,
+      "end": 469658
     },
     "integer_values": "147 140 247 251 127 127 127 127 127 127 127 127 127 253 251 246 246 80",
     "hex_values": "$93 $8c $f7 $fb $7f $7f $7f $7f $7f $7f $7f $7f $7f $fd $fb $f6 $f6 $50"
@@ -1541,8 +1541,8 @@
   {
     "label": "CeladonPrizeRoom_TMMenuHeader.ckir_BEFORECELADONGAMECORNERPSYCHICTM0VENDINGCODE",
     "address_range": {
-      "begin": 469500,
-      "end": 469518
+      "begin": 469622,
+      "end": 469640
     },
     "integer_values": "147 140 248 255 127 127 127 127 127 127 127 127 127 249 251 246 246 80",
     "hex_values": "$93 $8c $f8 $ff $7f $7f $7f $7f $7f $7f $7f $7f $7f $f9 $fb $f6 $f6 $50"
@@ -1550,8 +1550,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERDOUBLETEAMTM0ITEMCODE",
     "address_range": {
-      "begin": 469364,
-      "end": 469367
+      "begin": 469451,
+      "end": 469454
     },
     "integer_values": "31 224 1",
     "hex_values": "$1f $e0 $1"
@@ -1559,8 +1559,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERDOUBLETEAMTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 469348,
-      "end": 469351
+      "begin": 469425,
+      "end": 469428
     },
     "integer_values": "39 220 5",
     "hex_values": "$27 $dc $5"
@@ -1568,8 +1568,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERDOUBLETEAMTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 469370,
-      "end": 469373
+      "begin": 469457,
+      "end": 469460
     },
     "integer_values": "38 220 5",
     "hex_values": "$26 $dc $5"
@@ -1577,8 +1577,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERHYPERBEAMTM0ITEMCODE",
     "address_range": {
-      "begin": 469420,
-      "end": 469423
+      "begin": 469533,
+      "end": 469536
     },
     "integer_values": "31 206 1",
     "hex_values": "$1f $ce $1"
@@ -1586,8 +1586,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERHYPERBEAMTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 469404,
-      "end": 469407
+      "begin": 469507,
+      "end": 469510
     },
     "integer_values": "39 76 29",
     "hex_values": "$27 $4c $1d"
@@ -1595,8 +1595,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERHYPERBEAMTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 469426,
-      "end": 469429
+      "begin": 469539,
+      "end": 469542
     },
     "integer_values": "38 76 29",
     "hex_values": "$26 $4c $1d"
@@ -1604,8 +1604,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERPSYCHICTM0ITEMCODE",
     "address_range": {
-      "begin": 469392,
-      "end": 469395
+      "begin": 469492,
+      "end": 469495
     },
     "integer_values": "31 221 1",
     "hex_values": "$1f $dd $1"
@@ -1613,8 +1613,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERPSYCHICTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 469376,
-      "end": 469379
+      "begin": 469466,
+      "end": 469469
     },
     "integer_values": "39 172 13",
     "hex_values": "$27 $ac $d"
@@ -1622,8 +1622,8 @@
   {
     "label": "CeladonPrizeRoom_tmcounterloop.ckir_BEFORECELADONGAMECORNERPSYCHICTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 469398,
-      "end": 469401
+      "begin": 469498,
+      "end": 469501
     },
     "integer_values": "38 172 13",
     "hex_values": "$26 $ac $d"
@@ -1748,8 +1748,8 @@
   {
     "label": "CheckReplaceKrisSprite.ckir_BEFORE_BIKELOAD",
     "address_range": {
-      "begin": 87272,
-      "end": 87274
+      "begin": 87369,
+      "end": 87371
     },
     "integer_values": "254 8",
     "hex_values": "$fe $8"
@@ -3377,8 +3377,8 @@
   {
     "label": "GoldenrodCityGrampsScript.ckir_BEFORE_GoldenrodRocketA",
     "address_range": {
-      "begin": 1674010,
-      "end": 1674010
+      "begin": 1673963,
+      "end": 1673963
     },
     "integer_values": "",
     "hex_values": ""
@@ -3386,8 +3386,8 @@
   {
     "label": "GoldenrodCityRocket1Script.ckir_BEFORE_GoldenrodRocketC",
     "address_range": {
-      "begin": 1674028,
-      "end": 1674028
+      "begin": 1673981,
+      "end": 1673981
     },
     "integer_values": "",
     "hex_values": ""
@@ -3395,8 +3395,8 @@
   {
     "label": "GoldenrodCityRocket2Script.ckir_BEFORE_GoldenrodRocketD",
     "address_range": {
-      "begin": 1674031,
-      "end": 1674031
+      "begin": 1673984,
+      "end": 1673984
     },
     "integer_values": "",
     "hex_values": ""
@@ -3404,8 +3404,8 @@
   {
     "label": "GoldenrodCityRocket3Script.ckir_BEFORE_GoldenrodRocketE",
     "address_range": {
-      "begin": 1674034,
-      "end": 1674034
+      "begin": 1673987,
+      "end": 1673987
     },
     "integer_values": "",
     "hex_values": ""
@@ -3413,8 +3413,8 @@
   {
     "label": "GoldenrodCityRocket4Script.ckir_BEFORE_GoldenrodRocketF",
     "address_range": {
-      "begin": 1674037,
-      "end": 1674037
+      "begin": 1673990,
+      "end": 1673990
     },
     "integer_values": "",
     "hex_values": ""
@@ -3422,8 +3422,8 @@
   {
     "label": "GoldenrodCityRocket5Script.ckir_BEFORE_GoldenrodRocketG",
     "address_range": {
-      "begin": 1674040,
-      "end": 1674040
+      "begin": 1673993,
+      "end": 1673993
     },
     "integer_values": "",
     "hex_values": ""
@@ -3431,8 +3431,8 @@
   {
     "label": "GoldenrodCityRocketScoutScript.ckir_BEFORE_GoldenrodRocketB",
     "address_range": {
-      "begin": 1674025,
-      "end": 1674025
+      "begin": 1673978,
+      "end": 1673978
     },
     "integer_values": "",
     "hex_values": ""
@@ -3449,17 +3449,35 @@
   {
     "label": "GoldenrodCity_MapEvents.ckir_BEFORE_GoldenrodRockets",
     "address_range": {
-      "begin": 1676217,
-      "end": 1676308
+      "begin": 1676167,
+      "end": 1676258
     },
-    "integer_values": "53 20 8 7 0 255 255 0 0 26 75 204 6 53 24 32 7 0 255 255 0 0 41 75 5 1 53 19 12 6 0 255 255 0 0 44 75 205 6 53 27 20 9 0 255 255 0 0 47 75 206 6 53 24 33 7 0 255 255 0 0 50 75 5 1 53 11 33 6 0 255 255 0 0 53 75 5 1 53 14 35 8 0 255 255 0 0 56 75 206 6",
-    "hex_values": "$35 $14 $8 $7 $0 $ff $ff $0 $0 $1a $4b $cc $6 $35 $18 $20 $7 $0 $ff $ff $0 $0 $29 $4b $5 $1 $35 $13 $c $6 $0 $ff $ff $0 $0 $2c $4b $cd $6 $35 $1b $14 $9 $0 $ff $ff $0 $0 $2f $4b $ce $6 $35 $18 $21 $7 $0 $ff $ff $0 $0 $32 $4b $5 $1 $35 $b $21 $6 $0 $ff $ff $0 $0 $35 $4b $5 $1 $35 $e $23 $8 $0 $ff $ff $0 $0 $38 $4b $ce $6"
+    "integer_values": "53 20 8 7 0 255 255 0 0 235 74 204 6 53 24 32 7 0 255 255 0 0 250 74 5 1 53 19 12 6 0 255 255 0 0 253 74 205 6 53 27 20 9 0 255 255 0 0 0 75 206 6 53 24 33 7 0 255 255 0 0 3 75 5 1 53 11 33 6 0 255 255 0 0 6 75 5 1 53 14 35 8 0 255 255 0 0 9 75 206 6",
+    "hex_values": "$35 $14 $8 $7 $0 $ff $ff $0 $0 $eb $4a $cc $6 $35 $18 $20 $7 $0 $ff $ff $0 $0 $fa $4a $5 $1 $35 $13 $c $6 $0 $ff $ff $0 $0 $fd $4a $cd $6 $35 $1b $14 $9 $0 $ff $ff $0 $0 $0 $4b $ce $6 $35 $18 $21 $7 $0 $ff $ff $0 $0 $3 $4b $5 $1 $35 $b $21 $6 $0 $ff $ff $0 $0 $6 $4b $5 $1 $35 $e $23 $8 $0 $ff $ff $0 $0 $9 $4b $ce $6"
+  },
+  {
+    "label": "GoldenrodDeptStore5FClerkScript.ckir_BEFORE_DEPTSTORE5FClerkFullShopScript",
+    "address_range": {
+      "begin": 352422,
+      "end": 352422
+    },
+    "integer_values": "",
+    "hex_values": ""
+  },
+  {
+    "label": "GoldenrodDeptStore5FClerkScript.ckir_BEFORE_DEPTSTORECheckFullScript",
+    "address_range": {
+      "begin": 352413,
+      "end": 352417
+    },
+    "integer_values": "6 10 166 96",
+    "hex_values": "$6 $a $a6 $60"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFOREGOLDENRODDEPARTMENTSTOREFRUSTRATION0ITEMCODE",
     "address_range": {
-      "begin": 352490,
-      "end": 352493
+      "begin": 352504,
+      "end": 352507
     },
     "integer_values": "158 212 1",
     "hex_values": "$9e $d4 $1"
@@ -3467,8 +3485,8 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFOREGOLDENRODDEPARTMENTSTORERETURN0ITEMCODE",
     "address_range": {
-      "begin": 352458,
-      "end": 352461
+      "begin": 352472,
+      "end": 352475
     },
     "integer_values": "158 218 1",
     "hex_values": "$9e $da $1"
@@ -3476,26 +3494,26 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2",
     "address_range": {
-      "begin": 352420,
-      "end": 352424
+      "begin": 352434,
+      "end": 352438
     },
-    "integer_values": "6 10 12 97",
-    "hex_values": "$6 $a $c $61"
+    "integer_values": "6 10 26 97",
+    "hex_values": "$6 $a $1a $61"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3",
     "address_range": {
-      "begin": 352437,
-      "end": 352441
+      "begin": 352451,
+      "end": 352455
     },
-    "integer_values": "10 0 192 96",
-    "hex_values": "$a $0 $c0 $60"
+    "integer_values": "10 0 206 96",
+    "hex_values": "$a $0 $ce $60"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy",
     "address_range": {
-      "begin": 352448,
-      "end": 352448
+      "begin": 352462,
+      "end": 352462
     },
     "integer_values": "",
     "hex_values": ""
@@ -3503,8 +3521,8 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy",
     "address_range": {
-      "begin": 352480,
-      "end": 352480
+      "begin": 352494,
+      "end": 352494
     },
     "integer_values": "",
     "hex_values": ""
@@ -3512,8 +3530,8 @@
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5_EventIsOver",
     "address_range": {
-      "begin": 352524,
-      "end": 352524
+      "begin": 352538,
+      "end": 352538
     },
     "integer_values": "",
     "hex_values": ""
@@ -3665,8 +3683,8 @@
   {
     "label": "GoldenrodGameCornerTMVendorMenuHeader.ckir_BEFOREGOLDENRODGAMECORNERBLIZZARDTM0VENDINGCODE",
     "address_range": {
-      "begin": 355554,
-      "end": 355572
+      "begin": 355690,
+      "end": 355708
     },
     "integer_values": "147 140 247 250 127 127 127 127 127 127 127 127 127 251 251 246 246 80",
     "hex_values": "$93 $8c $f7 $fa $7f $7f $7f $7f $7f $7f $7f $7f $7f $fb $fb $f6 $f6 $50"
@@ -3674,8 +3692,8 @@
   {
     "label": "GoldenrodGameCornerTMVendorMenuHeader.ckir_BEFOREGOLDENRODGAMECORNERFIREBLASTTM0VENDINGCODE",
     "address_range": {
-      "begin": 355572,
-      "end": 355590
+      "begin": 355708,
+      "end": 355726
     },
     "integer_values": "147 140 249 254 127 127 127 127 127 127 127 127 127 251 251 246 246 80",
     "hex_values": "$93 $8c $f9 $fe $7f $7f $7f $7f $7f $7f $7f $7f $7f $fb $fb $f6 $f6 $50"
@@ -3683,8 +3701,8 @@
   {
     "label": "GoldenrodGameCornerTMVendorMenuHeader.ckir_BEFOREGOLDENRODGAMECORNERTHUNDERTM0VENDINGCODE",
     "address_range": {
-      "begin": 355536,
-      "end": 355554
+      "begin": 355672,
+      "end": 355690
     },
     "integer_values": "147 140 248 251 127 127 127 127 127 127 127 127 127 251 251 246 246 80",
     "hex_values": "$93 $8c $f8 $fb $7f $7f $7f $7f $7f $7f $7f $7f $7f $fb $fb $f6 $f6 $50"
@@ -3692,8 +3710,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERBLIZZARDTM0ITEMCODE",
     "address_range": {
-      "begin": 355446,
-      "end": 355449
+      "begin": 355560,
+      "end": 355563
     },
     "integer_values": "31 205 1",
     "hex_values": "$1f $cd $1"
@@ -3701,8 +3719,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERBLIZZARDTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 355430,
-      "end": 355433
+      "begin": 355534,
+      "end": 355537
     },
     "integer_values": "39 124 21",
     "hex_values": "$27 $7c $15"
@@ -3710,8 +3728,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERBLIZZARDTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 355452,
-      "end": 355455
+      "begin": 355566,
+      "end": 355569
     },
     "integer_values": "38 124 21",
     "hex_values": "$26 $7c $15"
@@ -3719,8 +3737,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERFIREBLASTTM0ITEMCODE",
     "address_range": {
-      "begin": 355474,
-      "end": 355477
+      "begin": 355601,
+      "end": 355604
     },
     "integer_values": "31 230 1",
     "hex_values": "$1f $e6 $1"
@@ -3728,8 +3746,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERFIREBLASTTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 355458,
-      "end": 355461
+      "begin": 355575,
+      "end": 355578
     },
     "integer_values": "39 124 21",
     "hex_values": "$27 $7c $15"
@@ -3737,8 +3755,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERFIREBLASTTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 355480,
-      "end": 355483
+      "begin": 355607,
+      "end": 355610
     },
     "integer_values": "38 124 21",
     "hex_values": "$26 $7c $15"
@@ -3746,8 +3764,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERTHUNDERTM0ITEMCODE",
     "address_range": {
-      "begin": 355418,
-      "end": 355421
+      "begin": 355519,
+      "end": 355522
     },
     "integer_values": "31 216 1",
     "hex_values": "$1f $d8 $1"
@@ -3755,8 +3773,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERTHUNDERTM0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 355402,
-      "end": 355405
+      "begin": 355493,
+      "end": 355496
     },
     "integer_values": "39 124 21",
     "hex_values": "$27 $7c $15"
@@ -3764,8 +3782,8 @@
   {
     "label": "GoldenrodGameCornerTMVendor_LoopScript.ckir_BEFOREGOLDENRODGAMECORNERTHUNDERTM0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 355424,
-      "end": 355427
+      "begin": 355525,
+      "end": 355528
     },
     "integer_values": "38 124 21",
     "hex_values": "$26 $7c $15"
@@ -4259,8 +4277,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0ITEMCODE",
     "address_range": {
-      "begin": 353298,
-      "end": 353301
+      "begin": 353318,
+      "end": 353321
     },
     "integer_values": "31 46 1",
     "hex_values": "$1f $2e $1"
@@ -4268,8 +4286,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGCODE",
     "address_range": {
-      "begin": 353407,
-      "end": 353425
+      "begin": 353467,
+      "end": 353485
     },
     "integer_values": "133 145 132 146 135 127 150 128 147 132 145 127 127 240 248 246 246 80",
     "hex_values": "$85 $91 $84 $92 $87 $7f $96 $80 $93 $84 $91 $7f $7f $f0 $f8 $f6 $f6 $50"
@@ -4277,8 +4295,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 353289,
-      "end": 353294
+      "begin": 353309,
+      "end": 353314
     },
     "integer_values": "36 0 0 0 200",
     "hex_values": "$24 $0 $0 $0 $c8"
@@ -4286,8 +4304,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINEFRESHWATER0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 353304,
-      "end": 353309
+      "begin": 353324,
+      "end": 353329
     },
     "integer_values": "35 0 0 0 200",
     "hex_values": "$23 $0 $0 $0 $c8"
@@ -4295,8 +4313,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINELEMONADE0ITEMCODE",
     "address_range": {
-      "begin": 353350,
-      "end": 353353
+      "begin": 353396,
+      "end": 353399
     },
     "integer_values": "31 48 1",
     "hex_values": "$1f $30 $1"
@@ -4304,8 +4322,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGCODE",
     "address_range": {
-      "begin": 353443,
-      "end": 353461
+      "begin": 353503,
+      "end": 353521
     },
     "integer_values": "139 132 140 142 141 128 131 132 127 127 127 127 127 240 249 251 246 80",
     "hex_values": "$8b $84 $8c $8e $8d $80 $83 $84 $7f $7f $7f $7f $7f $f0 $f9 $fb $f6 $50"
@@ -4313,8 +4331,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 353341,
-      "end": 353346
+      "begin": 353387,
+      "end": 353392
     },
     "integer_values": "36 0 0 1 94",
     "hex_values": "$24 $0 $0 $1 $5e"
@@ -4322,8 +4340,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINELEMONADE0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 353356,
-      "end": 353361
+      "begin": 353402,
+      "end": 353407
     },
     "integer_values": "35 0 0 1 94",
     "hex_values": "$23 $0 $0 $1 $5e"
@@ -4331,8 +4349,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINESODAPOP0ITEMCODE",
     "address_range": {
-      "begin": 353324,
-      "end": 353327
+      "begin": 353357,
+      "end": 353360
     },
     "integer_values": "31 47 1",
     "hex_values": "$1f $2f $1"
@@ -4340,8 +4358,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGCODE",
     "address_range": {
-      "begin": 353425,
-      "end": 353443
+      "begin": 353485,
+      "end": 353503
     },
     "integer_values": "146 142 131 128 127 143 142 143 127 127 127 127 127 240 249 246 246 80",
     "hex_values": "$92 $8e $83 $80 $7f $8f $8e $8f $7f $7f $7f $7f $7f $f0 $f9 $f6 $f6 $50"
@@ -4349,8 +4367,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGPRICECODE1",
     "address_range": {
-      "begin": 353315,
-      "end": 353320
+      "begin": 353348,
+      "end": 353353
     },
     "integer_values": "36 0 0 1 44",
     "hex_values": "$24 $0 $0 $1 $2c"
@@ -4358,8 +4376,8 @@
   {
     "label": "GoldenrodVendingMachine.ckir_BEFOREGOLDENRODDEPARTMENTSTOREVENDINGMACHINESODAPOP0VENDINGPRICECODE2",
     "address_range": {
-      "begin": 353330,
-      "end": 353335
+      "begin": 353363,
+      "end": 353368
     },
     "integer_values": "35 0 0 1 44",
     "hex_values": "$23 $0 $0 $1 $2c"
@@ -4394,8 +4412,8 @@
   {
     "label": "HatchEggs.ckir_BEFORE_TOGEPIFLAG",
     "address_range": {
-      "begin": 94560,
-      "end": 94575
+      "begin": 94657,
+      "end": 94672
     },
     "integer_values": "250 8 209 254 175 32 0 17 84 0 6 1 205 55 47",
     "hex_values": "$fa $8 $d1 $fe $af $20 $0 $11 $54 $0 $6 $1 $cd $37 $2f"
@@ -4403,8 +4421,8 @@
   {
     "label": "HiddenPowerGuy.ckir_BEFORELAKEOFRAGEHIDDENPOWERTM0ITEMCODE",
     "address_range": {
-      "begin": 1680948,
-      "end": 1680951
+      "begin": 1680898,
+      "end": 1680901
     },
     "integer_values": "158 201 1",
     "hex_values": "$9e $c9 $1"
@@ -4853,8 +4871,8 @@
   {
     "label": "InitializeEventsScript.ckir_BEFORE_ICEPATHBOULDERSEVENTS",
     "address_range": {
-      "begin": 771128,
-      "end": 771140
+      "begin": 771164,
+      "end": 771176
     },
     "integer_values": "51 13 7 51 14 7 51 15 7 51 16 7",
     "hex_values": "$33 $d $7 $33 $e $7 $33 $f $7 $33 $10 $7"
@@ -7445,8 +7463,8 @@
   {
     "label": "MagikarpLengthRaterScript.ckir_BEFORELAKEOFRAGEBIGMAGIKARPGUYELIXER0ITEMCODE",
     "address_range": {
-      "begin": 1681431,
-      "end": 1681434
+      "begin": 1681381,
+      "end": 1681384
     },
     "integer_values": "158 65 1",
     "hex_values": "$9e $41 $1"
@@ -7463,8 +7481,8 @@
   {
     "label": "MahoganyGymPryceScript.ckir_BEFOREMAHOGANYTOWNGYMBADGE0BADGECODE",
     "address_range": {
-      "begin": 1678286,
-      "end": 1678289
+      "begin": 1678236,
+      "end": 1678239
     },
     "integer_values": "175 33 0",
     "hex_values": "$af $21 $0"
@@ -7472,8 +7490,8 @@
   {
     "label": "MahoganyGymPryceScript.ckir_BEFOREPRYCETM0ITEMCODE",
     "address_range": {
-      "begin": 1678306,
-      "end": 1678309
+      "begin": 1678256,
+      "end": 1678259
     },
     "integer_values": "158 207 1",
     "hex_values": "$9e $cf $1"
@@ -7490,47 +7508,47 @@
   {
     "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_0",
     "address_range": {
-      "begin": 1680391,
-      "end": 1680404
+      "begin": 1680341,
+      "end": 1680354
     },
-    "integer_values": "42 10 8 6 0 255 255 130 1 6 92 255 255",
-    "hex_values": "$2a $a $8 $6 $0 $ff $ff $82 $1 $6 $5c $ff $ff"
+    "integer_values": "42 10 8 6 0 255 255 130 1 212 91 255 255",
+    "hex_values": "$2a $a $8 $6 $0 $ff $ff $82 $1 $d4 $5b $ff $ff"
   },
   {
     "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_1",
     "address_range": {
-      "begin": 1680404,
-      "end": 1680417
+      "begin": 1680354,
+      "end": 1680367
     },
-    "integer_values": "44 21 4 7 0 255 255 146 1 46 92 255 255",
-    "hex_values": "$2c $15 $4 $7 $0 $ff $ff $92 $1 $2e $5c $ff $ff"
+    "integer_values": "44 21 4 7 0 255 255 146 1 252 91 255 255",
+    "hex_values": "$2c $15 $4 $7 $0 $ff $ff $92 $1 $fc $5b $ff $ff"
   },
   {
     "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_2",
     "address_range": {
-      "begin": 1680417,
-      "end": 1680430
+      "begin": 1680367,
+      "end": 1680380
     },
-    "integer_values": "42 21 13 7 0 255 255 130 1 26 92 255 255",
-    "hex_values": "$2a $15 $d $7 $0 $ff $ff $82 $1 $1a $5c $ff $ff"
+    "integer_values": "42 21 13 7 0 255 255 130 1 232 91 255 255",
+    "hex_values": "$2a $15 $d $7 $0 $ff $ff $82 $1 $e8 $5b $ff $ff"
   },
   {
     "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_3",
     "address_range": {
-      "begin": 1680430,
-      "end": 1680443
+      "begin": 1680380,
+      "end": 1680393
     },
-    "integer_values": "44 13 9 6 0 255 255 146 1 66 92 255 255",
-    "hex_values": "$2c $d $9 $6 $0 $ff $ff $92 $1 $42 $5c $ff $ff"
+    "integer_values": "44 13 9 6 0 255 255 146 1 16 92 255 255",
+    "hex_values": "$2c $d $9 $6 $0 $ff $ff $92 $1 $10 $5c $ff $ff"
   },
   {
     "label": "MahoganyGym_MapEvents.ckir_BEFORE_TrainerEvent_MahoganyGym_4",
     "address_range": {
-      "begin": 1680443,
-      "end": 1680456
+      "begin": 1680393,
+      "end": 1680406
     },
-    "integer_values": "44 8 6 10 0 255 255 146 1 86 92 255 255",
-    "hex_values": "$2c $8 $6 $a $0 $ff $ff $92 $1 $56 $5c $ff $ff"
+    "integer_values": "44 8 6 10 0 255 255 146 1 36 92 255 255",
+    "hex_values": "$2c $8 $6 $a $0 $ff $ff $92 $1 $24 $5c $ff $ff"
   },
   {
     "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOPOPEN",
@@ -7715,8 +7733,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTANTIDOTE0ITEMCODE",
     "address_range": {
-      "begin": 90944,
-      "end": 90946
+      "begin": 91041,
+      "end": 91043
     },
     "integer_values": "1 9",
     "hex_values": "$1 $9"
@@ -7724,8 +7742,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTCHARCOAL0ITEMCODE",
     "address_range": {
-      "begin": 90932,
-      "end": 90934
+      "begin": 91029,
+      "end": 91031
     },
     "integer_values": "1 138",
     "hex_values": "$1 $8a"
@@ -7733,8 +7751,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTESCAPEROPE0ITEMCODE",
     "address_range": {
-      "begin": 90940,
-      "end": 90942
+      "begin": 91037,
+      "end": 91039
     },
     "integer_values": "1 19",
     "hex_values": "$1 $13"
@@ -7742,8 +7760,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTICEHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90948,
-      "end": 90950
+      "begin": 91045,
+      "end": 91047
     },
     "integer_values": "1 11",
     "hex_values": "$1 $b"
@@ -7751,8 +7769,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTPARLYZHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90946,
-      "end": 90948
+      "begin": 91043,
+      "end": 91045
     },
     "integer_values": "1 13",
     "hex_values": "$1 $d"
@@ -7760,8 +7778,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTPOKEBALL0ITEMCODE",
     "address_range": {
-      "begin": 90934,
-      "end": 90936
+      "begin": 91031,
+      "end": 91033
     },
     "integer_values": "1 5",
     "hex_values": "$1 $5"
@@ -7769,8 +7787,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTPOTION0ITEMCODE",
     "address_range": {
-      "begin": 90936,
-      "end": 90938
+      "begin": 91033,
+      "end": 91035
     },
     "integer_values": "1 18",
     "hex_values": "$1 $12"
@@ -7778,8 +7796,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTREPEL0ITEMCODE",
     "address_range": {
-      "begin": 90942,
-      "end": 90944
+      "begin": 91039,
+      "end": 91041
     },
     "integer_values": "1 20",
     "hex_values": "$1 $14"
@@ -7787,8 +7805,8 @@
   {
     "label": "MartAzaleaBetter.ckir_BEFOREAZALEAMARTSUPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 90938,
-      "end": 90940
+      "begin": 91035,
+      "end": 91037
     },
     "integer_values": "1 17",
     "hex_values": "$1 $11"
@@ -7796,8 +7814,8 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90609,
-      "end": 90611
+      "begin": 90706,
+      "end": 90708
     },
     "integer_values": "1 38",
     "hex_values": "$1 $26"
@@ -7805,8 +7823,8 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTGREATBALL0ITEMCODE",
     "address_range": {
-      "begin": 90601,
-      "end": 90603
+      "begin": 90698,
+      "end": 90700
     },
     "integer_values": "1 4",
     "hex_values": "$1 $4"
@@ -7814,8 +7832,8 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 90605,
-      "end": 90607
+      "begin": 90702,
+      "end": 90704
     },
     "integer_values": "1 16",
     "hex_values": "$1 $10"
@@ -7823,8 +7841,8 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTMAXPOTION0ITEMCODE",
     "address_range": {
-      "begin": 90607,
-      "end": 90609
+      "begin": 90704,
+      "end": 90706
     },
     "integer_values": "1 15",
     "hex_values": "$1 $f"
@@ -7832,8 +7850,8 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTMAXREPEL0ITEMCODE",
     "address_range": {
-      "begin": 90613,
-      "end": 90615
+      "begin": 90710,
+      "end": 90712
     },
     "integer_values": "1 43",
     "hex_values": "$1 $2b"
@@ -7841,1949 +7859,14 @@
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 90611,
-      "end": 90613
+      "begin": 90708,
+      "end": 90710
     },
     "integer_values": "1 39",
     "hex_values": "$1 $27"
   },
   {
     "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90603,
-      "end": 90605
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTXATTACK0ITEMCODE",
-    "address_range": {
-      "begin": 90617,
-      "end": 90619
-    },
-    "integer_values": "1 49",
-    "hex_values": "$1 $31"
-  },
-  {
-    "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTXDEFEND0ITEMCODE",
-    "address_range": {
-      "begin": 90615,
-      "end": 90617
-    },
-    "integer_values": "1 51",
-    "hex_values": "$1 $33"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1HYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90723,
-      "end": 90725
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1MAXPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90725,
-      "end": 90727
-    },
-    "integer_values": "1 15",
-    "hex_values": "$1 $f"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1MAXREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90731,
-      "end": 90733
-    },
-    "integer_values": "1 43",
-    "hex_values": "$1 $2b"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1POTION0ITEMCODE",
-    "address_range": {
-      "begin": 90719,
-      "end": 90721
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1REVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90727,
-      "end": 90729
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1SUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90721,
-      "end": 90723
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1SUPERREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90729,
-      "end": 90731
-    },
-    "integer_values": "1 42",
-    "hex_values": "$1 $2a"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90746,
-      "end": 90748
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2AWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90752,
-      "end": 90754
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2BURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90748,
-      "end": 90750
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ESCAPEROPE0ITEMCODE",
-    "address_range": {
-      "begin": 90742,
-      "end": 90744
-    },
-    "integer_values": "1 19",
-    "hex_values": "$1 $13"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2FULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90744,
-      "end": 90746
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2GREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90738,
-      "end": 90740
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ICEHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90750,
-      "end": 90752
-    },
-    "integer_values": "1 11",
-    "hex_values": "$1 $b"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2PARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90754,
-      "end": 90756
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2POKEBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90736,
-      "end": 90738
-    },
-    "integer_values": "1 5",
-    "hex_values": "$1 $5"
-  },
-  {
-    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90740,
-      "end": 90742
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FHIDDENPOWERTM0ITEMCODE",
-    "address_range": {
-      "begin": 90759,
-      "end": 90761
-    },
-    "integer_values": "1 201",
-    "hex_values": "$1 $c9"
-  },
-  {
-    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FPROTECTTM0ITEMCODE",
-    "address_range": {
-      "begin": 90763,
-      "end": 90765
-    },
-    "integer_values": "1 208",
-    "hex_values": "$1 $d0"
-  },
-  {
-    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FRAINDANCETM0ITEMCODE",
-    "address_range": {
-      "begin": 90765,
-      "end": 90767
-    },
-    "integer_values": "1 209",
-    "hex_values": "$1 $d1"
-  },
-  {
-    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FSANDSTORMTM0ITEMCODE",
-    "address_range": {
-      "begin": 90767,
-      "end": 90769
-    },
-    "integer_values": "1 229",
-    "hex_values": "$1 $e5"
-  },
-  {
-    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FSUNNYDAYTM0ITEMCODE",
-    "address_range": {
-      "begin": 90761,
-      "end": 90763
-    },
-    "integer_values": "1 202",
-    "hex_values": "$1 $ca"
-  },
-  {
-    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FLOVELYMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90774,
-      "end": 90776
-    },
-    "integer_values": "1 184",
-    "hex_values": "$1 $b8"
-  },
-  {
-    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FPOKEDOLL0ITEMCODE",
-    "address_range": {
-      "begin": 90772,
-      "end": 90774
-    },
-    "integer_values": "1 37",
-    "hex_values": "$1 $25"
-  },
-  {
-    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FSURFMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90776,
-      "end": 90778
-    },
-    "integer_values": "1 181",
-    "hex_values": "$1 $b5"
-  },
-  {
-    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1CALCIUM0ITEMCODE",
-    "address_range": {
-      "begin": 90789,
-      "end": 90791
-    },
-    "integer_values": "1 31",
-    "hex_values": "$1 $1f"
-  },
-  {
-    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1CARBOS0ITEMCODE",
-    "address_range": {
-      "begin": 90787,
-      "end": 90789
-    },
-    "integer_values": "1 29",
-    "hex_values": "$1 $1d"
-  },
-  {
-    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1HPUP0ITEMCODE",
-    "address_range": {
-      "begin": 90781,
-      "end": 90783
-    },
-    "integer_values": "1 26",
-    "hex_values": "$1 $1a"
-  },
-  {
-    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1IRON0ITEMCODE",
-    "address_range": {
-      "begin": 90785,
-      "end": 90787
-    },
-    "integer_values": "1 28",
-    "hex_values": "$1 $1c"
-  },
-  {
-    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1PROTEIN0ITEMCODE",
-    "address_range": {
-      "begin": 90783,
-      "end": 90785
-    },
-    "integer_values": "1 27",
-    "hex_values": "$1 $1b"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2GUARDSPEC0ITEMCODE",
-    "address_range": {
-      "begin": 90796,
-      "end": 90798
-    },
-    "integer_values": "1 41",
-    "hex_values": "$1 $29"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XACCURACY0ITEMCODE",
-    "address_range": {
-      "begin": 90794,
-      "end": 90796
-    },
-    "integer_values": "1 33",
-    "hex_values": "$1 $21"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XATTACK0ITEMCODE",
-    "address_range": {
-      "begin": 90800,
-      "end": 90802
-    },
-    "integer_values": "1 49",
-    "hex_values": "$1 $31"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XDEFEND0ITEMCODE",
-    "address_range": {
-      "begin": 90802,
-      "end": 90804
-    },
-    "integer_values": "1 51",
-    "hex_values": "$1 $33"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XDIREHIT0ITEMCODE",
-    "address_range": {
-      "begin": 90798,
-      "end": 90800
-    },
-    "integer_values": "1 44",
-    "hex_values": "$1 $2c"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XSPECIAL0ITEMCODE",
-    "address_range": {
-      "begin": 90806,
-      "end": 90808
-    },
-    "integer_values": "1 53",
-    "hex_values": "$1 $35"
-  },
-  {
-    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XSPEED0ITEMCODE",
-    "address_range": {
-      "begin": 90804,
-      "end": 90806
-    },
-    "integer_values": "1 52",
-    "hex_values": "$1 $34"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTDIREHIT0ITEMCODE",
-    "address_range": {
-      "begin": 90674,
-      "end": 90676
-    },
-    "integer_values": "1 44",
-    "hex_values": "$1 $2c"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTFULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90668,
-      "end": 90670
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90660,
-      "end": 90662
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90664,
-      "end": 90666
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTSUPERREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90666,
-      "end": 90668
-    },
-    "integer_values": "1 42",
-    "hex_values": "$1 $2a"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTSURFMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90676,
-      "end": 90678
-    },
-    "integer_values": "1 181",
-    "hex_values": "$1 $b5"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90662,
-      "end": 90664
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTXATTACK0ITEMCODE",
-    "address_range": {
-      "begin": 90672,
-      "end": 90674
-    },
-    "integer_values": "1 49",
-    "hex_values": "$1 $31"
-  },
-  {
-    "label": "MartCerulean.ckir_BEFORECERULEANMARTXDEFEND0ITEMCODE",
-    "address_range": {
-      "begin": 90670,
-      "end": 90672
-    },
-    "integer_values": "1 51",
-    "hex_values": "$1 $33"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90896,
-      "end": 90898
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90900,
-      "end": 90902
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTICEHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90902,
-      "end": 90904
-    },
-    "integer_values": "1 11",
-    "hex_values": "$1 $b"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90898,
-      "end": 90900
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPOKEBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90890,
-      "end": 90892
-    },
-    "integer_values": "1 5",
-    "hex_values": "$1 $5"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90892,
-      "end": 90894
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90894,
-      "end": 90896
-    },
-    "integer_values": "1 20",
-    "hex_values": "$1 $14"
-  },
-  {
-    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYFULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90452,
-      "end": 90454
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90450,
-      "end": 90452
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90446,
-      "end": 90448
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYREVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90454,
-      "end": 90456
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90448,
-      "end": 90450
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90554,
-      "end": 90556
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90558,
-      "end": 90560
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTBURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90560,
-      "end": 90562
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90548,
-      "end": 90550
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTICEHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90562,
-      "end": 90564
-    },
-    "integer_values": "1 11",
-    "hex_values": "$1 $b"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90556,
-      "end": 90558
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPOKEBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90546,
-      "end": 90548
-    },
-    "integer_values": "1 5",
-    "hex_values": "$1 $5"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90550,
-      "end": 90552
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTREVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90564,
-      "end": 90566
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90552,
-      "end": 90554
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTFLOWERMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90823,
-      "end": 90825
-    },
-    "integer_values": "1 158",
-    "hex_values": "$1 $9e"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTFULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90819,
-      "end": 90821
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90811,
-      "end": 90813
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90817,
-      "end": 90819
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTMAXREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90821,
-      "end": 90823
-    },
-    "integer_values": "1 43",
-    "hex_values": "$1 $2b"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90815,
-      "end": 90817
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90813,
-      "end": 90815
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1ANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90463,
-      "end": 90465
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1AWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90467,
-      "end": 90469
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1BURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90469,
-      "end": 90471
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1ICEHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90471,
-      "end": 90473
-    },
-    "integer_values": "1 11",
-    "hex_values": "$1 $b"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1PARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90465,
-      "end": 90467
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1POTION0ITEMCODE",
-    "address_range": {
-      "begin": 90459,
-      "end": 90461
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1SUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90461,
-      "end": 90463
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2ESCAPEROPE0ITEMCODE",
-    "address_range": {
-      "begin": 90480,
-      "end": 90482
-    },
-    "integer_values": "1 19",
-    "hex_values": "$1 $13"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2FLOWERMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90490,
-      "end": 90492
-    },
-    "integer_values": "1 158",
-    "hex_values": "$1 $9e"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2FULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90486,
-      "end": 90488
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2GREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90478,
-      "end": 90480
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2POKEBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90476,
-      "end": 90478
-    },
-    "integer_values": "1 5",
-    "hex_values": "$1 $5"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2POKEDOLL0ITEMCODE",
-    "address_range": {
-      "begin": 90488,
-      "end": 90490
-    },
-    "integer_values": "1 37",
-    "hex_values": "$1 $25"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2REPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90482,
-      "end": 90484
-    },
-    "integer_values": "1 20",
-    "hex_values": "$1 $14"
-  },
-  {
-    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2REVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90484,
-      "end": 90486
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FDIREHIT0ITEMCODE",
-    "address_range": {
-      "begin": 90503,
-      "end": 90505
-    },
-    "integer_values": "1 44",
-    "hex_values": "$1 $2c"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FGUARDSPEC0ITEMCODE",
-    "address_range": {
-      "begin": 90505,
-      "end": 90507
-    },
-    "integer_values": "1 41",
-    "hex_values": "$1 $29"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXACCURACY0ITEMCODE",
-    "address_range": {
-      "begin": 90507,
-      "end": 90509
-    },
-    "integer_values": "1 33",
-    "hex_values": "$1 $21"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXATTACK0ITEMCODE",
-    "address_range": {
-      "begin": 90501,
-      "end": 90503
-    },
-    "integer_values": "1 49",
-    "hex_values": "$1 $31"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXDEFEND0ITEMCODE",
-    "address_range": {
-      "begin": 90499,
-      "end": 90501
-    },
-    "integer_values": "1 51",
-    "hex_values": "$1 $33"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXSPECIAL0ITEMCODE",
-    "address_range": {
-      "begin": 90497,
-      "end": 90499
-    },
-    "integer_values": "1 53",
-    "hex_values": "$1 $35"
-  },
-  {
-    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXSPEED0ITEMCODE",
-    "address_range": {
-      "begin": 90495,
-      "end": 90497
-    },
-    "integer_values": "1 52",
-    "hex_values": "$1 $34"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FCALCIUM0ITEMCODE",
-    "address_range": {
-      "begin": 90971,
-      "end": 90973
-    },
-    "integer_values": "1 31",
-    "hex_values": "$1 $1f"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FCARBOS0ITEMCODE",
-    "address_range": {
-      "begin": 90969,
-      "end": 90971
-    },
-    "integer_values": "1 29",
-    "hex_values": "$1 $1d"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FFIRESTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90953,
-      "end": 90955
-    },
-    "integer_values": "1 22",
-    "hex_values": "$1 $16"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FHPUP0ITEMCODE",
-    "address_range": {
-      "begin": 90973,
-      "end": 90975
-    },
-    "integer_values": "1 26",
-    "hex_values": "$1 $1a"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FIRON0ITEMCODE",
-    "address_range": {
-      "begin": 90967,
-      "end": 90969
-    },
-    "integer_values": "1 28",
-    "hex_values": "$1 $1c"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FLEAFSTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90957,
-      "end": 90959
-    },
-    "integer_values": "1 34",
-    "hex_values": "$1 $22"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FMOONSTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90963,
-      "end": 90965
-    },
-    "integer_values": "1 8",
-    "hex_values": "$1 $8"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FPROTEIN0ITEMCODE",
-    "address_range": {
-      "begin": 90965,
-      "end": 90967
-    },
-    "integer_values": "1 27",
-    "hex_values": "$1 $1b"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FSUNSTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90961,
-      "end": 90963
-    },
-    "integer_values": "1 169",
-    "hex_values": "$1 $a9"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FTHUNDERSTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90959,
-      "end": 90961
-    },
-    "integer_values": "1 23",
-    "hex_values": "$1 $17"
-  },
-  {
-    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FWATERSTONE0ITEMCODE",
-    "address_range": {
-      "begin": 90955,
-      "end": 90957
-    },
-    "integer_values": "1 24",
-    "hex_values": "$1 $18"
-  },
-  {
-    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 90980,
-      "end": 90982
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 90982,
-      "end": 90984
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 90978,
-      "end": 90980
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 90989,
-      "end": 90991
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 90993,
-      "end": 90995
-    },
-    "integer_values": "1 192",
-    "hex_values": "$1 $c0"
-  },
-  {
-    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 90991,
-      "end": 90993
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 90987,
-      "end": 90989
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91011,
-      "end": 91013
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 91015,
-      "end": 91017
-    },
-    "integer_values": "1 192",
-    "hex_values": "$1 $c0"
-  },
-  {
-    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91013,
-      "end": 91015
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 91017,
-      "end": 91019
-    },
-    "integer_values": "1 199",
-    "hex_values": "$1 $c7"
-  },
-  {
-    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91009,
-      "end": 91011
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_7",
-    "address_range": {
-      "begin": 91061,
-      "end": 91063
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91065,
-      "end": 91067
-    },
-    "integer_values": "1 192",
-    "hex_values": "$1 $c0"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_7",
-    "address_range": {
-      "begin": 91063,
-      "end": 91065
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91067,
-      "end": 91069
-    },
-    "integer_values": "1 199",
-    "hex_values": "$1 $c7"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_3",
-    "address_range": {
-      "begin": 91069,
-      "end": 91071
-    },
-    "integer_values": "1 203",
-    "hex_values": "$1 $cb"
-  },
-  {
-    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_7",
-    "address_range": {
-      "begin": 91059,
-      "end": 91061
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_5",
-    "address_range": {
-      "begin": 91035,
-      "end": 91037
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 91039,
-      "end": 91041
-    },
-    "integer_values": "1 192",
-    "hex_values": "$1 $c0"
-  },
-  {
-    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_5",
-    "address_range": {
-      "begin": 91037,
-      "end": 91039
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_1",
-    "address_range": {
-      "begin": 91041,
-      "end": 91043
-    },
-    "integer_values": "1 203",
-    "hex_values": "$1 $cb"
-  },
-  {
-    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_5",
-    "address_range": {
-      "begin": 91033,
-      "end": 91035
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 91000,
-      "end": 91002
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 91002,
-      "end": 91004
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 91004,
-      "end": 91006
-    },
-    "integer_values": "1 199",
-    "hex_values": "$1 $c7"
-  },
-  {
-    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 90998,
-      "end": 91000
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_6",
-    "address_range": {
-      "begin": 91048,
-      "end": 91050
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_6",
-    "address_range": {
-      "begin": 91050,
-      "end": 91052
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 91052,
-      "end": 91054
-    },
-    "integer_values": "1 199",
-    "hex_values": "$1 $c7"
-  },
-  {
-    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_2",
-    "address_range": {
-      "begin": 91054,
-      "end": 91056
-    },
-    "integer_values": "1 203",
-    "hex_values": "$1 $cb"
-  },
-  {
-    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_6",
-    "address_range": {
-      "begin": 91046,
-      "end": 91048
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_4",
-    "address_range": {
-      "begin": 91024,
-      "end": 91026
-    },
-    "integer_values": "1 240",
-    "hex_values": "$1 $f0"
-  },
-  {
-    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_4",
-    "address_range": {
-      "begin": 91026,
-      "end": 91028
-    },
-    "integer_values": "1 225",
-    "hex_values": "$1 $e1"
-  },
-  {
-    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_0",
-    "address_range": {
-      "begin": 91028,
-      "end": 91030
-    },
-    "integer_values": "1 203",
-    "hex_values": "$1 $cb"
-  },
-  {
-    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_4",
-    "address_range": {
-      "begin": 91022,
-      "end": 91024
-    },
-    "integer_values": "1 233",
-    "hex_values": "$1 $e9"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPFULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90874,
-      "end": 90876
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPFULLRESTORE0ITEMCODE",
-    "address_range": {
-      "begin": 90870,
-      "end": 90872
-    },
-    "integer_values": "1 14",
-    "hex_values": "$1 $e"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPMAXPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90868,
-      "end": 90870
-    },
-    "integer_values": "1 15",
-    "hex_values": "$1 $f"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPMAXREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90864,
-      "end": 90866
-    },
-    "integer_values": "1 43",
-    "hex_values": "$1 $2b"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPREVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90872,
-      "end": 90874
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90862,
-      "end": 90864
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90689,
-      "end": 90691
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90693,
-      "end": 90695
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTBURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90695,
-      "end": 90697
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90681,
-      "end": 90683
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTMAXREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90687,
-      "end": 90689
-    },
-    "integer_values": "1 43",
-    "hex_values": "$1 $2b"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90691,
-      "end": 90693
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90683,
-      "end": 90685
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartLavender.ckir_BEFORELAVENDERMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90685,
-      "end": 90687
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETPOKEBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90573,
-      "end": 90575
-    },
-    "integer_values": "1 5",
-    "hex_values": "$1 $5"
-  },
-  {
-    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90575,
-      "end": 90577
-    },
-    "integer_values": "1 18",
-    "hex_values": "$1 $12"
-  },
-  {
-    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETSLOWPOKETAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90571,
-      "end": 90573
-    },
-    "integer_values": "1 103",
-    "hex_values": "$1 $67"
-  },
-  {
-    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETTINYMUSHROOM0ITEMCODE",
-    "address_range": {
-      "begin": 90569,
-      "end": 90571
-    },
-    "integer_values": "1 86",
-    "hex_values": "$1 $56"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90588,
-      "end": 90590
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTFLOWERMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90596,
-      "end": 90598
-    },
-    "integer_values": "1 158",
-    "hex_values": "$1 $9e"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90582,
-      "end": 90584
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90586,
-      "end": 90588
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90590,
-      "end": 90592
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTRAGECANDYBAR0ITEMCODE",
-    "address_range": {
-      "begin": 90580,
-      "end": 90582
-    },
-    "integer_values": "1 114",
-    "hex_values": "$1 $72"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTREVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90594,
-      "end": 90596
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90584,
-      "end": 90586
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTSUPERREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90592,
-      "end": 90594
-    },
-    "integer_values": "1 42",
-    "hex_values": "$1 $2a"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPFRESHWATER0ITEMCODE",
-    "address_range": {
-      "begin": 90849,
-      "end": 90851
-    },
-    "integer_values": "1 46",
-    "hex_values": "$1 $2e"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPLEMONADE0ITEMCODE",
-    "address_range": {
-      "begin": 90853,
-      "end": 90855
-    },
-    "integer_values": "1 48",
-    "hex_values": "$1 $30"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPPOKEDOLL0ITEMCODE",
-    "address_range": {
-      "begin": 90847,
-      "end": 90849
-    },
-    "integer_values": "1 37",
-    "hex_values": "$1 $25"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPPORTRAITMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90857,
-      "end": 90859
-    },
-    "integer_values": "1 183",
-    "hex_values": "$1 $b7"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90855,
-      "end": 90857
-    },
-    "integer_values": "1 20",
-    "hex_values": "$1 $14"
-  },
-  {
-    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPSODAPOP0ITEMCODE",
-    "address_range": {
-      "begin": 90851,
-      "end": 90853
-    },
-    "integer_values": "1 47",
-    "hex_values": "$1 $2f"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90531,
-      "end": 90533
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90535,
-      "end": 90537
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90525,
-      "end": 90527
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90529,
-      "end": 90531
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTICEHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90537,
-      "end": 90539
-    },
-    "integer_values": "1 11",
-    "hex_values": "$1 $b"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90533,
-      "end": 90535
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90527,
-      "end": 90529
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSUPERREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90539,
-      "end": 90541
-    },
-    "integer_values": "1 42",
-    "hex_values": "$1 $2a"
-  },
-  {
-    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSURFMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90541,
-      "end": 90543
-    },
-    "integer_values": "1 181",
-    "hex_values": "$1 $b5"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTANTIDOTE0ITEMCODE",
-    "address_range": {
-      "begin": 90649,
-      "end": 90651
-    },
-    "integer_values": "1 9",
-    "hex_values": "$1 $9"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90653,
-      "end": 90655
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTBURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90655,
-      "end": 90657
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90643,
-      "end": 90645
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90651,
-      "end": 90653
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90645,
-      "end": 90647
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartPewter.ckir_BEFOREPEWTERMARTSUPERREPEL0ITEMCODE",
-    "address_range": {
-      "begin": 90647,
-      "end": 90649
-    },
-    "integer_values": "1 42",
-    "hex_values": "$1 $2a"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTFLOWERMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90842,
-      "end": 90844
-    },
-    "integer_values": "1 158",
-    "hex_values": "$1 $9e"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTFULLHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90836,
-      "end": 90838
-    },
-    "integer_values": "1 38",
-    "hex_values": "$1 $26"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTGREATBALL0ITEMCODE",
-    "address_range": {
-      "begin": 90828,
-      "end": 90830
-    },
-    "integer_values": "1 4",
-    "hex_values": "$1 $4"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90832,
-      "end": 90834
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTMAXPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90834,
-      "end": 90836
-    },
-    "integer_values": "1 15",
-    "hex_values": "$1 $f"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTULTRABALL0ITEMCODE",
-    "address_range": {
-      "begin": 90830,
-      "end": 90832
-    },
-    "integer_values": "1 2",
-    "hex_values": "$1 $2"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTXATTACK0ITEMCODE",
-    "address_range": {
-      "begin": 90838,
-      "end": 90840
-    },
-    "integer_values": "1 49",
-    "hex_values": "$1 $31"
-  },
-  {
-    "label": "MartSaffron.ckir_BEFORESAFFRONMARTXDEFEND0ITEMCODE",
-    "address_range": {
-      "begin": 90840,
-      "end": 90842
-    },
-    "integer_values": "1 51",
-    "hex_values": "$1 $33"
-  },
-  {
-    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPENERGYPOWDER0ITEMCODE",
-    "address_range": {
-      "begin": 90879,
-      "end": 90881
-    },
-    "integer_values": "1 121",
-    "hex_values": "$1 $79"
-  },
-  {
-    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPENERGYROOT0ITEMCODE",
-    "address_range": {
-      "begin": 90881,
-      "end": 90883
-    },
-    "integer_values": "1 122",
-    "hex_values": "$1 $7a"
-  },
-  {
-    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPHEALPOWDER0ITEMCODE",
-    "address_range": {
-      "begin": 90883,
-      "end": 90885
-    },
-    "integer_values": "1 123",
-    "hex_values": "$1 $7b"
-  },
-  {
-    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPREVIVALHERB0ITEMCODE",
-    "address_range": {
-      "begin": 90885,
-      "end": 90887
-    },
-    "integer_values": "1 124",
-    "hex_values": "$1 $7c"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTAWAKENING0ITEMCODE",
-    "address_range": {
-      "begin": 90710,
-      "end": 90712
-    },
-    "integer_values": "1 12",
-    "hex_values": "$1 $c"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTBURNHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90712,
-      "end": 90714
-    },
-    "integer_values": "1 10",
-    "hex_values": "$1 $a"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTHYPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90704,
-      "end": 90706
-    },
-    "integer_values": "1 16",
-    "hex_values": "$1 $10"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTLITEBLUEMAIL0ITEMCODE",
-    "address_range": {
-      "begin": 90714,
-      "end": 90716
-    },
-    "integer_values": "1 182",
-    "hex_values": "$1 $b6"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTPARLYZHEAL0ITEMCODE",
-    "address_range": {
-      "begin": 90708,
-      "end": 90710
-    },
-    "integer_values": "1 13",
-    "hex_values": "$1 $d"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTREVIVE0ITEMCODE",
-    "address_range": {
-      "begin": 90706,
-      "end": 90708
-    },
-    "integer_values": "1 39",
-    "hex_values": "$1 $27"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTSUPERPOTION0ITEMCODE",
-    "address_range": {
-      "begin": 90702,
-      "end": 90704
-    },
-    "integer_values": "1 17",
-    "hex_values": "$1 $11"
-  },
-  {
-    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTULTRABALL0ITEMCODE",
     "address_range": {
       "begin": 90700,
       "end": 90702
@@ -9792,10 +7875,1945 @@
     "hex_values": "$1 $2"
   },
   {
+    "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTXATTACK0ITEMCODE",
+    "address_range": {
+      "begin": 90714,
+      "end": 90716
+    },
+    "integer_values": "1 49",
+    "hex_values": "$1 $31"
+  },
+  {
+    "label": "MartBlackthorn.ckir_BEFOREBLACKTHORNMARTXDEFEND0ITEMCODE",
+    "address_range": {
+      "begin": 90712,
+      "end": 90714
+    },
+    "integer_values": "1 51",
+    "hex_values": "$1 $33"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1HYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90820,
+      "end": 90822
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1MAXPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90822,
+      "end": 90824
+    },
+    "integer_values": "1 15",
+    "hex_values": "$1 $f"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1MAXREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90828,
+      "end": 90830
+    },
+    "integer_values": "1 43",
+    "hex_values": "$1 $2b"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1POTION0ITEMCODE",
+    "address_range": {
+      "begin": 90816,
+      "end": 90818
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1REVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90824,
+      "end": 90826
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1SUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90818,
+      "end": 90820
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartCeladon2F1.ckir_BEFORECELADONDEPTSTORE2F1SUPERREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90826,
+      "end": 90828
+    },
+    "integer_values": "1 42",
+    "hex_values": "$1 $2a"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90843,
+      "end": 90845
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2AWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90849,
+      "end": 90851
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2BURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90845,
+      "end": 90847
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ESCAPEROPE0ITEMCODE",
+    "address_range": {
+      "begin": 90839,
+      "end": 90841
+    },
+    "integer_values": "1 19",
+    "hex_values": "$1 $13"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2FULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90841,
+      "end": 90843
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2GREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90835,
+      "end": 90837
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ICEHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90847,
+      "end": 90849
+    },
+    "integer_values": "1 11",
+    "hex_values": "$1 $b"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2PARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90851,
+      "end": 90853
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2POKEBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90833,
+      "end": 90835
+    },
+    "integer_values": "1 5",
+    "hex_values": "$1 $5"
+  },
+  {
+    "label": "MartCeladon2F2.ckir_BEFORECELADONDEPTSTORE2F2ULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90837,
+      "end": 90839
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
+    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FHIDDENPOWERTM0ITEMCODE",
+    "address_range": {
+      "begin": 90856,
+      "end": 90858
+    },
+    "integer_values": "1 201",
+    "hex_values": "$1 $c9"
+  },
+  {
+    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FPROTECTTM0ITEMCODE",
+    "address_range": {
+      "begin": 90860,
+      "end": 90862
+    },
+    "integer_values": "1 208",
+    "hex_values": "$1 $d0"
+  },
+  {
+    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FRAINDANCETM0ITEMCODE",
+    "address_range": {
+      "begin": 90862,
+      "end": 90864
+    },
+    "integer_values": "1 209",
+    "hex_values": "$1 $d1"
+  },
+  {
+    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FSANDSTORMTM0ITEMCODE",
+    "address_range": {
+      "begin": 90864,
+      "end": 90866
+    },
+    "integer_values": "1 229",
+    "hex_values": "$1 $e5"
+  },
+  {
+    "label": "MartCeladon3F.ckir_BEFORECELADONDEPTSTORE3FSUNNYDAYTM0ITEMCODE",
+    "address_range": {
+      "begin": 90858,
+      "end": 90860
+    },
+    "integer_values": "1 202",
+    "hex_values": "$1 $ca"
+  },
+  {
+    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FLOVELYMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90871,
+      "end": 90873
+    },
+    "integer_values": "1 184",
+    "hex_values": "$1 $b8"
+  },
+  {
+    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FPOKEDOLL0ITEMCODE",
+    "address_range": {
+      "begin": 90869,
+      "end": 90871
+    },
+    "integer_values": "1 37",
+    "hex_values": "$1 $25"
+  },
+  {
+    "label": "MartCeladon4F.ckir_BEFORECELADONDEPTSTORE4FSURFMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90873,
+      "end": 90875
+    },
+    "integer_values": "1 181",
+    "hex_values": "$1 $b5"
+  },
+  {
+    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1CALCIUM0ITEMCODE",
+    "address_range": {
+      "begin": 90886,
+      "end": 90888
+    },
+    "integer_values": "1 31",
+    "hex_values": "$1 $1f"
+  },
+  {
+    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1CARBOS0ITEMCODE",
+    "address_range": {
+      "begin": 90884,
+      "end": 90886
+    },
+    "integer_values": "1 29",
+    "hex_values": "$1 $1d"
+  },
+  {
+    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1HPUP0ITEMCODE",
+    "address_range": {
+      "begin": 90878,
+      "end": 90880
+    },
+    "integer_values": "1 26",
+    "hex_values": "$1 $1a"
+  },
+  {
+    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1IRON0ITEMCODE",
+    "address_range": {
+      "begin": 90882,
+      "end": 90884
+    },
+    "integer_values": "1 28",
+    "hex_values": "$1 $1c"
+  },
+  {
+    "label": "MartCeladon5F1.ckir_BEFORECELADONDEPTSTORE5F1PROTEIN0ITEMCODE",
+    "address_range": {
+      "begin": 90880,
+      "end": 90882
+    },
+    "integer_values": "1 27",
+    "hex_values": "$1 $1b"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2GUARDSPEC0ITEMCODE",
+    "address_range": {
+      "begin": 90893,
+      "end": 90895
+    },
+    "integer_values": "1 41",
+    "hex_values": "$1 $29"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XACCURACY0ITEMCODE",
+    "address_range": {
+      "begin": 90891,
+      "end": 90893
+    },
+    "integer_values": "1 33",
+    "hex_values": "$1 $21"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XATTACK0ITEMCODE",
+    "address_range": {
+      "begin": 90897,
+      "end": 90899
+    },
+    "integer_values": "1 49",
+    "hex_values": "$1 $31"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XDEFEND0ITEMCODE",
+    "address_range": {
+      "begin": 90899,
+      "end": 90901
+    },
+    "integer_values": "1 51",
+    "hex_values": "$1 $33"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XDIREHIT0ITEMCODE",
+    "address_range": {
+      "begin": 90895,
+      "end": 90897
+    },
+    "integer_values": "1 44",
+    "hex_values": "$1 $2c"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XSPECIAL0ITEMCODE",
+    "address_range": {
+      "begin": 90903,
+      "end": 90905
+    },
+    "integer_values": "1 53",
+    "hex_values": "$1 $35"
+  },
+  {
+    "label": "MartCeladon5F2.ckir_BEFORECELADONDEPTSTORE5F2XSPEED0ITEMCODE",
+    "address_range": {
+      "begin": 90901,
+      "end": 90903
+    },
+    "integer_values": "1 52",
+    "hex_values": "$1 $34"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTDIREHIT0ITEMCODE",
+    "address_range": {
+      "begin": 90771,
+      "end": 90773
+    },
+    "integer_values": "1 44",
+    "hex_values": "$1 $2c"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTFULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90765,
+      "end": 90767
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90757,
+      "end": 90759
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90761,
+      "end": 90763
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTSUPERREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90763,
+      "end": 90765
+    },
+    "integer_values": "1 42",
+    "hex_values": "$1 $2a"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTSURFMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90773,
+      "end": 90775
+    },
+    "integer_values": "1 181",
+    "hex_values": "$1 $b5"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90759,
+      "end": 90761
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTXATTACK0ITEMCODE",
+    "address_range": {
+      "begin": 90769,
+      "end": 90771
+    },
+    "integer_values": "1 49",
+    "hex_values": "$1 $31"
+  },
+  {
+    "label": "MartCerulean.ckir_BEFORECERULEANMARTXDEFEND0ITEMCODE",
+    "address_range": {
+      "begin": 90767,
+      "end": 90769
+    },
+    "integer_values": "1 51",
+    "hex_values": "$1 $33"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90993,
+      "end": 90995
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90997,
+      "end": 90999
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTICEHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90999,
+      "end": 91001
+    },
+    "integer_values": "1 11",
+    "hex_values": "$1 $b"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90995,
+      "end": 90997
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPOKEBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90987,
+      "end": 90989
+    },
+    "integer_values": "1 5",
+    "hex_values": "$1 $5"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90989,
+      "end": 90991
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartCherrygroveBetter.ckir_BEFORECHERRYGROVEMARTREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90991,
+      "end": 90993
+    },
+    "integer_values": "1 20",
+    "hex_values": "$1 $14"
+  },
+  {
+    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYFULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90549,
+      "end": 90551
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90547,
+      "end": 90549
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90543,
+      "end": 90545
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYREVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90551,
+      "end": 90553
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartCianwood.ckir_BEFORECIANWOODPHARMACYSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90545,
+      "end": 90547
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90651,
+      "end": 90653
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90655,
+      "end": 90657
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTBURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90657,
+      "end": 90659
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90645,
+      "end": 90647
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTICEHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90659,
+      "end": 90661
+    },
+    "integer_values": "1 11",
+    "hex_values": "$1 $b"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90653,
+      "end": 90655
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPOKEBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90643,
+      "end": 90645
+    },
+    "integer_values": "1 5",
+    "hex_values": "$1 $5"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90647,
+      "end": 90649
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTREVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90661,
+      "end": 90663
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartEcruteak.ckir_BEFOREECRUTEAKMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90649,
+      "end": 90651
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTFLOWERMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90920,
+      "end": 90922
+    },
+    "integer_values": "1 158",
+    "hex_values": "$1 $9e"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTFULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90916,
+      "end": 90918
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90908,
+      "end": 90910
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90914,
+      "end": 90916
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTMAXREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90918,
+      "end": 90920
+    },
+    "integer_values": "1 43",
+    "hex_values": "$1 $2b"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90912,
+      "end": 90914
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartFuchsia.ckir_BEFOREFUCHSIAMARTULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90910,
+      "end": 90912
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1ANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90560,
+      "end": 90562
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1AWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90564,
+      "end": 90566
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1BURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90566,
+      "end": 90568
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1ICEHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90568,
+      "end": 90570
+    },
+    "integer_values": "1 11",
+    "hex_values": "$1 $b"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1PARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90562,
+      "end": 90564
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1POTION0ITEMCODE",
+    "address_range": {
+      "begin": 90556,
+      "end": 90558
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartGoldenrod2F1.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F1SUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90558,
+      "end": 90560
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2ESCAPEROPE0ITEMCODE",
+    "address_range": {
+      "begin": 90577,
+      "end": 90579
+    },
+    "integer_values": "1 19",
+    "hex_values": "$1 $13"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2FLOWERMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90587,
+      "end": 90589
+    },
+    "integer_values": "1 158",
+    "hex_values": "$1 $9e"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2FULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90583,
+      "end": 90585
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2GREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90575,
+      "end": 90577
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2POKEBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90573,
+      "end": 90575
+    },
+    "integer_values": "1 5",
+    "hex_values": "$1 $5"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2POKEDOLL0ITEMCODE",
+    "address_range": {
+      "begin": 90585,
+      "end": 90587
+    },
+    "integer_values": "1 37",
+    "hex_values": "$1 $25"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2REPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90579,
+      "end": 90581
+    },
+    "integer_values": "1 20",
+    "hex_values": "$1 $14"
+  },
+  {
+    "label": "MartGoldenrod2F2.ckir_BEFOREGOLDENRODDEPARTMENTSTORE2F2REVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90581,
+      "end": 90583
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FDIREHIT0ITEMCODE",
+    "address_range": {
+      "begin": 90600,
+      "end": 90602
+    },
+    "integer_values": "1 44",
+    "hex_values": "$1 $2c"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FGUARDSPEC0ITEMCODE",
+    "address_range": {
+      "begin": 90602,
+      "end": 90604
+    },
+    "integer_values": "1 41",
+    "hex_values": "$1 $29"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXACCURACY0ITEMCODE",
+    "address_range": {
+      "begin": 90604,
+      "end": 90606
+    },
+    "integer_values": "1 33",
+    "hex_values": "$1 $21"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXATTACK0ITEMCODE",
+    "address_range": {
+      "begin": 90598,
+      "end": 90600
+    },
+    "integer_values": "1 49",
+    "hex_values": "$1 $31"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXDEFEND0ITEMCODE",
+    "address_range": {
+      "begin": 90596,
+      "end": 90598
+    },
+    "integer_values": "1 51",
+    "hex_values": "$1 $33"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXSPECIAL0ITEMCODE",
+    "address_range": {
+      "begin": 90594,
+      "end": 90596
+    },
+    "integer_values": "1 53",
+    "hex_values": "$1 $35"
+  },
+  {
+    "label": "MartGoldenrod3F.ckir_BEFOREGOLDENRODDEPARTMENTSTORE3FXSPEED0ITEMCODE",
+    "address_range": {
+      "begin": 90592,
+      "end": 90594
+    },
+    "integer_values": "1 52",
+    "hex_values": "$1 $34"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FCALCIUM0ITEMCODE",
+    "address_range": {
+      "begin": 91068,
+      "end": 91070
+    },
+    "integer_values": "1 31",
+    "hex_values": "$1 $1f"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FCARBOS0ITEMCODE",
+    "address_range": {
+      "begin": 91066,
+      "end": 91068
+    },
+    "integer_values": "1 29",
+    "hex_values": "$1 $1d"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FFIRESTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91050,
+      "end": 91052
+    },
+    "integer_values": "1 22",
+    "hex_values": "$1 $16"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FHPUP0ITEMCODE",
+    "address_range": {
+      "begin": 91070,
+      "end": 91072
+    },
+    "integer_values": "1 26",
+    "hex_values": "$1 $1a"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FIRON0ITEMCODE",
+    "address_range": {
+      "begin": 91064,
+      "end": 91066
+    },
+    "integer_values": "1 28",
+    "hex_values": "$1 $1c"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FLEAFSTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91054,
+      "end": 91056
+    },
+    "integer_values": "1 34",
+    "hex_values": "$1 $22"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FMOONSTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91060,
+      "end": 91062
+    },
+    "integer_values": "1 8",
+    "hex_values": "$1 $8"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FPROTEIN0ITEMCODE",
+    "address_range": {
+      "begin": 91062,
+      "end": 91064
+    },
+    "integer_values": "1 27",
+    "hex_values": "$1 $1b"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FSUNSTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91058,
+      "end": 91060
+    },
+    "integer_values": "1 169",
+    "hex_values": "$1 $a9"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FTHUNDERSTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91056,
+      "end": 91058
+    },
+    "integer_values": "1 23",
+    "hex_values": "$1 $17"
+  },
+  {
+    "label": "MartGoldenrod4FBetter.ckir_BEFOREGOLDENRODDEPARTMENTSTORE4FWATERSTONE0ITEMCODE",
+    "address_range": {
+      "begin": 91052,
+      "end": 91054
+    },
+    "integer_values": "1 24",
+    "hex_values": "$1 $18"
+  },
+  {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91077,
+      "end": 91079
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91079,
+      "end": 91081
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FNoTMs.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91075,
+      "end": 91077
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91086,
+      "end": 91088
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91090,
+      "end": 91092
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91088,
+      "end": 91090
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM02.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91084,
+      "end": 91086
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91108,
+      "end": 91110
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91112,
+      "end": 91114
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91110,
+      "end": 91112
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91114,
+      "end": 91116
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM0208.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91106,
+      "end": 91108
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91158,
+      "end": 91160
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91162,
+      "end": 91164
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91160,
+      "end": 91162
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91164,
+      "end": 91166
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_3",
+    "address_range": {
+      "begin": 91166,
+      "end": 91168
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM020812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_7",
+    "address_range": {
+      "begin": 91156,
+      "end": 91158
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91132,
+      "end": 91134
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FHEADBUTTTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91136,
+      "end": 91138
+    },
+    "integer_values": "1 192",
+    "hex_values": "$1 $c0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91134,
+      "end": 91136
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_1",
+    "address_range": {
+      "begin": 91138,
+      "end": 91140
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM0212.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_5",
+    "address_range": {
+      "begin": 91130,
+      "end": 91132
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91097,
+      "end": 91099
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91099,
+      "end": 91101
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91101,
+      "end": 91103
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM08.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91095,
+      "end": 91097
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91145,
+      "end": 91147
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91147,
+      "end": 91149
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FROCKSMASHTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91149,
+      "end": 91151
+    },
+    "integer_values": "1 199",
+    "hex_values": "$1 $c7"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_2",
+    "address_range": {
+      "begin": 91151,
+      "end": 91153
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM0812.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_6",
+    "address_range": {
+      "begin": 91143,
+      "end": 91145
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FFIREPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91121,
+      "end": 91123
+    },
+    "integer_values": "1 240",
+    "hex_values": "$1 $f0"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FICEPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91123,
+      "end": 91125
+    },
+    "integer_values": "1 225",
+    "hex_values": "$1 $e1"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FSWEETSCENTTM0ITEMCODE_0",
+    "address_range": {
+      "begin": 91125,
+      "end": 91127
+    },
+    "integer_values": "1 203",
+    "hex_values": "$1 $cb"
+  },
+  {
+    "label": "MartGoldenrod5FTM12.ckir_BEFOREGOLDENRODDEPARTMENTSTORE5FTHUNDERPUNCHTM0ITEMCODE_4",
+    "address_range": {
+      "begin": 91119,
+      "end": 91121
+    },
+    "integer_values": "1 233",
+    "hex_values": "$1 $e9"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPFULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90971,
+      "end": 90973
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPFULLRESTORE0ITEMCODE",
+    "address_range": {
+      "begin": 90967,
+      "end": 90969
+    },
+    "integer_values": "1 14",
+    "hex_values": "$1 $e"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPMAXPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90965,
+      "end": 90967
+    },
+    "integer_values": "1 15",
+    "hex_values": "$1 $f"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPMAXREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90961,
+      "end": 90963
+    },
+    "integer_values": "1 43",
+    "hex_values": "$1 $2b"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPREVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90969,
+      "end": 90971
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartIndigoPlateau.ckir_BEFOREINDIGOPLATEAUSHOPULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90959,
+      "end": 90961
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90786,
+      "end": 90788
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90790,
+      "end": 90792
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTBURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90792,
+      "end": 90794
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90778,
+      "end": 90780
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTMAXREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90784,
+      "end": 90786
+    },
+    "integer_values": "1 43",
+    "hex_values": "$1 $2b"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90788,
+      "end": 90790
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90780,
+      "end": 90782
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartLavender.ckir_BEFORELAVENDERMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90782,
+      "end": 90784
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETPOKEBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90670,
+      "end": 90672
+    },
+    "integer_values": "1 5",
+    "hex_values": "$1 $5"
+  },
+  {
+    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90672,
+      "end": 90674
+    },
+    "integer_values": "1 18",
+    "hex_values": "$1 $12"
+  },
+  {
+    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETSLOWPOKETAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90668,
+      "end": 90670
+    },
+    "integer_values": "1 103",
+    "hex_values": "$1 $67"
+  },
+  {
+    "label": "MartMahogany1.ckir_BEFOREMAHOGANYMARTROCKETTINYMUSHROOM0ITEMCODE",
+    "address_range": {
+      "begin": 90666,
+      "end": 90668
+    },
+    "integer_values": "1 86",
+    "hex_values": "$1 $56"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90685,
+      "end": 90687
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTFLOWERMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90693,
+      "end": 90695
+    },
+    "integer_values": "1 158",
+    "hex_values": "$1 $9e"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90679,
+      "end": 90681
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90683,
+      "end": 90685
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90687,
+      "end": 90689
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTRAGECANDYBAR0ITEMCODE",
+    "address_range": {
+      "begin": 90677,
+      "end": 90679
+    },
+    "integer_values": "1 114",
+    "hex_values": "$1 $72"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTREVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90691,
+      "end": 90693
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90681,
+      "end": 90683
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartMahogany2.ckir_BEFOREMAHOGANYMARTSUPERREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90689,
+      "end": 90691
+    },
+    "integer_values": "1 42",
+    "hex_values": "$1 $2a"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPFRESHWATER0ITEMCODE",
+    "address_range": {
+      "begin": 90946,
+      "end": 90948
+    },
+    "integer_values": "1 46",
+    "hex_values": "$1 $2e"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPLEMONADE0ITEMCODE",
+    "address_range": {
+      "begin": 90950,
+      "end": 90952
+    },
+    "integer_values": "1 48",
+    "hex_values": "$1 $30"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPPOKEDOLL0ITEMCODE",
+    "address_range": {
+      "begin": 90944,
+      "end": 90946
+    },
+    "integer_values": "1 37",
+    "hex_values": "$1 $25"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPPORTRAITMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90954,
+      "end": 90956
+    },
+    "integer_values": "1 183",
+    "hex_values": "$1 $b7"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90952,
+      "end": 90954
+    },
+    "integer_values": "1 20",
+    "hex_values": "$1 $14"
+  },
+  {
+    "label": "MartMtMoon.ckir_BEFOREMTMOONGIFTSHOPSODAPOP0ITEMCODE",
+    "address_range": {
+      "begin": 90948,
+      "end": 90950
+    },
+    "integer_values": "1 47",
+    "hex_values": "$1 $2f"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90628,
+      "end": 90630
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90632,
+      "end": 90634
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90622,
+      "end": 90624
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90626,
+      "end": 90628
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTICEHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90634,
+      "end": 90636
+    },
+    "integer_values": "1 11",
+    "hex_values": "$1 $b"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90630,
+      "end": 90632
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90624,
+      "end": 90626
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSUPERREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90636,
+      "end": 90638
+    },
+    "integer_values": "1 42",
+    "hex_values": "$1 $2a"
+  },
+  {
+    "label": "MartOlivine.ckir_BEFOREOLIVINEMARTSURFMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90638,
+      "end": 90640
+    },
+    "integer_values": "1 181",
+    "hex_values": "$1 $b5"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTANTIDOTE0ITEMCODE",
+    "address_range": {
+      "begin": 90746,
+      "end": 90748
+    },
+    "integer_values": "1 9",
+    "hex_values": "$1 $9"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90750,
+      "end": 90752
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTBURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90752,
+      "end": 90754
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90740,
+      "end": 90742
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90748,
+      "end": 90750
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90742,
+      "end": 90744
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartPewter.ckir_BEFOREPEWTERMARTSUPERREPEL0ITEMCODE",
+    "address_range": {
+      "begin": 90744,
+      "end": 90746
+    },
+    "integer_values": "1 42",
+    "hex_values": "$1 $2a"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTFLOWERMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90939,
+      "end": 90941
+    },
+    "integer_values": "1 158",
+    "hex_values": "$1 $9e"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTFULLHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90933,
+      "end": 90935
+    },
+    "integer_values": "1 38",
+    "hex_values": "$1 $26"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTGREATBALL0ITEMCODE",
+    "address_range": {
+      "begin": 90925,
+      "end": 90927
+    },
+    "integer_values": "1 4",
+    "hex_values": "$1 $4"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90929,
+      "end": 90931
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTMAXPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90931,
+      "end": 90933
+    },
+    "integer_values": "1 15",
+    "hex_values": "$1 $f"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90927,
+      "end": 90929
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTXATTACK0ITEMCODE",
+    "address_range": {
+      "begin": 90935,
+      "end": 90937
+    },
+    "integer_values": "1 49",
+    "hex_values": "$1 $31"
+  },
+  {
+    "label": "MartSaffron.ckir_BEFORESAFFRONMARTXDEFEND0ITEMCODE",
+    "address_range": {
+      "begin": 90937,
+      "end": 90939
+    },
+    "integer_values": "1 51",
+    "hex_values": "$1 $33"
+  },
+  {
+    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPENERGYPOWDER0ITEMCODE",
+    "address_range": {
+      "begin": 90976,
+      "end": 90978
+    },
+    "integer_values": "1 121",
+    "hex_values": "$1 $79"
+  },
+  {
+    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPENERGYROOT0ITEMCODE",
+    "address_range": {
+      "begin": 90978,
+      "end": 90980
+    },
+    "integer_values": "1 122",
+    "hex_values": "$1 $7a"
+  },
+  {
+    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPHEALPOWDER0ITEMCODE",
+    "address_range": {
+      "begin": 90980,
+      "end": 90982
+    },
+    "integer_values": "1 123",
+    "hex_values": "$1 $7b"
+  },
+  {
+    "label": "MartUnderground.ckir_BEFOREUNDERGROUNDHERBSHOPREVIVALHERB0ITEMCODE",
+    "address_range": {
+      "begin": 90982,
+      "end": 90984
+    },
+    "integer_values": "1 124",
+    "hex_values": "$1 $7c"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTAWAKENING0ITEMCODE",
+    "address_range": {
+      "begin": 90807,
+      "end": 90809
+    },
+    "integer_values": "1 12",
+    "hex_values": "$1 $c"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTBURNHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90809,
+      "end": 90811
+    },
+    "integer_values": "1 10",
+    "hex_values": "$1 $a"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTHYPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90801,
+      "end": 90803
+    },
+    "integer_values": "1 16",
+    "hex_values": "$1 $10"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTLITEBLUEMAIL0ITEMCODE",
+    "address_range": {
+      "begin": 90811,
+      "end": 90813
+    },
+    "integer_values": "1 182",
+    "hex_values": "$1 $b6"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTPARLYZHEAL0ITEMCODE",
+    "address_range": {
+      "begin": 90805,
+      "end": 90807
+    },
+    "integer_values": "1 13",
+    "hex_values": "$1 $d"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTREVIVE0ITEMCODE",
+    "address_range": {
+      "begin": 90803,
+      "end": 90805
+    },
+    "integer_values": "1 39",
+    "hex_values": "$1 $27"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTSUPERPOTION0ITEMCODE",
+    "address_range": {
+      "begin": 90799,
+      "end": 90801
+    },
+    "integer_values": "1 17",
+    "hex_values": "$1 $11"
+  },
+  {
+    "label": "MartVermilion.ckir_BEFOREVERMILIONMARTULTRABALL0ITEMCODE",
+    "address_range": {
+      "begin": 90797,
+      "end": 90799
+    },
+    "integer_values": "1 2",
+    "hex_values": "$1 $2"
+  },
+  {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTANTIDOTE0ITEMCODE",
     "address_range": {
-      "begin": 90915,
-      "end": 90917
+      "begin": 91012,
+      "end": 91014
     },
     "integer_values": "1 9",
     "hex_values": "$1 $9"
@@ -9803,8 +9821,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTAWAKENING0ITEMCODE",
     "address_range": {
-      "begin": 90919,
-      "end": 90921
+      "begin": 91016,
+      "end": 91018
     },
     "integer_values": "1 12",
     "hex_values": "$1 $c"
@@ -9812,8 +9830,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTESCAPEROPE0ITEMCODE",
     "address_range": {
-      "begin": 90911,
-      "end": 90913
+      "begin": 91008,
+      "end": 91010
     },
     "integer_values": "1 19",
     "hex_values": "$1 $13"
@@ -9821,8 +9839,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTICEHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90921,
-      "end": 90923
+      "begin": 91018,
+      "end": 91020
     },
     "integer_values": "1 11",
     "hex_values": "$1 $b"
@@ -9830,8 +9848,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTPARLYZHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90917,
-      "end": 90919
+      "begin": 91014,
+      "end": 91016
     },
     "integer_values": "1 13",
     "hex_values": "$1 $d"
@@ -9839,8 +9857,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTPOKEBALL0ITEMCODE",
     "address_range": {
-      "begin": 90907,
-      "end": 90909
+      "begin": 91004,
+      "end": 91006
     },
     "integer_values": "1 5",
     "hex_values": "$1 $5"
@@ -9848,8 +9866,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTREPEL0ITEMCODE",
     "address_range": {
-      "begin": 90913,
-      "end": 90915
+      "begin": 91010,
+      "end": 91012
     },
     "integer_values": "1 20",
     "hex_values": "$1 $14"
@@ -9857,8 +9875,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTXATTACK0ITEMCODE",
     "address_range": {
-      "begin": 90925,
-      "end": 90927
+      "begin": 91022,
+      "end": 91024
     },
     "integer_values": "1 49",
     "hex_values": "$1 $31"
@@ -9866,8 +9884,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTXDEFEND0ITEMCODE",
     "address_range": {
-      "begin": 90923,
-      "end": 90925
+      "begin": 91020,
+      "end": 91022
     },
     "integer_values": "1 51",
     "hex_values": "$1 $33"
@@ -9875,8 +9893,8 @@
   {
     "label": "MartVioletBetter.ckir_BEFOREVIOLETMARTXSPEED0ITEMCODE",
     "address_range": {
-      "begin": 90927,
-      "end": 90929
+      "begin": 91024,
+      "end": 91026
     },
     "integer_values": "1 52",
     "hex_values": "$1 $34"
@@ -9884,8 +9902,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTANTIDOTE0ITEMCODE",
     "address_range": {
-      "begin": 90630,
-      "end": 90632
+      "begin": 90727,
+      "end": 90729
     },
     "integer_values": "1 9",
     "hex_values": "$1 $9"
@@ -9893,8 +9911,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTAWAKENING0ITEMCODE",
     "address_range": {
-      "begin": 90634,
-      "end": 90636
+      "begin": 90731,
+      "end": 90733
     },
     "integer_values": "1 12",
     "hex_values": "$1 $c"
@@ -9902,8 +9920,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTBURNHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90636,
-      "end": 90638
+      "begin": 90733,
+      "end": 90735
     },
     "integer_values": "1 10",
     "hex_values": "$1 $a"
@@ -9911,8 +9929,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTFLOWERMAIL0ITEMCODE",
     "address_range": {
-      "begin": 90638,
-      "end": 90640
+      "begin": 90735,
+      "end": 90737
     },
     "integer_values": "1 158",
     "hex_values": "$1 $9e"
@@ -9920,8 +9938,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90626,
-      "end": 90628
+      "begin": 90723,
+      "end": 90725
     },
     "integer_values": "1 38",
     "hex_values": "$1 $26"
@@ -9929,8 +9947,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 90624,
-      "end": 90626
+      "begin": 90721,
+      "end": 90723
     },
     "integer_values": "1 16",
     "hex_values": "$1 $10"
@@ -9938,8 +9956,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTPARLYZHEAL0ITEMCODE",
     "address_range": {
-      "begin": 90632,
-      "end": 90634
+      "begin": 90729,
+      "end": 90731
     },
     "integer_values": "1 13",
     "hex_values": "$1 $d"
@@ -9947,8 +9965,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 90628,
-      "end": 90630
+      "begin": 90725,
+      "end": 90727
     },
     "integer_values": "1 39",
     "hex_values": "$1 $27"
@@ -9956,8 +9974,8 @@
   {
     "label": "MartViridian.ckir_BEFOREVIRIDIANMARTULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 90622,
-      "end": 90624
+      "begin": 90719,
+      "end": 90721
     },
     "integer_values": "1 2",
     "hex_values": "$1 $2"
@@ -10856,17 +10874,17 @@
   {
     "label": "Oak.ckir_BEFORE_OAK_BADGES_CHECK",
     "address_range": {
-      "begin": 1684729,
-      "end": 1684733
+      "begin": 1684679,
+      "end": 1684683
     },
-    "integer_values": "10 15 17 117",
-    "hex_values": "$a $f $11 $75"
+    "integer_values": "10 15 223 116",
+    "hex_values": "$a $f $df $74"
   },
   {
     "label": "Oak.ckir_BEFORE_setevent_EVENT_OPENED_MT_SILVER",
     "address_range": {
-      "begin": 1684757,
-      "end": 1684760
+      "begin": 1684707,
+      "end": 1684710
     },
     "integer_values": "51 79 7",
     "hex_values": "$33 $4f $7"
@@ -10883,8 +10901,8 @@
   {
     "label": "OfficerScript_GuardWithSludgeBomb.ckir_BEFOREROUTE43SLUDGEBOMBTM0ITEMCODE",
     "address_range": {
-      "begin": 1682854,
-      "end": 1682857
+      "begin": 1682804,
+      "end": 1682807
     },
     "integer_values": "158 228 1",
     "hex_values": "$9e $e4 $1"
@@ -11441,8 +11459,8 @@
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_0",
     "address_range": {
-      "begin": 386292,
-      "end": 386305
+      "begin": 386293,
+      "end": 386306
     },
     "integer_values": "53 8 5 7 0 255 255 2 3 61 87 206 6",
     "hex_values": "$35 $8 $5 $7 $0 $ff $ff $2 $3 $3d $57 $ce $6"
@@ -11450,8 +11468,8 @@
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_1",
     "address_range": {
-      "begin": 386305,
-      "end": 386318
+      "begin": 386306,
+      "end": 386319
     },
     "integer_values": "53 8 12 6 0 255 255 2 3 81 87 206 6",
     "hex_values": "$35 $8 $c $6 $0 $ff $ff $2 $3 $51 $57 $ce $6"
@@ -11459,8 +11477,8 @@
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_2",
     "address_range": {
-      "begin": 386318,
-      "end": 386331
+      "begin": 386319,
+      "end": 386332
     },
     "integer_values": "53 5 8 6 0 255 255 2 2 101 87 206 6",
     "hex_values": "$35 $5 $8 $6 $0 $ff $ff $2 $2 $65 $57 $ce $6"
@@ -11468,8 +11486,8 @@
   {
     "label": "RadioTower2F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower2F_3",
     "address_range": {
-      "begin": 386331,
-      "end": 386344
+      "begin": 386332,
+      "end": 386345
     },
     "integer_values": "54 9 14 7 0 255 255 130 3 121 87 206 6",
     "hex_values": "$36 $9 $e $7 $0 $ff $ff $82 $3 $79 $57 $ce $6"
@@ -11477,8 +11495,8 @@
   {
     "label": "RadioTower3FCooltrainerFScript.ckir_BEFORERADIOTOWERSUNNYDAYTM0ITEMCODE",
     "address_range": {
-      "begin": 386489,
-      "end": 386492
+      "begin": 386490,
+      "end": 386493
     },
     "integer_values": "158 202 1",
     "hex_values": "$9e $ca $1"
@@ -11495,44 +11513,44 @@
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_0",
     "address_range": {
-      "begin": 387959,
-      "end": 387972
+      "begin": 387960,
+      "end": 387973
     },
-    "integer_values": "53 5 9 9 0 255 255 2 2 206 101 206 6",
-    "hex_values": "$35 $5 $9 $9 $0 $ff $ff $2 $2 $ce $65 $ce $6"
+    "integer_values": "53 5 9 9 0 255 255 2 2 207 101 206 6",
+    "hex_values": "$35 $5 $9 $9 $0 $ff $ff $2 $2 $cf $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_1",
     "address_range": {
-      "begin": 387972,
-      "end": 387985
+      "begin": 387973,
+      "end": 387986
     },
-    "integer_values": "53 6 10 6 0 255 255 2 3 226 101 206 6",
-    "hex_values": "$35 $6 $a $6 $0 $ff $ff $2 $3 $e2 $65 $ce $6"
+    "integer_values": "53 6 10 6 0 255 255 2 3 227 101 206 6",
+    "hex_values": "$35 $6 $a $6 $0 $ff $ff $2 $3 $e3 $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_2",
     "address_range": {
-      "begin": 387985,
-      "end": 387998
+      "begin": 387986,
+      "end": 387999
     },
-    "integer_values": "53 10 20 7 0 255 255 2 3 246 101 206 6",
-    "hex_values": "$35 $a $14 $7 $0 $ff $ff $2 $3 $f6 $65 $ce $6"
+    "integer_values": "53 10 20 7 0 255 255 2 3 247 101 206 6",
+    "hex_values": "$35 $a $14 $7 $0 $ff $ff $2 $3 $f7 $65 $ce $6"
   },
   {
     "label": "RadioTower3F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower3F_3",
     "address_range": {
-      "begin": 387998,
-      "end": 388011
+      "begin": 387999,
+      "end": 388012
     },
-    "integer_values": "60 10 13 7 0 255 255 146 5 10 102 206 6",
-    "hex_values": "$3c $a $d $7 $0 $ff $ff $92 $5 $a $66 $ce $6"
+    "integer_values": "60 10 13 7 0 255 255 146 5 11 102 206 6",
+    "hex_values": "$3c $a $d $7 $0 $ff $ff $92 $5 $b $66 $ce $6"
   },
   {
     "label": "RadioTower4FDJMaryScript.ckir_BEFORERADIOTOWERPINKBOW0ITEMCODE",
     "address_range": {
-      "begin": 388040,
-      "end": 388043
+      "begin": 388041,
+      "end": 388044
     },
     "integer_values": "158 104 1",
     "hex_values": "$9e $68 $1"
@@ -11549,38 +11567,38 @@
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_0",
     "address_range": {
-      "begin": 389264,
-      "end": 389277
+      "begin": 389265,
+      "end": 389278
     },
-    "integer_values": "53 10 9 31 0 255 255 2 3 231 107 206 6",
-    "hex_values": "$35 $a $9 $1f $0 $ff $ff $2 $3 $e7 $6b $ce $6"
+    "integer_values": "53 10 9 31 0 255 255 2 3 232 107 206 6",
+    "hex_values": "$35 $a $9 $1f $0 $ff $ff $2 $3 $e8 $6b $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_1",
     "address_range": {
-      "begin": 389277,
-      "end": 389290
+      "begin": 389278,
+      "end": 389291
     },
-    "integer_values": "53 5 18 8 2 255 255 2 2 251 107 206 6",
-    "hex_values": "$35 $5 $12 $8 $2 $ff $ff $2 $2 $fb $6b $ce $6"
+    "integer_values": "53 5 18 8 2 255 255 2 2 252 107 206 6",
+    "hex_values": "$35 $5 $12 $8 $2 $ff $ff $2 $2 $fc $6b $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_2",
     "address_range": {
-      "begin": 389290,
-      "end": 389303
+      "begin": 389291,
+      "end": 389304
     },
-    "integer_values": "54 8 16 9 0 255 255 130 1 15 108 206 6",
-    "hex_values": "$36 $8 $10 $9 $0 $ff $ff $82 $1 $f $6c $ce $6"
+    "integer_values": "54 8 16 9 0 255 255 130 1 16 108 206 6",
+    "hex_values": "$36 $8 $10 $9 $0 $ff $ff $82 $1 $10 $6c $ce $6"
   },
   {
     "label": "RadioTower4F_MapEvents.ckir_BEFORE_TrainerEvent_RadioTower4F_3",
     "address_range": {
-      "begin": 389303,
-      "end": 389316
+      "begin": 389304,
+      "end": 389317
     },
-    "integer_values": "60 6 8 8 0 255 255 146 4 35 108 206 6",
-    "hex_values": "$3c $6 $8 $8 $0 $ff $ff $92 $4 $23 $6c $ce $6"
+    "integer_values": "60 6 8 8 0 255 255 146 4 36 108 206 6",
+    "hex_values": "$3c $6 $8 $8 $0 $ff $ff $92 $4 $24 $6c $ce $6"
   },
   {
     "label": "RadioTower5FClearBellBackup.ckir_BEFORECLEARBELLBACKUP0ITEMCODE",
@@ -11918,8 +11936,8 @@
   {
     "label": "RooftopSaleMart1.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 88735,
-      "end": 88738
+      "begin": 88832,
+      "end": 88835
     },
     "integer_values": "38 244 1",
     "hex_values": "$26 $f4 $1"
@@ -11927,8 +11945,8 @@
   {
     "label": "RooftopSaleMart1.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEGREATBALL0ITEMCODE",
     "address_range": {
-      "begin": 88729,
-      "end": 88732
+      "begin": 88826,
+      "end": 88829
     },
     "integer_values": "4 244 1",
     "hex_values": "$4 $f4 $1"
@@ -11936,8 +11954,8 @@
   {
     "label": "RooftopSaleMart1.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEPOKEBALL0ITEMCODE",
     "address_range": {
-      "begin": 88726,
-      "end": 88729
+      "begin": 88823,
+      "end": 88826
     },
     "integer_values": "5 150 0",
     "hex_values": "$5 $96 $0"
@@ -11945,8 +11963,8 @@
   {
     "label": "RooftopSaleMart1.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALEREVIVE0ITEMCODE",
     "address_range": {
-      "begin": 88738,
-      "end": 88741
+      "begin": 88835,
+      "end": 88838
     },
     "integer_values": "39 176 4",
     "hex_values": "$27 $b0 $4"
@@ -11954,8 +11972,8 @@
   {
     "label": "RooftopSaleMart1.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPREE4SALESUPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 88732,
-      "end": 88735
+      "begin": 88829,
+      "end": 88832
     },
     "integer_values": "17 244 1",
     "hex_values": "$11 $f4 $1"
@@ -11963,8 +11981,8 @@
   {
     "label": "RooftopSaleMart2.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPOSTE4SALEFULLHEAL0ITEMCODE",
     "address_range": {
-      "begin": 88751,
-      "end": 88754
+      "begin": 88848,
+      "end": 88851
     },
     "integer_values": "38 244 1",
     "hex_values": "$26 $f4 $1"
@@ -11972,8 +11990,8 @@
   {
     "label": "RooftopSaleMart2.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPOSTE4SALEFULLRESTORE0ITEMCODE",
     "address_range": {
-      "begin": 88748,
-      "end": 88751
+      "begin": 88845,
+      "end": 88848
     },
     "integer_values": "14 208 7",
     "hex_values": "$e $d0 $7"
@@ -11981,8 +11999,8 @@
   {
     "label": "RooftopSaleMart2.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPOSTE4SALEHYPERPOTION0ITEMCODE",
     "address_range": {
-      "begin": 88745,
-      "end": 88748
+      "begin": 88842,
+      "end": 88845
     },
     "integer_values": "16 232 3",
     "hex_values": "$10 $e8 $3"
@@ -11990,8 +12008,8 @@
   {
     "label": "RooftopSaleMart2.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPOSTE4SALEPROTEIN0ITEMCODE",
     "address_range": {
-      "begin": 88757,
-      "end": 88760
+      "begin": 88854,
+      "end": 88857
     },
     "integer_values": "27 120 30",
     "hex_values": "$1b $78 $1e"
@@ -11999,8 +12017,8 @@
   {
     "label": "RooftopSaleMart2.ckir_BEFOREGOLDENRODDEPARTMENTSTOREPOSTE4SALEULTRABALL0ITEMCODE",
     "address_range": {
-      "begin": 88754,
-      "end": 88757
+      "begin": 88851,
+      "end": 88854
     },
     "integer_values": "2 232 3",
     "hex_values": "$2 $e8 $3"
@@ -17690,8 +17708,8 @@
       "begin": 1998858,
       "end": 1998859
     },
-    "integer_values": "11",
-    "hex_values": "$b"
+    "integer_values": "12",
+    "hex_values": "$c"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",

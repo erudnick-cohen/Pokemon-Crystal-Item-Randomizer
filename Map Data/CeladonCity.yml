@@ -120,12 +120,18 @@ Location:
                     .DoubleTeam:
                         checkcoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
                         ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM32
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveDoubleTeam
                         getitemname STRING_BUFFER_3, TM_DOUBLE_TEAM
                         scall CeladonPrizeRoom_askbuy
                         iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GiveDoubleTeam
                         ITEMLINE
                         iffalse CeladonPrizeRoom_notenoughroom
                         takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
+                        setevent EVENT_CGC_TM32
                         sjump CeladonPrizeRoom_purchased
                 Text:
                 HardcodedName: |
@@ -150,12 +156,18 @@ Location:
                     .Psychic:
                         checkcoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
                         ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM29
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GivePsychic
                         getitemname STRING_BUFFER_3, TM_PSYCHIC_M
                         scall CeladonPrizeRoom_askbuy
                         iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GivePsychic
                         ITEMLINE
                         iffalse CeladonPrizeRoom_notenoughroom
                         takecoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+                        setevent EVENT_CGC_TM29
                         sjump CeladonPrizeRoom_purchased
                 Text:
                 HardcodedName: |
@@ -180,12 +192,18 @@ Location:
                     .HyperBeam:
                         checkcoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
                         ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM15
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveHyperBeam
                         getitemname STRING_BUFFER_3, TM_HYPER_BEAM
                         scall CeladonPrizeRoom_askbuy
                         iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GiveHyperBeam
                         ITEMLINE
                         iffalse CeladonPrizeRoom_notenoughroom
                         takecoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+                        setevent EVENT_CGC_TM15
                         sjump CeladonPrizeRoom_purchased
                 Text:
                 HardcodedName: |
@@ -820,11 +838,16 @@ Location:
                 IsBall: No
                 Code: |
                     .FreshWater:
+                        checkevent EVENT_C_VM_FW
+                        iftrue .AlreadyBought
                         checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
                         ifequal HAVE_LESS, .NotEnoughMoney
                         ITEMLINE
                         iffalse .NotEnoughSpace
                         takemoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
+                        setevent EVENT_C_VM_FW
+                        checkitemrando
+                        iftrue .Bought
                         getitemname STRING_BUFFER_3, FRESH_WATER
                         sjump .VendItem
                 HardcodedName: |
@@ -850,11 +873,16 @@ Location:
                 IsBall: No
                 Code: |
                     .SodaPop:
+                        checkevent EVENT_C_VM_SP
+                        iftrue .AlreadyBought
                         checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
                         ifequal HAVE_LESS, .NotEnoughMoney
                         ITEMLINE
                         iffalse .NotEnoughSpace
                         takemoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
+                        setevent EVENT_C_VM_SP
+                        checkitemrando
+                        iftrue .Bought
                         getitemname STRING_BUFFER_3, SODA_POP
                         sjump .VendItem
                 HardcodedName: |
@@ -880,11 +908,16 @@ Location:
                 IsBall: No
                 Code: |
                     .Lemonade:
+                        checkevent EVENT_C_VM_L
+                        iftrue .AlreadyBought
                         checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
                         ifequal HAVE_LESS, .NotEnoughMoney
                         ITEMLINE
                         iffalse .NotEnoughSpace
                         takemoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
+                        setevent EVENT_C_VM_L
+                        checkitemrando
+                        iftrue .Bought
                         getitemname STRING_BUFFER_3, LEMONADE
                         sjump .VendItem
                 HardcodedName: |

@@ -32,13 +32,13 @@
             "new": [
                 6,
                 10,
-                12,
+                26,
                 97
             ]
         },
         "address_range": {
-            "begin": 352420,
-            "end": 352424
+            "begin": 352434,
+            "end": 352438
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F2",
         "description": "Return lady always gives item"
@@ -54,13 +54,13 @@
             "new": [
                 10,
                 0,
-                192,
+                206,
                 96
             ]
         },
         "address_range": {
-            "begin": 352437,
-            "end": 352441
+            "begin": 352451,
+            "end": 352455
         },
         "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFORE_timed_events_DEPTSTORE5F3",
         "description": "Happiness check removed for TMs"
@@ -143,8 +143,8 @@
             ]
         },
         "address_range": {
-            "begin": 466265,
-            "end": 466267
+            "begin": 466342,
+            "end": 466344
         },
         "label": "CeladonMansionRoofHousePharmacistScript.ckir_BEFORE_timed_events_CURSE",
         "description": "Curse is provided regardless of the time of day."

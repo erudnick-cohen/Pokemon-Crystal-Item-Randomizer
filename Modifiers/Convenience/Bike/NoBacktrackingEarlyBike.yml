@@ -118,9 +118,12 @@ Changes:
         Location: Rock Smash Guy
         AddRecommendedItemReqs:
             - Bicycle
-
     -
         Location: Route 35 MysteryBerry
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Ruins of Alph Rope Chamber
         AddRecommendedItemReqs:
             - Bicycle
 

@@ -340,8 +340,10 @@ BugContestResultsScript:
 	farwritetext ContestResults_ConsolationPrizeText
 	promptbutton
 	waitsfx
+	checkevent EVENT_BGC_LAST
+	iftrue BugContestResults_DidNotWin
+	setevent EVENT_BGC_LAST
 	verbosegiveitem BERRY
-
 	iffalse BugContestResults_NoRoomForBerry
 
 BugContestResults_DidNotWin:
@@ -395,6 +397,9 @@ BugContestResults_CleanUp:
 	end
 
 BugContestResults_FirstPlace:
+	checkevent EVENT_BGC_FIRST
+	iftrue BugContestResults_ReturnAfterWinnersPrize
+	setevent EVENT_BGC_FIRST
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	getitemname STRING_BUFFER_4, SUN_STONE
 	farwritetext ContestResults_PlayerWonAPrizeText
@@ -404,6 +409,9 @@ BugContestResults_FirstPlace:
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
 BugContestResults_SecondPlace:
+	checkevent EVENT_BGC_SECOND
+	iftrue BugContestResults_ReturnAfterWinnersPrize
+	setevent EVENT_BGC_SECOND
 	getitemname STRING_BUFFER_4, EVERSTONE
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
@@ -412,6 +420,9 @@ BugContestResults_SecondPlace:
 	sjump BugContestResults_ReturnAfterWinnersPrize
 
 BugContestResults_ThirdPlace:
+	checkevent EVENT_BGC_THIRD
+	iftrue BugContestResults_ReturnAfterWinnersPrize
+	setevent EVENT_BGC_THIRD
 	getitemname STRING_BUFFER_4, GOLD_BERRY
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
@@ -625,13 +636,13 @@ InitializeEventsScript:
 	setevent EVENT_MT_MOON_SQUARE_CLEFAIRY
 	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
-    setevent EVENT_TEAM_ROCKET_BASE_WHIRLPOOL_BACKUP
-    setevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
-    setevent EVENT_LAKE_OF_RAGE_RED_SCALE_BACKUP
-    setevent EVENT_RADIO_TOWER_5F_CLEAR_BELL_BACKUP
-    setevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
+	setevent EVENT_TEAM_ROCKET_BASE_WHIRLPOOL_BACKUP
+	setevent EVENT_MR_POKEMONS_HOUSE_POKEDEX_BACKUP
+	setevent EVENT_LAKE_OF_RAGE_RED_SCALE_BACKUP
+	setevent EVENT_RADIO_TOWER_5F_CLEAR_BELL_BACKUP
+	setevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
 	setevent EVENT_ILEX_FOREST_HM_CUT_BACKUP
-    setevent EVENT_GS_BALL_BACKUP
+	setevent EVENT_GS_BALL_BACKUP
 	checkitemrando
 	iftrue .SkipDirector
 	setevent EVENT_BASEMENT_DIRECTOR

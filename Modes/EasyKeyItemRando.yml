@@ -5,7 +5,8 @@ RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 DefaultModifiers:
-    - Modifiers/NoBacktrackingEarlyBikeAndFly.yml
+    - Modifiers/NoBacktrackingEarlyFly.yml
+    - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/NoEarlyRBYKantoGymLeaders.yml
     - Modifiers/DefinitelyNoEarlySabrina.yml
     - Modifiers/SkipReturningToNewBark.yml

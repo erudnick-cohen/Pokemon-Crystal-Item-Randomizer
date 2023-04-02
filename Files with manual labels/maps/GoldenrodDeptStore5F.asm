@@ -27,9 +27,22 @@ GoldenrodDeptStore5F_MapScripts:
 	return
 
 GoldenrodDeptStore5FClerkScript:
+	readvar VAR_WEEKDAY
+.ckir_BEFORE_DEPTSTORECheckFullScript::
+	ifnotequal 10, GoldenrodDeptStore5FClerkFullShopScript
+.ckir_AFTER_DEPTSTORECheckFullScript::
 	faceplayer
 	opentext
 	goldenrodmart5f
+	closetext
+	end
+
+.ckir_BEFORE_DEPTSTORE5FClerkFullShopScript::
+.ckir_AFTER_DEPTSTORE5FClerkFullShopScript::
+GoldenrodDeptStore5FClerkFullShopScript:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_TM02_08_12
 	closetext
 	end
 

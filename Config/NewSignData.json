@@ -212,29 +212,29 @@
         "commands": 2
     },
     {
-        "start": 464270,
-        "end": 464306,
+        "start": 464347,
+        "end": 464383,
         "name": "CeladonDeptStore6FDirectoryText",
         "map": "CeladonDeptStore6F.asm",
         "commands": 3
     },
     {
-        "start": 464635,
-        "end": 464667,
+        "start": 464712,
+        "end": 464744,
         "name": "CeladonMansionManagersSuiteSignText",
         "map": "CeladonMansion1F.asm",
         "commands": 3
     },
     {
-        "start": 465020,
-        "end": 465044,
+        "start": 465097,
+        "end": 465121,
         "name": "CeladonMansion2FMeetingRoomSignText",
         "map": "CeladonMansion2F.asm",
         "commands": 3
     },
     {
-        "start": 465755,
-        "end": 465783,
+        "start": 465832,
+        "end": 465860,
         "name": "CeladonMansion3FDevRoomSignText",
         "map": "CeladonMansion3F.asm",
         "commands": 3
@@ -514,8 +514,8 @@
         "tileAddress": 697987
     },
     {
-        "start": 1675127,
-        "end": 1675150,
+        "start": 1675080,
+        "end": 1675103,
         "name": "GoldenrodCityStationSignText",
         "map": "GoldenrodCity.asm",
         "commands": 3,
@@ -524,8 +524,8 @@
         "tileAddress": 709381
     },
     {
-        "start": 1675151,
-        "end": 1675178,
+        "start": 1675104,
+        "end": 1675131,
         "name": "GoldenrodCityRadioTowerSignText",
         "map": "GoldenrodCity.asm",
         "commands": 3,
@@ -534,15 +534,15 @@
         "tileAddress": 709398
     },
     {
-        "start": 1675179,
-        "end": 1675235,
+        "start": 1675132,
+        "end": 1675188,
         "name": "GoldenrodDeptStoreSignText",
         "map": "GoldenrodCity.asm",
         "commands": 5
     },
     {
-        "start": 1675236,
-        "end": 1675304,
+        "start": 1675189,
+        "end": 1675257,
         "name": "GoldenrodGymSignText",
         "map": "GoldenrodCity.asm",
         "commands": 6,
@@ -551,8 +551,8 @@
         "tileAddress": 709329
     },
     {
-        "start": 1675305,
-        "end": 1675354,
+        "start": 1675258,
+        "end": 1675307,
         "name": "GoldenrodCitySignText",
         "map": "GoldenrodCity.asm",
         "commands": 4,
@@ -561,8 +561,8 @@
         "tileAddress": 709427
     },
     {
-        "start": 1675355,
-        "end": 1675392,
+        "start": 1675308,
+        "end": 1675345,
         "name": "GoldenrodCityBikeShopSignText",
         "map": "GoldenrodCity.asm",
         "commands": 4,
@@ -571,8 +571,8 @@
         "tileAddress": 709550
     },
     {
-        "start": 1675393,
-        "end": 1675437,
+        "start": 1675346,
+        "end": 1675390,
         "name": "GoldenrodCityGameCornerSignText",
         "map": "GoldenrodCity.asm",
         "commands": 4,
@@ -581,8 +581,8 @@
         "tileAddress": 709464
     },
     {
-        "start": 1675438,
-        "end": 1675479,
+        "start": 1675391,
+        "end": 1675432,
         "name": "GoldenrodCityNameRaterSignText",
         "map": "GoldenrodCity.asm",
         "commands": 4,
@@ -591,8 +591,8 @@
         "tileAddress": 709302
     },
     {
-        "start": 1675480,
-        "end": 1675501,
+        "start": 1675433,
+        "end": 1675454,
         "name": "GoldenrodCityUndergroundSignNorthText",
         "map": "GoldenrodCity.asm",
         "commands": 3,
@@ -601,8 +601,8 @@
         "tileAddress": 709300
     },
     {
-        "start": 1675502,
-        "end": 1675523,
+        "start": 1675455,
+        "end": 1675476,
         "name": "GoldenrodCityUndergroundSignSouthText",
         "map": "GoldenrodCity.asm",
         "commands": 3,
@@ -611,8 +611,8 @@
         "tileAddress": 709542
     },
     {
-        "start": 1675554,
-        "end": 1675585,
+        "start": 1675507,
+        "end": 1675538,
         "name": "GoldenrodCityFlowerShopSignText",
         "map": "GoldenrodCity.asm",
         "commands": 3,
@@ -649,15 +649,15 @@
         "commands": 4
     },
     {
-        "start": 353118,
-        "end": 353151,
+        "start": 353132,
+        "end": 353165,
         "name": "GoldenrodDeptStore5FDirectoryText",
         "map": "GoldenrodDeptStore5F.asm",
         "commands": 4
     },
     {
-        "start": 353815,
-        "end": 353862,
+        "start": 353906,
+        "end": 353953,
         "name": "GoldenrodDeptStore6FDirectoryText",
         "map": "GoldenrodDeptStore6F.asm",
         "commands": 4
@@ -1041,8 +1041,8 @@
         "tileAddress": 707847
     },
     {
-        "start": 386129,
-        "end": 386138,
+        "start": 386130,
+        "end": 386139,
         "name": "RadioTower2FSalesSignText",
         "map": "RadioTower2F.asm",
         "commands": 2,
@@ -1051,8 +1051,8 @@
         "tileAddress": 707878
     },
     {
-        "start": 386139,
-        "end": 386189,
+        "start": 386140,
+        "end": 386190,
         "name": "RadioTower2FOaksPKMNTalkSignText",
         "map": "RadioTower2F.asm",
         "commands": 5,
@@ -1061,8 +1061,8 @@
         "tileAddress": 707879
     },
     {
-        "start": 386190,
-        "end": 386219,
+        "start": 386191,
+        "end": 386220,
         "name": "RadioTower2FPokemonRadioSignText",
         "map": "RadioTower2F.asm",
         "commands": 3,
@@ -1071,8 +1071,8 @@
         "tileAddress": 707883
     },
     {
-        "start": 387841,
-        "end": 387854,
+        "start": 387842,
+        "end": 387855,
         "name": "RadioTower3FPersonnelSignText",
         "map": "RadioTower3F.asm",
         "commands": 2,
@@ -1081,8 +1081,8 @@
         "tileAddress": 707914
     },
     {
-        "start": 387855,
-        "end": 387883,
+        "start": 387856,
+        "end": 387884,
         "name": "RadioTower3FPokemonMusicSignText",
         "map": "RadioTower3F.asm",
         "commands": 3,
@@ -1091,8 +1091,8 @@
         "tileAddress": 707917
     },
     {
-        "start": 389161,
-        "end": 389175,
+        "start": 389162,
+        "end": 389176,
         "name": "RadioTower4FProductionSignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1101,8 +1101,8 @@
         "tileAddress": 707952
     },
     {
-        "start": 389176,
-        "end": 389188,
+        "start": 389177,
+        "end": 389189,
         "name": "RadioTower4FStudio2SignText",
         "map": "RadioTower4F.asm",
         "commands": 2,
@@ -1870,8 +1870,8 @@
         "tileAddress": 707280
     },
     {
-        "start": 1677495,
-        "end": 1677541,
+        "start": 1677445,
+        "end": 1677491,
         "name": "SaffronCitySignText",
         "map": "SaffronCity.asm",
         "commands": 4,
@@ -1880,8 +1880,8 @@
         "tileAddress": 689900
     },
     {
-        "start": 1677542,
-        "end": 1677608,
+        "start": 1677492,
+        "end": 1677558,
         "name": "SaffronGymSignText",
         "map": "SaffronCity.asm",
         "commands": 6,
@@ -1890,8 +1890,8 @@
         "tileAddress": 689906
     },
     {
-        "start": 1677609,
-        "end": 1677641,
+        "start": 1677559,
+        "end": 1677591,
         "name": "FightingDojoSignText",
         "map": "SaffronCity.asm",
         "commands": 3,
@@ -1900,8 +1900,8 @@
         "tileAddress": 689902
     },
     {
-        "start": 1677642,
-        "end": 1677668,
+        "start": 1677592,
+        "end": 1677618,
         "name": "SilphCoSignText",
         "map": "SaffronCity.asm",
         "commands": 3,
@@ -1910,8 +1910,8 @@
         "tileAddress": 690057
     },
     {
-        "start": 1677669,
-        "end": 1677688,
+        "start": 1677619,
+        "end": 1677638,
         "name": "MrPsychicsHouseSignText",
         "map": "SaffronCity.asm",
         "commands": 3,
@@ -1920,8 +1920,8 @@
         "tileAddress": 690142
     },
     {
-        "start": 1677689,
-        "end": 1677723,
+        "start": 1677639,
+        "end": 1677673,
         "name": "SaffronCityMagnetTrainStationSignText",
         "map": "SaffronCity.asm",
         "commands": 4,

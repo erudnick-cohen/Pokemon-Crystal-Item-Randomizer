@@ -191,8 +191,8 @@
   {
     "label": "CeladonDeptStore6FDirectoryText.ctir_BEFORE_CeladonDeptStore6FDirectoryText",
     "address_range": {
-      "begin": 464270,
-      "end": 464307
+      "begin": 464347,
+      "end": 464384
     },
     "integer_values": "0 252 133 156 127 145 142 142 133 147 142 143 127 146 144 148 128 145 132 79 149 132 141 131 136 141 134 127 140 128 130 135 136 141 132 146 87",
     "hex_values": "$0 $fc $85 $9c $7f $91 $8e $8e $85 $93 $8e $8f $7f $92 $90 $94 $80 $91 $84 $4f $95 $84 $8d $83 $88 $8d $86 $7f $8c $80 $82 $87 $88 $8d $84 $92 $57"
@@ -209,8 +209,8 @@
   {
     "label": "CeladonMansion2FMeetingRoomSignText.ctir_BEFORE_CeladonMansion2FMeetingRoomSignText",
     "address_range": {
-      "begin": 465020,
-      "end": 465045
+      "begin": 465097,
+      "end": 465122
     },
     "integer_values": "0 134 128 140 132 127 133 145 132 128 138 79 140 132 132 147 136 141 134 127 145 142 142 140 87",
     "hex_values": "$0 $86 $80 $8c $84 $7f $85 $91 $84 $80 $8a $4f $8c $84 $84 $93 $88 $8d $86 $7f $91 $8e $8e $8c $57"
@@ -218,8 +218,8 @@
   {
     "label": "CeladonMansion3FDevRoomSignText.ctir_BEFORE_CeladonMansion3FDevRoomSignText",
     "address_range": {
-      "begin": 465755,
-      "end": 465784
+      "begin": 465832,
+      "end": 465861
     },
     "integer_values": "0 134 128 140 132 127 133 145 132 128 138 79 131 132 149 132 139 142 143 140 132 141 147 127 145 142 142 140 87",
     "hex_values": "$0 $86 $80 $8c $84 $7f $85 $91 $84 $80 $8a $4f $83 $84 $95 $84 $8b $8e $8f $8c $84 $8d $93 $7f $91 $8e $8e $8c $57"
@@ -227,8 +227,8 @@
   {
     "label": "CeladonMansionManagersSuiteSignText.ctir_BEFORE_CeladonMansionManagersSuiteSignText",
     "address_range": {
-      "begin": 464635,
-      "end": 464668
+      "begin": 464712,
+      "end": 464745
     },
     "integer_values": "0 130 132 139 128 131 142 141 127 140 128 141 146 136 142 141 79 140 128 141 128 134 132 145 224 146 127 146 148 136 147 132 87",
     "hex_values": "$0 $82 $84 $8b $80 $83 $8e $8d $7f $8c $80 $8d $92 $88 $8e $8d $4f $8c $80 $8d $80 $86 $84 $91 $e0 $92 $7f $92 $94 $88 $93 $84 $57"
@@ -479,8 +479,8 @@
   {
     "label": "FightingDojoSignText.ctir_BEFORE_FightingDojoSignText",
     "address_range": {
-      "begin": 1677609,
-      "end": 1677642
+      "begin": 1677559,
+      "end": 1677592
     },
     "integer_values": "0 132 181 164 177 184 174 173 164 127 150 164 171 162 174 172 164 231 79 133 136 134 135 147 136 141 134 127 131 142 137 142 87",
     "hex_values": "$0 $84 $b5 $a4 $b1 $b8 $ae $ad $a4 $7f $96 $a4 $ab $a2 $ae $ac $a4 $e7 $4f $85 $88 $86 $87 $93 $88 $8d $86 $7f $83 $8e $89 $8e $57"
@@ -524,8 +524,8 @@
   {
     "label": "GoldenrodCityBikeShopSignText.ctir_BEFORE_GoldenrodCityBikeShopSignText",
     "address_range": {
-      "begin": 1675355,
-      "end": 1675393
+      "begin": 1675308,
+      "end": 1675346
     },
     "integer_values": "0 147 167 164 127 150 174 177 171 163 127 168 178 127 160 79 130 184 162 171 164 127 143 160 179 167 231 85 129 136 138 132 127 146 135 142 143 87",
     "hex_values": "$0 $93 $a7 $a4 $7f $96 $ae $b1 $ab $a3 $7f $a8 $b2 $7f $a0 $4f $82 $b8 $a2 $ab $a4 $7f $8f $a0 $b3 $a7 $e7 $55 $81 $88 $8a $84 $7f $92 $87 $8e $8f $57"
@@ -533,8 +533,8 @@
   {
     "label": "GoldenrodCityFlowerShopSignText.ctir_BEFORE_GoldenrodCityFlowerShopSignText",
     "address_range": {
-      "begin": 1675554,
-      "end": 1675586
+      "begin": 1675507,
+      "end": 1675539
     },
     "integer_values": "0 129 171 174 174 172 168 173 166 127 129 164 160 180 179 168 165 180 171 79 133 139 142 150 132 145 127 146 135 142 143 87",
     "hex_values": "$0 $81 $ab $ae $ae $ac $a8 $ad $a6 $7f $81 $a4 $a0 $b4 $b3 $a8 $a5 $b4 $ab $4f $85 $8b $8e $96 $84 $91 $7f $92 $87 $8e $8f $57"
@@ -542,8 +542,8 @@
   {
     "label": "GoldenrodCityGameCornerSignText.ctir_BEFORE_GoldenrodCityGameCornerSignText",
     "address_range": {
-      "begin": 1675393,
-      "end": 1675438
+      "begin": 1675346,
+      "end": 1675391
     },
     "integer_values": "0 152 174 180 177 127 143 171 160 184 166 177 174 180 173 163 231 81 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 134 128 140 132 127 130 142 145 141 132 145 87",
     "hex_values": "$0 $98 $ae $b4 $b1 $7f $8f $ab $a0 $b8 $a6 $b1 $ae $b4 $ad $a3 $e7 $51 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $86 $80 $8c $84 $7f $82 $8e $91 $8d $84 $91 $57"
@@ -551,8 +551,8 @@
   {
     "label": "GoldenrodCityNameRaterSignText.ctir_BEFORE_GoldenrodCityNameRaterSignText",
     "address_range": {
-      "begin": 1675438,
-      "end": 1675480
+      "begin": 1675391,
+      "end": 1675433
     },
     "integer_values": "0 141 128 140 132 127 145 128 147 132 145 81 134 164 179 127 152 174 180 177 127 84 140 142 141 79 141 168 162 170 173 160 172 164 178 127 145 160 179 164 163 87",
     "hex_values": "$0 $8d $80 $8c $84 $7f $91 $80 $93 $84 $91 $51 $86 $a4 $b3 $7f $98 $ae $b4 $b1 $7f $54 $8c $8e $8d $4f $8d $a8 $a2 $aa $ad $a0 $ac $a4 $b2 $7f $91 $a0 $b3 $a4 $a3 $57"
@@ -560,8 +560,8 @@
   {
     "label": "GoldenrodCityRadioTowerSignText.ctir_BEFORE_GoldenrodCityRadioTowerSignText",
     "address_range": {
-      "begin": 1675151,
-      "end": 1675179
+      "begin": 1675104,
+      "end": 1675132
     },
     "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 145 128 131 136 142 127 147 142 150 132 145 87",
     "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $91 $80 $83 $88 $8e $7f $93 $8e $96 $84 $91 $57"
@@ -569,8 +569,8 @@
   {
     "label": "GoldenrodCitySignText.ctir_BEFORE_GoldenrodCitySignText",
     "address_range": {
-      "begin": 1675305,
-      "end": 1675355
+      "begin": 1675258,
+      "end": 1675308
     },
     "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 81 147 167 164 127 133 164 178 179 168 181 164 127 130 168 179 184 79 174 165 127 142 175 180 171 164 173 179 127 130 167 160 177 172 87",
     "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $85 $a4 $b2 $b3 $a8 $b5 $a4 $7f $82 $a8 $b3 $b8 $4f $ae $a5 $7f $8e $af $b4 $ab $a4 $ad $b3 $7f $82 $a7 $a0 $b1 $ac $57"
@@ -578,8 +578,8 @@
   {
     "label": "GoldenrodCityStationSignText.ctir_BEFORE_GoldenrodCityStationSignText",
     "address_range": {
-      "begin": 1675127,
-      "end": 1675151
+      "begin": 1675080,
+      "end": 1675104
     },
     "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 146 147 128 147 136 142 141 87",
     "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $92 $93 $80 $93 $88 $8e $8d $57"
@@ -587,8 +587,8 @@
   {
     "label": "GoldenrodCityUndergroundSignNorthText.ctir_BEFORE_GoldenrodCityUndergroundSignNorthText",
     "address_range": {
-      "begin": 1675480,
-      "end": 1675502
+      "begin": 1675433,
+      "end": 1675455
     },
     "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 79 132 141 147 145 128 141 130 132 87",
     "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
@@ -596,8 +596,8 @@
   {
     "label": "GoldenrodCityUndergroundSignSouthText.ctir_BEFORE_GoldenrodCityUndergroundSignSouthText",
     "address_range": {
-      "begin": 1675502,
-      "end": 1675524
+      "begin": 1675455,
+      "end": 1675477
     },
     "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 79 132 141 147 145 128 141 130 132 87",
     "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
@@ -641,8 +641,8 @@
   {
     "label": "GoldenrodDeptStore5FDirectoryText.ctir_BEFORE_GoldenrodDeptStore5FDirectoryText",
     "address_range": {
-      "begin": 353118,
-      "end": 353152
+      "begin": 353132,
+      "end": 353166
     },
     "integer_values": "0 130 180 178 179 174 172 168 185 164 127 152 174 180 177 79 84 140 142 141 81 251 133 127 147 140 127 130 142 145 141 132 145 87",
     "hex_values": "$0 $82 $b4 $b2 $b3 $ae $ac $a8 $b9 $a4 $7f $98 $ae $b4 $b1 $4f $54 $8c $8e $8d $51 $fb $85 $7f $93 $8c $7f $82 $8e $91 $8d $84 $91 $57"
@@ -650,8 +650,8 @@
   {
     "label": "GoldenrodDeptStore6FDirectoryText.ctir_BEFORE_GoldenrodDeptStore6FDirectoryText",
     "address_range": {
-      "begin": 353815,
-      "end": 353863
+      "begin": 353906,
+      "end": 353954
     },
     "integer_values": "0 147 160 170 164 127 160 127 129 177 164 160 170 127 165 177 174 172 79 146 167 174 175 175 168 173 166 231 81 252 133 127 147 145 128 141 144 148 136 139 127 146 144 148 128 145 132 87",
     "hex_values": "$0 $93 $a0 $aa $a4 $7f $a0 $7f $81 $b1 $a4 $a0 $aa $7f $a5 $b1 $ae $ac $4f $92 $a7 $ae $af $af $a8 $ad $a6 $e7 $51 $fc $85 $7f $93 $91 $80 $8d $90 $94 $88 $8b $7f $92 $90 $94 $80 $91 $84 $57"
@@ -659,8 +659,8 @@
   {
     "label": "GoldenrodDeptStoreSignText.ctir_BEFORE_GoldenrodDeptStoreSignText",
     "address_range": {
-      "begin": 1675179,
-      "end": 1675236
+      "begin": 1675132,
+      "end": 1675189
     },
     "integer_values": "0 133 180 171 171 127 146 164 171 164 162 179 168 174 173 127 174 165 79 84 140 142 141 127 134 174 174 163 178 231 81 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 131 132 143 147 232 146 147 142 145 132 87",
     "hex_values": "$0 $85 $b4 $ab $ab $7f $92 $a4 $ab $a4 $a2 $b3 $a8 $ae $ad $7f $ae $a5 $4f $54 $8c $8e $8d $7f $86 $ae $ae $a3 $b2 $e7 $51 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $83 $84 $8f $93 $e8 $92 $93 $8e $91 $84 $57"
@@ -668,8 +668,8 @@
   {
     "label": "GoldenrodGymSignText.ctir_BEFORE_GoldenrodGymSignText",
     "address_range": {
-      "begin": 1675236,
-      "end": 1675305
+      "begin": 1675189,
+      "end": 1675258
     },
     "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 150 135 136 147 141 132 152 81 147 167 164 127 136 173 162 177 164 163 168 161 171 184 79 143 177 164 179 179 184 127 134 168 177 171 231 87",
     "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $96 $87 $88 $93 $8d $84 $98 $51 $93 $a7 $a4 $7f $88 $ad $a2 $b1 $a4 $a3 $a8 $a1 $ab $b8 $4f $8f $b1 $a4 $b3 $b3 $b8 $7f $86 $a8 $b1 $ab $e7 $57"
@@ -830,8 +830,8 @@
   {
     "label": "MrPsychicsHouseSignText.ctir_BEFORE_MrPsychicsHouseSignText",
     "address_range": {
-      "begin": 1677669,
-      "end": 1677689
+      "begin": 1677619,
+      "end": 1677639
     },
     "integer_values": "0 140 145 232 143 146 152 130 135 136 130 224 146 79 135 142 148 146 132 87",
     "hex_values": "$0 $8c $91 $e8 $8f $92 $98 $82 $87 $88 $82 $e0 $92 $4f $87 $8e $94 $92 $84 $57"
@@ -1136,8 +1136,8 @@
   {
     "label": "RadioTower2FOaksPKMNTalkSignText.ctir_BEFORE_RadioTower2FOaksPKMNTalkSignText",
     "address_range": {
-      "begin": 386139,
-      "end": 386190
+      "begin": 386140,
+      "end": 386191
     },
     "integer_values": "0 143 145 142 133 232 142 128 138 224 146 127 84 140 142 141 79 147 128 139 138 81 147 167 164 127 135 174 179 179 164 178 179 127 146 167 174 182 79 174 173 127 179 167 164 127 128 168 177 231 87",
     "hex_values": "$0 $8f $91 $8e $85 $e8 $8e $80 $8a $e0 $92 $7f $54 $8c $8e $8d $4f $93 $80 $8b $8a $51 $93 $a7 $a4 $7f $87 $ae $b3 $b3 $a4 $b2 $b3 $7f $92 $a7 $ae $b6 $4f $ae $ad $7f $b3 $a7 $a4 $7f $80 $a8 $b1 $e7 $57"
@@ -1145,8 +1145,8 @@
   {
     "label": "RadioTower2FPokemonRadioSignText.ctir_BEFORE_RadioTower2FPokemonRadioSignText",
     "address_range": {
-      "begin": 386190,
-      "end": 386220
+      "begin": 386191,
+      "end": 386221
     },
     "integer_values": "0 128 173 184 182 167 164 177 164 244 127 128 173 184 179 168 172 164 79 84 140 142 141 127 145 160 163 168 174 87",
     "hex_values": "$0 $80 $ad $b8 $b6 $a7 $a4 $b1 $a4 $f4 $7f $80 $ad $b8 $b3 $a8 $ac $a4 $4f $54 $8c $8e $8d $7f $91 $a0 $a3 $a8 $ae $57"
@@ -1154,8 +1154,8 @@
   {
     "label": "RadioTower2FSalesSignText.ctir_BEFORE_RadioTower2FSalesSignText",
     "address_range": {
-      "begin": 386129,
-      "end": 386139
+      "begin": 386130,
+      "end": 386140
     },
     "integer_values": "0 248 133 127 146 128 139 132 146 87",
     "hex_values": "$0 $f8 $85 $7f $92 $80 $8b $84 $92 $57"
@@ -1163,8 +1163,8 @@
   {
     "label": "RadioTower3FPersonnelSignText.ctir_BEFORE_RadioTower3FPersonnelSignText",
     "address_range": {
-      "begin": 387841,
-      "end": 387855
+      "begin": 387842,
+      "end": 387856
     },
     "integer_values": "0 249 133 127 143 132 145 146 142 141 141 132 139 87",
     "hex_values": "$0 $f9 $85 $7f $8f $84 $91 $92 $8e $8d $8d $84 $8b $57"
@@ -1172,8 +1172,8 @@
   {
     "label": "RadioTower3FPokemonMusicSignText.ctir_BEFORE_RadioTower3FPokemonMusicSignText",
     "address_range": {
-      "begin": 387855,
-      "end": 387884
+      "begin": 387856,
+      "end": 387885
     },
     "integer_values": "0 84 140 142 141 127 140 148 146 136 130 127 182 168 179 167 79 135 174 178 179 127 131 137 127 129 132 141 87",
     "hex_values": "$0 $54 $8c $8e $8d $7f $8c $94 $92 $88 $82 $7f $b6 $a8 $b3 $a7 $4f $87 $ae $b2 $b3 $7f $83 $89 $7f $81 $84 $8d $57"
@@ -1181,8 +1181,8 @@
   {
     "label": "RadioTower4FProductionSignText.ctir_BEFORE_RadioTower4FProductionSignText",
     "address_range": {
-      "begin": 389161,
-      "end": 389176
+      "begin": 389162,
+      "end": 389177
     },
     "integer_values": "0 250 133 127 143 145 142 131 148 130 147 136 142 141 87",
     "hex_values": "$0 $fa $85 $7f $8f $91 $8e $83 $94 $82 $93 $88 $8e $8d $57"
@@ -1190,8 +1190,8 @@
   {
     "label": "RadioTower4FStudio2SignText.ctir_BEFORE_RadioTower4FStudio2SignText",
     "address_range": {
-      "begin": 389176,
-      "end": 389189
+      "begin": 389177,
+      "end": 389190
     },
     "integer_values": "0 250 133 127 146 147 148 131 136 142 127 248 87",
     "hex_values": "$0 $fa $85 $7f $92 $93 $94 $83 $88 $8e $7f $f8 $57"
@@ -1766,8 +1766,8 @@
   {
     "label": "SaffronCityMagnetTrainStationSignText.ctir_BEFORE_SaffronCityMagnetTrainStationSignText",
     "address_range": {
-      "begin": 1677689,
-      "end": 1677724
+      "begin": 1677639,
+      "end": 1677674
     },
     "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 79 140 128 134 141 132 147 127 147 145 128 136 141 85 146 147 128 147 136 142 141 87",
     "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $4f $8c $80 $86 $8d $84 $93 $7f $93 $91 $80 $88 $8d $55 $92 $93 $80 $93 $88 $8e $8d $57"
@@ -1775,8 +1775,8 @@
   {
     "label": "SaffronCitySignText.ctir_BEFORE_SaffronCitySignText",
     "address_range": {
-      "begin": 1677495,
-      "end": 1677542
+      "begin": 1677445,
+      "end": 1677492
     },
     "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 81 146 167 168 173 168 173 166 244 127 134 174 171 163 164 173 79 139 160 173 163 127 174 165 127 130 174 172 172 164 177 162 164 87",
     "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $51 $92 $a7 $a8 $ad $a8 $ad $a6 $f4 $7f $86 $ae $ab $a3 $a4 $ad $4f $8b $a0 $ad $a3 $7f $ae $a5 $7f $82 $ae $ac $ac $a4 $b1 $a2 $a4 $57"
@@ -1784,8 +1784,8 @@
   {
     "label": "SaffronGymSignText.ctir_BEFORE_SaffronGymSignText",
     "address_range": {
-      "begin": 1677542,
-      "end": 1677609
+      "begin": 1677492,
+      "end": 1677559
     },
     "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 146 128 129 145 136 141 128 81 147 167 164 127 140 160 178 179 164 177 127 174 165 79 143 178 184 162 167 168 162 127 84 140 142 141 231 87",
     "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $92 $80 $81 $91 $88 $8d $80 $51 $93 $a7 $a4 $7f $8c $a0 $b2 $b3 $a4 $b1 $7f $ae $a5 $4f $8f $b2 $b8 $a2 $a7 $a8 $a2 $7f $54 $8c $8e $8d $e7 $57"
@@ -1793,8 +1793,8 @@
   {
     "label": "SilphCoSignText.ctir_BEFORE_SilphCoSignText",
     "address_range": {
-      "begin": 1677642,
-      "end": 1677669
+      "begin": 1677592,
+      "end": 1677619
     },
     "integer_values": "0 146 136 139 143 135 127 130 142 232 79 142 133 133 136 130 132 127 129 148 136 139 131 136 141 134 87",
     "hex_values": "$0 $92 $88 $8b $8f $87 $7f $82 $8e $e8 $4f $8e $85 $85 $88 $82 $84 $7f $81 $94 $88 $8b $83 $88 $8d $86 $57"

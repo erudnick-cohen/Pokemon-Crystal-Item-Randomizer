@@ -1,0 +1,47 @@
+Name: NFast
+Description: Try making a faster rom.
+Changes:
+    -
+        Location: Ecruteak City
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Route 3 and Mt. Moon
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Cerulean City
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: SS Aqua Entrance
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Olivine City via SS Aqua
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Lance
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Cinnabar Island
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Route 27
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Route 26
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Olivine City
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Rockets In Radio Tower
+        AddFlagReqs:
+            - Defeated Red

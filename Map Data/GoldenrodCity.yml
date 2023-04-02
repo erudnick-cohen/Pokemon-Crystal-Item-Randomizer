@@ -294,12 +294,18 @@ Location:
                     .Thunder:
                         checkcoins GOLDENRODGAMECORNER_TM25_COINS
                         ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM25
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveThunder
                         getitemname STRING_BUFFER_3, TM_THUNDER
                         scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
                         iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveThunder
                         ITEMLINE
                         iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
                         takecoins GOLDENRODGAMECORNER_TM25_COINS
+                        setevent EVENT_GGC_TM25
                         sjump GoldenrodGameCornerTMVendor_FinishScript
                 Text:
                 HardcodedName: |
@@ -324,12 +330,18 @@ Location:
                     .Blizzard:
                         checkcoins GOLDENRODGAMECORNER_TM14_COINS
                         ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM14
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveBlizzard
                         getitemname STRING_BUFFER_3, TM_BLIZZARD
                         scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
                         iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveBlizzard
                         ITEMLINE
                         iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
                         takecoins GOLDENRODGAMECORNER_TM14_COINS
+                        setevent EVENT_GGC_TM14
                         sjump GoldenrodGameCornerTMVendor_FinishScript
                 Text:
                 HardcodedName: |
@@ -354,12 +366,18 @@ Location:
                     .FireBlast:
                         checkcoins GOLDENRODGAMECORNER_TM38_COINS
                         ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM38
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveFireBlast
                         getitemname STRING_BUFFER_3, TM_FIRE_BLAST
                         scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
                         iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveFireBlast
                         ITEMLINE
                         iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
                         takecoins GOLDENRODGAMECORNER_TM38_COINS
+                        setevent EVENT_GGC_TM38
                         sjump GoldenrodGameCornerTMVendor_FinishScript
                 Text:
                 HardcodedName: |
@@ -1624,11 +1642,16 @@ Location:
             IsBall: No
             Code: |
                 .FreshWater:
+                    checkevent EVENT_G_VM_FW
+                    iftrue .AlreadyBought
                     checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
                     ifequal HAVE_LESS, .NotEnoughMoney
                     ITEMLINE
                     iffalse .NotEnoughSpace
                     takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
+                    setevent EVENT_G_VM_FW
+                    checkitemrando
+                    iftrue .Bought
                     getitemname STRING_BUFFER_3, FRESH_WATER
                     sjump .VendItem
             HardcodedName: |
@@ -1654,11 +1677,16 @@ Location:
             IsBall: No
             Code: |
                 .SodaPop:
+                    checkevent EVENT_G_VM_SP
+                    iftrue .AlreadyBought
                     checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_SODA_POP_PRICE
                     ifequal HAVE_LESS, .NotEnoughMoney
                     ITEMLINE
                     iffalse .NotEnoughSpace
                     takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_SODA_POP_PRICE
+                    setevent EVENT_G_VM_SP
+                    checkitemrando
+                    iftrue .Bought
                     getitemname STRING_BUFFER_3, SODA_POP
                     sjump .VendItem
             HardcodedName: |
@@ -1684,11 +1712,16 @@ Location:
             IsBall: No
             Code: |
                 .Lemonade:
+                    checkevent EVENT_G_VM_L
+                    iftrue .AlreadyBought
                     checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_LEMONADE_PRICE
                     ifequal HAVE_LESS, .NotEnoughMoney
                     ITEMLINE
                     iffalse .NotEnoughSpace
                     takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_LEMONADE_PRICE
+                    setevent EVENT_G_VM_L
+                    checkitemrando
+                    iftrue .Bought
                     getitemname STRING_BUFFER_3, LEMONADE
                     sjump .VendItem
             HardcodedName: |
