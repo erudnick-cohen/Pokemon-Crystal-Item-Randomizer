@@ -160,7 +160,15 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 
 	def runRandomizer(self, requiredMD5=None):
 
-		# First, check no warps interfere with one another
+		dataHash = self.GetDataHash()
+
+		if dataHash != Version.GetExpectedDataHash():
+			message = "Map Data invalid. Try reinstalling."
+			error_dialog = QtWidgets.QErrorMessage()
+			error_dialog.showMessage(message)
+			error_dialog.exec_()
+			return
+
 
 		conflicts = []
 		seenMods = []
@@ -451,6 +459,23 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 				self.AmendHash(keyvalue, h)
 		else:
 			print("Unhandled type:", type(value))
+
+	def GetDataHash(self):
+		folders = ["Map Data", "Gym Data"]
+		data = []
+		for item in folders:
+			newitems = os.listdir(item)
+			for i in newitems:
+				f = open(item+"/"+i)
+				filedata = f.read()
+				data.append(filedata)
+				f.close()
+
+		new_hash = str.join(";", data)
+		return hashlib.md5(new_hash.encode()).hexdigest()
+
+
+
 	def GetModeHash(self):
 		value_to_hash = []
 		self.AmendHash(Version.GetItemRandoVersion(), value_to_hash)

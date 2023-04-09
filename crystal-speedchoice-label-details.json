@@ -3470,8 +3470,8 @@
       "begin": 352413,
       "end": 352417
     },
-    "integer_values": "6 10 166 96",
-    "hex_values": "$6 $a $a6 $60"
+    "integer_values": "7 10 166 96",
+    "hex_values": "$7 $a $a6 $60"
   },
   {
     "label": "GoldenrodDeptStore5FReceptionistScript.ckir_BEFOREGOLDENRODDEPARTMENTSTOREFRUSTRATION0ITEMCODE",
@@ -9983,8 +9983,8 @@
   {
     "label": "MeetMomScript.ckir_BEFOREPOKEGEARGIFT0ITEMCODE",
     "address_range": {
-      "begin": 501083,
-      "end": 501086
+      "begin": 501086,
+      "end": 501089
     },
     "integer_values": "175 4 0",
     "hex_values": "$af $4 $0"
@@ -10010,8 +10010,8 @@
   {
     "label": "MomScript.ckir_BEFOREPOKEGEARBACKUP0ITEMCODE",
     "address_range": {
-      "begin": 501262,
-      "end": 501265
+      "begin": 501265,
+      "end": 501268
     },
     "integer_values": "175 4 0",
     "hex_values": "$af $4 $0"
@@ -17192,8 +17192,8 @@
   {
     "label": "SandstormHouseWoman.ckir_BEFOREROUTE27SANDSTORMHOUSE0ITEMCODE",
     "address_range": {
-      "begin": 504857,
-      "end": 504860
+      "begin": 504860,
+      "end": 504863
     },
     "integer_values": "158 229 1",
     "hex_values": "$9e $e5 $1"
@@ -17201,17 +17201,17 @@
   {
     "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM",
     "address_range": {
-      "begin": 504846,
-      "end": 504850
+      "begin": 504849,
+      "end": 504853
     },
-    "integer_values": "10 0 21 116",
-    "hex_values": "$a $0 $15 $74"
+    "integer_values": "10 0 24 116",
+    "hex_values": "$a $0 $18 $74"
   },
   {
     "label": "SandstormHouseWoman.ckir_BEFORE_timed_events_SANDSTORM_Loyal",
     "address_range": {
-      "begin": 504853,
-      "end": 504853
+      "begin": 504856,
+      "end": 504856
     },
     "integer_values": "",
     "hex_values": ""

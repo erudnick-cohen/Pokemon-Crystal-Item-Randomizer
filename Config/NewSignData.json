@@ -60,8 +60,8 @@
         "tileAddress": 708732
     },
     {
-        "start": 654091,
-        "end": 654141,
+        "start": 654131,
+        "end": 654181,
         "name": "BattleTowerOutsideSignText",
         "map": "BattleTowerOutside.asm",
         "commands": 4,

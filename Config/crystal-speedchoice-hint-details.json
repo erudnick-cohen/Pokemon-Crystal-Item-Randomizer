@@ -29,8 +29,8 @@
   {
     "label": "BattleTowerOutsideSignText.ctir_BEFORE_BattleTowerOutsideSignText",
     "address_range": {
-      "begin": 654091,
-      "end": 654142
+      "begin": 654131,
+      "end": 654182
     },
     "integer_values": "0 129 128 147 147 139 132 127 147 142 150 132 145 81 147 160 170 164 127 179 167 164 127 148 171 179 168 172 160 179 164 79 147 177 160 168 173 164 177 127 130 167 160 171 171 164 173 166 164 231 87",
     "hex_values": "$0 $81 $80 $93 $93 $8b $84 $7f $93 $8e $96 $84 $91 $51 $93 $a0 $aa $a4 $7f $b3 $a7 $a4 $7f $94 $ab $b3 $a8 $ac $a0 $b3 $a4 $4f $93 $b1 $a0 $a8 $ad $a4 $b1 $7f $82 $a7 $a0 $ab $ab $a4 $ad $a6 $a4 $e7 $57"

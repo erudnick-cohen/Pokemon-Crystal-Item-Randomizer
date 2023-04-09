@@ -566,19 +566,22 @@ AideScript_ReceiveTheBalls:
 
 ElmsAideScript:
 	faceplayer
-	opentext
 	checkevent EVENT_TRIED_AIDE_POTION
 	iffalse .SkipPotion
 	checkevent EVENT_GOT_AIDE_POTION
 	iftrue .SkipPotion
 	scall AideScript_GivePotion
+	closetext
 .SkipPotion
 	checkevent EVENT_TRIED_AIDE_POKE_BALLS
 	iffalse .SkipBalls
 	checkevent EVENT_GOT_AIDE_POKE_BALLS
 	iftrue .SkipBalls
 	scall AideScript_GiveYouBalls
+	closetext
+	end
 .SkipBalls
+    opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
