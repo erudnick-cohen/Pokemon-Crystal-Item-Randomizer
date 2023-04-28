@@ -3,63 +3,63 @@ Description: "Ensures that the fly HM is obtainable and usable before the player
 Changes:
     -
         Location: SS Aqua via Olivine
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
             - Squirtbottle
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: SS Aqua via Vermilion
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
             - Pass
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Route 44
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Diglett's Cave
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: League Gate via Route 26
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
         NewItemReqs:
             - Fly
     -
         Location: Victory Road
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Cerulean Gym Trainers
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Hidden Machine Part
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Route 26 Max Elixer
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge
     -
         Location: Route 27 Solar Beam TM
-        AddItemReqs:
+        AddRecommendedItemReqs:
             - Fly
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - Storm Badge

@@ -1105,6 +1105,7 @@ def LabelItemLocation(location):
 		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 		#switch spaces to tabs.....
 		newcode = newcode.replace("    ","\t")
+		#newcode = newcode.replace("verbosegiveitem", "giveitem")
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
 		if(location.IsBall or location.IsBerry):
@@ -1233,6 +1234,7 @@ def LabelItemLocation(location):
 			newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 			#switch spaces to tabs.....
 			newcode = newcode.replace("    ","\t")
+			#newcode = newcode.replace("verbosegiveitem", "giveitem")
 
 		if not location.IsSpecial:
 			newfile = filecode.replace(oldcode,newcode)

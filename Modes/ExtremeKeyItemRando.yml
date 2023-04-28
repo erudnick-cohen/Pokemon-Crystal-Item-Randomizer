@@ -83,5 +83,3 @@ AllowedLocations:
 Goal: Red
 FlagsSet:
     - Kanto Mode
-PreventAddItems:
-    - Rainbow Wing

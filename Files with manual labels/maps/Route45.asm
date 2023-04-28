@@ -183,10 +183,15 @@ TrainerHikerParry:
 	scall Route45RematchM
 	winlosstext HikerParry3BeatenText, 0
 	readmem wParryFightCount
+.ckir_BEFORE_Parry::
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
+.ckir_AFTER_Parry::
+.ckir_BEFORE_Parry_Fight2::
+.ckir_BEFORE_Parry_RedundantLabels::
 .Fight2:
+.ckir_AFTER_Parry_Fight2::
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
 .Fight1:
@@ -199,6 +204,7 @@ TrainerHikerParry:
 	loadmem wParryFightCount, 1
 	clearflag ENGINE_PARRY
 	end
+.ckir_AFTER_Parry_RedundantLabels::
 
 .LoadFight1:
 	loadtrainer HIKER, PARRY1

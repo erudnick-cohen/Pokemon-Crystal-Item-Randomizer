@@ -174,5 +174,43 @@
         },
         "label": "TrainerPicnickerErin1.ckir_BEFORE_Erin",
         "description": "Makes it so you can fight rematch trainers only one additional time to get their items"
+    },
+    {
+        "integer_values": {
+            "old": [
+                6,
+                2,
+                241,
+                86,
+                6,
+                1,
+                247,
+                86,
+                6,
+                0,
+                253,
+                86
+            ],
+            "new": [
+                6,
+                2,
+                251,
+                97,
+                6,
+                1,
+                251,
+                97,
+                6,
+                0,
+                251,
+                97
+            ]
+        },
+        "address_range": {
+            "begin": 1696239,
+            "end": 1696251
+        },
+        "label": "TrainerHikerParry.ckir_BEFORE_Parry",
+        "description": "Makes it so you can fight rematch trainers only one additional time to get their items"
     }
 ]

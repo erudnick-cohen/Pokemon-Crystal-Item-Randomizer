@@ -15,67 +15,67 @@ Changes:
             - Banned
     -
         Location: Lance
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Woke Snorlax
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Goldenrod Tunnel
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Rockets In Radio Tower
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Victory Road Rival Fight
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Red
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Tin Tower Sages
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Pewter City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Route 25 Trainer Gauntlet
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Cerulean City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Vermilion City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Celadon Gym
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Fuchsia Gym
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Cinnabar Island Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Viridian City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
     -
         Location: Saffron City Gym Badge
-        AddFlagReqs:
+        AddRecommendedFlagReqs:
             - All X Items
 
 

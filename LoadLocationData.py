@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 
@@ -6,6 +7,21 @@ import Location
 import Gym
 import yaml
 from collections import defaultdict
+
+def GetDataHash():
+	folders = ["Map Data", "Gym Data"]
+	data = []
+	for item in folders:
+		newitems = os.listdir(item)
+		newitems.sort()
+		for i in newitems:
+			f = open(item + "/" + i, encoding="utf8")
+			filedata = f.read()
+			data.append(filedata)
+			f.close()
+
+	new_hash = str.join(";", data)
+	return hashlib.md5(new_hash.encode()).hexdigest()
 
 def readTSVFile(filename):
 	file = open(filename)

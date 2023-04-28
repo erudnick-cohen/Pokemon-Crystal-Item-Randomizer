@@ -1077,7 +1077,10 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 		if len(changes) > 0:
 			random.shuffle(trashItems)
 
-	starting_trash = trashItems.copy()
+	if trashItems is not None:
+		starting_trash = trashItems.copy()
+	else:
+		starting_trash = None
 
 	#print("Trashcount2:", len(trashItems))
 

@@ -18828,6 +18828,51 @@
     "hex_values": "$9e $4 $1 $8 $13 $5a $3 $d $5a $9e $5 $1 $8 $13 $5a"
   },
   {
+    "label": "TrainerHikerParry.ckir_BEFOREROUTE45PARRYIRON0ITEMCODE",
+    "address_range": {
+      "begin": 1696312,
+      "end": 1696315
+    },
+    "integer_values": "158 28 1",
+    "hex_values": "$9e $1c $1"
+  },
+  {
+    "label": "TrainerHikerParry.ckir_BEFOREROUTE45PARRYIRON0ITEMCODEB",
+    "address_range": {
+      "begin": 1696330,
+      "end": 1696333
+    },
+    "integer_values": "158 28 1",
+    "hex_values": "$9e $1c $1"
+  },
+  {
+    "label": "TrainerHikerParry.ckir_BEFORE_Parry",
+    "address_range": {
+      "begin": 1696239,
+      "end": 1696251
+    },
+    "integer_values": "6 2 251 97 6 1 1 98 6 0 7 98",
+    "hex_values": "$6 $2 $fb $61 $6 $1 $1 $62 $6 $0 $7 $62"
+  },
+  {
+    "label": "TrainerHikerParry.ckir_BEFORE_Parry_Fight2",
+    "address_range": {
+      "begin": 1696251,
+      "end": 1696251
+    },
+    "integer_values": "",
+    "hex_values": ""
+  },
+  {
+    "label": "TrainerHikerParry.ckir_BEFORE_Parry_RedundantLabels",
+    "address_range": {
+      "begin": 1696251,
+      "end": 1696276
+    },
+    "integer_values": "49 205 0 9 33 98 49 68 0 9 20 98 94 44 20 95 96 27 12 218 1 53 123 0 145",
+    "hex_values": "$31 $cd $0 $9 $21 $62 $31 $44 $0 $9 $14 $62 $5e $2c $14 $5f $60 $1b $c $da $1 $35 $7b $0 $91"
+  },
+  {
     "label": "TrainerHouse1F_Blocks.ckir_BEFORE_TrainerHouse1F_Blocks",
     "address_range": {
       "begin": 723787,
