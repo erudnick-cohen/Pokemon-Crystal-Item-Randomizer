@@ -428,7 +428,7 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 			if self.item_rando.PlandoMode:
 				self.item_rando.settings["Plando"] = {}
 				for key in self.item_rando.PlandoData.keys():
-					self.item_rando.settings["Plando"][key] = self.PlandoData[key]
+					self.item_rando.settings["Plando"][key] = self.item_rando.PlandoData[key]
 
 			if "ModeVariables" not in self.item_rando.settings:
 				self.item_rando.settings["ModeVariables"] = {}
@@ -469,8 +469,8 @@ class RunWindow(QtWidgets.QMainWindow, RandomizerGUI.Ui_MainWindow):
 						itemUse = itemSplit[0]
 					print("Plando-load", i, itemUse)
 					newSpoiler[i] = itemUse
-			self.PlandoData = newSpoiler
-			self.PlandoMode = True
+			self.item_rando.PlandoData = newSpoiler
+			self.item_rando.PlandoMode = True
 			self.TurnOffPlando.setEnabled(True)
 			
 	def DeactivatePlando(self):

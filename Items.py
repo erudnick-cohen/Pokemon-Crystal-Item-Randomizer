@@ -39,7 +39,8 @@ def GetKeyItemMap():
 		"Water Stone": "WATER_STONE", "Rock Smash": "TM_ROCK_SMASH", "Pokedex": "ENGINE_POKEDEX",
 		"Sweet Scent": "TM_SWEET_SCENT", "Coin Case": "COIN_CASE", "Blue Card": "BLUE_CARD",
 		"X Attack": "X_ATTACK", "X Defend": "X_DEFEND", "X Speed": "X_SPEED","X Special": "X_SPECIAL",
-		"X Accuracy": "X_ACCURACY", "Guard Spec": "GUARD_SPEC", "Dire Hit": "DIRE_HIT"
+		"X Accuracy": "X_ACCURACY", "Guard Spec": "GUARD_SPEC", "Dire Hit": "DIRE_HIT", "Itemfinder": "ITEMFINDER",
+		"GS Ball": "GS_BALL"
 	}
 
 def getInverseKeyItemMap():

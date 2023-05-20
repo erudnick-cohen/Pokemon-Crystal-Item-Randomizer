@@ -702,6 +702,15 @@
     "hex_values": "$18 $9"
   },
   {
+    "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSGROWLITHE0ITEMCODE",
+    "address_range": {
+      "begin": 1611549,
+      "end": 1611552
+    },
+    "integer_values": "158 22 1",
+    "hex_values": "$9e $16 $1"
+  },
+  {
     "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSLICKITUNG0ITEMCODE",
     "address_range": {
       "begin": 1611483,
@@ -736,15 +745,6 @@
     },
     "integer_values": "158 24 1",
     "hex_values": "$9e $18 $1"
-  },
-  {
-    "label": "BillsGrandpa.ckir_BEFOREBILLSGRANDPAWANTSVULPIX0ITEMCODE",
-    "address_range": {
-      "begin": 1611549,
-      "end": 1611552
-    },
-    "integer_values": "158 22 1",
-    "hex_values": "$9e $16 $1"
   },
   {
     "label": "BlackthornCity_Blocks.ckir_BEFORE_BlackthornCity_Blocks",
@@ -17708,8 +17708,8 @@
       "begin": 1998858,
       "end": 1998859
     },
-    "integer_values": "12",
-    "hex_values": "$c"
+    "integer_values": "13",
+    "hex_values": "$d"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",

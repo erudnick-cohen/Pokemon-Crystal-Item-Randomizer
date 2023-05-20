@@ -268,7 +268,7 @@ Location:
                         TrainerList: 
                         Sublocations:
                     -
-                        Name: Bills Grandpa Wants Vulpix
+                        Name: Bills Grandpa Wants Growlithe
                         FileName: BillsHouse.asm
                         Type: Item
                         HasPKMN: No
@@ -305,7 +305,7 @@ Location:
                         WildTableList: 
                         LocationReqs:
                             - Bills Grandpas House
-                            - Bills Grandpa Wants Vulpix
+                            - Bills Grandpa Wants Growlithe
                             - Most Map Access
                         FlagReqs:
                             - Mon Locked Checks
