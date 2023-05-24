@@ -43,14 +43,14 @@ def handleBadSpoiler(resultDict, flags, minSize=None, maxSize=None):
 		if s_value not in reachable or reachable[s_value].item == "SILVER_LEAF":
 			prepared_commands.append("Cannot reach:"+s+" "+s_value)
 
-	if minSize is None and maxSize is None:
-		print(prepared_commands)
-	elif minSize is None and len(prepared_commands) < maxSize:
-		print(prepared_commands)
-	elif maxSize is None and len(prepared_commands) > minSize:
-		print(prepared_commands)
-	elif len(prepared_commands) < maxSize and len(prepared_commands) > minSize:
-		print(prepared_commands)
+	#if minSize is None and maxSize is None:
+	#	print(prepared_commands)
+	#elif minSize is None and len(prepared_commands) < maxSize:
+	#	print(prepared_commands)
+	#elif maxSize is None and len(prepared_commands) > minSize:
+	#	print(prepared_commands)
+	#elif len(prepared_commands) < maxSize and len(prepared_commands) > minSize:
+	#	print(prepared_commands)
 
 
 

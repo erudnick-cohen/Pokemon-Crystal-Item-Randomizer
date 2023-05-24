@@ -336,7 +336,7 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 
 
 def LoadEventFlags():
-	event_flags_filename = "data/event_flags.asm"
+	event_flags_filename = "Data/event_flags.asm"
 	event_data = open(event_flags_filename, encoding="utf8")
 	event_lines = event_data.readlines()
 	event_data.close()
@@ -355,7 +355,7 @@ def LoadEventFlags():
 
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
-	yamlfile = open("badgeData.yml",encoding='utf-8')
+	yamlfile = open("BadgeData.yml",encoding='utf-8')
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
 

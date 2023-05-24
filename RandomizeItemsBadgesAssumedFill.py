@@ -1363,7 +1363,7 @@ def checkBeatability(spoiler, locationTree, inputFlags, trashItems,
 	#TODO Add a warning here
 	if trashItems is not None and len(trashItems) != 0:
 		warnings["HasLeftoverTrash"] = True
-		print("leftover trash:", trashItems)
+		#print("leftover trash:", trashItems)
 
 	if failed:
 		raise Exception('Failed mapping due to item requirement seed!')
