@@ -1,4 +1,0 @@
-Solution:
-  Squirtbottle: Pokegear Gift
-  Pass: Route 29 Potion
-  S S Ticket: Route 30 Berry Man

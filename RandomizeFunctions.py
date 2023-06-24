@@ -2488,8 +2488,6 @@ def IsVersionSupported(major, minor, revision):
     return True
 
 
-
-
 def CheckVersion(addressData, romMap):
     if "ckir_BEFORE_MajorVersionNumber" in addressData:
         majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]

@@ -1,22 +1,22 @@
-
 VersionNumberText::
-        db "v7.4.13@"
+        db "v8.0.0@"
 
 SpeedchoiceVersion:
-; Speedchoice Major Version
 .ckir_BEFORE_MajorVersionNumber::
-db 7
+; Speedchoice Major Version
+db 8
 .ckir_AFTER_MajorVersionNumber::
 
 ; Speedchoice Minor Version
 .ckir_BEFORE_MinorVersionNumber::
-db 4
+db 0
 .ckir_AFTER_MinorVersionNumber::
 
 ; Speedchoice Revision
 .ckir_BEFORE_RevisionVersionNumber::
-db 13
+db 0
 .ckir_AFTER_RevisionVersionNumber::
+
 
 IntroPermaOptions::
         xor a

@@ -17687,29 +17687,29 @@
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_MajorVersionNumber",
     "address_range": {
-      "begin": 1998856,
-      "end": 1998857
+      "begin": 1998855,
+      "end": 1998856
     },
-    "integer_values": "7",
-    "hex_values": "$7"
+    "integer_values": "8",
+    "hex_values": "$8"
   },
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_MinorVersionNumber",
     "address_range": {
-      "begin": 1998857,
-      "end": 1998858
+      "begin": 1998856,
+      "end": 1998857
     },
-    "integer_values": "4",
-    "hex_values": "$4"
+    "integer_values": "0",
+    "hex_values": "$0"
   },
   {
     "label": "SpeedchoiceVersion.ckir_BEFORE_RevisionVersionNumber",
     "address_range": {
-      "begin": 1998858,
-      "end": 1998859
+      "begin": 1998857,
+      "end": 1998858
     },
-    "integer_values": "13",
-    "hex_values": "$d"
+    "integer_values": "0",
+    "hex_values": "$0"
   },
   {
     "label": "SproutTower1FParlyzHeal.ckir_BEFORESPROUTTOWERPARLYZHEAL0ITEMCODE",
