@@ -52,13 +52,13 @@ Changes:
         AddRecommendedFlagReqs:
             - Storm Badge
     -
-        Location: Sandstorm TM
+        Location: Route 27 Sandstorm House
         AddRecommendedItemReqs:
             - Fly
         AddRecommendedFlagReqs:
             - Storm Badge
     -
-        Location: Solarbeam TM
+        Location: Route 27 Solar Beam TM
         AddRecommendedItemReqs:
             - Fly
         AddRecommendedFlagReqs:
