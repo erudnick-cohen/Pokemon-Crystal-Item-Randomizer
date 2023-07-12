@@ -1,0 +1,51 @@
+Name: Randomize Pokegear and Pokegear Cards
+Description: Makes logic aware that Pokegear and Pokegear Cards are being randomized. Also shuffles the Pokedex.
+AddedItems:
+    - Pokegear
+    - Radio Card
+    - Expansion Card
+AddedTrash:
+    - ENGINE_POKEDEX
+Changes:
+    -
+        Location: Woke Snorlax
+        RemoveLocationReqs:
+            - Expansion Card Gift Access
+            - Radio Card Quiz Access
+            - Pokegear Gift Access
+        AddFlagReqs:
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+
+    -
+        Location: Viridian City via Route 2
+        NewLocationReqs:
+            - Route 2
+        NewFlagReqs:
+            - Hive Badge
+        NewItemReqs:
+            - Cut
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+    -
+        Location: League Gate via Viridian
+        NewItemReqs:
+            - Cut
+    -
+        Location: Oak Pokedex
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Radio Card Quiz
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Pokegear Gift
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Expansion Card Gift
+        RemoveFlagReqs:
+            - Impossible

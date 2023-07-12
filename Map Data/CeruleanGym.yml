@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Cerulean
+        WarpReqs: Cerulean Gym
         Sublocations:
             -
                 Name: Hidden Machine Part
@@ -22,7 +23,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Cerulean City
+                LocationReqs: Cerulean Gym
                 FlagReqs:
                     - Power Plant
                 ItemReqs:
@@ -45,7 +46,7 @@ Location:
                 WildTableList:
                 LocationReqs: Cerulean Gym
                 FlagReqs:
-                    - Date Ruined
+                    - Misty In Gym
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:

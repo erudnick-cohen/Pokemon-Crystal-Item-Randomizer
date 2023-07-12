@@ -28,7 +28,9 @@ BlackthornCity_MapScripts:
 	disappear BLACKTHORNCITY_SANTOS
 	return
 
+.ckir_BEFORE_timed_events_SANTOS_SantosAppears::
 .SantosAppears:
+.ckir_AFTER_timed_events_SANTOS_SantosAppears::
 	appear BLACKTHORNCITY_SANTOS
 	return
 
@@ -119,7 +121,9 @@ SantosScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_SANTOS_NotSaturday::
 .NotSaturday:
+.ckir_AFTER_timed_events_SANTOS_NotSaturday::
 	writetext SantosNotSaturdayText
 	waitbutton
 	closetext

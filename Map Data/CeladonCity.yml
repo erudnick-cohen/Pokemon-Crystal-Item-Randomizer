@@ -37,52 +37,892 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+    -
+        Name: Celadon Mansion Curse
+        FileName: CeladonMansionRoofHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+            - Timed Events
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        WarpReqs: Celadon Curse House
+        NormalItem: TM_CURSE
+        Code: |
+            .Night:
+                writetext CeladonMansionRoofHousePharmacistStoryText
+                promptbutton
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_TM03_CURSE
+    -
+        Name: Celadon Cafe Leftovers
+        FileName: CeladonCafe.asm
+        SecondaryFile: CeladonCafe.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+            - NPC Trash Can
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Celadon Cafe
+        NormalItem: LEFTOVERS
+        IsSpecial: Yes
+        Code: |
+            CeladonCafeTrashcan:
+            .ckir_BEFORE_LEFTOVERS_CAN::
+                ITEMLINE
+            .ckir_AFTER_LEFTOVERS_CAN::
+        SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Celadon Game Corner
+        FileName: GoldenrodGameCorner.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Celadon Prize Corner
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
             -
-                Name: Celadon Mansion Curse
-                FileName: CeladonMansionRoofHouse.asm
-                Type: Item
+                Name: Celadon Game Corner Double Team TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Celadon City
+                LocationReqs: Celadon Game Corner
                 FlagReqs:
-                    - Timed Events
+                    - Game Corner Access
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                Text:
-                TrainerList:
-                NormalItem: TM_CURSE
+                NormalItem: TM_DOUBLE_TEAM
+                WarpReqs:
                 Code: |
-                    .Night:
-                        writetext CeladonMansionRoofHousePharmacistStoryText
-                        promptbutton
+                    .DoubleTeam:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM32
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveDoubleTeam
+                        getitemname STRING_BUFFER_3, TM_DOUBLE_TEAM
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GiveDoubleTeam
                         ITEMLINE
-                        iffalse .NoRoom
-                        setevent EVENT_GOT_TM03_CURSE
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM32_COINS
+                        setevent EVENT_CGC_TM32
+                        sjump CeladonPrizeRoom_purchased
+                Text:
+                HardcodedName: |
+                    db "TM32         1500@"
+                TrainerList:
+                Sublocations:
             -
-                Name: Celadon Cafe Leftovers
-                FileName: CeladonCafe.asm
-                SecondaryFile: CeladonCafe.asm
-                Type: Item
+                Name: Celadon Game Corner Psychic TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Celadon City
+                LocationReqs: Celadon Game Corner
                 FlagReqs:
-                    - NPC Trash Can
-                    - Impossible
+                    - Game Corner Access
+                NormalItem: TM_PSYCHIC
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs:
+                Code: |
+                    .Psychic:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM29
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GivePsychic
+                        getitemname STRING_BUFFER_3, TM_PSYCHIC_M
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GivePsychic
+                        ITEMLINE
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM29_COINS
+                        setevent EVENT_CGC_TM29
+                        sjump CeladonPrizeRoom_purchased
+                Text:
+                HardcodedName: |
+                    db "TM29         3500@"
+                TrainerList:
+                Sublocations:
+            -
+                Name: Celadon Game Corner Hyper Beam TM
+                FileName: CeladonGameCornerPrizeRoom.asm
+                Type: Prize
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Game Corner
+                FlagReqs:
+                    - Game Corner Access
+                NormalItem: TM_HYPER_BEAM
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                WarpReqs:
+                Code: |
+                    .HyperBeam:
+                        checkcoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+                        ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
+                        checkevent EVENT_CGC_TM15
+                        iftrue CeladonPrizeRoom_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveHyperBeam
+                        getitemname STRING_BUFFER_3, TM_HYPER_BEAM
+                        scall CeladonPrizeRoom_askbuy
+                        iffalse CeladonPrizeRoom_CancelPurchaseScript
+                    .GiveHyperBeam
+                        ITEMLINE
+                        iffalse CeladonPrizeRoom_notenoughroom
+                        takecoins CELADONGAMECORNERPRIZEROOM_TM15_COINS
+                        setevent EVENT_CGC_TM15
+                        sjump CeladonPrizeRoom_purchased
+                Text:
+                HardcodedName: |
+                    db "TM15         7500@"
+                TrainerList:
+                Sublocations:
+
+
+    -
+        Name: Celadon Dept Store
+        FileName: KurtsHouse.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Celadon City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Celadon Dept. Store
+        Sublocations:
+            -
+                Name: Celadon Dept Store 2F1 Potion
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
                 Text:
                 TrainerList:
-                NormalItem: LEFTOVERS
-                IsSpecial: Yes
-                Code: |
-                    CeladonCafeTrashcan:
-                    .ckir_BEFORE_LEFTOVERS_CAN::
-                        ITEMLINE
-                    .ckir_AFTER_LEFTOVERS_CAN::
-                SecondaryCode: '    bg_event  7,  1, BGEVENT_ITEM, CeladonCafeTrashcan'
+                NormalItem: POTION
+            -
+                Name: Celadon Dept Store 2F1 Super Potion
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                NormalItem: SUPER_POTION
+            -
+                Name: Celadon Dept Store 2F1 Hyper Potion
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: HYPER_POTION
+            -
+                Name: Celadon Dept Store 2F1 Max Potion
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: MAX_POTION
+            -
+                Name: Celadon Dept Store 2F1 Revive
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REVIVE
+            -
+                Name: Celadon Dept Store 2F1 Super Repel
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_REPEL
+            -
+                Name: Celadon Dept Store 2F1 Max Repel
+                FileName: MartCeladon2F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: MAX_REPEL
+            -
+                Name: Celadon Dept Store 2F2 Poke Ball
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_BALL
+            -
+                Name: Celadon Dept Store 2F2 Great Ball
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+            -
+                Name: Celadon Dept Store 2F2 Ultra Ball
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ULTRA_BALL
+            -
+                Name: Celadon Dept Store 2F2 Escape Rope
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ESCAPE_ROPE
+            -
+                Name: Celadon Dept Store 2F2 Full Heal
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FULL_HEAL
+            -
+                Name: Celadon Dept Store 2F2 Antidote
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+            -
+                Name: Celadon Dept Store 2F2 Burn Heal
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: BURN_HEAL
+            -
+                Name: Celadon Dept Store 2F2 Ice Heal
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ICE_HEAL
+            -
+                Name: Celadon Dept Store 2F2 Awakening
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+            -
+                Name: Celadon Dept Store 2F2 Parlyz Heal
+                FileName: MartCeladon2F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+            -
+                Name: Celadon Dept Store 3F Hidden Power TM
+                FileName: MartCeladon3F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TM_HIDDEN_POWER
+            -
+                Name: Celadon Dept Store 3F Sunny Day TM
+                FileName: MartCeladon3F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TM_SUNNY_DAY
+            -
+                Name: Celadon Dept Store 3F Protect TM
+                FileName: MartCeladon3F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TM_PROTECT
+            -
+                Name: Celadon Dept Store 3F Rain Dance TM
+                FileName: MartCeladon3F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TM_RAIN_DANCE
+            -
+                Name: Celadon Dept Store 3F Sandstorm TM
+                FileName: MartCeladon3F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TM_SANDSTORM
+            -
+                Name: Celadon Dept Store 4F Poke Doll
+                FileName: MartCeladon4F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_DOLL
+            -
+                Name: Celadon Dept Store 4F Lovely Mail
+                FileName: MartCeladon4F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: LOVELY_MAIL
+            -
+                Name: Celadon Dept Store 4F Surf Mail
+                FileName: MartCeladon4F
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SURF_MAIL
+            -
+                Name: Celadon Dept Store 5F1 HP Up
+                FileName: MartCeladon5F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: HP_UP
+            -
+                Name: Celadon Dept Store 5F1 Protein
+                FileName: MartCeladon5F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PROTEIN
+            -
+                Name: Celadon Dept Store 5F1 Iron
+                FileName: MartCeladon5F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: IRON
+            -
+                Name: Celadon Dept Store 5F1 Carbos
+                FileName: MartCeladon5F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: CARBOS
+            -
+                Name: Celadon Dept Store 5F1 Calcium
+                FileName: MartCeladon5F1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: CALCIUM
+            -
+                Name: Celadon Dept Store 5F2 X Accuracy
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_ACCURACY
+            -
+                Name: Celadon Dept Store 5F2 Guard Spec
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GUARD_SPEC
+            -
+                Name: Celadon Dept Store 5F2 X Dire Hit
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: DIRE_HIT
+            -
+                Name: Celadon Dept Store 5F2 X Attack
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_ATTACK
+            -
+                Name: Celadon Dept Store 5F2 X Defend
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_DEFEND
+            -
+                Name: Celadon Dept Store 5F2 X Speed
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_SPEED
+            -
+                Name: Celadon Dept Store 5F2 X Special
+                FileName: MartCeladon5F2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_SPECIAL
+            -
+                Name: Celadon Department Store Vending Machine Fresh Water
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FRESH_WATER
+                IsBall: No
+                Code: |
+                    .FreshWater:
+                        checkevent EVENT_C_VM_FW
+                        iftrue .AlreadyBought
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_FRESH_WATER_PRICE
+                        setevent EVENT_C_VM_FW
+                        checkitemrando
+                        iftrue .Bought
+                        getitemname STRING_BUFFER_3, FRESH_WATER
+                        sjump .VendItem
+                HardcodedName: |
+                        db "FRESH WATER  ¥200@"
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Celadon Department Store Vending Machine Soda Pop
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: SODA_POP
+                IsBall: No
+                Code: |
+                    .SodaPop:
+                        checkevent EVENT_C_VM_SP
+                        iftrue .AlreadyBought
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_SODA_POP_PRICE
+                        setevent EVENT_C_VM_SP
+                        checkitemrando
+                        iftrue .Bought
+                        getitemname STRING_BUFFER_3, SODA_POP
+                        sjump .VendItem
+                HardcodedName: |
+                        db "SODA POP     ¥300@"
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Celadon Department Store Vending Machine Lemonade
+                FileName: CeladonDeptStore6F.asm
+                SecondaryFile: CeladonDeptStore6F.asm
+                Type: Vending Machine
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Celadon Dept Store
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: LEMONADE
+                IsBall: No
+                Code: |
+                    .Lemonade:
+                        checkevent EVENT_C_VM_L
+                        iftrue .AlreadyBought
+                        checkmoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
+                        ifequal HAVE_LESS, .NotEnoughMoney
+                        ITEMLINE
+                        iffalse .NotEnoughSpace
+                        takemoney YOUR_MONEY, CELADONDEPTSTORE6F_LEMONADE_PRICE
+                        setevent EVENT_C_VM_L
+                        checkitemrando
+                        iftrue .Bought
+                        getitemname STRING_BUFFER_3, LEMONADE
+                        sjump .VendItem
+                HardcodedName: |
+                        db "LEMONADE     ¥350@"
+                Text:
+                AREALV:
+                TrainerList:
                 Sublocations:

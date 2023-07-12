@@ -1,0 +1,56 @@
+Name: Vanilla Clair
+Description: Causes Clair to behave as she does in vanilla, meaning that you must enter the shrine in dragon's den (and thus use whirlpool to get there) in order to access Clair's badge and TM
+NewGamePatches:
+    - 'Patches/VanillaClair.json'
+AddedItems:
+    - Whirlpool
+Changes:
+    -
+        Location: Blackthorn City Gym Badge
+        NewLocationReqs:
+            - Dragons Den Shrine Building
+        NewFlagReqs:
+        NewItemReqs:
+    -
+        Location: Clair TM
+        NewLocationReqs:
+            - Clair TM Banned
+        NewFlagReqs:
+        NewItemReqs:
+    #-
+        #Location: Dragons Den
+        #NewLocationReqs:
+            #- Blackthorn Gym Trainers After Boulders
+    - 
+        Location: Mt. Silver Unlock A
+        NewItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Whirlpool
+            - Secret Potion
+            - Card Key
+            - Squirtbottle
+            - Pass
+    - 
+        Location: Mt. Silver Unlock B
+        NewItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Whirlpool
+            - Secret Potion
+            - Card Key
+            - S S Ticket
+            - Pass
+    - 
+        Location: Mt. Silver Unlock C
+        NewItemReqs:
+            - Cut
+            - Surf
+            - Strength
+            - Whirlpool
+            - Secret Potion
+            - Card Key
+            - Squirtbottle
+            - S S Ticket

@@ -1,0 +1,15 @@
+Name: Dex For Mon Locked Checks
+Description: Adds Pokedex and Sweet Scent as progress items and ensures they are both required before Mon Locked Checks are required.
+AddedItems:
+    - Pokedex
+    - Sweet Scent
+Changes:
+    -
+        Location: Mon Locked Checks
+        AddRecommendedFlagReqs:
+            - Pokedex
+            - Sweet Scent
+        RemoveFlagReqs:
+            - Banned
+            - Mon Locked Checks
+

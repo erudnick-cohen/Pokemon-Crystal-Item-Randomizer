@@ -1,0 +1,60 @@
+Name: Shopsanity
+Description: Adds shop items into logic.
+NewGamePatches:
+    - 'Patches/ShopsAlways.json'
+    - 'Patches/CianwoodPharmacyShop.json'
+FlagsSet:
+    - Shopsanity
+AddedItems:
+    - Rock Smash
+    - Water Stone
+    - Escape Rope
+Changes:
+    -
+        Location: Shopsanity
+        RemoveFlagReqs:
+            - Banned
+
+    -
+        Location: Goldenrod Department Store 4F Water Stone
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Violet Mart Escape Rope
+        RemoveFlagReqs:
+            - Impossible
+
+    -
+        Location: Water Stone Have
+        AddItemReqs:
+            - Water Stone
+        RemoveFlagReqs:
+            - Goldenrod Store Accessible
+
+    -
+        Location: Ruins of Alph Water Chamber Access
+        AddItemReqs:
+            - Water Stone
+        RemoveLocationReqs:
+            - Goldenrod City
+
+    -
+        Location: Ruins of Alph Rope Chamber Access
+        AddItemReqs:
+            - Escape Rope
+
+    -
+        Location: Escape Rope Had
+        AddItemReqs:
+            - Escape Rope
+
+    -
+        Location: Use Rock Smash Base
+        AddFlagReqs:
+            - Impossible
+
+    -
+        Location: Goldenrod Department Store 5F Rock Smash TM
+        RemoveFlagReqs:
+            - Impossible

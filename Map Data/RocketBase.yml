@@ -1,12 +1,47 @@
 Location:
-    -
+      -
+        Name: Rocket Base Entry
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+      -
+        Name: Rocket Base Entry
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+          - Mahogany Town
+        FlagReqs:
+            - Gyarados Beaten
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+      -
+
         Name: Rocket Base
         FileName: MahoganyTown.asm
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: 
-            - Red Scale Dropped
+        LocationReqs: Rocket Base Entry
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -34,6 +69,7 @@ Location:
                     - GRUNTM 20
                     - GRUNTM 21
                     - SCIENTIST 3
+                WarpReqs: Rocket Base Statue Room
                 Sublocations:
                     -
                         Name: Rocket Base 1F Hyper Potion
@@ -172,53 +208,59 @@ Location:
                 Code:
                 Text:
                 AREALV: 17
-                TrainerList: 
+                TrainerList:
                     - GRUNTM 18
                     - GRUNTM 19
                     - GRUNTM 17
+                WarpReqs: Generator Passage
                 Sublocations:
-                    -
-                        Name: Rocket Base 2F Thief TM
-                        FileName: TeamRocketBaseB2F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Rocket Base 2F
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: TM_THIEF
-                        Code: |
-                            TeamRocketBaseB2FTMThief:
-                                ITEMLINE
-                        Text:
-                        TrainerList: 
-                        Sublocations:
-                    -
-                        Name: Rocket Base Hidden Full Heal
-                        FileName: TeamRocketBaseB2F.asm
-                        SecondaryFile: TeamRocketBaseB2F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Rocket Base 2F
-                        FlagReqs:
-                            - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: FULL_HEAL
-                        Code: |
-                            TeamRocketBaseB2FHiddenFullHeal:
-                                ITEMLINE
-                        SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
-                        Text:
-                        TrainerList: 
-                        Sublocations:
+
             -
-                Name: Rocket Base 3F
+                Name: Rocket Base Hidden Full Heal
+                FileName: TeamRocketBaseB2F.asm
+                SecondaryFile: TeamRocketBaseB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rocket Base 2F
+                FlagReqs:
+                    - Hidden Items
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                Code: |
+                    TeamRocketBaseB2FHiddenFullHeal:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 26,  7, BGEVENT_ITEM, TeamRocketBaseB2FHiddenFullHeal'
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Rocket Base B2F
+            -
+                Name: Rocket Base 2F Thief TM
+                FileName: TeamRocketBaseB2F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Rocket Base 3F Admin
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                IsBall: Yes
+                NormalItem: TM_THIEF
+                Code: |
+                    TeamRocketBaseB2FTMThief:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Thief Room
+
+            -
+
+                Name: Rocket Base 3F Hall
                 FileName: TeamRocketBaseB3F.asm
                 Type: Map
                 HasPKMN: Yes
@@ -227,16 +269,17 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Rocket Base Passwords
                 ReachableReqs:
                 Code:
                 Text:
                 AREALV: 18
-                TrainerList: 
+                TrainerList:
                     - GRUNTF 5
                     - GRUNTM 9
-                    - EXECUTIVEM 4
                     - SCIENTIST 1
                     - SCIENTIST 2
+                WarpReqs: Rocket Hideout Passwords Room
                 Sublocations:
                     -
                         Name: Rocket Base 3F Protein
@@ -244,7 +287,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -255,15 +298,16 @@ Location:
                             TeamRocketBaseB3FProtein:
                                 ITEMLINE
                         Text:
-                        TrainerList: 
+                        TrainerList:
                         Sublocations:
+
                     -
                         Name: Rocket Base 3F X Special
                         FileName: TeamRocketBaseB3F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -271,18 +315,19 @@ Location:
                         IsBall: Yes
                         NormalItem: X_SPECIAL
                         Code: |
-                            TeamRocketBaseB3FXSpecial:
-                                ITEMLINE
+                          TeamRocketBaseB3FXSpecial:
+                              ITEMLINE
                         Text:
-                        TrainerList: 
+                        TrainerList:
                         Sublocations:
+
                     -
                         Name: Rocket Base 3F Full Heal
                         FileName: TeamRocketBaseB3F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -290,18 +335,19 @@ Location:
                         IsBall: Yes
                         NormalItem: FULL_HEAL
                         Code: |
-                            TeamRocketBaseB3FFullHeal:
-                                ITEMLINE
+                          TeamRocketBaseB3FFullHeal:
+                              ITEMLINE
                         Text:
-                        TrainerList: 
+                        TrainerList:
                         Sublocations:
+
                     -
                         Name: Rocket Base 3F Ice Heal
                         FileName: TeamRocketBaseB3F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Hall
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -309,18 +355,39 @@ Location:
                         IsBall: Yes
                         NormalItem: ICE_HEAL
                         Code: |
-                            TeamRocketBaseB3FIceHeal:
-                                ITEMLINE
+                          TeamRocketBaseB3FIceHeal:
+                              ITEMLINE
                         Text:
-                        TrainerList: 
+                        TrainerList:
                         Sublocations:
+
+
+
+            -
+                Name: Rocket Base 3F Admin
+                FileName: TeamRocketBaseB3F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Rocket Base 3F Hall
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 18
+                TrainerList:
+                    - EXECUTIVEM 4
+                WarpReqs: Rocket Hideout Admin Room
+                Sublocations:
                     -
                         Name: Rocket Base 3F Ultra Ball
                         FileName: TeamRocketBaseB3F.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Rocket Base 3F
+                        LocationReqs: Rocket Base 3F Admin
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -333,14 +400,33 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
+                    -
+                        Name: Rocket Base Executive
+                        FileName: TeamRocketBaseB3F.asm
+                        Type: Map
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Rocket Base 3F Admin
+                        FlagReqs:
+                            - Rocket Base Passwords
+                        ItemReqs:
+                        FlagsSet:
+                            - Generator Password
+                        ReachableReqs:
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
             -
                 Name: Rocket Base Whirlpool HM
+                OtherName: Rocket Base Whirlpool HM Backup
                 FileName: TeamRocketBaseB2F.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs: Rocket Base 3F
+                LocationReqs: Rocket Base 2F
                 FlagReqs:
+                    - Generator Password
                 ItemReqs:
                 FlagsSet:
                     - Mahogany Rockets Defeated
@@ -355,7 +441,13 @@ Location:
                         writetext RocketBaseLanceElectrodeDoneText
                         promptbutton
                         ITEMLINE
+                        iftrue .GotWhirlpool
+                        clearevent EVENT_TEAM_ROCKET_BASE_WHIRLPOOL_BACKUP
+                        appear TEAMROCKETBASEB2F_WHIRLPOOL_BACKUP
+                        sjump .DidntGetWhirlpool
+                    .GotWhirlpool
                         setevent EVENT_GOT_HM06_WHIRLPOOL
+                    .DidntGetWhirlpool
                         writetext RocketBaseLanceWhirlpoolText
                         waitbutton
                         closetext
@@ -450,4 +542,25 @@ Location:
                         Code:
                         Text:
                         TrainerList: 
+                        Sublocations:
+                    -
+                        Name: Rocket Base Whirlpool HM Backup
+                        TrueName: Rocket Base Whirlpool HM
+                        FileName: TeamRocketBaseB2F.asm
+                        Type: Item
+                        Dummy: Yes
+                        IsBall: Yes
+                        HasPKMN: Yes
+                        WildTableList:
+                        LocationReqs: Rocket Base Whirlpool HM
+                        FlagReqs:
+                            - Generator Password
+                        ItemReqs:
+                        FlagsSet:
+                            - Mahogany Rockets Defeated
+                        ReachableReqs:
+                        Code: |
+                            GetWhirlpoolBackup:
+                                ITEMLINE
+                        Text:
                         Sublocations:

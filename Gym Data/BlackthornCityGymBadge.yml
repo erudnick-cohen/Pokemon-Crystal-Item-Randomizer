@@ -3,13 +3,15 @@ Location:
         Name: Blackthorn City Gym Badge
         FileName: BlackthornGym1F.asm
         SecondaryFile: DragonShrine.asm
-        LocationReqs: Clair TM
+        LocationReqs:
+            - Clair TM
         Type: Gym
         HasPKMN: No
         WildTableList:
         FlagReqs:
         ItemReqs:
         FlagsSet:
+            - Quiz Taken
         ReachableReqs:
         ItemUnlock:
         InfeasibleBadges:
@@ -46,11 +48,41 @@ Location:
                 checkpermaoptions EASY_CLAIR_BADGE
                 iffalse .DoDDen
                 writetext ClairText_Lazy
-                waitsfx
-                BADGELINE
                 specialphonecall SPECIALCALL_MASTERBALL
                 writetext BlackthornGymClairText_DescribeBadge
                 jump .GiveTM
+
+            .DoDDen:
+                writetext ClairText_GoToDragonsDen
+                waitbutton
+                closetext
+                end
+
+            .FightDone:
+                checkpermaoptions EASY_CLAIR_BADGE
+                iftrue .EasyClair
+                checkevent EVENT_DRAGON_SHRINE_PASSED_TEST
+                iffalse .TooMuchToExpect
+            .EasyClair
+                jump .GiveTM
+            .TooMuchToExpect
+                writetext ClairText_TooMuchToExpect
+                waitbutton
+                closetext
+                end
+
+            .AlreadyGotBadge:
+                checkevent EVENT_GOT_TM24_DRAGONBREATH
+                iftrue .GotTM24
+                writetext BlackthornGymClairText_YouKeptMeWaiting
+
+            .GiveTM:
+                checkevent EVENT_GOT_RISING_BADGE
+                iftrue .TM
+                BADGELINE
+                iffalse .TM
+                setevent EVENT_GOT_RISING_BADGE
+
         SecondaryCode: |
             .PassedTheTest:
                 setevent EVENT_DRAGON_SHRINE_PASSED_TEST
@@ -102,6 +134,9 @@ Location:
                 writetext DragonShrineHereRisingBadgeText
                 waitbutton
                 BADGELINE
+                iffalse .SkipRisingBadge
+                setevent EVENT_GOT_RISING_BADGE
+            .SkipRisingBadge
                 special RestartMapMusic
                 specialphonecall SPECIALCALL_MASTERBALL
                 setmapscene DRAGONS_DEN_B1F, SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM
@@ -124,7 +159,7 @@ Location:
                 playsound SFX_ENTER_DOOR
                 disappear DRAGONSHRINE_CLAIR
                 waitsfx
-                setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+                ;setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
                 end
         Code:
         Text:

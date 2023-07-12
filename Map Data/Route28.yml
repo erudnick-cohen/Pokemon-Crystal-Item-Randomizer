@@ -4,7 +4,8 @@ Location:
         FileName: Route28.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList:
+            - ROUTE_28
         LocationReqs:
             - Mt. Silver Unlock
         FlagReqs:
@@ -13,12 +14,14 @@ Location:
         ReachableReqs:
         Code:
         Text:
+        WarpReqs: Silver Outside
         TrainerList: 
         Sublocations:
+
     -
-        Name: Route 28 Steel Wing TM
+        Name: Route 28 Cut Access
         FileName: Route28SteelWingHouse.asm
-        Type: Item
+        Type: Map
         HasPKMN: No
         WildTableList:
             - ROUTE_28
@@ -28,6 +31,43 @@ Location:
             - Hive Badge
         ItemReqs:
             - Cut
+        FlagsSet:
+        TrainerList:
+        Code:
+        Text:
+        ReachableReqs:
+        WarpReqs: 28 Cut
+        Sublocations:
+
+    -
+        Name: Route 28 Cut Access
+        FileName: Route28SteelWingHouse.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_28
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        TrainerList:
+        Code:
+        Text:
+        ReachableReqs:
+        WarpReqs: 28 Cut
+        Sublocations:
+
+    -
+        Name: Route 28 Steel Wing TM
+        FileName: Route28SteelWingHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        FlagReqs:
+        ItemReqs:
+        LocationReqs:
+            - Route 28 Cut Access
         FlagsSet:
         ReachableReqs:
         NormalItem: TM_STEEL_WING
@@ -43,8 +83,10 @@ Location:
                 iffalse .Done
                 setevent EVENT_GOT_TM47_STEEL_WING
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Steel Wing House
         Sublocations:
+
     -
         Name: Route 28 Hidden Rare Candy
         FileName: Route28.asm
@@ -53,12 +95,10 @@ Location:
         HasPKMN: No
         WildTableList:
         LocationReqs:
-            - Route 28
+            - Route 28 Cut Access
         FlagReqs:
             - Hidden Items
-            - Hive Badge
         ItemReqs:
-            - Cut
         FlagsSet:
         ReachableReqs:
         NormalItem: RARE_CANDY

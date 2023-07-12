@@ -13,7 +13,7 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Ilex Forest Back via Route 34
@@ -93,6 +93,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ilex Forest
+        WarpReqs: Ilex South
         Sublocations:
             -
                 Name: Ilex Cut HM
@@ -102,8 +103,10 @@ Location:
                 WildTableList: 
                 LocationReqs: Ilex Forest Front 
                 FlagReqs:
+                    - Saved Slowpokes
                 ItemReqs:
                 FlagsSet:
+                    - Find Farfetchd
                 ReachableReqs:
                 Code: |
                     IlexForestCharcoalMasterScript:
@@ -114,6 +117,10 @@ Location:
                         writetext Text_CharcoalMasterIntro
                         promptbutton
                         ITEMLINE
+                        iftrue .GotCut
+                        clearevent EVENT_ILEX_FOREST_HM_CUT_BACKUP
+                        appear ILEXFOREST_HM_CUT_BACKUP
+                    .GotCut
                         setevent EVENT_GOT_HM01_CUT
                         writetext Text_CharcoalMasterOutro
                         waitbutton
@@ -141,6 +148,28 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:
+
+                -
+                    Name: Ilex Forest Cut HM Backup
+                    TrueName: Ilex Cut HM
+                    FileName: IlexForest.asm
+                    Type: Item
+                    Dummy: Yes
+                    IsBall: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Ilex Cut HM
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        IlexForestHmCutBackup:
+                            ITEMLINE
+                    Text:
+                    TrainerList:
+                    Sublocations:
+
             -
                 Name: Ilex Forest Revive
                 FileName: IlexForest.asm
@@ -160,6 +189,52 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Sweet Scent Girl
+        FileName: Route34IlexForestGate.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ilex Forest Back
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Sweet Scent Girl Met
+        NormalItem: TM_SWEET_SCENT
+        ReachableReqs:
+        WarpReqs: Ilex/Route 34 Gate
+        Code: |
+            Route34IlexForestGateTeacherScript:
+                faceplayer
+                opentext
+                checkevent EVENT_FOREST_IS_RESTLESS
+                iftrue .ForestIsRestless
+                checkevent EVENT_GOT_TM12_SWEET_SCENT
+                iftrue .GotSweetScent
+                writetext Route34IlexForestGateTeacherText
+                promptbutton
+                setevent EVENT_SPOKE_TO_TM12_NPC
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_TM12_SWEET_SCENT
+            .GotSweetScent:
+                writetext Route34IlexForestGateTeacher_GotSweetScent
+                waitbutton
+            .NoRoom:
+                closetext
+                end
+        TrainerList:
+        Text: |
+            UnknownText_0x62df6:
+                text "It's ITEMNAME."
+                para "Use it wherever"
+                line "#MON appear."
+                para "#MON will be"
+                line "enticed by it."
+                done
+        Sublocations:
+
     -
         Name: Ilex Forest Back 
         FileName: IlexForest.asm
@@ -177,6 +252,7 @@ Location:
         TrainerList: 
             - BUG_CATCHER 19
         HintName: Ilex Forest
+        WarpReqs: Ilex North
         Sublocations:
             -
                 Name: Ilex Forest X Attack
@@ -245,6 +321,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Headbutt Guy Met
                 NormalItem: TM_HEADBUTT
                 ReachableReqs:
                 Code: |
@@ -255,6 +332,7 @@ Location:
                         iftrue .AlreadyGotHeadbutt
                         writetext Text_HeadbuttIntro
                         promptbutton
+                        setevent EVENT_SPOKE_TO_TM02_NPC
                         ITEMLINE
                         iffalse .BagFull
                         setevent EVENT_GOT_TM02_HEADBUTT
@@ -276,49 +354,7 @@ Location:
                         done
                 TrainerList: 
                 Sublocations:        
-            -
-                Name: Sweet Scent Girl
-                FileName: Route34IlexForestGate.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ilex Forest Back 
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                NormalItem: TM_SWEET_SCENT
-                ReachableReqs:
-                Code: |
-                    Route34IlexForestGateTeacherScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_FOREST_IS_RESTLESS
-                        iftrue .ForestIsRestless
-                        checkevent EVENT_GOT_TM12_SWEET_SCENT
-                        iftrue .GotSweetScent
-                        writetext Route34IlexForestGateTeacherText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoom
-                        setevent EVENT_GOT_TM12_SWEET_SCENT
-                    .GotSweetScent:
-                        writetext Route34IlexForestGateTeacher_GotSweetScent
-                        waitbutton
-                    .NoRoom:
-                        closetext
-                        end
-                Text: |
-                    UnknownText_0x62df6:
-                        text "It's ITEMNAME."
 
-                        para "Use it wherever"
-                        line "#MON appear."
-
-                        para "#MON will be"
-                        line "enticed by it."
-                        done
-                TrainerList: 
-                Sublocations:
             -
                 Name: Ilex Forest Hidden Ether
                 FileName: IlexForest.asm

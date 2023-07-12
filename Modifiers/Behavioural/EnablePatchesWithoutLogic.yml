@@ -1,0 +1,7 @@
+Name: Enable Time Patches Without Logic
+Description: Enable logic patches for item randomization without including in logic.
+NewGamePatches:
+    - 'Patches/DailyEventsAlways.json'
+    - 'Patches/BugCatchingContestAlways.json'
+    - 'Patches/ShopsAlways.json'
+    - 'Patches/MoveBlockedHiddenItems.json'

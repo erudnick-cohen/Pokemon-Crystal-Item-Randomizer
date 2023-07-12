@@ -2,7 +2,7 @@
     {
         "integer_values": {
             "old": [65, 9, 11, 9, 0, 255, 255, 0, 0, 29, 122, 79, 7],
-            "new": [65, 9, 11, 9, 0, 255, 255, 0, 0, 29, 122, 26, 0]
+            "new": [65, 9, 11, 9, 0, 255, 255, 0, 0, "ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateLeftBlackBeltScript", null, 26, 0]
         },
         "address_range": {
             "begin": 637914,

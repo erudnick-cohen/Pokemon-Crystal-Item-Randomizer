@@ -1,0 +1,34 @@
+Name: Tournament Logic
+Description: Items and badges are shuffled interchangably. Gyms may not be required to beat the game. Fly logic has been modified from the default to reduce a few checks. Vanilla basement is also removed from logic.
+BasePatch: Patches/BaseModificationsSpeedchoice.json
+RegularWildLevelScalingDefault: False
+SpecialWildLevelScalingDefault: False
+TrainerLevelScalingDefault: False
+BadgeItemShuffle:
+CoreProgress:
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
+DefaultModifiers:
+    - Modifiers/DefinitelyNoEarlySabrina.yml
+    - Modifiers/NoEarlyBasement.yml
+    - Modifiers/SkipReturningToNewBark.yml
+    - Modifiers/SkipE4AndFightRed.yml
+    - Modifiers/ProgressiveRods.yml
+    - Modifiers/RemoveCutTreeInIlex.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/EnableTinTower.yml
+    - Modifiers/CardRandomization.yml
+    - Modifiers/ForceEarlyFlyTournament2022.yml
+    - Modifiers/NoVanillaBasement.yml
+    - Modifiers/NerfHoOhChamber.yml
+    - Modifiers/DerandomizeLeftovers.yml
+    - Modifiers/StartWithBike.yml
+BannedLocations:
+AllowedLocations:
+Goal: Red
+FlagsSet:
+    - Kanto Mode
+    - Sane Extreme E4 Access 

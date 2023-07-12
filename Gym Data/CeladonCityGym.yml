@@ -38,7 +38,12 @@ Location:
                 setevent EVENT_BEAT_BEAUTY_JULIA
                 setevent EVENT_BEAT_TWINS_JO_AND_ZOE
                 opentext
+            .FightDone:
+                checkevent EVENT_GOT_RAINBOW_BADGE
+                iftrue .GotRainbowBadge
                 BADGELINE
+                iffalse .GotRainbowBadge
+                setevent EVENT_GOT_RAINBOW_BADGE
         Code:
         Text:
             -

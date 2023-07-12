@@ -83,6 +83,7 @@ Location:
         Code: 
         Text:
         TrainerList:
+        WarpReqs: Saffron
         HintName: Saffron
         Sublocations:
             -
@@ -97,6 +98,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: TM_PSYCHIC
+                WarpReqs: Mr Psychics House
                 Code: |
                     MrPsychic:
                         faceplayer
@@ -136,6 +138,7 @@ Location:
                 ReachableReqs:
                 IsBall: Yes
                 NormalItem: FOCUS_BAND
+                WarpReqs: Fighting Dojo
                 Code: |
                     FightingDojoFocusBand:
                         ITEMLINE
@@ -154,6 +157,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: UP_GRADE
+                WarpReqs: Silph Co
                 Code: |
                     SilphCoOfficerScript:
                         faceplayer
@@ -182,10 +186,11 @@ Location:
                 WildTableList:
                 LocationReqs: Saffron City
                 FlagReqs:
-                    - Lost Item
                 ItemReqs:
+                    - Lost Item
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs: Copycats House 2F
                 Code: |
                     .TryGivePassAgain:
                         opentext
@@ -323,3 +328,157 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
+
+    -
+        Name: Saffron Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Saffron City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Saffron
+        WarpReqs: Saffron Mart
+        Sublocations:
+        -
+            Name: Saffron Mart Great Ball
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: GREAT_BALL
+            Sublocations:
+        -
+            Name: Saffron Mart Ultra Ball
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Saffron Mart Hyper Potion
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Saffron Mart Max Potion
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_POTION
+            Sublocations:
+        -
+            Name: Saffron Mart Full Heal
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_HEAL
+            Sublocations:
+        -
+            Name: Saffron Mart X Attack
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: X_ATTACK
+            Sublocations:
+        -
+            Name: Saffron Mart X Defend
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: X_DEFEND
+            Sublocations:
+        -
+            Name: Saffron Mart Flower Mail
+            FileName: MartSaffron
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Saffron Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FLOWER_MAIL
+            Sublocations:

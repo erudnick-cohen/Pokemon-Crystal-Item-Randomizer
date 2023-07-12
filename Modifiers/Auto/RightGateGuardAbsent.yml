@@ -1,0 +1,16 @@
+Name: Right Gate Guard Absent
+Description: Remove restrictions on right guard from Victory Road Gate.
+Changes:
+    -
+        Location: Victory Road Gate Snorlax
+        RemoveFlagReqs:
+            - Snorlax Woken
+
+    -
+        Location: Victory Road Gate
+        RemoveFlagReqs:
+            - Snorlax Woken
+
+
+IncompatibleWithout:
+    - 'Warps'

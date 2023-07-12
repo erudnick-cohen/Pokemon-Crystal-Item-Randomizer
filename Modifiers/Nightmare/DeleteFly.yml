@@ -1,0 +1,13 @@
+Name: Delete Fly
+Description: Makes HM02 (Fly) become HM02 (Splash). While both Fly and Splash are moves which cause a temporary increase in altitude, Splash is perhaps a bit less useful than Fly is. I don't understand why you want to do this, but OK.
+FlagsSet:
+    - Splash Fly
+    - Delete Fly
+NewGamePatches:
+    - 'Patches/SplashFly.json'
+IncompatibleWith:
+    - 'No backtracking early bike and fly'
+    - 'Force early fly V2'
+    - 'Fly Before Phone Calls'
+    - 'No Progression Fly Warps'
+    - 'Teleport instead of fly'

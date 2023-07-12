@@ -1,5 +1,6 @@
 #generated randomizer folders
 /RandomizerRom
+/Release
 *.pyc
 *.docx
 *.pyc
@@ -15,3 +16,9 @@ EKIRBUG.txt
 a_SPOILER_Set.txt
 aaa_SPOILERB.txt
 testBadPlando.txt
+Warp Data/warp-output.tsv
+Modes/Custom
+Game Files/
+.idea/
+Release-Plus/
+;Data/item_attributes.asm

@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Dark Cave
+        WarpReqs: Dark Cave North
         Sublocations: 
              -
                 Name: Dark Cave Blackthorn Revive

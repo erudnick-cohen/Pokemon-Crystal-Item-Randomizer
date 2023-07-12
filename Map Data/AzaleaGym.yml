@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Azalea Gym
+        Name: Azalea Gym Entrance
         FileName: AzaleaGym.asm
         Type: Map
         HasPKMN: No
@@ -16,6 +16,25 @@ Location:
         Text:
         TrainerList:
         HintName: Azalea
+        Sublocations:
+    
+    -
+        Name: Azalea Gym
+        FileName: AzaleaGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: 
+            - Azalea Gym Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Azalea
+        WarpReqs: Azalea Gym
         Sublocations:
             -
                 Name: Bugsy TM
@@ -35,13 +54,9 @@ Location:
                             - Azalea
                 NormalItem: TM_FURY_CUTTER
                 Code: |
-                    .FightDone:
+                    .GotHiveBadge:
                         checkevent EVENT_GOT_TM49_FURY_CUTTER
                         iftrue .GotFuryCutter
-                        setevent EVENT_BEAT_TWINS_AMY_AND_MAY
-                        setevent EVENT_BEAT_BUG_CATCHER_BENNY
-                        setevent EVENT_BEAT_BUG_CATCHER_AL
-                        setevent EVENT_BEAT_BUG_CATCHER_JOSH
                         writetext BugsyText_HiveBadgeSpeech
                         promptbutton
                         ITEMLINE
@@ -76,7 +91,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Azalea Town
+                LocationReqs: Azalea Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

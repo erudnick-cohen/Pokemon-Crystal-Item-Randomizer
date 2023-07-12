@@ -1,0 +1,9 @@
+Name: Berry Trees
+Description: Adds berry tree items to the randomization
+FlagsSet:
+    - Berry Trees
+Changes:
+    -
+        Location: Berry Trees
+        RemoveFlagReqs:
+            - Banned

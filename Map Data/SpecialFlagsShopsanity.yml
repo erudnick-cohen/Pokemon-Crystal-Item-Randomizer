@@ -1,0 +1,127 @@
+Location:
+    -
+        Name: Shopsanity
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Shopsanity Locked
+        FlagReqs:
+            - Banned
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Shopsanity Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: 
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList: 
+        Sublocations:
+    -
+        Name: Buena Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Buena Items Locked
+        FlagReqs:
+            - Banned
+        ItemReqs:
+            - Blue Card
+        FlagsSet:
+            - Buena Access
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Buena Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Game Corner Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Game Corner Items Locked
+        FlagReqs:
+            - Banned
+        ItemReqs:
+            - Coin Case
+        FlagsSet:
+            - Game Corner Access
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Game Corner Items Locked
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: All X Items
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Shopsanity Locked
+        FlagReqs:
+            - Banned
+        FlagsSet:
+            - All X Items
+        ItemReqs:
+            - X Attack
+            - X Defend
+            - X Speed
+            - X Special
+            - X Accuracy
+            - Dire Hit
+            - Guard Spec
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

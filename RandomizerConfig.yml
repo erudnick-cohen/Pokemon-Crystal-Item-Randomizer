@@ -1,1 +1,5 @@
-DefaultSettings: Modes/Standard.yml
+DefaultSettings: Modes/Crazy.yml
+FirstRun: false
+BaseRomInputDirectory: "C://Users//Alex//Downloads//CrystalEtc//Test"
+BaseRomOutputDirectory: "C://Users//Alex//Downloads//CrystalEtc//Test"
+BaseRom: "items.gbc"

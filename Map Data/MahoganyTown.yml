@@ -5,7 +5,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Route 42 Mahogany Side
+        LocationReqs: Route 42 East
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -14,4 +14,239 @@ Location:
         Text:
         TrainerList:
         HintName: Mahogany
+        WarpReqs: Mahogany
         Sublocations:
+    -
+        Name: Mahogany Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Mahogany Town
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Mahogany
+        WarpReqs: Rocket Base Entrance
+        Sublocations:
+            -
+                Name: Mahogany Mart Rage Candy Bar
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: RAGECANDYBAR
+            -
+                Name: Mahogany Mart Great Ball
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+            -
+                Name: Mahogany Mart Super Potion
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_POTION
+            -
+                Name: Mahogany Mart Hyper Potion
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: HYPER_POTION
+            -
+                Name: Mahogany Mart Antidote
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+            -
+                Name: Mahogany Mart Parlyz Heal
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+            -
+                Name: Mahogany Mart Super Repel
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_REPEL
+            -
+                Name: Mahogany Mart Revive
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REVIVE
+            -
+                Name: Mahogany Mart Flower Mail
+                FileName: MartMahogany2
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FLOWER_MAIL
+            -
+                Name: Mahogany Mart Rocket Tiny Mushroom
+                FileName: MartMahogany1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: TINYMUSHROOM
+            -
+                Name: Mahogany Mart Rocket Slowpoketail
+                FileName: MartMahogany1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SLOWPOKETAIL
+            -
+                Name: Mahogany Mart Rocket Poke Ball
+                FileName: MartMahogany1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_BALL
+            -
+                Name: Mahogany Mart Rocket Potion
+                FileName: MartMahogany1
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mahogany Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POTION

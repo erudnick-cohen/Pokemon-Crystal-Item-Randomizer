@@ -12,7 +12,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Azalea
         Sublocations:
     -
         Name: Route 33 Actual

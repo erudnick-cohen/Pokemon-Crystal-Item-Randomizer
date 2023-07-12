@@ -35,18 +35,19 @@ Location:
             Type: Map
             HasPKMN: No
             WildTableList:
-            LocationReqs: Dark Cave Violet
+            LocationReqs: Dark Cave Violet Side
             FlagReqs:
                 - Zephyr Badge
+                - Rock Smash Usable
             ItemReqs:
                 - Flash
-                - Rock Smash
             FlagsSet:
             ReachableReqs:
             Code:
             Text:
             TrainerList: 
             Sublocations:
+            WarpReqs: Blackthorn Lowest
     -
             Name: Route 46 Upper
             FileName: Route46.asm
@@ -139,10 +140,10 @@ Location:
         WildTableList:
         LocationReqs: 
             - Route 46 Upper
-            - Elite Four
         FlagReqs:
             - Phone Call Trainers
             - Kanto Power Restored
+            - Became Champion
         ItemReqs:
             - Pokegear
         FlagsSet:

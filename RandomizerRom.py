@@ -1,4 +1,6 @@
 import shutil
+import struct
+
 import Items
 import re
 import os
@@ -9,6 +11,8 @@ import copy
 import mmap
 import math
 import Gym
+import RandomizeFunctions
+
 
 def ResetRom():
 	try:
@@ -17,23 +21,190 @@ def ResetRom():
 		print("No existing folder created, nothing to remove")
 	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
 
-def ResetRomForLabelling():
+def CountFilesInDirectory(dir):
+	count = 0
+	files = os.listdir(dir)
+	for f in files:
+		if os.path.isfile(dir+"/"+f):
+			count += 1
+		elif os.path.isdir(dir+"/"+f):
+			count += CountFilesInDirectory(dir+"/"+f)
+	return count
+
+
+def IsWithinLabels(before, after, index):
+	for b_index in range(0, len(before)):
+		beforeValue = before[b_index]
+		afterValue = after[b_index]
+
+		if index >= beforeValue and index < afterValue:
+			return True
+
+	return False
+
+
+
+def GetLabelsDefinedWithinLines(manual_file):
+	# Get any code sandwiched with .ckir
+	manual_file = open(manual_file)
+	manual_lines = manual_file.readlines()
+	manual_file.close()
+
+	isCKIRBeforeLabel = "\.ckir_BEFORE(.*){1,}::"
+	isCKIRAfterLabel = "\.ckir_AFTER(.*){1,}::"
+	ckirBefore = re.compile(isCKIRBeforeLabel)
+	ckirAfter = re.compile(isCKIRAfterLabel)
+
+	manuals_within_before = [manual_lines.index(x) for x in manual_lines if ckirBefore.match(x)]
+	manuals_within_after = [manual_lines.index(x) for x in manual_lines if ckirAfter.match(x)]
+
+	if len(manuals_within_before) == 0 or len(manuals_within_after) == 0:
+		# This should not occur as all these files should have manual labels
+		raise Exception("No Manual label in labelling file::", manual_file)
+
+	if len(manuals_within_before) != len(manuals_within_after):
+		raise Exception("Incorrect count of manual labels for:", manual_file,
+						manuals_within_before, manuals_within_after)
+
+
+	lines_between = [x.strip() for x in manual_lines if IsWithinLabels(manuals_within_before, manuals_within_after,
+																   manual_lines.index(x))]
+
+	return [ label.replace(":","") for label in lines_between if label.startswith(".") and ".ckir" not in label]
+def CompareFileData(manual_file, base_file):
+	manual_file = open(manual_file)
+	manual_lines = manual_file.readlines()
+
+	replace_file = open(base_file)
+	replace_lines = replace_file.readlines()
+
+	manual_file.close()
+	replace_file.close()
+
+	isCKIRBeforeLabel = "\.ckir_BEFORE(.*){1,}::"
+	isCKIRAfterLabel = "\.ckir_AFTER(.*){1,}::"
+	ckirBefore = re.compile(isCKIRBeforeLabel)
+	ckirAfter = re.compile(isCKIRAfterLabel)
+
+	manuals_within_before = [ manual_lines.index(x) for x in manual_lines if ckirBefore.match(x)]
+	manuals_within_after = [manual_lines.index(x) for x in manual_lines if ckirAfter.match(x)]
+
+	if len(manuals_within_before) == 0 or len(manuals_within_after) == 0:
+		# This should not occur as all these files should have manual labels
+		raise Exception("No Manual label in labelling file::", manual_file)
+
+	if len(manuals_within_before) != len(manuals_within_after):
+		raise Exception("Incorrect count of manual labels")
+
+	# Ignore any changes within the labels, as these are meant to be different and handled accordingly
+	# So only check for the other lines!
+
+	replace_drop = [ x for x in replace_lines if not IsWithinLabels(manuals_within_before, manuals_within_after,
+																	replace_lines.index(x))]
+
+	# Replace drop contains the lines in REPLACE to ignore
+	# However, we are looking for MISSING lines from the original
+	# Maybe just handle with latest changes?
+
+
+	manuals =  [ x.strip() for x in manual_lines if not (x.strip().endswith("::") or x.strip().startswith(";"))]
+	replaces = [ x.strip() for x in replace_drop if not (x.strip().endswith(":") or x.strip().startswith(";"))]
+
+
+
+	# TODO: Make these code changes work for old/new code in the labels, so this generated rom IS still the base rom
+	# For now, ignore changes within before->after label sets
+
+
+
+	missing_from_manual = [ x for x in replaces if x not in manuals ]
+	if len(missing_from_manual) > 0:
+		index = replaces.index(missing_from_manual[0])
+		return index
+	else:
+		return_value = None if len(manuals) == len(manuals) else 1
+		return return_value
+
+def ResetRomForLabelling(wsl=False, romDir="7.4"):
+	git_success = False
 	try:
-		shutil.rmtree("RandomizerRom")
+		os.chdir("RandomizerRom")
+		os.listdir(os.curdir)
+		if not os.path.isdir(".git"):
+			git_success = False
+			os.chdir("..")
+		else:
+			command = ("wsl " if wsl else "") + "git reset --hard"
+			os.system(command)
+			os.chdir("..")
+			git_success = True
 	except:
-		print("No existing folder created, nothing to remove")
-	shutil.copytree("Game Files/pokecrystal-speedchoice","RandomizerRom")
+		git_success = False
+
+
+	if not git_success:
+		try:
+			shutil.rmtree("RandomizerRom")
+		except:
+			print("No existing folder created, nothing to remove")
+		shutil.copytree("Game Files/"+romDir,"RandomizerRom")
 	#next overwrite the files which need custom labels
-	for root, dir, files  in os.walk("Files with manual labels/maps"):
+
+
+def UpdateDataDirectory():
+	shutil.copy("RandomizerRom/data/items/attributes.asm", "Data/item_attributes.asm")
+	shutil.copy("RandomizerRom/constants/event_flags.asm", "Data/event_flags.asm")
+
+def InsertManualFiles(result_lines=None):
+	manual_dir = "Files with manual labels"
+
+	counted = CountFilesInDirectory(manual_dir)
+
+	manual_copy_files = []
+
+	for root, dir, files  in os.walk(manual_dir+"/maps"):
 		for file in files:
-			shutil.copy("Files with manual labels/maps/"+file,"RandomizerRom/maps/"+file)
-	for root, dir, files  in os.walk("Files with manual labels/engine"):
-		for file in files:
-			shutil.copy("Files with manual labels/engine/"+file,"RandomizerRom/engine/"+file)
-	shutil.copy("Files with manual labels/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm")
-	shutil.copy("Files with manual labels/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm")
-	shutil.copy("Files with manual labels/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm")
-	shutil.copy("Files with manual labels/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm")
+			map_file = (manual_dir+"/maps/"+file,"RandomizerRom/maps/"+file)
+			manual_copy_files.append(map_file)
+	for root, dir, files  in os.walk(manual_dir+"/engine"):
+		for engine in files:
+			engine_file = (manual_dir+"/engine/"+engine,"RandomizerRom/engine/"+engine)
+			manual_copy_files.append(engine_file)
+
+	for root, dir, files in os.walk(manual_dir+"/menus"):
+		for engine in files:
+			engine_file = (manual_dir+"/menus/"+engine,"RandomizerRom/engine/menus/"+engine)
+			manual_copy_files.append(engine_file)
+
+	#manual_copy_files.append((manual_dir+"/blocks/blocks.asm","RandomizerRom/data/maps/blocks.asm"))
+	manual_copy_files.append((manual_dir+"/pokemon/breeding.asm","RandomizerRom/engine/pokemon/breeding.asm"))
+	manual_copy_files.append((manual_dir+"/events/magikarp_lengths.asm","RandomizerRom/data/events/magikarp_lengths.asm"))
+	manual_copy_files.append((manual_dir+"/data/moves/tmhm_moves.asm","RandomizerRom/data/moves/tmhm_moves.asm"))
+	manual_copy_files.append((manual_dir+"/events/overworld.asm", "RandomizerRom/engine/events/overworld.asm"))
+	manual_copy_files.append((manual_dir + "/events/std_scripts.asm", "RandomizerRom/engine/events/std_scripts.asm"))
+	manual_copy_files.append((manual_dir+"/overworld/map_setup.asm", "RandomizerRom/engine/overworld/map_setup.asm"))
+
+	if len(manual_copy_files) != counted:
+		print("Manual copied files:", len(manual_copy_files), counted)
+		print("Copied files", manual_copy_files)
+		raise Exception("Unused file in folder")
+
+	# Check files for inconsistent line differences
+
+	for item in manual_copy_files:
+		# Code was complex, but secondary  solution below might work better
+		#fine = CompareFileData(item[0], item[1])
+		#if fine is not None:
+		#	#pass
+		#	raise Exception("File data does not correlate::", item)
+
+		if result_lines is not None:
+			definedLabels = GetLabelsDefinedWithinLines(item[0])
+			for label in definedLabels:
+				result_lines.append(label)
+
+	for manual_file in manual_copy_files:
+		shutil.copy(manual_file[0], manual_file[1])
 
 def WriteOakBadgeCheckNumber(number, addressData, gameFile):
 	#get where this is
@@ -164,26 +335,66 @@ def WriteSpecialWildToMemory(locationDict,distDict,addressData,romMap, levelBonu
 				romMap[addressData[idTextB]['address_range']['begin']+2] = max(distDict[loc]+shift+round(levelBonus*(distDict[loc]/maxLevel)),2)
 
 
+def LoadEventFlags():
+	event_flags_filename = "Data/event_flags.asm"
+	event_data = open(event_flags_filename, encoding="utf8")
+	event_lines = event_data.readlines()
+	event_data.close()
+
+	event_flag_lookup = {}
+	count = 0
+
+	for event_line in event_lines:
+		event_line = event_line.strip()
+		if event_line.startswith("const EVENT_"):
+			flag_name = event_line.split(" ")[1]
+			count += 1
+			event_flag_lookup[flag_name] = count
+
+	return event_flag_lookup
+
 def DirectWriteItemLocations(locations,addressData,gameFile, progRod = False):
 	codeLookup = Items.makeRawItemCodeDict(progRod)
-	yamlfile = open("badgeData.yml",encoding='utf-8')
+	yamlfile = open("BadgeData.yml",encoding='utf-8')
 	yamltext = yamlfile.read()
 	gymOffsets = yaml.load(yamltext, Loader=yaml.FullLoader)
+
+	berryLookup = LoadEventFlags()
+
 	for i in locations:
-		if i.isItem():
+		if i.Dummy:
+			findLocations = [location for location in locations if location.Name == i.TrueName]
+			if len(findLocations) != 1:
+				# ('Invalid Dummy for ', 'Ruins of Alph UnownDex Backup', 'Ruins of Alph UnownDex', '!')
+				raise Exception("Invalid Dummy for ", i.Name, i.TrueName ,"!")
+
+			i.item = findLocations[0].item
+			#print("Dummy for", i.Name, i.TrueName, i.item)
+
+		if i.isShop() and i.isItem():
+			WriteShopToRomMemory(i, addressData, codeLookup, gameFile)
+		elif i.isItem():
 			if i.IsHidden:
 				WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
 			elif not i.IsSpecial:
 				if i.Name == "Elm Aide Pokeballs": #currently a regular location with special rules due to labelling weirdness
 					WriteAideBallsToRomMemory(i,addressData,codeLookup,gameFile)
+				elif i.isVendingMachine():
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
+					WriteItemNameToBuffer(i,addressData,gameFile)
+				elif i.isPrize():
+					WriteRegularLocationToRomMemory(i, addressData, codeLookup, gameFile, berryLookup)
+					WriteItemNameToBuffer(i, addressData, gameFile)
 				else:
-					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
 			else:
 				if i.Name == "Dragons Den Dragon Fang":
 					#this just happens to work, its in the same byte offset (its also now just a regular location...)
-					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile)
+					WriteRegularLocationToRomMemory(i,addressData,codeLookup,gameFile,berryLookup)
 				if i.Name == "Hidden Machine Part":
 					WriteMachinePartToRomMemory(i,addressData,codeLookup,gameFile)
+				if i.Name == "Celadon Cafe Leftovers":
+					WriteMachinePartToRomMemory(i, addressData, codeLookup, gameFile)
 		elif i.isGym():
 			WriteBadgeToRomMemory(i,addressData,gymOffsets,gameFile)
 
@@ -230,13 +441,13 @@ def WriteBadgeToRomMemory(location,labelData,gymOffsets,romMap):
 	# #then terminate the string
 	# romMap[gymOffsets[location.Name]+len(nString)+2] = 50
 #STILL NEED TO WRITE THE REST OF THESE
-def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
+def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap,berryLookup):
 	if(not isinstance(location, Gym.Gym)):
-		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 	else:
-		labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
-		labelCodeB2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
+		labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE'
+		labelCodeB2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODEB'
 
 	#print('Writing '+labelCodeB)
 	addressData = labelData[labelCodeB]
@@ -258,8 +469,8 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 		endVal = 176
 		nItemCode = 176
 	if location.IsBall:
-		labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 		#need to extract the nibble out
 		#print(list(map(int, addressDataNPC["integer_values"].split(' '))))
@@ -295,15 +506,24 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressDataNPC2["address_range"]["begin"]+7] = newBallByte
 			romMap[addressData2["address_range"]["begin"]] = nItemCode
 	elif location.IsBerry:
-		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
-		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.TrueName.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
+		labelCodeBNPC = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODE'
+		labelCodeBNPC2 = "ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_').replace("'","") + '0NPCCODEB'
 		addressDataNPC = labelData[labelCodeBNPC]
 
 
 		# need to extract the nibble out
 		# print(list(map(int, addressDataNPC["integer_values"].split(' '))))
 		# print(addressDataNPC["integer_values"].split(' '))
-		flag_bytes = location.BerryFlag.to_bytes(2, 'little')
+
+		berry_lookup = "EVENT_GOT_"+location.BerryFlag
+		if berry_lookup in berryLookup:
+			berry_flag = berryLookup[berry_lookup]
+		else:
+			berry_flag = location.BerryFlag
+
+		# Add a flag to the berry item and replace the event with a normal item ball (in behaviour)
+		# Still shows as tree
+		flag_bytes = berry_flag.to_bytes(2, 'little')
 		combobyte = bin(list(map(int, addressDataNPC["integer_values"].split(' ')))[7])
 		# form full binary expression
 		fullByte = (10 - len(combobyte)) * '0' + combobyte[2:]
@@ -334,8 +554,71 @@ def WriteRegularLocationToRomMemory(location,labelData,itemScriptLookup,romMap):
 			romMap[addressData2["address_range"]["begin"]+2] = endVal
 
 
+def WriteItemNameToBuffer(location,labelData,romMap):
+	vendingLabel = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0VENDINGCODE'
+	addressInfo = labelData[vendingLabel]
+	addressWrite = addressInfo["address_range"]["begin"]
+
+	vendingString = location.HardcodedName[location.HardcodedName.index("\"")+1 : location.HardcodedName.rindex("\"")]
+
+	vendSpaceMax = vendingString.rindex(" ")
+
+	#TODO: Replace TM with TM Number (shorter)
+	itemNameToWrite = Items.GetCorrectItemName(location.item)
+
+	itemNameToWrite = itemNameToWrite.replace("_"," ")
+
+	#TODO: Looks weird if price ends up small
+	#if len(itemNameToWrite) >= vendSpaceMax and " " in itemNameToWrite:
+	#	itemNameToWrite = itemNameToWrite.replace(" ", "")
+
+	itemNameToWrite = itemNameToWrite[0:min(len(itemNameToWrite),vendSpaceMax)]
+
+	#print("Write to buffer:", itemNameToWrite, "for", location.Name)
+
+	for i in range(0, vendSpaceMax):
+		if i >= len(itemNameToWrite):
+			character = " "
+		else:
+			character = itemNameToWrite[i]
+
+		byteToWrite = ByteToGBCCharacterByte(character)
+
+		romMap[addressWrite+i] = byteToWrite
+
+
+def WriteShopToRomMemory(location, labelData, itemScriptLookup, romMap):
+	potentialFilenames = location.FileName.split(",")
+	# Handle a shop which might change stock over time but shares some items
+	for pFileName in potentialFilenames:
+		if len(potentialFilenames) == 1:
+			beforeLabel = "ckir_BEFORE"+ \
+					  (("".join(location.Name.split())+"0ITEMCODE").upper())
+		else:
+			beforeLabel = "ckir_BEFORE" + \
+						  (("".join(location.Name.split()) + "0ITEMCODE"
+							+"_"+str(potentialFilenames.index(pFileName))).upper())
+
+
+		addressData = labelData[beforeLabel]
+
+		nItemCodeData = itemScriptLookup(location.item, forceItem=True)
+		nItemCode = nItemCodeData[0]
+		itemType = nItemCodeData[1]
+		if itemType == "Item" or itemType == "Flag":
+			if location.isBargainShop() or location.isBuenaItem():
+				# Bargain shop item contains price also, so is different
+				romMap[addressData["address_range"]["begin"]] = nItemCode
+			else:
+				romMap[addressData["address_range"]["begin"] + 1] = nItemCode
+		else:
+			# This will write the other byte of shopitem macro in future
+			# This is not yet supported by speedchoice engine changes
+			raise Exception("Not yet supported::", itemType, location.Name, location.item)
+
+
 def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
 	#print('Writing'+labelCodeB)
 	addressData = labelData[labelCodeB]
 	nItemCodeData = itemScriptLookup(location.item)
@@ -373,8 +656,8 @@ def WriteAideBallsToRomMemory(location,labelData,itemScriptLookup,romMap):
 		# romMap[addressData["address_range"]["begin"]+13] = endVal
 
 def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
-	labelCodeB = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-	labelCodeBNPC = "ckir_BEFORE"+("".join(location.TrueName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	labelCodeB = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	labelCodeBNPC = "ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
 
 	#print('Writing '+labelCodeB+' with '+location.item)
 	addressData = labelData[labelCodeB]
@@ -395,28 +678,28 @@ def WriteMachinePartToRomMemory(location,labelData,itemScriptLookup,romMap):
 	romMap[addressDataNPC["address_range"]["begin"]+2] = command
 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 	
-	if not location.OtherName is None:
-		labelCodeB = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
-		labelCodeBNPC = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
-
-		#print('Writing '+labelCodeB+' with '+location.item)
-		addressData = labelData[labelCodeB]
-		addressDataNPC = labelData[labelCodeBNPC]
-		nItemCodeData = itemScriptLookup(location.item)
-		nItemCode = nItemCodeData[0]
-		itemType = nItemCodeData[1]
-		if(itemType == 'Item'):
-			command = 7
-			nextVal = nItemCode
-		elif(itemType == 'Flag'):
-			command = 9
-			nextVal = nItemCode
-		elif(itemType == 'Rod'):
-			command = 10
-			nextVal = 0
-			nItemCode = 0
-		romMap[addressDataNPC["address_range"]["begin"]+2] = command
-		romMap[addressData["address_range"]["begin"]+2] = nItemCode
+	# if not location.OtherName is None:
+	# 	labelCodeB = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE'
+	# 	labelCodeBNPC = "ckir_BEFORE"+("".join(location.OtherName.split())).upper().replace('.','_').replace("'","")+'0ITEMCODEB'
+	#
+	# 	#print('Writing '+labelCodeB+' with '+location.item)
+	# 	addressData = labelData[labelCodeB]
+	# 	addressDataNPC = labelData[labelCodeBNPC]
+	# 	nItemCodeData = itemScriptLookup(location.item)
+	# 	nItemCode = nItemCodeData[0]
+	# 	itemType = nItemCodeData[1]
+	# 	if(itemType == 'Item'):
+	# 		command = 7
+	# 		nextVal = nItemCode
+	# 	elif(itemType == 'Flag'):
+	# 		command = 9
+	# 		nextVal = nItemCode
+	# 	elif(itemType == 'Rod'):
+	# 		command = 10
+	# 		nextVal = 0
+	# 		nItemCode = 0
+	# 	romMap[addressDataNPC["address_range"]["begin"]+2] = command
+	# 	romMap[addressData["address_range"]["begin"]+2] = nItemCode
 
 
 
@@ -424,8 +707,9 @@ def LabelAllLocations(locations):
 	#codeLookup = Items.makeItemCodeDict()
 	#textLookup = Items.makeItemTextDict()
 	for i in locations:
-		#TODO, LABELING FOR SPECIAL LOCATIONS
-		if i.isItem() or i.Type == 'Dummy':
+		if i.isShop():
+			LabelShopLocation(i)
+		elif i.isItem() or i.Type == 'Dummy' or i.isVendingMachine() or i.isPrize():
 			LabelItemLocation(i)
 		elif i.isGym():
 			LabelBadgeLocation(i)
@@ -442,8 +726,25 @@ def LabelBadgeLocation(location):
 
 	#find the code we need to replace
 	coderegexstr = "("+re.escape(location.Code.replace("    ","\t").replace("\tBADGELINE","REPTHIS")).replace("REPTHIS","(.+)")+")"
-	codeSearch = re.findall(coderegexstr,filecode)[0]
+	codeSearchResults = re.findall(coderegexstr,filecode)
+	if len(codeSearchResults) == 0:
+		print("Invalid::test", location.Name)
+		#return
+		raise Exception("Invalid code search results")
+	codeSearch = codeSearchResults[0]
 	oldcode = codeSearch[0]
+
+	#TODO: Add a check that this is actually the right line in here!
+	splitCode = location.Code.split("\n")
+	badgeLineValue = [ x for x in splitCode if "BADGELINE" in x ]
+	if len(badgeLineValue) == 0:
+		raise Exception("Not badge line found in badge description")
+	badgeIndex = splitCode.index(badgeLineValue[0])
+	foundLine = oldcode.split("\n")[badgeIndex]
+
+	if "verbosesetflag" not in foundLine:
+		raise Exception("Invalid badge line code given::"+foundLine)
+
 	#print(codeSearch)
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0BADGECODE::\n'
@@ -641,11 +942,101 @@ def LabelTrainerData(trainerData):
 	os.fsync(newfilestream.fileno())
 	newfilestream.close()
 
+def LabelBargainShopLocation(location):
+	multiData = location.FileName
+	shopFilename = multiData.split("/")[0]
+	shopName = multiData.split("/")[1]
+
+	shopFile = "RandomizerRom/data/items/" + shopFilename
+	file = open(shopFile)
+	filecode_unreplaced = file.read()
+	filecode = filecode_unreplaced.replace("    ", "\t")
+	file.close()
+
+	shopRegex = "(" + shopName + ":\n(;([A-Za-z _\(\)/.]){1,}\n|\tdb \d(.*)\n)(\tdb(w){0,} (.*){1,},(\s){1,}(\d){1,},(\s){1,}(\d){1,}\n|(.ckir_(.*){1,}::\n)){1,}(\tdb -1, -1, -1|\.End)" + ")"
+	currentShopDesc = re.findall(shopRegex, filecode)
+	shopDetail = currentShopDesc[0][0]
+
+	itemRegex = "db(?:w){0,} " + location.NormalItem + ",\s{1,}\d{1,},\s{1,}\d{1,}\n"
+	itemDesc = re.findall(itemRegex, shopDetail)
+
+	beforeLabel = ".ckir_BEFORE" + "".join(location.Name.upper().split()) + "0ITEMCODE::\n"
+	afterLabel = ".ckir_AFTER" + "".join(location.Name.upper().split()) + "0ITEMCODE::\n"
+	toReplace = "\t" + itemDesc[0]
+	replacement = beforeLabel + toReplace + afterLabel
+
+	shopSave = shopDetail.replace(toReplace, replacement)
+
+	changedCode = filecode.replace(shopDetail, shopSave)
+
+	newfilestream = open(shopFile, "w")
+	newfilestream.seek(0)
+	newfilestream.write(changedCode)
+	newfilestream.truncate()
+	newfilestream.flush()
+	newfilestream.close()
+
+
+def LabelDrinksMachine(location):
+	# TODO: For completeness checklist:
+	# GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE    EQU 350 (Price locked here)
+	# verbosegiveitem FRESH_WATER (Actual give item)
+	# getitemname STRING_BUFFER_3, FRESH_WATER (Same script, uses hardcoded item lookup again)
+	#.MenuData:
+    # db STATICMENU_CURSOR ; flags
+    # db 4 ; items
+    # db "FRESH WATER  ¥200@" (String contains the item and price)
+	return
+
+def LabelShopLocation(location):
+	print("Labelling", location.Name)
+
+	if location.isBargainShop() or location.isBuenaItem():
+		LabelBargainShopLocation(location)
+		return
+
+	mart_data_file = "RandomizerRom/data/items/marts.asm"
+	file = open(mart_data_file)
+	filecode = file.read()
+	file.close()
+
+	shopDupeSet = location.FileName.split(",")
+	for shopName in shopDupeSet:
+		#print(shopName)
+		shopRegex = "("+shopName + ":\n\tdb \d(.*)\n(\tshopitem\t\d,.*\n|(.ckir_(.*){1,}::\n)){1,}\tdb -1, -1"+")"
+		currentShopDesc = re.findall(shopRegex, filecode.replace("    ","\t"))
+		shopDetail = currentShopDesc[0][0]
+
+		itemRegex = "shopitem\t\d{1,}, "+location.NormalItem+"\n"
+		itemDesc = re.findall(itemRegex, shopDetail)
+
+		labelExtra = "" if len(shopDupeSet) == 1 else "_"+str(shopDupeSet.index(shopName))
+
+		beforeLabel = ".ckir_BEFORE"+"".join(location.Name.upper().split())+"0ITEMCODE"+labelExtra+"::\n"
+		afterLabel = ".ckir_AFTER"+"".join(location.Name.upper().split())+"0ITEMCODE"+labelExtra+"::\n"
+		toReplace = "\t" + itemDesc[0]
+		replacement = beforeLabel + toReplace + afterLabel
+
+		shopDetailReplaced = shopDetail.replace(toReplace, replacement)
+		filecode = filecode.replace(shopDetail, shopDetailReplaced)
+
+	newfilestream = open(mart_data_file, "w")
+	newfilestream.seek(0)
+	newfilestream.write(filecode)
+	newfilestream.truncate()
+	newfilestream.flush()
+	newfilestream.close()
+
+	return
+
+
+
 #currently only labels "regular" items
 def LabelItemLocation(location):
 	print("Labelling "+location.Name)
 	#open the relevant file and get it as a string
-	file = open("RandomizerRom/maps/"+location.FileName)
+	file = open("RandomizerRom/maps/"+location.FileName, encoding="utf-8")
+	print("Opening:", location.FileName)
 	filecode = file.read()
 
 	#constuct new script that gives the new item
@@ -662,12 +1053,34 @@ def LabelItemLocation(location):
 	# print(coderegexstr)
 	codeSearch = None
 	if not location.IsSpecial:
-		codeSearch = re.findall(coderegexstr,filecode)[0]
+		try:
+			codeSearchResults = re.findall(coderegexstr,filecode)
+			if len(codeSearchResults) == 0:
+				raise Exception("Couldnt find code for::"+location.Name)
+
+			codeSearch = codeSearchResults[0]
+		except:
+			print(coderegexstr)
+			print("fail on", location.Name)
+			raise Exception("fail to run on:", location.Name)
+			return
+
 		oldcode = codeSearch[0]
 		#print(codeSearch)
 	else:
 		coderegexstr = re.escape(location.Code.replace("    ","\t")).replace("ITEMLINE",".+")
 		oldcode = re.findall(coderegexstr,filecode)[0]
+
+	splitCode = location.Code.split("\n")
+	itemLineValue = [x for x in splitCode if "ITEMLINE" in x]
+	if len(itemLineValue) == 0:
+		raise Exception("Not item line found in item code description")
+	itemIndex = splitCode.index(itemLineValue[0])
+	foundLine = oldcode.split("\n")[itemIndex]
+
+	if "giveitem" not in foundLine and "hiddenitem" not in foundLine and "verbosesetflag" not in foundLine\
+			and "itemball" not in foundLine and "fruittree" not in foundLine:
+		raise Exception("Invalid item line code given::" + foundLine)
 
 	#if this is an itemball, we need to find out what the command is because we're also going to need to find the line that actually
 	if location.IsBall or location.IsBerry:
@@ -676,16 +1089,23 @@ def LabelItemLocation(location):
 		commandregexstr = "(\w+):"
 		commandSearch = re.findall(commandregexstr,location.Code)[0]
 		npcRegex = ("[^\n]+")+commandSearch+",[^\n]+\n"
-		npcSearch = re.findall(npcRegex,filecode)[0]
+		npcSearchT = re.findall(npcRegex,filecode)
+		if len(npcSearchT) == 0:
+			raise Exception("Unable to find NPC Data for itemball/berry::"+npcRegex)
+		else:
+			npcSearch = npcSearchT[0]
+
 	labelCodeB = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	labelCodeA = "\n.ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0ITEMCODE::\n'
 	labelCodeBNPC = ".ckir_BEFORE"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
 	labelCodeANPC = ".ckir_AFTER"+("".join(location.Name.split())).upper().replace('.','_').replace("'","")+'0NPCCODE::\n'
 	newCode = ""
+
 	if not location.IsSpecial:
 		newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 		#switch spaces to tabs.....
 		newcode = newcode.replace("    ","\t")
+		#newcode = newcode.replace("verbosegiveitem", "giveitem")
 	if not location.IsSpecial:
 		newfile = filecode.replace(oldcode,newcode)
 		if(location.IsBall or location.IsBerry):
@@ -699,8 +1119,67 @@ def LabelItemLocation(location):
 			newfile = filecode.replace(oldcode,lines[0]+"\n"+labelCodeB+"".join(lines[1:])+labelCodeA)
 		else:
 			newfile = filecode.replace(oldcode,labelCodeB+oldcode+labelCodeA)
+
+	if location.HardcodedName is not None:
+		vendingLabelB = ".ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_')\
+			.replace("'","") + '0VENDINGCODE::\n'
+		vendingLabelA = "\n.ckir_AFTER" + ("".join(location.Name.split())).upper().replace('.', '_')\
+			.replace("'","") + '0VENDINGCODE::\n'
+
+		vendingLine = re.escape(location.HardcodedName)
+		codeSearchResults = re.findall(vendingLine, newfile)
+		item = codeSearchResults[0]
+
+		newfile = newfile.replace(item, vendingLabelB + item + vendingLabelA)
+
+	hardcoded_prize_labelling = False
+	if location.isVendingMachine():
+		hardcoded_prize_labelling = True
+		label_desc = "checkmoney YOUR_MONEY,"
+	elif location.isPrize():
+		hardcoded_prize_labelling = True
+		label_desc = "checkcoins"
+
+	if hardcoded_prize_labelling:
+		#checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
+		name_regex = label_desc + " ([A-Z0-9_]{1,}_(PRICE|COINS))"
+		foundPrice = re.search(name_regex, location.Code)
+		if foundPrice:
+			priceVariable = foundPrice.group(1)
+			#GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE EQU 200
+			#variable_defined_regex = priceVariable+"\s{1,}EQU\s{1,}\d{1,5}\n"
+			variable_used_regex = "\t(?:check|take)[a-zA-Z, _]{1,} "+priceVariable+"\n"
+			priceUses = re.findall(variable_used_regex, newfile)
+
+			if len(priceUses) != 2:
+				raise Exception("Invalid price set handling", priceVariable, priceUses)
+
+			priceCheck = priceUses[0]
+			vendingPriceLabelB = ".ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_') \
+				.replace("'", "") + '0VENDINGPRICECODE1::\n'
+			vendingPriceLabelA = ".ckir_AFTER" + ("".join(location.Name.split())).upper().replace('.', '_') \
+				.replace("'", "") + '0VENDINGPRICECODE1::\n'
+
+			priceTake = priceUses[1]
+			vendingPriceLabelB2 = ".ckir_BEFORE" + ("".join(location.Name.split())).upper().replace('.', '_') \
+				.replace("'", "") + '0VENDINGPRICECODE2::\n'
+			vendingPriceLabelA2 = ".ckir_AFTER" + ("".join(location.Name.split())).upper().replace('.', '_') \
+				.replace("'", "") + '0VENDINGPRICECODE2::\n'
+
+			print("cc", priceCheck, priceTake, priceUses, variable_used_regex, priceVariable)
+
+			newfile = newfile.replace(priceCheck, vendingPriceLabelB+priceCheck+vendingPriceLabelA)
+			newfile = newfile.replace(priceTake, vendingPriceLabelB2 + priceTake + vendingPriceLabelA2)
+
+		else:
+			raise Exception("Could not find price")
+
+
+
+
+
 	#write the new file into the files for the randomizer rom
-	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w')
+	newfilestream = open("RandomizerRom/maps/"+location.FileName,'w', encoding="utf-8")
 	newfilestream.seek(0)
 	newfilestream.write(newfile)
 	newfilestream.truncate()
@@ -712,7 +1191,7 @@ def LabelItemLocation(location):
 	if(not location.SecondaryCode is None):
 		print("Secondary Labelling "+location.Name)
 		#open the relevant file and get it as a string
-		file = open("RandomizerRom/maps/"+location.SecondaryFile)
+		file = open("RandomizerRom/maps/"+location.SecondaryFile, encoding="utf-8")
 		filecode = file.read()
 
 		#constuct new script that gives the new item
@@ -755,6 +1234,7 @@ def LabelItemLocation(location):
 			newcode = oldcode.replace(codeSearch[1],labelCodeB+codeSearch[1]+labelCodeA)
 			#switch spaces to tabs.....
 			newcode = newcode.replace("    ","\t")
+			#newcode = newcode.replace("verbosegiveitem", "giveitem")
 
 		if not location.IsSpecial:
 			newfile = filecode.replace(oldcode,newcode)
@@ -770,7 +1250,7 @@ def LabelItemLocation(location):
 			else:
 				newfile = filecode.replace(oldcode,labelCodeB+oldcode+labelCodeA)
 		#write the new file into the files for the randomizer rom
-		newfilestream = open("RandomizerRom/maps/"+location.SecondaryFile,'w')
+		newfilestream = open("RandomizerRom/maps/"+location.SecondaryFile,'w', encoding="utf-8")
 		newfilestream.seek(0)
 		newfilestream.write(newfile)
 		newfilestream.truncate()
@@ -1074,6 +1554,7 @@ def WriteSpecialWildLevels(locationDict,distDict,monFun):
 
 import string
 def ByteToGBCCharacterByte(charr):
+	# TODO: This should be generated and checked against codes in charmap.asm
 	upper=string.ascii_uppercase
 	lower=string.ascii_lowercase
 	digits = "0123456789"
@@ -1102,6 +1583,8 @@ def ByteToGBCCharacterByte(charr):
 		return 199
 	elif charr == "❌":
 		return 241
+	elif charr == "¥":
+		return 240
 
 	else:
 		return 127
@@ -1162,3 +1645,126 @@ def WriteDescriptionsToMemory(romMap, hints, hintConfig):
 
 
 	return
+
+#In future, may wish to use depth into the game for shop items to determine prices
+def WriteItemPricesToMemory(addressData, romMap, itemPrices):
+	for item in itemPrices.keys():
+		if item.startswith("HC_"):
+			continue
+
+		price = itemPrices[item]
+
+		#ItemAttributes.ckir_BEFORE_ItemAttribute_REPEL
+		labelReference = "ckir_BEFORE_ItemAttribute_{}".format(item)
+		labelInfo = addressData[labelReference]
+
+		bytes = list(struct.pack('<H', price))
+
+		# First two bytes dictate price
+		romMap[labelInfo["address_range"]["begin"]] = bytes[0]
+		romMap[labelInfo["address_range"]["begin"]+1] = bytes[1]
+
+
+def WriteHardCodedPricesToMemory(addressData, romMap, itemPrices, locations, priceSettings):
+	# Bargain shops are hardcoded price values
+	# Vending machines prices are hardcoded AND the string must be updated
+
+	buena = priceSettings["randomise_buena_prices"]
+	game_corner = priceSettings["randomise_game_corner_prices"]
+	bargain = priceSettings["randomise_bargain_prices"]
+
+	if bargain:
+		bargainItems = [ l for l in locations if l.isBargainShop() and l.isItem()]
+		for bargain in bargainItems:
+			bargainData = "ckir_BEFORE{}0ITEMCODE".format(
+				"".join(bargain.Name.split()).upper().replace('.', '_') \
+					.replace("'", ""))
+			bargainCode = addressData[bargainData]["address_range"]["begin"]
+
+			codedPrice = itemPrices["HC_"+bargain.item+str(bargain)]
+			bytes = list(struct.pack('<H', codedPrice))
+
+			romMap[bargainCode+1] = bytes[0]
+			romMap[bargainCode+2] = bytes[1]
+
+	if buena:
+		buenaItems = [l for l in locations if l.isBuenaItem()]
+		for buena in buenaItems:
+			bargainData = "ckir_BEFORE{}0ITEMCODE".format(
+				"".join(buena.Name.split()).upper().replace('.', '_') \
+					.replace("'", ""))
+			bargainCode = addressData[bargainData]["address_range"]["begin"]
+
+			codedPrice = itemPrices["HC_" + buena.item + str(buena)]
+			bytes = list(struct.pack('<H', codedPrice))
+
+			romMap[bargainCode + 1] = bytes[0]
+
+
+	vendingLocations = [ l for l in locations if
+						 ((l.isVendingMachine()  and bargain) or \
+							 ( l.isPrize() and game_corner))
+						  and l.isItem()]
+	for vend in vendingLocations:
+		vendPriceLabel1 = "ckir_BEFORE{}0VENDINGPRICECODE1".format(
+			"".join(vend.Name.split()).upper().replace('.', '_') \
+			.replace("'", ""))
+		vendPriceLabel2 = "ckir_BEFORE{}0VENDINGPRICECODE2".format(
+			"".join(vend.Name.split()).upper().replace('.', '_') \
+				.replace("'", ""))
+		labelInfo1 = addressData[vendPriceLabel1]
+		labelInfo2 = addressData[vendPriceLabel2]
+
+		vendingStringLabel = "ckir_BEFORE" + ("".join(vend.Name.split())).upper().replace('.', '_')\
+			.replace("'","") + '0VENDINGCODE'
+
+		vendingAddressData = addressData[vendingStringLabel]
+
+		codedPrice = itemPrices["HC_" + vend.item + str(vend)]
+		price_string = str(codedPrice)
+
+		#print("Vending price:", vend.Name, vend.item, price_string)
+
+		backwards_iterator = vendingAddressData["address_range"]["end"]-2
+		for i in range(0, len(price_string)):
+			byteToWrite = ByteToGBCCharacterByte(price_string[len(price_string) - i - 1])
+			romMap[backwards_iterator] = byteToWrite
+			backwards_iterator -= 1
+
+		extra_byte = 0
+		if vend.isVendingMachine():
+			romMap[backwards_iterator] = ByteToGBCCharacterByte("¥")
+			backwards_iterator -= 1
+			extra_byte = 1
+
+		romMap[backwards_iterator] = ByteToGBCCharacterByte(" ")
+		backwards_iterator -= 1
+
+		# TODO: Write additional spaces if price string is longer
+
+		vendingString = vend.HardcodedName[vend.HardcodedName.index("\"")+1 : vend.HardcodedName.rindex("\"")]
+		priceLength = len(vendingString)-vendingString.rindex(" ")-2 # Skip the space and the @ as newline
+		extraSpaces = priceLength - len(price_string) - 1 - extra_byte
+		for space in range(0, extraSpaces):
+			romMap[backwards_iterator] = ByteToGBCCharacterByte(" ")
+			backwards_iterator -= 1
+
+		# Bytes are BIG ENDIAN when stored in these EQU variables...
+
+
+		#print(labelInfo1["address_range"]["begin"], bytes[0], bytes[1])
+
+		# Price is used in variable checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
+		byteOffset = 0
+		bytes = None
+		if vend.isVendingMachine():
+			byteOffset = 3
+			bytes = list(struct.pack('>H', codedPrice))
+		elif vend.isPrize():
+			byteOffset = 1
+			bytes = list(struct.pack('>H', codedPrice))
+
+		romMap[labelInfo1["address_range"]["begin"] + byteOffset] = bytes[0]
+		romMap[labelInfo1["address_range"]["begin"] + byteOffset + 1] = bytes[1]
+		romMap[labelInfo2["address_range"]["begin"] + byteOffset] = bytes[0]
+		romMap[labelInfo2["address_range"]["begin"] + byteOffset + 1] = bytes[1]

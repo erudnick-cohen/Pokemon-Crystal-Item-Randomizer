@@ -1,11 +1,10 @@
 Location:
     -
-        Name: Route 5
+        Name: Route 5 Access
         FileName: Route5.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
-            - ROUTE_5
+        WildTableList:
         LocationReqs:
             - Saffron City Entrance
         FlagReqs:
@@ -14,7 +13,43 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Cerulean
+        Sublocations:
+
+    -
+        Name: Route 5 Access
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 5
+        FileName: Route5.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - ROUTE_5
+        LocationReqs: Route 5 Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs:
         Sublocations:
             -
                 Name: Route 5 Cleanse Tag
@@ -29,6 +64,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: CLEANSE_TAG
+                WarpReqs: Route 5 Cleanse Tag House
                 Code: |
                     Route5CleanseTagHouseGrannyScript:
                         faceplayer
@@ -50,16 +86,50 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
+                Name: Route 5 Underground Entrance
+                FileName: Route5.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 5
+                FlagReqs:
+                    - Kanto Power Restored
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Underground Path NS
+                FileName: Route5.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Route 5 Underground Entrance
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: NS Underground
+                Sublocations:
+
+            -
                 Name: Underground Path Hidden Full Restore
                 FileName: UndergroundPath.asm
                 SecondaryFile: UndergroundPath.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 5
+                LocationReqs: Underground Path NS
                 FlagReqs:
                     - Hidden Items
-                    - Kanto Power Restored
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -69,7 +139,8 @@ Location:
                         ITEMLINE
                 SecondaryCode: '    bg_event  3,  9, BGEVENT_ITEM, UndergroundPathHiddenFullRestore'
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs:
                 Sublocations:
             -
                 Name: Underground Path Hidden X Special
@@ -78,10 +149,9 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 5
+                LocationReqs: Underground Path NS
                 FlagReqs:
                     - Hidden Items
-                    - Kanto Power Restored
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -91,5 +161,5 @@ Location:
                         ITEMLINE
                 SecondaryCode: '    bg_event  1, 19, BGEVENT_ITEM, UndergroundPathHiddenXSpecial'
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:

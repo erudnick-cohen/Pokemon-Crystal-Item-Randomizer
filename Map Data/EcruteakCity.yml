@@ -87,6 +87,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ecruteak
+        WarpReqs: Ecruteak
         Sublocations:
             -
                 Name: Ecruteak City Hidden Hyper Potion
@@ -129,7 +130,9 @@ Location:
                         writetext SurfGuyLikeADanceText
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipSurf
                         setevent EVENT_GOT_HM03_SURF
+                    .SkipSurf
                         writetext SurfGuySurfExplanationText
                         waitbutton
                         closetext
@@ -149,6 +152,7 @@ Location:
                     - KIMONO_GIRL 4
                     - KIMONO_GIRL 5
                     - KIMONO_GIRL 6
+                WarpReqs: Dance Theater
                 Sublocations:
             -
                 Name: Itemfinder House
@@ -174,6 +178,7 @@ Location:
                         writetext EcruteakItemfinderTrueSpiritText
                         promptbutton
                         ITEMLINE
+                        iffalse .itemfinder
                         setevent EVENT_GOT_ITEMFINDER
 
                 Text: |
@@ -204,3 +209,192 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
+                WarpReqs: Ecruteak Itemfinder House
+
+    -
+        Name: Ecruteak Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Ecruteak
+        WarpReqs: Ecruteak Mart
+        Sublocations:
+        -
+            Name: Ecruteak Mart Poke Ball
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: POKE_BALL
+            Sublocations:
+        -
+            Name: Ecruteak Mart Great Ball
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: GREAT_BALL
+            Sublocations:
+        -
+            Name: Ecruteak Mart Potion
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: POTION
+            Sublocations:
+        -
+            Name: Ecruteak Mart Super Potion
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Ecruteak Mart Antidote
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ANTIDOTE
+            Sublocations:
+        -
+            Name: Ecruteak Mart Parlyz Heal
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PARLYZ_HEAL
+            Sublocations:
+        -
+            Name: Ecruteak Mart Awakening
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: AWAKENING
+            Sublocations:
+        -
+            Name: Ecruteak Mart Burn Heal
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: BURN_HEAL
+            Sublocations:
+        -
+            Name: Ecruteak Mart Ice Heal
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ICE_HEAL
+            Sublocations:
+        -
+            Name: Ecruteak Mart Revive
+            FileName: MartEcruteak
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Ecruteak Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:

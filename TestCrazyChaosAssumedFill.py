@@ -24,5 +24,5 @@ for i in modFileList:
 	yamltext = yamlfile.read()
 	modList.append(yaml.load(yamltext, Loader=yaml.FullLoader))
 res = RunCustomRandomization.randomizeRom('Hmmm'+romPath,settings['Goal'],seed, settings['FlagsSet'],patches, banList = settings['BannedLocations'], allowList = settings['AllowedLocations'], modifiers = modList, plandoPlacements = plandoPlacements, coreProgress = CoreProgress, otherSettings = {'BadgeItemShuffle':None})
-print(res[2])
-print(res[1])
+#print(res[2])
+#print(res[1])

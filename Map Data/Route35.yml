@@ -1,4 +1,23 @@
 Location:
+
+    -
+        Name: Route 35 Entrance
+        FileName: Route35.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Route 35 Route
+        Sublocations:
+
     -
         Name: Route 35 Entrance
         FileName: Route35.asm

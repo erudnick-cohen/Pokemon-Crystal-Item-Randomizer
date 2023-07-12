@@ -1,0 +1,10 @@
+[
+  {"integer_values":
+    {
+      "old": [7, 10, 166, 96],
+      "new": [7, 10, "ckir_BEFORE_DEPTSTORE5FClerkFullShopScript", null]
+    },
+  "address_range": {"begin": 0, "end": 0},
+  "label": "GoldenrodDeptStore5FClerkScript.ckir_BEFORE_DEPTSTORECheckFullScript",
+  "description": "Always have the full inventory at Goldenrod Dept Store 5F TM Shop"
+}]

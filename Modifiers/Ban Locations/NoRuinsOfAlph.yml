@@ -1,0 +1,7 @@
+Name: No Ruins of Alph
+Description: Prevents items needed to defeat red from being located Ruins of Alph. Note that non-progress items can still be placed in this location while this setting is enabled.
+Changes:
+    -
+        Location: Ruins of Alph
+        AddFlagReqs:
+            - Defeated Red

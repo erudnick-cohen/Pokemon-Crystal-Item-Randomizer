@@ -118,17 +118,20 @@ TrainerBugCatcherWade1:
 .ckir_BEFORE_WADE::
 	checkevent EVENT_WADE_HAS_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_PSNCUREBERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_BITTER_BERRY
 	iftrue .Berry
-	checkevent EVENT_WADE_HAS_BERRY
+	checkevent EVENT_WADE_HAS_PRZCUREBERRY
 	iftrue .Berry
 .ckir_AFTER_WADE::
+.ckir_BEFORE_AFTER_WADE::
 .Berry:
+.ckir_AFTER_AFTER_WADE::
 	verbosegiveitem BERRY
 	iffalse .PackFull
 	sjump .Done
+.ckir_BEFORE_WadeRedudantLabels::
 .Psncureberry:
 	verbosegiveitem PSNCUREBERRY
 	iffalse .PackFull
@@ -140,6 +143,7 @@ TrainerBugCatcherWade1:
 .BitterBerry:
 	verbosegiveitem BITTER_BERRY
 	iffalse .PackFull
+.ckir_AFTER_WadeRedudantLabels::
 .Done:
 	clearflag ENGINE_WADE_HAS_ITEM
 	sjump .AcceptedNumberSTD
@@ -187,6 +191,8 @@ Route31MailRecipientScript:
 	opentext
 	checkevent EVENT_GOT_TM50_NIGHTMARE
 	iftrue .DescribeNightmare
+	checkevent EVENT_GAVE_KENYA
+	iftrue .GiveNightmare
 	checkevent EVENT_GOT_KENYA
 	iftrue .TryGiveKenya
 	writetext Text_Route31SleepyMan
@@ -208,6 +214,7 @@ Route31MailRecipientScript:
 	writetext Text_Route31ReadingMail
 	promptbutton
 	setevent EVENT_GAVE_KENYA
+.GiveNightmare:
 	verbosegiveitem TM_NIGHTMARE
 	iffalse .NoRoomForItems
 	setevent EVENT_GOT_TM50_NIGHTMARE

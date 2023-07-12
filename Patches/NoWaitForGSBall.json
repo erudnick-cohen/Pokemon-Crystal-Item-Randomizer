@@ -1,0 +1,22 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                54,
+                80,
+                0
+            ],
+            "new": [
+                52,
+                80,
+                0
+            ]
+        },
+        "address_range": {
+            "begin": 1631084,
+            "end": 1631087
+        },
+        "label": "Kurt1.ckir_BEFORE_KURTHOUSE_SKIPWAITGSBALL",
+        "description": "Removes the wait for Kurt to work on the GS Ball"
+    }
+]

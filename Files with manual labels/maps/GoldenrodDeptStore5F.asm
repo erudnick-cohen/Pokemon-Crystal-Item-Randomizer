@@ -20,14 +20,29 @@ GoldenrodDeptStore5F_MapScripts:
 	disappear GOLDENRODDEPTSTORE5F_RECEPTIONIST
 	return
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F1_yes::
 .yes
+.ckir_AFTER_timed_events_DEPTSTORE5F1_yes::
 	appear GOLDENRODDEPTSTORE5F_RECEPTIONIST
 	return
 
 GoldenrodDeptStore5FClerkScript:
+	readvar VAR_WEEKDAY
+.ckir_BEFORE_DEPTSTORECheckFullScript::
+	ifnotequal 10, GoldenrodDeptStore5FClerkFullShopScript
+.ckir_AFTER_DEPTSTORECheckFullScript::
 	faceplayer
 	opentext
 	goldenrodmart5f
+	closetext
+	end
+
+.ckir_BEFORE_DEPTSTORE5FClerkFullShopScript::
+.ckir_AFTER_DEPTSTORE5FClerkFullShopScript::
+GoldenrodDeptStore5FClerkFullShopScript:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_GOLDENROD_5F_TM02_08_12
 	closetext
 	end
 
@@ -49,16 +64,20 @@ GoldenrodDeptStore5FReceptionistScript:
 	ifgreater 50 - 1, .SomewhatHappy
 	sjump .NotVeryHappy
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy::
 .VeryHappy:
+.ckir_AFTER_timed_events_DEPTSTORE5F3_VeryHappy::
 	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
 	promptbutton
+	checkevent EVENT_GOT_TM27
+	iftrue .Onwards27
 	verbosegiveitem TM_RETURN
-.ckir_BEFORE_timed_events_DEPTSTORE5F4::
+	iffalse .Onwards27
+	setevent EVENT_GOT_TM27
+.Onwards27
+	checkitemrando
 	iftrue .NotVeryHappy
-	iffalse .NotVeryHappy
-.ckir_AFTER_timed_events_DEPTSTORE5F4::
-	closetext
-	end
+	jump .Complete
 
 .SomewhatHappy:
 	writetext GoldenrodDeptStore5FReceptionistItsAdorableText
@@ -66,21 +85,37 @@ GoldenrodDeptStore5FReceptionistScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy::
 .NotVeryHappy:
+.ckir_AFTER_timed_events_DEPTSTORE5F4_NotVeryHappy::
 	writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
 	promptbutton
+	checkevent EVENT_GOT_TM21
+	iftrue .Onwards21
 	verbosegiveitem TM_FRUSTRATION
-	iffalse .Done
-	setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-	closetext
-	end
+	iffalse .Onwards21
+	setevent EVENT_GOT_TM21
+.Onwards21
+	checkitemrando
+	iffalse .Complete
+	checkevent EVENT_GOT_TM27
+	iffalse .EventIsOver
+	checkevent EVENT_GOT_TM21
+	iffalse .EventIsOver
+.Complete
+    setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
+    clearevent EVENT_GOT_TM27
+    clearevent EVENT_GOT_TM21
 
-.EventIsOver:
-	writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
-	waitbutton
+.ckir_BEFORE_timed_events_DEPTSTORE5_EventIsOver::
+.EventIsOver
+.ckir_AFTER_timed_events_DEPTSTORE5_EventIsOver::
+    writetext GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText
+    waitbutton
+
 .Done:
-	closetext
-	end
+    closetext
+    end
 
 Carrie:
 	faceplayer
@@ -89,7 +124,7 @@ Carrie:
 	ifnotequal GBCHECK_CGB, .NotGBC ; This is a dummy check from Gold/Silver
 	writetext GoldenrodDeptStore5FCarrieMysteryGiftExplanationText
 	waitbutton
-    closetext
+	closetext
 	special UnlockMysteryGift
 	end
 

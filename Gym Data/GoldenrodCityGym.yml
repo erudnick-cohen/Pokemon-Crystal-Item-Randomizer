@@ -21,12 +21,14 @@ Location:
                     - Goldenrod
         BadgeLine: |
             .StoppedCrying:
-                checkevent EVENT_GOT_TM45_ATTRACT
-                iftrue .GotAttract
+                checkevent EVENT_GOT_PLAIN_BADGE
+                iftrue .GotPlainBadge
                 writetext WhitneyWhatDoYouWantText
                 promptbutton
                 waitsfx
                 BADGELINE
+                iffalse .GotPlainBadge
+                setevent EVENT_GOT_PLAIN_BADGE
         Code:
         Text:
             -

@@ -1,0 +1,34 @@
+Location:
+    -
+        Name: New Bark
+        FileName: AzaleaGym.asm
+        Type: Starting Warp
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+
+        Name: Cherrygrove
+        FileName: AzaleaGym.asm
+        Type: Starting Warp
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

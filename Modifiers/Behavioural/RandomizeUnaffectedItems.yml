@@ -1,0 +1,58 @@
+Name: Randomize Unaffected Items
+Description: "Regardless of play mode, randomise items that would otherwise be unaffected"
+FlagsSet:
+    - RandomiseItems
+Changes:
+    -
+        Location: Hidden Items
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Phone Call Trainers
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Open Mt. Silver
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Berry Trees
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Timed Events
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Mon Locked Checks
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Bug Catching Contest
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Pointless Checks
+        AddHandle:
+            - ImpossibleRandomise
+    -
+        Location: Shopsanity
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Buena Items
+        AddHandle:
+            - ImpossibleRandomise
+
+    -
+        Location: Game Corner Items
+        AddHandle:
+            - ImpossibleRandomise

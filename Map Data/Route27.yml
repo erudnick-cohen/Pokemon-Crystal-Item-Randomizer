@@ -60,25 +60,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-    -
-        Name: Route 27 Right Side
-        FileName: Route27.asm
-        Type: Map
-        HasPKMN: No
-        WildTableList: 
-        LocationReqs: Route 27
-        FlagReqs:
-            - Fog Badge
-            - Rising Badge
-        ItemReqs:
-            - Surf
-            - Waterfall
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        TrainerList: 
-        Sublocations:
+                WarpReqs: Tojho Falls West
     -
         Name: Route 27 Right Side
         FileName: Route27.asm
@@ -93,6 +75,59 @@ Location:
         Code:
         Text:
         TrainerList: 
+        Sublocations:
+    -
+        Name: Route 27 Right Side
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27 Center
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 27 Center
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27 Right Side
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Route 27 Center
+        FileName: Route27.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27
+        FlagReqs:
+            - Fog Badge
+            - Rising Badge
+        ItemReqs:
+            - Surf
+            - Waterfall
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
         Sublocations:
     -
         Name: Tohjo Falls Over the Waterfall
@@ -147,33 +182,9 @@ Location:
                     - BIRD_KEEPER 12
                 Sublocations:
 
+
             -
-                Name: Route 27 Sandstorm House
-                FileName: Route27SandstormHouse.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Tohjo Falls Over the Waterfall
-                FlagReqs:
-                    - Timed Events
-                    - Fog Badge
-                ItemReqs:
-                    - Surf
-                FlagsSet:
-                ReachableReqs:
-                Text:
-                TrainerList:
-                HintName: Route 27
-                NormalItem: TM_SANDSTORM
-                Code: |
-                    .Loyal:
-                        writetext SandstormHouseWomanLoyalText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .Done
-                        setevent EVENT_GOT_TM37_SANDSTORM
-            -
-                Name: Route 27 Bird Keeper Jose Star_Piece
+                Name: Route 27 Bird Keeper Jose Star Piece
                 FileName: Route27.asm
                 Type: Item
                 HasPKMN: No
@@ -199,3 +210,30 @@ Location:
                         sjump .NumberAccepted
                 Text:
                 Sublocations:
+
+    -
+        Name: Route 27 Sandstorm House
+        FileName: Route27SandstormHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 27 Center
+        FlagReqs:
+            - Timed Events
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Text:
+        TrainerList:
+        HintName: Route 27
+        NormalItem: TM_SANDSTORM
+        WarpReqs: Route 27 Sandstorm House
+        Code: |
+            .ckir_BEFORE_timed_events_SANDSTORM_Loyal::
+            .Loyal:
+            .ckir_AFTER_timed_events_SANDSTORM_Loyal::
+                writetext SandstormHouseWomanLoyalText
+                promptbutton
+                ITEMLINE
+                iffalse .Done
+                setevent EVENT_GOT_TM37_SANDSTORM

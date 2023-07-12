@@ -1,11 +1,43 @@
 Location:
     -
+        Name: Radio Tower Access
+        FileName: RadioTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Radio Tower Access
+        FileName: RadioTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
         Name: Radio Tower
         FileName: RadioTower1F.asm
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Goldenrod City Entrance
+        LocationReqs: Radio Tower Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,17 +47,53 @@ Location:
         TrainerList: 
         Sublocations:
             -
+                Name: Radio Tower Directors Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Radio Tower Directors Room
+
+            -
+                Name: Radio Tower Directors Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower
+                FlagReqs:
+                    - Rockets In Radio Tower
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Radio Tower Directors Room
+                Sublocations:
+
+            -
                 Name: Radio Tower Rockets Part 1
                 FileName: RadioTower5F.asm
                 Type: Item
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Goldenrod City Entrance
+                LocationReqs: Radio Tower Directors Room Access
                 FlagReqs:
-                    - Rocket Invasion
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs:
                 Code: |
                     FakeDirectorScript:
                         turnobject RADIOTOWER5F_DIRECTOR, UP
@@ -45,10 +113,14 @@ Location:
                         loadtrainer EXECUTIVEM, EXECUTIVEM_3
                         startbattle
                         reloadmapafterbattle
+                    PostBattle:
                         opentext
                         writetext FakeDirectorTextAfter
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipBasementKey
+                        setevent EVENT_GOT_BASEMENT_KEY
+                    .SkipBasementKey
                         closetext
                         setevent EVENT_BEAT_ROCKET_EXECUTIVEM_3
                         checkevent EVENT_BEAT_ROCKET_EXECUTIVEM_1
@@ -72,17 +144,53 @@ Location:
                     - GRUNTF 2
                     - EXECUTIVEM 3
                 Sublocations:
+
+            -
+                Name: Radio Tower Top Room Normal Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower
+                FlagReqs:
+                    - Rockets In Radio Tower
+                ItemReqs:
+                    - Card Key
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Radio Tower Top Room Access
+                FileName: RadioTower5F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower Top Room Normal Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Radio Tower Hub
+
             -
                 Name: Radio Tower Rockets Part 2
+                OtherName: Clear Bell Backup
                 FileName: RadioTower5F.asm
                 Type: Item
                 HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City Entrance
+                WildTableList:
+                LocationReqs: Radio Tower Top Room Access
                 FlagReqs:
-                    - Rocket Invasion
+                    - Rockets In Radio Tower
                 ItemReqs:
-                    - Card Key
                 FlagsSet:
                     - Beat Team Rocket
                 ReachableReqs:
@@ -106,6 +214,10 @@ Location:
                         writetext RadioTower5FDirectorThankYouText
                         promptbutton
                         ITEMLINE
+                        iftrue .SkipBackupClearBell
+                        clearevent EVENT_RADIO_TOWER_5F_CLEAR_BELL_BACKUP
+                        appear RADIOTOWER5F_CLEAR_BELL_BACKUP
+                    .SkipBackupClearBell
                         writetext RadioTower5FDirectorDescribeClearBellText
                         waitbutton
                         closetext
@@ -130,97 +242,120 @@ Location:
                         end
                 Text:
                 AREALV: 20
-                TrainerList: 
+                TrainerList:
                     - GRUNTM 3
                     - GRUNTF 4
                     - GRUNTM 22
                     - EXECUTIVEF 1
                     - EXECUTIVEM 1
                 Sublocations:
-                    -
-                        Name: Radio Tower Sunny Day TM
-                        FileName: RadioTower3F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Radio Tower Rockets Part 2
-                        FlagReqs:
-                        ItemReqs:
-                            - Card Key
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: TM_SUNNY_DAY
-                        Code: |
-                            .NoRockets:
-                                writetext RadioTower3FCooltrainerFYoureMyHeroText
-                                promptbutton
-                                ITEMLINE
-                                iffalse .NoRoom
-                                writetext RadioTower3FCooltrainerFItsSunnyDayText
-                                waitbutton
-                                closetext
-                                setevent EVENT_GOT_SUNNY_DAY_FROM_RADIO_TOWER
-                                end
-                        Text: |
-                            UnknownText_0x5e821:
-                                text "It's ITEMNAME."
-                                line "It powers up fire-"
-                                cont "type moves for a"
-                                cont "while."
-                                done
-                        TrainerList: 
-                        Sublocations:
-                    -
-                        Name: Pink Bow
-                        FileName: RadioTower4F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Radio Tower Rockets Part 2
-                        FlagReqs:
-                        ItemReqs:
-                            - Card Key
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: PINK_BOW
-                        Code: |
-                            .ClearedRockets:
-                                writetext RadioTower4FDJMaryText_ClearedRockets
-                                promptbutton
-                                ITEMLINE
-                                iffalse .NoRoom
-                                writetext RadioTower4FDJMaryText_GivePinkBow
-                                waitbutton
-                                closetext
-                                setevent EVENT_GOT_PINK_BOW_FROM_MARY
-                                end
-                        Text:
-                        TrainerList: 
-                        Sublocations:
-                    -
-                        Name: Radio Tower Ultra Ball
-                        FileName: RadioTower5F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Radio Tower Rockets Part 2
-                        FlagReqs:
-                        ItemReqs:
-                            - Card Key
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: ULTRA_BALL
-                        IsBall: Yes
-                        Code: |
-                            RadioTower5FUltraBall:
-                                ITEMLINE
-                        Text:
-                        TrainerList: 
-                        Sublocations:
+                -
+                    Name: Clear Bell Backup
+                    TrueName: Radio Tower Rockets Part 2
+                    FileName: RadioTower5F.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: Yes
+                    WildTableList:
+                    IsBall: Yes
+                    LocationReqs: Radio Tower Top Room Access
+                    FlagReqs:
+                        - Rockets In Radio Tower
+                    ItemReqs:
+                    FlagsSet:
+                        - Beat Team Rocket
+                    ReachableReqs:
+                    Code: |
+                        RadioTower5FClearBellBackup:
+                            ITEMLINE
+                    Text:
+                    Sublocations:
+
             -
-                Name: Buena Item
-                FileName: RadioTower2F.asm
+                Name: Radio Tower Sunny Day TM
+                FileName: RadioTower3F.asm
                 Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower Rockets Part 2
+                FlagReqs:
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: TM_SUNNY_DAY
+                WarpReqs: Radio Tower 3F
+                Code: |
+                    .NoRockets:
+                        writetext RadioTower3FCooltrainerFYoureMyHeroText
+                        promptbutton
+                        ITEMLINE
+                        iffalse .NoRoom
+                        writetext RadioTower3FCooltrainerFItsSunnyDayText
+                        waitbutton
+                        closetext
+                        setevent EVENT_GOT_SUNNY_DAY_FROM_RADIO_TOWER
+                        end
+                Text: |
+                    UnknownText_0x5e821:
+                        text "It's ITEMNAME."
+                        line "It powers up fire-"
+                        cont "type moves for a"
+                        cont "while."
+                        done
+                TrainerList:
+                Sublocations:
+            -
+                Name: Radio Tower Pink Bow
+                FileName: RadioTower4F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower Rockets Part 2
+                FlagReqs:
+                    - Beat Team Rocket
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PINK_BOW
+                WarpReqs: Radio Tower 4F Rocket Side
+                Code: |
+                    .ClearedRockets:
+                        writetext RadioTower4FDJMaryText_ClearedRockets
+                        promptbutton
+                        ITEMLINE
+                        iffalse .NoRoom
+                        writetext RadioTower4FDJMaryText_GivePinkBow
+                        waitbutton
+                        closetext
+                        setevent EVENT_GOT_PINK_BOW_FROM_MARY
+                        end
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Radio Tower Ultra Ball
+                FileName: RadioTower5F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Radio Tower Top Room Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: Yes
+                Code: |
+                    RadioTower5FUltraBall:
+                        ITEMLINE
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Radio Tower 2F
+                FileName: RadioTower2F.asm
+                Type: Map
                 HasPKMN: No
                 WildTableList:
                 LocationReqs: Radio Tower
@@ -228,15 +363,204 @@ Location:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: BLUE_CARD
-                Code: |
-                    .Introduction:
-                        writetext RadioTower2FBuenaShowIntroductionText
-                        promptbutton
-                        setevent EVENT_MET_BUENA
-                        ITEMLINE
+                Code:
                 Text:
                 TrainerList:
+                WarpReqs: Radio Tower 2F
+                Sublocations:
+                    -
+                        Name: Buena Item
+                        FileName: RadioTower2F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: BLUE_CARD
+                        Code: |
+                            .Introduction:
+                                writetext RadioTower2FBuenaShowIntroductionText
+                                promptbutton
+                                setevent EVENT_MET_BUENA
+                                ITEMLINE
+                                iffalse .TuneIn
+                                setevent EVENT_GOT_BLUE_CARD
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Ultra Ball
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ULTRA_BALL
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Full Restore
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: FULL_RESTORE
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Nugget
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: NUGGET
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Rare Candy
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: RARE_CANDY
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Protein
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: PROTEIN
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Iron
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: IRON
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Carbos
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: CARBOS
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop Calcium
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: CALCIUM
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Buena Shop HP Up
+                        FileName: buena_prizes.asm/BuenaPrizeItems
+                        Type: Buena
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Radio Tower 2F
+                        FlagReqs:
+                            - Buena Access
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: HP_UP
+                        Code:
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
+            -
+                Name: Radio Card Quiz Access
+                FileName: RadioTower1F.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Radio Tower
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                WarpReqs: Radio Tower 1F
                 Sublocations:
             -
                 Name: Radio Card Quiz
@@ -244,7 +568,7 @@ Location:
                 Type: Item
                 HasPKMN: Yes
                 WildTableList:
-                LocationReqs:
+                LocationReqs: Radio Card Quiz Access
                 FlagReqs:
                     - Impossible
                 ItemReqs:
@@ -256,6 +580,8 @@ Location:
                         opentext
                         checkevent EVENT_RADIO_CARD_RECEIVED
                         iftrue .GotCard
+                        checkevent EVENT_RADIO_QUIZ_COMPLETE
+                        iftrue .GetRadioCard
                         writetext RadioTower1FRadioCardWomanOfferQuizText
                         yesorno
                         iffalse .NoQuiz
@@ -284,9 +610,12 @@ Location:
                         iftrue .WrongAnswer
                         playsound SFX_ELEVATOR_END
                         waitsfx
+                        setevent EVENT_RADIO_QUIZ_COMPLETE
+                    .GetRadioCard
                         writetext RadioTower1FRadioCardWomanYouWinText
                         promptbutton
                         ITEMLINE
+                        iffalse .GotCard
                         setevent EVENT_RADIO_CARD_RECEIVED
                     .GotCard:
                         writetext RadioTower1FRadioCardWomanTuneInText

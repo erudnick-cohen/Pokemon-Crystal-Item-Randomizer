@@ -1,0 +1,11 @@
+Name: No Route 25 Trainer Gauntlet
+Description: Prevents Route 25 Trainer Gauntlet from being in logic.
+Changes:
+    -
+        Location: Route 25 Trainer Gauntlet
+        AddFlagReqs:
+            - Defeated Red
+    -
+        Location: Sea Cottage Warpie
+        AddFlagReqs:
+            - Defeated Red

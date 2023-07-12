@@ -1,6 +1,24 @@
 Location:
     -
-        Name: Route 44
+        Name: Route 44 Entrance
+        FileName: Route44.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_44
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        WarpReqs: Mahogany 7 Badges
+
+    -
+        Name: Route 44 Entrance
         FileName: Route44.asm
         Type: Map
         HasPKMN: Yes
@@ -8,6 +26,23 @@ Location:
         LocationReqs: Mahogany Town
         FlagReqs:
             - Rocket Invasion
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+
+    -
+
+        Name: Route 44
+        FileName: Route44.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: Route_44
+        LocationReqs: Route 44 Entrance
+        FlagReqs:
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -134,10 +169,10 @@ Location:
                 WildTableList: 
                 LocationReqs: 
                     - Route 44
-                    - Elite Four
                 FlagReqs:
                     - Phone Call Trainers
                     - Kanto Power Restored
+                    - Became Champion
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -190,7 +225,9 @@ Location:
                 IsBall: No
                 NormalItem: ULTRA_BALL
                 Code: |
+                    .ckir_BEFORE_AFTER_WILTON_A::
                     .UltraBall:
+                    .ckir_AFTER_AFTER_WILTON_A::
                         ITEMLINE
                         iffalse .Route44PackFullM
                         sjump .ItemReceived

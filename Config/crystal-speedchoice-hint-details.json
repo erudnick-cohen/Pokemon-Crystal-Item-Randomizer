@@ -1,0 +1,1990 @@
+[
+  {
+    "label": "AzaleaGymSignText.ctir_BEFORE_AzaleaGymSignText",
+    "address_range": {
+      "begin": 1672865,
+      "end": 1672935
+    },
+    "integer_values": "0 128 153 128 139 132 128 127 147 142 150 141 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 129 148 134 146 152 81 147 167 164 127 150 160 171 170 168 173 166 79 129 180 166 127 84 140 142 141 85 132 173 162 184 162 171 174 175 164 163 168 160 87",
+    "hex_values": "$0 $80 $99 $80 $8b $84 $80 $7f $93 $8e $96 $8d $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $81 $94 $86 $92 $98 $51 $93 $a7 $a4 $7f $96 $a0 $ab $aa $a8 $ad $a6 $4f $81 $b4 $a6 $7f $54 $8c $8e $8d $55 $84 $ad $a2 $b8 $a2 $ab $ae $af $a4 $a3 $a8 $a0 $57"
+  },
+  {
+    "label": "AzaleaTownIlexForestSignText.ctir_BEFORE_AzaleaTownIlexForestSignText",
+    "address_range": {
+      "begin": 1673116,
+      "end": 1673153
+    },
+    "integer_values": "0 136 139 132 151 127 133 142 145 132 146 147 81 132 173 179 164 177 127 179 167 177 174 180 166 167 127 179 167 164 79 166 160 179 164 232 87",
+    "hex_values": "$0 $88 $8b $84 $97 $7f $85 $8e $91 $84 $92 $93 $51 $84 $ad $b3 $a4 $b1 $7f $b3 $a7 $b1 $ae $b4 $a6 $a7 $7f $b3 $a7 $a4 $4f $a6 $a0 $b3 $a4 $e8 $57"
+  },
+  {
+    "label": "AzaleaTownSignText.ctir_BEFORE_AzaleaTownSignText",
+    "address_range": {
+      "begin": 1672794,
+      "end": 1672851
+    },
+    "integer_values": "0 128 153 128 139 132 128 127 147 142 150 141 79 150 167 164 177 164 127 143 164 174 175 171 164 127 160 173 163 81 84 140 142 141 127 139 168 181 164 127 168 173 79 135 160 175 175 184 127 135 160 177 172 174 173 184 87",
+    "hex_values": "$0 $80 $99 $80 $8b $84 $80 $7f $93 $8e $96 $8d $4f $96 $a7 $a4 $b1 $a4 $7f $8f $a4 $ae $af $ab $a4 $7f $a0 $ad $a3 $51 $54 $8c $8e $8d $7f $8b $a8 $b5 $a4 $7f $a8 $ad $4f $87 $a0 $af $af $b8 $7f $87 $a0 $b1 $ac $ae $ad $b8 $57"
+  },
+  {
+    "label": "BattleTowerOutsideSignText.ctir_BEFORE_BattleTowerOutsideSignText",
+    "address_range": {
+      "begin": 654131,
+      "end": 654182
+    },
+    "integer_values": "0 129 128 147 147 139 132 127 147 142 150 132 145 81 147 160 170 164 127 179 167 164 127 148 171 179 168 172 160 179 164 79 147 177 160 168 173 164 177 127 130 167 160 171 171 164 173 166 164 231 87",
+    "hex_values": "$0 $81 $80 $93 $93 $8b $84 $7f $93 $8e $96 $84 $91 $51 $93 $a0 $aa $a4 $7f $b3 $a7 $a4 $7f $94 $ab $b3 $a8 $ac $a0 $b3 $a4 $4f $93 $b1 $a0 $a8 $ad $a4 $b1 $7f $82 $a7 $a0 $ab $ab $a4 $ad $a6 $a4 $e7 $57"
+  },
+  {
+    "label": "BillsHouseSignText.ctir_BEFORE_BillsHouseSignText",
+    "address_range": {
+      "begin": 1701267,
+      "end": 1701293
+    },
+    "integer_values": "0 146 132 128 127 130 142 147 147 128 134 132 79 129 136 139 139 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $92 $84 $80 $7f $82 $8e $93 $93 $80 $86 $84 $4f $81 $88 $8b $8b $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "BlackthornCitySignText.ctir_BEFORE_BlackthornCitySignText",
+    "address_range": {
+      "begin": 1723239,
+      "end": 1723281
+    },
+    "integer_values": "0 129 139 128 130 138 147 135 142 145 141 127 130 136 147 152 81 128 127 144 180 168 164 179 127 140 174 180 173 179 160 168 173 79 145 164 179 177 164 160 179 87",
+    "hex_values": "$0 $81 $8b $80 $82 $8a $93 $87 $8e $91 $8d $7f $82 $88 $93 $98 $51 $80 $7f $90 $b4 $a8 $a4 $b3 $7f $8c $ae $b4 $ad $b3 $a0 $a8 $ad $4f $91 $a4 $b3 $b1 $a4 $a0 $b3 $57"
+  },
+  {
+    "label": "BlackthornCityTrainerTipsText.ctir_BEFORE_BlackthornCityTrainerTipsText",
+    "address_range": {
+      "begin": 1723395,
+      "end": 1723479
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 128 127 84 140 142 141 127 167 174 171 163 168 173 166 79 160 127 140 136 145 128 130 139 132 129 132 145 145 152 81 182 168 171 171 127 162 180 177 164 127 168 179 178 164 171 165 79 174 165 127 160 173 184 127 178 179 160 179 180 178 85 175 177 174 161 171 164 172 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $80 $7f $54 $8c $8e $8d $7f $a7 $ae $ab $a3 $a8 $ad $a6 $4f $a0 $7f $8c $88 $91 $80 $82 $8b $84 $81 $84 $91 $91 $98 $51 $b6 $a8 $ab $ab $7f $a2 $b4 $b1 $a4 $7f $a8 $b3 $b2 $a4 $ab $a5 $4f $ae $a5 $7f $a0 $ad $b8 $7f $b2 $b3 $a0 $b3 $b4 $b2 $55 $af $b1 $ae $a1 $ab $a4 $ac $e8 $57"
+  },
+  {
+    "label": "BlackthornGymSignText.ctir_BEFORE_BlackthornGymSignText",
+    "address_range": {
+      "begin": 1723281,
+      "end": 1723353
+    },
+    "integer_values": "0 129 139 128 130 138 147 135 142 145 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 130 139 128 136 145 81 147 167 164 127 129 171 164 178 178 164 163 127 148 178 164 177 79 174 165 127 131 177 160 166 174 173 127 84 140 142 141 87",
+    "hex_values": "$0 $81 $8b $80 $82 $8a $93 $87 $8e $91 $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $82 $8b $80 $88 $91 $51 $93 $a7 $a4 $7f $81 $ab $a4 $b2 $b2 $a4 $a3 $7f $94 $b2 $a4 $b1 $4f $ae $a5 $7f $83 $b1 $a0 $a6 $ae $ad $7f $54 $8c $8e $8d $57"
+  },
+  {
+    "label": "BluesHouseSignText.ctir_BEFORE_BluesHouseSignText",
+    "address_range": {
+      "begin": 1755073,
+      "end": 1755087
+    },
+    "integer_values": "0 129 139 148 132 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $81 $8b $94 $84 $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "BurnedTowerSignText.ctir_BEFORE_BurnedTowerSignText",
+    "address_range": {
+      "begin": 1721764,
+      "end": 1721852
+    },
+    "integer_values": "0 129 148 145 141 132 131 127 147 142 150 132 145 81 136 179 127 182 160 178 127 163 164 178 179 177 174 184 164 163 79 161 184 127 160 127 172 184 178 179 164 177 168 174 180 178 85 165 168 177 164 232 81 143 171 164 160 178 164 127 178 179 160 184 127 160 182 160 184 244 79 160 178 127 168 179 127 168 178 127 180 173 178 160 165 164 232 87",
+    "hex_values": "$0 $81 $94 $91 $8d $84 $83 $7f $93 $8e $96 $84 $91 $51 $88 $b3 $7f $b6 $a0 $b2 $7f $a3 $a4 $b2 $b3 $b1 $ae $b8 $a4 $a3 $4f $a1 $b8 $7f $a0 $7f $ac $b8 $b2 $b3 $a4 $b1 $a8 $ae $b4 $b2 $55 $a5 $a8 $b1 $a4 $e8 $51 $8f $ab $a4 $a0 $b2 $a4 $7f $b2 $b3 $a0 $b8 $7f $a0 $b6 $a0 $b8 $f4 $4f $a0 $b2 $7f $a8 $b3 $7f $a8 $b2 $7f $b4 $ad $b2 $a0 $a5 $a4 $e8 $57"
+  },
+  {
+    "label": "CarefulSwimmingSignText.ctir_BEFORE_CarefulSwimmingSignText",
+    "address_range": {
+      "begin": 1699345,
+      "end": 1699421
+    },
+    "integer_values": "0 143 171 164 160 178 164 127 161 164 127 162 160 177 164 165 180 171 79 168 165 127 184 174 180 127 160 177 164 127 178 182 168 172 227 85 172 168 173 166 127 179 174 127 146 132 128 133 142 128 140 85 136 146 139 128 141 131 146 232 81 133 148 130 135 146 136 128 127 143 142 139 136 130 132 87",
+    "hex_values": "$0 $8f $ab $a4 $a0 $b2 $a4 $7f $a1 $a4 $7f $a2 $a0 $b1 $a4 $a5 $b4 $ab $4f $a8 $a5 $7f $b8 $ae $b4 $7f $a0 $b1 $a4 $7f $b2 $b6 $a8 $ac $e3 $55 $ac $a8 $ad $a6 $7f $b3 $ae $7f $92 $84 $80 $85 $8e $80 $8c $55 $88 $92 $8b $80 $8d $83 $92 $e8 $51 $85 $94 $82 $87 $92 $88 $80 $7f $8f $8e $8b $88 $82 $84 $57"
+  },
+  {
+    "label": "CeladonCityDeptStoreSignText.ctir_BEFORE_CeladonCityDeptStoreSignText",
+    "address_range": {
+      "begin": 1745833,
+      "end": 1745876
+    },
+    "integer_values": "0 133 168 173 163 127 150 167 160 179 127 152 174 180 79 141 164 164 163 127 160 179 127 130 132 139 128 131 142 141 85 131 132 143 147 232 146 147 142 145 132 231 87",
+    "hex_values": "$0 $85 $a8 $ad $a3 $7f $96 $a7 $a0 $b3 $7f $98 $ae $b4 $4f $8d $a4 $a4 $a3 $7f $a0 $b3 $7f $82 $84 $8b $80 $83 $8e $8d $55 $83 $84 $8f $93 $e8 $92 $93 $8e $91 $84 $e7 $57"
+  },
+  {
+    "label": "CeladonCityGameCornerSignText.ctir_BEFORE_CeladonCityGameCornerSignText",
+    "address_range": {
+      "begin": 1745893,
+      "end": 1745944
+    },
+    "integer_values": "0 147 167 164 127 143 171 160 184 166 177 174 180 173 163 127 165 174 177 79 132 181 164 177 184 161 174 163 184 227 227 130 132 139 128 131 142 141 85 134 128 140 132 127 130 142 145 141 132 145 87",
+    "hex_values": "$0 $93 $a7 $a4 $7f $8f $ab $a0 $b8 $a6 $b1 $ae $b4 $ad $a3 $7f $a5 $ae $b1 $4f $84 $b5 $a4 $b1 $b8 $a1 $ae $a3 $b8 $e3 $e3 $82 $84 $8b $80 $83 $8e $8d $55 $86 $80 $8c $84 $7f $82 $8e $91 $8d $84 $91 $57"
+  },
+  {
+    "label": "CeladonCityMansionSignText.ctir_BEFORE_CeladonCityMansionSignText",
+    "address_range": {
+      "begin": 1745876,
+      "end": 1745893
+    },
+    "integer_values": "0 130 132 139 128 131 142 141 127 140 128 141 146 136 142 141 87",
+    "hex_values": "$0 $82 $84 $8b $80 $83 $8e $8d $7f $8c $80 $8d $92 $88 $8e $8d $57"
+  },
+  {
+    "label": "CeladonCitySignText.ctir_BEFORE_CeladonCitySignText",
+    "address_range": {
+      "begin": 1745728,
+      "end": 1745769
+    },
+    "integer_values": "0 130 132 139 128 131 142 141 127 130 136 147 152 81 147 167 164 127 130 168 179 184 127 174 165 79 145 160 168 173 161 174 182 127 131 177 164 160 172 178 87",
+    "hex_values": "$0 $82 $84 $8b $80 $83 $8e $8d $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $82 $a8 $b3 $b8 $7f $ae $a5 $4f $91 $a0 $a8 $ad $a1 $ae $b6 $7f $83 $b1 $a4 $a0 $ac $b2 $57"
+  },
+  {
+    "label": "CeladonCityTrainerTipsText.ctir_BEFORE_CeladonCityTrainerTipsText",
+    "address_range": {
+      "begin": 1745944,
+      "end": 1746071
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 134 148 128 145 131 127 146 143 132 130 232 79 175 177 174 179 164 162 179 178 127 84 140 142 141 81 160 166 160 168 173 178 179 127 146 143 132 130 136 128 139 79 160 179 179 160 162 170 178 127 178 180 162 167 127 160 178 85 165 168 177 164 127 160 173 163 127 182 160 179 164 177 232 81 134 164 179 127 184 174 180 177 127 168 179 164 172 178 127 160 179 79 130 132 139 128 131 142 141 127 131 132 143 147 232 85 146 147 142 145 132 231 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $86 $94 $80 $91 $83 $7f $92 $8f $84 $82 $e8 $4f $af $b1 $ae $b3 $a4 $a2 $b3 $b2 $7f $54 $8c $8e $8d $51 $a0 $a6 $a0 $a8 $ad $b2 $b3 $7f $92 $8f $84 $82 $88 $80 $8b $4f $a0 $b3 $b3 $a0 $a2 $aa $b2 $7f $b2 $b4 $a2 $a7 $7f $a0 $b2 $55 $a5 $a8 $b1 $a4 $7f $a0 $ad $a3 $7f $b6 $a0 $b3 $a4 $b1 $e8 $51 $86 $a4 $b3 $7f $b8 $ae $b4 $b1 $7f $a8 $b3 $a4 $ac $b2 $7f $a0 $b3 $4f $82 $84 $8b $80 $83 $8e $8d $7f $83 $84 $8f $93 $e8 $55 $92 $93 $8e $91 $84 $e7 $57"
+  },
+  {
+    "label": "CeladonDeptStore1FDirectoryText.ctir_BEFORE_CeladonDeptStore1FDirectoryText",
+    "address_range": {
+      "begin": 462135,
+      "end": 462253
+    },
+    "integer_values": "0 247 133 156 127 146 132 145 149 136 130 132 79 127 127 127 127 130 142 148 141 147 132 145 81 248 133 156 127 147 145 128 136 141 132 145 224 146 79 127 127 127 127 140 128 145 138 132 147 81 249 133 156 127 147 140 127 146 135 142 143 81 250 133 156 127 150 136 146 132 140 128 141 127 134 136 133 147 146 81 251 133 156 127 131 145 148 134 127 146 147 142 145 132 81 252 133 156 127 145 142 142 133 147 142 143 79 127 127 127 127 146 144 148 128 145 132 87",
+    "hex_values": "$0 $f7 $85 $9c $7f $92 $84 $91 $95 $88 $82 $84 $4f $7f $7f $7f $7f $82 $8e $94 $8d $93 $84 $91 $51 $f8 $85 $9c $7f $93 $91 $80 $88 $8d $84 $91 $e0 $92 $4f $7f $7f $7f $7f $8c $80 $91 $8a $84 $93 $51 $f9 $85 $9c $7f $93 $8c $7f $92 $87 $8e $8f $51 $fa $85 $9c $7f $96 $88 $92 $84 $8c $80 $8d $7f $86 $88 $85 $93 $92 $51 $fb $85 $9c $7f $83 $91 $94 $86 $7f $92 $93 $8e $91 $84 $51 $fc $85 $9c $7f $91 $8e $8e $85 $93 $8e $8f $4f $7f $7f $7f $7f $92 $90 $94 $80 $91 $84 $57"
+  },
+  {
+    "label": "CeladonDeptStore2FDirectoryText.ctir_BEFORE_CeladonDeptStore2FDirectoryText",
+    "address_range": {
+      "begin": 462569,
+      "end": 462625
+    },
+    "integer_values": "0 147 174 175 127 134 177 160 163 164 127 136 179 164 172 178 79 165 174 177 127 147 177 160 168 173 164 177 178 231 81 248 133 156 127 147 145 128 136 141 132 145 224 146 79 127 127 127 127 140 128 145 138 132 147 87",
+    "hex_values": "$0 $93 $ae $af $7f $86 $b1 $a0 $a3 $a4 $7f $88 $b3 $a4 $ac $b2 $4f $a5 $ae $b1 $7f $93 $b1 $a0 $a8 $ad $a4 $b1 $b2 $e7 $51 $f8 $85 $9c $7f $93 $91 $80 $88 $8d $84 $91 $e0 $92 $4f $7f $7f $7f $7f $8c $80 $91 $8a $84 $93 $57"
+  },
+  {
+    "label": "CeladonDeptStore3FDirectoryText.ctir_BEFORE_CeladonDeptStore3FDirectoryText",
+    "address_range": {
+      "begin": 463058,
+      "end": 463096
+    },
+    "integer_values": "0 249 133 156 127 147 140 127 146 135 142 143 81 140 160 170 164 127 152 174 180 177 127 84 140 142 141 79 146 179 177 174 173 166 164 177 231 87",
+    "hex_values": "$0 $f9 $85 $9c $7f $93 $8c $7f $92 $87 $8e $8f $51 $8c $a0 $aa $a4 $7f $98 $ae $b4 $b1 $7f $54 $8c $8e $8d $4f $92 $b3 $b1 $ae $ad $a6 $a4 $b1 $e7 $57"
+  },
+  {
+    "label": "CeladonDeptStore4FDirectoryText.ctir_BEFORE_CeladonDeptStore4FDirectoryText",
+    "address_range": {
+      "begin": 463321,
+      "end": 463369
+    },
+    "integer_values": "0 132 183 175 177 164 178 178 127 152 174 180 177 178 164 171 165 79 150 168 179 167 127 134 168 165 179 178 231 81 250 133 156 127 150 136 146 132 140 128 141 127 134 136 133 147 146 87",
+    "hex_values": "$0 $84 $b7 $af $b1 $a4 $b2 $b2 $7f $98 $ae $b4 $b1 $b2 $a4 $ab $a5 $4f $96 $a8 $b3 $a7 $7f $86 $a8 $a5 $b3 $b2 $e7 $51 $fa $85 $9c $7f $96 $88 $92 $84 $8c $80 $8d $7f $86 $88 $85 $93 $92 $57"
+  },
+  {
+    "label": "CeladonDeptStore5FDirectoryText.ctir_BEFORE_CeladonDeptStore5FDirectoryText",
+    "address_range": {
+      "begin": 463693,
+      "end": 463709
+    },
+    "integer_values": "0 251 133 156 127 131 145 148 134 127 146 147 142 145 132 87",
+    "hex_values": "$0 $fb $85 $9c $7f $83 $91 $94 $86 $7f $92 $93 $8e $91 $84 $57"
+  },
+  {
+    "label": "CeladonDeptStore6FDirectoryText.ctir_BEFORE_CeladonDeptStore6FDirectoryText",
+    "address_range": {
+      "begin": 464347,
+      "end": 464384
+    },
+    "integer_values": "0 252 133 156 127 145 142 142 133 147 142 143 127 146 144 148 128 145 132 79 149 132 141 131 136 141 134 127 140 128 130 135 136 141 132 146 87",
+    "hex_values": "$0 $fc $85 $9c $7f $91 $8e $8e $85 $93 $8e $8f $7f $92 $90 $94 $80 $91 $84 $4f $95 $84 $8d $83 $88 $8d $86 $7f $8c $80 $82 $87 $88 $8d $84 $92 $57"
+  },
+  {
+    "label": "CeladonGymSignText.ctir_BEFORE_CeladonGymSignText",
+    "address_range": {
+      "begin": 1745769,
+      "end": 1745833
+    },
+    "integer_values": "0 130 132 139 128 131 142 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 132 145 136 138 128 81 147 167 164 127 141 160 179 180 177 164 227 139 174 181 168 173 166 79 143 177 168 173 162 164 178 178 87",
+    "hex_values": "$0 $82 $84 $8b $80 $83 $8e $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $84 $91 $88 $8a $80 $51 $93 $a7 $a4 $7f $8d $a0 $b3 $b4 $b1 $a4 $e3 $8b $ae $b5 $a8 $ad $a6 $4f $8f $b1 $a8 $ad $a2 $a4 $b2 $b2 $57"
+  },
+  {
+    "label": "CeladonMansion2FMeetingRoomSignText.ctir_BEFORE_CeladonMansion2FMeetingRoomSignText",
+    "address_range": {
+      "begin": 465097,
+      "end": 465122
+    },
+    "integer_values": "0 134 128 140 132 127 133 145 132 128 138 79 140 132 132 147 136 141 134 127 145 142 142 140 87",
+    "hex_values": "$0 $86 $80 $8c $84 $7f $85 $91 $84 $80 $8a $4f $8c $84 $84 $93 $88 $8d $86 $7f $91 $8e $8e $8c $57"
+  },
+  {
+    "label": "CeladonMansion3FDevRoomSignText.ctir_BEFORE_CeladonMansion3FDevRoomSignText",
+    "address_range": {
+      "begin": 465832,
+      "end": 465861
+    },
+    "integer_values": "0 134 128 140 132 127 133 145 132 128 138 79 131 132 149 132 139 142 143 140 132 141 147 127 145 142 142 140 87",
+    "hex_values": "$0 $86 $80 $8c $84 $7f $85 $91 $84 $80 $8a $4f $83 $84 $95 $84 $8b $8e $8f $8c $84 $8d $93 $7f $91 $8e $8e $8c $57"
+  },
+  {
+    "label": "CeladonMansionManagersSuiteSignText.ctir_BEFORE_CeladonMansionManagersSuiteSignText",
+    "address_range": {
+      "begin": 464712,
+      "end": 464745
+    },
+    "integer_values": "0 130 132 139 128 131 142 141 127 140 128 141 146 136 142 141 79 140 128 141 128 134 132 145 224 146 127 146 148 136 147 132 87",
+    "hex_values": "$0 $82 $84 $8b $80 $83 $8e $8d $7f $8c $80 $8d $92 $88 $8e $8d $4f $8c $80 $8d $80 $86 $84 $91 $e0 $92 $7f $92 $94 $88 $93 $84 $57"
+  },
+  {
+    "label": "CeruleanBikeShopSignText.ctir_BEFORE_CeruleanBikeShopSignText",
+    "address_range": {
+      "begin": 1590145,
+      "end": 1590220
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 147 167 164 127 129 136 138 132 127 146 135 142 143 127 167 160 178 79 172 174 181 164 163 127 179 174 127 134 142 139 131 132 141 145 142 131 85 130 136 147 152 127 168 173 127 137 142 135 147 142 117 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $93 $a7 $a4 $7f $81 $88 $8a $84 $7f $92 $87 $8e $8f $7f $a7 $a0 $b2 $4f $ac $ae $b5 $a4 $a3 $7f $b3 $ae $7f $86 $8e $8b $83 $84 $8d $91 $8e $83 $55 $82 $88 $93 $98 $7f $a8 $ad $7f $89 $8e $87 $93 $8e $75 $57"
+  },
+  {
+    "label": "CeruleanCapeSignText.ctir_BEFORE_CeruleanCapeSignText",
+    "address_range": {
+      "begin": 1590331,
+      "end": 1590352
+    },
+    "integer_values": "0 130 132 145 148 139 132 128 141 127 130 128 143 132 79 128 135 132 128 131 87",
+    "hex_values": "$0 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $80 $8f $84 $4f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "CeruleanCitySignText.ctir_BEFORE_CeruleanCitySignText",
+    "address_range": {
+      "begin": 1590034,
+      "end": 1590085
+    },
+    "integer_values": "0 130 132 145 148 139 132 128 141 127 130 136 147 152 81 128 127 140 184 178 179 164 177 168 174 180 178 127 129 171 180 164 79 128 180 177 160 127 146 180 177 177 174 180 173 163 178 127 136 179 87",
+    "hex_values": "$0 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $51 $80 $7f $8c $b8 $b2 $b3 $a4 $b1 $a8 $ae $b4 $b2 $7f $81 $ab $b4 $a4 $4f $80 $b4 $b1 $a0 $7f $92 $b4 $b1 $b1 $ae $b4 $ad $a3 $b2 $7f $88 $b3 $57"
+  },
+  {
+    "label": "CeruleanGymSignText.ctir_BEFORE_CeruleanGymSignText",
+    "address_range": {
+      "begin": 1590085,
+      "end": 1590145
+    },
+    "integer_values": "0 130 132 145 148 139 132 128 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 140 136 146 147 152 81 147 167 164 127 147 174 172 161 174 184 168 178 167 79 140 164 177 172 160 168 163 87",
+    "hex_values": "$0 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $8c $88 $92 $93 $98 $51 $93 $a7 $a4 $7f $93 $ae $ac $a1 $ae $b8 $a8 $b2 $a7 $4f $8c $a4 $b1 $ac $a0 $a8 $a3 $57"
+  },
+  {
+    "label": "CeruleanPoliceSignText.ctir_BEFORE_CeruleanPoliceSignText",
+    "address_range": {
+      "begin": 1590220,
+      "end": 1590331
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 146 179 160 172 175 127 174 180 179 127 179 167 168 164 181 164 177 184 79 160 173 163 127 172 160 170 164 127 179 167 164 127 162 168 179 184 81 160 127 165 177 168 164 173 163 171 168 164 177 244 127 172 174 177 164 79 162 167 164 164 177 165 180 171 127 175 171 160 162 164 231 81 130 132 145 148 139 132 128 141 127 143 142 139 136 130 132 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $92 $b3 $a0 $ac $af $7f $ae $b4 $b3 $7f $b3 $a7 $a8 $a4 $b5 $a4 $b1 $b8 $4f $a0 $ad $a3 $7f $ac $a0 $aa $a4 $7f $b3 $a7 $a4 $7f $a2 $a8 $b3 $b8 $51 $a0 $7f $a5 $b1 $a8 $a4 $ad $a3 $ab $a8 $a4 $b1 $f4 $7f $ac $ae $b1 $a4 $4f $a2 $a7 $a4 $a4 $b1 $a5 $b4 $ab $7f $af $ab $a0 $a2 $a4 $e7 $51 $82 $84 $91 $94 $8b $84 $80 $8d $7f $8f $8e $8b $88 $82 $84 $57"
+  },
+  {
+    "label": "CharcoalKilnSignText.ctir_BEFORE_CharcoalKilnSignText",
+    "address_range": {
+      "begin": 1673101,
+      "end": 1673116
+    },
+    "integer_values": "0 130 135 128 145 130 142 128 139 127 138 136 139 141 87",
+    "hex_values": "$0 $82 $87 $80 $91 $82 $8e $80 $8b $7f $8a $88 $8b $8d $57"
+  },
+  {
+    "label": "CherrygroveCitySignText.ctir_BEFORE_CherrygroveCitySignText",
+    "address_range": {
+      "begin": 1689579,
+      "end": 1689632
+    },
+    "integer_values": "0 130 135 132 145 145 152 134 145 142 149 132 127 130 136 147 152 81 147 167 164 127 130 168 179 184 127 174 165 127 130 180 179 164 244 79 133 177 160 166 177 160 173 179 127 133 171 174 182 164 177 178 87",
+    "hex_values": "$0 $82 $87 $84 $91 $91 $98 $86 $91 $8e $95 $84 $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $82 $a8 $b3 $b8 $7f $ae $a5 $7f $82 $b4 $b3 $a4 $f4 $4f $85 $b1 $a0 $a6 $b1 $a0 $ad $b3 $7f $85 $ab $ae $b6 $a4 $b1 $b2 $57"
+  },
+  {
+    "label": "CianwoodCitySignText.ctir_BEFORE_CianwoodCitySignText",
+    "address_range": {
+      "begin": 1705568,
+      "end": 1705615
+    },
+    "integer_values": "0 130 136 128 141 150 142 142 131 127 130 136 147 152 81 128 127 143 174 177 179 127 146 180 177 177 174 180 173 163 164 163 79 161 184 127 145 174 180 166 167 127 146 164 160 178 87",
+    "hex_values": "$0 $82 $88 $80 $8d $96 $8e $8e $83 $7f $82 $88 $93 $98 $51 $80 $7f $8f $ae $b1 $b3 $7f $92 $b4 $b1 $b1 $ae $b4 $ad $a3 $a4 $a3 $4f $a1 $b8 $7f $91 $ae $b4 $a6 $a7 $7f $92 $a4 $a0 $b2 $57"
+  },
+  {
+    "label": "CianwoodGymSignText.ctir_BEFORE_CianwoodGymSignText",
+    "address_range": {
+      "begin": 1705615,
+      "end": 1705686
+    },
+    "integer_values": "0 130 136 128 141 150 142 142 131 127 130 136 147 152 79 84 140 142 141 127 134 152 140 81 139 132 128 131 132 145 156 127 130 135 148 130 138 81 135 168 178 127 145 174 160 177 168 173 166 127 133 168 178 179 178 79 131 174 127 179 167 164 127 147 160 171 170 168 173 166 87",
+    "hex_values": "$0 $82 $88 $80 $8d $96 $8e $8e $83 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $51 $8b $84 $80 $83 $84 $91 $9c $7f $82 $87 $94 $82 $8a $51 $87 $a8 $b2 $7f $91 $ae $a0 $b1 $a8 $ad $a6 $7f $85 $a8 $b2 $b3 $b2 $4f $83 $ae $7f $b3 $a7 $a4 $7f $93 $a0 $ab $aa $a8 $ad $a6 $57"
+  },
+  {
+    "label": "CianwoodPharmacySignText.ctir_BEFORE_CianwoodPharmacySignText",
+    "address_range": {
+      "begin": 1705686,
+      "end": 1705765
+    },
+    "integer_values": "0 251 246 246 127 152 164 160 177 178 127 174 165 79 147 177 160 163 168 179 168 174 173 81 130 136 128 141 150 142 142 131 127 130 136 147 152 79 143 135 128 145 140 128 130 152 81 150 164 127 128 182 160 168 179 127 152 174 180 177 79 140 164 163 168 162 168 173 160 171 127 144 180 164 177 168 164 178 87",
+    "hex_values": "$0 $fb $f6 $f6 $7f $98 $a4 $a0 $b1 $b2 $7f $ae $a5 $4f $93 $b1 $a0 $a3 $a8 $b3 $a8 $ae $ad $51 $82 $88 $80 $8d $96 $8e $8e $83 $7f $82 $88 $93 $98 $4f $8f $87 $80 $91 $8c $80 $82 $98 $51 $96 $a4 $7f $80 $b6 $a0 $a8 $b3 $7f $98 $ae $b4 $b1 $4f $8c $a4 $a3 $a8 $a2 $a8 $ad $a0 $ab $7f $90 $b4 $a4 $b1 $a8 $a4 $b2 $57"
+  },
+  {
+    "label": "CianwoodPhotoStudioSignText.ctir_BEFORE_CianwoodPhotoStudioSignText",
+    "address_range": {
+      "begin": 1705765,
+      "end": 1705824
+    },
+    "integer_values": "0 130 136 128 141 150 142 142 131 127 130 136 147 152 79 143 135 142 147 142 127 146 147 148 131 136 142 81 147 160 170 164 127 160 127 146 173 160 175 178 167 174 179 127 160 178 79 160 127 138 164 164 175 178 160 170 164 231 87",
+    "hex_values": "$0 $82 $88 $80 $8d $96 $8e $8e $83 $7f $82 $88 $93 $98 $4f $8f $87 $8e $93 $8e $7f $92 $93 $94 $83 $88 $8e $51 $93 $a0 $aa $a4 $7f $a0 $7f $92 $ad $a0 $af $b2 $a7 $ae $b3 $7f $a0 $b2 $4f $a0 $7f $8a $a4 $a4 $af $b2 $a0 $aa $a4 $e7 $57"
+  },
+  {
+    "label": "CianwoodPokeSeerSignText.ctir_BEFORE_CianwoodPokeSeerSignText",
+    "address_range": {
+      "begin": 1705824,
+      "end": 1705842
+    },
+    "integer_values": "0 147 135 132 127 84 127 146 132 132 145 79 128 135 132 128 131 87",
+    "hex_values": "$0 $93 $87 $84 $7f $54 $7f $92 $84 $84 $91 $4f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "CinnabarGymSignText.ctir_BEFORE_CinnabarGymSignText",
+    "address_range": {
+      "begin": 1756866,
+      "end": 1756920
+    },
+    "integer_values": "0 150 167 160 179 127 163 174 164 178 127 179 167 168 178 79 178 168 166 173 127 178 160 184 230 81 130 136 141 141 128 129 128 145 127 134 152 140 79 139 132 128 131 132 145 156 127 129 139 128 136 141 132 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a3 $ae $a4 $b2 $7f $b3 $a7 $a8 $b2 $4f $b2 $a8 $a6 $ad $7f $b2 $a0 $b8 $e6 $51 $82 $88 $8d $8d $80 $81 $80 $91 $7f $86 $98 $8c $4f $8b $84 $80 $83 $84 $91 $9c $7f $81 $8b $80 $88 $8d $84 $57"
+  },
+  {
+    "label": "CinnabarIslandGymSignText.ctir_BEFORE_CinnabarIslandGymSignText",
+    "address_range": {
+      "begin": 1756275,
+      "end": 1756354
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 130 136 141 141 128 129 128 145 127 134 152 140 127 167 160 178 79 177 164 171 174 162 160 179 164 163 127 179 174 127 146 132 128 227 85 133 142 128 140 127 136 146 139 128 141 131 146 232 81 129 139 128 136 141 132 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $82 $88 $8d $8d $80 $81 $80 $91 $7f $86 $98 $8c $7f $a7 $a0 $b2 $4f $b1 $a4 $ab $ae $a2 $a0 $b3 $a4 $a3 $7f $b3 $ae $7f $92 $84 $80 $e3 $55 $85 $8e $80 $8c $7f $88 $92 $8b $80 $8d $83 $92 $e8 $51 $81 $8b $80 $88 $8d $84 $57"
+  },
+  {
+    "label": "CinnabarIslandSignText.ctir_BEFORE_CinnabarIslandSignText",
+    "address_range": {
+      "begin": 1756354,
+      "end": 1756404
+    },
+    "integer_values": "0 130 136 141 141 128 129 128 145 127 136 146 139 128 141 131 81 147 167 164 127 133 168 164 177 184 127 147 174 182 173 127 174 165 79 129 180 177 173 168 173 166 127 131 164 178 168 177 164 87",
+    "hex_values": "$0 $82 $88 $8d $8d $80 $81 $80 $91 $7f $88 $92 $8b $80 $8d $83 $51 $93 $a7 $a4 $7f $85 $a8 $a4 $b1 $b8 $7f $93 $ae $b6 $ad $7f $ae $a5 $4f $81 $b4 $b1 $ad $a8 $ad $a6 $7f $83 $a4 $b2 $a8 $b1 $a4 $57"
+  },
+  {
+    "label": "CyclingRoadSignText.ctir_BEFORE_CyclingRoadSignText",
+    "address_range": {
+      "begin": 1757999,
+      "end": 1758044
+    },
+    "integer_values": "0 130 152 130 139 136 141 134 127 145 142 128 131 81 131 142 150 141 135 136 139 139 127 130 142 128 146 147 136 141 134 79 128 139 139 127 147 135 132 127 150 128 152 231 87",
+    "hex_values": "$0 $82 $98 $82 $8b $88 $8d $86 $7f $91 $8e $80 $83 $51 $83 $8e $96 $8d $87 $88 $8b $8b $7f $82 $8e $80 $92 $93 $88 $8d $86 $4f $80 $8b $8b $7f $93 $87 $84 $7f $96 $80 $98 $e7 $57"
+  },
+  {
+    "label": "DarkCaveSignText.ctir_BEFORE_DarkCaveSignText",
+    "address_range": {
+      "begin": 1727092,
+      "end": 1727103
+    },
+    "integer_values": "0 131 128 145 138 127 130 128 149 132 87",
+    "hex_values": "$0 $83 $80 $91 $8a $7f $82 $80 $95 $84 $57"
+  },
+  {
+    "label": "DayCareSignText.ctir_BEFORE_DayCareSignText",
+    "address_range": {
+      "begin": 494162,
+      "end": 494204
+    },
+    "integer_values": "0 131 128 152 227 130 128 145 132 81 139 132 147 127 148 146 127 145 128 136 146 132 127 152 142 148 145 79 84 140 142 141 127 133 142 145 127 152 142 148 231 87",
+    "hex_values": "$0 $83 $80 $98 $e3 $82 $80 $91 $84 $51 $8b $84 $93 $7f $94 $92 $7f $91 $80 $88 $92 $84 $7f $98 $8e $94 $91 $4f $54 $8c $8e $8d $7f $85 $8e $91 $7f $98 $8e $94 $e7 $57"
+  },
+  {
+    "label": "DontLitterSignText.ctir_BEFORE_DontLitterSignText",
+    "address_range": {
+      "begin": 487751,
+      "end": 487780
+    },
+    "integer_values": "0 140 147 232 140 142 142 141 127 146 144 148 128 145 132 79 131 142 141 224 147 127 139 136 147 147 132 145 87",
+    "hex_values": "$0 $8c $93 $e8 $8c $8e $8e $8d $7f $92 $90 $94 $80 $91 $84 $4f $83 $8e $8d $e0 $93 $7f $8b $88 $93 $93 $84 $91 $57"
+  },
+  {
+    "label": "DragonDensSignText.ctir_BEFORE_DragonDensSignText",
+    "address_range": {
+      "begin": 1723375,
+      "end": 1723395
+    },
+    "integer_values": "0 131 145 128 134 142 141 224 146 127 131 132 141 79 128 135 132 128 131 87",
+    "hex_values": "$0 $83 $91 $80 $86 $8e $8d $e0 $92 $7f $83 $84 $8d $4f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "DragonShrineSignpostText.ctir_BEFORE_DragonShrineSignpostText",
+    "address_range": {
+      "begin": 1625123,
+      "end": 1625208
+    },
+    "integer_values": "0 131 145 128 134 142 141 127 146 135 145 136 141 132 81 128 127 178 167 177 168 173 164 127 167 174 173 174 177 168 173 166 79 179 167 164 127 163 177 160 166 174 173 127 84 140 142 141 81 178 160 168 163 127 179 174 127 167 160 181 164 127 171 168 181 164 163 79 168 173 127 131 145 128 134 142 141 224 146 127 131 132 141 232 87",
+    "hex_values": "$0 $83 $91 $80 $86 $8e $8d $7f $92 $87 $91 $88 $8d $84 $51 $80 $7f $b2 $a7 $b1 $a8 $ad $a4 $7f $a7 $ae $ad $ae $b1 $a8 $ad $a6 $4f $b3 $a7 $a4 $7f $a3 $b1 $a0 $a6 $ae $ad $7f $54 $8c $8e $8d $51 $b2 $a0 $a8 $a3 $7f $b3 $ae $7f $a7 $a0 $b5 $a4 $7f $ab $a8 $b5 $a4 $a3 $4f $a8 $ad $7f $83 $91 $80 $86 $8e $8d $e0 $92 $7f $83 $84 $8d $e8 $57"
+  },
+  {
+    "label": "EarlsPokemonAcademySignText.ctir_BEFORE_EarlsPokemonAcademySignText",
+    "address_range": {
+      "begin": 1738573,
+      "end": 1738594
+    },
+    "integer_values": "0 132 128 145 139 224 146 127 84 140 142 141 79 128 130 128 131 132 140 152 87",
+    "hex_values": "$0 $84 $80 $91 $8b $e0 $92 $7f $54 $8c $8e $8d $4f $80 $82 $80 $83 $84 $8c $98 $57"
+  },
+  {
+    "label": "EcruteakCitySignText.ctir_BEFORE_EcruteakCitySignText",
+    "address_range": {
+      "begin": 1721553,
+      "end": 1721619
+    },
+    "integer_values": "0 132 130 145 148 147 132 128 138 127 130 136 147 152 79 128 127 135 168 178 179 174 177 168 162 160 171 127 130 168 179 184 81 150 167 164 177 164 127 179 167 164 127 143 160 178 179 79 140 164 164 179 178 127 179 167 164 127 143 177 164 178 164 173 179 87",
+    "hex_values": "$0 $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $4f $80 $7f $87 $a8 $b2 $b3 $ae $b1 $a8 $a2 $a0 $ab $7f $82 $a8 $b3 $b8 $51 $96 $a7 $a4 $b1 $a4 $7f $b3 $a7 $a4 $7f $8f $a0 $b2 $b3 $4f $8c $a4 $a4 $b3 $b2 $7f $b3 $a7 $a4 $7f $8f $b1 $a4 $b2 $a4 $ad $b3 $57"
+  },
+  {
+    "label": "EcruteakDanceTheaterSignText.ctir_BEFORE_EcruteakDanceTheaterSignText",
+    "address_range": {
+      "begin": 1721740,
+      "end": 1721764
+    },
+    "integer_values": "0 132 130 145 148 147 132 128 138 127 131 128 141 130 132 79 147 135 132 128 147 132 145 87",
+    "hex_values": "$0 $84 $82 $91 $94 $93 $84 $80 $8a $7f $83 $80 $8d $82 $84 $4f $93 $87 $84 $80 $93 $84 $91 $57"
+  },
+  {
+    "label": "EcruteakGymSignText.ctir_BEFORE_EcruteakGymSignText",
+    "address_range": {
+      "begin": 1721672,
+      "end": 1721740
+    },
+    "integer_values": "0 132 130 145 148 147 132 128 138 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 140 142 145 147 152 81 147 167 164 127 140 184 178 179 168 162 127 146 164 164 177 127 174 165 79 179 167 164 127 133 180 179 180 177 164 87",
+    "hex_values": "$0 $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $8c $8e $91 $93 $98 $51 $93 $a7 $a4 $7f $8c $b8 $b2 $b3 $a8 $a2 $7f $92 $a4 $a4 $b1 $7f $ae $a5 $4f $b3 $a7 $a4 $7f $85 $b4 $b3 $b4 $b1 $a4 $57"
+  },
+  {
+    "label": "FightingDojoSign1Text.ctir_BEFORE_FightingDojoSign1Text",
+    "address_range": {
+      "begin": 1612916,
+      "end": 1612948
+    },
+    "integer_values": "0 150 167 160 179 127 166 174 164 178 127 160 177 174 180 173 163 79 162 174 172 164 178 127 160 177 174 180 173 163 231 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a6 $ae $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $4f $a2 $ae $ac $a4 $b2 $7f $a0 $b1 $ae $b4 $ad $a3 $e7 $57"
+  },
+  {
+    "label": "FightingDojoSign2Text.ctir_BEFORE_FightingDojoSign2Text",
+    "address_range": {
+      "begin": 1612948,
+      "end": 1612972
+    },
+    "integer_values": "0 132 173 164 172 168 164 178 127 174 173 127 164 181 164 177 184 79 178 168 163 164 231 87",
+    "hex_values": "$0 $84 $ad $a4 $ac $a8 $a4 $b2 $7f $ae $ad $7f $a4 $b5 $a4 $b1 $b8 $4f $b2 $a8 $a3 $a4 $e7 $57"
+  },
+  {
+    "label": "FightingDojoSignText.ctir_BEFORE_FightingDojoSignText",
+    "address_range": {
+      "begin": 1677559,
+      "end": 1677592
+    },
+    "integer_values": "0 132 181 164 177 184 174 173 164 127 150 164 171 162 174 172 164 231 79 133 136 134 135 147 136 141 134 127 131 142 137 142 87",
+    "hex_values": "$0 $84 $b5 $a4 $b1 $b8 $ae $ad $a4 $7f $96 $a4 $ab $a2 $ae $ac $a4 $e7 $4f $85 $88 $86 $87 $93 $88 $8d $86 $7f $83 $8e $89 $8e $57"
+  },
+  {
+    "label": "FishingGurusHouseSignText.ctir_BEFORE_FishingGurusHouseSignText",
+    "address_range": {
+      "begin": 461633,
+      "end": 461655
+    },
+    "integer_values": "0 133 136 146 135 136 141 134 127 134 148 145 148 224 146 79 135 142 148 146 132 87",
+    "hex_values": "$0 $85 $88 $92 $87 $88 $8d $86 $7f $86 $94 $91 $94 $e0 $92 $4f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "FishingSpotSignText.ctir_BEFORE_FishingSpotSignText",
+    "address_range": {
+      "begin": 1733340,
+      "end": 1733354
+    },
+    "integer_values": "0 133 136 146 135 136 141 134 127 146 143 142 147 87",
+    "hex_values": "$0 $85 $88 $92 $87 $88 $8d $86 $7f $92 $8f $8e $93 $57"
+  },
+  {
+    "label": "FuchsiaCitySignText.ctir_BEFORE_FuchsiaCitySignText",
+    "address_range": {
+      "begin": 1657893,
+      "end": 1657933
+    },
+    "integer_values": "0 133 148 130 135 146 136 128 127 130 136 147 152 81 129 164 167 174 171 163 231 127 136 179 212 79 143 160 178 178 168 174 173 127 143 168 173 170 231 87",
+    "hex_values": "$0 $85 $94 $82 $87 $92 $88 $80 $7f $82 $88 $93 $98 $51 $81 $a4 $a7 $ae $ab $a3 $e7 $7f $88 $b3 $d4 $4f $8f $a0 $b2 $b2 $a8 $ae $ad $7f $8f $a8 $ad $aa $e7 $57"
+  },
+  {
+    "label": "FuchsiaGymSignText.ctir_BEFORE_FuchsiaGymSignText",
+    "address_range": {
+      "begin": 1657933,
+      "end": 1657998
+    },
+    "integer_values": "0 133 148 130 135 146 136 128 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 137 128 141 136 141 132 81 147 167 164 127 143 174 168 178 174 173 174 180 178 79 141 168 173 169 160 127 140 160 178 179 164 177 87",
+    "hex_values": "$0 $85 $94 $82 $87 $92 $88 $80 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $89 $80 $8d $88 $8d $84 $51 $93 $a7 $a4 $7f $8f $ae $a8 $b2 $ae $ad $ae $b4 $b2 $4f $8d $a8 $ad $a9 $a0 $7f $8c $a0 $b2 $b3 $a4 $b1 $57"
+  },
+  {
+    "label": "GoldenrodCityBikeShopSignText.ctir_BEFORE_GoldenrodCityBikeShopSignText",
+    "address_range": {
+      "begin": 1675308,
+      "end": 1675346
+    },
+    "integer_values": "0 147 167 164 127 150 174 177 171 163 127 168 178 127 160 79 130 184 162 171 164 127 143 160 179 167 231 85 129 136 138 132 127 146 135 142 143 87",
+    "hex_values": "$0 $93 $a7 $a4 $7f $96 $ae $b1 $ab $a3 $7f $a8 $b2 $7f $a0 $4f $82 $b8 $a2 $ab $a4 $7f $8f $a0 $b3 $a7 $e7 $55 $81 $88 $8a $84 $7f $92 $87 $8e $8f $57"
+  },
+  {
+    "label": "GoldenrodCityFlowerShopSignText.ctir_BEFORE_GoldenrodCityFlowerShopSignText",
+    "address_range": {
+      "begin": 1675507,
+      "end": 1675539
+    },
+    "integer_values": "0 129 171 174 174 172 168 173 166 127 129 164 160 180 179 168 165 180 171 79 133 139 142 150 132 145 127 146 135 142 143 87",
+    "hex_values": "$0 $81 $ab $ae $ae $ac $a8 $ad $a6 $7f $81 $a4 $a0 $b4 $b3 $a8 $a5 $b4 $ab $4f $85 $8b $8e $96 $84 $91 $7f $92 $87 $8e $8f $57"
+  },
+  {
+    "label": "GoldenrodCityGameCornerSignText.ctir_BEFORE_GoldenrodCityGameCornerSignText",
+    "address_range": {
+      "begin": 1675346,
+      "end": 1675391
+    },
+    "integer_values": "0 152 174 180 177 127 143 171 160 184 166 177 174 180 173 163 231 81 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 134 128 140 132 127 130 142 145 141 132 145 87",
+    "hex_values": "$0 $98 $ae $b4 $b1 $7f $8f $ab $a0 $b8 $a6 $b1 $ae $b4 $ad $a3 $e7 $51 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $86 $80 $8c $84 $7f $82 $8e $91 $8d $84 $91 $57"
+  },
+  {
+    "label": "GoldenrodCityNameRaterSignText.ctir_BEFORE_GoldenrodCityNameRaterSignText",
+    "address_range": {
+      "begin": 1675391,
+      "end": 1675433
+    },
+    "integer_values": "0 141 128 140 132 127 145 128 147 132 145 81 134 164 179 127 152 174 180 177 127 84 140 142 141 79 141 168 162 170 173 160 172 164 178 127 145 160 179 164 163 87",
+    "hex_values": "$0 $8d $80 $8c $84 $7f $91 $80 $93 $84 $91 $51 $86 $a4 $b3 $7f $98 $ae $b4 $b1 $7f $54 $8c $8e $8d $4f $8d $a8 $a2 $aa $ad $a0 $ac $a4 $b2 $7f $91 $a0 $b3 $a4 $a3 $57"
+  },
+  {
+    "label": "GoldenrodCityRadioTowerSignText.ctir_BEFORE_GoldenrodCityRadioTowerSignText",
+    "address_range": {
+      "begin": 1675104,
+      "end": 1675132
+    },
+    "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 145 128 131 136 142 127 147 142 150 132 145 87",
+    "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $91 $80 $83 $88 $8e $7f $93 $8e $96 $84 $91 $57"
+  },
+  {
+    "label": "GoldenrodCitySignText.ctir_BEFORE_GoldenrodCitySignText",
+    "address_range": {
+      "begin": 1675258,
+      "end": 1675308
+    },
+    "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 81 147 167 164 127 133 164 178 179 168 181 164 127 130 168 179 184 79 174 165 127 142 175 180 171 164 173 179 127 130 167 160 177 172 87",
+    "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $85 $a4 $b2 $b3 $a8 $b5 $a4 $7f $82 $a8 $b3 $b8 $4f $ae $a5 $7f $8e $af $b4 $ab $a4 $ad $b3 $7f $82 $a7 $a0 $b1 $ac $57"
+  },
+  {
+    "label": "GoldenrodCityStationSignText.ctir_BEFORE_GoldenrodCityStationSignText",
+    "address_range": {
+      "begin": 1675080,
+      "end": 1675104
+    },
+    "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 146 147 128 147 136 142 141 87",
+    "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $92 $93 $80 $93 $88 $8e $8d $57"
+  },
+  {
+    "label": "GoldenrodCityUndergroundSignNorthText.ctir_BEFORE_GoldenrodCityUndergroundSignNorthText",
+    "address_range": {
+      "begin": 1675433,
+      "end": 1675455
+    },
+    "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 79 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "GoldenrodCityUndergroundSignSouthText.ctir_BEFORE_GoldenrodCityUndergroundSignSouthText",
+    "address_range": {
+      "begin": 1675455,
+      "end": 1675477
+    },
+    "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 79 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "GoldenrodDeptStore1FDirectoryText.ctir_BEFORE_GoldenrodDeptStore1FDirectoryText",
+    "address_range": {
+      "begin": 350836,
+      "end": 350967
+    },
+    "integer_values": "0 247 133 127 146 132 145 149 136 130 132 127 130 142 148 141 147 132 145 81 248 133 127 147 145 128 136 141 132 145 224 146 79 127 127 127 140 128 145 138 132 147 81 249 133 127 129 128 147 147 139 132 79 127 127 127 130 142 139 139 132 130 147 136 142 141 81 250 133 127 140 132 131 136 130 136 141 132 127 129 142 151 81 251 133 127 147 140 127 130 142 145 141 132 145 81 252 133 127 147 145 128 141 144 148 136 139 127 146 144 148 128 145 132 81 145 142 142 133 147 142 143 127 139 142 142 138 142 148 147 87",
+    "hex_values": "$0 $f7 $85 $7f $92 $84 $91 $95 $88 $82 $84 $7f $82 $8e $94 $8d $93 $84 $91 $51 $f8 $85 $7f $93 $91 $80 $88 $8d $84 $91 $e0 $92 $4f $7f $7f $7f $8c $80 $91 $8a $84 $93 $51 $f9 $85 $7f $81 $80 $93 $93 $8b $84 $4f $7f $7f $7f $82 $8e $8b $8b $84 $82 $93 $88 $8e $8d $51 $fa $85 $7f $8c $84 $83 $88 $82 $88 $8d $84 $7f $81 $8e $97 $51 $fb $85 $7f $93 $8c $7f $82 $8e $91 $8d $84 $91 $51 $fc $85 $7f $93 $91 $80 $8d $90 $94 $88 $8b $7f $92 $90 $94 $80 $91 $84 $51 $91 $8e $8e $85 $93 $8e $8f $7f $8b $8e $8e $8a $8e $94 $93 $57"
+  },
+  {
+    "label": "GoldenrodDeptStore2FDirectoryText.ctir_BEFORE_GoldenrodDeptStore2FDirectoryText",
+    "address_range": {
+      "begin": 351516,
+      "end": 351562
+    },
+    "integer_values": "0 152 174 180 177 127 147 177 160 181 164 171 79 130 174 172 175 160 173 168 174 173 81 248 133 127 147 145 128 136 141 132 145 224 146 79 127 127 127 140 128 145 138 132 147 87",
+    "hex_values": "$0 $98 $ae $b4 $b1 $7f $93 $b1 $a0 $b5 $a4 $ab $4f $82 $ae $ac $af $a0 $ad $a8 $ae $ad $51 $f8 $85 $7f $93 $91 $80 $88 $8d $84 $91 $e0 $92 $4f $7f $7f $7f $8c $80 $91 $8a $84 $93 $57"
+  },
+  {
+    "label": "GoldenrodDeptStore3FDirectoryText.ctir_BEFORE_GoldenrodDeptStore3FDirectoryText",
+    "address_range": {
+      "begin": 351848,
+      "end": 351893
+    },
+    "integer_values": "0 133 174 177 127 149 168 162 179 174 177 184 79 146 164 164 170 164 177 178 81 249 133 127 129 128 147 147 139 132 79 127 127 127 130 142 139 139 132 130 147 136 142 141 87",
+    "hex_values": "$0 $85 $ae $b1 $7f $95 $a8 $a2 $b3 $ae $b1 $b8 $4f $92 $a4 $a4 $aa $a4 $b1 $b2 $51 $f9 $85 $7f $81 $80 $93 $93 $8b $84 $4f $7f $7f $7f $82 $8e $8b $8b $84 $82 $93 $88 $8e $8d $57"
+  },
+  {
+    "label": "GoldenrodDeptStore4FDirectoryText.ctir_BEFORE_GoldenrodDeptStore4FDirectoryText",
+    "address_range": {
+      "begin": 352268,
+      "end": 352311
+    },
+    "integer_values": "0 139 164 179 127 148 178 127 143 180 172 175 127 148 175 79 152 174 180 177 127 84 140 142 141 231 81 250 133 127 140 132 131 136 130 136 141 132 127 129 142 151 87",
+    "hex_values": "$0 $8b $a4 $b3 $7f $94 $b2 $7f $8f $b4 $ac $af $7f $94 $af $4f $98 $ae $b4 $b1 $7f $54 $8c $8e $8d $e7 $51 $fa $85 $7f $8c $84 $83 $88 $82 $88 $8d $84 $7f $81 $8e $97 $57"
+  },
+  {
+    "label": "GoldenrodDeptStore5FDirectoryText.ctir_BEFORE_GoldenrodDeptStore5FDirectoryText",
+    "address_range": {
+      "begin": 353132,
+      "end": 353166
+    },
+    "integer_values": "0 130 180 178 179 174 172 168 185 164 127 152 174 180 177 79 84 140 142 141 81 251 133 127 147 140 127 130 142 145 141 132 145 87",
+    "hex_values": "$0 $82 $b4 $b2 $b3 $ae $ac $a8 $b9 $a4 $7f $98 $ae $b4 $b1 $4f $54 $8c $8e $8d $51 $fb $85 $7f $93 $8c $7f $82 $8e $91 $8d $84 $91 $57"
+  },
+  {
+    "label": "GoldenrodDeptStore6FDirectoryText.ctir_BEFORE_GoldenrodDeptStore6FDirectoryText",
+    "address_range": {
+      "begin": 353906,
+      "end": 353954
+    },
+    "integer_values": "0 147 160 170 164 127 160 127 129 177 164 160 170 127 165 177 174 172 79 146 167 174 175 175 168 173 166 231 81 252 133 127 147 145 128 141 144 148 136 139 127 146 144 148 128 145 132 87",
+    "hex_values": "$0 $93 $a0 $aa $a4 $7f $a0 $7f $81 $b1 $a4 $a0 $aa $7f $a5 $b1 $ae $ac $4f $92 $a7 $ae $af $af $a8 $ad $a6 $e7 $51 $fc $85 $7f $93 $91 $80 $8d $90 $94 $88 $8b $7f $92 $90 $94 $80 $91 $84 $57"
+  },
+  {
+    "label": "GoldenrodDeptStoreSignText.ctir_BEFORE_GoldenrodDeptStoreSignText",
+    "address_range": {
+      "begin": 1675132,
+      "end": 1675189
+    },
+    "integer_values": "0 133 180 171 171 127 146 164 171 164 162 179 168 174 173 127 174 165 79 84 140 142 141 127 134 174 174 163 178 231 81 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 131 132 143 147 232 146 147 142 145 132 87",
+    "hex_values": "$0 $85 $b4 $ab $ab $7f $92 $a4 $ab $a4 $a2 $b3 $a8 $ae $ad $7f $ae $a5 $4f $54 $8c $8e $8d $7f $86 $ae $ae $a3 $b2 $e7 $51 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $83 $84 $8f $93 $e8 $92 $93 $8e $91 $84 $57"
+  },
+  {
+    "label": "GoldenrodGymSignText.ctir_BEFORE_GoldenrodGymSignText",
+    "address_range": {
+      "begin": 1675189,
+      "end": 1675258
+    },
+    "integer_values": "0 134 142 139 131 132 141 145 142 131 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 150 135 136 147 141 132 152 81 147 167 164 127 136 173 162 177 164 163 168 161 171 184 79 143 177 164 179 179 184 127 134 168 177 171 231 87",
+    "hex_values": "$0 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $96 $87 $88 $93 $8d $84 $98 $51 $93 $a7 $a4 $7f $88 $ad $a2 $b1 $a4 $a3 $a8 $a1 $ab $b8 $4f $8f $b1 $a4 $b3 $b3 $b8 $7f $86 $a8 $b1 $ab $e7 $57"
+  },
+  {
+    "label": "GuideGentsHouseSignText.ctir_BEFORE_GuideGentsHouseSignText",
+    "address_range": {
+      "begin": 1689632,
+      "end": 1689652
+    },
+    "integer_values": "0 134 148 136 131 132 127 134 132 141 147 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $86 $94 $88 $83 $84 $7f $86 $84 $8d $93 $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "HouseForSaleSignText.ctir_BEFORE_HouseForSaleSignText",
+    "address_range": {
+      "begin": 1760151,
+      "end": 1760199
+    },
+    "integer_values": "0 150 167 160 179 212 127 179 167 168 178 230 81 135 174 180 178 164 127 165 174 177 127 146 160 171 164 117 79 141 174 161 174 163 184 127 171 168 181 164 178 127 167 164 177 164 232 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $d4 $7f $b3 $a7 $a8 $b2 $e6 $51 $87 $ae $b4 $b2 $a4 $7f $a5 $ae $b1 $7f $92 $a0 $ab $a4 $75 $4f $8d $ae $a1 $ae $a3 $b8 $7f $ab $a8 $b5 $a4 $b2 $7f $a7 $a4 $b1 $a4 $e8 $57"
+  },
+  {
+    "label": "IlexForestSignpostText.ctir_BEFORE_IlexForestSignpostText",
+    "address_range": {
+      "begin": 455459,
+      "end": 455581
+    },
+    "integer_values": "0 136 139 132 151 127 133 142 145 132 146 147 127 168 178 79 178 174 127 174 181 164 177 166 177 174 182 173 127 182 168 179 167 81 179 177 164 164 178 127 179 167 160 179 127 184 174 180 79 162 160 173 213 127 178 164 164 127 179 167 164 127 178 170 184 232 81 143 171 164 160 178 164 127 182 160 179 162 167 127 174 180 179 79 165 174 177 127 168 179 164 172 178 127 179 167 160 179 127 172 160 184 85 167 160 181 164 127 161 164 164 173 127 163 177 174 175 175 164 163 232 87",
+    "hex_values": "$0 $88 $8b $84 $97 $7f $85 $8e $91 $84 $92 $93 $7f $a8 $b2 $4f $b2 $ae $7f $ae $b5 $a4 $b1 $a6 $b1 $ae $b6 $ad $7f $b6 $a8 $b3 $a7 $51 $b3 $b1 $a4 $a4 $b2 $7f $b3 $a7 $a0 $b3 $7f $b8 $ae $b4 $4f $a2 $a0 $ad $d5 $7f $b2 $a4 $a4 $7f $b3 $a7 $a4 $7f $b2 $aa $b8 $e8 $51 $8f $ab $a4 $a0 $b2 $a4 $7f $b6 $a0 $b3 $a2 $a7 $7f $ae $b4 $b3 $4f $a5 $ae $b1 $7f $a8 $b3 $a4 $ac $b2 $7f $b3 $a7 $a0 $b3 $7f $ac $a0 $b8 $55 $a7 $a0 $b5 $a4 $7f $a1 $a4 $a4 $ad $7f $a3 $b1 $ae $af $af $a4 $a3 $e8 $57"
+  },
+  {
+    "label": "IndigoPlateauSignText.ctir_BEFORE_IndigoPlateauSignText",
+    "address_range": {
+      "begin": 1762708,
+      "end": 1762771
+    },
+    "integer_values": "0 136 141 131 136 134 142 127 143 139 128 147 132 128 148 81 147 167 164 127 148 171 179 168 172 160 179 164 127 134 174 160 171 79 165 174 177 127 147 177 160 168 173 164 177 178 231 81 84 140 142 141 127 139 132 128 134 148 132 127 135 144 87",
+    "hex_values": "$0 $88 $8d $83 $88 $86 $8e $7f $8f $8b $80 $93 $84 $80 $94 $51 $93 $a7 $a4 $7f $94 $ab $b3 $a8 $ac $a0 $b3 $a4 $7f $86 $ae $a0 $ab $4f $a5 $ae $b1 $7f $93 $b1 $a0 $a8 $ad $a4 $b1 $b2 $e7 $51 $54 $8c $8e $8d $7f $8b $84 $80 $86 $94 $84 $7f $87 $90 $57"
+  },
+  {
+    "label": "KantoRadioStationSignText.ctir_BEFORE_KantoRadioStationSignText",
+    "address_range": {
+      "begin": 1759260,
+      "end": 1759329
+    },
+    "integer_values": "0 138 128 141 147 142 127 145 128 131 136 142 79 146 147 128 147 136 142 141 81 152 174 180 177 127 133 160 181 174 177 168 179 164 79 143 177 174 166 177 160 172 178 127 142 173 227 128 168 177 85 128 177 174 180 173 163 127 179 167 164 127 130 171 174 162 170 231 87",
+    "hex_values": "$0 $8a $80 $8d $93 $8e $7f $91 $80 $83 $88 $8e $4f $92 $93 $80 $93 $88 $8e $8d $51 $98 $ae $b4 $b1 $7f $85 $a0 $b5 $ae $b1 $a8 $b3 $a4 $4f $8f $b1 $ae $a6 $b1 $a0 $ac $b2 $7f $8e $ad $e3 $80 $a8 $b1 $55 $80 $b1 $ae $b4 $ad $a3 $7f $b3 $a7 $a4 $7f $82 $ab $ae $a2 $aa $e7 $57"
+  },
+  {
+    "label": "KurtsHouseSignText.ctir_BEFORE_KurtsHouseSignText",
+    "address_range": {
+      "begin": 1672851,
+      "end": 1672865
+    },
+    "integer_values": "0 138 148 145 147 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $8a $94 $91 $93 $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "LakeOfRageSignText.ctir_BEFORE_LakeOfRageSignText",
+    "address_range": {
+      "begin": 461589,
+      "end": 461633
+    },
+    "integer_values": "0 139 128 138 132 127 142 133 127 145 128 134 132 244 79 160 171 178 174 127 170 173 174 182 173 127 160 178 85 134 152 128 145 128 131 142 146 127 139 128 138 132 232 87",
+    "hex_values": "$0 $8b $80 $8a $84 $7f $8e $85 $7f $91 $80 $86 $84 $f4 $4f $a0 $ab $b2 $ae $7f $aa $ad $ae $b6 $ad $7f $a0 $b2 $55 $86 $98 $80 $91 $80 $83 $8e $92 $7f $8b $80 $8a $84 $e8 $57"
+  },
+  {
+    "label": "LavRadioTower1FDirectoryText.ctir_BEFORE_LavRadioTower1FDirectoryText",
+    "address_range": {
+      "begin": 520992,
+      "end": 521066
+    },
+    "integer_values": "0 247 133 127 145 132 130 132 143 147 136 142 141 79 248 133 127 146 128 139 132 146 81 249 133 127 143 132 145 146 142 141 141 132 139 79 250 133 127 143 145 142 131 148 130 147 136 142 141 81 251 133 127 131 136 145 132 130 147 142 145 224 146 79 127 127 127 142 133 133 136 130 132 87",
+    "hex_values": "$0 $f7 $85 $7f $91 $84 $82 $84 $8f $93 $88 $8e $8d $4f $f8 $85 $7f $92 $80 $8b $84 $92 $51 $f9 $85 $7f $8f $84 $91 $92 $8e $8d $8d $84 $8b $4f $fa $85 $7f $8f $91 $8e $83 $94 $82 $93 $88 $8e $8d $51 $fb $85 $7f $83 $88 $91 $84 $82 $93 $8e $91 $e0 $92 $4f $7f $7f $7f $8e $85 $85 $88 $82 $84 $57"
+  },
+  {
+    "label": "LavRadioTower1FPokeFluteSignText.ctir_BEFORE_LavRadioTower1FPokeFluteSignText",
+    "address_range": {
+      "begin": 521066,
+      "end": 521128
+    },
+    "integer_values": "0 143 164 177 170 127 148 175 127 84 140 142 141 79 182 168 179 167 127 140 164 171 171 174 182 127 146 174 180 173 163 178 81 174 165 127 179 167 164 127 84 127 133 139 148 147 132 79 174 173 127 130 135 128 141 141 132 139 127 248 246 87",
+    "hex_values": "$0 $8f $a4 $b1 $aa $7f $94 $af $7f $54 $8c $8e $8d $4f $b6 $a8 $b3 $a7 $7f $8c $a4 $ab $ab $ae $b6 $7f $92 $ae $b4 $ad $a3 $b2 $51 $ae $a5 $7f $b3 $a7 $a4 $7f $54 $7f $85 $8b $94 $93 $84 $4f $ae $ad $7f $82 $87 $80 $8d $8d $84 $8b $7f $f8 $f6 $57"
+  },
+  {
+    "label": "LavenderTownSignText.ctir_BEFORE_LavenderTownSignText",
+    "address_range": {
+      "begin": 1759223,
+      "end": 1759260
+    },
+    "integer_values": "0 139 128 149 132 141 131 132 145 127 147 142 150 141 81 147 167 164 127 141 174 161 171 164 127 143 180 177 175 171 164 79 147 174 182 173 87",
+    "hex_values": "$0 $8b $80 $95 $84 $8d $83 $84 $91 $7f $93 $8e $96 $8d $51 $93 $a7 $a4 $7f $8d $ae $a1 $ab $a4 $7f $8f $b4 $b1 $af $ab $a4 $4f $93 $ae $b6 $ad $57"
+  },
+  {
+    "label": "MahoganyGymSignText.ctir_BEFORE_MahoganyGymSignText",
+    "address_range": {
+      "begin": 1639316,
+      "end": 1639387
+    },
+    "integer_values": "0 140 128 135 142 134 128 141 152 127 147 142 150 141 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 143 145 152 130 132 81 147 167 164 127 147 164 160 162 167 164 177 127 174 165 79 150 168 173 179 164 177 212 127 135 160 177 178 167 173 164 178 178 87",
+    "hex_values": "$0 $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $8f $91 $98 $82 $84 $51 $93 $a7 $a4 $7f $93 $a4 $a0 $a2 $a7 $a4 $b1 $7f $ae $a5 $4f $96 $a8 $ad $b3 $a4 $b1 $d4 $7f $87 $a0 $b1 $b2 $a7 $ad $a4 $b2 $b2 $57"
+  },
+  {
+    "label": "MahoganyTownRagecandybarSignText.ctir_BEFORE_MahoganyTownRagecandybarSignText",
+    "address_range": {
+      "begin": 1639265,
+      "end": 1639316
+    },
+    "integer_values": "0 150 167 168 171 164 127 181 168 178 168 179 168 173 166 79 140 128 135 142 134 128 141 152 127 147 142 150 141 244 127 179 177 184 85 160 127 145 128 134 132 130 128 141 131 152 129 128 145 231 87",
+    "hex_values": "$0 $96 $a7 $a8 $ab $a4 $7f $b5 $a8 $b2 $a8 $b3 $a8 $ad $a6 $4f $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $f4 $7f $b3 $b1 $b8 $55 $a0 $7f $91 $80 $86 $84 $82 $80 $8d $83 $98 $81 $80 $91 $e7 $57"
+  },
+  {
+    "label": "MahoganyTownSignText.ctir_BEFORE_MahoganyTownSignText",
+    "address_range": {
+      "begin": 1639217,
+      "end": 1639265
+    },
+    "integer_values": "0 140 128 135 142 134 128 141 152 127 147 142 150 141 81 150 164 171 162 174 172 164 127 179 174 127 179 167 164 79 135 174 172 164 127 174 165 127 179 167 164 127 141 168 173 169 160 87",
+    "hex_values": "$0 $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $51 $96 $a4 $ab $a2 $ae $ac $a4 $7f $b3 $ae $7f $b3 $a7 $a4 $4f $87 $ae $ac $a4 $7f $ae $a5 $7f $b3 $a7 $a4 $7f $8d $a8 $ad $a9 $a0 $57"
+  },
+  {
+    "label": "MoomooFarmSignText.ctir_BEFORE_MoomooFarmSignText",
+    "address_range": {
+      "begin": 1728549,
+      "end": 1728593
+    },
+    "integer_values": "0 140 142 142 140 142 142 127 133 128 145 140 81 132 173 169 174 184 127 142 180 177 127 133 177 164 178 167 79 160 173 163 127 147 160 178 179 184 127 140 168 171 170 87",
+    "hex_values": "$0 $8c $8e $8e $8c $8e $8e $7f $85 $80 $91 $8c $51 $84 $ad $a9 $ae $b8 $7f $8e $b4 $b1 $7f $85 $b1 $a4 $b2 $a7 $4f $a0 $ad $a3 $7f $93 $a0 $b2 $b3 $b8 $7f $8c $a8 $ab $aa $57"
+  },
+  {
+    "label": "MoveDeletersHouseSignText.ctir_BEFORE_MoveDeletersHouseSignText",
+    "address_range": {
+      "begin": 1723353,
+      "end": 1723375
+    },
+    "integer_values": "0 140 142 149 132 127 131 132 139 132 147 132 145 224 146 79 135 142 148 146 132 87",
+    "hex_values": "$0 $8c $8e $95 $84 $7f $83 $84 $8b $84 $93 $84 $91 $e0 $92 $4f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "MrPokemonsHouseDirectionsSignText.ctir_BEFORE_MrPokemonsHouseDirectionsSignText",
+    "address_range": {
+      "begin": 1710900,
+      "end": 1710933
+    },
+    "integer_values": "0 140 145 232 84 140 142 141 224 146 127 135 142 148 146 132 79 146 147 145 128 136 134 135 147 127 128 135 132 128 131 231 87",
+    "hex_values": "$0 $8c $91 $e8 $54 $8c $8e $8d $e0 $92 $7f $87 $8e $94 $92 $84 $4f $92 $93 $91 $80 $88 $86 $87 $93 $7f $80 $87 $84 $80 $83 $e7 $57"
+  },
+  {
+    "label": "MrPokemonsHouseSignText.ctir_BEFORE_MrPokemonsHouseSignText",
+    "address_range": {
+      "begin": 1710933,
+      "end": 1710950
+    },
+    "integer_values": "0 140 145 232 84 140 142 141 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $8c $91 $e8 $54 $8c $8e $8d $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "MrPsychicsHouseSignText.ctir_BEFORE_MrPsychicsHouseSignText",
+    "address_range": {
+      "begin": 1677619,
+      "end": 1677639
+    },
+    "integer_values": "0 140 145 232 143 146 152 130 135 136 130 224 146 79 135 142 148 146 132 87",
+    "hex_values": "$0 $8c $91 $e8 $8f $92 $98 $82 $87 $88 $82 $e0 $92 $4f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "MtMoonSquareSignText.ctir_BEFORE_MtMoonSquareSignText",
+    "address_range": {
+      "begin": 1762270,
+      "end": 1762309
+    },
+    "integer_values": "0 140 147 232 140 142 142 141 127 146 144 148 128 145 132 81 137 180 178 179 127 166 174 127 180 175 127 179 167 164 79 178 179 160 168 177 178 232 87",
+    "hex_values": "$0 $8c $93 $e8 $8c $8e $8e $8d $7f $92 $90 $94 $80 $91 $84 $51 $89 $b4 $b2 $b3 $7f $a6 $ae $7f $b4 $af $7f $b3 $a7 $a4 $4f $b2 $b3 $a0 $a8 $b1 $b2 $e8 $57"
+  },
+  {
+    "label": "MtMortarSign1Text.ctir_BEFORE_MtMortarSign1Text",
+    "address_range": {
+      "begin": 1742175,
+      "end": 1742208
+    },
+    "integer_values": "0 140 147 232 140 142 145 147 128 145 81 150 128 147 132 145 133 128 139 139 127 130 128 149 132 79 136 141 146 136 131 132 87",
+    "hex_values": "$0 $8c $93 $e8 $8c $8e $91 $93 $80 $91 $51 $96 $80 $93 $84 $91 $85 $80 $8b $8b $7f $82 $80 $95 $84 $4f $88 $8d $92 $88 $83 $84 $57"
+  },
+  {
+    "label": "MtMortarSign2Text.ctir_BEFORE_MtMortarSign2Text",
+    "address_range": {
+      "begin": 1742208,
+      "end": 1742241
+    },
+    "integer_values": "0 140 147 232 140 142 145 147 128 145 81 150 128 147 132 145 133 128 139 139 127 130 128 149 132 79 136 141 146 136 131 132 87",
+    "hex_values": "$0 $8c $93 $e8 $8c $8e $91 $93 $80 $91 $51 $96 $80 $93 $84 $91 $85 $80 $8b $8b $7f $82 $80 $95 $84 $4f $88 $8d $92 $88 $83 $84 $57"
+  },
+  {
+    "label": "MtSilverSignText.ctir_BEFORE_MtSilverSignText",
+    "address_range": {
+      "begin": 1777748,
+      "end": 1777759
+    },
+    "integer_values": "0 140 147 232 146 136 139 149 132 145 87",
+    "hex_values": "$0 $8c $93 $e8 $92 $88 $8b $95 $84 $91 $57"
+  },
+  {
+    "label": "NationalParkBattleNoticeText.ctir_BEFORE_NationalParkBattleNoticeText",
+    "address_range": {
+      "begin": 378757,
+      "end": 378842
+    },
+    "integer_values": "0 150 167 160 179 127 168 178 127 179 167 168 178 79 173 174 179 168 162 164 230 81 143 171 164 160 178 164 127 161 160 179 179 171 164 127 174 173 171 184 79 168 173 127 179 167 164 127 166 177 160 178 178 232 81 141 128 147 136 142 141 128 139 127 143 128 145 138 79 150 128 145 131 132 141 224 146 127 142 133 133 136 130 132 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a8 $b2 $7f $b3 $a7 $a8 $b2 $4f $ad $ae $b3 $a8 $a2 $a4 $e6 $51 $8f $ab $a4 $a0 $b2 $a4 $7f $a1 $a0 $b3 $b3 $ab $a4 $7f $ae $ad $ab $b8 $4f $a8 $ad $7f $b3 $a7 $a4 $7f $a6 $b1 $a0 $b2 $b2 $e8 $51 $8d $80 $93 $88 $8e $8d $80 $8b $7f $8f $80 $91 $8a $4f $96 $80 $91 $83 $84 $8d $e0 $92 $7f $8e $85 $85 $88 $82 $84 $57"
+  },
+  {
+    "label": "NationalParkBugContestBattleNoticeText.ctir_BEFORE_NationalParkBugContestBattleNoticeText",
+    "address_range": {
+      "begin": 379868,
+      "end": 379953
+    },
+    "integer_values": "0 150 167 160 179 127 168 178 127 179 167 168 178 79 173 174 179 168 162 164 230 81 143 171 164 160 178 164 127 161 160 179 179 171 164 127 174 173 171 184 79 168 173 127 179 167 164 127 166 177 160 178 178 232 81 141 128 147 136 142 141 128 139 127 143 128 145 138 79 150 128 145 131 132 141 224 146 127 142 133 133 136 130 132 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $7f $a8 $b2 $7f $b3 $a7 $a8 $b2 $4f $ad $ae $b3 $a8 $a2 $a4 $e6 $51 $8f $ab $a4 $a0 $b2 $a4 $7f $a1 $a0 $b3 $b3 $ab $a4 $7f $ae $ad $ab $b8 $4f $a8 $ad $7f $b3 $a7 $a4 $7f $a6 $b1 $a0 $b2 $b2 $e8 $51 $8d $80 $93 $88 $8e $8d $80 $8b $7f $8f $80 $91 $8a $4f $96 $80 $91 $83 $84 $8d $e0 $92 $7f $8e $85 $85 $88 $82 $84 $57"
+  },
+  {
+    "label": "NationalParkBugContestRelaxationSquareText.ctir_BEFORE_NationalParkBugContestRelaxationSquareText",
+    "address_range": {
+      "begin": 379835,
+      "end": 379868
+    },
+    "integer_values": "0 145 132 139 128 151 128 147 136 142 141 127 146 144 148 128 145 132 79 141 128 147 136 142 141 128 139 127 143 128 145 138 87",
+    "hex_values": "$0 $91 $84 $8b $80 $97 $80 $93 $88 $8e $8d $7f $92 $90 $94 $80 $91 $84 $4f $8d $80 $93 $88 $8e $8d $80 $8b $7f $8f $80 $91 $8a $57"
+  },
+  {
+    "label": "NationalParkBugContestTrainerTipsText.ctir_BEFORE_NationalParkBugContestTrainerTipsText",
+    "address_range": {
+      "begin": 379953,
+      "end": 380017
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 143 177 168 173 179 127 174 180 179 127 140 128 136 139 127 161 184 79 174 175 164 173 168 173 166 127 168 179 127 179 167 164 173 85 175 177 164 178 178 168 173 166 127 146 147 128 145 147 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $8f $b1 $a8 $ad $b3 $7f $ae $b4 $b3 $7f $8c $80 $88 $8b $7f $a1 $b8 $4f $ae $af $a4 $ad $a8 $ad $a6 $7f $a8 $b3 $7f $b3 $a7 $a4 $ad $55 $af $b1 $a4 $b2 $b2 $a8 $ad $a6 $7f $92 $93 $80 $91 $93 $e8 $57"
+  },
+  {
+    "label": "NationalParkRelaxationSquareText.ctir_BEFORE_NationalParkRelaxationSquareText",
+    "address_range": {
+      "begin": 378724,
+      "end": 378757
+    },
+    "integer_values": "0 145 132 139 128 151 128 147 136 142 141 127 146 144 148 128 145 132 79 141 128 147 136 142 141 128 139 127 143 128 145 138 87",
+    "hex_values": "$0 $91 $84 $8b $80 $97 $80 $93 $88 $8e $8d $7f $92 $90 $94 $80 $91 $84 $4f $8d $80 $93 $88 $8e $8d $80 $8b $7f $8f $80 $91 $8a $57"
+  },
+  {
+    "label": "NationalParkTrainerTipsText.ctir_BEFORE_NationalParkTrainerTipsText",
+    "address_range": {
+      "begin": 378842,
+      "end": 378906
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 143 177 168 173 179 127 174 180 179 127 140 128 136 139 127 161 184 79 174 175 164 173 168 173 166 127 168 179 127 179 167 164 173 85 175 177 164 178 178 168 173 166 127 146 147 128 145 147 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $8f $b1 $a8 $ad $b3 $7f $ae $b4 $b3 $7f $8c $80 $88 $8b $7f $a1 $b8 $4f $ae $af $a4 $ad $a8 $ad $a6 $7f $a8 $b3 $7f $b3 $a7 $a4 $ad $55 $af $b1 $a4 $b2 $b2 $a8 $ad $a6 $7f $92 $93 $80 $91 $93 $e8 $57"
+  },
+  {
+    "label": "NewBarkTownElmsHouseSignText.ctir_BEFORE_NewBarkTownElmsHouseSignText",
+    "address_range": {
+      "begin": 1737536,
+      "end": 1737549
+    },
+    "integer_values": "0 132 139 140 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $84 $8b $8c $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "NewBarkTownElmsLabSignText.ctir_BEFORE_NewBarkTownElmsLabSignText",
+    "address_range": {
+      "begin": 1737522,
+      "end": 1737536
+    },
+    "integer_values": "0 132 139 140 127 84 140 142 141 127 139 128 129 87",
+    "hex_values": "$0 $84 $8b $8c $7f $54 $8c $8e $8d $7f $8b $80 $81 $57"
+  },
+  {
+    "label": "NewBarkTownPlayersHouseSignText.ctir_BEFORE_NewBarkTownPlayersHouseSignText",
+    "address_range": {
+      "begin": 1737512,
+      "end": 1737522
+    },
+    "integer_values": "0 82 212 127 135 174 180 178 164 87",
+    "hex_values": "$0 $52 $d4 $7f $87 $ae $b4 $b2 $a4 $57"
+  },
+  {
+    "label": "NewBarkTownSignText.ctir_BEFORE_NewBarkTownSignText",
+    "address_range": {
+      "begin": 1737448,
+      "end": 1737512
+    },
+    "integer_values": "0 141 132 150 127 129 128 145 138 127 147 142 150 141 81 147 167 164 127 147 174 182 173 127 150 167 164 177 164 127 179 167 164 79 150 168 173 163 178 127 174 165 127 160 127 141 164 182 85 129 164 166 168 173 173 168 173 166 127 129 171 174 182 87",
+    "hex_values": "$0 $8d $84 $96 $7f $81 $80 $91 $8a $7f $93 $8e $96 $8d $51 $93 $a7 $a4 $7f $93 $ae $b6 $ad $7f $96 $a7 $a4 $b1 $a4 $7f $b3 $a7 $a4 $4f $96 $a8 $ad $a3 $b2 $7f $ae $a5 $7f $a0 $7f $8d $a4 $b6 $55 $81 $a4 $a6 $a8 $ad $ad $a8 $ad $a6 $7f $81 $ab $ae $b6 $57"
+  },
+  {
+    "label": "NoLitteringSignText.ctir_BEFORE_NoLitteringSignText",
+    "address_range": {
+      "begin": 1658170,
+      "end": 1658218
+    },
+    "integer_values": "0 141 174 127 171 168 179 179 164 177 168 173 166 232 81 143 171 164 160 178 164 127 179 160 170 164 127 184 174 180 177 79 182 160 178 179 164 127 182 168 179 167 127 184 174 180 232 87",
+    "hex_values": "$0 $8d $ae $7f $ab $a8 $b3 $b3 $a4 $b1 $a8 $ad $a6 $e8 $51 $8f $ab $a4 $a0 $b2 $a4 $7f $b3 $a0 $aa $a4 $7f $b8 $ae $b4 $b1 $4f $b6 $a0 $b2 $b3 $a4 $7f $b6 $a8 $b3 $a7 $7f $b8 $ae $b4 $e8 $57"
+  },
+  {
+    "label": "OaksLabSignText.ctir_BEFORE_OaksLabSignText",
+    "address_range": {
+      "begin": 1755050,
+      "end": 1755073
+    },
+    "integer_values": "0 142 128 138 127 84 140 142 141 79 145 132 146 132 128 145 130 135 127 139 128 129 87",
+    "hex_values": "$0 $8e $80 $8a $7f $54 $8c $8e $8d $4f $91 $84 $92 $84 $80 $91 $82 $87 $7f $8b $80 $81 $57"
+  },
+  {
+    "label": "OlivineCityBattleTowerSignText.ctir_BEFORE_OlivineCityBattleTowerSignText",
+    "address_range": {
+      "begin": 1739929,
+      "end": 1739962
+    },
+    "integer_values": "0 129 128 147 147 139 132 127 147 142 150 132 145 127 128 135 132 128 131 79 142 175 164 173 168 173 166 127 141 174 182 231 87",
+    "hex_values": "$0 $81 $80 $93 $93 $8b $84 $7f $93 $8e $96 $84 $91 $7f $80 $87 $84 $80 $83 $4f $8e $af $a4 $ad $a8 $ad $a6 $7f $8d $ae $b6 $e7 $57"
+  },
+  {
+    "label": "OlivineCityPortSignText.ctir_BEFORE_OlivineCityPortSignText",
+    "address_range": {
+      "begin": 1739776,
+      "end": 1739805
+    },
+    "integer_values": "0 142 139 136 149 136 141 132 127 143 142 145 147 79 133 128 146 147 127 146 135 136 143 127 143 136 132 145 87",
+    "hex_values": "$0 $8e $8b $88 $95 $88 $8d $84 $7f $8f $8e $91 $93 $4f $85 $80 $92 $93 $7f $92 $87 $88 $8f $7f $8f $88 $84 $91 $57"
+  },
+  {
+    "label": "OlivineCitySignText.ctir_BEFORE_OlivineCitySignText",
+    "address_range": {
+      "begin": 1739728,
+      "end": 1739776
+    },
+    "integer_values": "0 142 139 136 149 136 141 132 127 130 136 147 152 81 147 167 164 127 143 174 177 179 127 130 171 174 178 164 178 179 79 179 174 127 133 174 177 164 168 166 173 127 139 160 173 163 178 87",
+    "hex_values": "$0 $8e $8b $88 $95 $88 $8d $84 $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $8f $ae $b1 $b3 $7f $82 $ab $ae $b2 $a4 $b2 $b3 $4f $b3 $ae $7f $85 $ae $b1 $a4 $a8 $a6 $ad $7f $8b $a0 $ad $a3 $b2 $57"
+  },
+  {
+    "label": "OlivineGymSignText.ctir_BEFORE_OlivineGymSignText",
+    "address_range": {
+      "begin": 1739805,
+      "end": 1739872
+    },
+    "integer_values": "0 142 139 136 149 136 141 132 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 137 128 146 140 136 141 132 81 147 167 164 127 146 179 164 164 171 227 130 171 160 163 79 131 164 165 164 173 178 164 127 134 168 177 171 87",
+    "hex_values": "$0 $8e $8b $88 $95 $88 $8d $84 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $89 $80 $92 $8c $88 $8d $84 $51 $93 $a7 $a4 $7f $92 $b3 $a4 $a4 $ab $e3 $82 $ab $a0 $a3 $4f $83 $a4 $a5 $a4 $ad $b2 $a4 $7f $86 $a8 $b1 $ab $57"
+  },
+  {
+    "label": "OlivineLighthouseSignText.ctir_BEFORE_OlivineLighthouseSignText",
+    "address_range": {
+      "begin": 1739872,
+      "end": 1739929
+    },
+    "integer_values": "0 142 139 136 149 136 141 132 127 139 136 134 135 147 135 142 148 146 132 79 128 171 178 174 127 170 173 174 182 173 127 160 178 127 179 167 164 85 134 139 136 147 147 132 145 127 139 136 134 135 147 135 142 148 146 132 87",
+    "hex_values": "$0 $8e $8b $88 $95 $88 $8d $84 $7f $8b $88 $86 $87 $93 $87 $8e $94 $92 $84 $4f $80 $ab $b2 $ae $7f $aa $ad $ae $b6 $ad $7f $a0 $b2 $7f $b3 $a7 $a4 $55 $86 $8b $88 $93 $93 $84 $91 $7f $8b $88 $86 $87 $93 $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "PalletTownSignText.ctir_BEFORE_PalletTownSignText",
+    "address_range": {
+      "begin": 1754987,
+      "end": 1755037
+    },
+    "integer_values": "0 143 128 139 139 132 147 127 147 142 150 141 81 128 127 147 177 160 173 176 180 168 171 127 146 164 179 179 168 173 166 79 174 165 127 143 164 160 162 164 127 233 127 143 180 177 168 179 184 87",
+    "hex_values": "$0 $8f $80 $8b $8b $84 $93 $7f $93 $8e $96 $8d $51 $80 $7f $93 $b1 $a0 $ad $b0 $b4 $a8 $ab $7f $92 $a4 $b3 $b3 $a8 $ad $a6 $4f $ae $a5 $7f $8f $a4 $a0 $a2 $a4 $7f $e9 $7f $8f $b4 $b1 $a8 $b3 $b8 $57"
+  },
+  {
+    "label": "PewterCityMtMoonGiftShopSignText.ctir_BEFORE_PewterCityMtMoonGiftShopSignText",
+    "address_range": {
+      "begin": 1622700,
+      "end": 1622751
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 140 147 232 140 142 142 141 127 134 136 133 147 127 146 135 142 143 79 141 142 150 127 142 143 132 141 231 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $8c $93 $e8 $8c $8e $8e $8d $7f $86 $88 $85 $93 $7f $92 $87 $8e $8f $4f $8d $8e $96 $7f $8e $8f $84 $8d $e7 $57"
+  },
+  {
+    "label": "PewterCitySignText.ctir_BEFORE_PewterCitySignText",
+    "address_range": {
+      "begin": 1622530,
+      "end": 1622561
+    },
+    "integer_values": "0 143 132 150 147 132 145 127 130 136 147 152 79 128 127 146 179 174 173 164 127 134 177 160 184 127 130 168 179 184 87",
+    "hex_values": "$0 $8f $84 $96 $93 $84 $91 $7f $82 $88 $93 $98 $4f $80 $7f $92 $b3 $ae $ad $a4 $7f $86 $b1 $a0 $b8 $7f $82 $a8 $b3 $b8 $57"
+  },
+  {
+    "label": "PewterCityWelcomeSignText.ctir_BEFORE_PewterCityWelcomeSignText",
+    "address_range": {
+      "begin": 1622751,
+      "end": 1622776
+    },
+    "integer_values": "0 150 132 139 130 142 140 132 127 147 142 79 143 132 150 147 132 145 127 130 136 147 152 231 87",
+    "hex_values": "$0 $96 $84 $8b $82 $8e $8c $84 $7f $93 $8e $4f $8f $84 $96 $93 $84 $91 $7f $82 $88 $93 $98 $e7 $57"
+  },
+  {
+    "label": "PewterGymSignText.ctir_BEFORE_PewterGymSignText",
+    "address_range": {
+      "begin": 1622561,
+      "end": 1622625
+    },
+    "integer_values": "0 143 132 150 147 132 145 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 129 145 142 130 138 81 147 167 164 127 145 174 162 170 127 146 174 171 168 163 79 84 140 142 141 127 147 177 160 168 173 164 177 87",
+    "hex_values": "$0 $8f $84 $96 $93 $84 $91 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $81 $91 $8e $82 $8a $51 $93 $a7 $a4 $7f $91 $ae $a2 $aa $7f $92 $ae $ab $a8 $a3 $4f $54 $8c $8e $8d $7f $93 $b1 $a0 $a8 $ad $a4 $b1 $57"
+  },
+  {
+    "label": "PewterMuseumSignText.ctir_BEFORE_PewterMuseumSignText",
+    "address_range": {
+      "begin": 1622625,
+      "end": 1622700
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 143 132 150 147 132 145 127 140 148 146 132 148 140 127 142 133 79 146 130 136 132 141 130 132 127 168 178 127 162 171 174 178 164 163 85 165 174 177 127 177 164 173 174 181 160 179 168 174 173 178 117 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $8f $84 $96 $93 $84 $91 $7f $8c $94 $92 $84 $94 $8c $7f $8e $85 $4f $92 $82 $88 $84 $8d $82 $84 $7f $a8 $b2 $7f $a2 $ab $ae $b2 $a4 $a3 $55 $a5 $ae $b1 $7f $b1 $a4 $ad $ae $b5 $a0 $b3 $a8 $ae $ad $b2 $75 $57"
+  },
+  {
+    "label": "PokemonFanClubBraggingSignText.ctir_BEFORE_PokemonFanClubBraggingSignText",
+    "address_range": {
+      "begin": 1646125,
+      "end": 1646161
+    },
+    "integer_values": "0 136 165 127 178 174 172 164 174 173 164 127 161 177 160 166 178 244 79 161 177 160 166 127 177 168 166 167 179 127 161 160 162 170 231 87",
+    "hex_values": "$0 $88 $a5 $7f $b2 $ae $ac $a4 $ae $ad $a4 $7f $a1 $b1 $a0 $a6 $b2 $f4 $4f $a1 $b1 $a0 $a6 $7f $b1 $a8 $a6 $a7 $b3 $7f $a1 $a0 $a2 $aa $e7 $57"
+  },
+  {
+    "label": "PokemonFanClubListenSignText.ctir_BEFORE_PokemonFanClubListenSignText",
+    "address_range": {
+      "begin": 1646080,
+      "end": 1646125
+    },
+    "integer_values": "0 139 164 179 212 127 160 171 171 127 171 168 178 179 164 173 79 175 174 171 168 179 164 171 184 127 179 174 127 174 179 167 164 177 85 179 177 160 168 173 164 177 178 232 87",
+    "hex_values": "$0 $8b $a4 $b3 $d4 $7f $a0 $ab $ab $7f $ab $a8 $b2 $b3 $a4 $ad $4f $af $ae $ab $a8 $b3 $a4 $ab $b8 $7f $b3 $ae $7f $ae $b3 $a7 $a4 $b1 $55 $b3 $b1 $a0 $a8 $ad $a4 $b1 $b2 $e8 $57"
+  },
+  {
+    "label": "PokemonFanClubSignText.ctir_BEFORE_PokemonFanClubSignText",
+    "address_range": {
+      "begin": 1748520,
+      "end": 1748558
+    },
+    "integer_values": "0 84 140 142 141 127 133 128 141 127 130 139 148 129 81 128 171 171 127 84 140 142 141 127 133 160 173 178 79 150 164 171 162 174 172 164 231 87",
+    "hex_values": "$0 $54 $8c $8e $8d $7f $85 $80 $8d $7f $82 $8b $94 $81 $51 $80 $ab $ab $7f $54 $8c $8e $8d $7f $85 $a0 $ad $b2 $4f $96 $a4 $ab $a2 $ae $ac $a4 $e7 $57"
+  },
+  {
+    "label": "PowerPlantSignText.ctir_BEFORE_PowerPlantSignText",
+    "address_range": {
+      "begin": 1777798,
+      "end": 1777817
+    },
+    "integer_values": "0 138 128 141 147 142 127 143 142 150 132 145 127 143 139 128 141 147 87",
+    "hex_values": "$0 $8a $80 $8d $93 $8e $7f $8f $8e $96 $84 $91 $7f $8f $8b $80 $8d $93 $57"
+  },
+  {
+    "label": "RadioTower1FDirectoryText.ctir_BEFORE_RadioTower1FDirectoryText",
+    "address_range": {
+      "begin": 382463,
+      "end": 382537
+    },
+    "integer_values": "0 247 133 127 145 132 130 132 143 147 136 142 141 79 248 133 127 146 128 139 132 146 81 249 133 127 143 132 145 146 142 141 141 132 139 79 250 133 127 143 145 142 131 148 130 147 136 142 141 81 251 133 127 131 136 145 132 130 147 142 145 224 146 79 127 127 127 142 133 133 136 130 132 87",
+    "hex_values": "$0 $f7 $85 $7f $91 $84 $82 $84 $8f $93 $88 $8e $8d $4f $f8 $85 $7f $92 $80 $8b $84 $92 $51 $f9 $85 $7f $8f $84 $91 $92 $8e $8d $8d $84 $8b $4f $fa $85 $7f $8f $91 $8e $83 $94 $82 $93 $88 $8e $8d $51 $fb $85 $7f $83 $88 $91 $84 $82 $93 $8e $91 $e0 $92 $4f $7f $7f $7f $8e $85 $85 $88 $82 $84 $57"
+  },
+  {
+    "label": "RadioTower1FLuckyChannelSignText.ctir_BEFORE_RadioTower1FLuckyChannelSignText",
+    "address_range": {
+      "begin": 382537,
+      "end": 382630
+    },
+    "integer_values": "0 139 148 130 138 152 127 130 135 128 141 141 132 139 231 81 150 168 173 127 182 168 179 167 127 84 140 142 141 79 136 131 127 173 180 172 161 164 177 178 231 81 147 177 160 163 164 127 184 174 180 177 127 84 140 142 141 79 179 174 127 162 174 171 171 164 162 179 127 163 168 165 165 164 177 227 85 164 173 179 127 136 131 127 173 180 172 161 164 177 178 231 87",
+    "hex_values": "$0 $8b $94 $82 $8a $98 $7f $82 $87 $80 $8d $8d $84 $8b $e7 $51 $96 $a8 $ad $7f $b6 $a8 $b3 $a7 $7f $54 $8c $8e $8d $4f $88 $83 $7f $ad $b4 $ac $a1 $a4 $b1 $b2 $e7 $51 $93 $b1 $a0 $a3 $a4 $7f $b8 $ae $b4 $b1 $7f $54 $8c $8e $8d $4f $b3 $ae $7f $a2 $ae $ab $ab $a4 $a2 $b3 $7f $a3 $a8 $a5 $a5 $a4 $b1 $e3 $55 $a4 $ad $b3 $7f $88 $83 $7f $ad $b4 $ac $a1 $a4 $b1 $b2 $e7 $57"
+  },
+  {
+    "label": "RadioTower2FOaksPKMNTalkSignText.ctir_BEFORE_RadioTower2FOaksPKMNTalkSignText",
+    "address_range": {
+      "begin": 386140,
+      "end": 386191
+    },
+    "integer_values": "0 143 145 142 133 232 142 128 138 224 146 127 84 140 142 141 79 147 128 139 138 81 147 167 164 127 135 174 179 179 164 178 179 127 146 167 174 182 79 174 173 127 179 167 164 127 128 168 177 231 87",
+    "hex_values": "$0 $8f $91 $8e $85 $e8 $8e $80 $8a $e0 $92 $7f $54 $8c $8e $8d $4f $93 $80 $8b $8a $51 $93 $a7 $a4 $7f $87 $ae $b3 $b3 $a4 $b2 $b3 $7f $92 $a7 $ae $b6 $4f $ae $ad $7f $b3 $a7 $a4 $7f $80 $a8 $b1 $e7 $57"
+  },
+  {
+    "label": "RadioTower2FPokemonRadioSignText.ctir_BEFORE_RadioTower2FPokemonRadioSignText",
+    "address_range": {
+      "begin": 386191,
+      "end": 386221
+    },
+    "integer_values": "0 128 173 184 182 167 164 177 164 244 127 128 173 184 179 168 172 164 79 84 140 142 141 127 145 160 163 168 174 87",
+    "hex_values": "$0 $80 $ad $b8 $b6 $a7 $a4 $b1 $a4 $f4 $7f $80 $ad $b8 $b3 $a8 $ac $a4 $4f $54 $8c $8e $8d $7f $91 $a0 $a3 $a8 $ae $57"
+  },
+  {
+    "label": "RadioTower2FSalesSignText.ctir_BEFORE_RadioTower2FSalesSignText",
+    "address_range": {
+      "begin": 386130,
+      "end": 386140
+    },
+    "integer_values": "0 248 133 127 146 128 139 132 146 87",
+    "hex_values": "$0 $f8 $85 $7f $92 $80 $8b $84 $92 $57"
+  },
+  {
+    "label": "RadioTower3FPersonnelSignText.ctir_BEFORE_RadioTower3FPersonnelSignText",
+    "address_range": {
+      "begin": 387842,
+      "end": 387856
+    },
+    "integer_values": "0 249 133 127 143 132 145 146 142 141 141 132 139 87",
+    "hex_values": "$0 $f9 $85 $7f $8f $84 $91 $92 $8e $8d $8d $84 $8b $57"
+  },
+  {
+    "label": "RadioTower3FPokemonMusicSignText.ctir_BEFORE_RadioTower3FPokemonMusicSignText",
+    "address_range": {
+      "begin": 387856,
+      "end": 387885
+    },
+    "integer_values": "0 84 140 142 141 127 140 148 146 136 130 127 182 168 179 167 79 135 174 178 179 127 131 137 127 129 132 141 87",
+    "hex_values": "$0 $54 $8c $8e $8d $7f $8c $94 $92 $88 $82 $7f $b6 $a8 $b3 $a7 $4f $87 $ae $b2 $b3 $7f $83 $89 $7f $81 $84 $8d $57"
+  },
+  {
+    "label": "RadioTower4FProductionSignText.ctir_BEFORE_RadioTower4FProductionSignText",
+    "address_range": {
+      "begin": 389162,
+      "end": 389177
+    },
+    "integer_values": "0 250 133 127 143 145 142 131 148 130 147 136 142 141 87",
+    "hex_values": "$0 $fa $85 $7f $8f $91 $8e $83 $94 $82 $93 $88 $8e $8d $57"
+  },
+  {
+    "label": "RadioTower4FStudio2SignText.ctir_BEFORE_RadioTower4FStudio2SignText",
+    "address_range": {
+      "begin": 389177,
+      "end": 389190
+    },
+    "integer_values": "0 250 133 127 146 147 148 131 136 142 127 248 87",
+    "hex_values": "$0 $fa $85 $7f $92 $93 $94 $83 $88 $8e $7f $f8 $57"
+  },
+  {
+    "label": "RadioTower5FDirectorsOfficeSignText.ctir_BEFORE_RadioTower5FDirectorsOfficeSignText",
+    "address_range": {
+      "begin": 395563,
+      "end": 395588
+    },
+    "integer_values": "0 251 133 127 131 136 145 132 130 147 142 145 224 146 79 127 127 127 142 133 133 136 130 132 87",
+    "hex_values": "$0 $fb $85 $7f $83 $88 $91 $84 $82 $93 $8e $91 $e0 $92 $4f $7f $7f $7f $8e $85 $85 $88 $82 $84 $57"
+  },
+  {
+    "label": "RadioTower5FStudio1SignText.ctir_BEFORE_RadioTower5FStudio1SignText",
+    "address_range": {
+      "begin": 395588,
+      "end": 395601
+    },
+    "integer_values": "0 251 133 127 146 147 148 131 136 142 127 247 87",
+    "hex_values": "$0 $fb $85 $7f $92 $93 $94 $83 $88 $8e $7f $f7 $57"
+  },
+  {
+    "label": "RedsHouseSignText.ctir_BEFORE_RedsHouseSignText",
+    "address_range": {
+      "begin": 1755037,
+      "end": 1755050
+    },
+    "integer_values": "0 145 132 131 224 146 127 135 142 148 146 132 87",
+    "hex_values": "$0 $91 $84 $83 $e0 $92 $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "Route10SignText.ctir_BEFORE_Route10SignText",
+    "address_range": {
+      "begin": 1762614,
+      "end": 1762654
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 246 81 130 132 145 148 139 132 128 141 127 130 136 147 152 127 227 79 139 128 149 132 141 131 132 145 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $f6 $51 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $7f $e3 $4f $8b $80 $95 $84 $8d $83 $84 $91 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route11SignText.ctir_BEFORE_Route11SignText",
+    "address_range": {
+      "begin": 426552,
+      "end": 426562
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 247 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $f7 $57"
+  },
+  {
+    "label": "Route12SignText.ctir_BEFORE_Route12SignText",
+    "address_range": {
+      "begin": 1733307,
+      "end": 1733340
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 248 81 141 142 145 147 135 127 147 142 127 139 128 149 132 141 131 132 145 79 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $f8 $51 $8d $8e $91 $93 $87 $7f $93 $8e $7f $8b $80 $95 $84 $8d $83 $84 $91 $4f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route13DirectionsSignText.ctir_BEFORE_Route13DirectionsSignText",
+    "address_range": {
+      "begin": 1714045,
+      "end": 1714090
+    },
+    "integer_values": "0 141 142 145 147 135 127 147 142 127 139 128 149 132 141 131 132 145 79 147 142 150 141 81 150 132 146 147 127 147 142 127 133 148 130 135 146 136 128 79 130 136 147 152 87",
+    "hex_values": "$0 $8d $8e $91 $93 $87 $7f $93 $8e $7f $8b $80 $95 $84 $8d $83 $84 $91 $4f $93 $8e $96 $8d $51 $96 $84 $92 $93 $7f $93 $8e $7f $85 $94 $82 $87 $92 $88 $80 $4f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route13SignText.ctir_BEFORE_Route13SignText",
+    "address_range": {
+      "begin": 1714011,
+      "end": 1714045
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 249 81 141 142 145 147 135 127 147 142 127 146 136 139 132 141 130 132 79 129 145 136 131 134 132 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $f9 $51 $8d $8e $91 $93 $87 $7f $93 $8e $7f $92 $88 $8b $84 $8d $82 $84 $4f $81 $91 $88 $83 $86 $84 $57"
+  },
+  {
+    "label": "Route13TrainerTipsText.ctir_BEFORE_Route13TrainerTipsText",
+    "address_range": {
+      "begin": 1713948,
+      "end": 1714011
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 139 174 174 170 231 127 145 168 166 167 179 127 179 167 164 177 164 244 79 160 179 127 179 167 164 127 171 164 165 179 127 178 168 163 164 85 174 165 127 179 167 164 127 175 174 178 179 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $8b $ae $ae $aa $e7 $7f $91 $a8 $a6 $a7 $b3 $7f $b3 $a7 $a4 $b1 $a4 $f4 $4f $a0 $b3 $7f $b3 $a7 $a4 $7f $ab $a4 $a5 $b3 $7f $b2 $a8 $a3 $a4 $55 $ae $a5 $7f $b3 $a7 $a4 $7f $af $ae $b2 $b3 $e8 $57"
+  },
+  {
+    "label": "Route15SignText.ctir_BEFORE_Route15SignText",
+    "address_range": {
+      "begin": 1747171,
+      "end": 1747210
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 251 81 133 148 130 135 146 136 128 127 130 136 147 152 127 227 79 139 128 149 132 141 131 132 145 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $fb $51 $85 $94 $82 $87 $92 $88 $80 $7f $82 $88 $93 $98 $7f $e3 $4f $8b $80 $95 $84 $8d $83 $84 $91 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route18SignText.ctir_BEFORE_Route18SignText",
+    "address_range": {
+      "begin": 1757265,
+      "end": 1757303
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 254 81 130 132 139 128 131 142 141 127 130 136 147 152 127 227 79 133 148 130 135 146 136 128 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $fe $51 $82 $84 $8b $80 $83 $8e $8d $7f $82 $88 $93 $98 $7f $e3 $4f $85 $94 $82 $87 $92 $88 $80 $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route19SignText.ctir_BEFORE_Route19SignText",
+    "address_range": {
+      "begin": 1699304,
+      "end": 1699345
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 255 81 133 148 130 135 146 136 128 127 130 136 147 152 127 227 79 146 132 128 133 142 128 140 127 136 146 139 128 141 131 146 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $ff $51 $85 $94 $82 $87 $92 $88 $80 $7f $82 $88 $93 $98 $7f $e3 $4f $92 $84 $80 $85 $8e $80 $8c $7f $88 $92 $8b $80 $8d $83 $92 $57"
+  },
+  {
+    "label": "Route1SignText.ctir_BEFORE_Route1SignText",
+    "address_range": {
+      "begin": 1754741,
+      "end": 1754778
+    },
+    "integer_values": "0 145 142 148 147 132 127 247 81 143 128 139 139 132 147 127 147 142 150 141 127 227 79 149 136 145 136 131 136 128 141 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f7 $51 $8f $80 $8b $8b $84 $93 $7f $93 $8e $96 $8d $7f $e3 $4f $95 $88 $91 $88 $83 $88 $80 $8d $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route26SignText.ctir_BEFORE_Route26SignText",
+    "address_range": {
+      "begin": 1725284,
+      "end": 1725321
+    },
+    "integer_values": "0 145 142 148 147 132 127 248 252 81 84 140 142 141 127 139 132 128 134 148 132 79 145 132 130 132 143 147 136 142 141 127 134 128 147 132 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f8 $fc $51 $54 $8c $8e $8d $7f $8b $84 $80 $86 $94 $84 $4f $91 $84 $82 $84 $8f $93 $88 $8e $8d $7f $86 $80 $93 $84 $57"
+  },
+  {
+    "label": "Route28SignText.ctir_BEFORE_Route28SignText",
+    "address_range": {
+      "begin": 1725459,
+      "end": 1725469
+    },
+    "integer_values": "0 145 142 148 147 132 127 248 254 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f8 $fe $57"
+  },
+  {
+    "label": "Route29Sign1Text.ctir_BEFORE_Route29Sign1Text",
+    "address_range": {
+      "begin": 1709454,
+      "end": 1709497
+    },
+    "integer_values": "0 145 142 148 147 132 127 248 255 81 130 135 132 145 145 152 134 145 142 149 132 127 130 136 147 152 127 227 79 141 132 150 127 129 128 145 138 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f8 $ff $51 $82 $87 $84 $91 $91 $98 $86 $91 $8e $95 $84 $7f $82 $88 $93 $98 $7f $e3 $4f $8d $84 $96 $7f $81 $80 $91 $8a $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route29Sign2Text.ctir_BEFORE_Route29Sign2Text",
+    "address_range": {
+      "begin": 1709497,
+      "end": 1709540
+    },
+    "integer_values": "0 145 142 148 147 132 127 248 255 81 130 135 132 145 145 152 134 145 142 149 132 127 130 136 147 152 127 227 79 141 132 150 127 129 128 145 138 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f8 $ff $51 $82 $87 $84 $91 $91 $98 $86 $91 $8e $95 $84 $7f $82 $88 $93 $98 $7f $e3 $4f $8d $84 $96 $7f $81 $80 $91 $8a $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route2DiglettsCaveSignText.ctir_BEFORE_Route2DiglettsCaveSignText",
+    "address_range": {
+      "begin": 1754271,
+      "end": 1754287
+    },
+    "integer_values": "0 131 136 134 139 132 147 147 224 146 127 130 128 149 132 87",
+    "hex_values": "$0 $83 $88 $86 $8b $84 $93 $93 $e0 $92 $7f $82 $80 $95 $84 $57"
+  },
+  {
+    "label": "Route2SignText.ctir_BEFORE_Route2SignText",
+    "address_range": {
+      "begin": 1754234,
+      "end": 1754271
+    },
+    "integer_values": "0 145 142 148 147 132 127 248 81 149 136 145 136 131 136 128 141 127 130 136 147 152 127 227 79 143 132 150 147 132 145 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f8 $51 $95 $88 $91 $88 $83 $88 $80 $8d $7f $82 $88 $93 $98 $7f $e3 $4f $8f $84 $96 $93 $84 $91 $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route30SignText.ctir_BEFORE_Route30SignText",
+    "address_range": {
+      "begin": 1710859,
+      "end": 1710900
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 246 81 149 136 142 139 132 147 127 130 136 147 152 127 227 79 130 135 132 145 145 152 134 145 142 149 132 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $f6 $51 $95 $88 $8e $8b $84 $93 $7f $82 $88 $93 $98 $7f $e3 $4f $82 $87 $84 $91 $91 $98 $86 $91 $8e $95 $84 $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route30TrainerTipsText.ctir_BEFORE_Route30TrainerTipsText",
+    "address_range": {
+      "begin": 1710950,
+      "end": 1711040
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 141 174 127 178 179 164 160 171 168 173 166 127 174 179 167 164 177 79 175 164 174 175 171 164 212 127 84 140 142 141 231 81 84 127 129 128 139 139 146 127 160 177 164 127 179 174 79 161 164 127 179 167 177 174 182 173 127 174 173 171 184 127 160 179 85 182 168 171 163 127 84 140 142 141 231 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $8d $ae $7f $b2 $b3 $a4 $a0 $ab $a8 $ad $a6 $7f $ae $b3 $a7 $a4 $b1 $4f $af $a4 $ae $af $ab $a4 $d4 $7f $54 $8c $8e $8d $e7 $51 $54 $7f $81 $80 $8b $8b $92 $7f $a0 $b1 $a4 $7f $b3 $ae $4f $a1 $a4 $7f $b3 $a7 $b1 $ae $b6 $ad $7f $ae $ad $ab $b8 $7f $a0 $b3 $55 $b6 $a8 $ab $a3 $7f $54 $8c $8e $8d $e7 $57"
+  },
+  {
+    "label": "Route31SignText.ctir_BEFORE_Route31SignText",
+    "address_range": {
+      "begin": 1727051,
+      "end": 1727092
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 247 81 149 136 142 139 132 147 127 130 136 147 152 127 227 79 130 135 132 145 145 152 134 145 142 149 132 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $f7 $51 $95 $88 $8e $8b $84 $93 $7f $82 $88 $93 $98 $7f $e3 $4f $82 $87 $84 $91 $91 $98 $86 $91 $8e $95 $84 $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route32RuinsSignText.ctir_BEFORE_Route32RuinsSignText",
+    "address_range": {
+      "begin": 1643361,
+      "end": 1643390
+    },
+    "integer_values": "0 145 148 136 141 146 127 142 133 127 128 139 143 135 79 132 128 146 147 127 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $91 $94 $88 $8d $92 $7f $8e $85 $7f $80 $8b $8f $87 $4f $84 $80 $92 $93 $7f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "Route32SignText.ctir_BEFORE_Route32SignText",
+    "address_range": {
+      "begin": 1643325,
+      "end": 1643361
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 248 81 149 136 142 139 132 147 127 130 136 147 152 127 227 79 128 153 128 139 132 128 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $f8 $51 $95 $88 $8e $8b $84 $93 $7f $82 $88 $93 $98 $7f $e3 $4f $80 $99 $80 $8b $84 $80 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route32UnionCaveSignText.ctir_BEFORE_Route32UnionCaveSignText",
+    "address_range": {
+      "begin": 1643390,
+      "end": 1643408
+    },
+    "integer_values": "0 148 141 136 142 141 127 130 128 149 132 79 128 135 132 128 131 87",
+    "hex_values": "$0 $94 $8d $88 $8e $8d $7f $82 $80 $95 $84 $4f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "Route33SignText.ctir_BEFORE_Route33SignText",
+    "address_range": {
+      "begin": 1753721,
+      "end": 1753731
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 249 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $f9 $57"
+  },
+  {
+    "label": "Route34SignText.ctir_BEFORE_Route34SignText",
+    "address_range": {
+      "begin": 493992,
+      "end": 494061
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 250 81 134 142 139 131 132 141 145 142 131 127 130 136 147 152 127 227 79 128 153 128 139 132 128 127 147 142 150 141 81 136 139 132 151 127 133 142 145 132 146 147 79 146 142 140 132 150 135 132 145 132 127 129 132 147 150 132 132 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $fa $51 $86 $8e $8b $83 $84 $8d $91 $8e $83 $7f $82 $88 $93 $98 $7f $e3 $4f $80 $99 $80 $8b $84 $80 $7f $93 $8e $96 $8d $51 $88 $8b $84 $97 $7f $85 $8e $91 $84 $92 $93 $4f $92 $8e $8c $84 $96 $87 $84 $91 $84 $7f $81 $84 $93 $96 $84 $84 $8d $57"
+  },
+  {
+    "label": "Route34TrainerTipsText.ctir_BEFORE_Route34TrainerTipsText",
+    "address_range": {
+      "begin": 494061,
+      "end": 494162
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 129 132 145 145 152 127 179 177 164 164 178 127 166 177 174 182 79 173 164 182 127 129 132 145 145 136 132 146 85 164 181 164 177 184 127 163 160 184 232 81 140 160 170 164 127 160 127 173 174 179 164 127 174 165 79 182 167 168 162 167 127 179 177 164 164 178 127 161 164 160 177 85 182 167 168 162 167 127 129 132 145 145 136 132 146 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $81 $84 $91 $91 $98 $7f $b3 $b1 $a4 $a4 $b2 $7f $a6 $b1 $ae $b6 $4f $ad $a4 $b6 $7f $81 $84 $91 $91 $88 $84 $92 $55 $a4 $b5 $a4 $b1 $b8 $7f $a3 $a0 $b8 $e8 $51 $8c $a0 $aa $a4 $7f $a0 $7f $ad $ae $b3 $a4 $7f $ae $a5 $4f $b6 $a7 $a8 $a2 $a7 $7f $b3 $b1 $a4 $a4 $b2 $7f $a1 $a4 $a0 $b1 $55 $b6 $a7 $a8 $a2 $a7 $7f $81 $84 $91 $91 $88 $84 $92 $e8 $57"
+  },
+  {
+    "label": "Route35SignText.ctir_BEFORE_Route35SignText",
+    "address_range": {
+      "begin": 1691564,
+      "end": 1691574
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 251 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $fb $57"
+  },
+  {
+    "label": "Route36SignText.ctir_BEFORE_Route36SignText",
+    "address_range": {
+      "begin": 1657127,
+      "end": 1657137
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 252 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $fc $57"
+  },
+  {
+    "label": "Route36TrainerTips1Text.ctir_BEFORE_Route36TrainerTips1Text",
+    "address_range": {
+      "begin": 1657167,
+      "end": 1657329
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 84 140 142 141 127 178 179 160 179 178 79 181 160 177 184 227 227 164 181 164 173 127 182 168 179 167 168 173 85 179 167 164 127 178 160 172 164 127 178 175 164 162 168 164 178 232 81 147 167 164 168 177 127 178 179 160 179 178 127 172 160 184 127 161 164 79 178 168 172 168 171 160 177 127 160 179 127 165 168 177 178 179 232 81 135 174 182 164 181 164 177 244 127 163 168 165 165 164 177 227 79 164 173 162 164 178 127 182 168 171 171 127 161 164 162 174 172 164 81 175 177 174 173 174 180 173 162 164 163 127 160 178 127 179 167 164 79 84 140 142 141 127 166 177 174 182 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $54 $8c $8e $8d $7f $b2 $b3 $a0 $b3 $b2 $4f $b5 $a0 $b1 $b8 $e3 $e3 $a4 $b5 $a4 $ad $7f $b6 $a8 $b3 $a7 $a8 $ad $55 $b3 $a7 $a4 $7f $b2 $a0 $ac $a4 $7f $b2 $af $a4 $a2 $a8 $a4 $b2 $e8 $51 $93 $a7 $a4 $a8 $b1 $7f $b2 $b3 $a0 $b3 $b2 $7f $ac $a0 $b8 $7f $a1 $a4 $4f $b2 $a8 $ac $a8 $ab $a0 $b1 $7f $a0 $b3 $7f $a5 $a8 $b1 $b2 $b3 $e8 $51 $87 $ae $b6 $a4 $b5 $a4 $b1 $f4 $7f $a3 $a8 $a5 $a5 $a4 $b1 $e3 $4f $a4 $ad $a2 $a4 $b2 $7f $b6 $a8 $ab $ab $7f $a1 $a4 $a2 $ae $ac $a4 $51 $af $b1 $ae $ad $ae $b4 $ad $a2 $a4 $a3 $7f $a0 $b2 $7f $b3 $a7 $a4 $4f $54 $8c $8e $8d $7f $a6 $b1 $ae $b6 $e8 $57"
+  },
+  {
+    "label": "Route36TrainerTips2Text.ctir_BEFORE_Route36TrainerTips2Text",
+    "address_range": {
+      "begin": 1657329,
+      "end": 1657449
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 148 178 164 127 131 136 134 127 179 174 127 177 164 179 180 177 173 79 179 174 127 179 167 164 127 164 173 179 177 160 173 162 164 127 174 165 85 160 173 184 127 175 171 160 162 164 232 81 136 179 127 168 178 127 162 174 173 181 164 173 168 164 173 179 79 165 174 177 127 164 183 175 171 174 177 168 173 166 81 162 160 181 164 178 127 160 173 163 127 174 179 167 164 177 79 171 160 173 163 172 160 177 170 178 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $94 $b2 $a4 $7f $83 $88 $86 $7f $b3 $ae $7f $b1 $a4 $b3 $b4 $b1 $ad $4f $b3 $ae $7f $b3 $a7 $a4 $7f $a4 $ad $b3 $b1 $a0 $ad $a2 $a4 $7f $ae $a5 $55 $a0 $ad $b8 $7f $af $ab $a0 $a2 $a4 $e8 $51 $88 $b3 $7f $a8 $b2 $7f $a2 $ae $ad $b5 $a4 $ad $a8 $a4 $ad $b3 $4f $a5 $ae $b1 $7f $a4 $b7 $af $ab $ae $b1 $a8 $ad $a6 $51 $a2 $a0 $b5 $a4 $b2 $7f $a0 $ad $a3 $7f $ae $b3 $a7 $a4 $b1 $4f $ab $a0 $ad $a3 $ac $a0 $b1 $aa $b2 $e8 $57"
+  },
+  {
+    "label": "Route37SignText.ctir_BEFORE_Route37SignText",
+    "address_range": {
+      "begin": 1741207,
+      "end": 1741217
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 253 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $fd $57"
+  },
+  {
+    "label": "Route38SignText.ctir_BEFORE_Route38SignText",
+    "address_range": {
+      "begin": 1712893,
+      "end": 1712932
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 254 81 142 139 136 149 136 141 132 127 130 136 147 152 127 227 79 132 130 145 148 147 132 128 138 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $fe $51 $8e $8b $88 $95 $88 $8d $84 $7f $82 $88 $93 $98 $7f $e3 $4f $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route38TrainerTipsText.ctir_BEFORE_Route38TrainerTipsText",
+    "address_range": {
+      "begin": 1712932,
+      "end": 1713083
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 136 165 127 160 127 84 140 142 141 127 168 178 79 179 177 184 168 173 166 127 179 174 127 164 181 174 171 181 164 244 85 184 174 180 127 162 160 173 127 178 179 174 175 127 168 179 232 81 143 177 164 178 178 127 179 167 164 127 129 127 129 180 179 227 79 179 174 173 127 163 180 177 168 173 166 127 164 181 174 171 180 227 85 179 168 174 173 232 81 147 167 160 179 127 178 179 160 177 179 171 164 178 127 179 167 164 79 84 140 142 141 127 160 173 163 127 178 179 174 175 178 85 168 179 178 127 164 181 174 171 180 179 168 174 173 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $88 $a5 $7f $a0 $7f $54 $8c $8e $8d $7f $a8 $b2 $4f $b3 $b1 $b8 $a8 $ad $a6 $7f $b3 $ae $7f $a4 $b5 $ae $ab $b5 $a4 $f4 $55 $b8 $ae $b4 $7f $a2 $a0 $ad $7f $b2 $b3 $ae $af $7f $a8 $b3 $e8 $51 $8f $b1 $a4 $b2 $b2 $7f $b3 $a7 $a4 $7f $81 $7f $81 $b4 $b3 $e3 $4f $b3 $ae $ad $7f $a3 $b4 $b1 $a8 $ad $a6 $7f $a4 $b5 $ae $ab $b4 $e3 $55 $b3 $a8 $ae $ad $e8 $51 $93 $a7 $a0 $b3 $7f $b2 $b3 $a0 $b1 $b3 $ab $a4 $b2 $7f $b3 $a7 $a4 $4f $54 $8c $8e $8d $7f $a0 $ad $a3 $7f $b2 $b3 $ae $af $b2 $55 $a8 $b3 $b2 $7f $a4 $b5 $ae $ab $b4 $b3 $a8 $ae $ad $e8 $57"
+  },
+  {
+    "label": "Route39SignText.ctir_BEFORE_Route39SignText",
+    "address_range": {
+      "begin": 1728510,
+      "end": 1728549
+    },
+    "integer_values": "0 145 142 148 147 132 127 249 255 81 142 139 136 149 136 141 132 127 130 136 147 152 127 227 79 132 130 145 148 147 132 128 138 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $f9 $ff $51 $8e $8b $88 $95 $88 $8d $84 $7f $82 $88 $93 $98 $7f $e3 $4f $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route39TrainerTipsText.ctir_BEFORE_Route39TrainerTipsText",
+    "address_range": {
+      "begin": 1728593,
+      "end": 1728725
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 148 178 164 127 135 132 128 131 129 148 147 147 127 174 173 79 179 177 164 164 178 127 179 174 127 178 167 160 170 164 85 84 140 142 141 127 174 180 179 232 81 131 168 165 165 164 177 164 173 179 127 170 168 173 163 178 127 174 165 79 84 140 142 141 127 163 177 174 175 127 174 180 179 85 174 165 127 179 177 164 164 178 232 81 148 178 164 127 135 132 128 131 129 148 147 147 127 174 173 79 160 173 184 127 179 177 164 164 127 184 174 180 127 178 164 164 231 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $94 $b2 $a4 $7f $87 $84 $80 $83 $81 $94 $93 $93 $7f $ae $ad $4f $b3 $b1 $a4 $a4 $b2 $7f $b3 $ae $7f $b2 $a7 $a0 $aa $a4 $55 $54 $8c $8e $8d $7f $ae $b4 $b3 $e8 $51 $83 $a8 $a5 $a5 $a4 $b1 $a4 $ad $b3 $7f $aa $a8 $ad $a3 $b2 $7f $ae $a5 $4f $54 $8c $8e $8d $7f $a3 $b1 $ae $af $7f $ae $b4 $b3 $55 $ae $a5 $7f $b3 $b1 $a4 $a4 $b2 $e8 $51 $94 $b2 $a4 $7f $87 $84 $80 $83 $81 $94 $93 $93 $7f $ae $ad $4f $a0 $ad $b8 $7f $b3 $b1 $a4 $a4 $7f $b8 $ae $b4 $7f $b2 $a4 $a4 $e7 $57"
+  },
+  {
+    "label": "Route3MtMoonSquareSignText.ctir_BEFORE_Route3MtMoonSquareSignText",
+    "address_range": {
+      "begin": 1761725,
+      "end": 1761764
+    },
+    "integer_values": "0 140 147 232 140 142 142 141 127 146 144 148 128 145 132 81 137 180 178 179 127 166 174 127 180 175 127 179 167 164 79 178 179 160 168 177 178 232 87",
+    "hex_values": "$0 $8c $93 $e8 $8c $8e $8e $8d $7f $92 $90 $94 $80 $91 $84 $51 $89 $b4 $b2 $b3 $7f $a6 $ae $7f $b4 $af $7f $b3 $a7 $a4 $4f $b2 $b3 $a0 $a8 $b1 $b2 $e8 $57"
+  },
+  {
+    "label": "Route40SignText.ctir_BEFORE_Route40SignText",
+    "address_range": {
+      "begin": 1730434,
+      "end": 1730473
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 246 81 130 136 128 141 150 142 142 131 127 130 136 147 152 127 227 79 142 139 136 149 136 141 132 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $f6 $51 $82 $88 $80 $8d $96 $8e $8e $83 $7f $82 $88 $93 $98 $7f $e3 $4f $8e $8b $88 $95 $88 $8d $84 $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route42Sign1Text.ctir_BEFORE_Route42Sign1Text",
+    "address_range": {
+      "begin": 1742135,
+      "end": 1742175
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 248 81 132 130 145 148 147 132 128 138 127 130 136 147 152 127 227 79 140 128 135 142 134 128 141 152 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $f8 $51 $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $7f $e3 $4f $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route42Sign2Text.ctir_BEFORE_Route42Sign2Text",
+    "address_range": {
+      "begin": 1742241,
+      "end": 1742281
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 248 81 132 130 145 148 147 132 128 138 127 130 136 147 152 127 227 79 140 128 135 142 134 128 141 152 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $f8 $51 $84 $82 $91 $94 $93 $84 $80 $8a $7f $82 $88 $93 $98 $7f $e3 $4f $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route43Sign1Text.ctir_BEFORE_Route43Sign1Text",
+    "address_range": {
+      "begin": 1693351,
+      "end": 1693390
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 249 81 139 128 138 132 127 142 133 127 145 128 134 132 127 227 79 140 128 135 142 134 128 141 152 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $f9 $51 $8b $80 $8a $84 $7f $8e $85 $7f $91 $80 $86 $84 $7f $e3 $4f $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route43Sign2Text.ctir_BEFORE_Route43Sign2Text",
+    "address_range": {
+      "begin": 1693390,
+      "end": 1693429
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 249 81 139 128 138 132 127 142 133 127 145 128 134 132 127 227 79 140 128 135 142 134 128 141 152 127 147 142 150 141 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $f9 $51 $8b $80 $8a $84 $7f $8e $85 $7f $91 $80 $86 $84 $7f $e3 $4f $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $57"
+  },
+  {
+    "label": "Route43TrainerTipsText.ctir_BEFORE_Route43TrainerTipsText",
+    "address_range": {
+      "begin": 1693429,
+      "end": 1693624
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 147 136 143 146 81 128 171 171 127 84 140 142 141 127 167 160 181 164 79 175 177 174 178 127 160 173 163 127 162 174 173 178 81 163 164 175 164 173 163 168 173 166 127 174 173 127 179 167 164 168 177 79 179 184 175 164 178 232 81 136 165 127 179 167 164 168 177 127 179 184 175 164 178 79 163 168 165 165 164 177 244 127 160 127 167 168 166 167 164 177 227 81 171 164 181 164 171 127 84 140 142 141 127 172 160 184 79 171 174 178 164 127 168 173 127 161 160 179 179 171 164 232 81 139 164 160 177 173 127 182 167 168 162 167 127 179 184 175 164 178 79 160 177 164 127 178 179 177 174 173 166 127 160 173 163 81 182 164 160 170 127 160 166 160 168 173 178 179 127 184 174 180 177 79 84 140 142 141 212 127 179 184 175 164 232 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $93 $88 $8f $92 $51 $80 $ab $ab $7f $54 $8c $8e $8d $7f $a7 $a0 $b5 $a4 $4f $af $b1 $ae $b2 $7f $a0 $ad $a3 $7f $a2 $ae $ad $b2 $51 $a3 $a4 $af $a4 $ad $a3 $a8 $ad $a6 $7f $ae $ad $7f $b3 $a7 $a4 $a8 $b1 $4f $b3 $b8 $af $a4 $b2 $e8 $51 $88 $a5 $7f $b3 $a7 $a4 $a8 $b1 $7f $b3 $b8 $af $a4 $b2 $4f $a3 $a8 $a5 $a5 $a4 $b1 $f4 $7f $a0 $7f $a7 $a8 $a6 $a7 $a4 $b1 $e3 $51 $ab $a4 $b5 $a4 $ab $7f $54 $8c $8e $8d $7f $ac $a0 $b8 $4f $ab $ae $b2 $a4 $7f $a8 $ad $7f $a1 $a0 $b3 $b3 $ab $a4 $e8 $51 $8b $a4 $a0 $b1 $ad $7f $b6 $a7 $a8 $a2 $a7 $7f $b3 $b8 $af $a4 $b2 $4f $a0 $b1 $a4 $7f $b2 $b3 $b1 $ae $ad $a6 $7f $a0 $ad $a3 $51 $b6 $a4 $a0 $aa $7f $a0 $a6 $a0 $a8 $ad $b2 $b3 $7f $b8 $ae $b4 $b1 $4f $54 $8c $8e $8d $d4 $7f $b3 $b8 $af $a4 $e8 $57"
+  },
+  {
+    "label": "Route44Sign1Text.ctir_BEFORE_Route44Sign1Text",
+    "address_range": {
+      "begin": 1695711,
+      "end": 1695736
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 250 79 136 130 132 127 143 128 147 135 127 128 135 132 128 131 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $fa $4f $88 $82 $84 $7f $8f $80 $93 $87 $7f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "Route44Sign2Text.ctir_BEFORE_Route44Sign2Text",
+    "address_range": {
+      "begin": 1695736,
+      "end": 1695778
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 250 81 140 128 135 142 134 128 141 152 127 147 142 150 141 127 227 79 129 139 128 130 138 147 135 142 145 141 127 130 136 147 152 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $fa $51 $8c $80 $87 $8e $86 $80 $8d $98 $7f $93 $8e $96 $8d $7f $e3 $4f $81 $8b $80 $82 $8a $93 $87 $8e $91 $8d $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route45SignText.ctir_BEFORE_Route45SignText",
+    "address_range": {
+      "begin": 1698090,
+      "end": 1698119
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 251 79 140 142 148 141 147 128 136 141 127 145 131 232 127 128 135 132 128 131 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $fb $4f $8c $8e $94 $8d $93 $80 $88 $8d $7f $91 $83 $e8 $7f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "Route46SignText.ctir_BEFORE_Route46SignText",
+    "address_range": {
+      "begin": 1743294,
+      "end": 1743323
+    },
+    "integer_values": "0 145 142 148 147 132 127 250 252 79 140 142 148 141 147 128 136 141 127 145 131 232 127 128 135 132 128 131 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $fa $fc $4f $8c $8e $94 $8d $93 $80 $88 $8d $7f $91 $83 $e8 $7f $80 $87 $84 $80 $83 $57"
+  },
+  {
+    "label": "Route5UndergroundPathSignText.ctir_BEFORE_Route5UndergroundPathSignText",
+    "address_range": {
+      "begin": 1760102,
+      "end": 1760151
+    },
+    "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 127 143 128 147 135 81 130 132 145 148 139 132 128 141 127 130 136 147 152 127 227 79 149 132 145 140 136 139 136 142 141 127 130 136 147 152 87",
+    "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $7f $8f $80 $93 $87 $51 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $7f $e3 $4f $95 $84 $91 $8c $88 $8b $88 $8e $8d $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route6UndergroundPathSignText.ctir_BEFORE_Route6UndergroundPathSignText",
+    "address_range": {
+      "begin": 1759643,
+      "end": 1759692
+    },
+    "integer_values": "0 148 141 131 132 145 134 145 142 148 141 131 127 143 128 147 135 81 130 132 145 148 139 132 128 141 127 130 136 147 152 127 227 79 149 132 145 140 136 139 136 142 141 127 130 136 147 152 87",
+    "hex_values": "$0 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $7f $8f $80 $93 $87 $51 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $7f $e3 $4f $95 $84 $91 $8c $88 $8b $88 $8e $8d $7f $82 $88 $93 $98 $57"
+  },
+  {
+    "label": "Route7UndergroundPathSignText.ctir_BEFORE_Route7UndergroundPathSignText",
+    "address_range": {
+      "begin": 1758088,
+      "end": 1758294
+    },
+    "integer_values": "0 150 167 160 179 212 127 179 167 168 178 127 165 171 184 164 177 230 81 117 127 148 173 162 174 180 179 167 127 179 177 160 168 173 164 177 178 79 167 160 181 164 127 161 164 164 173 127 167 174 171 163 168 173 166 81 161 160 179 179 171 164 178 127 168 173 127 179 167 164 79 148 141 131 132 145 134 145 142 148 141 131 127 143 128 147 135 232 81 129 164 162 160 180 178 164 127 174 165 127 177 168 178 168 173 166 79 162 174 172 175 171 160 168 173 179 178 127 161 184 127 171 174 227 85 162 160 171 127 177 164 178 168 163 164 173 179 178 244 127 179 167 164 85 148 141 131 132 145 134 145 142 148 141 131 127 143 128 147 135 85 167 160 178 127 161 164 164 173 127 178 164 160 171 164 163 85 168 173 163 164 165 168 173 168 179 164 171 184 232 81 130 132 139 128 131 142 141 127 143 142 139 136 130 132 87",
+    "hex_values": "$0 $96 $a7 $a0 $b3 $d4 $7f $b3 $a7 $a8 $b2 $7f $a5 $ab $b8 $a4 $b1 $e6 $51 $75 $7f $94 $ad $a2 $ae $b4 $b3 $a7 $7f $b3 $b1 $a0 $a8 $ad $a4 $b1 $b2 $4f $a7 $a0 $b5 $a4 $7f $a1 $a4 $a4 $ad $7f $a7 $ae $ab $a3 $a8 $ad $a6 $51 $a1 $a0 $b3 $b3 $ab $a4 $b2 $7f $a8 $ad $7f $b3 $a7 $a4 $4f $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $7f $8f $80 $93 $87 $e8 $51 $81 $a4 $a2 $a0 $b4 $b2 $a4 $7f $ae $a5 $7f $b1 $a8 $b2 $a8 $ad $a6 $4f $a2 $ae $ac $af $ab $a0 $a8 $ad $b3 $b2 $7f $a1 $b8 $7f $ab $ae $e3 $55 $a2 $a0 $ab $7f $b1 $a4 $b2 $a8 $a3 $a4 $ad $b3 $b2 $f4 $7f $b3 $a7 $a4 $55 $94 $8d $83 $84 $91 $86 $91 $8e $94 $8d $83 $7f $8f $80 $93 $87 $55 $a7 $a0 $b2 $7f $a1 $a4 $a4 $ad $7f $b2 $a4 $a0 $ab $a4 $a3 $55 $a8 $ad $a3 $a4 $a5 $a8 $ad $a8 $b3 $a4 $ab $b8 $e8 $51 $82 $84 $8b $80 $83 $8e $8d $7f $8f $8e $8b $88 $82 $84 $57"
+  },
+  {
+    "label": "Route8UndergroundPathSignText.ctir_BEFORE_Route8UndergroundPathSignText",
+    "address_range": {
+      "begin": 443063,
+      "end": 443105
+    },
+    "integer_values": "0 147 167 164 127 165 171 184 164 177 212 127 179 174 177 173 232 81 136 179 212 127 168 172 175 174 178 178 168 161 171 164 127 179 174 79 177 164 160 163 117 87",
+    "hex_values": "$0 $93 $a7 $a4 $7f $a5 $ab $b8 $a4 $b1 $d4 $7f $b3 $ae $b1 $ad $e8 $51 $88 $b3 $d4 $7f $a8 $ac $af $ae $b2 $b2 $a8 $a1 $ab $a4 $7f $b3 $ae $4f $b1 $a4 $a0 $a3 $75 $57"
+  },
+  {
+    "label": "Route9SignText.ctir_BEFORE_Route9SignText",
+    "address_range": {
+      "begin": 1749666,
+      "end": 1749703
+    },
+    "integer_values": "0 145 142 148 147 132 127 255 81 130 132 145 148 139 132 128 141 127 130 136 147 152 127 227 79 145 142 130 138 127 147 148 141 141 132 139 87",
+    "hex_values": "$0 $91 $8e $94 $93 $84 $7f $ff $51 $82 $84 $91 $94 $8b $84 $80 $8d $7f $82 $88 $93 $98 $7f $e3 $4f $91 $8e $82 $8a $7f $93 $94 $8d $8d $84 $8b $57"
+  },
+  {
+    "label": "RuinsOfAlphAerodactylChamberDescriptionText.ctir_BEFORE_RuinsOfAlphAerodactylChamberDescriptionText",
+    "address_range": {
+      "begin": 364322,
+      "end": 364381
+    },
+    "integer_values": "0 147 167 168 178 127 165 171 184 168 173 166 127 84 227 79 140 142 141 127 160 179 179 160 162 170 164 163 127 168 179 178 81 175 177 164 184 127 182 168 179 167 127 178 160 182 227 171 168 170 164 79 165 160 173 166 178 232 87",
+    "hex_values": "$0 $93 $a7 $a8 $b2 $7f $a5 $ab $b8 $a8 $ad $a6 $7f $54 $e3 $4f $8c $8e $8d $7f $a0 $b3 $b3 $a0 $a2 $aa $a4 $a3 $7f $a8 $b3 $b2 $51 $af $b1 $a4 $b8 $7f $b6 $a8 $b3 $a7 $7f $b2 $a0 $b6 $e3 $ab $a8 $aa $a4 $4f $a5 $a0 $ad $a6 $b2 $e8 $57"
+  },
+  {
+    "label": "RuinsOfAlphHoOhChamberDescriptionText.ctir_BEFORE_RuinsOfAlphHoOhChamberDescriptionText",
+    "address_range": {
+      "begin": 362186,
+      "end": 362241
+    },
+    "integer_values": "0 128 127 84 140 142 141 127 179 167 160 179 79 165 171 164 182 127 166 177 160 162 164 165 180 171 171 184 127 174 173 81 177 160 168 173 161 174 182 227 162 174 171 174 177 164 163 79 182 168 173 166 178 232 87",
+    "hex_values": "$0 $80 $7f $54 $8c $8e $8d $7f $b3 $a7 $a0 $b3 $4f $a5 $ab $a4 $b6 $7f $a6 $b1 $a0 $a2 $a4 $a5 $b4 $ab $ab $b8 $7f $ae $ad $51 $b1 $a0 $a8 $ad $a1 $ae $b6 $e3 $a2 $ae $ab $ae $b1 $a4 $a3 $4f $b6 $a8 $ad $a6 $b2 $e8 $57"
+  },
+  {
+    "label": "RuinsOfAlphKabutoChamberDescriptionText.ctir_BEFORE_RuinsOfAlphKabutoChamberDescriptionText",
+    "address_range": {
+      "begin": 363368,
+      "end": 363438
+    },
+    "integer_values": "0 128 127 84 140 142 141 127 179 167 160 179 127 167 168 163 79 174 173 127 179 167 164 127 178 164 160 127 165 171 174 174 177 232 81 132 184 164 178 127 174 173 127 168 179 178 127 161 160 162 170 79 178 162 160 173 173 164 163 127 179 167 164 127 160 177 164 160 232 87",
+    "hex_values": "$0 $80 $7f $54 $8c $8e $8d $7f $b3 $a7 $a0 $b3 $7f $a7 $a8 $a3 $4f $ae $ad $7f $b3 $a7 $a4 $7f $b2 $a4 $a0 $7f $a5 $ab $ae $ae $b1 $e8 $51 $84 $b8 $a4 $b2 $7f $ae $ad $7f $a8 $b3 $b2 $7f $a1 $a0 $a2 $aa $4f $b2 $a2 $a0 $ad $ad $a4 $a3 $7f $b3 $a7 $a4 $7f $a0 $b1 $a4 $a0 $e8 $57"
+  },
+  {
+    "label": "RuinsOfAlphNorthSignText.ctir_BEFORE_RuinsOfAlphNorthSignText",
+    "address_range": {
+      "begin": 1657137,
+      "end": 1657167
+    },
+    "integer_values": "0 145 148 136 141 146 127 142 133 127 128 139 143 135 79 141 142 145 147 135 127 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $91 $94 $88 $8d $92 $7f $8e $85 $7f $80 $8b $8f $87 $4f $8d $8e $91 $93 $87 $7f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "RuinsOfAlphOmanyteChamberDescriptionText.ctir_BEFORE_RuinsOfAlphOmanyteChamberDescriptionText",
+    "address_range": {
+      "begin": 363864,
+      "end": 363925
+    },
+    "integer_values": "0 147 167 168 178 127 84 140 142 141 79 163 177 168 165 179 164 163 127 168 173 127 179 167 164 81 178 164 160 127 161 184 127 179 182 168 178 179 168 173 166 79 168 179 178 127 179 164 173 127 179 164 173 179 160 162 171 164 178 232 87",
+    "hex_values": "$0 $93 $a7 $a8 $b2 $7f $54 $8c $8e $8d $4f $a3 $b1 $a8 $a5 $b3 $a4 $a3 $7f $a8 $ad $7f $b3 $a7 $a4 $51 $b2 $a4 $a0 $7f $a1 $b8 $7f $b3 $b6 $a8 $b2 $b3 $a8 $ad $a6 $4f $a8 $b3 $b2 $7f $b3 $a4 $ad $7f $b3 $a4 $ad $b3 $a0 $a2 $ab $a4 $b2 $e8 $57"
+  },
+  {
+    "label": "RuinsOfAlphOutsideMysteryChamberSignText.ctir_BEFORE_RuinsOfAlphOutsideMysteryChamberSignText",
+    "address_range": {
+      "begin": 361250,
+      "end": 361279
+    },
+    "integer_values": "0 140 152 146 147 132 145 152 127 146 147 142 141 132 79 143 128 141 132 139 127 130 135 128 140 129 132 145 87",
+    "hex_values": "$0 $8c $98 $92 $93 $84 $91 $98 $7f $92 $93 $8e $8d $84 $4f $8f $80 $8d $84 $8b $7f $82 $87 $80 $8c $81 $84 $91 $57"
+  },
+  {
+    "label": "RuinsOfAlphResearchCenterSignText.ctir_BEFORE_RuinsOfAlphResearchCenterSignText",
+    "address_range": {
+      "begin": 361311,
+      "end": 361377
+    },
+    "integer_values": "0 145 148 136 141 146 127 142 133 127 128 139 143 135 79 145 132 146 132 128 145 130 135 127 130 132 141 147 132 145 81 147 135 132 127 128 148 147 135 142 145 136 147 152 127 142 141 79 147 135 132 127 145 148 136 141 146 127 142 133 127 128 139 143 135 87",
+    "hex_values": "$0 $91 $94 $88 $8d $92 $7f $8e $85 $7f $80 $8b $8f $87 $4f $91 $84 $92 $84 $80 $91 $82 $87 $7f $82 $84 $8d $93 $84 $91 $51 $93 $87 $84 $7f $80 $94 $93 $87 $8e $91 $88 $93 $98 $7f $8e $8d $4f $93 $87 $84 $7f $91 $94 $88 $8d $92 $7f $8e $85 $7f $80 $8b $8f $87 $57"
+  },
+  {
+    "label": "RuinsOfAlphSignText.ctir_BEFORE_RuinsOfAlphSignText",
+    "address_range": {
+      "begin": 361279,
+      "end": 361311
+    },
+    "integer_values": "0 145 148 136 141 146 127 142 133 127 128 139 143 135 79 149 136 146 136 147 142 145 146 127 150 132 139 130 142 140 132 87",
+    "hex_values": "$0 $91 $94 $88 $8d $92 $7f $8e $85 $7f $80 $8b $8f $87 $4f $95 $88 $92 $88 $93 $8e $91 $92 $7f $96 $84 $8b $82 $8e $8c $84 $57"
+  },
+  {
+    "label": "SafariZoneClosedSignText.ctir_BEFORE_SafariZoneClosedSignText",
+    "address_range": {
+      "begin": 1658099,
+      "end": 1658170
+    },
+    "integer_values": "0 147 167 164 127 150 128 145 131 132 141 127 168 178 79 179 177 160 181 164 171 168 173 166 127 160 161 177 174 160 163 232 81 147 167 164 177 164 165 174 177 164 244 127 179 167 164 79 146 128 133 128 145 136 127 153 142 141 132 127 168 178 85 162 171 174 178 164 163 232 87",
+    "hex_values": "$0 $93 $a7 $a4 $7f $96 $80 $91 $83 $84 $8d $7f $a8 $b2 $4f $b3 $b1 $a0 $b5 $a4 $ab $a8 $ad $a6 $7f $a0 $a1 $b1 $ae $a0 $a3 $e8 $51 $93 $a7 $a4 $b1 $a4 $a5 $ae $b1 $a4 $f4 $7f $b3 $a7 $a4 $4f $92 $80 $85 $80 $91 $88 $7f $99 $8e $8d $84 $7f $a8 $b2 $55 $a2 $ab $ae $b2 $a4 $a3 $e8 $57"
+  },
+  {
+    "label": "SafariZoneOfficeSignText.ctir_BEFORE_SafariZoneOfficeSignText",
+    "address_range": {
+      "begin": 1657998,
+      "end": 1658072
+    },
+    "integer_values": "0 147 167 164 177 164 212 127 160 127 173 174 179 168 162 164 79 167 164 177 164 117 81 146 128 133 128 145 136 127 153 142 141 132 127 142 133 133 136 130 132 79 168 178 127 162 171 174 178 164 163 127 180 173 179 168 171 85 165 180 177 179 167 164 177 127 173 174 179 168 162 164 232 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $d4 $7f $a0 $7f $ad $ae $b3 $a8 $a2 $a4 $4f $a7 $a4 $b1 $a4 $75 $51 $92 $80 $85 $80 $91 $88 $7f $99 $8e $8d $84 $7f $8e $85 $85 $88 $82 $84 $4f $a8 $b2 $7f $a2 $ab $ae $b2 $a4 $a3 $7f $b4 $ad $b3 $a8 $ab $55 $a5 $b4 $b1 $b3 $a7 $a4 $b1 $7f $ad $ae $b3 $a8 $a2 $a4 $e8 $57"
+  },
+  {
+    "label": "SaffronCityMagnetTrainStationSignText.ctir_BEFORE_SaffronCityMagnetTrainStationSignText",
+    "address_range": {
+      "begin": 1677639,
+      "end": 1677674
+    },
+    "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 79 140 128 134 141 132 147 127 147 145 128 136 141 85 146 147 128 147 136 142 141 87",
+    "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $4f $8c $80 $86 $8d $84 $93 $7f $93 $91 $80 $88 $8d $55 $92 $93 $80 $93 $88 $8e $8d $57"
+  },
+  {
+    "label": "SaffronCitySignText.ctir_BEFORE_SaffronCitySignText",
+    "address_range": {
+      "begin": 1677445,
+      "end": 1677492
+    },
+    "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 81 146 167 168 173 168 173 166 244 127 134 174 171 163 164 173 79 139 160 173 163 127 174 165 127 130 174 172 172 164 177 162 164 87",
+    "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $51 $92 $a7 $a8 $ad $a8 $ad $a6 $f4 $7f $86 $ae $ab $a3 $a4 $ad $4f $8b $a0 $ad $a3 $7f $ae $a5 $7f $82 $ae $ac $ac $a4 $b1 $a2 $a4 $57"
+  },
+  {
+    "label": "SaffronGymSignText.ctir_BEFORE_SaffronGymSignText",
+    "address_range": {
+      "begin": 1677492,
+      "end": 1677559
+    },
+    "integer_values": "0 146 128 133 133 145 142 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 146 128 129 145 136 141 128 81 147 167 164 127 140 160 178 179 164 177 127 174 165 79 143 178 184 162 167 168 162 127 84 140 142 141 231 87",
+    "hex_values": "$0 $92 $80 $85 $85 $91 $8e $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $92 $80 $81 $91 $88 $8d $80 $51 $93 $a7 $a4 $7f $8c $a0 $b2 $b3 $a4 $b1 $7f $ae $a5 $4f $8f $b2 $b8 $a2 $a7 $a8 $a2 $7f $54 $8c $8e $8d $e7 $57"
+  },
+  {
+    "label": "SilphCoSignText.ctir_BEFORE_SilphCoSignText",
+    "address_range": {
+      "begin": 1677592,
+      "end": 1677619
+    },
+    "integer_values": "0 146 136 139 143 135 127 130 142 232 79 142 133 133 136 130 132 127 129 148 136 139 131 136 141 134 87",
+    "hex_values": "$0 $92 $88 $8b $8f $87 $7f $82 $8e $e8 $4f $8e $85 $85 $88 $82 $84 $7f $81 $94 $88 $8b $83 $88 $8d $86 $57"
+  },
+  {
+    "label": "SlowpokeWellSignText.ctir_BEFORE_SlowpokeWellSignText",
+    "address_range": {
+      "begin": 1672935,
+      "end": 1673101
+    },
+    "integer_values": "0 146 139 142 150 143 142 138 132 127 150 132 139 139 81 128 171 178 174 127 170 173 174 182 173 127 160 178 127 179 167 164 79 145 128 136 141 140 128 138 132 145 127 150 132 139 139 232 81 139 174 162 160 171 178 127 161 164 171 168 164 181 164 79 179 167 160 179 127 160 127 146 139 142 150 143 142 138 132 212 85 184 160 182 173 127 178 180 172 172 174 173 178 127 177 160 168 173 232 81 145 164 162 174 177 163 178 127 178 167 174 182 127 179 167 160 179 79 160 127 146 139 142 150 143 142 138 132 212 127 184 160 182 173 81 164 173 163 164 163 127 160 127 163 177 174 180 166 167 179 79 250 246 246 127 184 164 160 177 178 127 160 166 174 232 87",
+    "hex_values": "$0 $92 $8b $8e $96 $8f $8e $8a $84 $7f $96 $84 $8b $8b $51 $80 $ab $b2 $ae $7f $aa $ad $ae $b6 $ad $7f $a0 $b2 $7f $b3 $a7 $a4 $4f $91 $80 $88 $8d $8c $80 $8a $84 $91 $7f $96 $84 $8b $8b $e8 $51 $8b $ae $a2 $a0 $ab $b2 $7f $a1 $a4 $ab $a8 $a4 $b5 $a4 $4f $b3 $a7 $a0 $b3 $7f $a0 $7f $92 $8b $8e $96 $8f $8e $8a $84 $d4 $55 $b8 $a0 $b6 $ad $7f $b2 $b4 $ac $ac $ae $ad $b2 $7f $b1 $a0 $a8 $ad $e8 $51 $91 $a4 $a2 $ae $b1 $a3 $b2 $7f $b2 $a7 $ae $b6 $7f $b3 $a7 $a0 $b3 $4f $a0 $7f $92 $8b $8e $96 $8f $8e $8a $84 $d4 $7f $b8 $a0 $b6 $ad $51 $a4 $ad $a3 $a4 $a3 $7f $a0 $7f $a3 $b1 $ae $b4 $a6 $a7 $b3 $4f $fa $f6 $f6 $7f $b8 $a4 $a0 $b1 $b2 $7f $a0 $a6 $ae $e8 $57"
+  },
+  {
+    "label": "SoulHouseSignText.ctir_BEFORE_SoulHouseSignText",
+    "address_range": {
+      "begin": 1759360,
+      "end": 1759404
+    },
+    "integer_values": "0 146 142 148 139 127 135 142 148 146 132 81 140 160 184 127 179 167 164 127 146 174 180 171 178 127 174 165 79 84 140 142 141 127 145 164 178 179 127 132 160 178 184 87",
+    "hex_values": "$0 $92 $8e $94 $8b $7f $87 $8e $94 $92 $84 $51 $8c $a0 $b8 $7f $b3 $a7 $a4 $7f $92 $ae $b4 $ab $b2 $7f $ae $a5 $4f $54 $8c $8e $8d $7f $91 $a4 $b2 $b3 $7f $84 $a0 $b2 $b8 $57"
+  },
+  {
+    "label": "SproutTowerSignText.ctir_BEFORE_SproutTowerSignText",
+    "address_range": {
+      "begin": 1738532,
+      "end": 1738573
+    },
+    "integer_values": "0 146 143 145 142 148 147 127 147 142 150 132 145 81 132 183 175 164 177 168 164 173 162 164 127 179 167 164 79 150 160 184 127 174 165 127 84 140 142 141 87",
+    "hex_values": "$0 $92 $8f $91 $8e $94 $93 $7f $93 $8e $96 $84 $91 $51 $84 $b7 $af $a4 $b1 $a8 $a4 $ad $a2 $a4 $7f $b3 $a7 $a4 $4f $96 $a0 $b8 $7f $ae $a5 $7f $54 $8c $8e $8d $57"
+  },
+  {
+    "label": "TinTowerSignText.ctir_BEFORE_TinTowerSignText",
+    "address_range": {
+      "begin": 1721619,
+      "end": 1721672
+    },
+    "integer_values": "0 147 136 141 127 147 142 150 132 145 81 128 127 171 164 166 164 173 163 160 177 184 127 84 227 79 140 142 141 127 168 178 127 178 160 168 163 127 179 174 85 177 174 174 178 179 127 167 164 177 164 232 87",
+    "hex_values": "$0 $93 $88 $8d $7f $93 $8e $96 $84 $91 $51 $80 $7f $ab $a4 $a6 $a4 $ad $a3 $a0 $b1 $b8 $7f $54 $e3 $4f $8c $8e $8d $7f $a8 $b2 $7f $b2 $a0 $a8 $a3 $7f $b3 $ae $55 $b1 $ae $ae $b2 $b3 $7f $a7 $a4 $b1 $a4 $e8 $57"
+  },
+  {
+    "label": "TohjoFallsSignText.ctir_BEFORE_TohjoFallsSignText",
+    "address_range": {
+      "begin": 1707647,
+      "end": 1707693
+    },
+    "integer_values": "0 147 142 135 137 142 127 133 128 139 139 146 81 147 135 132 127 139 136 141 138 127 129 132 147 150 132 132 141 79 138 128 141 147 142 127 128 141 131 127 137 142 135 147 142 87",
+    "hex_values": "$0 $93 $8e $87 $89 $8e $7f $85 $80 $8b $8b $92 $51 $93 $87 $84 $7f $8b $88 $8d $8a $7f $81 $84 $93 $96 $84 $84 $8d $4f $8a $80 $8d $93 $8e $7f $80 $8d $83 $7f $89 $8e $87 $93 $8e $57"
+  },
+  {
+    "label": "TrainerHouseSign1Text.ctir_BEFORE_TrainerHouseSign1Text",
+    "address_range": {
+      "begin": 635406,
+      "end": 635511
+    },
+    "integer_values": "0 143 177 160 162 179 168 162 164 127 161 160 179 179 171 164 178 79 160 177 164 127 167 164 171 163 127 168 173 127 179 167 164 81 147 145 128 136 141 136 141 134 127 135 128 139 139 79 163 174 182 173 178 179 160 168 177 178 232 81 146 170 168 171 171 164 163 127 179 177 160 168 173 164 177 178 79 160 177 164 127 168 173 181 168 179 164 163 127 179 174 85 175 160 177 179 168 162 168 175 160 179 164 232 87",
+    "hex_values": "$0 $8f $b1 $a0 $a2 $b3 $a8 $a2 $a4 $7f $a1 $a0 $b3 $b3 $ab $a4 $b2 $4f $a0 $b1 $a4 $7f $a7 $a4 $ab $a3 $7f $a8 $ad $7f $b3 $a7 $a4 $51 $93 $91 $80 $88 $8d $88 $8d $86 $7f $87 $80 $8b $8b $4f $a3 $ae $b6 $ad $b2 $b3 $a0 $a8 $b1 $b2 $e8 $51 $92 $aa $a8 $ab $ab $a4 $a3 $7f $b3 $b1 $a0 $a8 $ad $a4 $b1 $b2 $4f $a0 $b1 $a4 $7f $a8 $ad $b5 $a8 $b3 $a4 $a3 $7f $b3 $ae $55 $af $a0 $b1 $b3 $a8 $a2 $a8 $af $a0 $b3 $a4 $e8 $57"
+  },
+  {
+    "label": "TrainerHouseSign2Text.ctir_BEFORE_TrainerHouseSign2Text",
+    "address_range": {
+      "begin": 635511,
+      "end": 635611
+    },
+    "integer_values": "0 147 167 164 177 164 127 160 177 164 127 173 174 127 177 180 171 164 178 79 174 177 127 177 164 166 180 171 160 179 168 174 173 178 127 165 174 177 81 175 177 160 162 179 168 162 164 127 172 160 179 162 167 164 178 232 79 137 180 178 179 127 171 168 170 164 127 168 173 127 165 168 164 171 163 81 161 160 179 179 171 164 178 244 127 160 173 184 179 167 168 173 166 79 166 174 164 178 231 87",
+    "hex_values": "$0 $93 $a7 $a4 $b1 $a4 $7f $a0 $b1 $a4 $7f $ad $ae $7f $b1 $b4 $ab $a4 $b2 $4f $ae $b1 $7f $b1 $a4 $a6 $b4 $ab $a0 $b3 $a8 $ae $ad $b2 $7f $a5 $ae $b1 $51 $af $b1 $a0 $a2 $b3 $a8 $a2 $a4 $7f $ac $a0 $b3 $a2 $a7 $a4 $b2 $e8 $4f $89 $b4 $b2 $b3 $7f $ab $a8 $aa $a4 $7f $a8 $ad $7f $a5 $a8 $a4 $ab $a3 $51 $a1 $a0 $b3 $b3 $ab $a4 $b2 $f4 $7f $a0 $ad $b8 $b3 $a7 $a8 $ad $a6 $4f $a6 $ae $a4 $b2 $e7 $57"
+  },
+  {
+    "label": "TrainerHouseSignText.ctir_BEFORE_TrainerHouseSignText",
+    "address_range": {
+      "begin": 1744537,
+      "end": 1744585
+    },
+    "integer_values": "0 147 145 128 136 141 132 145 127 135 142 148 146 132 81 147 167 164 127 130 171 180 161 127 165 174 177 127 147 174 175 79 147 177 160 168 173 164 177 127 129 160 179 179 171 164 178 87",
+    "hex_values": "$0 $93 $91 $80 $88 $8d $84 $91 $7f $87 $8e $94 $92 $84 $51 $93 $a7 $a4 $7f $82 $ab $b4 $a1 $7f $a5 $ae $b1 $7f $93 $ae $af $4f $93 $b1 $a0 $a8 $ad $a4 $b1 $7f $81 $a0 $b3 $b3 $ab $a4 $b2 $57"
+  },
+  {
+    "label": "VermilionCityDiglettsCaveSignText.ctir_BEFORE_VermilionCityDiglettsCaveSignText",
+    "address_range": {
+      "begin": 1748558,
+      "end": 1748574
+    },
+    "integer_values": "0 131 136 134 139 132 147 147 224 146 127 130 128 149 132 87",
+    "hex_values": "$0 $83 $88 $86 $8b $84 $93 $93 $e0 $92 $7f $82 $80 $95 $84 $57"
+  },
+  {
+    "label": "VermilionCityPortSignText.ctir_BEFORE_VermilionCityPortSignText",
+    "address_range": {
+      "begin": 1748574,
+      "end": 1748599
+    },
+    "integer_values": "0 149 132 145 140 136 139 136 142 141 127 143 142 145 147 79 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $95 $84 $91 $8c $88 $8b $88 $8e $8d $7f $8f $8e $91 $93 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "VermilionCitySignText.ctir_BEFORE_VermilionCitySignText",
+    "address_range": {
+      "begin": 1748409,
+      "end": 1748455
+    },
+    "integer_values": "0 149 132 145 140 136 139 136 142 141 127 130 136 147 152 81 147 167 164 127 143 174 177 179 127 174 165 79 132 183 176 180 168 178 168 179 164 127 146 180 173 178 164 179 178 87",
+    "hex_values": "$0 $95 $84 $91 $8c $88 $8b $88 $8e $8d $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $8f $ae $b1 $b3 $7f $ae $a5 $4f $84 $b7 $b0 $b4 $a8 $b2 $a8 $b3 $a4 $7f $92 $b4 $ad $b2 $a4 $b3 $b2 $57"
+  },
+  {
+    "label": "VermilionGymSignText.ctir_BEFORE_VermilionGymSignText",
+    "address_range": {
+      "begin": 1748455,
+      "end": 1748520
+    },
+    "integer_values": "0 149 132 145 140 136 139 136 142 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 139 147 232 146 148 145 134 132 81 147 167 164 127 139 168 166 167 179 173 168 173 166 79 128 172 164 177 168 162 160 173 87",
+    "hex_values": "$0 $95 $84 $91 $8c $88 $8b $88 $8e $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $8b $93 $e8 $92 $94 $91 $86 $84 $51 $93 $a7 $a4 $7f $8b $a8 $a6 $a7 $b3 $ad $a8 $ad $a6 $4f $80 $ac $a4 $b1 $a8 $a2 $a0 $ad $57"
+  },
+  {
+    "label": "VictoryRoadEntranceSignText.ctir_BEFORE_VictoryRoadEntranceSignText",
+    "address_range": {
+      "begin": 507909,
+      "end": 507944
+    },
+    "integer_values": "0 84 140 142 141 127 139 132 128 134 148 132 81 149 136 130 147 142 145 152 127 145 142 128 131 79 132 141 147 145 128 141 130 132 87",
+    "hex_values": "$0 $54 $8c $8e $8d $7f $8b $84 $80 $86 $94 $84 $51 $95 $88 $82 $93 $8e $91 $98 $7f $91 $8e $80 $83 $4f $84 $8d $93 $91 $80 $8d $82 $84 $57"
+  },
+  {
+    "label": "VioletCitySignText.ctir_BEFORE_VioletCitySignText",
+    "address_range": {
+      "begin": 1738418,
+      "end": 1738460
+    },
+    "integer_values": "0 149 136 142 139 132 147 127 130 136 147 152 81 147 167 164 127 130 168 179 184 127 174 165 79 141 174 178 179 160 171 166 168 162 127 146 162 164 173 179 178 87",
+    "hex_values": "$0 $95 $88 $8e $8b $84 $93 $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $82 $a8 $b3 $b8 $7f $ae $a5 $4f $8d $ae $b2 $b3 $a0 $ab $a6 $a8 $a2 $7f $92 $a2 $a4 $ad $b3 $b2 $57"
+  },
+  {
+    "label": "VioletGymSignText.ctir_BEFORE_VioletGymSignText",
+    "address_range": {
+      "begin": 1738460,
+      "end": 1738532
+    },
+    "integer_values": "0 149 136 142 139 132 147 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 133 128 139 138 141 132 145 81 147 167 164 127 132 171 164 166 160 173 179 127 140 160 178 179 164 177 79 174 165 127 133 171 184 168 173 166 127 84 140 142 141 87",
+    "hex_values": "$0 $95 $88 $8e $8b $84 $93 $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $85 $80 $8b $8a $8d $84 $91 $51 $93 $a7 $a4 $7f $84 $ab $a4 $a6 $a0 $ad $b3 $7f $8c $a0 $b2 $b3 $a4 $b1 $4f $ae $a5 $7f $85 $ab $b8 $a8 $ad $a6 $7f $54 $8c $8e $8d $57"
+  },
+  {
+    "label": "ViridianCitySignText.ctir_BEFORE_ViridianCitySignText",
+    "address_range": {
+      "begin": 1744367,
+      "end": 1744411
+    },
+    "integer_values": "0 149 136 145 136 131 136 128 141 127 130 136 147 152 81 147 167 164 127 132 179 164 177 173 160 171 171 184 79 134 177 164 164 173 127 143 160 177 160 163 168 178 164 87",
+    "hex_values": "$0 $95 $88 $91 $88 $83 $88 $80 $8d $7f $82 $88 $93 $98 $51 $93 $a7 $a4 $7f $84 $b3 $a4 $b1 $ad $a0 $ab $ab $b8 $4f $86 $b1 $a4 $a4 $ad $7f $8f $a0 $b1 $a0 $a3 $a8 $b2 $a4 $57"
+  },
+  {
+    "label": "ViridianCityWelcomeSignText.ctir_BEFORE_ViridianCityWelcomeSignText",
+    "address_range": {
+      "begin": 1744480,
+      "end": 1744537
+    },
+    "integer_values": "0 150 132 139 130 142 140 132 127 147 142 79 149 136 145 136 131 136 128 141 127 130 136 147 152 244 81 147 135 132 127 134 128 147 132 150 128 152 127 147 142 79 136 141 131 136 134 142 127 143 139 128 147 132 128 148 87",
+    "hex_values": "$0 $96 $84 $8b $82 $8e $8c $84 $7f $93 $8e $4f $95 $88 $91 $88 $83 $88 $80 $8d $7f $82 $88 $93 $98 $f4 $51 $93 $87 $84 $7f $86 $80 $93 $84 $96 $80 $98 $7f $93 $8e $4f $88 $8d $83 $88 $86 $8e $7f $8f $8b $80 $93 $84 $80 $94 $57"
+  },
+  {
+    "label": "ViridianGymSignText.ctir_BEFORE_ViridianGymSignText",
+    "address_range": {
+      "begin": 1744411,
+      "end": 1744480
+    },
+    "integer_values": "0 149 136 145 136 131 136 128 141 127 130 136 147 152 79 84 140 142 141 127 134 152 140 85 139 132 128 131 132 145 156 127 117 81 147 167 164 127 177 164 178 179 127 174 165 127 179 167 164 79 179 164 183 179 127 168 178 127 168 171 171 164 166 168 161 171 164 117 87",
+    "hex_values": "$0 $95 $88 $91 $88 $83 $88 $80 $8d $7f $82 $88 $93 $98 $4f $54 $8c $8e $8d $7f $86 $98 $8c $55 $8b $84 $80 $83 $84 $91 $9c $7f $75 $51 $93 $a7 $a4 $7f $b1 $a4 $b2 $b3 $7f $ae $a5 $7f $b3 $a7 $a4 $4f $b3 $a4 $b7 $b3 $7f $a8 $b2 $7f $a8 $ab $ab $a4 $a6 $a8 $a1 $ab $a4 $75 $57"
+  },
+  {
+    "label": "VolunteerPokemonHouseSignText.ctir_BEFORE_VolunteerPokemonHouseSignText",
+    "address_range": {
+      "begin": 1759329,
+      "end": 1759360
+    },
+    "integer_values": "0 139 128 149 132 141 131 132 145 127 149 142 139 148 141 147 132 132 145 79 84 140 142 141 127 135 142 148 146 132 87",
+    "hex_values": "$0 $8b $80 $95 $84 $8d $83 $84 $91 $7f $95 $8e $8b $94 $8d $93 $84 $84 $91 $4f $54 $8c $8e $8d $7f $87 $8e $94 $92 $84 $57"
+  },
+  {
+    "label": "WardensHomeSignText.ctir_BEFORE_WardensHomeSignText",
+    "address_range": {
+      "begin": 1658072,
+      "end": 1658099
+    },
+    "integer_values": "0 146 128 133 128 145 136 127 153 142 141 132 79 150 128 145 131 132 141 224 146 127 135 142 140 132 87",
+    "hex_values": "$0 $92 $80 $85 $80 $91 $88 $7f $99 $8e $8d $84 $4f $96 $80 $91 $83 $84 $8d $e0 $92 $7f $87 $8e $8c $84 $57"
+  },
+  {
+    "integer_values": "15",
+    "address_range": {
+      "begin": 721295,
+      "end": 721296
+    },
+    "label": "Remove cuttable tree in Ilex Forest"
+  }
+]

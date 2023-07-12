@@ -4,7 +4,7 @@ Location:
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Rock Tunnel via Route 10
         FlagReqs:
@@ -13,14 +13,14 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Rock Tunnel via Route 10
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Route 10 via Route 9
         FlagReqs:
@@ -31,14 +31,14 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Rock Tunnel Entrance
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Rock Tunnel via Lavender
         FlagReqs:
@@ -47,14 +47,14 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
     -
         Name: Rock Tunnel via Lavender
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
+        WildTableList:
         LocationReqs:
             - Lavender Town
         FlagReqs:
@@ -65,16 +65,15 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
         Sublocations:
+
     -
-        Name: Rock Tunnel
+        Name: Rock Tunnel Access
         FileName: RockTunnel1F.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
-            - ROCK_TUNNEL_1F
-            - ROCK_TUNNEL_B1F
+        WildTableList:
         LocationReqs:
             - Rock Tunnel Entrance
         FlagReqs:
@@ -84,202 +83,506 @@ Location:
         Code:
         Text:
         AREALV: 32
-        TrainerList: 
+        TrainerList:
         Sublocations:
-            -
-                Name: Traversed Rock Tunnel
-                FileName: RockTunnel1F.asm
-                Type: Map
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code:
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Elixer
-                FileName: RockTunnel1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    RockTunnel1FElixer:
-                        ITEMLINE
-                Text:
-                IsBall: Yes
-                NormalItem: ELIXER
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Steel Wing TM
-                FileName: RockTunnel1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    RockTunnel1FTMSteelWing:
-                        ITEMLINE
-                Text:
-                IsBall: Yes
-                NormalItem: TM_STEEL_WING
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Iron
-                FileName: RockTunnelB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    RockTunnelB1FIron:
-                        ITEMLINE
-                Text:
-                IsBall: Yes
-                NormalItem: IRON
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel PP UP
-                FileName: RockTunnelB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    RockTunnelB1FPPUp:
-                        ITEMLINE
-                Text:
-                IsBall: Yes
-                NormalItem: PP_UP
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Revive
-                FileName: RockTunnelB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Rock Tunnel
-                FlagReqs:
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    RockTunnelB1FRevive:
-                        ITEMLINE
-                Text:
-                IsBall: Yes
-                NormalItem: REVIVE
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Hidden X Accuracy
-                FileName: RockTunnel1F.asm
-                SecondaryFile: RockTunnel1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Rock Tunnel
-                FlagReqs:
-                    - Hidden Items
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: X_ACCURACY
-                Code: |
-                    RockTunnel1FHiddenXAccuracy:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 24,  4, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Hidden X Defend
-                FileName: RockTunnel1F.asm
-                SecondaryFile: RockTunnel1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Rock Tunnel
-                FlagReqs:
-                    - Hidden Items
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: X_DEFEND
-                Code: |
-                    RockTunnel1FHiddenXDefend:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 21, 15, BGEVENT_ITEM, RockTunnel1FHiddenXDefend'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Rock Tunnel Hidden Max Potion
-                FileName: RockTunnelB1F.asm
-                SecondaryFile: RockTunnelB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Rock Tunnel
-                FlagReqs:
-                    - Hidden Items
-                    - Zephyr Badge
-                ItemReqs:
-                    - Flash
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_POTION
-                Code: |
-                    RockTunnelB1FHiddenMaxPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, RockTunnelB1FHiddenMaxPotion'
-                Text:
-                TrainerList: 
-                Sublocations:
+
+    -
+        Name: Rock Tunnel Access
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+            - Zephyr Badge
+        ItemReqs:
+            - Flash
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Rock Tunnel
+        FileName: RockTunnel1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+            - ROCK_TUNNEL_1F
+            - ROCK_TUNNEL_B1F
+        LocationReqs:
+            - Rock Tunnel Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+        Sublocations:
+        -
+            Name: Rock Tunnel North Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 North
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Rock Tunnel North Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs:
+                Rock Tunnel via Route 10
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Rock Tunnel North
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel North Access
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs: Rock Tunnel North Exit
+            Sublocations:
+                -
+                    Name: Rock Tunnel Hidden X Accuracy
+                    FileName: RockTunnel1F.asm
+                    SecondaryFile: RockTunnel1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel North
+                    FlagReqs:
+                        - Hidden Items
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: X_ACCURACY
+                    Code: |
+                        RockTunnel1FHiddenXAccuracy:
+                            ITEMLINE
+                    SecondaryCode: '    bg_event 24,  4, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy'
+                    Text:
+                    TrainerList:
+                    Sublocations:
+        -
+            Name: Rock Tunnel South Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 South
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel South Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs:
+            FlagReqs:
+              - Zephyr Badge
+              - Warps
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel South Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel via Lavender
+            FlagReqs:
+              - Zephyr Badge
+            ItemReqs:
+              - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel South Exit
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel South Entrance
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs: Rock Tunnel South Exit
+            Sublocations:
+                -
+                    Name: Rock Tunnel Elixer
+                    FileName: RockTunnel1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel South Exit
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        RockTunnel1FElixer:
+                            ITEMLINE
+                    Text:
+                    IsBall: Yes
+                    NormalItem: ELIXER
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Rock Tunnel Steel Wing TM
+                    FileName: RockTunnel1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel South Exit
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        RockTunnel1FTMSteelWing:
+                            ITEMLINE
+                    Text:
+                    IsBall: Yes
+                    NormalItem: TM_STEEL_WING
+                    TrainerList:
+                    Sublocations:
+
+                -
+                    Name: Rock Tunnel Hidden X Defend
+                    FileName: RockTunnel1F.asm
+                    SecondaryFile: RockTunnel1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel South Exit
+                    FlagReqs:
+                        - Hidden Items
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: X_DEFEND
+                    Code: |
+                        RockTunnel1FHiddenXDefend:
+                            ITEMLINE
+                    SecondaryCode: '    bg_event 21, 15, BGEVENT_ITEM, RockTunnel1FHiddenXDefend'
+                    Text:
+                    TrainerList:
+                    Sublocations:
+
+        -
+            Name: Rock Tunnel BF1 South Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel South Exit
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+
+        -
+            Name: Rock Tunnel BF1 South Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel Passage
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel BF1 South
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 South Access
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs: Rock Tunnel BF1 South
+            Sublocations:
+                -
+                    Name: Rock Tunnel PP UP
+                    FileName: RockTunnelB1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel BF1 South
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        RockTunnelB1FPPUp:
+                            ITEMLINE
+                    Text:
+                    IsBall: Yes
+                    NormalItem: PP_UP
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Rock Tunnel Hidden Max Potion
+                    FileName: RockTunnelB1F.asm
+                    SecondaryFile: RockTunnelB1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel BF1 South
+                    FlagReqs:
+                        - Hidden Items
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: MAX_POTION
+                    Code: |
+                        RockTunnelB1FHiddenMaxPotion:
+                            ITEMLINE
+                    SecondaryCode: '    bg_event  4, 14, BGEVENT_ITEM, RockTunnelB1FHiddenMaxPotion'
+                    Text:
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Rock Tunnel Revive
+                    FileName: RockTunnelB1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel BF1 South
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        RockTunnelB1FRevive:
+                            ITEMLINE
+                    Text:
+                    IsBall: Yes
+                    NormalItem: REVIVE
+                    TrainerList:
+                    Sublocations:
+
+        -
+            Name: Rock Tunnel BF1 North Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel North
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel BF1 North Access
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel Passage
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel BF1 North
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 North Access
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs: Rock Tunnel BF1 North
+            Sublocations:
+                  -
+                    Name: Rock Tunnel Iron
+                    FileName: RockTunnelB1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Rock Tunnel BF1 North
+                    FlagReqs:
+                        - Zephyr Badge
+                    ItemReqs:
+                        - Flash
+                    FlagsSet:
+                    ReachableReqs:
+                    Code: |
+                        RockTunnelB1FIron:
+                            ITEMLINE
+                    Text:
+                    IsBall: Yes
+                    NormalItem: IRON
+                    TrainerList:
+                    Sublocations:
+
+        -
+            Name: Rock Tunnel 1F Passage Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 South
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            WarpReqs:
+                - Rock Tunnel 1F Passage
+
+        -
+            Name: Rock Tunnel 1F Passage Entrance
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel BF1 North
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+
+        -
+            Name: Rock Tunnel Passage
+            FileName: RockTunnel1F.asm
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Rock Tunnel 1F Passage Entrance
+            FlagReqs:
+                - Zephyr Badge
+            ItemReqs:
+                - Flash
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            WarpReqs: Rock Tunnel BF1 North
+            TrainerList:

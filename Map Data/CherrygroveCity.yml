@@ -15,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Cherrygrove
+        WarpReqs: Cherrygrove
         Sublocations:
             -
                 Name: Mystic Water Man
@@ -54,6 +55,7 @@ Location:
                 Sublocations:
             -
                 Name: Map Card
+                OtherName: Map Card Backup
                 FileName: CherrygroveCity.asm
                 Type: Item
                 HasPKMN: No
@@ -61,6 +63,7 @@ Location:
                 LocationReqs: Cherrygrove City
                 FlagReqs:
                     - Pointless Checks
+                    - Impossible
                 ItemReqs:
                 FlagsSet:
                 NormalItem: ENGINE_MAP_CARD
@@ -113,6 +116,10 @@ Location:
                         writetext GuideGentGiftText
                         promptbutton
                         ITEMLINE
+                        iftrue .GotMapCard
+                        clearevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                        appear CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                    .GotMapCard
                         writetext GuideGentPokegearText
                         waitbutton
                         closetext
@@ -126,6 +133,34 @@ Location:
                         waitsfx
                         end
                 Sublocations:
+                -
+                    Name: Map Card Backup
+                    TrueName: Map Card
+                    FileName: CherrygroveCity.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Map Card
+                    FlagReqs:
+                        - Pointless Checks
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Text:
+                    AREALV: 2
+                    TrainerList:
+                    Code: |
+                        CherrygroveCityMapCardBackup:
+                            opentext
+                            ITEMLINE
+                            iffalse .End
+                            setevent EVENT_CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                            disappear CHERRYGROVE_CITY_MAP_CARD_BACKUP
+                        .End
+                            closetext
+                            end
+                    Sublocations:
             -
                 Name: Rival Battle #1
                 FileName: CherrygroveCity.asm
@@ -144,4 +179,152 @@ Location:
                     - RIVAL1 2
                     - RIVAL1 3
                 Code: 
+                Sublocations:
+
+    -
+        Name: Cherrygrove Mart
+        FileName: CherrygroveCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CHERRYGROVE_CITY
+        LocationReqs: Cherrygrove City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Cherrygrove
+        WarpReqs: Cherrygrove Mart
+        Sublocations:
+            -
+                Name: Cherrygrove Mart Poke Ball
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POKE_BALL
+                Sublocations:
+            -
+                Name: Cherrygrove Mart Potion
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: POTION
+                Sublocations:
+            -
+                Name: Cherrygrove Mart Repel
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REPEL
+                Sublocations:
+            -
+                Name: Cherrygrove Mart Antidote
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Parlyz Heal
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Awakening
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+                Sublocations:
+
+            -
+                Name: Cherrygrove Mart Ice Heal
+                FileName: MartCherrygroveBetter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                    - CHERRYGROVE_CITY
+                LocationReqs: Cherrygrove Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ICE_HEAL
                 Sublocations:

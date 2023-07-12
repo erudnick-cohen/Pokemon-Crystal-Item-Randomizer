@@ -1,0 +1,17 @@
+Name: Remove Dark Caves
+Description: Remove the Flash requirements for Dark Caves.
+NewGamePatches:
+    - 'Patches/LightUpDarkCaves.json'
+FlagsSet:
+    - No Flash
+    - Always Flash
+Changes:
+    -
+        Location: Ruins of Alph Light Chamber Access
+        AddFlagReqs:
+            - Always Flash
+
+    -
+        Location: Flash Have
+        AddFlagReqs:
+            - Always Flash

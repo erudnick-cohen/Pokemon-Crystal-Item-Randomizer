@@ -45,11 +45,16 @@ GoldenrodUnderground_MapScripts:
 	iffalse .LockBasementDoor
 	return
 
+
 .LockBasementDoor:
+.ckir_BEFORE_LockBasementDoor::
 	changeblock 18, 6, $3d ; locked door
+.ckir_AFTER_LockBasementDoor::
 	return
 
 .CheckDayOfWeek:
+	checkitemrando
+        iftrue .AnyDay
 	readvar VAR_WEEKDAY
 	ifequal MONDAY, .Monday
 	ifequal TUESDAY, .Tuesday
@@ -57,6 +62,14 @@ GoldenrodUnderground_MapScripts:
 	ifequal THURSDAY, .Thursday
 	ifequal FRIDAY, .Friday
 	ifequal SATURDAY, .Saturday
+	ifequal SUNDAY, .Sunday
+
+.AnyDay:
+	appear GOLDENRODUNDERGROUND_GRANNY
+	appear GOLDENRODUNDERGROUND_GRAMPS
+	appear GOLDENRODUNDERGROUND_OLDER_HAIRCUT_BROTHER
+	appear GOLDENRODUNDERGROUND_YOUNGER_HAIRCUT_BROTHER
+	return
 
 .Sunday:
 	disappear GOLDENRODUNDERGROUND_GRAMPS
@@ -67,9 +80,7 @@ GoldenrodUnderground_MapScripts:
 
 .Monday:
 	disappear GOLDENRODUNDERGROUND_GRAMPS
-.ckir_BEFORE_timed_events_UNDERGROUND::
-	checktime ANYTIME
-.ckir_AFTER_timed_events_UNDERGROUND::
+	checktime MORN
 	iffalse .NotMondayMorning
 	appear GOLDENRODUNDERGROUND_GRAMPS
 .NotMondayMorning:
@@ -159,6 +170,8 @@ TrainerPokemaniacDonald:
 
 BitterMerchantScript:
 	opentext
+	checkitemrando
+	iftrue .Open
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .Open
 	ifequal SATURDAY, .Open
@@ -171,25 +184,27 @@ BitterMerchantScript:
 
 BargainMerchantScript:
 	opentext
+        checkitemrando
+        iftrue .OpenBargain
 	checkflag ENGINE_GOLDENROD_UNDERGROUND_MERCHANT_CLOSED
 	iftrue GoldenrodUndergroundScript_ShopClosed
 	readvar VAR_WEEKDAY
-.ckir_BEFORE_timed_events_UNDERGROUND::
-	ifnotequal 10, .CheckMorn
-.ckir_AFTER_timed_events_UNDERGROUND::
+	ifnotequal 8, .CheckMorn
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .CheckMorn:
-.ckir_BEFORE_timed_events_UNDERGROUND2::
 	checktime ANYTIME
-.ckir_AFTER_timed_events_UNDERGROUND2::
 	iffalse GoldenrodUndergroundScript_ShopClosed
+
+.OpenBargain:
 	pokemart MARTTYPE_BARGAIN, 0
 	closetext
 	end
 
 OlderHaircutBrotherScript:
 	opentext
+    checkitemrando
+    iftrue .DoHaircut
 	readvar VAR_WEEKDAY
 	ifequal TUESDAY, .DoHaircut
 	ifequal THURSDAY, .DoHaircut
@@ -197,8 +212,11 @@ OlderHaircutBrotherScript:
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .DoHaircut:
+    checkitemrando
+    iftrue .PerformHaircut
 	checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
 	iftrue .AlreadyGotHaircut
+.PerformHaircut
 	special PlaceMoneyTopRight
 	writetext GoldenrodUndergroundOlderHaircutBrotherOfferHaircutText
 	yesorno
@@ -273,6 +291,8 @@ OlderHaircutBrotherScript:
 
 YoungerHaircutBrotherScript:
 	opentext
+    checkitemrando
+    iftrue .DoHaircut
 	readvar VAR_WEEKDAY
 	ifequal SUNDAY, .DoHaircut
 	ifequal WEDNESDAY, .DoHaircut
@@ -280,8 +300,11 @@ YoungerHaircutBrotherScript:
 	sjump GoldenrodUndergroundScript_ShopClosed
 
 .DoHaircut:
-	checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
+    checkitemrando
+    iftrue .PerformHaircut
+    checkflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
 	iftrue .AlreadyGotHaircut
+.PerformHaircut
 	special PlaceMoneyTopRight
 	writetext GoldenrodUndergroundYoungerHaircutBrotherOfferHaircutText
 	yesorno

@@ -4,6 +4,23 @@ Location:
         FileName: GoldenrodCity.asm
         Type: Map
         HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Goldenrod
+        Sublocations:
+    -
+        Name: Goldenrod City Entrance
+        FileName: GoldenrodCity.asm
+        Type: Map
+        HasPKMN: No
         WildTableList: 
         LocationReqs: Goldenrod City via Route 34
         FlagReqs:
@@ -79,412 +96,1948 @@ Location:
         TrainerList:
         HintName: Goldenrod
         Sublocations:
+
+    -
+        Name: Bike Shop
+        FileName: GoldenrodBikeShop.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code: |
+            GoldenrodBikeShopClerkScript:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_BICYCLE
+                iftrue .GotBicycle
+                writetext GoldenrodBikeShopClerkIntroText
+                yesorno
+                iffalse .Refused
+                writetext GoldenrodBikeShopClerkAgreedText
+                promptbutton
+                waitsfx
+                ITEMLINE
+                iffalse .GotBicycle
+                setflag ENGINE_BIKE_SHOP_CALL_ENABLED
+                setevent EVENT_GOT_BICYCLE
+            .GotBicycle:
+                writetext GoldenrodBikeShopClerkFirstRateBikesText
+                waitbutton
+                closetext
+                end
+        Text: |
+            UnknownText_0x54787:
+                text "...sigh... I moved"
+                line "here, but I can't"
+
+                para "sell my ITEMNAMES."
+                line "Why is that?"
+
+                para "Could you ride a"
+                line "ITEMNAME and adver-"
+                cont "tise for me?"
+                done
+
+            UnknownText_0x547f8:
+                text "Really? Great!"
+
+                para "Give me your name"
+                line "and phone number,"
+
+                para "and I'll loan you"
+                line "a ITEMNAME."
+                done
+
+            UnknownText_0x54848:
+                text "<PLAYER> borrowed a"
+                line "ITEMNAME."
+                done
+
+            UnknownText_0x5485f:
+                text "My ITEMNAMES are"
+                line "first-rate! You"
+
+                para "can ride them"
+                line "anywhere."
+                done
+
+            UnknownText_0x54898:
+                text "...sigh... Oh, for"
+                line "the kindness of"
+                cont "people..."
+                done
+
+            ; possibly unused
+            UnknownText_0x548c0:
+                text "Just released!"
+
+                para "First-rate compact"
+                line "ITEMNAMES!"
+                done
+
+            UnknownText_0x548ed:
+                text "It's a shiny new"
+                line "ITEMNAME!"
+                done
+        TrainerList:
+        WarpReqs: Goldenrod Bike Shop
+        Sublocations:
+
+    -
+        Name: Flower Shop
+        FileName: GoldenrodFlowerShop.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+            - Plain Badge
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Flower Shop
+        Code: |
+            .SkipFloriaCheck:
+                checkflag ENGINE_PLAINBADGE
+                iffalse .NoPlainBadge
+                faceplayer
+                opentext
+                writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
+                promptbutton
+                ITEMLINE
+                iffalse .SkipSquirtbottle
+                setevent EVENT_GOT_SQUIRTBOTTLE
+            .SkipSquirtbottle
+                closetext
+                setevent EVENT_FLORIA_AT_SUDOWOODO
+                clearevent EVENT_FLORIA_AT_FLOWER_SHOP
+                end
+        Text: |
+            UnknownText_0x554c2:
+                text "Oh, you're better"
+                line "than WHITNEY…"
+
+                para "You'll be OK,"
+                line "then. Here's the"
+                cont "ITEMNAME!"
+                done
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Goldenrod Game Corner Access
+        FileName: GoldenrodGameCorner.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Goldenrod Game Corner
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Game Corner Access
+        FileName: GoldenrodGameCorner.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        WarpReqs: Goldenrod Game Corner
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+        Name: Goldenrod Game Corner
+        FileName: GoldenrodGameCorner.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod Game Corner Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
             -
-                Name: Bike Shop
-                FileName: GoldenrodBikeShop.asm
-                Type: Item
+                Name: Goldenrod Game Corner Thunder TM
+                FileName: GoldenrodGameCorner.asm
+                Type: Prize
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    GoldenrodBikeShopClerkScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_BICYCLE
-                        iftrue .GotBicycle
-                        writetext GoldenrodBikeShopClerkIntroText
-                        yesorno
-                        iffalse .Refused
-                        writetext GoldenrodBikeShopClerkAgreedText
-                        promptbutton
-                        waitsfx
-                        ITEMLINE
-                        writetext BorrowedABicycleText
-                        playsound SFX_KEY_ITEM
-                        waitsfx
-                        itemnotify
-                        setflag ENGINE_BIKE_SHOP_CALL_ENABLED
-                        setevent EVENT_GOT_BICYCLE
-                Text: |
-                    UnknownText_0x54787:
-                        text "...sigh... I moved"
-                        line "here, but I can't"
-
-                        para "sell my ITEMNAMES."
-                        line "Why is that?"
-
-                        para "Could you ride a"
-                        line "ITEMNAME and adver-"
-                        cont "tise for me?"
-                        done
-                    
-                    UnknownText_0x547f8:
-                        text "Really? Great!"
-
-                        para "Give me your name"
-                        line "and phone number,"
-
-                        para "and I'll loan you"
-                        line "a ITEMNAME."
-                        done
-
-                    UnknownText_0x54848:
-                        text "<PLAYER> borrowed a"
-                        line "ITEMNAME."
-                        done
-
-                    UnknownText_0x5485f:
-                        text "My ITEMNAMES are"
-                        line "first-rate! You"
-
-                        para "can ride them"
-                        line "anywhere."
-                        done
-
-                    UnknownText_0x54898:
-                        text "...sigh... Oh, for"
-                        line "the kindness of"
-                        cont "people..."
-                        done
-
-                    ; possibly unused
-                    UnknownText_0x548c0:
-                        text "Just released!"
-
-                        para "First-rate compact"
-                        line "ITEMNAMES!"
-                        done
-
-                    UnknownText_0x548ed:
-                        text "It's a shiny new"
-                        line "ITEMNAME!"
-                        done
-                TrainerList: 
-                Sublocations:         
-            -
-                Name: Flower Shop
-                FileName: GoldenrodFlowerShop.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                    - Plain Badge
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    .SkipFloriaCheck:
-                        checkflag ENGINE_PLAINBADGE
-                        iffalse .NoPlainBadge
-                        faceplayer
-                        opentext
-                        writetext GoldenrodFlowerShopTeacherHeresTheSquirtbottleText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_GOT_SQUIRTBOTTLE
-                        closetext
-                        setevent EVENT_FLORIA_AT_SUDOWOODO
-                        clearevent EVENT_FLORIA_AT_FLOWER_SHOP
-                        end
-                Text: |
-                    UnknownText_0x554c2:
-                        text "Oh, you're better"
-                        line "than WHITNEY…"
-
-                        para "You'll be OK,"
-                        line "then. Here's the"
-                        cont "ITEMNAME!"
-                        done
-                TrainerList: 
-                Sublocations:        
-            -
-                Name: Kenya Gate Item
-                FileName: Route35GoldenrodGate.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                    - Kenya Obtained
-                ReachableReqs:
-                NormalItem: HP_UP
-                Code: |
-                    RandyScript_questcomplete:
-                        writetext Route35GoldenrodGateRandySomethingForYourTroubleText
-                        promptbutton
-                        ITEMLINE
-                        iffalse RandyScript_bagfull
-                        setevent EVENT_GOT_HP_UP_FROM_RANDY
-                    RandyScript_gothpup:
-                        writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
-                        waitbutton
-                    RandyScript_bagfull:
-                        closetext
-                        end
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Coin Case Underground
-                FileName: GoldenrodUnderground.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                NormalItem: COIN_CASE
-                IsBall: Yes
-                Code: |
-                    GoldenrodUndergroundCoinCase:
-                        ITEMLINE
-                Text:
-                AREALV: 10
-                TrainerList: 
-                    - POKEMANIAC 12
-                    - SUPER_NERD 10
-                    - POKEMANIAC 11
-                    - SUPER_NERD 2
-                Sublocations:
-            -
-                Name: Goldenrod Department Store Return
-                FileName: GoldenrodDeptStore5F.asm
-                Type: Item
-                HasPKMN: Yes
                 WildTableList:
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod Game Corner
                 FlagReqs:
-                    - Timed Events
+                    - Game Corner Access
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: TM_RETURN
-                IsBall: No
+                NormalItem: TM_THUNDER
+                WarpReqs:
                 Code: |
-                    .VeryHappy:
-                    	writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
-                    	promptbutton
-                    	ITEMLINE
-                    .ckir_BEFORE_timed_events_DEPTSTORE5F4::
-                    	iftrue .NotVeryHappy
-                    	iffalse .NotVeryHappy
-                    .ckir_AFTER_timed_events_DEPTSTORE5F4::
-                    	closetext
-                    	end
+                    .Thunder:
+                        checkcoins GOLDENRODGAMECORNER_TM25_COINS
+                        ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM25
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveThunder
+                        getitemname STRING_BUFFER_3, TM_THUNDER
+                        scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+                        iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveThunder
+                        ITEMLINE
+                        iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+                        takecoins GOLDENRODGAMECORNER_TM25_COINS
+                        setevent EVENT_GGC_TM25
+                        sjump GoldenrodGameCornerTMVendor_FinishScript
+                Text:
+                HardcodedName: |
+                    db "TM25         5500@"
+                TrainerList:
+                Sublocations:
+            -
+                Name: Goldenrod Game Corner Blizzard TM
+                FileName: GoldenrodGameCorner.asm
+                Type: Prize
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Game Corner
+                FlagReqs:
+                    - Game Corner Access
+                NormalItem: TM_BLIZZARD
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                WarpReqs:
+                Code: |
+                    .Blizzard:
+                        checkcoins GOLDENRODGAMECORNER_TM14_COINS
+                        ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM14
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveBlizzard
+                        getitemname STRING_BUFFER_3, TM_BLIZZARD
+                        scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+                        iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveBlizzard
+                        ITEMLINE
+                        iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+                        takecoins GOLDENRODGAMECORNER_TM14_COINS
+                        setevent EVENT_GGC_TM14
+                        sjump GoldenrodGameCornerTMVendor_FinishScript
+                Text:
+                HardcodedName: |
+                    db "TM14         5500@"
+                TrainerList:
+                Sublocations:
+            -
+                Name: Goldenrod Game Corner Fire Blast TM
+                FileName: GoldenrodGameCorner.asm
+                Type: Prize
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Game Corner
+                FlagReqs:
+                    - Game Corner Access
+                NormalItem: TM_FIRE_BLAST
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                WarpReqs:
+                Code: |
+                    .FireBlast:
+                        checkcoins GOLDENRODGAMECORNER_TM38_COINS
+                        ifequal HAVE_LESS, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
+                        checkevent EVENT_GGC_TM38
+                        iftrue GoldenrodGameCornerPrizeVendor_AlreadyBought
+                        checkitemrando
+                        iftrue .GiveFireBlast
+                        getitemname STRING_BUFFER_3, TM_FIRE_BLAST
+                        scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
+                        iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
+                    .GiveFireBlast
+                        ITEMLINE
+                        iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+                        takecoins GOLDENRODGAMECORNER_TM38_COINS
+                        setevent EVENT_GGC_TM38
+                        sjump GoldenrodGameCornerTMVendor_FinishScript
+                Text:
+                HardcodedName: |
+                    db "TM38         5500@"
+                TrainerList:
+                Sublocations:
+    -
+        Name: Kenya Gate
+        FileName: Route35GoldenrodGate.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Kenya Obtained
+        ReachableReqs:
+        WarpReqs:
+            Goldenrod/Route 35 Gate
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        -
+            Name: Kenya Gate Item
+            FileName: Route35GoldenrodGate.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod City
+            FlagReqs:
+                - Kenya Traded
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: HP_UP
+            Code: |
+                RandyScript_questcomplete:
+                    writetext Route35GoldenrodGateRandySomethingForYourTroubleText
+                    promptbutton
+                    ITEMLINE
+                    iffalse RandyScript_bagfull
+                    setevent EVENT_GOT_HP_UP_FROM_RANDY
+                RandyScript_gothpup:
+                    writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
+                    waitbutton
+                RandyScript_bagfull:
+                    closetext
+                    end
+            Text:
+            TrainerList:
+            Sublocations:
+
+    -
+        Name: Goldenrod Underground
+        FileName: GoldenrodUnderground.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem:
+        IsBall: No
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        WarpReqs: Goldenrod Underground
+        Sublocations:
+        -
+            Name: Coin Case Underground
+            FileName: GoldenrodUnderground.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: COIN_CASE
+            IsBall: Yes
+            Code: |
+                GoldenrodUndergroundCoinCase:
+                    ITEMLINE
+            Text:
+            AREALV: 10
+            TrainerList:
+                - POKEMANIAC 12
+                - SUPER_NERD 10
+                - POKEMANIAC 11
+                - SUPER_NERD 2
+            Sublocations:
+
+        -
+            Name: Goldenrod Underground Hidden Paralyze Heal
+            FileName: GoldenrodUnderground.asm
+            SecondaryFile: GoldenrodUnderground.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Hidden Items
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: PARLYZ_HEAL
+            Code: |
+                GoldenrodUndergroundHiddenParlyzHeal:
+                    ITEMLINE
+            SecondaryCode: '    bg_event  6, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal'
+            Text:
+            TrainerList:
+            Sublocations:
+
+        -   Name: Goldenrod Underground Hidden Super Potion
+            FileName: GoldenrodUnderground.asm
+            SecondaryFile: GoldenrodUnderground.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Hidden Items
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: SUPER_POTION
+            Code: |
+                GoldenrodUndergroundHiddenSuperPotion:
+                    ITEMLINE
+            SecondaryCode: '    bg_event  4, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenSuperPotion'
+            Text:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Underground Hidden Antidote
+            FileName: GoldenrodUnderground.asm
+            SecondaryFile: GoldenrodUnderground.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Hidden Items
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ANTIDOTE
+            Code: |
+                GoldenrodUndergroundHiddenAntidote:
+                    ITEMLINE
+            SecondaryCode: '    bg_event 17,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenAntidote'
+            Text:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Underground Herb Shop Energy Powder
+            FileName: MartUnderground
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ENERGYPOWDER
+            Sublocations:
+        -
+            Name: Underground Herb Shop Energy Root
+            FileName: MartUnderground
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ENERGY_ROOT
+            Sublocations:
+        -
+            Name: Underground Herb Shop Heal Powder
+            FileName: MartUnderground
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HEAL_POWDER
+            Sublocations:
+        -
+            Name: Underground Herb Shop Revival Herb
+            FileName: MartUnderground
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVAL_HERB
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Nugget
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: NUGGET
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Pearl
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PEARL
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Big Pearl
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: BIG_PEARL
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Stardust
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: STARDUST
+            Sublocations:
+
+        -
+            Name: Underground Bargain Shop Star Piece
+            FileName: bargain_shop.asm/BargainShopData
+            Type: BargainShop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Underground
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: STAR_PIECE
+            Sublocations:
+
+    -
+        Name: Goldenrod Department Store
+        FileName: GoldenrodDeptStore5F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Goldenrod Store Accessible
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        WarpReqs: Goldenrod Dept. Store
+        Sublocations:
+        -
+            Name: Goldenrod Department Store Return
+            FileName: GoldenrodDeptStore5F.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Timed Events
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_RETURN
+            IsBall: No
+            Code: |
+                .ckir_BEFORE_timed_events_DEPTSTORE5F3_VeryHappy::
+                .VeryHappy:
+                .ckir_AFTER_timed_events_DEPTSTORE5F3_VeryHappy::
+                    writetext GoldenrodDeptStore5FReceptionistThisMoveShouldBePerfectText
+                    promptbutton
+                    checkevent EVENT_GOT_TM27
+                    iftrue .Onwards27
+                    ITEMLINE
+                    iffalse .Onwards27
+                    setevent EVENT_GOT_TM27
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store Frustration
+            FileName: GoldenrodDeptStore5F.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Timed Events
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_FRUSTRATION
+            IsBall: No
+            Code: |
+                .ckir_BEFORE_timed_events_DEPTSTORE5F4_NotVeryHappy::
+                .NotVeryHappy:
+                .ckir_AFTER_timed_events_DEPTSTORE5F4_NotVeryHappy::
+                    writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
+                    promptbutton
+                    checkevent EVENT_GOT_TM21
+                    iftrue .Onwards21
+                    ITEMLINE
+                    iffalse .Onwards21
+                    setevent EVENT_GOT_TM21
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Department Store Basement 1
+            FileName: GoldenrodDeptStoreB1F.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ETHER
+            IsBall: Yes
+            Code: |
+                GoldenrodDeptStoreB1FEther:
+                    ITEMLINE
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Department Store Basement 4 Underground
+            FileName: GoldenrodDeptStoreB1F.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Goldenrod Tunnel
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: AMULET_COIN
+            IsBall: Yes
+            Code: |
+                GoldenrodDeptStoreB1FAmuletCoin:
+                    ITEMLINE
+            Text:
+            AREALV:
+            TrainerList:
+            WarpReqs: Goldenrod Dept. Store Basement Door
+            Sublocations:
+        -
+            Name: Department Store Basement 2
+            FileName: GoldenrodDeptStoreB1F.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: BURN_HEAL
+            IsBall: Yes
+            Code: |
+                GoldenrodDeptStoreB1FBurnHeal:
+                    ITEMLINE
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Department Store Basement 3
+            FileName: GoldenrodDeptStoreB1F.asm
+            Type: Item
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ULTRA_BALL
+            IsBall: Yes
+            Code: |
+                GoldenrodDeptStoreB1FUltraBall:
+                    ITEMLINE
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 4F Protein
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: PROTEIN
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 4F Iron
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: IRON
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 4F Carbos
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: CARBOS
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 4F Calcium
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: CALCIUM
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 4F HP Up
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: HP_UP
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Fire Stone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FIRE_STONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Water Stone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Impossible
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: WATER_STONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Leaf Stone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: LEAF_STONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Thunderstone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: THUNDERSTONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Sun Stone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: SUN_STONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 4F Moon Stone
+            FileName: MartGoldenrod4FBetter
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: MOON_STONE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Potion
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: POTION
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Super Potion
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: SUPER_POTION
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Antidote
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ANTIDOTE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Parlyz Heal
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: PARLYZ_HEAL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Awakening
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: AWAKENING
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Burn Heal
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: BURN_HEAL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F1 Ice Heal
+            FileName: MartGoldenrod2F1
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ICE_HEAL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Poke Ball
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: POKE_BALL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Great Ball
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: GREAT_BALL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Escape Rope
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: ESCAPE_ROPE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Repel
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: REPEL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Revive
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: REVIVE
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Full Heal
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FULL_HEAL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Poke Doll
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: POKE_DOLL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 2F2 Flower Mail
+            FileName: MartGoldenrod2F2
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FLOWER_MAIL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F X Speed
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_SPEED
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F X Special
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_SPECIAL
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F X Defend
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_DEFEND
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F X Attack
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_ATTACK
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F Dire Hit
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: DIRE_HIT
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3F Guard Spec
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: GUARD_SPEC
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 3FX Accuracy
+            FileName: MartGoldenrod3F
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: X_ACCURACY
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Thunder Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_THUNDERPUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 5F Fire Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_FIRE_PUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+
+        -
+            Name: Goldenrod Department Store 5F Ice Punch TM
+            FileName: MartGoldenrod5FNoTMs,MartGoldenrod5FTM02,MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_ICE_PUNCH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Sweet Scent TM
+            FileName: MartGoldenrod5FTM12,MartGoldenrod5FTM0212,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Sweet Scent Girl Met
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_SWEET_SCENT
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Headbutt TM
+            FileName: MartGoldenrod5FTM02,MartGoldenrod5FTM0208,MartGoldenrod5FTM0212,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Headbutt Guy Met
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_HEADBUTT
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store 5F Rock Smash TM
+            FileName: MartGoldenrod5FTM08,MartGoldenrod5FTM0208,MartGoldenrod5FTM0812,MartGoldenrod5FTM020812
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+                - Rock Smash Guy Gives Item
+                - Impossible
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: TM_ROCK_SMASH
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store Vending Machine Fresh Water
+            FileName: GoldenrodDeptStore6F.asm
+            SecondaryFile: GoldenrodDeptStore6F.asm
+            Type: Vending Machine
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: FRESH_WATER
+            IsBall: No
+            Code: |
+                .FreshWater:
+                    checkevent EVENT_G_VM_FW
+                    iftrue .AlreadyBought
+                    checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
+                    ifequal HAVE_LESS, .NotEnoughMoney
+                    ITEMLINE
+                    iffalse .NotEnoughSpace
+                    takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_FRESH_WATER_PRICE
+                    setevent EVENT_G_VM_FW
+                    checkitemrando
+                    iftrue .Bought
+                    getitemname STRING_BUFFER_3, FRESH_WATER
+                    sjump .VendItem
+            HardcodedName: |
+                    db "FRESH WATER  ¥200@"
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store Vending Machine Soda Pop
+            FileName: GoldenrodDeptStore6F.asm
+            SecondaryFile: GoldenrodDeptStore6F.asm
+            Type: Vending Machine
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: SODA_POP
+            IsBall: No
+            Code: |
+                .SodaPop:
+                    checkevent EVENT_G_VM_SP
+                    iftrue .AlreadyBought
+                    checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_SODA_POP_PRICE
+                    ifequal HAVE_LESS, .NotEnoughMoney
+                    ITEMLINE
+                    iffalse .NotEnoughSpace
+                    takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_SODA_POP_PRICE
+                    setevent EVENT_G_VM_SP
+                    checkitemrando
+                    iftrue .Bought
+                    getitemname STRING_BUFFER_3, SODA_POP
+                    sjump .VendItem
+            HardcodedName: |
+                    db "SODA POP     ¥300@"
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store Vending Machine Lemonade
+            FileName: GoldenrodDeptStore6F.asm
+            SecondaryFile: GoldenrodDeptStore6F.asm
+            Type: Vending Machine
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            NormalItem: LEMONADE
+            IsBall: No
+            Code: |
+                .Lemonade:
+                    checkevent EVENT_G_VM_L
+                    iftrue .AlreadyBought
+                    checkmoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_LEMONADE_PRICE
+                    ifequal HAVE_LESS, .NotEnoughMoney
+                    ITEMLINE
+                    iffalse .NotEnoughSpace
+                    takemoney YOUR_MONEY, GOLDENRODDEPTSTORE6F_LEMONADE_PRICE
+                    setevent EVENT_G_VM_L
+                    checkitemrando
+                    iftrue .Bought
+                    getitemname STRING_BUFFER_3, LEMONADE
+                    sjump .VendItem
+            HardcodedName: |
+                    db "LEMONADE     ¥350@"
+            Text:
+            AREALV:
+            TrainerList:
+            Sublocations:
+        -
+            Name: Goldenrod Department Store Rooftop Sale
+            FileName:
+            Type: Map
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Goldenrod Department Store
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            IsBall: No
+            Code:
+            Text:
+            AREALV:
+            TrainerList:
+            WarpReqs: Goldenrod Dept. Store Roof
+            Sublocations:
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Poke Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: POKE_BALL
+                IsBall: No
+                Code:
                 Text:
                 AREALV:
                 TrainerList:
-                    Sublocations:
+                Sublocations:
             -
-                Name: Goldenrod Department Store Frustration
-                FileName: GoldenrodDeptStore5F.asm
-                Type: Item
-                HasPKMN: Yes
+                Name: Goldenrod Department Store Pre E4 Sale Great Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
                 WildTableList:
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod Department Store Rooftop Sale
                 FlagReqs:
-                    - Timed Events
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: TM_FRUSTRATION
+                NormalItem: GREAT_BALL
                 IsBall: No
-                Code: |
-                    .NotVeryHappy:
-                        writetext GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .Done
-                        setflag ENGINE_GOLDENROD_DEPT_STORE_TM27_RETURN
-                        closetext
-                        end
+                Code:
                 Text:
                 AREALV:
                 TrainerList:
                 Sublocations:
 
             -
-                Name: Department Store Basement 1
-                FileName: GoldenrodDeptStoreB1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                NormalItem: ETHER
-                IsBall: Yes
-                Code: |
-                    GoldenrodDeptStoreB1FEther:
-                        ITEMLINE
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Department Store Basement 4 Underground
-                FileName: GoldenrodDeptStoreB1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod Tunnel
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                NormalItem: AMULET_COIN
-                IsBall: Yes
-                Code: |
-                    GoldenrodDeptStoreB1FAmuletCoin:
-                        ITEMLINE
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Department Store Basement 2
-                FileName: GoldenrodDeptStoreB1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                NormalItem: BURN_HEAL
-                IsBall: Yes
-                Code: |
-                    GoldenrodDeptStoreB1FBurnHeal:
-                        ITEMLINE
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Department Store Basement 3
-                FileName: GoldenrodDeptStoreB1F.asm
-                Type: Item
-                HasPKMN: Yes
-                WildTableList: 
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                ItemReqs:
-                FlagsSet: 
-                ReachableReqs:
-                NormalItem: ULTRA_BALL
-                IsBall: Yes
-                Code: |
-                    GoldenrodDeptStoreB1FUltraBall:
-                        ITEMLINE
-                Text:
-                AREALV: 
-                TrainerList: 
-                Sublocations:
-
-            -
-                Name: Goldenrod City Buy Rock Smash
-                FileName: GoldenrodCity.asm
-                Type: Map
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Goldenrod City Entrance
-                FlagReqs: 
-                    - Rock Smash Purchaseable
-                ItemReqs:
-                FlagsSet:
-                    - Rock Smash
-                ReachableReqs:
-                Code:
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Goldenrod Eevee Gift
-                FileName: GoldenrodBillsHouse.asm
-                Type: Map
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ecruteak City
-                FlagReqs: 
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code:
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Goldenrod Underground Hidden Paralyze Heal
-                FileName: GoldenrodUnderground.asm
-                SecondaryFile: GoldenrodUnderground.asm
-                Type: Item
+                Name: Goldenrod Department Store Pre E4 Sale Super Potion
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod Department Store Rooftop Sale
                 FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: PARLYZ_HEAL
-                Code: |
-                    GoldenrodUndergroundHiddenParlyzHeal:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  6, 13, BGEVENT_ITEM, GoldenrodUndergroundHiddenParlyzHeal'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Goldenrod Underground Hidden Super Potion
-                FileName: GoldenrodUnderground.asm
-                SecondaryFile: GoldenrodUnderground.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Goldenrod City
-                FlagReqs:
-                    - Hidden Items
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: SUPER_POTION
-                Code: |
-                    GoldenrodUndergroundHiddenSuperPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  4, 18, BGEVENT_ITEM, GoldenrodUndergroundHiddenSuperPotion'
+                IsBall: No
+                Code:
                 Text:
-                TrainerList: 
+                AREALV:
+                TrainerList:
                 Sublocations:
+
             -
-                Name: Goldenrod Underground Hidden Antidote
-                FileName: GoldenrodUnderground.asm
-                SecondaryFile: GoldenrodUnderground.asm
-                Type: Item
+                Name: Goldenrod Department Store Pre E4 Sale Full Heal
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod Department Store
                 FlagReqs:
-                    - Hidden Items
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: ANTIDOTE
-                Code: |
-                    GoldenrodUndergroundHiddenAntidote:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 17,  8, BGEVENT_ITEM, GoldenrodUndergroundHiddenAntidote'
+                NormalItem: FULL_HEAL
+                IsBall: No
+                Code:
                 Text:
-                TrainerList: 
+                AREALV:
+                TrainerList:
                 Sublocations:
+
+            -
+                Name: Goldenrod Department Store Pre E4 Sale Revive
+                FileName: rooftop_sale.asm/RooftopSaleMart1
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Banned
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Hyper Potion
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: HYPER_POTION
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Full Restore
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_RESTORE
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Full Heal
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: FULL_HEAL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Ultra Ball
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: ULTRA_BALL
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Goldenrod Department Store Post E4 Sale Protein
+                FileName: rooftop_sale.asm/RooftopSaleMart2
+                Type: BargainShop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Goldenrod Department Store Rooftop Sale
+                FlagReqs:
+                    - Shopsanity
+                    - Became Champion
+                    - Possible Sale
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: PROTEIN
+                IsBall: No
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+
+    -
+        Name: Goldenrod Eevee Gift
+        FileName: GoldenrodBillsHouse.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Ecruteak City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: GS Ball
+        FileName: GoldenrodPokecenter1F.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Goldenrod City
+        FlagReqs:
+            - Became Champion
+            - Impossible
+        ItemReqs:
+        FlagsSet:
+        NormalItem: GS_BALL
+        ReachableReqs:
+        WarpReqs: Goldenrod Center
+        Code: |
+            GiveGSBall:
+                opentext
+                writetext GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptGSBallText
+                waitbutton
+                ITEMLINE
+                iftrue .GotGSBall
+                clearevent EVENT_GS_BALL_BACKUP
+                appear GOLDENRODPOKECENTER1F_GSBALLBACKUP
+            .GotGSBall
+                setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+                setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+                writetext GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText
+                waitbutton
+                closetext
+                end
+        Text:
+        TrainerList:
+        Sublocations:
+        -
+            Name: GS Ball Backup
+            TrueName: GS Ball
+            FileName: GoldenrodPokecenter1F.asm
+            Type: Item
+            Dummy: Yes
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: GS Ball
+            IsBall: Yes
+            FlagReqs:
+              - Became Champion
+              - Impossible
+            ItemReqs:
+            FlagsSet:
+            NormalItem: GS_BALL
+            ReachableReqs:
+            WarpReqs: Goldenrod Center
+            Code: |
+                GSBallBackup:
+                    ITEMLINE
+            Text:
+            TrainerList:
+            Sublocations:

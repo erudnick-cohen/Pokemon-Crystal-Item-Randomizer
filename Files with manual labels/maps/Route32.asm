@@ -40,7 +40,9 @@ Route32_MapScripts:
 	disappear ROUTE32_FRIEDA
 	return
 
+.ckir_BEFORE_timed_events_FRIEDA_FriedaAppears::
 .FriedaAppears:
+.ckir_AFTER_timed_events_FRIEDA_FriedaAppears::
 	appear ROUTE32_FRIEDA
 	return
 
@@ -483,7 +485,9 @@ FriedaScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_FRIEDA2_NotFriday::
 .NotFriday:
+.ckir_AFTER_timed_events_FRIEDA2_NotFriday::
 	writetext FriedaNotFridayText
 	waitbutton
 	closetext
@@ -507,6 +511,8 @@ Route32UnionCaveSign:
 Route32PokecenterSign:
 	jumpstd PokecenterSignScript
 
+.ckir_BEFORE_timed_events_FRIEDAHIDDENITEMGREATBALL::
+.ckir_AFTER_timed_events_FRIEDAHIDDENITEMGREATBALL::
 Route32HiddenGreatBall:
 	hiddenitem GREAT_BALL, EVENT_ROUTE_32_HIDDEN_GREAT_BALL
 
@@ -940,7 +946,9 @@ Route32_MapEvents:
 	warp_event  6, 79, UNION_CAVE_1F, 4
 
 	db 2 ; coord events
+.ckir_BEFORE_Route32StopScene::
 	coord_event 18,  8, SCENE_DEFAULT, Route32CooltrainerMStopsYouScene
+.ckir_AFTER_Route32StopScene::
 	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
 	db 6 ; bg events

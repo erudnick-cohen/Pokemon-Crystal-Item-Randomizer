@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Violet
+        WarpReqs: Violet Gym
         Sublocations:
             -
                 Name: Falkner TM
@@ -25,6 +26,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Defeated Falkner
                 ReachableReqs:
                 NormalItem: TM_MUD_SLAP
                 Tags:
@@ -33,14 +35,10 @@ Location:
                         SubTags:
                             - Violet
                 Code: |
-                    .FightDone:
+                    .GotZephyrBadge:
                         checkevent EVENT_GOT_TM31_MUD_SLAP
                         iftrue .SpeechAfterTM
-                        setevent EVENT_BEAT_BIRD_KEEPER_ROD
-                        setevent EVENT_BEAT_BIRD_KEEPER_ABE
-                        specialphonecall SPECIALCALL_ASSISTANT
                         writetext FalknerZephyrBadgeText
-                        promptbutton
                         ITEMLINE
                         iffalse .NoRoomForMudSlap
                         setevent EVENT_GOT_TM31_MUD_SLAP
@@ -82,7 +80,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Violet City
+                LocationReqs: Violet Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

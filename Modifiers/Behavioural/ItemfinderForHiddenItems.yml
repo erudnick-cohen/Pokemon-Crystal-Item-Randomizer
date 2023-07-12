@@ -1,0 +1,14 @@
+Name: Itemfinder Required for Hidden Items
+Description: Adds Itemfinder as progress items and ensures they are required before Hidden Items are required.
+AddedItems:
+    - Itemfinder
+Changes:
+    -
+        Location: Hidden Items
+        AddRecommendedFlagReqs:
+            - Itemfinder
+        RemoveFlagReqs:
+            - Banned
+IncompatibleWith:
+    - 'No backtracking early bike'
+    - 'No backtracking early fly'

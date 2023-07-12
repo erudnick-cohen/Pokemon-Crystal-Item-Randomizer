@@ -9,6 +9,9 @@ import mmap
 from collections import defaultdict
 import copy
 
+import Static
+
+
 def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allowList = None, modifiers = [], adjustTrainerLevels = True,adjustRegularWildLevels = True, adjustSpecialWildLevels = True, trainerLVBoost = 0, wildLVBoost = 0, requiredItems = ['Surf', 'Squirtbottle', 'Flash', 'Mystery Egg', 'Cut', 'Strength', 'Secret Potion','Red Scale', 'Whirlpool','Card Key', 'Basement Key', 'Waterfall', 'S S Ticket','Bicycle','Machine Part', 'Lost Item', 'Pass', 'Fly']):
 
 	changeListDict = defaultdict(lambda: [])
@@ -23,7 +26,7 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 				pfile = open(j)
 				ptext = pfile.read()
 				patchList.extend(json.loads(ptext))
-	print(changeListDict)
+	#print(changeListDict)
 
 	Zephyr = Badge.Badge()
 	Zephyr.isTrash = False
@@ -108,20 +111,22 @@ def randomizeRom(romPath, goal, flags = [], patchList = [], banList = None, allo
 	for j in result[0]:
 		i = result[0][j]
 		if(i.NormalItem is None and i.isItem()):
-			print(i.Name)
+			pass
+			#print(i.Name)
 	print('-------')
 	for j in result[0]:
 		i = result[0][j]
 		if(i.NormalItem is not None and not i.isItem()):
-			print(i.Name)
+			pass
+			#print(i.Name)
 
-	yamlfile = open("crystal-speedchoice-label-details.json")
+	yamlfile = open(Static.default_labels_file)
 	yamltext = yamlfile.read()
 	addressLists = json.loads(yamltext)
 	addressData = {}
 	for i in addressLists:
 		addressData[i['label'].split(".")[-1]] = i
-	print(addressData)
+	#print(addressData)
 
 	#newTree = PokemonRandomizer.randomizeTrainers(result[0],85,lambda y: monFun(y,1001,85),True,banMap)
 	#get furthest item location distance

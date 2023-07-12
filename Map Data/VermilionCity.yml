@@ -36,7 +36,7 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList:
-        LocationReqs: Vermilion via SS Aqua
+        LocationReqs: Vermilion City via SS Aqua
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -48,7 +48,7 @@ Location:
         TrainerList:
         Sublocations:
     -
-        Name: Vermilion via SS Aqua
+        Name: Vermilion City via SS Aqua
         FileName: VermilionCity.asm
         Type: Map
         HasPKMN: No
@@ -82,7 +82,8 @@ Location:
         Code: 
         Text:
         TrainerList:
-        HintName: Vermillion
+        HintName: Vermilion
+        WarpReqs: Vermilion
         Sublocations:
             -
                 Name: Vermilion City Fan Club President
@@ -96,6 +97,7 @@ Location:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: RARE_CANDY
+                WarpReqs: Fan Club
                 Code: |
                     PokemonFanClubChairmanScript:
                         faceplayer
@@ -141,13 +143,12 @@ Location:
                 WildTableList:
                 LocationReqs: Vermilion City
                 FlagReqs:
-                    - Saffron City
-                    - Lavender Town
                     - Kanto Power Restored
                 ItemReqs:
                     - Machine Part
                 FlagsSet:
                 ReachableReqs:
+                WarpReqs: Fan Club
                 Code: |
                     .MetCopycat:
                         promptbutton
@@ -229,6 +230,7 @@ Location:
                 FlagReqs:
                     - Hidden Items
                     - Fog Badge
+                    - Ship Sidequest
                 ItemReqs:
                     - S S Ticket
                     - Surf
@@ -276,3 +278,157 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Vermilion Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Vermilion City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Vermilion
+        WarpReqs: Vermilion Mart
+        Sublocations:
+        -
+            Name: Vermilion Mart Ultra Ball
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Vermilion Mart Super Potion
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Vermilion Mart Hyper Potion
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Vermilion Mart Revive
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:
+        -
+            Name: Vermilion Mart Parlyz Heal
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PARLYZ_HEAL
+            Sublocations:
+        -
+            Name: Vermilion Mart Awakening
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: AWAKENING
+            Sublocations:
+        -
+            Name: Vermilion Mart Burn Heal
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: BURN_HEAL
+            Sublocations:
+        -
+            Name: Vermilion Mart Lite Blue Mail
+            FileName: MartVermilion
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Vermilion Mart
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: LITEBLUEMAIL
+            Sublocations:

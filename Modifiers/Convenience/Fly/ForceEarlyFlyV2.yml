@@ -1,0 +1,55 @@
+Name: Force early fly V2
+Description: "Ensures that the fly HM is obtainable and usable before the player is required to do any of the following things: 1. Take the SS Aqua, 2. Enter Route 44, 3. Awaken Snorlax. 4. Enter Victory Road. 5. Enter the Cerulean Gym."
+Changes:
+    -
+        Location: SS Aqua via Olivine
+        AddRecommendedItemReqs:
+            - Fly
+            - Squirtbottle
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: SS Aqua via Vermilion
+        AddRecommendedItemReqs:
+            - Fly
+            - Pass
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: Route 44
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: Diglett's Cave
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: League Gate via Route 26
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Victory Road
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: Cerulean Gym Trainers
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+    -
+        Location: Cerulean Gym
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+IncompatibleWith:
+    - 'Delete Fly'

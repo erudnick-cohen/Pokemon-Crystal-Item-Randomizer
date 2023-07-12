@@ -31,7 +31,9 @@ Route36_MapScripts:
 	disappear ROUTE36_ARTHUR
 	return
 
+.ckir_BEFORE_timed_events_ARTHUR_ArthurAppears::
 .ArthurAppears:
+.ckir_AFTER_timed_events_ARTHUR_ArthurAppears::
 	appear ROUTE36_ARTHUR
 	return
 
@@ -141,6 +143,7 @@ Route36RockSmashGuyScript:
 .ClearedSudowoodo:
 	writetext RockSmashGuyText2
 	promptbutton
+	setevent EVENT_SPOKE_TO_TM08_NPC
 	verbosegiveitem TM_ROCK_SMASH
 	iffalse .NoRoomForTM
 	setevent EVENT_GOT_TM08_ROCK_SMASH
@@ -348,6 +351,8 @@ ArthurScript:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_ARTHUR2_NotThursday::
+.ckir_AFTER_timed_events_ARTHUR2_NotThursday::
 ArthurNotThursdayScript:
 	writetext ArthurNotThursdayText
 	waitbutton

@@ -1,8 +1,15 @@
+import csv
 import json
 import math
 import random
+import string
+from collections import defaultdict
 
+import Items
 import LoadLocationData
+import RandomizeItemsBadgesAssumedFill
+import Version
+
 
 def SpecialBytesConversion(text, safe, hintConfig):
 
@@ -111,7 +118,7 @@ def fileToLocation(file):
         file = file.replace("NewBark", "New Bark")
 
     if "PokemonFanClub" in file:
-        file = file.replace("PokemonFanClub", "Vermillion City")
+        file = file.replace("PokemonFanClub", "Vermilion City")
 
     if "South" in file:
         file = file.replace("South", "")
@@ -173,7 +180,8 @@ def ConvertHintLevelToFlags(level, MaxHints=None):
     if level >= 4:
         Options.InHints = True
         Options.MaximumHints = 100
-        Options.TrashHints = True
+        Options.MaxHintsPerLocation = 99
+        #Options.TrashHints = True
 
     if level >= 5:
         Options.MaxHintsPerLocation = 99
@@ -194,13 +202,9 @@ def ConvertHintLevelToFlags(level, MaxHints=None):
 
     return Options
 
-def getOptionsForItemModifications():
-	return ["Replace Custom","Replace Healing","Replace Valuable","Replace Ball", "Replace Hope"]
-
 def checkIfReplacementsConfigured(inputFlags):
-    options = getOptionsForItemModifications()
-    for option in options:
-        if option in inputFlags:
+    for option in inputFlags:
+        if "Replace " in option:
             return True
     return False
 
@@ -213,13 +217,16 @@ def FlagCheckType(type, inputFlags):
     return False
 
 
-def HandleItemReplacement(reachable, inputFlags):
+def HandleItemReplacement(trashList, inputFlags):
     replacementFile = None
 
     containsAny = checkIfReplacementsConfigured(inputFlags)
 
+    #item_replacement_file = "Config/ItemReplacementChoatix.json"
+    item_replacement_file = "Config/ItemReplacement.json"
+
     if containsAny:
-        item_replacement = open("Config/ItemReplacement.json",encoding='utf-8')
+        item_replacement = open(item_replacement_file,encoding='utf-8')
         replacements = item_replacement.read()
         replacement_data = json.loads(replacements)
         replacementFile = {}
@@ -236,7 +243,9 @@ def HandleItemReplacement(reachable, inputFlags):
 
             useReplacement = FlagCheckType(replacement_type, inputFlags)
             if useReplacement:
-                replacementFile[replacement_item_name] = (replacement_replacement, replacement_percent)
+                if not replacement_item_name in replacementFile:
+                    replacementFile[replacement_item_name] = []
+                replacementFile[replacement_item_name].append((replacement_replacement, replacement_percent))
 
     if 'Delete Fly' in inputFlags:
         if replacementFile is None:
@@ -244,39 +253,49 @@ def HandleItemReplacement(reachable, inputFlags):
 
         replacementFile["Fly"]: "BERRY"
 
-    changes = {}
+    changes = []
 
     if replacementFile is not None:
-        for i in reachable.values():
-            replaced = ReplaceItem(i, replacementFile)
-            if replaced:
-                changes[i.Name] = i.item
+        for itemName in trashList:
+            replaced = ReplaceItem(itemName, replacementFile)
+            if replaced is not None:
+                changes.append((itemName, replaced))
 
     return changes
 
 
-def ReplaceItem(item, replaceFile):
-    replaced = False
-    if item.isItem():
-        for i in replaceFile.keys():
-            if item.item == i:
-                replacement = replaceFile[item.item]
-                item_chance = replacement[1]
-                if item_chance >= random.random() * 100:
-                    item.item = replacement[0]
-                    replaced = True
-                else:
-                    break
-    return replaced
+def ReplaceItem(itemIn, replaceFile):
+    itemName = itemIn
+    while itemName in replaceFile:
+        replace_cycle = False
+        possibilities = replaceFile[itemName]
+        random.shuffle(possibilities)
+        for p in possibilities:
+            item_chance = p[1]
+            if item_chance >= random.random() * 100:
+                itemName = p[0]
+                replace_cycle = True
+                break
+        if not replace_cycle:
+            break
+
+    if itemIn != itemName:
+        return itemName
+
+    return None
 
 
-def IterateRequirements(location, locations, known, partial_known=[]):
+def IterateRequirements(location, locations, known, partial_known=None):
+
+    if partial_known is None:
+        partial_known = []
+
     addedLocation = []
     addedFlag = []
     addedItem = []
 
     for req in location.LocationReqs:
-        if req == "Impossible":
+        if req == "Impossible" or req == "Unreachable" or req == "Banned":
             continue
         reqData = list(filter(lambda x: x.Name == req, locations))
         if len(reqData) == 0:
@@ -313,7 +332,7 @@ def IterateRequirements(location, locations, known, partial_known=[]):
             for newReq in items:
                 if newReq not in data.ItemReqs:
                     data.ItemReqs.append(newReq)
-                    
+
             allRequiredLoc.extend(locs)
             allRequiredFlag.extend(flags)
             allRequiredItem.extend(items)
@@ -345,6 +364,10 @@ def IterateRequirements(location, locations, known, partial_known=[]):
             print("Handle multiple flag set locations")
 
         for data in reqData:
+
+            if data.Name == "Most Map Access":
+                continue
+
             if data in known:
                 allRequiredLoc.extend(data.LocationReqs)
                 allRequiredFlag.extend(data.FlagReqs)
@@ -427,12 +450,17 @@ def PathToItem(item):
                     "Mahogany Rockets Defeated": "Mahogany Base Clear",
                     "Beat Team Rocket": "Saving Radio Tower",
                     "Rocket Invasion": "7 Badges",
-                    "Mt. Silver Unlock": "Max Badges",
+                    "Open Mt. Silver": "Mt. Silver Early",
                     "Elm's Lab": "Elms Lab",
                     "S.S. Ticket": "SS Ticket",
                     "Became Champion": "Being Champion",
 
                     }
+
+    if type(item) == str:
+        item = item.replace(LoadLocationData.WARP_OPTION, "W")
+    else:
+        print("Type", type(item), item)
 
     if item in replaceNames:
         return replaceNames[item]
@@ -476,6 +504,14 @@ class HintMessage():
             if self.item == "Old Rod" or \
                     self.item == "Good Rod" or self.item == "Super Rod":
                 self.item = "Rod"
+
+    def nothingToMaybe(self):
+        if self.type == "nothingf":
+            self.type = "nothingmf"
+        elif self.type == "nothingl":
+            self.type = "nothingml"
+        elif self.type == "nothingi":
+            self.type = "nothingmi"
 
     def __init__(self, type, item, secondary, helpful):
         self.type = type
@@ -528,6 +564,14 @@ class HintMessage():
                 msg.text = "Fools do"
                 msg2.text = self.secondary
 
+            elif self.type == "nothingml":
+                msg2.text = "may be barren."
+            elif self.type == "nothingmi":
+                msg2.text = "may be a fools toy."
+            elif self.type == "nothingmf":
+                msg.text = "Fools may do"
+                msg2.text = self.secondary
+
             messages.append(msg)
             messages.append(msg2)
 
@@ -548,6 +592,11 @@ class HintMessage():
                 msg4.text = self.item
             elif self.type == "requiresi":
                 msg1.text = "A champ requires"
+                msg2.text = self.secondary
+                msg3.text = "to access"
+                msg4.text = self.item
+            elif self.type == "requiresl":
+                msg1.text = "A champ vists"
                 msg2.text = self.secondary
                 msg3.text = "to access"
                 msg4.text = self.item
@@ -818,12 +867,12 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
 
     for priority in priorities:
         hasPossible = False
-        if len(priority.HintTypes) != 0 and priority.HintKey != "":
+        if len(priority.HintTypes) != 0 and len(priority.HintKeys) > 0:
             matches = list(filter(lambda x: x.type in priority.HintTypes and
-                                            x.item == priority.HintKey, hints))
+                                            x.item in priority.HintKeys, hints))
             hasPossible = len(matches) > 0
             hintOptions = list(set(hintOptions) | set(matches))
-        elif priority.HintKey == "" and len(priority.HintTypes) != 0:
+        elif len(priority.HintKeys) == 0 and len(priority.HintTypes) != 0:
             matches = list(filter(lambda x: x.type in priority.HintTypes, hints))
             hasPossible = len(matches) > 0
             hintOptions = list(set(hintOptions) | set(matches))
@@ -863,8 +912,8 @@ def PrepareHintMessages(addressData, hints, priorities, flags, hintConfig, locat
                 possibleHints = []
                 for a in addressItems:
                     matchHints = list(filter(lambda x: \
-                                                 (a.HintKey == "" and x.type in a.HintTypes) or \
-                                                 (a.HintKey != "" and x.type in a.HintTypes and a.HintKey == x.item) \
+                                                 (len(a.HintKeys) == 0 and x.type in a.HintTypes) or \
+                                                 (len(a.HintKeys) > 0 and x.type in a.HintTypes and x.item in a.HintKeys) \
                                              , hintOptions))
                     possibleHints = list(set(matchHints) | set(possibleHints))
                 if len(possibleHints) > 0:
@@ -1011,7 +1060,7 @@ def removeRedundantHints(hints, hintConfig, locationData):
                 if 'Mt. Silver Unlock' in flags:
                     hintsToRemove.append(hint)
                     continue
-                if 'Impossible' in flags:
+                if 'Impossible' in flags or "Banned" in flags or "Unreachable" in flags:
                     hintsToRemove.append(hint)
                     continue
 
@@ -1021,6 +1070,7 @@ def removeRedundantHints(hints, hintConfig, locationData):
             byLocationMapping[hint.secondary].append(hint)
 
     for hint in hintsToRemove:
+        print("Remove hint:", str(hint))
         hints.remove(hint)
 
 
@@ -1101,7 +1151,14 @@ def removeRedundantHints(hints, hintConfig, locationData):
 
 
 
-def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=[], requiredLocations=[]):
+def isRequired(x, locationMapping, notRequiredItems, notRequiredFlags=None, requiredLocations=None):
+
+    if notRequiredFlags is None:
+        notRequiredFlags = []
+
+    if requiredLocations is None:
+        requiredLocations = []
+
     if x not in locationMapping:
         print("Error, location should be in mapping")
         return True
@@ -1139,7 +1196,7 @@ def GetItemChildren(location, locations, handled):
 
     handled[location.Name] = (items,flags,new_locations)
 
-    if "Impossible" in location.FlagReqs:
+    if "Impossible" in location.FlagReqs or "Banned" in location.FlagReqs or "Unreachable" in location.FlagReqs:
         return items,flags,new_locations
 
     if location.IsItem or location.IsGym:
@@ -1197,66 +1254,12 @@ def AutoBarrenAreas(locations):
 
     return auto_barren
 
-def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict, requirementDict, config,
-                         HintOptions, allowList):
-    # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
-    locationList = LoadLocationData.FlattenLocationTree(locations)
 
-    known = []
-
-
-    trashItems = {}
-    for sp in spoilerTrash.keys():
-        item = spoilerTrash[sp]
-        if "->" in item:
-            trashItems[sp] = item.split("->")[1]
-        else:
-            trashItems[sp] = item
-
-    for location in locationList:
-
-        addedLoc, addedFlag, addedItem = IterateRequirements(location, locationList, known, partial_known=[])
-
-        for req in addedLoc:
-            if req not in location.LocationReqs:
-                location.LocationReqs.append(req)
-
-        for req in addedItem:
-            if req not in location.ItemReqs:
-                location.ItemReqs.append(req)
-
-        for req in addedFlag:
-            if req not in location.FlagReqs:
-                location.FlagReqs.append(req)
-
-    to_check_location = ["Elite Four", "Whirl Islands",
-                         "Tin Tower", "VS Ho-Oh", "Rocket Base", "Ruins of Alph",
-                         "Cianwood City", "Blackthorn City", "Cinnabar Island",
-                         "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
-                         "Mt Mortar Upper Floor", "Elm's Lab", "Routes 26/27", "Lighthouse",
-                         "Dark Cave", "Dragons Den", "Rock Tunnel", "Cerulean Cape",
-                         "Mt. Silver Unlock"]
-
-    location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
-                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls"},
-                            "Cerulean Cape": {"Route 24", "Route 25"}
-                            }
-
-    # Need message converter when loading these locations
-
-    no_free_locations = []
-
-    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket"
-                     "Phone Call Trainers", "Mon Locked Checks", "Bug Catching Contest"]
-    no_free_flag = []
-
-    to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
-                     "Secret Potion", "Basement Key", "Lost Item",
-                     "Cut", "Surf", "Red Scale", "Mystery Egg", "Machine Part",
-                     "Card Key", "Rainbow Wing", "Clear Bell"]
+def OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badgeDict, location_sim_mapping,
+                  trashItems, criticalTrash, to_check_flag):
 
     no_free_item = []
-
+    known = []
     itemToReq = []
 
     notValidReqs = ["Bicycle", "Fly", "Storm Badge",
@@ -1269,6 +1272,27 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                     "Defeat Electrodes"]
 
     doNotGiveHints = []
+
+    no_free_locations = []
+    no_free_flag = []
+    iterateRequirements = True
+
+    if iterateRequirements:
+        for location in locationList:
+
+            addedLoc, addedFlag, addedItem = IterateRequirements(location, locationList, known, partial_known=[])
+
+            for req in addedLoc:
+                if req not in location.LocationReqs:
+                    location.LocationReqs.append(req)
+
+            for req in addedItem:
+                if req not in location.ItemReqs:
+                    location.ItemReqs.append(req)
+
+            for req in addedFlag:
+                if req not in location.FlagReqs:
+                    location.FlagReqs.append(req)
 
     discardedItems = []
     for item in to_check_item:
@@ -1300,8 +1324,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     for discard in discardedLocations:
         to_check_location.remove(discard)
 
-    potentiallyRequiredItems = list(spoiler.keys()).copy()
-
     inverse_trash = {v: k for k, v in trashItems.items()}
     for i in inverse_trash.keys():
         spoiler[i] = inverse_trash[i]
@@ -1314,7 +1336,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     locationMapping = {}
     itemMapping = {}
     flagMapping = {}
-
 
     RequiredByTag = {}
 
@@ -1337,13 +1358,15 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
         one_location_hints = []
 
         location_name = spoiler[key]
-        result = list(filter(lambda x: x.Name == location_name, locationList))
-        if len(result) != 1:
+        resultOld = list(filter(lambda x: x.Name == location_name, locationList))
+        if len(resultOld) != 1:
             print("Should be only one result")
         else:
-            found_result = result[0]
+            found_result = resultOld[0]
 
-            if "Impossible" in found_result.LocationReqs:
+            if "Impossible" in found_result.FlagReqs or \
+                    "Banned" in found_result.FlagReqs or \
+                    "Unreachable" in found_result.FlagReqs:
                 continue
 
             found_result.UpdateTags()
@@ -1356,7 +1379,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
             if not HintOptions.UselessHints and uselessTrash:
                 continue
-            elif uselessTrash and random.randrange(0, 100, 1) >= (HintOptions.UselessHintChance*100):
+            elif uselessTrash and random.randrange(0, 100, 1) >= (HintOptions.UselessHintChance * 100):
                 continue
 
             # for ix in found_result.LocationReqs:
@@ -1449,23 +1472,23 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     maybeRequiredItems = []
 
     notRequiredItems = []
-    #requiredItems = potentiallyRequiredItems.copy()
+    # requiredItems = potentiallyRequiredItems.copy()
     requiredItems = []
     for x in no_free_item:
         if x in to_check_item:
-            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            # if x not in doNotGiveHints and HintOptions.NotBarrenHints:
             maybeRequiredItems.append(x)
-                #itemToReq.append(HintMessage("somethingi", None, x, True))
+            # itemToReq.append(HintMessage("somethingi", None, x, True))
             to_check_item.remove(x)
     for i in to_check_item:
         if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingi", None, i, True))
         notRequiredItems.append(i)
-        #if i in requiredItems:
-            #requiredItems.remove(i)
+        # if i in requiredItems:
+        # requiredItems.remove(i)
 
     for x in maybeRequiredItems:
-        required = isRequired(x, itemMapping,notRequiredItems)
+        required = isRequired(x, itemMapping, notRequiredItems)
         if required:
             if x not in doNotGiveHints and HintOptions.NotBarrenHints:
                 itemToReq.append(HintMessage("somethingi", None, x, True))
@@ -1474,7 +1497,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
             if x not in doNotGiveHints and HintOptions.BarrenHints:
                 itemToReq.append(HintMessage("nothingi", None, x, True))
             notRequiredItems.append(x)
-
 
     print(notRequiredItems)
 
@@ -1485,17 +1507,17 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     requiredFlags = []
     for x in no_free_flag:
         if x in to_check_flag:
-            #if x not in doNotGiveHints and HintOptions.NotBarrenHints:
+            # if x not in doNotGiveHints and HintOptions.NotBarrenHints:
             maybeRequiredFlags.append(x)
-            #itemToReq.append(HintMessage("somethingf", None, x, True))
+            # itemToReq.append(HintMessage("somethingf", None, x, True))
             to_check_flag.remove(x)
-            #requiredFlags.append(x)
+            # requiredFlags.append(x)
     for i in to_check_flag:
         if i not in doNotGiveHints and HintOptions.BarrenHints:
             itemToReq.append(HintMessage("nothingf", None, i, True))
         notRequiredFlags.append(i)
 
-    #print(notRequiredFlags)
+    # print(notRequiredFlags)
 
     for x in maybeRequiredFlags:
         flagRequired = isRequired(x, flagMapping, notRequiredItems, notRequiredFlags)
@@ -1530,8 +1552,6 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
                         itemToReq.append(HintMessage("somethingl", None, x, True))
                     to_check_location.remove(x)
                     requiredLocations.append(x)
-
-
 
     for i in to_check_location:
         if HintOptions.BarrenHints:
@@ -1585,13 +1605,7 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
 
             itemToReq.append(HintMessage("tag", tagKey, tagCount, True))
 
-    if "Name" in config.keys():
-        itemToReq.append(HintMessage("conf", "Config", config["Name"], True))
 
-    if "SilverBadgeUnlockCount" in config.keys():
-        itemToReq.append(HintMessage("conf", "MtSilver", config["SilverBadgeUnlockCount"], True))
-    else:
-        itemToReq.append(HintMessage("conf", "MtSilver", "16", True))
 
     # if "RedBadgeUnlockCount" in config.keys():
     #	itemToReq.append(HintMessage("conf", "Red", config["RedBadgeUnlockCount"], True))
@@ -1601,3 +1615,1157 @@ def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeD
     # Reverse lookup some key items and see which are not required
 
     return itemToReq, locationList
+
+def IsVariableRequired(variable, spoiler, locationTree, inputFlags, locList,
+                       badgeSet, goal, input_variables=None):
+
+    if input_variables is None:
+        input_variables = []
+
+    variables = []
+    for var in input_variables:
+        variables.append(var)
+    if variable is not None:
+        variables.append(variable)
+
+    variableResult = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
+                                                     None, None, None, locList,
+                                                     badgeSet, None, assign_trash=False,
+                                                     forbidden=variables, recommended=False)
+
+    if goal in variableResult[0]:
+        return False
+
+    return True
+
+
+
+
+
+def GetWarpHubs(locationTree, inputFlags):
+    startWarpGroups = list(filter(lambda x: x.Type == "Starting Warp", locationTree))
+    startingList = [x.Name for x in startWarpGroups]
+    # Ignore these warps for the most part, as obviously required!
+
+    warpSpace = list(
+        filter(lambda x: x.Type == "Map" and x.Name.endswith(LoadLocationData.WARP_OPTION), locationTree)).copy()
+
+    transitionSpace = list(
+        filter(lambda x: x.Type == "Transition" and x.Name.endswith(LoadLocationData.WARP_OPTION), locationTree)).copy()
+
+    state = defaultdict(lambda: False)
+    for flag in inputFlags:
+        state[flag] = True
+
+    warpCount = {}
+
+    for warp in warpSpace:
+        if len(warp.LocationReqs) == 1:
+            name = warp.LocationReqs[0]
+            if name not in warpCount:
+                warpCount[name] = 0
+            warpCount[name] += 1
+
+    transitionPairs = {}
+    for transition in transitionSpace:
+        if transition not in transitionPairs.values() and \
+            len(transition.LocationReqs) == 1:
+            option = list(filter(lambda x: x.Name == transition.LocationReqs[0] and
+                                           len(x.LocationReqs) == 1 and x.LocationReqs[0] == transition.Name ,transitionSpace))
+
+            if len(option) == 1:
+                transitionPairs[transition] = option[0]
+                transitionPairs[option[0]] = transition
+
+    for transition in transitionSpace:
+        if len(transition.LocationReqs[0]) == 1 and transition.Name in warpCount:
+            if transition in transitionPairs:
+                pair = transitionPairs[transition]
+
+                if pair.Name not in warpCount:
+                    continue
+
+                transitionFrom = transition.LocationReqs[0]
+                transitionTo = transition.Name
+
+                required = transition.requirementsNeeded(state)
+                pairReq = pair.requirementsNeeded(state)
+
+                if len(required) == 0 and len(pairReq) == 0:
+
+                    warpCountFrom = warpCount[transitionFrom]
+                    warpCountTo = warpCount[transitionTo]
+
+                    if warpCountFrom >= warpCountTo:
+                        warpCount[transitionFrom] += warpCountTo
+                        del warpCount[transitionTo]
+
+    for start in startingList:
+        if start in warpCount:
+            del warpCount[start]
+
+
+    return warpCount
+
+
+def GenerateHintMessages(spoiler, spoilerTrash, locations, criticalTrash, badgeDict,
+                         requirementDict, config, HintOptions, allowList, fullTree,
+                         inputFlags, goal):
+    # AllLocations = LoadLocationData.LoadDataFromFolder(".", None, None, modifiers, flags)p
+    #locationList = LoadLocationData.FlattenLocationTree(locations)
+
+    locationList = LoadLocationData.FlattenLocationTree(fullTree)
+
+    #TODO
+    # Re run beatability checks for items deemed barren
+    # This will confirm that the item isn't locked behind some form of locked path
+    # Just change spoiler to remove required items from pool for items
+    # Locations/flags a little harder
+
+    trashItems = {}
+    for sp in spoilerTrash.keys():
+        item = spoilerTrash[sp]
+        if "->" in item:
+            trashItems[sp] = item.split("->")[1]
+        else:
+            trashItems[sp] = item
+
+    to_check_location = ["Whirl Islands",
+                         "Tin Tower", "Rocket Base", "Ruins of Alph",
+                         "Cianwood City", "Blackthorn City", "Cinnabar Island",
+                         "Route 4", "Fuchsia City", "Pewter City", "Mt Mortar Surf Floor",
+                         "Mt Mortar Upper Floor", "Elm's Lab",
+                         #"Routes 26/27", "Dark Cave","Cerulean Cape"
+                         "Lighthouse","Dragons Den", "Rock Tunnel"]
+
+    warp_hub_locations = []
+
+
+    location_sim_mapping = {"Dark Cave": {"Dark Cave Violet", "Dark Cave Blackthorn"},
+                            "Routes 26/27": {"Route 26", "Route 27", "Tojho Falls",
+                                             "Route 27 Right Side"}, # Add inferred until complex logic
+                            "Cerulean Cape": {"Route 24", "Route 25"}
+                            }
+
+    # Need message converter when loading these locations
+
+
+    # TODO Check some against input flags
+    to_check_flag = ["Kanto Power Restored", "Mahogany Rockets Defeated", "Beat Team Rocket",
+                     "Became Champion", "Released Beasts","Ship Sidequest","Encountered Ho-Oh"
+                     ]
+
+
+    valid_input_flags = ["Shopsanity","Hidden Items","Mon Locked Checks","Bug Catching Contest",
+                         "Phone Call Trainers","Timed Events", "Berry Trees", "Open Mt. Silver"]
+
+    for flag in inputFlags:
+        if flag in valid_input_flags:
+            to_check_flag.append(flag)
+
+    #to_check_item = ["Flash", "Strength", "Whirlpool", "Waterfall",
+     #                "Secret Potion", "Basement Key", "Lost Item",
+      #               "Cut", "Surf", "Red Scale", "Mystery Egg", "Machine Part",
+       #              "Card Key", "Rainbow Wing", "Clear Bell", "Squirtbottle",
+        #             "S S Ticket", "Pass", "Fly"]
+
+    to_check_item = list(spoiler.keys())
+    to_check_item.append("Rock Smash")
+
+    hintList = []
+
+
+
+
+    sanityCheckFailure = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, goal)
+    if sanityCheckFailure:
+        raise Exception("Invalid created base conditions")
+
+
+    # New method does not yet implement 'requires' or 'in' hint types!
+    # Should use the reverse requirements elements from generation for these?
+
+    use_old_method = False
+    if use_old_method:
+        hintList, locationList = OldHintMethod(spoiler, to_check_item, locationList, to_check_location, badgeDict, location_sim_mapping,
+                          trashItems, criticalTrash, to_check_flag)
+
+    else:
+        reqQuickLookup = {}
+
+        typesToCheck = {}
+
+        unlock_goal = goal if goal != "Red" else "Mt. Silver Is Open"
+
+        # Remove recommended hints
+        if "Warps" not in inputFlags:
+            for location in to_check_location:
+                required = IsVariableRequired(location, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location, True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location, True))
+            for location in location_sim_mapping.items():
+                required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, location[1])
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, location[0], True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, location[0], True))
+        else:
+            warpCounts = GetWarpHubs(locationList, inputFlags)
+
+            hubSizeForHints = 5
+            warpHubsForHints = [ x[0] for x in warpCounts.items() if x[1] > hubSizeForHints ]
+
+            warp_hub_locations.extend(warpHubsForHints)
+
+            for hub in warp_hub_locations: #warpHubsForHints:
+                required = IsVariableRequired(hub, spoiler, locations, inputFlags, fullTree, badgeDict,
+                                              unlock_goal)
+                hub_hint_name = hub.replace(LoadLocationData.WARP_OPTION, "")
+                if not required:
+                    if HintOptions.BarrenHints:
+                        hintList.append(HintMessage("nothingl", None, hub_hint_name, True))
+                else:
+                    if HintOptions.NotBarrenHints:
+                        hintList.append(HintMessage("somethingl", None, hub_hint_name, True))
+
+        for item in to_check_item:
+            if item in requirementDict:
+                reqRequirements = requirementDict[item]
+                reqQuickLookup[item] = reqRequirements
+
+        for flag in to_check_flag:
+            if flag in requirementDict:
+                reqRequirements = requirementDict[flag]
+                reqQuickLookup[flag] = reqRequirements
+
+        for location in to_check_location:
+            if location in requirementDict:
+                reqRequirements = requirementDict[location]
+                reqQuickLookup[location] = reqRequirements
+
+        for warpHub in warp_hub_locations:
+            if warpHub in requirementDict:
+                reqRequirements = requirementDict[location]
+                reqQuickLookup[location] = reqRequirements
+
+        for badge in badgeDict:
+            if badge in requirementDict:
+                reqRequirements = requirementDict[badge]
+                reqQuickLookup[badge] = reqRequirements
+
+        #HintOptions.RequireHints = False
+        if HintOptions.RequireHints:
+            for itemReq in requirementDict.items():
+                item = itemReq[0]
+                reqs = itemReq[1]
+
+                if item in spoiler:
+
+                    # If using warps, load from locList (one step only)
+                    # And see if any of the requirements is a Hub
+                    # If so, include it! (Issue is default warp group removes all requirements!)
+                    # But same issue as before, what about duplicates (eg Route 32 entrance and Violet Transition)?
+                    # Map only?
+                    # What if picks the wrong one and then the hint is wrong?
+
+                    removeReqs = []
+                    for req in reqs:
+                        if req in reqQuickLookup:
+                            toRemove = reqQuickLookup[req]
+                            for r in toRemove:
+                                if r not in removeReqs:
+                                    removeReqs.append(r)
+                    validReqs = set([ x for x in reqs if x not in removeReqs
+                                  and (x in to_check_flag or x in to_check_location
+                                       or x in to_check_item or x in badgeDict or x in warp_hub_locations) ])
+
+
+
+                    for valid in validReqs:
+                        # Check also re-run the check that this item can be obtained
+                        # By removing this single new requirement
+                        # Optimisation required as this now has a lot of calls to confirm requirements
+                        required = IsVariableRequired(valid, spoiler, locations, inputFlags, fullTree, badgeDict, spoiler[item])
+                        if required:
+                            hint_type = None
+                            if valid in to_check_location:
+                                hint_type = "requiresl"
+                            elif valid in to_check_flag:
+                                hint_type = "requiresf"
+                            elif valid in to_check_item:
+                                hint_type = "requiresi"
+                            elif valid in warp_hub_locations:
+                                hint_type = "requiresl"
+
+                            if hint_type is not None:
+                                hintList.append(HintMessage(hint_type, item, valid, True))
+
+        # This is added to be able to use Mt Silver early as a test rom, as Mt Silver is required anyway
+        # Same applies to Flash, you don't need it to get all the badges, but do through Silver Room 1
+
+
+        for item in to_check_item:
+            if item in badgeDict:
+                continue
+            required = IsVariableRequired(item, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+            if not required:
+                if HintOptions.BarrenHints:
+                    hintList.append(HintMessage("nothingi", None, item, True))
+            else:
+                if HintOptions.NotBarrenHints:
+                    hintList.append(HintMessage("somethingi", None, item, True))
+
+
+        for flag in to_check_flag:
+            required = IsVariableRequired(flag, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal)
+            if not required:
+                if HintOptions.BarrenHints:
+                    hintList.append(HintMessage("nothingf", None, flag, True))
+            else:
+                if HintOptions.NotBarrenHints:
+                    hintList.append(HintMessage("somethingf", None, flag, True))
+
+
+
+
+        if HintOptions.InHints:
+            #print("Look for IN Hints")
+            spoilerLocations = list(filter(lambda x: x.Name in spoiler.values(), locationList))
+            for loc in spoilerLocations:
+                #print("Look for IN Hints for::", loc.Name)
+                iter = loc
+                found = False
+                name = None
+
+                # If this fails, look for a hint name to use
+                while not found:
+                    if iter.HintName != iter.Name:
+                        found = True
+                        name = iter.HintName
+                        print("Found HintName", name, loc.Name)
+                        break
+                    elif len(iter.LocationReqs) == 1:
+                        if iter.LocationReqs[0] in to_check_location or \
+                                iter.LocationReqs[0] in warp_hub_locations:
+                            found = True
+                            name = iter.LocationReqs[0]
+                            #print("Found expected::", name, loc.Name)
+                            break
+                        reqs = list(filter(lambda x: x.Name == iter.LocationReqs[0], locationList))
+                        if len(reqs) > 1:
+                                #print("Break out on 1", iter.Name, iter.LocationReqs, reqs)
+                                break
+                        elif len(reqs) == 0:
+                            #print("Break out on 0", iter.Name, iter.LocationReqs, reqs)
+                            break
+                        else:
+                            iter = reqs[0]
+                    else:
+                        #print("Break out on >1", iter.Name, iter.LocationReqs)
+                        break
+
+                if name is not None:
+                    #print("Add:::", name, loc.item)
+                    hintList.append(HintMessage("in", loc.item, name, True))
+
+
+
+    # Do some extra checks to confirm combinations
+
+    barrenHints = list(filter(lambda x: "nothing" in x.type, hintList))
+    allBarren = [ x.secondary for x in barrenHints ]
+    print("allBarren", allBarren)
+
+
+    # Check for special cases
+    # Please note if this checking was complete special cases would not be needed
+
+    edgePairs = [("Pass", "S S Ticket"), ("S S Ticket", "Squirtbottle"), ("Pass", "Squirtbottle")]
+
+    barrenRemove = []
+
+    for edgePair in edgePairs:
+        contained = list(filter(lambda x: x in allBarren, edgePair))
+        if len(contained) == len(edgePair):
+            edgeResult = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal, input_variables=
+                list(edgePair))
+            # If either way is possible to get to Kanto
+            # Remove the options from the checks below as otherwise would also come up with 'either or'
+            if edgeResult:
+                for edge in edgePair:
+                    allBarren.remove(edge)
+                    barrenRemove.append(edge)
+
+
+    removedHints = []
+    for barrenRem in barrenRemove:
+        for x in hintList:
+            if "nothing" in x.type and barrenRem == x.secondary:
+                removedHints.append(x)
+
+    for rem in removedHints:
+        hintList.remove(rem)
+
+
+
+    required = IsVariableRequired(None, spoiler, locations, inputFlags, fullTree, badgeDict, unlock_goal,
+                                  input_variables=allBarren)
+    print("allBarren", required)
+
+    if required:
+        for barren in barrenHints:
+            barren.nothingToMaybe()
+
+
+
+
+
+    if "Name" in config.keys():
+        hintList.append(HintMessage("conf", "Config", config["Name"], True))
+
+    if "SilverBadgeUnlockCount" in config.keys():
+        hintList.append(HintMessage("conf", "MtSilver", config["SilverBadgeUnlockCount"], True))
+    else:
+        hintList.append(HintMessage("conf", "MtSilver", "16", True))
+
+    return hintList, locationList
+
+class Item:
+    Name = ""
+    Price = 0
+    HoldType = None
+    Parameter = None
+    Property = None
+    Pocket = None
+    Field = None
+    Battle = None
+
+class RandomItemProcessor:
+
+    itemsList = []
+    dontReplace = []
+    allItems = []
+
+    def readAttributesFile(self, file):
+        items = []
+        attr_file = open(file)
+        lines = attr_file.readlines()
+        attr_file.close()
+        start=False
+        item_name=True
+        currentObj = None
+        for line in lines:
+            line = line.strip()
+            if start:
+                if line == "; entries correspond to item ids":
+                    continue
+                if item_name:
+                    name = line[2:]
+                    item_name = False
+                    currentObj = Item()
+                    currentObj.Name = name
+                else:
+                    sp = line.split(",")
+                    maybe_price = sp[0].replace("item_attribute","").strip()
+
+                    if maybe_price.startswith("$"):
+                        maybe_price = 0
+
+                    currentObj.Price = int(maybe_price)
+                    currentObj.Pocket = sp[4].strip()
+
+                    items.append(currentObj)
+                    currentObj = None
+                    item_name = True
+            else:
+                if line == "ItemAttributes:":
+                    start = True
+                    item_name = True
+
+        return items
+
+    def replaceRenames(self):
+        # Handle TMs if you like
+        for item in self.itemsList:
+            if item.Name == "BLACKBELT_I":
+                item.Name = "BLACKBELT"
+
+    def limitItems(self, itemObjects):
+        notTheseItems = ["BRICK_PIECE","SILVER_LEAF","GOLD_LEAF"]
+        data = open("Data/BannedItems")
+        banned_items = []
+        for l in data.readlines():
+            banned_items.append(l.strip().upper())
+        data.close()
+        return list(filter(lambda x:
+            x.Price > 0 and x.Pocket != "KEY_ITEM" and x.Pocket != "TM_HM"
+                           and x.Name not in notTheseItems
+                           and x.Name not in banned_items
+            ,itemObjects))
+
+    def __init__(self, dontReplace=None, replaceNames=True):
+        if dontReplace is None:
+            dontReplace = []
+        self.itemsTest = []
+        self.dontReplace = dontReplace
+        with open('AddItemValues.csv', newline='', encoding='utf-8-sig') as csvfile:
+            reader = csv.reader(csvfile)
+            for i in reader:
+                if (len(i) > 0):
+                    self.itemsTest.append(i[0])
+
+        self.allItems = self.readAttributesFile("Data/item_attributes.asm")
+        self.itemsList = self.limitItems(self.allItems)
+
+        if replaceNames:
+            self.replaceRenames()
+            for item in self.itemsList:
+                if item.Name not in self.itemsTest:
+                    print("Error with item:", item.Name)
+
+        return
+
+    def GetRandomItem(self,normal_item=None,bad_allowed=True):
+        if normal_item is not None and normal_item in self.dontReplace:
+            return normal_item
+
+        if normal_item == "Leftovers":
+            return normal_item
+
+        return random.choice(self.itemsList).Name
+
+
+REPEL_ITEMS = ["REPEL", "SUPER_REPEL", "MAX_REPEL"]
+BALL_ITEMS = ["POKE_BALL", "GREAT_BALL", "ULTRA_BALL", "FAST_BALL", "HEAVY_BALL",
+              "MOON_BALL", "MASTER_BALL", "PARK_BALL", "LOVE_BALL",
+              "FRIEND_BALL", "LEVEL_BALL", "LURE_BALL"]
+
+STATUS_ITEMS = []
+HEALING_ITEMS = ["POTION", "SUPER_POTION", "HYPER_POTION", "MAX_POTION", "FULL_RESTORE"]
+
+X_ITEMS = ["X_ATTACK", "X_DEFEND", "X_SPEED", "X_SPECIAL", "DIRE_HIT", "X_ACCURACY", "GUARD_SPEC"]
+OTHER_ITEMS = ["TM_SWEET_SCENT", "ESCAPE_ROPE", "WATER_STONE", "TM_ROCK_SMASH", "REVIVE","FULL_RESTORE","HYPER_POTION"]
+
+CATCH_EM_ALL_ITEMS=["THUNDERSTONE","FIRE_STONE","LEAF_STONE","SUN_STONE","MOON_STONE", "TM_HEADBUTT"]
+
+REQUIRED_BUY_ITEMS = ["Rock Smash","Water Stone","Escape Rope", "Sweet Scent", "X Attack",
+                      "X Defend", "X Special", "X Speed", "Dire Hit", "X Accuracy", "Guard Spec"]
+
+
+def ShopFilenameConversion(name):
+    if name is None:
+        return None
+
+    if "Goldenrod" in name:
+        return "Goldenrod"
+    if "Celadon" in name:
+        return "Celadon"
+
+    return name
+
+
+def ShopItemGroupCheck(i, locList, reachable, itemList, addAfter=None):
+    if i.isShop():
+        shopElements = list(filter(lambda x: ShopFilenameConversion(x.FileName) == ShopFilenameConversion(i.FileName), locList))
+        shopElementNames = [x.Name for x in shopElements]
+        # Find these from old copy
+        # Then find instances in activeLoc & reachable
+
+        reaches = reachable.copy()
+        if addAfter is not None:
+            for a in addAfter:
+                reaches[a.Name] = a
+
+        # activeShop = list(filter(lambda x: x.Name in shopElementNames, activeLoc))
+        reachShop = list(filter(lambda x: x[0] in shopElementNames, reaches.items()))
+
+        # Currently works, prioritising early locations
+        # This is generally suitable
+        # However, could improve by removing per shop for department stores!
+
+        hasItemType = False
+        for element in reachShop:
+            if element[1].item is not None:
+                if element[1].item in itemList:
+                    hasItemType = True
+
+        return hasItemType
+
+    return True
+
+def AtLeastOneInAShop(itemList, trashList, locList, reachable, currentItem, currentLocation, fullTrash, spoiler, flags=None, addAfter=None, needed=None):
+    if addAfter is None:
+        addAfter = []
+
+    if needed is None:
+        needed = []
+
+    if flags is None:
+        flags = []
+
+    # Potential issue, need to check if there IS a shop remaining -- if there isn't, will have to settle
+    # If not settled, can force a re-do seed
+
+    reachCopy = []
+    reachCopy.extend(reachable.values())
+    reachCopy.extend(addAfter)
+
+    if currentLocation in reachCopy:
+        reachCopy.remove(currentLocation)
+
+    reachNames = [ x.Name for x in reachCopy ]
+    inverse_map = Items.getInverseKeyItemMap()
+
+
+    for item in itemList:
+        #Need to add handling for RandomiseUnaffectedItems here!
+        if item not in fullTrash and "RandomiseItems" not in flags:
+            continue
+
+        if item in inverse_map and inverse_map[item] in spoiler:
+            continue
+
+        r = list(filter(lambda x: (x.item == item)
+        # Currently this line does not factor in items in the spoiler but not REACHED, which is different
+           #or item in inverse_map and inverse_map[item] == x.item) \
+
+          and (x.isShop() and not x.isBargainShop()) and ("Banned" not in x.FlagReqs or "ImpossibleRandomise" in x.FlagReqs) \
+                                  and "Impossible" not in x.FlagReqs and \
+          "Unreachable" not in x.FlagReqs, reachCopy))
+
+        if len(r) == 0:
+            needed.append(item)
+
+    #if currentItem not in trashList:
+    #    return True
+
+    if currentItem in needed and not (currentLocation.isShop() and not currentLocation.isBargainShop()):
+        # If last remaining instance of trash...
+        countRemaining = [ x for x in trashList if x == currentItem]
+        if len(countRemaining) <= 1:
+            return False
+
+    # Compare against remaining possible shops, if remaining == len(needed) and not one of these items, return False
+    rleft = list(filter(lambda x: (x.isShop() and not x.isBargainShop()) and x.Name not in reachNames and \
+             ("Banned" not in x.FlagReqs or "ImpossibleRandomise" in x.FlagReqs)
+            and (x.isItem() or (x.wasItem() and "RandomiseItems" in flags))
+            and "Impossible" not in x.FlagReqs and \
+             "Unreachable" not in x.FlagReqs, locList))
+
+    #print(len(rleft), len(needed), needed)
+    #[[x.Name,x.FlagReqs] for x in rleft])
+
+
+    if len(rleft) < len(needed):
+        raise Exception("Invalid shop item assignment")
+
+    if len(rleft) == len(needed) and (currentLocation.isShop() and not currentLocation.isBargainShop()) and currentItem not in needed:
+        return False
+
+    return True
+
+
+def PreventItemAssignment(placeItem, items, trash):
+    success = True
+    re_add = []
+
+    while placeItem in items:
+        if len(trash) == 0:
+            success = False
+            break
+        oldItem = placeItem
+        placeItem = trash.pop()
+        re_add.append(oldItem)
+
+    return re_add, placeItem, success
+
+ShopFlagItems_Old = ["Pokegear", "Expansion Card", "Radio Card", "ENGINE_POKEDEX", "OLD_ROD", "GOOD_ROD",
+                        "SUPER_ROD", "ENGINE_MAP_CARD", "ENGINE_UNOWN_DEX", "Pokedex"]
+
+ShopFlagItems = ["OLD_ROD", "GOOD_ROD","SUPER_ROD"]
+
+
+def EnsurePlacementOfItemGroup(itemLocation, locList, reachable, ITEM_LIST, addAfter, force, trashItems,
+                               invalidItems, progressItem, replacedItem):
+    if itemLocation.isShop():
+        hasRepel = ShopItemGroupCheck(itemLocation, locList, reachable, ITEM_LIST, addAfter=addAfter)
+        if not hasRepel:
+            if force:
+                replacedItem = random.choice(ITEM_LIST)
+                progressItem = replacedItem
+            else:
+                trashRepels = list(filter(lambda x: x in REPEL_ITEMS, trashItems))
+                if len(trashRepels) > 0:
+                    while progressItem not in ITEM_LIST:
+                        oldItem = progressItem
+                        progressItem = trashItems.pop()
+                        replacedItem = progressItem
+                        invalidItems.append(oldItem)
+
+    return progressItem, replacedItem
+
+
+
+def HandleShopLimitations(placeItem, itemLocation, locList, reachable, trashItems, flags, fullTrash, spoiler, addAfter=None, force=False):
+    if addAfter is None:
+        addAfter = []
+    replacedItem = None
+    baseItem = placeItem
+    progressItem = baseItem
+
+    # Incorrect, need to handle if an item is being assigned to a NON-shop as well
+    # If the item is meant to always be purchasable
+    #if not itemLocation.isShop():
+     #   return None
+
+    invalidItems = []
+    invalidPriorityItems = []
+
+    # Check for RandomizeUnaffectedItems?
+    includesShopItems = [ l for l in locList if l.isShop() and l.isItem() ]
+    if len(includesShopItems) == 0:
+        #print("Shop items are not shuffled")
+        return None
+
+    forbiddenItems = []
+
+    USE_BALL_ITEMS = []
+    USE_BALL_ITEMS.extend(BALL_ITEMS)
+
+    USE_STATUS_ITEMS = []
+    USE_HEALING_ITEMS = []
+
+    for flag in flags:
+        if flag.startswith("Cannot Buy"):
+            item = flag.replace("Cannot Buy ", "")
+            forbiddenItems.append(item)
+
+            dirtyItem = item.replace(" ","_").upper()
+            if dirtyItem in USE_BALL_ITEMS:
+                USE_BALL_ITEMS.remove(dirtyItem)
+
+            if dirtyItem in USE_HEALING_ITEMS:
+                USE_HEALING_ITEMS.remove(dirtyItem)
+
+            if dirtyItem in USE_STATUS_ITEMS:
+                USE_STATUS_ITEMS.remove(dirtyItem)
+
+            trashMatch = [ x for x in trashItems if x == dirtyItem]
+            for t in trashMatch:
+                trashItems.remove(t)
+                invalidItems.append(t)
+
+
+    cleanItem = placeItem.replace("_", " ").replace("TM", "").strip()
+    cleanItem = string.capwords(cleanItem, " ")
+    # Trash removal done above; no need to loop here
+    if itemLocation.isShopLike() and cleanItem in forbiddenItems:
+        oldItem = progressItem
+        progressItem = trashItems.pop()
+        replacedItem = progressItem
+        invalidItems.append(oldItem)
+
+    # Function checks if all the items in a given shop, at least 1 must be a type of repel and 1 type of ball
+
+    progressItem, replacedItem = EnsurePlacementOfItemGroup(itemLocation, locList, reachable, USE_BALL_ITEMS,
+                                                 addAfter, force, trashItems, invalidItems, progressItem, replacedItem)
+
+    progressItem, replacedItem = EnsurePlacementOfItemGroup(itemLocation, locList, reachable, REPEL_ITEMS,
+                                                 addAfter, force, trashItems, invalidItems, progressItem, replacedItem)
+
+    #if itemLocation.isShop():
+    #    hasRepel = ShopItemGroupCheck(itemLocation, locList, reachable, REPEL_ITEMS, addAfter=addAfter)
+    #    if not hasRepel:
+    #        if force:
+    #            replacedItem = random.choice(REPEL_ITEMS)
+    #            progressItem = replacedItem
+    #        else:
+    #            trashRepels = list(filter(lambda x: x in REPEL_ITEMS, trashItems))
+    #            if len(trashRepels) > 0:
+    #                while progressItem not in REPEL_ITEMS:
+    #                    oldItem = progressItem
+    #                    progressItem = trashItems.pop()
+    #                    replacedItem = progressItem
+    #                    invalidItems.append(oldItem)
+    #                    #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+#        hasBall = ShopItemGroupCheck(itemLocation, locList, reachable,USE_BALL_ITEMS, addAfter=addAfter)
+    #    if not hasBall:
+    #        if force:
+    #            replacedItem = random.choice(USE_BALL_ITEMS)
+    #            progressItem = replacedItem
+    #        else:
+    #            trashBalls = list(filter(lambda x: x in USE_BALL_ITEMS, trashItems))
+    #            if len(trashBalls) > 0:
+    #                while progressItem not in USE_BALL_ITEMS:
+    #                    oldItem = progressItem
+    #                    progressItem = trashItems.pop()
+    #                    replacedItem = progressItem
+    #                    invalidItems.append(oldItem)
+                        #trashItems.insert(random.randint(0, len(trashItems)), oldItem)
+
+    # If shop enabled
+    # Ensure each type of X Item is available in at least 1 shop
+
+    # At least one of these items in the pool
+    # Must be assigned to a shop
+    # For convinence / otherwise
+
+    itemsList = []
+    itemsList.extend(X_ITEMS)
+    itemsList.extend(OTHER_ITEMS)
+
+    if "Catch Em All Shops" in flags:
+        itemsList.extend(CATCH_EM_ALL_ITEMS)
+
+    #TODO: If catch em all modifier enabled, extend the list further
+
+    needed = []
+
+    acceptable_placement = AtLeastOneInAShop(itemsList, trashItems, locList,
+                                             reachable, progressItem, itemLocation, fullTrash, spoiler,
+                                             addAfter=addAfter, needed=needed, flags=flags)
+    if not acceptable_placement and force and itemLocation.isShop() and len(needed) > 0:
+        replacedItem = needed[0]
+        progressItem = replacedItem
+    elif force and not itemLocation.isShop():
+        # In this scenario, trash list is irrelevant for decision
+        pass
+    elif not force and not acceptable_placement:
+        while not acceptable_placement:
+            if len(trashItems) == 0:
+                print("IPIs:", itemLocation.Name, invalidPriorityItems, invalidItems)
+                #return None
+            oldItem = progressItem
+            progressItem = trashItems.pop()
+            replacedItem = progressItem
+            invalidPriorityItems.append(oldItem)
+
+            acceptable_placement = AtLeastOneInAShop(itemsList,trashItems,locList, reachable, progressItem,
+                                                     itemLocation, fullTrash, spoiler, flags=flags)
+    elif force and not acceptable_placement:
+        print("?", acceptable_placement, force, itemLocation.Name, itemLocation.item, needed)
+
+
+    if itemLocation.isShop():
+        item_to_replace = baseItem if replacedItem is None else progressItem
+        re_add, chosen, success = PreventItemAssignment(item_to_replace, ShopFlagItems, trashItems)
+        if not success:
+            raise Exception('Failed mapping due to item requirement seed (shop)!')
+        for item in re_add:
+            trashItems.insert(random.randint(0, len(trashItems)), item)
+        if item_to_replace != chosen:
+            replacedItem = chosen
+
+    for item in invalidPriorityItems:
+        trashItems.append(item)
+
+    for item in invalidItems:
+        trashItems.insert(random.randint(0, len(trashItems)), item)
+
+    return replacedItem
+
+
+def AddressToIntValues(address):
+    bank_size = 0x4000
+    value = (address % bank_size) + bank_size
+    bytes = value.to_bytes(2, byteorder='little')
+    return bytes
+
+
+def IsVersionSupported(major, minor, revision):
+    supported = Version.GetSupportedSpeedchoiceVersion()
+    if supported[0] != major or supported[1] != minor or supported[2] != revision:
+        print(supported, major, minor, revision)
+        return False
+
+    return True
+
+
+def CheckVersion(addressData, romMap):
+    if "ckir_BEFORE_MajorVersionNumber" in addressData:
+        majorVersion = addressData["ckir_BEFORE_MajorVersionNumber"]
+        minorVersion = addressData["ckir_BEFORE_MinorVersionNumber"]
+        revisionVersion = addressData["ckir_BEFORE_RevisionVersionNumber"]
+
+        majorRequired = int(majorVersion["integer_values"])
+        minorRequired = int(minorVersion["integer_values"])
+        revisionRequired = int(revisionVersion["integer_values"])
+
+        majorAddress = majorVersion["address_range"]["begin"]
+        minorAddress = minorVersion["address_range"]["begin"]
+        revisionAddress = revisionVersion["address_range"]["begin"]
+
+        if not IsVersionSupported(majorRequired, minorRequired, revisionRequired):
+            raise Exception("Version mismatch!")
+
+
+        if len(romMap) <= majorAddress:
+            return False
+
+        majorActual = romMap[majorAddress]
+        minorActual = romMap[minorAddress]
+        revisionActual = romMap[revisionAddress]
+
+
+
+        if majorActual != majorRequired or minorActual != minorRequired or revisionRequired != revisionActual:
+            return False
+
+        return True
+    else:
+        return False
+
+
+
+
+def RandomPrice(original_price, min_below=0.5, max_above=2, min_variance=0, min_price=None, max_price=None):
+    retry = True
+
+    increased_variance = False
+
+    if original_price <= min_variance:
+        modal_price = 2000
+        increased_variance = True
+    else:
+        modal_price = original_price
+
+    max_retries = 5
+    total_retries = 0
+
+    if max_price is not None and max_price <= original_price * min_below:
+        return max_price
+
+    while retry:
+        variance = modal_price
+        if increased_variance:
+            variance *= 0.4
+            modal_price *= 0.8
+        new_modal_price = random.normalvariate(modal_price, variance)
+
+        if max_price is not None and new_modal_price > max_price:
+            print("pr", max_price, original_price, new_modal_price)
+            modal_price -= 5
+            continue
+
+        if new_modal_price > 15000:
+            if total_retries == 1:
+                continue
+            else:
+                break
+
+        if new_modal_price <= 0:
+            if modal_price == 0:
+                continue
+            elif total_retries == 0:
+                continue
+            else:
+                break
+
+        total_retries += 1
+
+
+
+        if not increased_variance:
+            if new_modal_price < (original_price * min_below):
+                if total_retries == 1:
+                    total_retries -= 1
+                    continue
+                else:
+                    break
+            elif new_modal_price > (original_price * max_above):
+                if total_retries == 1:
+                    total_retries -= 1
+                    continue
+                else:
+                    break
+            else:
+                modal_price = new_modal_price
+        else:
+            modal_price = new_modal_price
+
+        if total_retries >= max_retries:
+            break
+
+    return min(15000,abs(int(math.floor(modal_price) / 5) * 5))
+
+def RandomizePrices(priceSettings, locations):
+    priceList = {}
+    lookupDict = {}
+    itemProcessor = RandomItemProcessor(replaceNames=False)
+
+    min_below = priceSettings["min_below"]
+    max_above = priceSettings["max_above"]
+    min_variance = priceSettings["min_variance"]
+    keep_free = priceSettings["keep_free"]
+    shopDetails = priceSettings["shop_settings"]
+
+    standard = priceSettings["randomise_standard_prices"]
+    buena = priceSettings["randomise_buena_prices"]
+    game_corner = priceSettings["randomise_game_corner_prices"]
+    bargain = priceSettings["randomise_bargain_prices"]
+    buena_set = priceSettings["buena_set_price"]
+    game_corner_set = priceSettings["game_corner_set_price"]
+
+    martItems = {}
+
+    for mart in shopDetails.keys():
+        martDesc = shopDetails[mart]
+        itemsInThisLocation = [ i for i in locations if i.isShop() and i.FileName == mart ]
+        for item in itemsInThisLocation:
+            alterPriceOf = item.item
+            alterPriceOf = Items.GetCorrectItemName(alterPriceOf)
+
+            if alterPriceOf.startswith("ENGINE_"):
+                alterPriceOf = alterPriceOf.replace("ENGINE_", "ITEM_")
+
+            if alterPriceOf not in martItems:
+                martItems[alterPriceOf] = {}
+
+            if 'MaxPrice' in martDesc:
+                #TODO Check value is not overwritten
+                martItems[alterPriceOf]["MaxPrice"] = martDesc['MaxPrice']
+                print("MaxMartPrice::",alterPriceOf,  martDesc['MaxPrice'])
+
+    if min_below == 0 or max_above == 0 or \
+        (min_below >= max_above):
+        raise Exception("Invalid values provided")
+
+    for item in itemProcessor.allItems:
+        if "$" in item.Name:
+            continue
+
+        randomised_price = item.Price
+        if standard:
+            if item.Price == 0 and keep_free:
+                randomised_price = 0
+            else:
+                max_price = None
+                if item.Name in martItems:
+                    if 'MaxPrice' in martItems[item.Name]:
+                        max_price = martItems[item.Name]["MaxPrice"]
+
+                randomised_price = RandomPrice(item.Price, min_below=min_below, max_above=max_above,
+                                           min_variance=min_variance, max_price=max_price)
+            priceList[item.Name] = randomised_price
+        #price_diff = randomised_price/item.Price if item.Price > 0 else "!"
+        #print(item.Name, randomised_price, price_diff)
+
+        lookupDict[item.Name] = (item.Price, randomised_price)
+
+    #TODO: Add Game Corner Prize price randomisation
+    hardcodedShops = [ loc for loc in locations
+                       if (loc.isBargainShop() and bargain) \
+                       or (loc.isVendingMachine() and bargain) \
+                       or (loc.isPrize() and game_corner) \
+                       or (loc.isBuenaItem() and buena)
+                       ]
+
+    # Note, only randomised hardcoded shops can be affected by price randomisation
+
+    for shop in hardcodedShops:
+        item_to_handle = shop.item
+        if item_to_handle is None:
+            continue
+
+        if shop.isPrize() and game_corner_set is not None:
+            priceList["HC_" + item_to_handle + str(shop)] = game_corner_set
+            continue
+
+        if shop.isBuenaItem() and buena_set is not None:
+            priceList["HC_" + item_to_handle + str(shop)] = buena_set
+            continue
+
+        if shop.isBuenaItem():
+            maxValue = 8
+        else:
+            maxValue = None
+
+        given_price = 500
+        if item_to_handle not in lookupDict:
+            if keep_free:
+                given_price = 0
+            else:
+                given_price = RandomPrice(0, min_below=min_below, max_above=max_above,
+                        min_variance=min_variance, max_price=maxValue)
+
+        else:
+            details = lookupDict[item_to_handle]
+            if details[0] == 0 and keep_free:
+                given_price = 0
+
+            valid = False
+            while not valid:
+                valid = True
+                # Treat as bargains, price must be lower
+
+                if details[1] == 0:
+                    given_price = 0
+                    break
+
+                if details[1] <= details[0] * min_below:
+                    given_price = details[1] - 1
+                    break
+
+                given_price = RandomPrice(details[0], min_below=min_below, max_above=max_above,
+                                      min_variance=min_variance)
+
+                if given_price >= details[1]:
+                    valid = False
+
+        priceList["HC_"+item_to_handle+str(shop)] = given_price
+
+    return priceList
+
+# Unused for now, no post-check used, added to logic for X Items issue
+def CheckForBuyableItemBefore(variable, spoiler, locationTree, inputFlags, locList,
+                           badgeSet, goal, actualReachable, Trash, input_variables=None):
+    if input_variables is None:
+        input_variables = []
+
+    variables = []
+    for var in input_variables:
+        variables.append(var)
+    if variable is not None:
+        variables.append(variable)
+
+    variables = ["Woke Snorlax"]
+
+    variableResult = RandomizeItemsBadgesAssumedFill.checkBeatability(spoiler, locationTree, inputFlags,
+                                                                      None, None, None, locList,
+                                                                      badgeSet, None, assign_trash=False,
+                                                                      forbidden=variables, recommended=False)
+
+    #reachable, stateDist, randomizerFailed, trashSpoiler, randomizedExtra, changes, warnings
+
+    neededItems = []
+    neededItems.extend(X_ITEMS)
+
+    foundItems = []
+
+    for item in variableResult[0].values():
+        if item.isItem() and item.isShop():
+            if item.Name in Trash:
+                trashItem = Trash[item.Name]
+            else:
+                trashItem = None
+
+            #print(item.Name, trashItem)
+            foundItems.append(trashItem)
+
+    foundAll = True
+    for item in neededItems:
+        if item not in foundItems:
+            print("no eaely:", item)
+            foundAll = False
+
+    if not foundAll:
+        print(Trash)
+
+    return foundAll

@@ -1,0 +1,22 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                10,
+                209,
+                95
+            ],
+            "new": [
+                9,
+                211,
+                95
+            ]
+        },
+        "address_range": {
+            "begin": 647118,
+            "end": 647121
+        },
+        "label": "CianwoodPharmacist.ckir_BEFORE_CIANWOODPHARMACY_SHOPSANITY_CHECK",
+        "description": "Enable jumping to Mart after Secretpotion only if Shopsanity enabled"
+    }
+]

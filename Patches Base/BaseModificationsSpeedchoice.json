@@ -17,16 +17,52 @@
             "new": [1]
         },
         "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "ItemRandoActive.ckir_BEFOREItemRandoActive",
+        "description": "Turn on the item rando variable for Tin Tower"
+    },
+    {
+        "integer_values": {
+            "old": [0],
+            "new": [1]
+        },
+        "address_range": {
             "begin": 2080771,
             "end": 2080772
         },
         "label": "ItemRandoEasyClairBadge.ckir_BEFOREItemRandoEasyClairBadge",
         "description": "Ensures clair can be easily accessed, also currently in base patch due to lack of vanilla clair support"
     },
+    {
+        "integer_values": {
+            "old": [0],
+            "new": [1]
+        },
+        "address_range": {
+            "begin": 2080771,
+            "end": 2080772
+        },
+        "label": "ClassicRainbowWing.ckir_BEFOREClassicRainbowWing",
+        "description": "Sets item rando logic to require E4 for Rainbow Wing"
+    },
 
      {"integer_values": { "old": [49,5,3,9,162,87,49,6,3,9,167,87], "new": [122,4,10,13,122,10,8,13,122,10,12,13] },
     "address_range": { "begin": 513937, "end": 513949 },
-"label" : "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description" : "Prevent boxes from blocking path"}
+"label" : "GoldenrodDeptStoreB1F_MapScripts.ckir_BEFORE_timed_events_DEPTSTOREB1F", "description" : "Prevent boxes from blocking path"},
 
+    {
+        "integer_values": {
+            "old": [249],
+            "new": [249]
+        },
+        "address_range": {
+            "begin": 2080769,
+            "end": 2080770
+        },
+        "label": "TMHMMoves.ckir_BEFORE_ROCKSMASHDATA",
+        "description": "Replaces TM08 with Rock Smash, should UPR change it"
+    }
 
 ]

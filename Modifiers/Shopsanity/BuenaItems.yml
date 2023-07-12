@@ -1,0 +1,16 @@
+Name: Buena Items
+Description: Adds Buena items into logic.
+AddedItems:
+    - Blue Card
+FlagsSet:
+    - Buena Items
+Changes:
+-
+        Location: Buena Items
+        RemoveFlagReqs:
+            - Banned
+IncompatibleWithout:
+    - 'Shopsanity'
+VariablesSet:
+  - RandomiseBuenaPrices: True
+  - BuenaSetPrice: 0

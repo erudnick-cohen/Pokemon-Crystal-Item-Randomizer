@@ -1,11 +1,46 @@
-Location:  
+Location:
+    -
+        Name: Lighthouse Access
+        FileName: OlivineLighthouse2F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Olivine City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 17
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Lighthouse Access
+        FileName: OlivineLighthouse2F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 17
+        TrainerList:
+        Sublocations:
+
     -
         Name: Lighthouse
         FileName: OlivineLighthouse2F.asm
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Olivine City
+        LocationReqs: Lighthouse Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -45,6 +80,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Lighthouse 3F Middle
             -
                 Name: Lighthouse Swagger TM
                 FileName: OlivineLighthouse5F.asm
@@ -64,6 +100,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Lighthouse 5F
             -
                 Name: Lighthouse Super Repel
                 FileName: OlivineLighthouse5F.asm
@@ -82,7 +119,8 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:                
+                Sublocations:
+                WarpReqs: Lighthouse 5F Center
             -
                 Name: Lighthouse Rare Candy
                 FileName: OlivineLighthouse5F.asm
@@ -101,14 +139,15 @@ Location:
                         ITEMLINE
                 Text:
                 TrainerList: 
-                Sublocations:                
+                Sublocations:
+                WarpReqs: Lighthouse 5F
             -
                 Name: Lighthouse Super Potion
                 FileName: OlivineLighthouse6F.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Lighthouse
+                LocationReqs: Lighthouse Jasmine
                 FlagReqs:
                 ItemReqs: 
                 FlagsSet:
@@ -142,10 +181,11 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Lighthouse 5F
             -
                 Name: Lighthouse Jasmine
-                FileName: OlivineLighthouse5F.asm
-                SecondaryFile: OlivineLighthouse5F.asm
+                FileName: OlivineLighthouse6F.asm
+                SecondaryFile: OlivineLighthouse6F.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList:
@@ -153,16 +193,17 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
-                    - Lighthouse
+                    - Lighthouse Visited
                 ReachableReqs:
                 Text:
                 Code:
                 TrainerList:
+                WarpReqs: Lighthouse Roof
                 Sublocations:
             -
                 Name: Lighthouse Amphy
-                FileName: OlivineLighthouse5F.asm
-                SecondaryFile: OlivineLighthouse5F.asm
+                FileName: OlivineLighthouse6F.asm
+                SecondaryFile: OlivineLighthouse6F.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList:
@@ -186,11 +227,10 @@ Location:
                 WildTableList: 
                 LocationReqs: 
                     - Lighthouse
-                    - Power Plant Activated
-                    - Elite Four
-                    - Radio Tower Rockets Part 2
                 FlagReqs:
                     - Phone Call Trainers
+                    - Became Champion
+                    - Kanto Power Restored
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -224,3 +264,5 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs:
+                    - Lighthouse 2F

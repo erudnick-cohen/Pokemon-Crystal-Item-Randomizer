@@ -57,7 +57,9 @@ Route36NationalParkGate_MapScripts:
 	appear ROUTE36NATIONALPARKGATE_OFFICER2
 	return
 
+.ckir_BEFORE_timed_events_BGC36_SetOfficer::
 .SetContestOfficer:
+.ckir_AFTER_timed_events_BGC36_SetOfficer::
 	appear ROUTE36NATIONALPARKGATE_OFFICER1
 	disappear ROUTE36NATIONALPARKGATE_OFFICER2
 .Return:
@@ -295,6 +297,8 @@ Route36Officer_ContestHasConcluded:
 	closetext
 	end
 
+.ckir_BEFORE_timed_events_BGC362_ContestNotOn::
+.ckir_AFTER_timed_events_BGC362_ContestNotOn::
 _ContestNotOn:
 	jumptextfaceplayer Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText
 

@@ -1,5 +1,52 @@
 Location:
     -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 42 West
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Route 42 East
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+    -
+        Name: Mt Mortar Access
+        FileName: MountMortar1FOutside.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        Sublocations:
+
+
+    -
         Name: Mt Mortar
         FileName: MountMortar1FOutside.asm
         Type: Map
@@ -7,7 +54,7 @@ Location:
         WildTableList: 
             - MOUNT_MORTAR_1F_OUTSIDE
             - MOUNT_MORTAR_1F_INSIDE
-        LocationReqs: Route 42
+        LocationReqs: Mt Mortar Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -37,6 +84,7 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Mt Mortar Ether Room
             -
                 Name: Mt Mortar Revive
                 FileName: MountMortar1FOutside.asm
@@ -56,6 +104,25 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Mt Mortar Revive Room
+
+            -
+                Name: Mt Mortar Middle
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Mt Mortar
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Mt Mortar Middle
+                Sublocations:
+
             -
                 Name: Mt Mortar Hidden Hyper Potion
                 FileName: MountMortar1FOutside.asm
@@ -77,13 +144,32 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+                WarpReqs: Mt Mortar East
+
+            -
+                Name: Mt Mortar Inside Entry
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Mt Mortar Middle Waterfall
+                Sublocations:
             -
                 Name: Mt Mortar Inside Entry
                 FileName: MountMortar1FInside.asm
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Mt Mortar
+                LocationReqs: Mt Mortar Middle
                 FlagReqs:
                     - Plain Badge
                 ItemReqs:
@@ -92,7 +178,8 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Mt Mortar Middle
                 Sublocations:
             -
                 Name: Mt Mortar Inside Entry
@@ -100,7 +187,7 @@ Location:
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Mt Mortar
+                LocationReqs: Mt Mortar Inside Top
                 FlagReqs:
                     - Rising Badge
                     - Fog Badge
@@ -111,7 +198,8 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Mt Mortar Middle Waterfall
                 Sublocations:
             -
                 Name: Mt Mortar Inside
@@ -207,6 +295,102 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
+                Name: Mt Mortar Inside Top
+                FileName: MountMortar1FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs: Mt Mortar Upper Floor Back
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 13
+                TrainerList:
+                WarpReqs: Mt Mortar Middle Waterfall
+                Sublocations:
+                    -
+                        Name: Mt Mortar Max Potion Number 2
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Inside Top
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: MAX_POTION
+                        Code: |
+                          MountMortar1FInsideMaxPotion:
+                              ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Iron
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Inside Top
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: IRON
+                        Code: |
+                            MountMortar1FInsideIron:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Max Revive
+                        FileName: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Inside Top
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        IsBall: Yes
+                        NormalItem: ESCAPE_ROPE
+                        Code: |
+                            MountMortar1FInsideMaxRevive:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Mt Mortar Hidden Max Repel
+                        FileName: MountMortar1FInside.asm
+                        SecondaryFile: MountMortar1FInside.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Mt Mortar Inside Top
+                        FlagReqs:
+                            - Hidden Items
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: MAX_REPEL
+                        Code: |
+                            MountMortar1FInsideHiddenMaxRepel:
+                                ITEMLINE
+                        SecondaryCode: '    bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel'
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
+            -
                 Name: Mt Mortar Surf Floor
                 FileName: MountMortarB1F.asm
                 Type: Map
@@ -221,7 +405,8 @@ Location:
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Mortar Surf South
                 Sublocations:
                     -
                         Name: Mt Mortar Max Ether
@@ -318,12 +503,13 @@ Location:
                         Text:
                         TrainerList: 
                         Sublocations:
+
             -
-                Name: Mt Mortar Upper Floor
+                Name: Mt Mortar Upper Floor Entry
                 FileName: MountMortar2FInside.asm
                 Type: Map
                 HasPKMN: Yes
-                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                WildTableList:
                 LocationReqs: Mt Mortar
                 FlagReqs:
                     - Fog Badge
@@ -331,6 +517,79 @@ Location:
                 ItemReqs:
                     - Surf
                     - Waterfall
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Mortar Waterfall Room South
+            -
+                Name: Mt Mortar Upper Floor Entry
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList:
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                WarpReqs: Mortar Waterfall Room South
+                Sublocations:
+
+            -
+                Name: Mt Mortar Upper Floor Back Entry
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                LocationReqs: Mt Mortar Upper Floor
+                FlagReqs:
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV: 30
+                TrainerList:
+            -
+                Name: Mt Mortar Upper Floor Back Entry
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                LocationReqs:
+                FlagReqs:
+                    - Warps
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                WarpReqs: Mortar Waterfall Room North
+
+            -
+                Name: Mt Mortar Upper Floor
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                LocationReqs: Mt Mortar Upper Floor Entry
+                FlagReqs:
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 Code:
@@ -397,13 +656,30 @@ Location:
                         Text:
                         TrainerList:
                         Sublocations:
+
+            -
+                    Name: Mt Mortar Upper Floor Back
+                    FileName: MountMortar2FInside.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList: MOUNT_MORTAR_2F_INSIDE
+                    LocationReqs: Mt Mortar Upper Floor Back Entry
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV:
+                    TrainerList:
+                    Sublocations:
                     -
                         Name: Mt Mortar Dragon Scale
                         FileName: MountMortar2FInside.asm
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
+                        LocationReqs: Mt Mortar Upper Floor Back
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -422,7 +698,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
+                        LocationReqs: Mt Mortar Upper Floor Back
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -441,7 +717,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
+                        LocationReqs: Mt Mortar Upper Floor Back
                         FlagReqs:
                         ItemReqs:
                         FlagsSet:
@@ -454,63 +730,7 @@ Location:
                         Text:
                         TrainerList:
                         Sublocations:
-                    -
-                        Name: Mt Mortar Max Potion Number 2
-                        FileName: MountMortar1FInside.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: MAX_POTION
-                        Code: |
-                            MountMortar1FInsideMaxPotion:
-                                ITEMLINE
-                        Text:
-                        TrainerList:
-                        Sublocations:
-                    -
-                        Name: Mt Mortar Iron
-                        FileName: MountMortar1FInside.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: IRON
-                        Code: |
-                            MountMortar1FInsideIron:
-                                ITEMLINE
-                        Text:
-                        TrainerList:
-                        Sublocations:
-                    -
-                        Name: Mt Mortar Max Revive
-                        FileName: MountMortar1FInside.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList: 
-                        LocationReqs: Mt Mortar Upper Floor
-                        FlagReqs:
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        IsBall: Yes
-                        NormalItem: ESCAPE_ROPE
-                        Code: |
-                            MountMortar1FInsideMaxRevive:
-                                ITEMLINE
-                        Text:
-                        TrainerList:
-                        Sublocations:
+
                     -
                         Name: Mt Mortar Hidden Full Restore
                         FileName: MountMortar2FInside.asm
@@ -518,7 +738,7 @@ Location:
                         Type: Item
                         HasPKMN: No
                         WildTableList:
-                        LocationReqs: Mt Mortar Upper Floor
+                        LocationReqs: Mt Mortar Upper Floor Back
                         FlagReqs:
                             - Hidden Items
                         ItemReqs:
@@ -530,47 +750,44 @@ Location:
                                 ITEMLINE
                         SecondaryCode: '    bg_event 24,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenFullRestore'
                         Text:
-                        TrainerList: 
+                        TrainerList:
                         Sublocations:
-                    -
-                        Name: Mt Mortar Hidden Max Revive
-                        FileName: MountMortarB1F.asm
-                        SecondaryFile: MountMortarB1F.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Mt Mortar Upper Floor
-                        FlagReqs:
-                            - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: MAX_REVIVE
-                        Code: |
-                            MountMortarB1FHiddenMaxRevive:
-                                ITEMLINE
-                        SecondaryCode: '    bg_event  4,  6, BGEVENT_ITEM, MountMortarB1FHiddenMaxRevive'
-                        Text:
-                        TrainerList: 
-                        Sublocations:
-                    -
-                        Name: Mt Mortar Hidden Max Repel
-                        FileName: MountMortar1FInside.asm
-                        SecondaryFile: MountMortar1FInside.asm
-                        Type: Item
-                        HasPKMN: No
-                        WildTableList:
-                        LocationReqs: Mt Mortar Upper Floor
-                        FlagReqs:
-                            - Hidden Items
-                        ItemReqs:
-                        FlagsSet:
-                        ReachableReqs:
-                        NormalItem: MAX_REPEL
-                        Code: |
-                            MountMortar1FInsideHiddenMaxRepel:
-                                ITEMLINE
-                        SecondaryCode: '    bg_event 30, 11, BGEVENT_ITEM, MountMortar1FInsideHiddenMaxRepel'
-                        Text:
-                        TrainerList: 
-                        Sublocations:
+
+            -
+                Name: Mt Mortar Tyrogue Room
+                FileName: MountMortar2FInside.asm
+                Type: Map
+                HasPKMN: Yes
+                WildTableList: MOUNT_MORTAR_2F_INSIDE
+                LocationReqs: Mt Mortar Inside Top
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                AREALV:
+                TrainerList:
+                WarpReqs: Mortar Surf North
+                Sublocations:
+                -
+                    Name: Mt Mortar Hidden Max Revive
+                    FileName: MountMortarB1F.asm
+                    SecondaryFile: MountMortarB1F.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Mt Mortar Tyrogue Room
+                    FlagReqs:
+                      - Hidden Items
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: MAX_REVIVE
+                    Code: |
+                      MountMortarB1FHiddenMaxRevive:
+                          ITEMLINE
+                    SecondaryCode: '    bg_event  4,  6, BGEVENT_ITEM, MountMortarB1FHiddenMaxRevive'
+                    Text:
+                    TrainerList:
+                    Sublocations:

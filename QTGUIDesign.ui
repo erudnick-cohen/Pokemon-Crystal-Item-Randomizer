@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>523</height>
+    <width>827</width>
+    <height>687</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>390</y>
+      <y>550</y>
       <width>211</width>
       <height>91</height>
      </rect>
@@ -37,7 +37,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>420</y>
+      <y>580</y>
       <width>221</width>
       <height>61</height>
      </rect>
@@ -63,7 +63,6 @@
     <property name="font">
      <font>
       <pointsize>22</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -81,7 +80,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>70</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -102,7 +101,7 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>80</y>
+      <y>110</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -123,7 +122,7 @@
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>50</y>
+      <y>80</y>
       <width>241</width>
       <height>91</height>
      </rect>
@@ -134,7 +133,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Select Logic 
+     <string>Select Logic
 Settings</string>
     </property>
    </widget>
@@ -142,7 +141,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>80</y>
+      <y>110</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -163,7 +162,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>150</y>
+      <y>180</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -184,7 +183,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>109</y>
+      <y>139</y>
       <width>211</width>
       <height>41</height>
      </rect>
@@ -192,7 +191,6 @@ Settings</string>
     <property name="font">
      <font>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -210,7 +208,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>40</y>
+      <y>70</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -231,9 +229,9 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>70</y>
+      <y>100</y>
       <width>161</width>
-      <height>341</height>
+      <height>461</height>
      </rect>
     </property>
     <item>
@@ -271,7 +269,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>150</y>
+      <y>180</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -289,7 +287,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>200</y>
+      <y>230</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -307,7 +305,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>620</x>
-      <y>40</y>
+      <y>70</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -328,7 +326,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>60</y>
+      <y>90</y>
       <width>231</width>
       <height>21</height>
      </rect>
@@ -345,28 +343,12 @@ Settings</string>
      <set>Qt::AlignHCenter|Qt::AlignTop</set>
     </property>
    </widget>
-   <widget class="QCheckBox" name="OutputSpoiler">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>121</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Output Logic Spoiler?</string>
-    </property>
-    <property name="checked">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>240</y>
-      <width>241</width>
+      <y>380</y>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -385,9 +367,9 @@ Settings</string>
    <widget class="QPushButton" name="SaveSettings">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>420</y>
-      <width>111</width>
+      <x>10</x>
+      <y>580</y>
+      <width>131</width>
       <height>61</height>
      </rect>
     </property>
@@ -405,7 +387,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>70</y>
+      <y>100</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -418,7 +400,7 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
+      <y>100</y>
       <width>51</width>
       <height>16</height>
      </rect>
@@ -433,15 +415,14 @@ Settings</string>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>430</y>
-      <width>181</width>
-      <height>41</height>
+      <x>150</x>
+      <y>580</y>
+      <width>171</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -467,8 +448,8 @@ Settings</string>
    <widget class="QTextEdit" name="ModifierDescription">
     <property name="geometry">
      <rect>
-      <x>323</x>
-      <y>280</y>
+      <x>320</x>
+      <y>410</y>
       <width>241</width>
       <height>111</height>
      </rect>
@@ -581,9 +562,9 @@ Settings</string>
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>180</y>
+      <y>210</y>
       <width>211</width>
-      <height>191</height>
+      <height>321</height>
      </rect>
     </property>
     <property name="palette">
@@ -688,10 +669,10 @@ Settings</string>
     </property>
     <property name="html">
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textInteractionFlags">
      <set>Qt::NoTextInteraction</set>
@@ -703,9 +684,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="PlandoLabel">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>109</y>
-      <width>61</width>
+      <x>20</x>
+      <y>200</y>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
@@ -723,7 +704,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>260</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -743,8 +724,8 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>110</y>
+      <x>40</x>
+      <y>220</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -762,7 +743,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>190</y>
+      <y>300</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -780,7 +761,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>230</y>
+      <y>340</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -798,7 +779,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>270</y>
+      <y>380</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -816,7 +797,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>310</y>
+      <y>460</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -828,7 +809,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Change # of badges
- to unlock Mt. Silver? 
+ to unlock Mt. Silver?
 (Currently 16)</string>
     </property>
    </widget>
@@ -836,7 +817,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
+      <y>530</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -850,14 +831,149 @@ p, li { white-space: pre-wrap; }
      <string>Set Hints (off)</string>
     </property>
    </widget>
+   <widget class="QLabel" name="version">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Version 7.0.8</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LoadPack">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>280</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Load New Pack</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="RaceModeRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Race Mode</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="SpoilerOutputRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Spoiler</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="NoOutputRadioButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>140</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>None</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LoadRaceMode">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Load Race Mode</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="setNewVariables">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When loading in new modifiers, be prompted for any new variables to be set. Note; variables already loaded by settings file will not be prompted for.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Set New Variables</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="setCurrentVariables">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>430</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Change the variables used by any currently loaded modifier.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Set Variables</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>827</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

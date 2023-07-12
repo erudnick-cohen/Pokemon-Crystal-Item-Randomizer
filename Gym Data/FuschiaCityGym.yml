@@ -45,8 +45,16 @@ Location:
                 variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_YOUNGSTER
                 special LoadUsedSpritesGFX
                 opentext
-                BADGELINE
                 sjump .AfterBattle
+            .FightDone:
+                faceplayer
+                opentext
+            .AfterBattle:
+                checkevent EVENT_GOT_SOUL_BADGE
+                iftrue .GotSoulBadge
+                BADGELINE
+                iffalse .GotSoulBadge
+                setevent EVENT_GOT_SOUL_BADGE
         Code:
         Text:
             -

@@ -1,0 +1,48 @@
+Name: No Progression Fly Warps
+Description: "When playing on warps, prevent Fly from being locked behind any progression item."
+FlagsSet:
+    - Fly Warps
+    - Allocate Badges First
+Changes:
+    -
+        Location: Route 45
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+    -
+        Location: Mt Mortar Inside Top
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+    -
+      Location: Mt Mortar Inside
+      AddRecommendedFlagReqs:
+          - Storm Badge
+      AddRecommendedItemReqs:
+          - Fly
+
+
+    -
+        Location: Tin Tower 5F Start
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+    -
+        Location: Route 46 Upper
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+
+IncompatibleWith:
+    - 'Delete Fly'
+    - 'Teleport instead of fly'
+IncompatibleWithout:
+    - 'Warps'

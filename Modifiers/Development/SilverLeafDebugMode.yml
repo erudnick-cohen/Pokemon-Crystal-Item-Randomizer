@@ -1,0 +1,4 @@
+Name: Silver Leaf Debug Mode
+Description: "Mark Silver Leaf an any item deemed impossible"
+FlagsSet:
+    - SilverLeafDebug

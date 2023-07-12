@@ -26,7 +26,7 @@
     {
         "integer_values": {
             "old": [ 39, 30, 9, 7, 0, 255, 255, 144, 0, 115, 86, 20, 7 ],
-            "new": [ 39, 30, 9, 7, 0, 255, 255, 144, 0, 115, 86, 26, 0 ]
+            "new": [ 39, 30, 9, 7, 0, 255, 255, 144, 0, "ckir_BEFORE_YoungsterJoey_ImportantBattleScript", null, 26, 0 ]
         },
         "address_range": {
             "begin": 1711229,
@@ -38,7 +38,7 @@
     {
         "integer_values": {
             "old": [ 39, 32, 6, 9, 0, 255, 255, 146, 3, 154, 86,  21,   7 ],
-            "new": [ 39, 32, 6, 9, 0, 255, 255, 146, 3, 154, 86, 255, 255 ]
+            "new": [ 39, 32, 6, 9, 0, 255, 255, 146, 3, "ckir_BEFORE_YoungsterJoey", null, 255, 255 ]
         },
         "address_range": {
             "begin": 1711242,

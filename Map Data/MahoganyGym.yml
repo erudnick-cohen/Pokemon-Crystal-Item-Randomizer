@@ -1,14 +1,14 @@
 Location:
     -
-        Name: Mahogany Gym
+        Name: Mahogany Gym Entrance
         FileName: MahoganyGym.asm
         Type: Map
         HasPKMN: Yes
-        WildTableList: 
-        LocationReqs: 
-            - Mahogany Town
+        WildTableList:
+        LocationReqs:
+          - Mahogany Town
         FlagReqs:
-            - Mahogany Rockets Defeated
+          - Mahogany Rockets Defeated
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -16,6 +16,25 @@ Location:
         Text:
         TrainerList:
         HintName: Mahogany
+        Sublocations:
+
+    -
+        Name: Mahogany Gym
+        FileName: MahoganyGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList: 
+        LocationReqs: 
+            - Mahogany Gym Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Mahogany
+        WarpReqs: Mahogany Gym
         Sublocations:
             -
                 Name: Pryce TM
@@ -35,14 +54,9 @@ Location:
                             - Mahogany
                 NormalItem: TM_ICY_WIND
                 Code: |
-                    .FightDone:
+                    .GotGlacierBadge:
                         checkevent EVENT_GOT_TM16_ICY_WIND
                         iftrue PryceScript_Defeat
-                        setevent EVENT_BEAT_SKIER_ROXANNE
-                        setevent EVENT_BEAT_SKIER_CLARISSA
-                        setevent EVENT_BEAT_BOARDER_RONALD
-                        setevent EVENT_BEAT_BOARDER_BRAD
-                        setevent EVENT_BEAT_BOARDER_DOUGLAS
                         writetext PryceText_GlacierBadgeSpeech
                         promptbutton
                         ITEMLINE

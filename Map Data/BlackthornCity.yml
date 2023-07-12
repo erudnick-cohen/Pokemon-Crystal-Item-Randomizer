@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
             - BLACKTHORN_CITY
-        LocationReqs: Ice Path Part 2
+        LocationReqs: Ice Path Blackthorn Side
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Blackthorn
+        WarpReqs: Blackthorn
         Sublocations:
             -
                 Name: Blackthorn City Santos
@@ -55,3 +56,166 @@ Location:
                         done
                 TrainerList:
                 Sublocations:
+
+    -
+        Name: Blackthorn Mart
+        FileName: BlackthornCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Blackthorn City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Blackthorn
+        WarpReqs: Blackthorn Mart
+        Sublocations:
+            -
+                Name: Blackthorn Mart Great Ball
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+            -
+                Name: Blackthorn Mart Ultra Ball
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ULTRA_BALL
+            -
+                Name: Blackthorn Mart Hyper Potion
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: HYPER_POTION
+
+            -
+                Name: Blackthorn Mart Max Potion
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: MAX_POTION
+            -
+                Name: Blackthorn Mart Full Heal
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FULL_HEAL
+            -
+                Name: Blackthorn Mart Revive
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REVIVE
+            -
+                Name: Blackthorn Mart Max Repel
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: MAX_REPEL
+            -
+                Name: Blackthorn Mart X Defend
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_DEFEND
+            -
+                Name: Blackthorn Mart X Attack
+                FileName: MartBlackthorn
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Blackthorn Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: X_ATTACK

@@ -1,0 +1,187 @@
+Name: No backtracking early fly
+Description: Ensures that the ability to use fly is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking. This setting intended for when the player wants a faster seed.
+Changes:
+    -
+        Location: Route 37
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Saffron City via Magnet Train
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Route 31 Kenya Item
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Dark Cave Violet Potion
+        AddFlagReqs:
+            - Storm Badge
+        AddItemReqs:
+            - Fly
+    -
+        Location: Mr. Pokemon's EXP Share
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Mystic Water Man
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Elm Aide Pokeballs
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Elm Master Ball
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Violet City Rare Candy
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Violet City PP UP
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Route 32 Roar Dude
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Miracle Seed Man
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Route 27
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Union Cave Floor 3
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Slowpoke Well Floor 2
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Soft Sand Girls
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Route 34 Nugget
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Kenya Gate Item
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Goldenrod Tunnel
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Ruins of Alph Light Chamber
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Ruins of Alph Water Chamber
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Flower Shop
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Goldenrod City Buy Rock Smash
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Radio Tower Rockets Part 1
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Radio Tower Rockets Part 2
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Route 29 Tuscany
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Rock Smash Guy
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+    -
+        Location: Route 35 MysteryBerry
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+    -
+        Location: Ruins of Alph Rope Chamber
+        AddRecommendedFlagReqs:
+            - Storm Badge
+        AddRecommendedItemReqs:
+            - Fly
+
+IncompatibleWith:
+    - 'Delete Fly'

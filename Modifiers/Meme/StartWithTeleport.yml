@@ -1,0 +1,5 @@
+Name: Start with Teleport
+Description: Start with TM09 Teleport.
+NewGamePatches:
+    - 'Patches/TM09Teleport.json'
+    - 'Patches/StartersTM09.json'

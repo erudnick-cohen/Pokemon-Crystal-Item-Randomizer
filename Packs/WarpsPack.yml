@@ -1,0 +1,6 @@
+Name: Warps Pack
+Modifiers:
+    - Modifiers/Warps.yml
+    - Modifiers/StartWithBike.yml
+    - Modifiers/NoProgressionFlyWarps.yml
+    - Modifiers/SilverLeafDebugMode.yml

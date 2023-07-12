@@ -1,6 +1,24 @@
 Location:  
     -
-        Name: Cianwood City
+        Name: Cianwood City Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CIANWOOD_CITY
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        HintName: Cianwood
+        WarpReqs:
+            - Cianwood
+    -
+        Name: Cianwood City Entrance
         FileName: CianwoodCity.asm
         Type: Map
         HasPKMN: No
@@ -13,62 +31,36 @@ Location:
         ReachableReqs:
         Code:
         Text:
+        HintName: Cianwood            
+    -
+        Name: Cianwood City
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+            - CIANWOOD_CITY
+        LocationReqs: Cianwood City Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
         AREALV: 16
         TrainerList:
             - MYSTICALMAN 1
         HintName: Cianwood
         Sublocations:
             -
-                Name: Secret Potion Man
-                FileName: CianwoodPharmacy.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 41
-                FlagReqs:
-                    - Lighthouse
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    CianwoodPharmacist:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
-                        iftrue .Mart
-                        checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
-                        iffalse .Mart
-                        writetext PharmacistGiveSecretpotionText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
-                        writetext PharmacistDescribeSecretpotionText
-                        waitbutton
-                        closetext
-                        end
-                Text: |
-                    ReceivedSecretpotionText:
-                        text "<PLAYER> received"
-                        line "ITEMNAME."
-                        done
-
-                    PharmacistDescribeSecretpotionText:
-                        text "My ITEMNAME is"
-                        line "a tad too strong."
-
-                        para "I only offer it in"
-                        line "an emergency."
-                        done
-                TrainerList:
-                Sublocations:
-            -
                 Name: Cianwood Fly HM
                 FileName: CianwoodCity.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Chuck TM
+                LocationReqs:
+                    - Cianwood City
                 FlagReqs:
+                    - Chuck Defeated
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -140,10 +132,8 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: REVIVE
@@ -164,10 +154,8 @@ Location:
                 LocationReqs: Cianwood City
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER
@@ -178,3 +166,152 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+
+    -
+        Name: Cianwood Pharmacy
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Cianwood City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Cianwood
+        WarpReqs: Cianwood Pharmacy
+        Sublocations:
+        -
+            Name: Secret Potion Man
+            FileName: CianwoodPharmacy.asm
+            Type: Item
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+              - Lighthouse Visited
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code: |
+              CianwoodPharmacist:
+                  faceplayer
+                  opentext
+                  checkevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+                  iftrue .Mart
+                  checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
+                  iffalse .Mart
+                  writetext PharmacistGiveSecretpotionText
+                  promptbutton
+                  ITEMLINE
+                  iffalse .SkipSecretPotion
+                  setevent EVENT_GOT_SECRETPOTION_FROM_PHARMACY
+              .SkipSecretPotion
+                  writetext PharmacistDescribeSecretpotionText
+                  waitbutton
+                  sjump .CheckShopsanity
+                  end
+            Text: |
+              ReceivedSecretpotionText:
+                  text "<PLAYER> received"
+                  line "ITEMNAME."
+                  done
+    
+              PharmacistDescribeSecretpotionText:
+                  text "My ITEMNAME is"
+                  line "a tad too strong."
+    
+                  para "I only offer it in"
+                  line "an emergency."
+                  done
+            TrainerList:
+            Sublocations:
+        -
+            Name: Cianwood Pharmacy Potion
+            FileName: MartCianwood
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: POTION
+            Sublocations:
+        -
+            Name: Cianwood Pharmacy Super Potion
+            FileName: MartCianwood
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SUPER_POTION
+            Sublocations:
+        -
+            Name: Cianwood Pharmacy Hyper Potion
+            FileName: MartCianwood
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: HYPER_POTION
+            Sublocations:
+        -
+            Name: Cianwood Pharmacy Full Heal
+            FileName: MartCianwood
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_HEAL
+            Sublocations:
+        -
+            Name: Cianwood Pharmacy Revive
+            FileName: MartCianwood
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Cianwood Pharmacy
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:

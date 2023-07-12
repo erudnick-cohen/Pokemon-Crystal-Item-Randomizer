@@ -42,7 +42,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Route 26
         Sublocations:
     -
         Name: Route 26 Max Elixer

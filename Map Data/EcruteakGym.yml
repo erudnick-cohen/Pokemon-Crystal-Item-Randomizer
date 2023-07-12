@@ -5,8 +5,9 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Burned Tower
+        LocationReqs: Ecruteak City
         FlagReqs:
+            - Released Beasts
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -14,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Ecruteak
+        WarpReqs: Ecruteak Gym
         Sublocations:
             -
                 Name: Morty TM
@@ -25,6 +27,7 @@ Location:
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
+                    - Morty Defeated
                 ReachableReqs:
                 Tags:
                     -
@@ -33,13 +36,9 @@ Location:
                             - Ecruteak
                 NormalItem: TM_SHADOW_BALL
                 Code: |
-                    .FightDone:
+                    .GotFogBadge:
                         checkevent EVENT_GOT_TM30_SHADOW_BALL
                         iftrue .GotShadowBall
-                        setevent EVENT_BEAT_SAGE_JEFFREY
-                        setevent EVENT_BEAT_SAGE_PING
-                        setevent EVENT_BEAT_MEDIUM_MARTHA
-                        setevent EVENT_BEAT_MEDIUM_GRACE
                         writetext MortyText_FogBadgeSpeech
                         promptbutton
                         ITEMLINE
@@ -83,7 +82,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Ecruteak City
+                LocationReqs: Ecruteak Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

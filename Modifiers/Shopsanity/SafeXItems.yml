@@ -1,0 +1,83 @@
+Name: Safe X Items
+Description: Adds X Items into logic and makes them accessible for purchase before difficult fights
+AddedItems:
+    - X Attack
+    - X Defend
+    - X Speed
+    - X Special
+    - X Accuracy
+    - Dire Hit
+    - Guard Spec
+Changes:
+    -
+        Location: All X Items
+        RemoveFlagReqs:
+            - Banned
+    -
+        Location: Lance
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Woke Snorlax
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Goldenrod Tunnel
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Rockets In Radio Tower
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Victory Road Rival Fight
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Red
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Tin Tower Sages
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Pewter City Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Route 25 Trainer Gauntlet
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Cerulean City Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Vermilion City Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Celadon Gym
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Fuchsia Gym
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Cinnabar Island Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Viridian City Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+    -
+        Location: Saffron City Gym Badge
+        AddRecommendedFlagReqs:
+            - All X Items
+
+
+IncompatibleWithout:
+    - 'Shopsanity'

@@ -1,0 +1,10 @@
+Name: No Elite Four
+Description: Ensures E4 is not required.
+Changes:
+    -
+        Location: Lance
+        AddFlagReqs:
+            - Defeated Red
+IncompatibleWithout:
+    - 'Skip E4 and fight Red'
+    - 'Open Mt. Silver'

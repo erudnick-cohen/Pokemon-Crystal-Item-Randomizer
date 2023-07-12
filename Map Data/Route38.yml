@@ -21,7 +21,7 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList:
-        LocationReqs: Ecruteak City via Route 37
+        LocationReqs: Ecruteak City
         FlagReqs:
         ItemReqs:
             - Squirtbottle
@@ -70,6 +70,25 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+
+    -
+        Name: Route 38 Entrance
+        FileName: Route39.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs: Olivine
+        Sublocations:
+
     -
         Name: Route 38
         FileName: Route38.asm

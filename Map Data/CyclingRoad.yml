@@ -19,6 +19,7 @@ Location:
             - BIKER 6
             - BIKER 8
             - BIKER 9
+        WarpReqs: Cycling Road North
         Sublocations:
             -
                 Name: Route 17 Hidden Max Ether
@@ -30,8 +31,8 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
-                    - Bicycle
                 ItemReqs:
+                    - Bicycle
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER
@@ -52,8 +53,8 @@ Location:
                 LocationReqs: Cycling Road
                 FlagReqs:
                     - Hidden Items
-                    - Bicycle
                 ItemReqs:
+                    - Bicycle
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ELIXER

@@ -1,0 +1,4 @@
+Name: Start With Repel
+Description: Start with Repel in inventory.
+NewGamePatches:
+    - 'Patches/EnableStartRepel.json'

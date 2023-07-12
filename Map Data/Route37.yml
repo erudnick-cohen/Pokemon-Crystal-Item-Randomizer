@@ -53,14 +53,9 @@ Location:
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_37
-        LocationReqs: Ecruteak City via Route 38
+        LocationReqs: Ecruteak City
         FlagReqs:
-            - Hive Badge
-            - Kanto Mode
         ItemReqs:
-            - Pass
-            - S S Ticket
-            - Cut
         FlagsSet:
         ReachableReqs:
         Code:
@@ -86,6 +81,7 @@ Location:
             - TWINS 2
             - TWINS 3
             - PSYCHIC_T 5
+        WarpReqs: Ecruteak
         Sublocations:
             -
                 Name: Route 37 Hidden Ether

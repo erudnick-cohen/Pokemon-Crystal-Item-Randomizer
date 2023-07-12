@@ -1,15 +1,27 @@
 Location:  
     -
+        Name: Route 41 Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 40 Water
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
         Name: Route 41
         FileName: Route41.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_41
-        LocationReqs: Route 40 Water
+        LocationReqs: Route 41 Entrance
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
@@ -27,6 +39,55 @@ Location:
             - SWIMMERF 3
             - SWIMMERF 4
         Sublocations:
+
+
+    -
+        Name: Route 41 Whirl SW Access
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 41
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 41 Whirl SW Access
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 41
+        ItemReqs:
+        FlagReqs:
+            - Warps
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        WarpReqs: Whirl SW
+    -
+        Name: Route 41 Whirl SW
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 41 Whirl SW Access
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        Sublocations:
             -
                 Name: Route 41 Hidden Max Ether
                 FileName: Route41.asm
@@ -34,24 +95,133 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 41
+                LocationReqs: Route 41 Whirl SW
                 FlagReqs:
-                    - Hidden Items
-                    - Fog Badge
-                    - Glacier Badge
+                  - Hidden Items
+                  - Fog Badge
                 ItemReqs:
-                    - Surf
-                    - Whirlpool
+                  - Surf
                 Tags:
-                    - Name: Annoying
-                      SubTags:
+                  - Name: Annoying
+                    SubTags:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_ETHER
                 Code: |
-                    Route41HiddenMaxEther:
-                        ITEMLINE
+                  Route41HiddenMaxEther:
+                      ITEMLINE
                 SecondaryCode: '    bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther'
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:
+
+    -
+        Name: Route 41 via Whirl Warp
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Warps
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        WarpReqs: Whirl SE
+
+    -
+        Name: Route 41 via Whirl Warp
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Warps
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        WarpReqs: Whirl NE
+
+    -
+        Name: Route 41 via Whirl Warp
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Warps
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        WarpReqs: Whirl SW
+
+    -
+        Name: Route 41 via Whirl Warp
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+        ItemReqs:
+            - Surf
+            - Whirlpool
+        FlagReqs:
+            - Warps
+            - Glacier Badge
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+        WarpReqs: Whirl NW
+
+    -
+        Name: Route 41 Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 41 via Whirl Warp
+        ItemReqs:
+        FlagReqs:
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 41 Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Cianwood City
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+            - Warps
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:

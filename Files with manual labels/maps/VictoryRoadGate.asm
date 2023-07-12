@@ -41,9 +41,13 @@ VictoryRoadGateBadgeCheckScript:
 	setscene SCENE_FINISHED
 	end
 
+.ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateLeftBlackBeltScript::
+.ckir_AFTER_object_event_MT_SILVER_GUARD_VictoryRoadGateLeftBlackBeltScript::
 VictoryRoadGateLeftBlackBeltScript:
 	jumptextfaceplayer VictoryRoadGateLeftBlackBeltText
 
+.ckir_BEFORE_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript::
+.ckir_AFTER_object_event_MT_SILVER_GUARD_VictoryRoadGateRightBlackBeltScript::
 VictoryRoadGateRightBlackBeltScript:
 	jumptextfaceplayer VictoryRoadGateRightBlackBeltText
 
@@ -118,4 +122,6 @@ VictoryRoadGate_MapEvents:
 .ckir_BEFORE_object_event_MT_SILVER_GUARD::
 	object_event  7,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateLeftBlackBeltScript, EVENT_OPENED_MT_SILVER
 .ckir_AFTER_object_event_MT_SILVER_GUARD::
+.ckir_BEFORE_object_event_MT_SILVER_GUARD2::
 	object_event 12,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, EVENT_FOUGHT_SNORLAX
+.ckir_AFTER_object_event_MT_SILVER_GUARD2::

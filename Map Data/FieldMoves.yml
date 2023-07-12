@@ -1,0 +1,88 @@
+Location:
+    -
+        Name: Use Rock Smash Base
+        FileName: ElmsLab.asm
+        Type: Map
+        WildTableList:
+        HasPKMN: No
+        LocationReqs:
+        FlagReqs:
+          - Rock Smash Guy Gives Item
+          - Goldenrod Store Accessible
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Use Rock Smash Shopsanity
+        FileName: ElmsLab.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        ItemReqs:
+            - Rock Smash
+        FlagReqs:
+          - Shopsanity
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Use Rock Smash Possible
+        FileName: ElmsLab.asm
+        WildTableList:
+        Type: Map
+        HasPKMN: No
+        LocationReqs:
+          - Use Rock Smash Base
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Use Rock Smash Possible
+        FileName: ElmsLab.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+          - Use Rock Smash Shopsanity
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Use Rock Smash
+        FileName: ElmsLab.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+          - Use Rock Smash Possible
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+          - Rock Smash Usable
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:

@@ -16,6 +16,8 @@ Route30_MapScripts:
 
 	db 0 ; callbacks
 
+.ckir_BEFORE_YoungsterJoey_ImportantBattleScript::
+.ckir_AFTER_YoungsterJoey_ImportantBattleScript::
 YoungsterJoey_ImportantBattleScript:
 	waitsfx
 	playmusic MUSIC_JOHTO_TRAINER_BATTLE
@@ -36,6 +38,8 @@ YoungsterJoey_ImportantBattleScript:
 	special RestartMapMusic
 	end
 
+.ckir_BEFORE_YoungsterJoey::
+.ckir_AFTER_YoungsterJoey::
 TrainerYoungsterJoey:
 	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
 
@@ -76,7 +80,9 @@ TrainerYoungsterJoey:
 	ifequal 1, .Fight4
 	ifequal 0, .Fight4
 .ckir_AFTER_Joey::
+.ckir_BEFORE_Joey_Fight4::
 .Fight4:
+.ckir_AFTER_Joey_Fight4::
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
 .Fight3:

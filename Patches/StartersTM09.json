@@ -1,0 +1,77 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                45,
+                155,
+                5,
+                173,
+                0
+            ],
+            "new": [
+                45,
+                155,
+                5,
+                200,
+                0
+            ]
+        },
+        "address_range": {
+            "begin": 494785,
+            "end": 494790,
+            "Offset": 3
+        },
+        "label": "Randomizer_StarterCyndaquilOffset4.ckir_BEFORE_STARTER1",
+        "description": "Equips starter with a TM09"
+    },
+    {
+        "integer_values": {
+            "old": [
+                45,
+                155,
+                5,
+                173,
+                0
+            ],
+            "new": [
+                45,
+                155,
+                5,
+                200,
+                0
+            ]
+        },
+        "address_range": {
+            "begin": 494851,
+            "end": 494856,
+            "Offset": 3
+        },
+        "label": "Randomizer_StarterTotodileOffset4.ckir_BEFORE_STARTER2",
+        "description": "Equips starter with a TM09"
+    },
+    {
+        "integer_values": {
+            "old": [
+                45,
+                155,
+                5,
+                173,
+                0
+            ],
+            "new": [
+                45,
+                155,
+                5,
+                200,
+                0
+            ]
+        },
+        "address_range": {
+            "begin": 494911,
+            "end": 494916,
+            "Offset": 3
+        },
+        "label": "Randomizer_StarterChikoritaOffset4.ckir_BEFORE_STARTER3",
+        "description": "Equips starter with a TM09"
+    }
+]

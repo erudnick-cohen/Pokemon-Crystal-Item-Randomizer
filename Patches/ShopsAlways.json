@@ -1,0 +1,108 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                75,
+                7,
+                8,
+                6,
+                0,
+                255,
+                255,
+                0,
+                0,
+                112,
+                67,
+                218,
+                6
+            ],
+            "new": [
+                75,
+                7,
+                8,
+                6,
+                0,
+                255,
+                255,
+                0,
+                0,
+                112,
+                67,
+                255,
+                255
+            ]
+        },
+        "address_range": {
+            "begin": 443935,
+            "end": 443948
+        },
+        "label": "MahoganyMart1F_MapEvents.ckir_BEFORE_shop_events_ROCKETSHOP",
+        "description": "Rocket shop is always available"
+    },
+    {
+        "integer_values": {
+            "old": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "new": [
+                107,
+                107,
+                107,
+                107,
+                107,
+                107
+            ]
+        },
+        "address_range": {
+            "begin": 443250,
+            "end": 443256
+        },
+        "label": "MahoganyMart1FPharmacistScript.ckir_BEFORE_shop_events_ROCKETSHOPOPEN",
+        "description": "Rocket shop is always open"
+    },
+    {
+        "integer_values": {
+            "old": [
+                47,
+                7,
+                8,
+                6,
+                0,
+                255,
+                255,
+                0,
+                0,
+                184,
+                113,
+                255,
+                255
+            ],
+            "new": [
+                47,
+                7,
+                8,
+                6,
+                0,
+                255,
+                255,
+                0,
+                0,
+                180,
+                113,
+                255,
+                255
+            ]
+        },
+        "address_range": {
+            "begin": 487939,
+            "end": 487952
+        },
+        "label": "MountMoonGiftShop_MapEvents.ckir_BEFORE_shop_events_MOONSHOP",
+        "description": "Mount Moon shop always open"
+    }
+]

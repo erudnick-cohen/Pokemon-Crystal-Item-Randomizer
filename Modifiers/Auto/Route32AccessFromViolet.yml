@@ -1,0 +1,15 @@
+Name: Route 32 Access From Violet
+Description: Add the ability to travel between Violet & Route 32 freely with the required warp change.
+Changes:
+    -
+        Location: Route 32
+        RemoveFlagReqs:
+            - Received Togepi Egg
+
+    -
+        Location: Route 32 Entrance
+        RemoveFlagReqs:
+            - Received Togepi Egg
+
+IncompatibleWithout:
+    - 'Warps'

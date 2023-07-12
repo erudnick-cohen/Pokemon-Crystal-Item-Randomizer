@@ -14,12 +14,12 @@ Location:
         ItemUnlock:
         InfeasibleBadges:
         NormalBadge: Thunder Badge
-        HintName: Vermillion
+        HintName: Vermilion
         Tags:
             -
                 Name: Leader
                 SubTags:
-                    - Vermillion
+                    - Vermilion
         BadgeLine: |
             VermilionGymSurgeScript:
                 faceplayer
@@ -38,7 +38,13 @@ Location:
                 setevent EVENT_BEAT_GUITARIST_VINCENT
                 setevent EVENT_BEAT_JUGGLER_HORTON
                 opentext
+            .FightDone:
+                checkevent EVENT_GOT_THUNDER_BADGE
+                iftrue .GotThunderBadge
                 BADGELINE
+                iffalse .EndSurge
+                setevent EVENT_GOT_THUNDER_BADGE
+            .EndSurge
                 writetext LtSurgeThunderBadgeText
                 waitbutton
                 closetext

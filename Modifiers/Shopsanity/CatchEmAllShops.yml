@@ -1,0 +1,12 @@
+Name: Catch Em All Shops
+Description: Adds logic to enforce at least one shop to hold items useful for catch em all, i.e. TM for Headbutt and evolutionary stones.
+FlagsSet:
+    - Catch Em All Shops
+DontReplace:
+    - THUNDERSTONE
+    - WATER_STONE
+    - FIRE_STONE
+    - LEAF_STONE
+    - MOON_STONE
+    - SUN_STONE
+    - TM_HEADBUTT

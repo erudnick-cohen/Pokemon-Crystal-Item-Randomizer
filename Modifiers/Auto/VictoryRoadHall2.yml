@@ -1,0 +1,10 @@
+Name: Victory Road Hall 2
+Description: Remove restrictions for Victory Road Hall 2.
+Changes:
+    -
+        Location: Victory Road Hall 2 Ledge TM
+        RemoveFlagReqs:
+            - Impossible
+
+IncompatibleWithout:
+    - 'Warps'

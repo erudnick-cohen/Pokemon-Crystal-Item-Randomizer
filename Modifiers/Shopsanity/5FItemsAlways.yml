@@ -1,0 +1,6 @@
+Name: Goldenrod 5F Items Always
+Description: Removes restriction on 5F Items
+NewGamePatches:
+  - Patches/5FItemsAlways.json
+IncompatibleWithout:
+    - 'Shopsanity'

@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Cianwood
+        WarpReqs: Cianwood Gym
         Sublocations:
             -
                 Name: Chuck TM
@@ -27,6 +28,7 @@ Location:
                 ItemReqs:
                     - Strength
                 FlagsSet:
+                    - Chuck Defeated
                 ReachableReqs:
                 NormalItem: TM_DYNAMICPUNCH
                 Tags:
@@ -35,13 +37,9 @@ Location:
                         SubTags:
                             - Cianwood
                 Code: |
-                    .FightDone:
+                    .GotStormBadge:
                         checkevent EVENT_GOT_TM01_DYNAMICPUNCH
                         iftrue .AlreadyGotTM
-                        setevent EVENT_BEAT_BLACKBELT_YOSHI
-                        setevent EVENT_BEAT_BLACKBELT_LAO
-                        setevent EVENT_BEAT_BLACKBELT_NOB
-                        setevent EVENT_BEAT_BLACKBELT_LUNG
                         writetext ChuckExplainBadgeText
                         promptbutton
                         ITEMLINE
@@ -70,7 +68,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Cianwood City
+                LocationReqs: Cianwood Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -88,7 +86,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Cianwood City
+                LocationReqs: Cianwood Gym
                 FlagReqs:
                     - Plain Badge
                 ItemReqs:

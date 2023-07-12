@@ -8,7 +8,9 @@ import random
 #progressItems is the list of items that progress logic
 #trashItems is everything else
 #badgeData is a dict where the keys are the bagde names and the values are the badge objects
-def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=[]):
+def RandomizeItems(goalID,locationTree, progressItems, trashItems, badgeData, inputFlags=None):
+	if inputFlags is None:
+		inputFlags = []
 	#define state dict that determines if things are available or not
 	state = defaultdict(lambda: False)
 	#set initial flags

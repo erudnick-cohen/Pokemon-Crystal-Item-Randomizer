@@ -1,12 +1,10 @@
 Location:
     -
-        Name: Sprout Tower
+        Name: Climb Sprout Tower
         FileName: SproutTower1F.asm
         Type: Map
         HasPKMN: No
-        WildTableList: 
-            - SPROUT_TOWER_2F
-            - SPROUT_TOWER_3F
+        WildTableList:
         LocationReqs: Violet City
         FlagReqs:
         ItemReqs:
@@ -14,144 +12,256 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        Sublocations:
+    -
+        Name: Climb Sprout Tower
+        FileName: SproutTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Sprout Tower
+        FileName: SproutTower1F.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+            - SPROUT_TOWER_2F
+            - SPROUT_TOWER_3F
+        LocationReqs: Climb Sprout Tower
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
         Sublocations:
             -
-                Name: Sprout Tower Parlyz Heal
-                FileName: SproutTower1F.asm
-                Type: Item
+                Name: Sprout Tower 2F Part 1
+                FileName: SproutTower2F.asm
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
+                WildTableList:
+                    - SPROUT_TOWER_2F
                 LocationReqs: Sprout Tower
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: PARLYZ_HEAL
-                IsBall: Yes
-                Code: |
-                    SproutTower1FParlyzHeal:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Sprout Tower 2F Part 1
                 Sublocations:
+
             -
-                Name: Sprout Tower X Accuracy
+                Name: Sprout Tower 1F Part 2
                 FileName: SproutTower2F.asm
-                Type: Item
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs: Sprout Tower
+                WildTableList:
+                LocationReqs: Sprout Tower 2F Part 1
                 FlagReqs:
-                ItemReqs: 
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: X_ACCURACY
-                IsBall: Yes
-                Code: |
-                    SproutTower2FXAccuracy:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Sprout Tower 1F Part 2
                 Sublocations:
+                    -
+                        Name: Sprout Tower Parlyz Heal
+                        FileName: SproutTower1F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Sprout Tower 1F Part 2
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: PARLYZ_HEAL
+                        IsBall: Yes
+                        Code: |
+                            SproutTower1FParlyzHeal:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
             -
-                Name: Sprout Tower Potion
-                FileName: SproutTower3F.asm
-                Type: Item
+                Name: Sprout Tower 2F Part 2
+                FileName: SproutTower2F.asm
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs: Sprout Tower
+                WildTableList:
+                    - SPROUT_TOWER_2F
+                LocationReqs: Sprout Tower 1F Part 2
                 FlagReqs:
-                ItemReqs: 
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: POTION
-                IsBall: Yes
-                Code: |
-                    SproutTower3FPotion:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Sprout Tower 2F Part 2
                 Sublocations:
+                    -
+                        Name: Sprout Tower X Accuracy
+                        FileName: SproutTower2F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Sprout Tower 2F Part 2
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: X_ACCURACY
+                        IsBall: Yes
+                        Code: |
+                            SproutTower2FXAccuracy:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+
             -
-                Name: Sprout Tower Escape Rope
+                Name: Sprout Tower 3F
                 FileName: SproutTower3F.asm
-                Type: Item
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs: Sprout Tower
+                WildTableList:
+                    - SPROUT_TOWER_3F
+                LocationReqs: Sprout Tower 2F Part 2
                 FlagReqs:
-                ItemReqs: 
+                ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: ESCAPE_ROPE
-                IsBall: Yes
-                Code: |
-                    SproutTower3FEscapeRope:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Sprout Tower 3F
                 Sublocations:
-            -
-                Name: Sprout Tower Flash HM
-                FileName: SproutTower3F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Sprout Tower
-                FlagReqs:
-                ItemReqs: 
-                FlagsSet:
-                ReachableReqs:
-                Code: |
-                    SageLiScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_HM05_FLASH
-                        iftrue .GotFlash
-                        writetext SageLiSeenText
-                        waitbutton
-                        closetext
-                        winlosstext SageLiBeatenText, 0
-                        loadtrainer SAGE, LI
-                        startbattle
-                        reloadmapafterbattle
-                        opentext
-                        writetext SageLiTakeThisFlashText
-                        promptbutton
-                        ITEMLINE
-                        setevent EVENT_GOT_HM05_FLASH
-                        setevent EVENT_BEAT_SAGE_LI
-                        writetext SageLiFlashExplanationText
-                        waitbutton
-                        closetext
-                        end
-                Text: |
-                    UnknownText_0x184cc2:
-                        text "You and your #-"
-                        line "MON should have"
+                    -
+                        Name: Sprout Tower Potion
+                        FileName: SproutTower3F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Sprout Tower 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: POTION
+                        IsBall: Yes
+                        Code: |
+                          SproutTower3FPotion:
+                              ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
 
-                        para "no problem using"
-                        line "this move."
+                    -
+                        Name: Sprout Tower Escape Rope
+                        FileName: SproutTower3F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Sprout Tower 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        NormalItem: ESCAPE_ROPE
+                        IsBall: Yes
+                        Code: |
+                            SproutTower3FEscapeRope:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
 
-                        para "Take this ITEMNAME"
-                        line "HM."
-                        done
+                    -
+                        Name: Sprout Tower Flash HM
+                        FileName: SproutTower3F.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Sprout Tower 3F
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        ReachableReqs:
+                        Code: |
+                            SageLiScript:
+                                faceplayer
+                                opentext
+                                checkevent EVENT_GOT_HM05_FLASH
+                                iftrue .GotFlash
+                                checkevent EVENT_BEAT_SAGE_LI
+                                iftrue .Flash
+                                writetext SageLiSeenText
+                                waitbutton
+                                closetext
+                                winlosstext SageLiBeatenText, 0
+                                loadtrainer SAGE, LI
+                                startbattle
+                                reloadmapafterbattle
+                            .Flash
+                                opentext
+                                writetext SageLiTakeThisFlashText
+                                promptbutton
+                                ITEMLINE
+                                iffalse .SkipFlash
+                                setevent EVENT_GOT_HM05_FLASH
+                            .SkipFlash
+                                setevent EVENT_BEAT_SAGE_LI
+                                writetext SageLiFlashExplanationText
+                                waitbutton
+                                closetext
+                                end
+                        Text: |
+                            UnknownText_0x184cc2:
+                                text "You and your #-"
+                                line "MON should have"
 
-                    UnknownText_0x184d13:
-                        text "ITEMNAME illuminates"
-                        line "even the darkest"
-                        cont "of all places."
+                                para "no problem using"
+                                line "this move."
 
-                        para "But to use it out"
-                        line "of battle, you"
+                                para "Take this ITEMNAME"
+                                line "HM."
+                                done
 
-                        para "need the BADGE"
-                        line "from VIOLET's GYM."
-                        done
-                    
-                TrainerList: 
-                Sublocations:
+                            UnknownText_0x184d13:
+                                text "ITEMNAME illuminates"
+                                line "even the darkest"
+                                cont "of all places."
+
+                                para "But to use it out"
+                                line "of battle, you"
+
+                                para "need the BADGE"
+                                line "from VIOLET's GYM."
+                                done
+
+                        TrainerList:
+                        Sublocations:
+
             -
                 Name: Sprout Tower Trainers and Pokemon
                 FileName: SproutTower1F.asm

@@ -68,49 +68,6 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Super Rod Guru
-                FileName: Route12SuperRodHouse.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs:
-                    - Route 12
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: SUPER_ROD
-                Code: |
-                    Route12SuperRodHouseFishingGuruScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_SUPER_ROD
-                        iftrue .GotSuperRod
-                        writetext OfferSuperRodText
-                        yesorno
-                        iffalse .Refused
-                        writetext GiveSuperRodText
-                        promptbutton
-                        ITEMLINE
-                        iffalse .NoRoom
-                        setevent EVENT_GOT_SUPER_ROD
-                    .GotSuperRod:
-                        writetext GaveSuperRodText
-                        waitbutton
-                        closetext
-                        end
-                Text: |
-                    UnknownText_0x7f52f:
-                        text "Yes, yes. Just as"
-                        line "I thought!"
-
-                        para "Here, fishing fan!"
-                        line "Take this--it's a"
-                        cont "ITEMNAME."
-                        done
-                TrainerList: 
-                Sublocations:
-            -
                 Name: Route 12 Hidden Elixer
                 FileName: Route12.asm
                 SecondaryFile: Route12.asm
@@ -133,3 +90,48 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Super Rod Guru
+        FileName: Route12SuperRodHouse.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+            - Route 12
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: SUPER_ROD
+        WarpReqs: Super Rod House
+        Code: |
+            Route12SuperRodHouseFishingGuruScript:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_SUPER_ROD
+                iftrue .GotSuperRod
+                writetext OfferSuperRodText
+                yesorno
+                iffalse .Refused
+                writetext GiveSuperRodText
+                promptbutton
+                ITEMLINE
+                iffalse .NoRoom
+                setevent EVENT_GOT_SUPER_ROD
+            .GotSuperRod:
+                writetext GaveSuperRodText
+                waitbutton
+                closetext
+                end
+        Text: |
+            UnknownText_0x7f52f:
+                text "Yes, yes. Just as"
+                line "I thought!"
+
+                para "Here, fishing fan!"
+                line "Take this--it's a"
+                cont "ITEMNAME."
+                done
+        TrainerList:
+        Sublocations:

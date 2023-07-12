@@ -29,6 +29,7 @@ DefaultModifiers:
 - Modifiers/VanillaClair.yml
 - Modifiers/EnableTinTower.yml
 - Modifiers/CardRandomization.yml
+- Modifiers/NerfHoOhChamber.yml
 Description: Only 14 badges are required to unlock Mt. Silver and fight Red. Items and badges are shuffled interchangably. Gyms may not be required
   to beat the game. Expected completion time is between 20 minutes and 4 hours for
   experienced players. This mode allows for the largest number of skips relative

@@ -1,10 +1,27 @@
 Location:
     -
-        Name: Ruins of Alph
-        FileName: 
+        Name: Ruins of Alph Access
+        FileName:
         Type: Map
         HasPKMN: No
-        WildTableList: 
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Ruins of Alph Access
+        FileName:
+        Type: Map
+        HasPKMN: No
+        WildTableList:
         LocationReqs: Violet City
         FlagReqs:
         ItemReqs:
@@ -12,7 +29,24 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Ruins of Alph
+        FileName: 
+        Type: Map
+        HasPKMN: No
+        WildTableList: 
+        LocationReqs: Ruins of Alph Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        WarpReqs:
         Sublocations:
             -
                 Name: Ruins of Alph Trainers
@@ -44,13 +78,15 @@ Location:
                 FlagReqs:
                     - Most Map Access
                     - Mon Locked Checks
+                    - Unown Puzzle
                 ItemReqs:
                 FlagsSet:
                 MonReq: Unown
                 ReachableReqs:
                 Text:
                 NormalItem: ENGINE_UNOWN_DEX
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Ruins Research Center
                 Code: |
                     .GetUnownDexScript:
                         applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x5926f
@@ -73,6 +109,9 @@ Location:
                         playsound SFX_ITEM
                         waitsfx
                         ITEMLINE
+                        iffalse .SkipDex
+                        setevent EVENT_GOT_UNOWN_DEX
+                    .SkipDex
                         setevent EVENT_TALKED_TO_RUINS_COWARD
                         writetext RuinsOfAlphResearchCenterScientist3Text
                         waitbutton
@@ -81,82 +120,254 @@ Location:
                         setscene SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
                         special RestartMapMusic
                         end
-            -
-                Name: Ruins of Alph Rope Chamber 1
-                FileName: RuinsOfAlphKabutoItemRoom.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ruins of Alph
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                NormalItem: BERRY
-                IsBall: Yes
-                ReachableReqs:
-                Code: |
-                    RuinsOfAlphKabutoItemRoomBerry:
-                        ITEMLINE
-                Text:
-                TrainerList: 
                 Sublocations:
+                -
+                    Name: Ruins of Alph UnownDex Backup
+                    TrueName: Ruins of Alph UnownDex
+                    FileName: RuinsOfAlphResearchCenter.asm
+                    Type: Item
+                    Dummy: Yes
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Ruins of Alph UnownDex
+                    FlagReqs:
+                        - Mon Locked Checks
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Text:
+                    TrainerList:
+                    Code: |
+                        .GiveUnownDex:
+                            ITEMLINE
+                            iffalse .End
+                            setevent EVENT_GOT_UNOWN_DEX
+                        .End
+                            closetext
+                            end
             -
-                Name: Ruins of Alph Rope Chamber 2
-                FileName: RuinsOfAlphKabutoItemRoom.asm
-                Type: Item
+                Name: Ruins of Alph Rope Complete Puzzle
+                FileName:
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
+                WildTableList:
                 LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
-                NormalItem: PSNCUREBERRY
-                IsBall: Yes
+                    - Unown Puzzle
                 ReachableReqs:
-                Code: |
-                    RuinsOfAlphKabutoItemRoomPsncureberry:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Escape Rope Chamber
                 Sublocations:
-            -
-                Name: Ruins of Alph Rope Chamber 3
-                FileName: RuinsOfAlphKabutoItemRoom.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Ruins of Alph
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                NormalItem: HEAL_POWDER
-                IsBall: Yes
-                ReachableReqs:
-                Code: |
-                    RuinsOfAlphKabutoItemRoomHealPowder:
-                        ITEMLINE
 
-                Text:
-                TrainerList: 
-                Sublocations:
             -
-                Name: Ruins of Alph Rope Chamber 4
-                FileName: RuinsOfAlphKabutoItemRoom.asm
-                Type: Item
+                Name: Ruins of Alph Rope Complete Puzzle
+                FileName:
+                Type: Map
                 HasPKMN: No
-                WildTableList: 
+                WildTableList:
+                LocationReqs: Ruins of Alph Light Chamber Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Unown Puzzle
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Flash Chamber
+                Sublocations:
+
+            -
+                Name: Ruins of Alph Rope Complete Puzzle
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph Water Chamber Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Unown Puzzle
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Water Stone Chamber
+                Sublocations:
+
+
+            -
+                Name: Ruins of Alph Rope Complete Puzzle
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph Ho Oh Chamber Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                    - Unown Puzzle
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Ho-Oh Chamber
+                Sublocations:
+
+
+
+
+
+            -
+                Name: Ruins of Alph Rope Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
                 LocationReqs: Ruins of Alph
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
-                NormalItem: ENERGYPOWDER
-                IsBall: Yes
                 ReachableReqs:
-                Code: |
-                    RuinsOfAlphKabutoItemRoomEnergypowder:
-                        ITEMLINE
+                Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs:
+                Sublocations:
+
+            -
+                Name: Ruins of Alph Rope Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph
+                FlagReqs:
+                ItemReqs:
+                    - Escape Rope
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs:
+                Sublocations:
+
+            -
+                Name: Ruins of Alph Rope Chamber
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph Rope Chamber Access
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                WarpReqs: Escape Rope Item Room
+                Sublocations:
+                    -
+                        Name: Ruins of Alph Rope Chamber 1
+                        FileName: RuinsOfAlphKabutoItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Ruins of Alph Rope Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: BERRY
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphKabutoItemRoomBerry:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Rope Chamber 2
+                        FileName: RuinsOfAlphKabutoItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Ruins of Alph Rope Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: PSNCUREBERRY
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphKabutoItemRoomPsncureberry:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Rope Chamber 3
+                        FileName: RuinsOfAlphKabutoItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Ruins of Alph Rope Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: HEAL_POWDER
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphKabutoItemRoomHealPowder:
+                                ITEMLINE
+
+                        Text:
+                        TrainerList:
+                        Sublocations:
+                    -
+                        Name: Ruins of Alph Rope Chamber 4
+                        FileName: RuinsOfAlphKabutoItemRoom.asm
+                        Type: Item
+                        HasPKMN: No
+                        WildTableList:
+                        LocationReqs: Ruins of Alph Rope Chamber
+                        FlagReqs:
+                        ItemReqs:
+                        FlagsSet:
+                        NormalItem: ENERGYPOWDER
+                        IsBall: Yes
+                        ReachableReqs:
+                        Code: |
+                            RuinsOfAlphKabutoItemRoomEnergypowder:
+                                ITEMLINE
+                        Text:
+                        TrainerList:
+                        Sublocations:
+            -
+                Name: Ruins of Alph Light Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Ruins of Alph
+                FlagReqs:
+                    - Fog Badge
+                    - Zephyr Badge
+                ItemReqs:
+                    - Surf
+                    - Flash
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
                 Sublocations:
             -
                 Name: Ruins of Alph Light Chamber
@@ -164,19 +375,16 @@ Location:
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Union Cave
-                FlagReqs: 
-                    - Fog Badge
-                    - Zephyr Badge
-                ItemReqs: 
-                    - Surf
-                    - Flash
+                LocationReqs: Ruins of Alph Light Chamber Access
+                FlagReqs:
+                ItemReqs:
                 FlagsSet:
                 NormalItem: 
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Flash Item Room
                 Sublocations:
                     -
                         Name: Ruins of Alph Light Chamber 1
@@ -255,26 +463,67 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
+                Name: Ruins of Alph Water Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                  - Union Cave
+                  - Goldenrod City
+                FlagReqs:
+                  - Fog Badge
+                  - Plain Badge
+                ItemReqs:
+                  - Surf
+                  - Strength
+                FlagsSet:
+                NormalItem:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
+                Name: Ruins of Alph Water Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                  - Union Cave
+                FlagReqs:
+                  - Fog Badge
+                  - Plain Badge
+                ItemReqs:
+                  - Surf
+                  - Strength
+                  - Water Stone
+                FlagsSet:
+                NormalItem:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
                 Name: Ruins of Alph Water Chamber
                 FileName: 
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: 
-                    - Union Cave
-                    - Goldenrod City
-                FlagReqs: 
-                    - Fog Badge
-                    - Plain Badge
-                ItemReqs: 
-                    - Surf
-                    - Strength
+                LocationReqs: Ruins of Alph Water Chamber Access
+                FlagReqs:
+                ItemReqs:
                 FlagsSet:
                 NormalItem: 
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Water Stone Item Room
                 Sublocations:
                     -
                         Name: Ruins of Alph Water Chamber 1
@@ -353,25 +602,44 @@ Location:
                         TrainerList: 
                         Sublocations:
             -
+
+                Name: Ruins of Alph Ho Oh Chamber Access
+                FileName:
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Union Cave
+                FlagReqs:
+                    - Fog Badge
+                    - Encountered Ho-Oh
+                    - Banned
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                NormalItem:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+
+            -
                 Name: Ruins of Alph Ho Oh Chamber
                 FileName: 
                 Type: Map
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: 
-                    - Union Cave
-                    - VS Ho-Oh
-                FlagReqs: 
-                    - Fog Badge
-                    - Impossible
-                ItemReqs: 
-                    - Surf
+                LocationReqs: Ruins of Alph Ho Oh Chamber Access
+                FlagReqs:
+                ItemReqs:
                 FlagsSet:
                 NormalItem: 
                 ReachableReqs:
                 Code:
                 Text:
-                TrainerList: 
+                TrainerList:
+                WarpReqs: Ho-Oh Item Room
                 Sublocations:
                     -
                         Name: Ruins of Alph Ho Oh Chamber 1

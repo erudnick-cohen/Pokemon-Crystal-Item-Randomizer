@@ -5,8 +5,10 @@ Location:
         Type: Map
         HasPKMN: No
         WildTableList: 
-        LocationReqs: Lighthouse Amphy
+        LocationReqs:
+            - Olivine City
         FlagReqs:
+            - Amphy Healed
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -14,6 +16,7 @@ Location:
         Text:
         TrainerList:
         HintName: Olivine
+        WarpReqs: Olivine Gym
         Sublocations:
             -
                 Name: Jasmine TM
@@ -33,7 +36,7 @@ Location:
                             - Olivine
                 NormalItem: TM_IRON_TAIL
                 Code: |
-                    .FightDone:
+                    .GotMineralBadge:
                         checkevent EVENT_GOT_TM23_IRON_TAIL
                         iftrue .GotIronTail
                         writetext Jasmine_BadgeSpeech

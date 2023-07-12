@@ -1,0 +1,16 @@
+Name: Enable Tin Tower
+Description: Changes Tin Tower to item rando access rules. As in vanilla, Suicune can be fought if you have the clear bell and beat Morty. However, if the player also has the rainbow wing, they can climb Tin Tower after only defeating Suicune. The vanilla rainbow wing is unlocked by both defeating Suicune and the elite four. The Ho-Oh chamber in Ruins of Alph becomes available after the player defeats or catches Ho-Oh. Note that Ho-Oh will not appear in Tin Tower unless the player has also defeated the elite four.
+NewGamePatches:
+    - 'Patches/TinTowerActive.json'
+AddedItems:
+    - Clear Bell
+    - Rainbow Wing
+Changes:
+    -
+        Location: Ruins of Alph Ho Oh Chamber Access
+        RemoveFlagReqs:
+            - Banned
+    -
+        Location: Tin Tower
+        RemoveFlagReqs:
+            - Banned

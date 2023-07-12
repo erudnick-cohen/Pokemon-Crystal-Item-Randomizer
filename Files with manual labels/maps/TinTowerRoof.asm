@@ -13,20 +13,28 @@ TinTowerRoof_MapScripts:
 	checkhoohchambernerfed
 	iftrue .NoE4Check
 	checkevent EVENT_BEAT_ELITE_FOUR
+.ckir_BEFORE_ALWAYSHOOHSETTING1::
 	iffalse .NoAppear
+.ckir_AFTER_ALWAYSHOOHSETTING1::
 
 .NoE4Check:
 	checkevent EVENT_FOUGHT_HO_OH
 	iftrue .NoAppear
 	checkitem RAINBOW_WING
 	iftrue .Appear
+.ckir_BEFORE_ALWAYSHOOHSETTING2::
 	sjump .NoAppear
+.ckir_AFTER_ALWAYSHOOHSETTING2::
 
+.ckir_BEFORE_ALWAYSHOOHSETTING3::
 .Appear:
+.ckir_AFTER_ALWAYSHOOHSETTING3::
 	appear TINTOWERROOF_HO_OH
 	return
 
+.ckir_BEFORE_ALWAYSHOOHSETTING4::
 .NoAppear:
+.ckir_AFTER_ALWAYSHOOHSETTING4::
 	disappear TINTOWERROOF_HO_OH
 	return
 

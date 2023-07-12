@@ -1,0 +1,237 @@
+Location:  
+    -
+        Name: Indigo Plateau
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Victory Road Exit
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - WILL 1
+            - KOGA 1
+            - BRUNO 1
+            - KAREN 1
+            - CHAMPION 1
+        Sublocations:
+        WarpReqs: Indigo Plateau
+
+    -
+        Name: Will
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Indigo Plateau
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - WILL 1
+        Sublocations:
+        WarpReqs: Wills Room
+
+    -
+        Name: Koga
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Will
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - KOGA 1
+        Sublocations:
+        WarpReqs: Kogas Room
+
+    -
+        Name: Bruno
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Koga
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - BRUNO 1
+        Sublocations:
+        WarpReqs: Brunos Room
+
+    -
+        Name: Karen
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Bruno
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - KAREN 1
+        Sublocations:
+        WarpReqs: Karens Room
+
+    -
+        Name: Lance
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Karen
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+            - Became Champion
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 33
+        TrainerList:
+            - LANCE 1
+        Sublocations:
+        WarpReqs: Lances Room
+    -
+        Name: Indigo Plateau Shop
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Indigo Plateau
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Indigo Plateau
+        Sublocations:
+        -
+            Name: Indigo Plateau Shop Ultra Ball
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: ULTRA_BALL
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Max Repel
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_REPEL
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Max Potion
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: MAX_POTION
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Full Restore
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_RESTORE
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Revive
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REVIVE
+            Sublocations:
+        -
+            Name: Indigo Plateau Shop Full Heal
+            FileName: MartIndigoPlateau
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Indigo Plateau Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FULL_HEAL
+            Sublocations:

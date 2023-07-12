@@ -26,10 +26,8 @@ Location:
                 LocationReqs: Route 40 Land
                 FlagReqs:
                     - Hidden Items
-                    - Goldenrod City Entrance
-                    - Rock Smash Purchaseable
+                    - Rock Smash Usable
                 ItemReqs:
-                    - Rock Smash
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: HYPER_POTION
@@ -79,17 +77,46 @@ Location:
                 TrainerList: 
                 Sublocations:
     -
+        Name: Route 40 Water Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 41
+        ItemReqs:
+        FlagReqs:
+            - Warps
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
+        Name: Route 40 Water Entrance
+        FileName: CianwoodCity.asm
+        Type: Map
+        HasPKMN: No
+        LocationReqs: Route 40 Land
+        ItemReqs:
+            - Surf
+        FlagReqs:
+            - Fog Badge
+        FlagsSet:
+        ReachableReqs:
+        WildTableList:
+        Code:
+        Text:
+
+    -
         Name: Route 40 Water
         FileName: Route40.asm
         Type: Map
         HasPKMN: No
         HintName: Route 40
         WildTableList: Route_40
-        LocationReqs: Route 40 Land
+        LocationReqs: Route 40 Water Entrance
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code:

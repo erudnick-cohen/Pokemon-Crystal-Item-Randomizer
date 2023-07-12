@@ -1,0 +1,13 @@
+Name: Evil Phone Call Trainers
+Description: Adds evil trainers that call you on the phone to give you items. All checks enabled by this require pokegear. Note that several trainers also require specific pokemon, this is only enabled if the Mon Locked Checks modifier is also in use. Most trainers either call you to say they have an item, or require beating all of their rematches (which typically requires some combination of clearing rockets out of radio tower, E4 and restoring power to Kanto). Trainers who you need to fight to get the item will require several rematches.
+FlagsSet:
+    - Phone Call Trainers
+NewGamePatches:
+    - 'Patches/FixKenji.json'
+    - 'Patches/FixWade.json'
+    - 'Patches/FixWilton.json'
+Changes:
+    -
+        Location: Phone Call Trainers
+        RemoveFlagReqs:
+            - Banned

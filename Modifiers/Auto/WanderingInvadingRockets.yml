@@ -1,0 +1,20 @@
+Name: Wandering Invading Rockets
+Description: Handle logic for rockets wandering in Goldenrod City.
+Changes:
+    -
+        Location: Goldenrod
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+    -
+        Location: Goldenrod Rocket Block North
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+    -
+        Location: Goldenrod Rocket Corner Block
+        RemoveFlagReqs:
+            - Beat Team Rocket
+
+IncompatibleWithout:
+    - 'Warps'

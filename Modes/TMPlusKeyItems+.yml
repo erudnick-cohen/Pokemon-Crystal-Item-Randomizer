@@ -5,6 +5,12 @@ RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 BadgeItemShuffle:
+CoreProgress:
+    - 'Surf'
+    - 'Fog Badge'
+    - 'Pass'
+    - 'S S Ticket'
+    - 'Squirtbottle'
 DefaultModifiers:
     - Modifiers/NoBacktrackingEarlyBike.yml
     - Modifiers/DefinitelyNoEarlySabrina.yml
@@ -17,6 +23,14 @@ DefaultModifiers:
     - Modifiers/SkipE4AndFightRed.yml
     - Modifiers/TimeEvents.yml
     - Modifiers/PointlessChecks.yml
+    - Modifiers/VanillaClair.yml
+    - Modifiers/NerfHoOhChamber.yml
+    - Modifiers/DerandomizeLeftovers.yml
+    - Modifiers/NoEarlyBasement.yml
+    - Modifiers/Shopsanity.yml
+    - Modifiers/GameCorner.yml
+    - Modifiers/IncludeGSBall.yml
+    - Modifiers/PriceRandomisation.yml
 ProgressItems:
     - Surf
     - Squirtbottle
@@ -37,6 +51,78 @@ ProgressItems:
     - Pokegear
     - Radio Card
     - Expansion Card
+    - Whirlpool
+TrashItemList:
+    - OLD_ROD
+    - BLUE_CARD
+    - ITEMFINDER
+    - GOOD_ROD
+    - SUPER_ROD
+    - SILVER_WING
+    - Rainbow Wing
+    - Red Scale
+    - Mystery Egg
+    - TM_DYNAMICPUNCH
+    - TM_HEADBUTT
+    - TM_CURSE
+    - TM_ROLLOUT
+    - TM_ROAR
+    - TM_TOXIC
+    - TM_ZAP_CANNON
+    - TM_ROCK_SMASH
+    - TM_HIDDEN_POWER
+    - TM_SUNNY_DAY
+    - TM_SWEET_SCENT
+    - TM_SNORE
+    - TM_SNORE
+    - TM_BLIZZARD
+    - TM_HYPER_BEAM
+    - TM_ICY_WIND
+    - TM_RAIN_DANCE
+    - TM_GIGA_DRAIN
+    - TM_ENDURE
+    - TM_FRUSTRATION
+    - TM_SOLARBEAM
+    - TM_IRON_TAIL
+    - TM_DRAGONBREATH
+    - TM_THUNDER
+    - TM_EARTHQUAKE
+    - TM_RETURN
+    - TM_DIG
+    - TM_PSYCHIC
+    - TM_PSYCHIC
+    - TM_SHADOW_BALL
+    - TM_MUD_SLAP
+    - TM_DOUBLE_TEAM
+    - TM_SWAGGER
+    - TM_SLEEP_TALK
+    - TM_SLUDGE_BOMB
+    - TM_SANDSTORM
+    - TM_FIRE_BLAST
+    - TM_SWIFT
+    - TM_DEFENSE_CURL
+    - TM_THUNDERPUNCH
+    - TM_DREAM_EATER
+    - TM_DETECT
+    - TM_REST
+    - TM_ATTRACT
+    - TM_THIEF
+    - TM_STEEL_WING
+    - TM_STEEL_WING
+    - TM_FURY_CUTTER
+    - TM_NIGHTMARE
+    - ENGINE_MAP_CARD
+    - TM_FIRE_PUNCH
+    - TM_ICE_PUNCH
+    - TM_SWEET_SCENT
+    - TM_HEADBUTT
+    - TM_ROCK_SMASH
+    - TM_SANDSTORM
+    - TM_RAIN_DANCE
+    - TM_PROTECT
+    - TM_SUNNY_DAY
+    - TM_HIDDEN_POWER
+    - GS_BALL
 BannedLocations:
 AllowedLocations:
     - Pokegear Gift
@@ -48,7 +134,7 @@ AllowedLocations:
     - Route 32 Roar Dude
     - Union Cave Swift TM
     - Bugsy TM
-    - Rain Dance
+    - Slowpoke Well Rain Dance TM
     - Ilex Cut HM
     - Headbutt Guy
     - Sweet Scent Girl
@@ -113,6 +199,30 @@ AllowedLocations:
     - Expansion Card Gift
     - Rainbow Wing Gift
     - Map Card
+    - Goldenrod Department Store 5F Rock Smash TM
+    - Goldenrod Department Store 5F Headbutt TM
+    - Goldenrod Department Store 5F Sweet Scent TM
+    - Goldenrod Department Store 5F Ice Punch TM
+    - Goldenrod Department Store 5F Fire Punch TM
+    - Goldenrod Department Store 5F Thunder Punch TM
+    - Celadon Dept Store 3F Hidden Power TM
+    - Celadon Dept Store 3F Sunny Day TM
+    - Celadon Dept Store 3F Protect TM
+    - Celadon Dept Store 3F Rain Dance TM
+    - Celadon Dept Store 3F Sandstorm TM
+    - Goldenrod Game Corner Thunder TM
+    - Goldenrod Game Corner Blizzard TM
+    - Goldenrod Game Corner Fire Blast TM
+    - Celadon Game Corner Double Team TM
+    - Celadon Game Corner Psychic TM
+    - Celadon Game Corner Hyper Beam TM
+    - GS Ball
 Goal: Red
 FlagsSet:
     - Kanto Mode
+PreventAddItems:
+    - Escape Rope
+    - Water Stone
+    - Rock Smash
+    - Blue Card
+    - Rainbow Wing

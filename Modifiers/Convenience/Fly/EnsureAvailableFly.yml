@@ -1,0 +1,11 @@
+Name: Ensure fly available
+Description: "Ensures that the fly HM is available before fighting E4"
+Changes:
+    -
+        Location: Indigo Plateau
+        AddRecommendedItemReqs:
+            - Fly
+        AddRecommendedFlagReqs:
+            - Storm Badge
+IncompatibleWith:
+    - 'Delete Fly'

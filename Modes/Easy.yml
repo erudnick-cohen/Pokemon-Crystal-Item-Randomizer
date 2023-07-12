@@ -5,7 +5,8 @@ RegularWildLevelScalingDefault: False
 SpecialWildLevelScalingDefault: False
 TrainerLevelScalingDefault: False
 DefaultModifiers:
-    - Modifiers/NoBacktrackingEarlyBikeAndFly.yml
+    - Modifiers/NoBacktrackingEarlyBike.yml
+    - Modifiers/NoBacktrackingEarlyFly.yml
     - Modifiers/NoEarlyRBYKantoGymLeaders.yml
     - Modifiers/DefinitelyNoEarlySabrina.yml
     - Modifiers/NoEarlyBasement.yml
@@ -29,6 +30,7 @@ DefaultModifiers:
     - Modifiers/UpgradeValuableItems.yml
     - Modifiers/UpgradeBalls.yml
     - Modifiers/DerandomizeLeftovers.yml
+    - Modifiers/NerfHoOhChamber.yml
 HintLevel: 5
 nHints: 75
 BannedLocations:

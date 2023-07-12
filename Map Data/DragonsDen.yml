@@ -1,5 +1,25 @@
 Location:
     -
+        Name: Dragons Den Entrance
+        FileName: BlackthornGym1F.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+            - Blackthorn City
+        FlagReqs:
+            - Clair Defeated
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
         Name: Dragons Den
         FileName: BlackthornGym1F.asm
         Type: Map
@@ -7,11 +27,9 @@ Location:
         WildTableList:
             - Dragons_Den_1F
             - Dragons_Den_B1F
-        LocationReqs: Clair TM
+        LocationReqs: Dragons Den Entrance
         FlagReqs:
-            - Fog Badge
         ItemReqs:
-            - Surf
         FlagsSet:
         ReachableReqs:
         Code:
@@ -22,6 +40,7 @@ Location:
             - COOLTRAINERM 20
             - TWINS 10
             - TWINS 9
+        WarpReqs: Dragons Den
         Sublocations:
             -
                 Name: Dragons Den Max Elixer
@@ -31,7 +50,9 @@ Location:
                 WildTableList:
                 LocationReqs: Dragons Den
                 FlagReqs:
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 IsBall: Yes
@@ -71,7 +92,9 @@ Location:
                 LocationReqs: Dragons Den
                 FlagReqs:
                     - Hidden Items
+                    - Fog Badge
                 ItemReqs:
+                    - Surf
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: MAX_POTION
@@ -82,69 +105,20 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
-            -
-                Name: Dragons Den Hidden Revive
-                FileName: DragonsDenB1F.asm
-                SecondaryFile: DragonsDenB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Dragons Den
-                FlagReqs:
-                    - Hidden Items
-                    - Fog Badge
-                    - Glacier Badge
-                ItemReqs:
-                    - Surf
-                    - Whirlpool
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: REVIVE
-                Code: |
-                    DragonsDenB1FHiddenRevive:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Dragons Den Hidden Max Elixer
-                FileName: DragonsDenB1F.asm
-                SecondaryFile: DragonsDenB1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Dragons Den
-                FlagReqs:
-                    - Hidden Items
-                    - Fog Badge
-                    - Glacier Badge
-                ItemReqs:
-                    - Surf
-                    - Whirlpool
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: MAX_ELIXER
-                Code: |
-                    DragonsDenB1FHiddenMaxElixer:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer'
-                Text:
-                TrainerList: 
-                Sublocations:
+
     -
-        Name: Dragons Den Shrine
+        Name: Dragons Den Shrine Access
         FileName: DragonShrine.asm
         Type: Map
         HasPKMN: No
         WildTableList:
         LocationReqs: Dragons Den
         FlagReqs:
-            - Glacier Badge
-            - Fog Badge
+          - Glacier Badge
+          - Fog Badge
         ItemReqs:
-            - Surf
-            - Whirlpool
+          - Surf
+          - Whirlpool
         FlagsSet:
         ReachableReqs:
         Code:
@@ -152,6 +126,42 @@ Location:
         TrainerList:
         HintName: Dragons Den
         Sublocations:
+
+
+    -
+        Name: Dragons Den Shrine
+        FileName: DragonShrine.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Dragons Den Shrine Access
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Dragons Den
+        WarpReqs: Dragons Den Shrine
+        Sublocations:
+            -
+                Name: Dragons Den Shrine Building
+                FileName: DragonsDenB1F.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den Shrine
+                FlagReqs:
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+                WarpReqs: Dragon Shrine
+
             -
                 Name: Dragons Den Dragon Fang
                 FileName: DragonsDenB1F.asm
@@ -160,11 +170,9 @@ Location:
                 WildTableList:
                 LocationReqs: Dragons Den Shrine
                 FlagReqs:
-                    - Glacier Badge
                     - Fog Badge
                 ItemReqs:
                     - Surf
-                    - Whirlpool
                 FlagsSet:
                 ReachableReqs:
                 IsBall: Yes
@@ -185,15 +193,59 @@ Location:
                 WildTableList:
                 LocationReqs: Dragons Den Shrine
                 FlagReqs:
-                    - Glacier Badge
-                    - Fog Badge
+                    - Quiz Taken
                 ItemReqs:
-                    - Surf
-                    - Whirlpool
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: 
                 Code:
                 Text:
                 TrainerList: 
+                Sublocations:
+
+            -
+                Name: Dragons Den Hidden Revive
+                FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den Shrine
+                FlagReqs:
+                  - Hidden Items
+                  - Fog Badge
+                ItemReqs:
+                  - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: REVIVE
+                Code: |
+                  DragonsDenB1FHiddenRevive:
+                      ITEMLINE
+                SecondaryCode: '    bg_event 33, 29, BGEVENT_ITEM, DragonsDenB1FHiddenRevive'
+                Text:
+                TrainerList:
+                Sublocations:
+            -
+                Name: Dragons Den Hidden Max Elixer
+                FileName: DragonsDenB1F.asm
+                SecondaryFile: DragonsDenB1F.asm
+                Type: Item
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Dragons Den Shrine
+                FlagReqs:
+                    - Hidden Items
+                    - Fog Badge
+                ItemReqs:
+                    - Surf
+                FlagsSet:
+                ReachableReqs:
+                NormalItem: MAX_ELIXER
+                Code: |
+                    DragonsDenB1FHiddenMaxElixer:
+                        ITEMLINE
+                SecondaryCode: '    bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixer'
+                Text:
+                TrainerList:
                 Sublocations:

@@ -63,6 +63,41 @@ Location:
         Text:
         TrainerList:
         Sublocations:
+
+    -
+        Name: Vermilion Gym Access
+        FileName: VermilionGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Vermilion City to Gym
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs:
+
+    -
+        Name: Vermilion Gym Access
+        FileName: VermilionGym.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs: Vermillion Gym Access
     -
         Name: Vermilion Gym
         FileName: VermilionGym.asm
@@ -82,5 +117,6 @@ Location:
             - GUITARIST 2
             - GENTLEMAN 3
             - LT_SURGE 1
-        HintName: Vermillion
+        HintName: Vermilion
         Sublocations:
+        WarpReqs: Vermilion Gym

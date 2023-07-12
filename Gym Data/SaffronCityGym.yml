@@ -3,6 +3,7 @@ Location:
         Name: Saffron City Gym Badge
         FileName: SaffronGym.asm
         LocationReqs: Saffron Gym
+        WarpReqs: Saffron Gym Sabrina
         HasPKMN: No
         Type: Gym
         WildTableList:
@@ -39,7 +40,13 @@ Location:
                 setevent EVENT_BEAT_PSYCHIC_FRANKLIN
                 setevent EVENT_BEAT_PSYCHIC_JARED
                 opentext
+            .FightDone:
+                checkevent EVENT_GOT_MARSH_BADGE
+                iftrue .GotMarshBadge
                 BADGELINE
+                iffalse .EndSabrina
+                setevent EVENT_GOT_MARSH_BADGE
+            .EndSabrina
                 writetext SabrinaMarshBadgeText
                 waitbutton
                 closetext

@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Route 31
         Sublocations:
             -
                 Name: Route 31 Potion
@@ -78,6 +79,7 @@ Location:
                         writetext Text_Route31ReadingMail
                         promptbutton
                         setevent EVENT_GAVE_KENYA
+                    .GiveNightmare:
                         ITEMLINE
                         iffalse .NoRoomForItems
                         setevent EVENT_GOT_TM50_NIGHTMARE
@@ -158,6 +160,7 @@ Location:
                 IsBall: No
                 Code: |
                     .Berry:
+                    .ckir_AFTER_AFTER_WADE::
                         ITEMLINE
                         iffalse .PackFull
                         sjump .Done

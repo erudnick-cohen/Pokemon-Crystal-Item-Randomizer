@@ -1,0 +1,24 @@
+[
+    {
+        "integer_values": {
+            "old": [
+                7,
+                10,
+                166,
+                96
+            ],
+            "new": [
+                7,
+                10,
+                166,
+                96
+            ]
+        },
+        "address_range": {
+            "begin": 352413,
+            "end": 352417
+        },
+        "label": "GoldenrodDeptStore5FClerkScript.ckir_BEFORE_DEPTSTORECheckFullScript",
+        "description": "Always have the full inventory at Goldenrod Dept Store 5F TM Shop"
+    }
+]

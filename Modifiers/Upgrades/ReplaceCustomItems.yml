@@ -1,0 +1,5 @@
+Name: Replace Type Items
+Description: Uses the configuration file to replace type items, if you want to modify for your own amusement.
+FlagsSet:
+    - Replace Type
+    - Replace Repel

@@ -1,0 +1,131 @@
+Name: No backtracking early bike
+Description: Ensures that the bike is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking.
+Changes:
+    -
+        Location: Hidden Items Locked
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 37
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Saffron City via Magnet Train
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 31 Kenya Item
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Dark Cave Violet Potion
+        AddRecommendedItemReqs:
+            - Flash
+            - Bicycle
+    -
+        Location: Mr. Pokemon's EXP Share
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Mystic Water Man
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Elm Aide Pokeballs
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Elm Master Ball
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Violet City Rare Candy
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Violet City PP UP
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 32 Roar Dude
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Miracle Seed Man
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 27
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Union Cave Floor 3
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Slowpoke Well Floor 2
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Soft Sand Girls
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 34 Nugget
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Kenya Gate Item
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Goldenrod Tunnel
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Ruins of Alph Light Chamber
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Ruins of Alph Water Chamber
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Flower Shop
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Goldenrod City Buy Rock Smash
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Radio Tower Rockets Part 1
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Radio Tower Rockets Part 2
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 29 Tuscany
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Rock Smash Guy
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Route 35 MysteryBerry
+        AddRecommendedItemReqs:
+            - Bicycle
+    -
+        Location: Ruins of Alph Rope Chamber
+        AddRecommendedItemReqs:
+            - Bicycle
+
+IncompatibleWith:
+    - 'Start With Bike'

@@ -27,6 +27,14 @@ DefaultModifiers:
     - Modifiers/EvilPhoneCallTrainers.yml
     - Modifiers/EvilMonLockedChecks.yml
     - Modifiers/ShuffleLeftovers.yml
+    - Modifiers/HiddenItems.yml
+    - Modifiers/Shopsanity.yml
+    - Modifiers/BuenaItems.yml
+    - Modifiers/GameCorner.yml
+    - Modifiers/PreventShopItems.yml
+    - Modifiers/PriceRandomisation.yml
+    - Modifiers/IncludeGSBall.yml
+    - Modifiers/RemoveFlashLogic.yml
 
 BannedLocations:
 AllowedLocations:

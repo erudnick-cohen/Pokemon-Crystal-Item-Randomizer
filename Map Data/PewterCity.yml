@@ -6,7 +6,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 2 Post Cut
+            - Route 2
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -15,6 +15,7 @@ Location:
         Text:
         TrainerList:
         HintName: Pewter
+        WarpReqs: West Kanto
         Sublocations:
             -
                 Name: Silver Wing Old Man
@@ -38,7 +39,9 @@ Location:
                         writetext PewterCityGrampsText
                         promptbutton
                         ITEMLINE
+                        iffalse .SkipSilverWing
                         setevent EVENT_GOT_SILVER_WING
+                    .SkipSilverWing
                         closetext
                         end
                 Text:
@@ -84,4 +87,139 @@ Location:
                 Code: |
                   PewterCityFruitTree2:
                       ITEMLINE
-          
+    -
+        Name: Pewter Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Pewter City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Pewter
+        WarpReqs: Pewter Mart
+        Sublocations:
+            -
+                Name: Pewter Mart Great Ball
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: GREAT_BALL
+                Sublocations:
+            -
+                Name: Pewter Mart Super Potion
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_POTION
+                Sublocations:
+            -
+                Name: Pewter Mart Super Repel
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: SUPER_REPEL
+                Sublocations:
+            -
+                Name: Pewter Mart Antidote
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+                Sublocations:
+            -
+                Name: Pewter Mart Parlyz Heal
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+                Sublocations:
+            -
+                Name: Pewter Mart Awakening
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+                Sublocations:
+            -
+                Name: Pewter Mart Burn Heal
+                FileName: MartPewter
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Pewter Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: BURN_HEAL
+                Sublocations:

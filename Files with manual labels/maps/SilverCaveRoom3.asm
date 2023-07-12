@@ -6,6 +6,8 @@ SilverCaveRoom3_MapScripts:
 
 	db 0 ; callbacks
 
+.ckir_BEFORE_RedEncounter::
+.ckir_AFTER_RedEncounter::
 Red:
 	special FadeOutMusic
 	faceplayer

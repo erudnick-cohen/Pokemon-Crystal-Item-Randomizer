@@ -2,7 +2,7 @@ Location:
     -
         Name: Viridian City Gym Badge
         FileName: ViridianGym.asm
-        LocationReqs: Seafoam Islands
+        LocationReqs: Viridian Gym
         HasPKMN: No
         Type: Gym
         WildTableList:
@@ -21,25 +21,31 @@ Location:
                 SubTags:
                     - Viridian
         BadgeLine: |
-            ViridianGymBlueScript:
-                faceplayer
-                opentext
-                checkevent EVENT_BEAT_BLUE
-                iftrue .FightDone
-                writetext LeaderBlueBeforeText
-                waitbutton
-                closetext
-                winlosstext LeaderBlueWinText, 0
-                loadtrainer BLUE, BLUE1
-                startbattle
-                reloadmapafterbattle
-                setevent EVENT_BEAT_BLUE
-                opentext
-                BADGELINE
-                writetext LeaderBlueAfterText
-                waitbutton
-                closetext
-                end
+                ViridianGymBlueScript:
+                    faceplayer
+                    opentext
+                    checkevent EVENT_BEAT_BLUE
+                    iftrue .FightDone
+                    writetext LeaderBlueBeforeText
+                    waitbutton
+                    closetext
+                    winlosstext LeaderBlueWinText, 0
+                    loadtrainer BLUE, BLUE1
+                    startbattle
+                    reloadmapafterbattle
+                    setevent EVENT_BEAT_BLUE
+                    opentext
+                .FightDone:
+                    checkevent EVENT_GOT_EARTH_BADGE
+                    iftrue .GotEarthBadge
+                    BADGELINE
+                    iffalse .EndBlue
+                    setevent EVENT_GOT_EARTH_BADGE
+                .EndBlue:
+                    writetext LeaderBlueAfterText
+                    waitbutton
+                    closetext
+                    end
         Code:
         Text:
             -

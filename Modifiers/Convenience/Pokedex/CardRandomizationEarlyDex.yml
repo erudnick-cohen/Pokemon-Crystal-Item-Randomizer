@@ -1,0 +1,235 @@
+Name: Card Randomization early Pokedex
+Description: Randomizes Pokegear. Ensures that the ability to use the Pokedex is available before the player would pass sudowoodo or take the magnet train. Also ensures that the bike is not in a location that requires backtracking. This setting intended for when the player wants a faster seed.
+AddedItems:
+    - Pokegear
+    - Radio Card
+    - Expansion Card
+    - Pokedex
+Changes:
+    -
+        Location: Woke Snorlax
+        RemoveLocationReqs:
+            - Expansion Card Gift Access
+            - Radio Card Quiz Access
+            - Pokegear Gift Access
+        AddFlagReqs:
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+
+    -
+        Location: Viridian City via Route 2
+        NewLocationReqs:
+            - Route 2
+        NewFlagReqs:
+            - Hive Badge
+        NewItemReqs:
+            - Cut
+            - Pokegear
+            - Radio Card
+            - Expansion Card
+    -
+        Location: League Gate via Viridian
+        NewItemReqs:
+            - Cut
+    -
+        Location: Oak Pokedex
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Radio Card Quiz
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Pokegear Gift
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Expansion Card Gift
+        RemoveFlagReqs:
+            - Impossible
+    -
+        Location: Route 37
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddItemReqs:
+            - Pokedex
+    -
+        Location: Route 37 via Route 36 Sudowoodo Junction
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Saffron City via Magnet Train
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Route 31 Kenya Item
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Dark Cave Violet Potion
+        AddFlagReqs:
+            - Pokedex
+        AddItemReqs:
+            - Pokedex
+    -
+        Location: Mr. Pokemon's EXP Share
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Mystic Water Man
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Elm Aide Pokeballs
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Elm Master Ball
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Violet City Rare Candy
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Violet City PP UP
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Route 32 Roar Dude
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Miracle Seed Man
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Route 27
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Union Cave Floor 3
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Slowpoke Well Floor 2
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Soft Sand Girls
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Route 34 Nugget
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Kenya Gate Item
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Goldenrod Tunnel
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Ruins of Alph Light Chamber
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Ruins of Alph Water Chamber
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Flower Shop
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Goldenrod City Buy Rock Smash
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Radio Tower Rockets Part 1
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Radio Tower Rockets Part 2
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Route 29 Tuscany
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Rock Smash Guy
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+
+    -
+        Location: Route 35 MysteryBerry
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+    -
+        Location: Ruins of Alph Rope Chamber
+        AddRecommendedFlagReqs:
+            - Pokedex
+        AddRecommendedItemReqs:
+            - Pokedex
+
+IncompatibleWith:
+    - 'CardRandomizationButNotDex'
+    - 'CardRandomization'

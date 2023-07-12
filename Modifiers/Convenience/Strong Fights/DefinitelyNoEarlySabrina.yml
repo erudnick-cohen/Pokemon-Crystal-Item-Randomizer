@@ -1,0 +1,16 @@
+Name: Definitely no early Sabrina
+Description: Prevents Sabrina being required before you can access 7 other gyms
+Changes:
+    -
+        Location: Saffron City Gym Badge
+        AddRecommendedFlagReqs:
+            - Rocket Invasion
+            - Kanto Mode
+    -
+        Location: Early Sabrina
+        NewFlagReqs:
+            - Impossible
+        NewLocationsReqs:
+            - Impossible
+        NewItemReqs:
+            - Impossible

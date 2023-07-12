@@ -1,6 +1,6 @@
 Location:
     -
-        Name: Celadon Gym
+        Name: Celadon Gym Entrance
         FileName: CeladonGym.asm
         Type: Map
         HasPKMN: Yes
@@ -15,6 +15,24 @@ Location:
         Code:
         Text:
         HintName: Celadon
+        AREALV: 32
+        TrainerList:
+
+    -
+        Name: Celadon Gym
+        FileName: CeladonGym.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: Celadon Gym Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        HintName: Celadon
+        WarpReqs: Celadon Gym
         AREALV: 32
         TrainerList:
             - TWINS 5
@@ -32,9 +50,7 @@ Location:
                 WildTableList:
                 LocationReqs: Celadon Gym
                 FlagReqs:
-                    - Hive Badge
                 ItemReqs:
-                    - Cut
                 FlagsSet:
                 Tags:
                     -
@@ -44,7 +60,7 @@ Location:
                 ReachableReqs:
                 NormalItem: TM_GIGA_DRAIN
                 Code: |
-                    .FightDone:
+                    .GotRainbowBadge:
                         checkevent EVENT_GOT_TM19_GIGA_DRAIN
                         iftrue .GotGigaDrain
                         writetext ErikaExplainTMText

@@ -14,6 +14,7 @@ Location:
         Text:
         TrainerList:
         HintName: Goldenrod
+        WarpReqs: Goldenrod Gym
         Sublocations:
             -
                 Name: Whitney TM
@@ -34,6 +35,8 @@ Location:
                 NormalItem: TM_ATTRACT
                 Code: |
                     .GotPlainBadge:
+                        checkevent EVENT_GOT_TM45_ATTRACT
+                        iftrue .GotAttract
                         writetext WhitneyPlainBadgeText
                         promptbutton
                         ITEMLINE
@@ -64,7 +67,7 @@ Location:
                 Type: Map
                 HasPKMN: Yes
                 WildTableList: 
-                LocationReqs: Goldenrod City
+                LocationReqs: Goldenrod Gym
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:

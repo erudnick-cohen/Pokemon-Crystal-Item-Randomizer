@@ -1,0 +1,4 @@
+Name: Upgrade Items - Mail
+Description: Upgrades Mail Items to X Items
+FlagsSet:
+    - Replace Mail

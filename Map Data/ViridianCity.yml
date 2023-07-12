@@ -13,7 +13,8 @@ Location:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: West Kanto
         Sublocations:
     -
         Name: Viridian City via Route 2
@@ -22,7 +23,7 @@ Location:
         HasPKMN: No
         WildTableList: 
         LocationReqs:
-            - Route 2 Post Cut via Route 2
+            - Route 2
         FlagReqs:
             - Hive Badge
             - Fog Badge
@@ -60,11 +61,11 @@ Location:
         WildTableList: 
         LocationReqs:
             - League Gate via Route 26
-            - Woke Snorlax
         FlagReqs:
             - 8 Badges
             - Rising Badge
             - Fog Badge
+            - Snorlax Woken
         ItemReqs:
             - Surf
             - Waterfall
@@ -164,3 +165,165 @@ Location:
                         line "DREAM EATER…"
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Viridian Mart
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Viridian City
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Viridian
+        WarpReqs: Viridian Mart
+        Sublocations:
+            -
+                Name: Viridian Mart Ultra Ball
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ULTRA_BALL
+            -
+                Name: Viridian Mart Hyper Potion
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: HYPER_POTION
+            -
+                Name: Viridian Mart Full Heal
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FULL_HEAL
+            -
+                Name: Viridian Mart Revive
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: REVIVE
+            -
+                Name: Viridian Mart Antidote
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: ANTIDOTE
+            -
+                Name: Viridian Mart Parlyz Heal
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: PARLYZ_HEAL
+            -
+                Name: Viridian Mart Awakening
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: AWAKENING
+            -
+                Name: Viridian Mart Burn Heal
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: BURN_HEAL
+            -
+                Name: Viridian Mart Flower Mail
+                FileName: MartViridian
+                Type: Shop
+                HasPKMN: No
+                WildTableList:
+                LocationReqs: Viridian Mart
+                FlagReqs:
+                    - Shopsanity
+                ItemReqs:
+                FlagsSet:
+                ReachableReqs:
+                Code:
+                Text:
+                TrainerList:
+                NormalItem: FLOWER_MAIL

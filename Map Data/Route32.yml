@@ -1,29 +1,65 @@
 Location:
     -
-        Name: Route 32
+        Name: Route 32 North
         FileName: Route32.asm
         Type: Map
         HasPKMN: No
         WildTableList: Route_32
-        LocationReqs: 
-            - Falkner TM
-            - Violet Gym
-            - Violet City
+        LocationReqs: Violet City
         FlagReqs:
         ItemReqs:
         FlagsSet:
         ReachableReqs:
         Code:
         Text:
-        TrainerList: 
+        TrainerList:
+        WarpReqs: Violet
         Sublocations:
+
     -
-        Name: Route 32 Actual
+        Name: Route 32 Entrance
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Violet City
+        FlagReqs:
+          - Received Togepi Egg
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Route 32 Entrance
+        FileName: Route32.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV:
+        TrainerList:
+        WarpReqs: Route 32
+        Sublocations:
+
+    -
+        Name: Route 32
         FileName: Route32.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: Route_32
-        LocationReqs: Route 32
+        LocationReqs: Route 32 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -31,7 +67,7 @@ Location:
         Code:
         Text:
         AREALV: 4
-        TrainerList: 
+        TrainerList:
             - YOUNGSTER 3
             - PICNICKER 1
             - CAMPER 1
@@ -48,9 +84,10 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList: 
-                LocationReqs: Route 32
+                LocationReqs: Route 32 North
                 FlagReqs:
                     - Zephyr Badge
+                    - Received Togepi Egg
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
@@ -159,69 +196,6 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Old Rod Guru
-                FileName: Route32Pokecenter1F.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Route 32
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: OLD_ROD
-                Code: |
-                    Route32Pokecenter1FFishingGuruScript:
-                        faceplayer
-                        opentext
-                        checkevent EVENT_GOT_OLD_ROD
-                        iftrue .GotOldRod
-                        writetext Route32Pokecenter1FFishingGuruText_Question
-                        yesorno
-                        iffalse .Refused
-                        writetext Route32Pokecenter1FFishingGuruText_Yes
-                        promptbutton
-                        ITEMLINE
-                        writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
-                        waitbutton
-                        closetext
-                        setevent EVENT_GOT_OLD_ROD
-                        end
-
-                Text: |
-                    UnknownText_0x69b83:
-                        text "This is a great"
-                        line "fishing spot."
-
-                        para "You saw people"
-                        line "fishing? How"
-                        cont "about you?"
-
-                        para "Would you like one"
-                        line "of my ITEMNAMES?"
-                        done
-
-                    UnknownText_0x69be8:
-                        text "Heh, that's good"
-                        line "to hear."
-
-                        para "Now you're an"
-                        line "angler too!"
-                        done
-
-                    UnknownText_0x69c1b:
-                        text "Fishing is great!"
-
-                        para "If there's water,"
-                        line "be it the sea or a"
-
-                        para "stream, try out"
-                        line "your ITEMNAME."
-                        done
-
-                TrainerList: 
-                Sublocations:
-            -
                 Name: Route 32 Hidden Great Ball
                 FileName: Route32.asm
                 SecondaryFile: Route32.asm
@@ -306,3 +280,70 @@ Location:
 
                 TrainerList: 
                 Sublocations:
+
+    -
+        Name: Old Rod Guru
+        FileName: Route32Pokecenter1F.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 32
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: OLD_ROD
+        WarpReqs: Route 32 Center
+        Code: |
+            Route32Pokecenter1FFishingGuruScript:
+                faceplayer
+                opentext
+                checkevent EVENT_GOT_OLD_ROD
+                iftrue .GotOldRod
+                writetext Route32Pokecenter1FFishingGuruText_Question
+                yesorno
+                iffalse .Refused
+                writetext Route32Pokecenter1FFishingGuruText_Yes
+                promptbutton
+                ITEMLINE
+                iffalse .SkipOldRod
+                setevent EVENT_GOT_OLD_ROD
+            .SkipOldRod
+                writetext Route32Pokecenter1FFishingGuruText_GiveOldRod
+                waitbutton
+                closetext
+                end
+
+        Text: |
+            UnknownText_0x69b83:
+                text "This is a great"
+                line "fishing spot."
+
+                para "You saw people"
+                line "fishing? How"
+                cont "about you?"
+
+                para "Would you like one"
+                line "of my ITEMNAMES?"
+                done
+
+            UnknownText_0x69be8:
+                text "Heh, that's good"
+                line "to hear."
+
+                para "Now you're an"
+                line "angler too!"
+                done
+
+            UnknownText_0x69c1b:
+                text "Fishing is great!"
+
+                para "If there's water,"
+                line "be it the sea or a"
+
+                para "stream, try out"
+                line "your ITEMNAME."
+                done
+
+        TrainerList:
+        Sublocations:

@@ -55,7 +55,10 @@ TrainerSailorHuey:
 	ifequal 1, .Fight3
 	ifequal 0, .Fight3
 .ckir_AFTER_Huey::
+.ckir_BEFORE_Huey_Fight3::
+.ckir_BEFORE_Huey_RedundantLabels::
 .Fight3:
+.ckir_AFTER_Huey_Fight3::
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
 .Fight2:
@@ -71,6 +74,7 @@ TrainerSailorHuey:
 	loadmem wHueyFightCount, 1
 	clearflag ENGINE_HUEY
 	end
+.ckir_AFTER_Huey_RedundantLabels::
 
 .LoadFight1:
 	loadtrainer SAILOR, HUEY2

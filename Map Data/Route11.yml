@@ -7,17 +7,20 @@ Location:
         WildTableList: 
         LocationReqs: 
             - Vermilion City Entrance
+            - Expansion Card Gift Access
+            - Radio Card Quiz Access
+            - Pokegear Gift Access
         FlagReqs:
-            - Surf
         ItemReqs:
         FlagsSet:
+            - Snorlax Woken
         ReachableReqs:
         Code:
         Text:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 11 entrance
+        Name: Route 11 Entrance
         FileName: Route11.asm
         Type: Map
         HasPKMN: No
@@ -34,7 +37,7 @@ Location:
         TrainerList: 
         Sublocations:
     -
-        Name: Route 11 entrance
+        Name: Route 11 Entrance
         FileName: Route11.asm
         Type: Map
         HasPKMN: No
@@ -57,7 +60,7 @@ Location:
         WildTableList: 
             - ROUTE_11
         LocationReqs:
-            - Route 11 entrance
+            - Route 11 Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -78,7 +81,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 11
+                LocationReqs: Route 11 Entrance
                 FlagReqs:
                     - Hidden Items
                 ItemReqs:
@@ -99,7 +102,7 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Route 30
+                LocationReqs: Route 11 Entrance
                 FlagReqs:
                     - Berry Trees
                 ItemReqs:

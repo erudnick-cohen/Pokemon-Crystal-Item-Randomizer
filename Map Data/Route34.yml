@@ -77,6 +77,7 @@ Location:
         Code:
         Text:
         AREALV: 10
+        WarpReqs: Goldenrod
         TrainerList: 
             - YOUNGSTER 5
             - POKEFANM 7
@@ -172,27 +173,6 @@ Location:
                 TrainerList: 
                 Sublocations:
             -
-                Name: Route 34 Hidden Super Potion
-                FileName: Route34.asm
-                SecondaryFile: Route34.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList:
-                LocationReqs: Route 34
-                FlagReqs:
-                    - Hidden Items
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                NormalItem: SUPER_POTION
-                Code: |
-                    Route34HiddenSuperPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion'
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
                 Name: Route 34 Picknicker Gina Leaf Stone
                 FileName: Route34.asm
                 Type: Item
@@ -200,9 +180,9 @@ Location:
                 WildTableList:
                 LocationReqs: 
                     - Route 34
-                    - Radio Tower Rockets Part 2
                 FlagReqs:
                     - Phone Call Trainers
+                    - Beat Team Rocket
                 ItemReqs:
                     - Pokegear
                 FlagsSet:
@@ -220,3 +200,45 @@ Location:
                 Text:
                 TrainerList: 
                 Sublocations:
+            -
+                Name: Route 34 Camper Todd Sale
+                FileName: Route34.asm
+                Type: Map
+                HasPKMN: No
+                WildTableList:
+                LocationReqs:
+                    - Route 34
+                FlagReqs:
+                    - Phone Call Trainers
+                ItemReqs:
+                    - Pokegear
+                FlagsSet:
+                    - Possible Sale
+                ReachableReqs:
+                IsBall: No
+                Code:
+                Text:
+                TrainerList:
+                Sublocations:
+    -
+        Name: Route 34 Hidden Super Potion
+        FileName: Route34.asm
+        SecondaryFile: Route34.asm
+        Type: Item
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 34
+        FlagReqs:
+            - Hidden Items
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        NormalItem: SUPER_POTION
+        Code: |
+            Route34HiddenSuperPotion:
+                ITEMLINE
+        SecondaryCode: '    bg_event 17, 19, BGEVENT_ITEM, Route34HiddenSuperPotion'
+        Text:
+        TrainerList:
+        WarpReqs: Day Care Outside
+        Sublocations:

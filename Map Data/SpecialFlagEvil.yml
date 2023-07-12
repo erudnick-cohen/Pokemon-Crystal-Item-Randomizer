@@ -8,7 +8,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Phone Call Trainers
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -25,7 +25,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Mon Locked Checks
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -42,7 +42,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Bug Catching Contest
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:
@@ -59,7 +59,7 @@ Location:
         LocationReqs:
         FlagReqs:
             - Pointless Checks
-            - Impossible
+            - Banned
         ItemReqs:
         FlagsSet:
         ReachableReqs:

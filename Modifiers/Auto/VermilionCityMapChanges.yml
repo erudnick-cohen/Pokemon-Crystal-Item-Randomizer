@@ -1,0 +1,10 @@
+Name: Blackthorn City Map Changes
+Description: Blackthorn City Map Changes
+Changes:
+    -
+        Location: Vermilion Via Snorlax
+        RemoveFlagReqs:
+            - Impossible
+
+IncompatibleWithout:
+    - 'Warps'

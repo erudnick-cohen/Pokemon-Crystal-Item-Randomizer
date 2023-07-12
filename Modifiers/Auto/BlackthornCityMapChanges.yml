@@ -1,0 +1,12 @@
+Name: Blackthorn City Map Changes
+Description: Blackthorn City Map Changes
+Changes:
+    -
+        Location: Blackthorn Via Dragons Den Entrance
+        RemoveItemReqs:
+            - Surf
+        RemoveFlagReqs:
+            - Fog Badge
+
+IncompatibleWithout:
+    - 'Warps'

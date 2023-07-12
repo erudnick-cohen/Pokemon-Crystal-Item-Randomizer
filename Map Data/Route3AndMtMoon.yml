@@ -38,11 +38,9 @@ Location:
                 -   Route 3 and Mt. Moon
             FlagReqs:
                 -   Timed Events
-                -   Goldenrod City Entrance
-                -   Rock Smash Purchaseable
+                - Rock Smash Usable
                 -   Hidden Items
             ItemReqs:
-                -   Rock Smash
             FlagsSet:
             NormalItem: MOON_STONE
             ReachableReqs:
@@ -52,4 +50,126 @@ Location:
             SecondaryCode: '    bg_event  7,  7, BGEVENT_ITEM, MountMoonSquareHiddenMoonStone'
             Text:
             TrainerList:
+            Sublocations:
+            WarpReqs: Mt. Moon Square
+
+    -
+        Name: Mt Moon Gift Shop
+        FileName: MahoganyTown.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList:
+        LocationReqs: Route 3 and Mt. Moon
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        HintName: Mt Moon
+        WarpReqs: Mount Moon Gift Shop
+        Sublocations:
+        -
+            Name: Mt Moon Gift Shop Poke Doll
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: POKE_DOLL
+            Sublocations:
+        -
+            Name: Mt Moon Gift Shop Fresh Water
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: FRESH_WATER
+            Sublocations:
+        -
+            Name: Mt Moon Gift Shop Soda Pop
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: SODA_POP
+            Sublocations:
+        -
+            Name: Mt Moon Gift Shop Lemonade
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: LEMONADE
+            Sublocations:
+
+        -
+            Name: Mt Moon Gift Shop Repel
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: REPEL
+            Sublocations:
+        -
+            Name: Mt Moon Gift Shop Portrait Mail
+            FileName: MartMtMoon
+            Type: Shop
+            HasPKMN: No
+            WildTableList:
+            LocationReqs: Mt Moon Gift Shop
+            FlagReqs:
+                - Shopsanity
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            TrainerList:
+            NormalItem: PORTRAITMAIL
             Sublocations:

@@ -1,11 +1,51 @@
 Location:
     -
+        Name: Victory Road Access
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs: League Gate Entrance
+        FlagReqs:
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+          - RIVAL1 13
+          - RIVAL1 14
+          - RIVAL1 15
+        Sublocations:
+    -
+        Name: Victory Road Access
+        FileName: VictoryRoad.asm
+        Type: Map
+        HasPKMN: Yes
+        WildTableList:
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        AREALV: 32
+        TrainerList:
+          - RIVAL1 13
+          - RIVAL1 14
+          - RIVAL1 15
+        Sublocations:
+
+    -
         Name: Victory Road
         FileName: VictoryRoad.asm
         Type: Map
         HasPKMN: Yes
         WildTableList: 
-        LocationReqs: League Gate Entrance
+        LocationReqs: Victory Road Access
         FlagReqs:
         ItemReqs:
         FlagsSet:
@@ -18,51 +58,30 @@ Location:
             - RIVAL1 14
             - RIVAL1 15
         Sublocations:
-            -
-                Name: Victory Road Max Revive
-                FileName: VictoryRoad.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Victory Road
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                IsBall: Yes
-                NormalItem: MAX_REVIVE
-                Code: |
-                    VictoryRoadMaxRevive:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Victory Road Full Restore
-                FileName: VictoryRoad.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Victory Road
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                IsBall: Yes
-                NormalItem: FULL_RESTORE
-                Code: |
-                    VictoryRoadFullRestore:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
+        -
+            Name: Victory Road F1
+            FileName: VictoryRoad.asm
+            Type: Map
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Victory Road Access
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            AREALV: 32
+            TrainerList:
+            WarpReqs: Victory Road Hall 1
+            Sublocations:
             -
                 Name: Victory Road Full Heal
                 FileName: VictoryRoad.asm
                 Type: Item
                 HasPKMN: No
-                WildTableList: 
-                LocationReqs: Victory Road
+                WildTableList:
+                LocationReqs: Victory Road F1
                 FlagReqs:
                 ItemReqs:
                 FlagsSet:
@@ -70,69 +89,29 @@ Location:
                 IsBall: Yes
                 NormalItem: FULL_HEAL
                 Code: |
-                    VictoryRoadFullHeal:
-                        ITEMLINE
+                  VictoryRoadFullHeal:
+                      ITEMLINE
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:
             -
-                Name: Victory Road HP Up
+                Name: Victory Road Max Revive
                 FileName: VictoryRoad.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Victory Road
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                IsBall: Yes
-                NormalItem: HP_UP
-                Code: |
-                    VictoryRoadHPUp:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Victory Road Earthquake TM
-                FileName: VictoryRoad.asm
-                Type: Item
-                HasPKMN: No
-                WildTableList: 
-                LocationReqs: Victory Road
-                FlagReqs:
-                ItemReqs:
-                FlagsSet:
-                ReachableReqs:
-                IsBall: Yes
-                NormalItem: TM_EARTHQUAKE
-                Code: |
-                    VictoryRoadTMEarthquake:
-                        ITEMLINE
-                Text:
-                TrainerList: 
-                Sublocations:
-            -
-                Name: Victory Road Hidden Max Potion
-                FileName: VictoryRoad.asm
-                SecondaryFile: VictoryRoad.asm
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Victory Road
+                LocationReqs: Victory Road F1
                 FlagReqs:
-                    - Hidden Items
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
-                NormalItem: MAX_POTION
+                IsBall: Yes
+                NormalItem: MAX_REVIVE
                 Code: |
-                    VictoryRoadHiddenMaxPotion:
-                        ITEMLINE
-                SecondaryCode: '    bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion'
+                  VictoryRoadMaxRevive:
+                      ITEMLINE
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:
             -
                 Name: Victory Road Hidden Full Heal
@@ -141,38 +120,186 @@ Location:
                 Type: Item
                 HasPKMN: No
                 WildTableList:
-                LocationReqs: Victory Road
+                LocationReqs: Victory Road F1
                 FlagReqs:
-                    - Hidden Items
+                  - Hidden Items
                 ItemReqs:
                 FlagsSet:
                 ReachableReqs:
                 NormalItem: FULL_HEAL
                 Code: |
-                    VictoryRoadHiddenFullHeal:
-                        ITEMLINE
+                  VictoryRoadHiddenFullHeal:
+                      ITEMLINE
                 SecondaryCode: '    bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal'
                 Text:
-                TrainerList: 
+                TrainerList:
                 Sublocations:
-    -
-        Name: Elite Four
-        FileName: VictoryRoad.asm
-        Type: Map
-        HasPKMN: Yes
-        WildTableList: 
-        LocationReqs: Victory Road
-        FlagReqs:
-        ItemReqs:
-        FlagsSet:
-        ReachableReqs:
-        Code:
-        Text:
-        AREALV: 33
-        TrainerList:
-            - WILL 1
-            - KOGA 1
-            - BRUNO 1
-            - KAREN 1
-            - CHAMPION 1
-        Sublocations:
+
+
+        -
+            Name: Victory Road F2
+            FileName: VictoryRoad.asm
+            Type: Map
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Victory Road F1
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            AREALV: 32
+            TrainerList:
+            WarpReqs: Victory Road F2
+            Sublocations:
+                -
+                    Name: Victory Road Full Restore
+                    FileName: VictoryRoad.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Victory Road F3
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    IsBall: Yes
+                    NormalItem: FULL_RESTORE
+                    Code: |
+                      VictoryRoadFullRestore:
+                          ITEMLINE
+                    Text:
+                    TrainerList:
+                    Sublocations:
+                    WarpReqs: Victory Road Hall 2 Ledge
+                -
+                    Name: Victory Road HP Up
+                    FileName: VictoryRoad.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Victory Road F2
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    IsBall: Yes
+                    NormalItem: HP_UP
+                    Code: |
+                        VictoryRoadHPUp:
+                            ITEMLINE
+                    Text:
+                    TrainerList:
+                    Sublocations:
+        -
+            Name: Victory Road F3
+            FileName: VictoryRoad.asm
+            Type: Map
+            HasPKMN: Yes
+            WildTableList:
+            LocationReqs: Victory Road F2
+            FlagReqs:
+            ItemReqs:
+            FlagsSet:
+            ReachableReqs:
+            Code:
+            Text:
+            AREALV: 32
+            TrainerList:
+            WarpReqs: Victory Road Hall 3
+            Sublocations:
+                -
+                    Name: Victory Road Earthquake TM
+                    FileName: VictoryRoad.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Victory Road F3
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    IsBall: Yes
+                    NormalItem: TM_EARTHQUAKE
+                    Code: |
+                      VictoryRoadTMEarthquake:
+                          ITEMLINE
+                    Text:
+                    TrainerList:
+                    WarpReqs: Victory Road Hall 2 Ledge TM
+                    Sublocations:
+
+                -
+                    Name: Victory Road Hidden Max Potion
+                    FileName: VictoryRoad.asm
+                    SecondaryFile: VictoryRoad.asm
+                    Type: Item
+                    HasPKMN: No
+                    WildTableList:
+                    LocationReqs: Victory Road F3
+                    FlagReqs:
+                        - Hidden Items
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    NormalItem: MAX_POTION
+                    Code: |
+                        VictoryRoadHiddenMaxPotion:
+                            ITEMLINE
+                    SecondaryCode: '    bg_event  3, 29, BGEVENT_ITEM, VictoryRoadHiddenMaxPotion'
+                    Text:
+                    TrainerList:
+                    Sublocations:
+                    WarpReqs: Victory Road Hall 2 Ledge TM
+
+                -
+                    Name: Victory Road Rival Fight
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road F3
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Victory Road Rival Fight
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road Exit
+                    FlagReqs:
+                        - Warps
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    Sublocations:
+                -
+                    Name: Victory Road Exit
+                    FileName: VictoryRoad.asm
+                    Type: Map
+                    HasPKMN: Yes
+                    WildTableList:
+                    LocationReqs: Victory Road Rival Fight
+                    FlagReqs:
+                    ItemReqs:
+                    FlagsSet:
+                    ReachableReqs:
+                    Code:
+                    Text:
+                    AREALV: 32
+                    TrainerList:
+                    WarpReqs: Victory Road Hall 3 Exit
+                    Sublocations:

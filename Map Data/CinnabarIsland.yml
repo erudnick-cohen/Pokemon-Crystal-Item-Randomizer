@@ -1,12 +1,68 @@
 Location:
     -
-        Name: Cinnabar Island
+        Name: Cinnabar Island Entrance
         FileName: CinnabarIsland.asm
         Type: Map
         HasPKMN: No
         WildTableList: CINNABAR_ISLAND
         LocationReqs:
-            - Route 21
+          - Route 21
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+    -
+
+        Name: Cinnabar Island Entrance
+        FileName: CinnabarIsland.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: CINNABAR_ISLAND
+        LocationReqs:
+            - Route 20
+        FlagReqs:
+            - Fog Badge
+        ItemReqs:
+            - Surf
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+
+    -
+        Name: Cinnabar Island Entrance
+        FileName: CinnabarIsland.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: CINNABAR_ISLAND
+        LocationReqs:
+        FlagReqs:
+            - Warps
+        ItemReqs:
+        FlagsSet:
+        ReachableReqs:
+        Code:
+        Text:
+        TrainerList:
+        Sublocations:
+        WarpReqs: Cinnabar
+
+
+    -
+        Name: Cinnabar Island
+        FileName: CinnabarIsland.asm
+        Type: Map
+        HasPKMN: No
+        WildTableList: CINNABAR_ISLAND
+        LocationReqs: Cinnabar Island Entrance
         FlagReqs:
         ItemReqs:
         FlagsSet:

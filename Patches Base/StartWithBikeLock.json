@@ -1,0 +1,11 @@
+[
+    {
+        "integer_values": {
+            "old": [0],
+            "new": [1]
+        },
+        "address_range": {"begin":0,"end":0},
+        "label": "ItemRandoStartWithBike.ckir_BEFOREItemRandoStartWithBike",
+        "description": "Locks use of bike option in settings"
+    }
+]

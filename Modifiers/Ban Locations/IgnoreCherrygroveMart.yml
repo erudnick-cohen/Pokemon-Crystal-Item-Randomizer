@@ -1,0 +1,7 @@
+Name: Ignore Cherrygrove Mart
+Description: Ignores shuffling any items in Cherrygrove Mart.
+Changes:
+    -
+        Location: Cherrygrove Mart
+        AddFlagReqs:
+            - Impossible

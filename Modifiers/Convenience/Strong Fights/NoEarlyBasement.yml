@@ -1,0 +1,17 @@
+Name: No early basement
+Description: Prevents the basement in goldenrod from having the squirtbottle or the pass when the player does not have one of these two items, to prevent fighting rival 4 early.
+Changes:
+    -
+        Location: Goldenrod Tunnel Entrance A
+        AddRecommendedItemReqs:
+            - Squirtbottle
+    -
+        Location: Goldenrod Tunnel Entrance B
+        AddRecommendedItemReqs:
+            - Pass
+
+    -
+        Location: Goldenrod Underground Switch Room Warpie
+        AddRecommendedFlagReqs:
+            - Rocket Invasion
+
